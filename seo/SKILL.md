@@ -1,6 +1,6 @@
 ---
 name: seo
-description: Comprehensive search engine optimization for static sites. Implements meta tags, JSON-LD structured data, sitemap generation, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and Open Graph tags. Reads from docs/seo.md for per-page configuration. Generates SEO audit report and post-deploy verification script. Run after page-builder, before deploy.
+description: Comprehensive search engine optimization for static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, sitemap generation, robots.txt, crawler optimization (IndexNow, sitemap pinging), Bing Webmaster optimization, Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and Open Graph tags. Covers both traditional SEO and Generative Engine Optimization (GEO) for AI platforms (ChatGPT, Gemini, Perplexity, Claude). Reads from docs/seo.md for per-page configuration. Generates SEO audit report and post-deploy verification script. Run after page-builder, before deploy.
 ---
 
 # SEO Skill — Static Website Factory
@@ -9,6 +9,8 @@ Implement comprehensive, production-grade search engine optimization across the 
 
 ## Why This Matters
 
+### Traditional SEO Foundation
+
 Our Astro + Tailwind + Alpine stack already crushes Core Web Vitals:
 - **95-100 Lighthouse scores** (typical WordPress: 60-80)
 - **Zero render-blocking JavaScript** (typical WordPress: 3-8 blocking resources)
@@ -16,6 +18,18 @@ Our Astro + Tailwind + Alpine stack already crushes Core Web Vitals:
 - **Image optimization built-in** (WebP/AVIF, responsive srcsets, lazy loading)
 
 This skill layers on the meta, schema, and content SEO that completes the picture. Combined, our sites have a massive competitive advantage in search rankings.
+
+### AI Search Visibility (2026+)
+
+**New Reality:** AI-powered search platforms (ChatGPT, Gemini, Perplexity, Claude) increasingly influence how users discover information. These platforms:
+- Use Bing's search index (not Google's) for most AI platforms
+- Rely on structured data and E-E-A-T signals to select sources
+- Require clear, authoritative content to cite
+- Reward multimodal content (text + images + video)
+
+**Strategic Implication:** The same strong SEO fundamentals that rank well in Google now also increase your visibility in AI-generated answers. This skill implements both traditional SEO AND Generative Engine Optimization (GEO) signals.
+
+**See:** `references/ai-seo-optimization.md` for AI platform specifics, `references/e-e-a-t-implementation.md` for credibility-building strategies.
 
 ---
 
@@ -485,10 +499,17 @@ After running this skill, the project has:
 
 ## Reference Files
 
-Detailed setup guides included with this skill:
+Detailed guides for SEO and AI visibility:
 
+### Core SEO Implementation
 - **`references/analytics-verification.md`** — GA4 via Partytown setup, Google Search Console verification methods (meta tag + HTML file), privacy-friendly alternatives (Plausible, Umami, Fathom), troubleshooting
 - **`references/post-deploy-verification.md`** — Sitemap auto-pinging, IndexNow instant notification setup, robots.txt optimization, Nginx X-Robots-Tag headers, verify-deploy.sh script, monitoring checklist
+
+### AI Search Optimization (2026)
+- **`references/ai-seo-optimization.md`** — Comprehensive guide to AI search platforms (ChatGPT, Gemini, Perplexity, Claude), Generative Engine Optimization (GEO), Bing optimization (powers most AI platforms), multimodal content strategy, AI-specific metrics and tracking, content strategy for AI-first search, topic clustering for AI discovery
+- **`references/e-e-a-t-implementation.md`** — Experience, Expertise, Authoritativeness, Trustworthiness implementation by industry; detailed schema markup; author credentialing; transparency signals; E-E-A-T audit checklist; common mistakes to avoid
+
+**Read these for:** Building AI visibility alongside traditional SEO rankings.
 
 ## External Resources
 
