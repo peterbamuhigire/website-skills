@@ -7,6 +7,18 @@ description: Transforms markdown content from docs/ into beautiful Astro pages a
 
 Transform markdown content into stunning, production-grade Astro pages.
 
+## Universal Guidelines Reference
+
+Before building pages, review **Universal Design Guidelines** for:
+- Visual hierarchy and cognitive load reduction
+- Scannable content formatting (headings, lists, short paragraphs)
+- Clear CTAs (calls-to-action) and value propositions
+- Content strategy and information architecture
+- Keyboard navigation and screen reader compatibility
+- Mobile-first responsive design approach
+
+This skill applies these universal content and UX principles to Astro implementation.
+
 ## Before Building ANY Page
 
 **Read these files first:**
@@ -14,6 +26,7 @@ Transform markdown content into stunning, production-grade Astro pages.
 2. `src/assets/images/_catalog.json` — available photos and their dimensions
 3. `docs/pages.md` — page structure and navigation
 4. The specific `docs/*.md` file for the page content
+5. **Universal Design Guidelines** — for content strategy and UX principles
 
 ## Build Order
 
@@ -240,6 +253,44 @@ For EVERY page, mentally verify:
 - Critical CSS inlined by Astro
 - Minimal JavaScript — only Alpine.js for interactivity + scroll observer
 - Lazy load all below-fold images
+
+## Content Best Practices
+
+### Scannable Content Formatting
+
+Users scan, they don't read. Format all content for quick comprehension:
+
+**Formatting Rules:**
+- Descriptive headings (tell story in headlines)
+- Bullet points for features/benefits (break up paragraphs)
+- Short paragraphs (3-4 lines maximum)
+- Bold key terms and phrases
+- Images/visuals every 200-300 words
+- Adequate whitespace between sections
+
+**Content Structure:**
+```
+Headline (value prop)
+↓
+2-3 short paragraphs (context)
+↓
+Bullet points (benefits/features)
+↓
+Visual break (image/graphic)
+↓
+CTA or next section
+```
+
+### Clear Calls-to-Action
+
+Tell users exactly what to do next.
+
+**CTA Best Practices:**
+- Use action language ("Get Started", "Download", "Subscribe")
+- Make buttons visually distinct (highest contrast)
+- Position after value prop and benefits
+- Limit 1-2 primary CTAs per section
+- Include secondary CTA for users not ready
 
 ## Content Parsing
 

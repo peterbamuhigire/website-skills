@@ -19,6 +19,21 @@ This skill provides templates for eight core sectors to ensure sector-appropriat
 - **Component patterns** (patterns to follow, with YOUR styling)
 - **Trust signals framework** (what matters in that sector)
 
+## Universal Guidelines
+
+All sector templates are built on **Universal Design Guidelines** which cover:
+- Purpose-driven design and visual hierarchy
+- User-centered design and UX fundamentals
+- Color theory, typography, spacing standards
+- Accessibility requirements (WCAG 2.1 AA)
+- Mobile-first responsive design
+- Trust and credibility signals
+- Navigation best practices
+- Conversion optimization
+- SEO fundamentals
+
+Sector strategies LAYER ON TOP OF these universal principles, adding industry-specific trust cues, content architecture, and design psychology.
+
 ## How This Integrates
 
 Sector-strategies is **step 0.5** in the build pipeline:
