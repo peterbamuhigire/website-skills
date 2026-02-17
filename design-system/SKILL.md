@@ -202,6 +202,18 @@ Document these design decisions for the page-builder to follow:
 - object-cover for all background/hero images
 - Subtle hover zoom on interactive images
 
+## Universal Guidelines
+
+Before starting design decisions, review **Universal Design Guidelines** for:
+- Color theory and accessibility requirements
+- Typography scales and readability standards
+- Spacing systems and visual hierarchy
+- Accessibility standards (WCAG 2.1 AA)
+- Mobile-first responsive design approach
+- Trust and credibility signals
+
+This skill applies those universal principles to your specific sector/brand.
+
 ## Output
 
 Create these files:

@@ -7,6 +7,18 @@ description: Builds the Astro site, verifies output, generates deployment script
 
 Build, verify, and prepare for deployment.
 
+## Universal Guidelines Reference
+
+Before and after deployment, review **Universal Design Guidelines** for:
+- Core Web Vitals targets (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- Performance monitoring and optimization
+- Security maintenance checklist
+- Analytics and monitoring setup
+- Accessibility requirements verification
+- Mobile-first responsive testing
+
+Use these standards to verify deployment readiness.
+
 ## Step 1: Build
 
 ```bash
