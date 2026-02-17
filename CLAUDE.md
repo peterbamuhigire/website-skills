@@ -27,6 +27,7 @@ deploy/SKILL.md                ← Build verification, deploy scripts, Nginx con
 
 ```
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
+color-selection/SKILL.md              ← Color palette design using brand colors and color theory
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
@@ -56,6 +57,7 @@ Two skills are cross-cutting — they apply throughout all steps rather than pro
 Utility skills run independently of the build pipeline:
 
 - **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
+- **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
 - **skill-writing** — use when creating or updating any SKILL.md
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
