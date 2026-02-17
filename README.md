@@ -46,6 +46,13 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── docs-seo-template.md
 ├── deploy/                  Builds, verifies, generates deployment configuration
 │   └── SKILL.md
+├── policy-pages/            Privacy Policies & Terms of Use (legal, trust, compliance)
+│   ├── SKILL.md
+│   └── references/
+├── color-selection/         Color palette design from brand colors using color theory
+│   ├── SKILL.md
+│   ├── references/          (8 detailed color theory and application guides)
+│   └── scripts/
 ├── skill-writing/           Guide for creating and updating skills (utility)
 │   └── SKILL.md
 ├── skill-safety-audit/      Scans skills for unsafe or malicious instructions (utility)
@@ -135,6 +142,20 @@ Designs Privacy Policies and Terms of Use that are legally compliant, user-frien
 **Jurisdictions Covered:** EU (GDPR), US (CCPA/COPRA, COPPA), Canada (PIPEDA), Brazil (LGPD), Australia (Privacy Act), Asia-Pacific (PDPA)
 
 **Produces:** Privacy Policy page, Terms of Use page (customized to client's jurisdiction and business model)
+
+### color-selection (Color Palette Design)
+
+Transforms brand colors into harmonious, psychologically-optimized website color palettes using color theory principles. Takes user's primary brand color(s), applies the 7 fundamental color schemes (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, achromatic), validates WCAG accessibility compliance (4.5:1 contrast for text, 3:1 for UI components), and generates complete semantic palette with feedback colors (success, warning, error, info).
+
+**Reference Files:** `color-theory-fundamentals.md`, `color-psychology.md`, `color-schemes.md`, `industry-color-psychology.md`, `accessibility-contrast.md`, `practical-application.md`, `tools-resources.md`
+
+**Scripts:** `palette_generator.py` — generates any color scheme from hex color; supports monochromatic, analogous, complementary, split-complementary, triadic, tetradic, tints/shades, and semantic palettes
+
+**Features:** Full color theory coverage (HSL model, temperature, psychology), industry-specific guidance (healthcare, finance, e-commerce, tech, education, F&B, professional services, creative, nonprofits), colorblind accessibility checking, dark mode palette generation, real-world component examples, accessibility audit checklist, tools directory with 15+ online resources
+
+**Produces:** Complete color palette with semantic tokens, CSS variables, Tailwind config format, WCAG compliance report, industry-specific recommendations
+
+**Trigger phrases:** "Design a color palette", "Generate colors from my brand color", "What colors should we use?", "Help with color scheme"
 
 ### skill-writing (Utility — Skill Creation Guide)
 
