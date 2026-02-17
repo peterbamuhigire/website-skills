@@ -75,8 +75,123 @@ Interpret filenames to determine category:
 - `service-*`, `product-*`, `work-*` → `services/`
 - `gallery-*`, `portfolio-*`, `project-*` → `gallery/`
 - `about-*`, `office-*`, `culture-*` → `about/`
-- `client-*`, `logo-*`, `testimonial-*` → `testimonials/`
+- `client-*`, `testimonial-*` → `testimonials/`
+- `logo-*` → `branding/` (auto-detects best logo)
 - Anything else → `misc/`
+
+## Logo Auto-Detection & Selection
+
+**NEW FEATURE**: System automatically scans for all PNG files with "logo" in the filename and selects the best one based on:
+1. **Size preference**: Larger files (higher resolution) ranked higher
+2. **Format preference**: PNG with transparency (RGBA) > PNG (RGB) > other formats
+3. **Dimensions**: Wide logos (width > height) preferred for headers; square (1:1) for favicons
+
+### Logo Processing Script
+
+```python
+from PIL import Image
+import os
+from pathlib import Path
+
+def find_best_logo(photo_bank_path='photo-bank'):
+    """Find and select the best logo from photo-bank"""
+    logos = []
+
+    for f in os.listdir(photo_bank_path):
+        if 'logo' in f.lower() and f.lower().endswith(('.png', '.jpg', '.jpeg')):
+            img_path = os.path.join(photo_bank_path, f)
+            img = Image.open(img_path)
+            w, h = img.size
+            size_kb = os.path.getsize(img_path) // 1024
+
+            # Score calculation (higher = better)
+            score = 0
+            score += size_kb * 0.5  # Prefer larger files (higher res)
+            score += w * h * 0.001  # Prefer more pixels
+
+            # Prefer PNG with transparency
+            if f.lower().endswith('.png') and img.mode == 'RGBA':
+                score += 50
+            elif f.lower().endswith('.png'):
+                score += 30
+
+            # Prefer landscape for headers, square for favicon
+            aspect_ratio = w / h
+            if 1.5 <= aspect_ratio <= 3:  # Header logo
+                score += 20
+            elif 0.9 <= aspect_ratio <= 1.1:  # Square favicon
+                score += 10
+
+            logos.append({
+                'filename': f,
+                'path': img_path,
+                'width': w,
+                'height': h,
+                'size_kb': size_kb,
+                'format': img.format,
+                'mode': img.mode,
+                'aspect_ratio': f"{w//gcd(w,h)}:{h//gcd(w,h)}",
+                'score': score
+            })
+
+    if not logos:
+        print("⚠️  No logos found in photo-bank/")
+        return None
+
+    # Select best logo
+    best_logo = max(logos, key=lambda x: x['score'])
+
+    # Copy to branding directory
+    os.makedirs('src/assets/images/branding', exist_ok=True)
+    dest = 'src/assets/images/branding/logo.png'
+
+    # Convert to PNG if needed
+    if best_logo['format'] != 'PNG':
+        img = Image.open(best_logo['path'])
+        img = img.convert('RGBA')
+        img.save(dest, 'PNG')
+    else:
+        import shutil
+        shutil.copy2(best_logo['path'], dest)
+
+    print(f"✅ Selected logo: {best_logo['filename']}")
+    print(f"   Dimensions: {best_logo['width']}x{best_logo['height']}")
+    print(f"   Format: {best_logo['mode']}")
+    print(f"   Copied to: {dest}")
+
+    return best_logo
+
+# Run the selection
+best = find_best_logo()
+```
+
+### Logo Catalog Entry
+
+Update `_catalog.json` with logo entry:
+
+```json
+{
+  "branding": {
+    "logo": {
+      "id": "logo-primary",
+      "original_filename": "logo-color.png",
+      "source": "photo-bank/logo-color.png",
+      "destination": "src/assets/images/branding/logo.png",
+      "category": "branding",
+      "width": 600,
+      "height": 150,
+      "aspect_ratio": "4:1",
+      "file_size_kb": 85,
+      "format": "png",
+      "mode": "RGBA",
+      "used_in": ["header", "footer", "meta-og"],
+      "role": "primary-brand-logo",
+      "score": 245,
+      "notes": "High-resolution logo with transparency, landscape format suitable for header use"
+    }
+  }
+}
+```
 
 ## Step 4: Generate _catalog.json
 
