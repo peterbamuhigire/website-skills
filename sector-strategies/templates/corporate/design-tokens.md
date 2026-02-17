@@ -1,22 +1,35 @@
 ---
-title: Corporate & Consulting Design Tokens Reference
+title: Corporate & Consulting Design Tokens Reference (REFERENCE ONLY — CUSTOMIZE FOR YOUR BRAND)
 sector: corporate
 ---
 
 # Corporate & Consulting: Design Tokens Reference
 
-Design system for professional, conversion-focused corporate and consulting websites optimizing for trust, credibility, and leadership positioning.
+**⚠️ IMPORTANT: This is a REFERENCE palette, not a prescription. Do NOT use these colors/fonts directly. Every corporate website must look different.**
 
-## Color Philosophy
+This document shows ONE example of how corporate sites can be designed. Your site should have its own distinctive visual identity.
 
-Corporate and consulting sites must balance **authority with approachability and trust**:
+## Color Philosophy (For Your Customization)
+
+Corporate and consulting sites must balance **authority with approachability and trust**. But what colors achieve this depends entirely on your brand and market position:
+
+### Example Palette (DO NOT USE AS-IS)
+
 - **Deep Navy** (#0F172A): Leadership, stability, enterprise-grade, professionalism
 - **Slate Gray** (#64748B): Clarity, sophistication, secondary messaging, data visualization
 - **Accent Brand** (#2563EB): Primary CTA, energy, differentiation from competitors
 - **Forest Green** (#15803D): Growth, sustainability, positive metrics, success indicators
 - **Warm Neutral** (#F5F3FF): Modern minimalism, breathing room, clean interfaces
 
-These colors convert better than muted grays or overly bright colors (proven by A/B testing across 100+ corporate sites).
+### Why This Is Just ONE Option
+
+Different corporate markets need different colors:
+- **Financial firms**: Often use navy + gold (heritage + prestige), not blue
+- **Tech consultants**: Often use black + vibrant accent (cutting-edge), not neutral navy
+- **Boutique firms**: Often use warm earth tones (human-focused), not cool navy
+- **Established institutions**: Often use charcoal + subtle accent (sophisticated restraint)
+
+Your brand should NOT default to this palette. Answer your sector-brief questions to define YOUR colors.
 
 ### Primary Palette (Optimized for Conversion)
 
@@ -42,24 +55,31 @@ All colors verified for WCAG AAA standard (7:1 contrast) in both light and dark 
 - **Healthcare/Biotech**: Highlight Forest Green + Deep Navy (health + professionalism)
 - **Real Estate/Commercial**: Deep Navy + Accent Brand (establishment + growth)
 
-## Typography
+## Typography (CUSTOMIZE — DO NOT USE THESE FONTS DIRECTLY)
 
-### Font Stack Recommendation
+### Example Font Pairing (This Is NOT Your Pairing)
 
-**Serif (Authority/Heritage)**: Georgia or Lora
+**Serif Example**: Georgia or Lora (DO NOT USE — find your own)
 - Headlines: H1–H2
 - Long-form content (about, case studies, thought leadership)
-- Executive bios and testimonials
 
-**Sans-serif (Clarity/Professional)**: Inter or Sora
+**Sans-serif Example**: Inter or Sora (DO NOT USE — find your own)
 - Navigation, labels, CTAs, metadata
 - Body text on all devices
-- Data labels and UI elements
 
-**Display (Leadership)**: Playfair Display or Fraunces
+**Display Example**: Playfair Display (DO NOT USE — find your own)
 - Hero headline (company mission, value proposition)
 - Section headers (accent use only)
-- Investor relations materials
+
+### Why You Need Different Fonts
+
+The design-system skill explicitly forbids Inter, Roboto, and Arial to prevent generic designs. This reference also shows common fonts, but your brand should choose UNIQUE fonts that:
+- Reflect your market position (traditional vs. cutting-edge)
+- Differentiate from competitors
+- Work across all device sizes
+- Maintain accessibility (WCAG AA+)
+
+See [Fontsource](https://fontsource.org) for hundreds of distinctive, self-hosted font options.
 
 ### Typography Scale
 
@@ -171,15 +191,54 @@ All colors verified for WCAG AAA standard (7:1 contrast) in both light and dark 
 - Keyboard navigation: Full support
 - Data tables: Proper header markup, screen reader support
 
-## Reference Sites (Real Examples)
+## Anti-Homogeneity Principle
 
-Study these for visual inspiration:
-- McKinsey & Company (consulting authority)
-- Goldman Sachs (financial services, dark theme)
-- Accenture (technology consulting)
-- Deloitte (enterprise scale, navigation)
-- Stripe (SaaS authority, minimalist design)
+**Every website built with this system must look visually distinctive.** If two corporate sites both use Deep Navy + Inter + the same component patterns, they become indistinguishable from generic templates.
+
+To ensure your site is unique:
+
+1. **Define YOUR colors** (not these reference colors)
+   - Research your competitors' palettes and choose opposite territory
+   - Align with your logo (but don't be limited by it)
+   - Consider your market: What colors do leaders in your space avoid?
+
+2. **Choose distinctive fonts** (not Inter/Lora/Playfair Display)
+   - Start at [Fontsource](https://fontsource.org) or Google Fonts
+   - Choose ONE heading font that feels distinctive
+   - Choose ONE body font that's invisible (easy to read)
+   - Test the pairing across all pages before committing
+
+3. **Build component variations** (not cookie-cutter cards)
+   - Design at least 3 button styles (primary, secondary, tertiary)
+   - Create 2–3 card layouts for different content types
+   - Add visual identity through:
+     - Accent element position (lines, dots, shapes)
+     - Spacing rhythm (generous vs. tight)
+     - Border treatment (none, subtle, bold outline)
+     - Corner radius (sharp, subtle, fully rounded)
+
+4. **Use reference sites strategically**
+   - Study competitors to understand what you DON'T want
+   - Use non-competitors for inspiration (different markets)
+   - Borrow patterns, not palettes (good navigation ≠ their colors)
+
+## Reference Sites (For Differentiation Strategy)
+
+Study these to understand corporate site patterns, but DO NOT COPY their aesthetics:
+- McKinsey & Company (consulting authority — what NOT to copy)
+- Goldman Sachs (dark theme mastery — but find different colors)
+- Accenture (enterprise scale navigation — adapt, don't replicate)
+- Deloitte (navigation structure — inform yours differently)
+- Stripe (minimalist design — use different palette)
+
+Better approach: Find 3 competitors and decide what visual territory they DON'T occupy. Build your site there.
 
 ---
 
-**Next step**: Answer your sector-brief questions, and the design-system skill will adapt these tokens to your brand.
+## Next Steps
+
+1. **Read your sector-brief-template.md carefully** — especially the Brand Identity and Visual Identity sections
+2. **Complete your sector-brief.md** in `docs/sector-brief.md` with YOUR colors, YOUR fonts, YOUR differentiation strategy
+3. **Do NOT default to this reference palette** — answer your brief to create something distinctive
+4. **Run the design-system skill** — it will read your customized brief and generate a unique visual system
+5. **Result**: A website that stands apart from other corporate sites

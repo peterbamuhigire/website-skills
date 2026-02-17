@@ -7,15 +7,17 @@ description: Industry-specific website design strategies and templates. Use when
 
 Generic websites scream "AI-generated." Industry-specific design psychology makes sites trustworthy and distinctive.
 
-A tour company's website needs wanderlust and discovery cues (warm palettes, adventure typography, destination imagery). A school's website needs credibility and safety (clear hierarchy, professional fonts, enrollment clarity). A hospital's website needs trust and accessibility (calming colors, readable type, appointment CTAs).
+A tour company's website needs wanderlust and discovery cues (but each tour operator needs DIFFERENT colors and fonts). A school's website needs credibility and safety (but each school needs UNIQUE visual identity). A hospital's website needs trust and accessibility (but each hospital needs DIFFERENT design choices).
 
-Same CMS. Different psychology. Different trust signals. Different components. Different content order.
+**Key principle: No two websites built with these skills should look the same.**
 
-This skill provides templates for seven core sectors, each with:
-- **Design tokens** (colors, typography, spacing optimized for that sector)
-- **Component patterns** (buttons, cards, CTAs that convert in that industry)
-- **Content architecture** (what users expect to see first)
-- **Trust signals** (what makes that sector's sites credible)
+Same build pipeline. Same component structure. Different psychology. Different trust signals. Different components. Different content order. **DIFFERENT VISUAL IDENTITY.**
+
+This skill provides templates for seven core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
+- **Design tokens** (reference palettes — not prescriptive)
+- **Sector-brief template** (customization questionnaire — REQUIRED to answer)
+- **Component patterns** (patterns to follow, with YOUR styling)
+- **Trust signals framework** (what matters in that sector)
 
 ## How This Integrates
 
@@ -33,6 +35,16 @@ Sector-strategies is **step 0.5** in the build pipeline:
 Once you choose a sector and customize your brief, `design-system` uses it to generate tailwind.config.mjs and design-tokens.md with your sector's visual identity baked in.
 
 ## Available Sectors
+
+**CRITICAL: Each sector template below is a CUSTOMIZATION STARTING POINT, not a final design. Your site must differentiate within your sector through:**
+- Unique color palette (not the reference palette)
+- Distinctive font pairing (not the example fonts)
+- Your specific market positioning (budget vs. luxury, established vs. startup, etc.)
+- Your competitor differentiation strategy
+
+Read each sector description, then customize your sector-brief.md to reflect YOUR unique brand.
+
+---
 
 ### Tour & Travel
 
@@ -101,7 +113,9 @@ If multiple apply, choose the **primary customer intent**:
 - Specialty clinic in hospital? → Healthcare (primary) with professional services polish
 - Creator selling courses? → Hobbyist/Creator (primary) with professional services credibility
 
-### Step 2: Customize Your Sector Brief
+### Step 2: Customize Your Sector Brief (REQUIRED — Do Not Skip)
+
+**CRITICAL: This step determines whether your site looks generic or distinctive.**
 
 Copy the sector template into your client project:
 
@@ -116,14 +130,21 @@ your-client-project/
 
 Template location: `sector-strategies/templates/{sector}/sector-brief-template.md`
 
-Open it and answer these core questions:
-1. What are your **unique value propositions** compared to competitors?
-2. What **trust signals** matter most to your ideal customer?
-3. What **action** do you want visitors to take first? (book, enroll, purchase, contact, subscribe)
-4. What **visual personality** matches your brand? (bold vs. subtle, modern vs. heritage, playful vs. serious)
-5. What **competitor sites** should we reference? (design-reference skill will analyze these)
+**Answer EVERY question thoroughly:**
+1. **What is your ONE unique difference** compared to competitors?
+2. **Define YOUR brand colors** (not the sector reference palette)
+3. **Choose YOUR fonts** (not the example fonts — use Fontsource for distinctive options)
+4. **What is your visual style?** (photography approach, vibe, distinctive traits)
+5. **How do you build trust?** (rank trust elements by importance)
+6. **What is your ideal customer's pain point?** (this shapes emotional design)
 
-Save as `docs/sector-brief.md`. The design-system skill will read this.
+**Do NOT:**
+- Use the reference colors directly
+- Use example fonts without customizing
+- Skip the differentiation questions
+- Default to the sector template — customize it for YOUR brand
+
+Save as `docs/sector-brief.md`. The design-system skill will read this brief and generate YOUR unique visual identity.
 
 ### Step 3: Run design-system
 
@@ -145,30 +166,55 @@ photo-manager → page-builder → deploy
 
 ## What's in the Templates
 
-Each `sector-strategies/templates/{sector}/` contains three files:
+Each `sector-strategies/templates/{sector}/` contains files to guide customization:
 
-**sector-brief-template.md**
-Customization questions for your client. Copy to `docs/sector-brief.md` and fill in answers.
+**sector-brief-template.md** ⭐ CRITICAL
+Customization questionnaire for your client. Copy to `docs/sector-brief.md` and fill in EVERY answer.
+- This questionnaire drives differentiation
+- Your answers shape the design-system output
+- Skipping this results in generic design
+- REQUIRED: Answer all sections fully
 
-**design-tokens.md**
-Reference palette: colors, typography, spacing rules, component sizes. Not auto-applied; used by design-system skill to inform its output.
+**design-tokens.md** (REFERENCE ONLY)
+Reference palette showing ONE example of how this sector could be designed.
+- Example colors (NOT to be used as-is)
+- Example typography (NOT to be used as-is)
+- Color psychology (to inform YOUR choices)
+- DO NOT use these directly — customize them via your sector-brief
+- Anti-homogeneity principle: Every site needs different colors/fonts
 
 **component-patterns.md**
-HTML/Tailwind examples for sector-specific UI: buttons, cards, CTAs, forms. Reference when building custom components.
+HTML/Tailwind examples for sector-specific UI patterns: buttons, cards, CTAs, forms.
+- Use these as pattern inspiration
+- Style them with YOUR brand colors/fonts
+- Do not copy directly — adapt to your visual identity
 
 ## Common Questions
 
+**Q: Will all sites in the same sector look the same?**
+A: NO — if you customize your sector-brief properly. Each site will have unique colors, fonts, and visual identity. The sector framework ensures trust signals are appropriate to the industry. Customization ensures differentiation.
+- Bad: Use tour-travel template defaults → all travel sites look similar
+- Good: Answer your sector-brief with unique colors/fonts → distinctive travel site
+
+**Q: Can I skip the sector-brief customization?**
+A: NO. This results in generic design. The sector-brief is REQUIRED to drive differentiation.
+
 **Q: Can I mix sectors?**
-A: No. Choose one primary sector and lean into it. Mixing dilutes trust signals.
+A: No. Choose one primary sector and lean into it. Mixing dilutes trust signals. If your business is hybrid (e.g., eco-tourism education), choose the PRIMARY sector and customize the sector-brief to address secondary aspects.
 
 **Q: My sector isn't listed. What do I do?**
-A: Start with the closest sector template. Customize it. After delivery, document what worked and propose it as a new sector template.
+A: Start with the closest sector template. Customize the sector-brief fully. After delivery, document what worked and propose it as a new sector template for the library.
 
 **Q: When do I customize sector-brief.md?**
-A: Before running design-system. It needs your sector-brief answers to generate correct design tokens.
+A: Before running design-system. The design-system skill reads your sector-brief to generate YOUR unique visual identity.
 
-**Q: Can I skip this skill?**
-A: Technically yes, but then your design-system output will be generic. This skill prevents that.
+**Q: How do I ensure my site doesn't look like another site?**
+A:
+1. Complete your sector-brief with genuine differentiation answers
+2. Choose unique colors (not the reference palette)
+3. Choose distinctive fonts from Fontsource
+4. Have design-reference analyze your competitors (so you know what to avoid)
+5. Let design-system generate unique output based on your inputs
 
 ## Next Steps
 
