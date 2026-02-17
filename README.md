@@ -20,14 +20,30 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── SKILL.md
 ├── design-reference/        Analyses reference URLs and generates a design guide
 │   └── SKILL.md
+├── sector-strategies/       Industry-specific website design (7 sectors) with authentic patterns
+│   ├── SKILL.md
+│   ├── DARK-MODE-IMPLEMENTATION.md
+│   ├── templates/
+│   │   ├── branding-colors-template.md
+│   │   ├── tour-travel/
+│   │   ├── education/
+│   │   ├── healthcare/
+│   │   ├── ecommerce/
+│   │   ├── professional-services/
+│   │   ├── hobbyist-creator/
+│   │   └── nonprofit/
+│   └── README.md
 ├── website-builder/         Master orchestrator — coordinates all other skills
 │   └── SKILL.md
 ├── design-system/           Fonts, colors, visual identity, animation strategy
 │   └── SKILL.md
 ├── page-builder/            Transforms markdown content into Astro pages
 │   └── SKILL.md
-├── photo-manager/           Catalogs photos, tracks dimensions, organizes assets
+├── photo-manager/           Catalogs photos, tracks dimensions, auto-detects logos, organizes assets
 │   └── SKILL.md
+├── seo/                     SEO configuration, meta tags, JSON-LD schema, sitemap
+│   ├── SKILL.md
+│   └── docs-seo-template.md
 ├── deploy/                  Builds, verifies, generates deployment configuration
 │   └── SKILL.md
 ├── skill-writing/           Guide for creating and updating skills (utility)
@@ -60,6 +76,18 @@ Accepts up to 5 URLs of websites the client admires, visits each one, and extrac
 
 **Produces:** `docs/design-reference.md`
 
+### sector-strategies (Industry-Specific Design Framework)
+
+Guides users to choose a sector (7 available: tour & travel, education, healthcare, e-commerce, professional services, hobbyist creator, nonprofit/charity), then applies proven design patterns, psychology, and trust signals unique to that industry. Each sector includes customization templates, dark/light mode design tokens, component patterns based on exemplary reference sites, and brand color guidance. Ensures generated sites look professionally industry-authentic, not AI-generic.
+
+**Sectors:** Tour & Travel, Education, Healthcare, E-commerce, Professional Services, Hobbyist Creator, Nonprofit/Charity/NGO
+
+**Features:** Full dark/light mode support, automatic logo detection and selection, branding color documentation with WCAG accessibility compliance, 10+ pre-designed industry-specific components, 800+ line education implementation guide, comprehensive nonprofit dark mode support
+
+**Trigger phrases:** "I want this to look like a school website", "This is a tour company", "Make it nonprofit-friendly", "Dark mode support", "Professional services firm"
+
+**Produces:** `docs/sector-brief.md`, branding color configuration, dark mode setup
+
 ### website-builder (Orchestrator)
 
 The entry point. When Claude is told to "build this website", this skill reads all content from `docs/`, scans photos in `photo-bank/`, then coordinates the other skills in order: design-system → photo-manager → page-builder → deploy.
@@ -74,15 +102,23 @@ Establishes the complete visual identity before any pages are built. Reads `docs
 
 ### photo-manager (Image Pipeline)
 
-Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them to organized `src/assets/images/{category}/` folders, and generates `_catalog.json` — a master registry tracking dimensions, aspect ratios, usage, and replacement notes for every image.
+Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them to organized `src/assets/images/{category}/` folders, and generates `_catalog.json` — a master registry tracking dimensions, aspect ratios, usage, and replacement notes for every image. **Auto-detects the best logo** from files containing "logo" in the filename (scores by resolution, format, dimensions) and copies it to `src/assets/images/branding/logo.png`.
 
-**Produces:** `src/assets/images/*/`, `src/assets/images/_catalog.json`
+**Produces:** `src/assets/images/*/`, `src/assets/images/branding/logo.png`, `src/assets/images/_catalog.json`
 
 ### page-builder (Content → Pages)
 
 Reads markdown content from `docs/`, the design tokens, and the photo catalog, then generates Astro pages and reusable components. Builds mobile-first with scroll animations, Alpine.js interactivity, proper SEO meta tags, and accessibility compliance.
 
 **Produces:** `src/layouts/`, `src/components/`, `src/pages/`
+
+### seo (Search Engine Optimization)
+
+Implements a 4-layer SEO architecture: (1) **Technical SEO** — sitemap generation via @astrojs/sitemap, robots.txt, canonical URLs; (2) **On-Page SEO** — per-page meta tags (title 50-60 chars, description 150-160 chars) read from `docs/seo.md`; (3) **Structured Data** — JSON-LD schema generation for Organization, WebSite, WebPage, BreadcrumbList, Service, Person, FAQPage; (4) **Off-Page** — post-launch manual checklist for Google Business Profile, directory submissions, review requests.
+
+**Produces:** Integrated meta tags in BaseLayout.astro, JSON-LD schemas in src/utils/schema.ts, `public/sitemap.xml`, `public/robots.txt`, `seo-audit.md` report
+
+**Integrates during:** deploy step as pre-build configuration
 
 ### deploy (Build & Ship)
 
@@ -112,14 +148,16 @@ Skills must run in this order — each depends on outputs from the previous:
 east-african-english        ← active throughout (language & tone standard)
 brand-alignment             ← active throughout (brand coherence quality gate)
 design-reference            ← optional first step (if client provides reference URLs)
+sector-strategies           ← optional step 0.5 (if starting from sector template)
         ↓
-  docs/design-reference.md
+  docs/design-reference.md or docs/sector-brief.md
         ↓
 website-builder
   ├── 1. design-system    → tailwind.config, global.css, design-tokens.md
-  ├── 2. photo-manager    → src/assets/images/, _catalog.json
+  ├── 2. photo-manager    → src/assets/images/, branding/logo.png, _catalog.json
   ├── 3. page-builder     → src/pages/, src/components/, src/layouts/
-  └── 4. deploy           → dist/, deploy.sh, nginx.conf
+  ├── 4. seo (integrates) → meta tags, schemas, sitemap config
+  └── 5. deploy           → dist/, deploy.sh, nginx.conf, seo-audit.md
 
 Utility skills (not part of the build pipeline):
   skill-writing              ← use when creating/updating any SKILL.md
@@ -307,6 +345,9 @@ Track significant skill improvements here.
 | 2026-02-17 | skill-writing | Added skill creation guide (utility) |
 | 2026-02-17 | skill-safety-audit | Added security audit gate for new/changed skills (utility) |
 | 2026-02-17 | update-claude-documentation | Added documentation updater (utility) |
+| 2026-02-17 | sector-strategies | Added 7-sector industry-specific design framework (tour, education, healthcare, ecommerce, professional-services, hobbyist-creator, nonprofit) with full dark/light mode support, logo detection, branding colors, and 100+ component patterns |
+| 2026-02-17 | photo-manager | Enhanced with automatic logo detection algorithm (scores by resolution, format, dimensions) and dedicated branding directory |
+| 2026-02-17 | seo | Added comprehensive 4-layer SEO architecture (technical, on-page, structured data, off-page) with JSON-LD schema generation and audit reporting |
 
 ---
 
