@@ -1,6 +1,6 @@
 ---
 name: sector-strategies
-description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, education, healthcare, e-commerce, professional services, hobbyist creators) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
+description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, education, healthcare, e-commerce, professional services, hobbyist creators) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
 ---
 
 ## Why Sector Strategy Matters
@@ -11,7 +11,7 @@ A tour company's website needs wanderlust and discovery cues (warm palettes, adv
 
 Same CMS. Different psychology. Different trust signals. Different components. Different content order.
 
-This skill provides templates for six core sectors, each with:
+This skill provides templates for seven core sectors, each with:
 - **Design tokens** (colors, typography, spacing optimized for that sector)
 - **Component patterns** (buttons, cards, CTAs that convert in that industry)
 - **Content architecture** (what users expect to see first)
@@ -41,6 +41,14 @@ Once you choose a sector and customize your brief, `design-system` uses it to ge
 **Key components**: Destination cards, itinerary timelines, booking widgets, experiential imagery
 **Content order**: Hero + adventure CTA → Popular destinations → Travel guides → Testimonials → Booking
 **Distinctive traits**: Real photography, storytelling copy, "you could be there" language
+
+### Corporate & Consulting
+
+**Trust cues**: Leadership, expertise, client wins, market authority, thought leadership
+**Visual identity**: Deep navy + slate gray + accent blue; professional sans-serif + serif accents
+**Key components**: Hero with value prop, mega menu, leadership team, company stats, case studies, investor relations
+**Content order**: Hero + demo CTA → Solutions grid → Case studies → Leadership team → Insights hub → Contact
+**Distinctive traits**: Professional photography, credential visibility, testimonials/client logos, downloadable resources, demo booking flow
 
 ### Education
 
