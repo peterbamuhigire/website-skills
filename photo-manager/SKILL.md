@@ -43,6 +43,13 @@ Government-License.jpg           → trust/credentials section
 ISO-Certification.png            → awards/certifications
 Industry-Award-Badge.jpg         → credentials
 
+Gallery-Project-01.jpg           → photo gallery pages
+Gallery-Project-02.jpg           → photo gallery pages
+Portfolio-Website-Redesign.jpg   → portfolio gallery
+Slide-Product-Demo-01.jpg        → slideshow/carousel sections
+Slide-Product-Demo-02.jpg        → slideshow/carousel sections
+Carousel-Client-Testimonials.jpg → slideshow carousel
+
 Team-Retreat-Event.jpg           → culture/behind-scenes
 Office-Culture-Photo.jpg         → about page
 Product-Launch-Celebration.jpg   → timeline/history
@@ -56,6 +63,8 @@ Product-Launch-Celebration.jpg   → timeline/history
 4. **Include variants** — `Logo-Light-Mode.png`, `Logo-Dark-Mode.png` (Claude selects appropriately)
 5. **One purpose per file** — Don't combine `Logo-And-Favicon.png` → split them
 6. **Describe role** — `Testimonial-Client-John.jpg` tells Claude the photo's purpose
+7. **Gallery collections** — Use `Gallery-*` or `Portfolio-*` for photos meant for gallery pages
+8. **Slideshow candidates** — Use `Slide-*` or `Carousel-*` for photos meant for slideshows/carousels
 
 ### How Claude Uses These Names
 
@@ -63,6 +72,21 @@ Product-Launch-Celebration.jpg   → timeline/history
 2. **Categorizes automatically** — Sorts into `hero/`, `team/`, `services/`, etc.
 3. **Places intelligently** — No manual placement needed
 4. **Updates catalog** — Records the recognized purpose in `_catalog.json`
+
+### Gallery & Slideshow Photo Recognition
+
+**Gallery Photos** (`Gallery-*`, `Portfolio-*`):
+- Grouped as multi-image collections for photo gallery pages
+- Sorted by number or name for display order
+- Ideal for: Portfolio, case studies, project showcases, before/after galleries
+- Example: `Gallery-Project-01.jpg`, `Gallery-Project-02.jpg`, `Gallery-Project-03.jpg` → sorted and displayed as multi-image gallery
+
+**Slideshow Photos** (`Slide-*`, `Carousel-*`):
+- Grouped as rotating carousel/slideshow candidates
+- Displayed one at a time with navigation controls
+- Ideal for: Product features, testimonials, team introductions, event highlights
+- Example: `Slide-Product-Feature-01.jpg`, `Slide-Product-Feature-02.jpg` → rotates through slideshow
+- Example: `Carousel-Testimonials-01.jpg`, `Carousel-Testimonials-02.jpg`, `Carousel-Testimonials-03.jpg` → rotating testimonials carousel
 
 ### Photos Without Descriptive Names
 
@@ -131,15 +155,34 @@ For each photo in photo-bank/:
 
 ### Filename Conventions
 
-Interpret filenames to determine category:
-- `hero-*`, `banner-*`, `bg-*` → `hero/`
-- `team-*`, `staff-*`, `person-*` → `team/`
-- `service-*`, `product-*`, `work-*` → `services/`
-- `gallery-*`, `portfolio-*`, `project-*` → `gallery/`
-- `about-*`, `office-*`, `culture-*` → `about/`
-- `client-*`, `testimonial-*` → `testimonials/`
+Interpret filenames to determine category and usage:
+
+**Branding:**
 - `logo-*` → `branding/` (auto-detects best logo)
-- Anything else → `misc/`
+- `favicon-*`, `icon-*` → `branding/`
+
+**Page Heroes:**
+- `hero-*`, `banner-*`, `bg-*` → `hero/`
+
+**Team & People:**
+- `team-*`, `staff-*`, `person-*`, `headshot-*` → `team/`
+
+**Services & Products:**
+- `service-*`, `product-*`, `work-*`, `feature-*` → `services/`
+
+**Photo Collections:**
+- `gallery-*`, `portfolio-*`, `project-*` → `gallery/` (multi-image galleries)
+- `slide-*`, `carousel-*` → `gallery/` (slideshow candidates)
+
+**About & Culture:**
+- `about-*`, `office-*`, `culture-*`, `event-*` → `about/`
+
+**Testimonials & Social Proof:**
+- `client-*`, `testimonial-*`, `quote-*` → `testimonials/`
+- `award-*`, `certificate-*`, `license-*` → `testimonials/`
+
+**Everything Else:**
+- Unrecognized patterns → `misc/`
 
 ## Logo Auto-Detection & Selection
 

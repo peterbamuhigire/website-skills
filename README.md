@@ -333,7 +333,15 @@ Certifications/
 ├── ISO-Certification.png
 └── Industry-Award-Badge.jpg
 
-Social/
+Gallery & Slideshows/
+├── Gallery-Project-01.jpg
+├── Gallery-Project-02.jpg
+├── Portfolio-Website-Redesign.jpg
+├── Slide-Product-Demo-01.jpg
+├── Slide-Product-Demo-02.jpg
+└── Carousel-Client-Testimonials.jpg
+
+Social & Culture/
 ├── Team-Retreat-Event.jpg
 ├── Office-Culture-Photo.jpg
 └── Product-Launch-Celebration.jpg
@@ -354,6 +362,8 @@ Descriptive names enable Claude to:
 | `*Feature*`, `*Screenshot*` | Product features | Features grid |
 | `*Culture*`, `*Event*`, `*Retreat*` | Behind-the-scenes | About section, culture |
 | `*Case-Study*`, `*Before-After*` | Results/proof | Case studies section |
+| `*Gallery*`, `*portfolio*` | Photo gallery collection | Photo gallery pages (multiple images) |
+| `*Slide*`, `*carousel*` | Slideshow candidates | Slideshow/carousel sections |
 
 ### Photo Naming Best Practices
 
