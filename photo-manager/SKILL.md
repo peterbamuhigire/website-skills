@@ -11,6 +11,68 @@ Handle all image assets — catalog, organize, and track for easy replacement.
 
 **NEVER use a photo without first checking its dimensions.** Every image placement must be dimension-aware.
 
+## Photo Naming Convention (Critical for Automation)
+
+Encourage clients to use **descriptive, purpose-specific photo names** instead of generic names like `IMG_001.jpg`. Claude uses these names to automatically identify photo purpose and appropriate placement.
+
+### Recommended Naming Patterns
+
+Claude recognizes and categorizes photos by name:
+
+```
+Logo-Light-Mode.png              → header/footer branding
+Logo-Dark-Mode.png               → dark mode header/footer
+Favicon.svg                      → browser tab icon
+
+CEO-Headshot.jpg                 → team section leadership
+Staff-Members.jpg                → about page team intro
+Developer-Alice.jpg              → team grid member
+Designer-Bob.jpg                 → team grid member
+
+Hero-Office-Team.jpg             → homepage hero
+Hero-Product-Launch.jpg          → feature page hero
+Hero-About-Page.jpg              → about page hero
+
+Service-Consulting.jpg           → services grid
+Feature-Dashboard.png            → features section
+
+Testimonial-Client-John.jpg      → testimonials carousel
+Testimonial-Company-Logo.png     → client logos section
+
+Government-License.jpg           → trust/credentials section
+ISO-Certification.png            → awards/certifications
+Industry-Award-Badge.jpg         → credentials
+
+Team-Retreat-Event.jpg           → culture/behind-scenes
+Office-Culture-Photo.jpg         → about page
+Product-Launch-Celebration.jpg   → timeline/history
+```
+
+### Naming Guidelines
+
+1. **Use hyphens** — `Logo-Light-Mode.png` not `Logo_light_mode.png`
+2. **Capitalize key words** — `CEO-Headshot.jpg` not `ceo-headshot.jpg`
+3. **Be specific** — `Developer-Alice.jpg` not `team-photo.jpg`
+4. **Include variants** — `Logo-Light-Mode.png`, `Logo-Dark-Mode.png` (Claude selects appropriately)
+5. **One purpose per file** — Don't combine `Logo-And-Favicon.png` → split them
+6. **Describe role** — `Testimonial-Client-John.jpg` tells Claude the photo's purpose
+
+### How Claude Uses These Names
+
+1. **Reads the filename** — Interprets the purpose from the name
+2. **Categorizes automatically** — Sorts into `hero/`, `team/`, `services/`, etc.
+3. **Places intelligently** — No manual placement needed
+4. **Updates catalog** — Records the recognized purpose in `_catalog.json`
+
+### Photos Without Descriptive Names
+
+If a photo has a generic name (`IMG_001.jpg`, `photo1.png`):
+- Claude will ask for clarification: "What is this photo for?"
+- Or categorize as `misc/` with a placeholder
+- Best to encourage descriptive naming upfront
+
+---
+
 ## Step 1: Scan photo-bank/
 
 ```bash
