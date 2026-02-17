@@ -1,6 +1,6 @@
 ---
 name: sector-strategies
-description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, education, healthcare, e-commerce, professional services, hobbyist creators) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
+description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
 ---
 
 ## Why Sector Strategy Matters
@@ -13,7 +13,7 @@ A tour company's website needs wanderlust and discovery cues (but each tour oper
 
 Same build pipeline. Same component structure. Different psychology. Different trust signals. Different components. Different content order. **DIFFERENT VISUAL IDENTITY.**
 
-This skill provides templates for seven core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
+This skill provides templates for eight core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
 - **Design tokens** (reference palettes — not prescriptive)
 - **Sector-brief template** (customization questionnaire — REQUIRED to answer)
 - **Component patterns** (patterns to follow, with YOUR styling)
@@ -61,6 +61,14 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 **Key components**: Hero with value prop, mega menu, leadership team, company stats, case studies, investor relations
 **Content order**: Hero + demo CTA → Solutions grid → Case studies → Leadership team → Insights hub → Contact
 **Distinctive traits**: Professional photography, credential visibility, testimonials/client logos, downloadable resources, demo booking flow
+
+### Personal & Portfolio
+
+**Trust cues**: Authenticity, personality, quality work, expertise, approachability
+**Visual identity**: Personalized colors + distinctive fonts that reflect individual brand (NOT defaults)
+**Key components**: Hero with personality, portfolio/projects grid, about section, skills/experience, blog (optional), contact CTA
+**Content order**: Hero + primary CTA → Featured projects → About/story → Skills or experience → Contact
+**Distinctive traits**: Personal photo/branding, curated project showcase, authentic storytelling, unique visual identity, blog (if applicable)
 
 ### Education
 
