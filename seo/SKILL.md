@@ -504,6 +504,7 @@ Detailed guides for SEO and AI visibility:
 ### Core SEO Implementation
 - **`references/analytics-verification.md`** — GA4 via Partytown setup, Google Search Console verification methods (meta tag + HTML file), privacy-friendly alternatives (Plausible, Umami, Fathom), troubleshooting
 - **`references/post-deploy-verification.md`** — Sitemap auto-pinging, IndexNow instant notification setup, robots.txt optimization, Nginx X-Robots-Tag headers, verify-deploy.sh script, monitoring checklist
+- **`references/webmaster-tools-setup.md`** — Complete step-by-step setup for Google Search Console, Google Business Profile, Google Analytics 4, Bing Webmaster Tools, IndexNow, Bing Places, rank tracking tools; security and privacy best practices; measurement framework; troubleshooting common issues
 
 ### AI Search Optimization (2026)
 - **`references/ai-seo-optimization.md`** — Comprehensive guide to AI search platforms (ChatGPT, Gemini, Perplexity, Claude), Generative Engine Optimization (GEO), Bing optimization (powers most AI platforms), multimodal content strategy, AI-specific metrics and tracking, content strategy for AI-first search, topic clustering for AI discovery
