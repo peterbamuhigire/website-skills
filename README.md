@@ -14,6 +14,12 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 ├── .gitignore
 ├── new-project.sh           Helper: scaffold a new client project
 ├── update-skills.sh         Helper: pull latest skills into a project
+├── east-african-english/    Language & tone standard — British spelling, formal, respectful
+│   └── SKILL.md
+├── brand-alignment/         Ensures site reflects client brand and speaks to ideal customer
+│   └── SKILL.md
+├── design-reference/        Analyses reference URLs and generates a design guide
+│   └── SKILL.md
 ├── website-builder/         Master orchestrator — coordinates all other skills
 │   └── SKILL.md
 ├── design-system/           Fonts, colors, visual identity, animation strategy
@@ -22,11 +28,37 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── SKILL.md
 ├── photo-manager/           Catalogs photos, tracks dimensions, organizes assets
 │   └── SKILL.md
-└── deploy/                  Builds, verifies, generates deployment configuration
+├── deploy/                  Builds, verifies, generates deployment configuration
+│   └── SKILL.md
+├── skill-writing/           Guide for creating and updating skills (utility)
+│   └── SKILL.md
+├── skill-safety-audit/      Scans skills for unsafe or malicious instructions (utility)
+│   └── SKILL.md
+└── update-claude-documentation/  Updates project documentation systematically (utility)
     └── SKILL.md
 ```
 
 ## Skills
+
+### east-african-english (Language & Tone Standard)
+
+The foundational writing standard applied to all generated content. Enforces authentic East African English as used in Uganda, Kenya, and Tanzania — formal, clear, respectful, British-influenced, and professionally courteous. Covers spelling (British), tone (warm but professional), vocabulary (measured, never exaggerated), sentence style, CTAs, and country-specific nuances. This skill runs alongside every other skill.
+
+**Applies to:** All visible website text, meta descriptions, alt text, form labels, error messages
+
+### brand-alignment (Brand Quality Gate)
+
+Ensures the website functions as a coherent brand experience, not just a collection of pages. Reads company profile and style brief to identify the ideal customer, brand position, and differentiator, then validates that every page — layout, messaging, navigation, imagery, CTAs — serves that audience consistently. Catches common pitfalls: generic messaging, visual inconsistency, buried CTAs, speaking to everyone instead of the right someone.
+
+**Applies to:** Homepage clarity, messaging consistency, visual restraint, navigation flow, CTA alignment, content prioritisation
+
+### design-reference (Reference Site Analyser)
+
+Accepts up to 5 URLs of websites the client admires, visits each one, and extracts design patterns — layout, typography, colour, navigation, animation, imagery, and CTAs. Filters every finding through our tech stack (Astro + Tailwind + Alpine.js), performance budget, and accessibility standards. Produces `docs/design-reference.md`, a structured guide that feeds directly into the design-system and page-builder skills.
+
+**Trigger phrases:** "I like these websites", "Here are some references", "Build something similar to these"
+
+**Produces:** `docs/design-reference.md`
 
 ### website-builder (Orchestrator)
 
@@ -58,6 +90,18 @@ Runs `npm run build`, verifies output, checks for broken references, and generat
 
 **Produces:** `dist/`, `deploy.sh`, `nginx.conf`
 
+### skill-writing (Utility — Skill Creation Guide)
+
+Guide for creating effective skills. Covers skill anatomy (YAML frontmatter, body, bundled resources), progressive disclosure design, the 500-line hard limit, and a six-step creation process. Use when creating or updating any SKILL.md in this repo.
+
+### skill-safety-audit (Utility — Security Gate)
+
+Scans new or updated skills for unsafe instructions — unknown installers, credential harvesting, unauthorized network actions, shadow dependencies, and hidden commands in bundled resources. Every new or changed skill must be audited before acceptance.
+
+### update-claude-documentation (Utility — Documentation Updater)
+
+Systematically updates project documentation (README.md, CLAUDE.md, and related files) after significant changes. Ensures consistency across all docs, maps changes to affected files, and enforces the 500-line hard limit on all markdown files.
+
 ---
 
 ## Execution Order
@@ -65,11 +109,22 @@ Runs `npm run build`, verifies output, checks for broken references, and generat
 Skills must run in this order — each depends on outputs from the previous:
 
 ```
+east-african-english        ← active throughout (language & tone standard)
+brand-alignment             ← active throughout (brand coherence quality gate)
+design-reference            ← optional first step (if client provides reference URLs)
+        ↓
+  docs/design-reference.md
+        ↓
 website-builder
   ├── 1. design-system    → tailwind.config, global.css, design-tokens.md
   ├── 2. photo-manager    → src/assets/images/, _catalog.json
   ├── 3. page-builder     → src/pages/, src/components/, src/layouts/
   └── 4. deploy           → dist/, deploy.sh, nginx.conf
+
+Utility skills (not part of the build pipeline):
+  skill-writing              ← use when creating/updating any SKILL.md
+  skill-safety-audit         ← mandatory audit before accepting new/changed skills
+  update-claude-documentation← use after significant changes to update all docs
 ```
 
 ---
@@ -179,11 +234,17 @@ client-project/
 ├── .gitmodules                # Auto-generated, references this repo
 ├── .claude/
 │   └── skills/                # ← THIS REPO (submodule)
+│       ├── east-african-english/
+│       ├── brand-alignment/
+│       ├── design-reference/
 │       ├── website-builder/
 │       ├── design-system/
 │       ├── page-builder/
 │       ├── photo-manager/
-│       └── deploy/
+│       ├── deploy/
+│       ├── skill-writing/
+│       ├── skill-safety-audit/
+│       └── update-claude-documentation/
 ├── docs/                      # Client content (markdown)
 │   ├── company-profile.md
 │   ├── services.md
@@ -221,11 +282,15 @@ These skills enforce several hard rules:
 When you find a pattern that works well (or doesn't), update the relevant SKILL.md:
 
 1. Make changes in this repo
-2. Test with a real client project
-3. Push to main
-4. Update submodules in active projects
+2. Run **skill-safety-audit** on any new or modified skill
+3. Test with a real client project
+4. Run **update-claude-documentation** to update README.md and CLAUDE.md
+5. Push to main
+6. Update submodules in active projects
 
-Skill files use YAML frontmatter for metadata (name, description, trigger) and markdown for instructions. Claude Code reads the full file when the skill is invoked.
+When creating a new skill, follow the **skill-writing** guide for structure, frontmatter, and the 500-line hard limit.
+
+Skill files use YAML frontmatter for metadata (name, description) and markdown for instructions. Claude Code reads the full file when the skill is invoked.
 
 ---
 
@@ -236,6 +301,12 @@ Track significant skill improvements here.
 | Date | Skill | Change |
 |------|-------|--------|
 | 2026-02-17 | all | Initial release — 5 skills for Astro + Tailwind static sites |
+| 2026-02-17 | east-african-english | Added language & tone standard for Uganda, Kenya, Tanzania |
+| 2026-02-17 | brand-alignment | Added brand coherence quality gate for client websites |
+| 2026-02-17 | design-reference | Added reference URL analyser — generates design guide from client-liked sites |
+| 2026-02-17 | skill-writing | Added skill creation guide (utility) |
+| 2026-02-17 | skill-safety-audit | Added security audit gate for new/changed skills (utility) |
+| 2026-02-17 | update-claude-documentation | Added documentation updater (utility) |
 
 ---
 
