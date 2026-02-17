@@ -14,10 +14,12 @@ This is a **Claude Code skills library** — a collection of SKILL.md files that
 east-african-english/SKILL.md  ← Language & tone standard (cross-cutting, always active)
 brand-alignment/SKILL.md       ← Brand coherence quality gate (cross-cutting, always active)
 design-reference/SKILL.md      ← Analyses reference URLs → docs/design-reference.md
+sector-strategies/SKILL.md     ← Industry-specific design & trust signals → docs/sector-brief.md
 website-builder/SKILL.md       ← Master orchestrator (entry point)
 design-system/SKILL.md         ← Fonts, colours, visual identity, animations
-photo-manager/SKILL.md         ← Photo cataloguing, dimensions, asset organisation
+photo-manager/SKILL.md         ← Photo cataloguing, dimensions, logo detection, asset organisation
 page-builder/SKILL.md          ← Markdown content → Astro pages and components
+seo/SKILL.md                   ← SEO configuration, meta tags, structured data, sitemap
 deploy/SKILL.md                ← Build verification, deploy scripts, Nginx config
 ```
 
@@ -36,10 +38,12 @@ Each SKILL.md uses YAML frontmatter (`name`, `description`) followed by markdown
 Website build skills are sequential — each depends on outputs from the previous:
 
 0. **design-reference** (optional) → produces `docs/design-reference.md` from up to 5 client-provided URLs
+0.5. **sector-strategies** (optional) → produces `docs/sector-brief.md` with industry-specific design strategy; reads 7 available sectors for distinctive, authentic sites
 1. **design-system** → produces `tailwind.config.mjs`, `src/styles/global.css`, `design-tokens.md`
-2. **photo-manager** → produces `src/assets/images/*/`, `src/assets/images/_catalog.json`
+2. **photo-manager** → produces `src/assets/images/*/`, `src/assets/images/_catalog.json`, auto-detects best logo in `branding/`
 3. **page-builder** → produces `src/layouts/`, `src/components/`, `src/pages/`
-4. **deploy** → produces `dist/`, `deploy.sh`, `nginx.conf`
+4. **seo** → integrates SEO configuration, meta tags, JSON-LD schema, sitemap during deploy
+5. **deploy** → produces `dist/`, `deploy.sh`, `nginx.conf`
 
 The `website-builder` skill orchestrates this entire sequence. It reads all `docs/` content and `photo-bank/` photos before generating anything.
 
