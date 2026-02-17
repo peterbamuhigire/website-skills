@@ -26,6 +26,7 @@ deploy/SKILL.md                ← Build verification, deploy scripts, Nginx con
 ### Utility Skills
 
 ```
+policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
@@ -54,6 +55,7 @@ Two skills are cross-cutting — they apply throughout all steps rather than pro
 
 Utility skills run independently of the build pipeline:
 
+- **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
 - **skill-writing** — use when creating or updating any SKILL.md
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
@@ -67,10 +69,11 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - Zero unnecessary JS — Astro ships no JS by default; Alpine.js only for interactive elements
 - Self-host everything — no external CDN requests for fonts, scripts, or analytics
 - Every site must look different — distinctive fonts, bold colour palettes per industry; never Inter/Roboto/Arial, never generic SaaS templates
-- Photos are dimension-aware — every image is measured before placement via `_catalog.json`; never upscale
+- Photos are dimension-aware and intelligently named — every image measured before placement via `_catalog.json` (never upscale); descriptive photo names (e.g., `Logo-Light-Mode.png`, `Gallery-Project-01.jpg`, `Slide-Feature-01.jpg`) enable automatic categorization and placement
 - Content comes only from `docs/` markdown — Claude never fabricates company information
 - Mobile-first — designed for 375px, enhanced for 768px and 1280px+
 - Performance budget — 95+ Lighthouse, under 500KB first load
+- Every website includes Privacy Policy and Terms of Use — legal protection + user trust
 
 ## Client Project Structure (Where Skills Are Consumed)
 
