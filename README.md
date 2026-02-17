@@ -102,7 +102,7 @@ Establishes the complete visual identity before any pages are built. Reads `docs
 
 ### photo-manager (Image Pipeline)
 
-Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them to organized `src/assets/images/{category}/` folders, and generates `_catalog.json` — a master registry tracking dimensions, aspect ratios, usage, and replacement notes for every image. **Auto-detects the best logo** from files containing "logo" in the filename (scores by resolution, format, dimensions) and copies it to `src/assets/images/branding/logo.png`.
+Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them to organized `src/assets/images/{category}/` folders, and generates `_catalog.json` — a master registry tracking dimensions, aspect ratios, usage, and replacement notes for every image. **Auto-detects the best logo** from files containing "logo" in the filename (scores by resolution, format, dimensions) and copies it to `src/assets/images/branding/logo.png`. **Recognizes descriptive photo names** (e.g., `Logo-Light-Mode.png`, `Staff-Members.jpg`, `Government-License.jpg`) to automatically categorize and appropriately place photos throughout the site.
 
 **Produces:** `src/assets/images/*/`, `src/assets/images/branding/logo.png`, `src/assets/images/_catalog.json`
 
@@ -300,6 +300,83 @@ Use `new-project.sh` to create a new project with this structure, or set it up m
 
 ---
 
+## Photo Naming Convention
+
+To help Claude automatically identify and use photos appropriately, encourage clients to use **descriptive, purpose-specific filenames** instead of generic names like `IMG_001.jpg` or `photo1.png`.
+
+### Good Photo Names (Descriptive)
+
+Claude can immediately understand purpose and placement:
+
+```
+Branding/
+├── Logo-Light-Mode.png
+├── Logo-Dark-Mode.png
+├── Favicon.svg
+└── Brand-Icon.png
+
+Team/
+├── Staff-Members.jpg (group photo)
+├── CEO-Headshot.jpg
+├── Developer-Alice.jpg
+├── Designer-Bob.jpg
+└── Manager-Carol.jpg
+
+Content/
+├── Hero-Office-Team.jpg
+├── Product-Feature-Screenshot.png
+├── Testimonial-Client-John.jpg
+└── Case-Study-Results-Dashboard.png
+
+Certifications/
+├── Government-License.jpg
+├── ISO-Certification.png
+└── Industry-Award-Badge.jpg
+
+Social/
+├── Team-Retreat-Event.jpg
+├── Office-Culture-Photo.jpg
+└── Product-Launch-Celebration.jpg
+```
+
+### What Claude Recognizes
+
+Descriptive names enable Claude to:
+
+| Name Pattern | Claude Identifies | Automatic Usage |
+|-------------|------------------|-----------------|
+| `*Logo*`, `*logo*` | Company branding | Header, footer, favicon |
+| `*Headshot*`, `*headshot*` | Team member photos | Team section grid |
+| `*Hero*`, `*banner*` | Full-width hero images | Page hero sections |
+| `*Testimonial*`, `*quote*` | Client/user quotes | Testimonials section |
+| `*Staff*`, `*Team*`, `*Members*` | Group photos | Team page introduction |
+| `*Certificate*`, `*License*`, `*Award*` | Credentials | Trust/credibility section |
+| `*Feature*`, `*Screenshot*` | Product features | Features grid |
+| `*Culture*`, `*Event*`, `*Retreat*` | Behind-the-scenes | About section, culture |
+| `*Case-Study*`, `*Before-After*` | Results/proof | Case studies section |
+
+### Photo Naming Best Practices
+
+1. **Use hyphens, not underscores** — `Logo-Dark-Mode.png` not `Logo_dark_mode.png`
+2. **Capitalize key words** — `CEO-Headshot.jpg` not `ceo-headshot.jpg`
+3. **Specific > Generic** — `Developer-Alice.jpg` not `team-photo.jpg`
+4. **Include mode/variant** — `Logo-Light-Mode.png`, `Logo-Dark-Mode.png` (allows automatic selection)
+5. **Describe purpose** — `Hero-Product-Launch.jpg` not `IMG_001.jpg`
+6. **One purpose per file** — Don't combine: `Logo-And-Favicon.png` → split to `Logo.png` and `Favicon.svg`
+
+### How Claude Uses These Names
+
+1. **Photo Manager** scans `photo-bank/` and reads all filenames
+2. **Catalogs** each photo with its recognized purpose
+3. **Page Builder** reads the catalog and places photos intelligently:
+   - Logo files → header/footer
+   - Headshots → team section
+   - Hero images → page heroes
+   - Testimonial photos → testimonials section
+4. **No manual placement needed** — Claude understands intent from naming alone
+
+---
+
 ## Design Principles
 
 These skills enforce several hard rules:
@@ -307,7 +384,7 @@ These skills enforce several hard rules:
 1. **Zero unnecessary JavaScript.** Astro ships no JS by default. Alpine.js only for interactive elements.
 2. **Self-host everything.** No external CDN requests for fonts, scripts, or analytics.
 3. **Every site looks different.** Skills choose distinctive fonts, bold color palettes, and varied aesthetics per industry — never generic SaaS templates.
-4. **Photos are dimension-aware.** Every image is measured before placement. No upscaling, no broken aspect ratios.
+4. **Photos are dimension-aware and intelligently named.** Every image is measured before placement. No upscaling, no broken aspect ratios. Users encourage descriptive photo names (e.g., `Logo-Light-Mode.png`, `Staff-Members.jpg`, `Testimonial-Alice.jpg`, `Hero-Product-Image.jpg`) so Claude can automatically identify photo purpose and appropriate placement without asking.
 5. **Content is truth.** All text comes from `docs/` markdown. Claude never fabricates company information.
 6. **Mobile-first, always.** Designed for 375px, enhanced for 768px and 1280px+.
 7. **Accessibility is required.** Proper heading hierarchy, alt text, ARIA labels, color contrast, keyboard navigation.
