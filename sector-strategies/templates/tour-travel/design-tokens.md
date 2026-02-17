@@ -1,21 +1,35 @@
 ---
-title: Tour & Travel Design Tokens Reference
+title: Tour & Travel Design Tokens Reference (REFERENCE ONLY — CUSTOMIZE FOR YOUR BRAND)
 sector: tour-travel
 ---
 
 # Tour & Travel: Design Tokens Reference
 
-Design system for high-conversion, high-performance travel websites optimizing for discovery, trust, and immediate booking action.
+**⚠️ IMPORTANT: This is a REFERENCE palette, not a prescription. Do NOT use these colors/fonts directly. Every travel website must look different.**
 
-## Color Philosophy
+This document shows ONE example of how travel sites can be designed. Your site should have its own distinctive visual identity.
 
-Tour & travel sites must balance **wanderlust with urgency and trust**:
+Design system for high-conversion, high-performance travel websites optimizing for discovery, trust, and immediate booking action. But how you achieve this visually should be UNIQUE to your brand.
+
+## Color Philosophy (For Your Customization)
+
+Tour & travel sites must balance **wanderlust with urgency and trust**. But achieving this requires YOUR unique color strategy, not a default palette:
+
+### Example Palette (DO NOT USE AS-IS)
 - **Sky Blue** (#0EA5E9): Exploration, sky, freedom, trust
 - **Sand Gold** (#F59E0B): Exotic locations, warmth, adventure, urgency
 - **Emerald Green** (#10B981): Nature, sustainability, positive experiences
 - **Deep Navy** (#1F2937): Professional, established, credible
 
-These colors convert better than muted earth tones (proven by A/B testing across 50+ sites).
+### Why This Is Just ONE Option
+
+Different travel markets need different colors:
+- **Luxury eco-lodge**: Often use warm earth tones + muted greens (natural, premium), not bright blue/gold
+- **Adventure outfitter**: Often use deep earth + bold accent (rugged, trustworthy), not sky blue
+- **Cultural tourism**: Often use warm terracotta + ochre (authentic, heritage), not modern palette
+- **Budget backpacker**: Often use bold colors + energetic palette (youthful, exciting), not conservative
+
+Your travel brand should NOT default to this palette. Answer your sector-brief questions to define YOUR colors based on your specific market and target customer.
 
 ### Primary Palette (Optimized for Conversion)
 
@@ -40,21 +54,31 @@ All colors verified for WCAG AA minimum (4.5:1 contrast) in both light and dark 
 - **Eco-Tours**: Lead with Emerald + Sky Blue (nature + trust)
 - **Budget Tours**: Highlight Sand Gold (value), Blue CTA (trust)
 
-## Typography
+## Typography (CUSTOMIZE — DO NOT USE THESE FONTS DIRECTLY)
 
-### Font Stack Recommendation
+### Example Font Pairing (This Is NOT Your Pairing)
 
-**Serif (Heritage/Trust)**: Lora or Merriweather
+**Serif Example**: Lora or Merriweather (DO NOT USE — find your own)
 - Headlines: H1–H3
 - Long-form content (about, blog, testimonials)
 
-**Sans-serif (Clarity/Efficiency)**: Poppins or Sora
+**Sans-serif Example**: Poppins or Sora (DO NOT USE — find your own)
 - Navigation, labels, CTAs, short copy
 - Body text on mobile
 
-**Display (Adventure/Discovery)**: Playfair Display or Fraunces
+**Display Example**: Playfair Display or Fraunces (DO NOT USE — find your own)
 - Hero headline (one word or short phrase)
 - Accent headers
+
+### Why You Need Different Fonts
+
+The design-system skill explicitly forbids common fonts (Inter, Roboto, Arial) to prevent generic designs. This reference shows example fonts, but your brand should choose UNIQUE fonts that:
+- Reflect your travel market (luxury vs. adventure vs. cultural vs. budget)
+- Differentiate from competitor sites
+- Work across all device sizes
+- Maintain accessibility (WCAG AA+)
+
+See [Fontsource](https://fontsource.org) for hundreds of distinctive, self-hosted font options.
 
 ### Typography Scale
 
@@ -145,15 +169,54 @@ All colors verified for WCAG AA minimum (4.5:1 contrast) in both light and dark 
 - Alt text: Descriptive for all images
 - Keyboard navigation: Full support
 
-## Reference Sites (Real Examples)
+## Anti-Homogeneity Principle
 
-Study these for visual inspiration:
-- Wilderness Safaris (luxe eco-safari)
-- Trafalgar Tours (mature travelers, structured)
-- Intrepid Travel (adventure, younger demographic)
-- Natural Habitat Adventures (conservation-focused)
-- Perenn (design-forward, boutique)
+**Every travel website built with this system must look visually distinctive.** If two tour operators both use Sky Blue + Poppins + the same component patterns, they become indistinguishable from each other and generic booking sites.
+
+To ensure your site is unique:
+
+1. **Define YOUR colors** (not these reference colors)
+   - Research your competitors' palettes and choose opposite territory
+   - Align with the destinations you promote (but don't be limited by it)
+   - Consider your market: Budget travelers want different colors than luxury travelers
+
+2. **Choose distinctive fonts** (not Poppins/Lora/Playfair Display)
+   - Start at [Fontsource](https://fontsource.org)
+   - Choose ONE heading font that feels distinctive to your brand
+   - Choose ONE body font that's invisible (easy to read)
+   - Test the pairing across all pages before committing
+
+3. **Build component variations** (not cookie-cutter cards)
+   - Design at least 3 tour card layouts (depending on tour type)
+   - Create different gallery treatments for different content
+   - Add visual identity through:
+     - Accent element position (lines, dots, shapes)
+     - Spacing rhythm (generous vs. tight)
+     - Border treatment (none, subtle, bold outline)
+     - Corner radius (sharp, subtle, fully rounded)
+
+4. **Use reference sites strategically**
+   - Study competitors to understand what you DON'T want
+   - Look at non-competitors for inspiration (airlines, hotels, lifestyle brands)
+   - Borrow patterns, not palettes
+
+## Reference Sites (For Differentiation Strategy)
+
+Study these to understand travel site patterns, but DO NOT COPY their aesthetics:
+- Wilderness Safaris (luxe eco-safari aesthetic — what NOT to copy if budget market)
+- Trafalgar Tours (structured, mature traveler design — inform yours differently)
+- Intrepid Travel (adventure brand — but choose different visual territory)
+- Natural Habitat Adventures (conservation focus — use different color strategy)
+- Perenn (design-forward boutique — study navigation, not colors)
+
+Better approach: Find 3 competitors in your exact market and decide what visual territory they DON'T occupy. Build your site there.
 
 ---
 
-**Next step**: Answer your sector-brief questions, and the design-system skill will adapt these tokens to your brand.
+## Next Steps
+
+1. **Read your sector-brief-template.md carefully** — especially the Brand Identity and Visual Identity sections
+2. **Complete your sector-brief.md** in `docs/sector-brief.md` with YOUR colors, YOUR fonts, YOUR travel market positioning
+3. **Do NOT default to this reference palette** — answer your brief to create something distinctive
+4. **Run the design-system skill** — it will read your customized brief and generate a unique visual system
+5. **Result**: A travel website that stands apart from competitor sites
