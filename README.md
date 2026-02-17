@@ -126,6 +126,16 @@ Runs `npm run build`, verifies output, checks for broken references, and generat
 
 **Produces:** `dist/`, `deploy.sh`, `nginx.conf`
 
+### policy-pages (Legal — Privacy & Terms)
+
+Designs Privacy Policies and Terms of Use that are legally compliant, user-friendly, accessible, and build trust. Covers 15 essential elements for each document with jurisdiction-specific requirements (GDPR, CCPA, COPPA, PIPEDA, LGPD, Privacy Act 1988, PECR). Emphasizes plain language, visual hierarchy, mobile optimization, and version control. Every website must have both documents.
+
+**Reference Files:** `privacy-policy-detailed.md` (737 lines), `terms-of-use-detailed.md` (925 lines)
+
+**Jurisdictions Covered:** EU (GDPR), US (CCPA/COPRA, COPPA), Canada (PIPEDA), Brazil (LGPD), Australia (Privacy Act), Asia-Pacific (PDPA)
+
+**Produces:** Privacy Policy page, Terms of Use page (customized to client's jurisdiction and business model)
+
 ### skill-writing (Utility — Skill Creation Guide)
 
 Guide for creating effective skills. Covers skill anatomy (YAML frontmatter, body, bundled resources), progressive disclosure design, the 500-line hard limit, and a six-step creation process. Use when creating or updating any SKILL.md in this repo.
@@ -160,6 +170,7 @@ website-builder
   └── 5. deploy           → dist/, deploy.sh, nginx.conf, seo-audit.md
 
 Utility skills (not part of the build pipeline):
+  policy-pages               ← use when creating Privacy Policy and Terms of Use pages
   skill-writing              ← use when creating/updating any SKILL.md
   skill-safety-audit         ← mandatory audit before accepting new/changed skills
   update-claude-documentation← use after significant changes to update all docs
@@ -435,6 +446,9 @@ Track significant skill improvements here.
 | 2026-02-17 | sector-strategies | Added 7-sector industry-specific design framework (tour, education, healthcare, ecommerce, professional-services, hobbyist-creator, nonprofit) with full dark/light mode support, logo detection, branding colors, and 100+ component patterns |
 | 2026-02-17 | photo-manager | Enhanced with automatic logo detection algorithm (scores by resolution, format, dimensions) and dedicated branding directory |
 | 2026-02-17 | seo | Added comprehensive 4-layer SEO architecture (technical, on-page, structured data, off-page) with JSON-LD schema generation and audit reporting |
+| 2026-02-17 | policy-pages | Added comprehensive Privacy Policy and Terms of Use skill (legally compliant, user-friendly, accessible); covers GDPR, CCPA, COPPA, PIPEDA, LGPD, Privacy Act 1988, PECR with jurisdiction-specific requirements and plain language principles |
+| 2026-02-17 | photo-manager | Enhanced with photo naming convention recognition (descriptive filenames for auto-categorization); supports Gallery/Portfolio and Slide/Carousel patterns for automatic multi-image gallery and slideshow creation |
+| 2026-02-17 | all | Added photo naming guidelines encouraging descriptive filenames (Logo-Light-Mode.png, Staff-Members.jpg, Gallery-Project-01.jpg, Slide-Feature-01.jpg) for automatic identification and placement without manual clarification |
 
 ---
 
