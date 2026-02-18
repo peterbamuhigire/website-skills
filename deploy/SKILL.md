@@ -1,6 +1,6 @@
 ---
 name: deploy
-description: Builds the Astro site, verifies output, generates deployment scripts and Nginx configuration. Use after all pages are built, as the final step.
+description: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with root redirect and language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
 ---
 
 # Deploy Skill
@@ -29,13 +29,22 @@ Check exit code. If errors, fix them before proceeding.
 
 ## Step 2: Verify Output
 
-```bash
-# Check all expected pages exist
-ls -la dist/
-ls -la dist/*/
+### Multi-Language Build Verification (NEW)
 
-# Count HTML files
-find dist -name "*.html" | wc -l
+```bash
+# Check language-specific directories exist
+ls -la dist/
+ls -la dist/en/
+ls -la dist/fr/
+ls -la dist/sw/
+
+# Count HTML files per language
+find dist/en -name "*.html" | wc -l  # English pages
+find dist/fr -name "*.html" | wc -l  # French pages
+find dist/sw -name "*.html" | wc -l  # Kiswahili pages
+
+# Check sitemaps generated for all languages
+ls -la dist/sitemap*.xml
 
 # Check for broken image references in built HTML
 grep -r "src=\"" dist/ | grep -v "data:" | grep -v "http" | head -20
@@ -45,10 +54,18 @@ du -sh dist/
 ```
 
 Verify:
-- [ ] Every page from docs/pages.md has a corresponding HTML file in dist/
-- [ ] No 404-producing broken links
-- [ ] Images are present and optimized (check dist/_astro/ for generated images)
-- [ ] Total dist/ size is reasonable (under 5MB for a typical site)
+- [ ] **Language directories exist:** dist/en/, dist/fr/, dist/sw/
+- [ ] **Each language version complete:** Every page from docs/{lang}/pages.md has matching HTML in dist/{lang}/
+- [ ] **Sitemaps generated:**
+  - sitemap-index.xml (master index)
+  - sitemap-en.xml (English pages)
+  - sitemap-fr.xml (French pages)
+  - sitemap-sw.xml (Kiswahili pages)
+- [ ] **Hreflang tags:** Sample pages have correct hreflang links to all language versions
+- [ ] **Language switcher:** Header includes language switcher on all pages
+- [ ] **Images:** Present and optimized in dist/_astro/ (shared across languages)
+- [ ] **No 404-producing links:** All internal links follow /en/, /fr/, /sw/ paths
+- [ ] **Build size reasonable:** Under 5MB for typical site (shared images across languages)
 
 ## Step 3: Generate deploy.sh
 
@@ -97,6 +114,8 @@ echo "Updated at $(date)"
 
 ## Step 4: Generate Nginx Config
 
+Multi-language configuration with root redirect (NEW):
+
 ```nginx
 server {
     listen 80;
@@ -104,10 +123,19 @@ server {
     root /var/www/sitename;
     index index.html;
 
+    # ===== NEW: ROOT REDIRECT TO DEFAULT LANGUAGE =====
+    # Redirect root domain (/) to default language (/en/)
+    # Change 'en' to 'fr' or 'sw' if different default language configured
+    location = / {
+        return 301 /en/;
+    }
+
     # Security headers
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    # ===== NEW: Crawler directive =====
+    add_header X-Robots-Tag "index, follow" always;
 
     # Cache static assets aggressively
     location /_astro/ {
@@ -127,6 +155,19 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
+    # ===== NEW: Sitemap handling =====
+    location ~ ^/sitemap.*\.xml$ {
+        expires 24h;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # ===== NEW: Language-aware routes =====
+    # All /en/, /fr/, /sw/ paths work with clean URLs
+    location ~ ^/(en|fr|sw)/ {
+        try_files $uri $uri/ $uri.html =404;
+    }
+
     # Gzip
     gzip on;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/javascript image/svg+xml;
@@ -137,10 +178,18 @@ server {
         try_files $uri $uri/ $uri.html =404;
     }
 
-    # Custom 404
-    error_page 404 /404.html;
+    # Custom 404 pages per language
+    # Users on /en/ see /en/404.html, /fr/ see /fr/404.html, etc.
+    error_page 404 /en/404.html;
 }
 ```
+
+**Key Changes for Multi-Language:**
+1. **Root redirect:** `/` → `/en/` (change to `/fr/` or `/sw/` based on docs/i18n-config.md default)
+2. **Language routing:** Explicit location blocks for /en/, /fr/, /sw/ paths
+3. **Sitemap handling:** Caches language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml)
+4. **Crawler directive:** X-Robots-Tag allows all language versions to be indexed
+5. **Language-specific 404:** Users see 404 in their language
 
 Save as `nginx.conf` in the project root for reference.
 
@@ -177,31 +226,56 @@ Output this checklist for the user:
 ## Deployment Checklist
 
 ### Before Going Live
+
+#### Multi-Language Verification (NEW)
+- [ ] All languages enabled and complete (check docs/i18n-config.md)
+- [ ] All content translated: docs/en/, docs/fr/, docs/sw/
+- [ ] In-country reviewers approved French and Kiswahili content
+- [ ] Language switcher visible on all pages
+- [ ] Hreflang tags present in page source (inspect all 3 language versions)
+- [ ] Language-specific sitemaps generated:
+  - sitemap-en.xml
+  - sitemap-fr.xml
+  - sitemap-sw.xml
+  - sitemap-index.xml (master)
+
+#### General Pre-Flight
 - [ ] All placeholder images replaced (check _catalog.json for placeholder: true)
-- [ ] Company contact info verified in docs/company-profile.md
-- [ ] All links working (run: `npx broken-link-checker dist/index.html`)
+- [ ] Company contact info verified in docs/{lang}/company-profile.md (all languages)
+- [ ] All links working and using correct language paths (/en/, /fr/, /sw/)
 - [ ] Favicon uploaded to public/favicon.svg
 - [ ] OG image uploaded to public/og-image.png (1200x630px)
-- [ ] Meta descriptions set for all pages
+- [ ] Meta descriptions set for all pages in all languages
 
 ### Server Setup
 - [ ] Git repo cloned on server
 - [ ] Node.js installed (v18+)
 - [ ] npm install completed
-- [ ] Nginx configured and tested
+- [ ] Nginx configured with:
+  - Root redirect to default language (/en/ or /fr/ or /sw/)
+  - Language-aware routing for /en/, /fr/, /sw/
+  - Sitemap caching rules
 - [ ] SSL certificate installed
 - [ ] DNS pointing to server
 
 ### Go Live
 - [ ] Run `npm run build` on server
-- [ ] Test all pages in browser
-- [ ] Test on mobile device
-- [ ] Run Lighthouse audit (aim for 95+ all categories)
-- [ ] Submit sitemap to Google Search Console
+- [ ] Test all pages in all languages in browser
+- [ ] Test language switcher (navigate between /en/, /fr/, /sw/)
+- [ ] Test on mobile device (all languages)
+- [ ] Root domain (/) redirects correctly to default language
+- [ ] Run Lighthouse audit for each language (aim for 95+ all categories)
+- [ ] Submit ALL sitemaps to Google Search Console:
+  - sitemap-index.xml (primary)
+  - sitemap-en.xml
+  - sitemap-fr.xml
+  - sitemap-sw.xml
+- [ ] Test hreflang tags work (use Google's Rich Results Test)
 
 ### Ongoing Updates
-- Edit content in docs/*.md
-- Replace photos in src/assets/images/
+- Edit content in docs/{lang}/*.md (match language)
+- Replace photos in src/assets/images/ (shared across languages)
+- Translate updates to all enabled languages before committing
 - git commit & push
 - On server: git pull && npm run build
 ```
