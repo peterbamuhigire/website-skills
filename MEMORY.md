@@ -225,8 +225,97 @@ python palette_generator.py 10B981 monochromatic # Generate monochromatic
 - JSON for tools/systems
 - Design tokens for Figma
 
+### App Landing Pages Sector (NEW)
+
+**What:** New sector template for building high-converting app landing pages for your own app projects.
+
+**Files Created:**
+1. `sector-strategies/templates/app-landing-pages/design-tokens.md` (414 lines)
+   - Color strategies by app type (5 categories with palettes)
+   - Typography system (mobile-first, responsive scaling)
+   - Component patterns (hero, cards, testimonials, CTAs, buttons)
+   - Layout patterns (mobile/tablet/desktop)
+   - Spacing system (8px grid)
+   - Visual hierarchy and hierarchy principles
+   - Motion/animations with performance consideration
+   - Responsive breakpoints
+   - Dark mode color mapping
+   - Accessibility checklist
+   - Performance targets (< 3 seconds load, LCP < 2.5s)
+
+2. `sector-strategies/templates/app-landing-pages/implementation-guide.md` (550+ lines)
+   - Phase 1: Strategy & Content (goal definition, problem-solution, benefits, audience, headline, subheadline)
+   - Phase 2: Visual Planning (framework selection, asset planning, color/font choice)
+   - Phase 3: Build Page Structure (sections checklist, copy writing, asset gathering)
+   - Phase 4: Design Mockups (wireframes, high-fidelity mockups, feedback)
+   - Phase 5: Build the Page (development setup, semantic HTML, responsive CSS, interactivity)
+   - Phase 6: Optimize & Launch (performance optimization, tracking setup, accessibility audit)
+   - Phase 7: Optimize & Iterate (weekly analysis, A/B testing roadmap, quarterly refresh)
+   - Complete templates and checklists for each phase
+
+3. `sector-strategies/templates/app-landing-pages/conversion-strategies.md` (500+ lines)
+   - Core concepts (why app landing pages matter, 10 essential components)
+   - 5 proven conversion frameworks:
+     * AIDA (Attention → Interest → Desire → Action)
+     * PAS (Problem → Agitation → Solution)
+     * FAB (Features → Advantages → Benefits)
+     * Hero's Journey (narrative structure)
+     * Mobile-First Conversion Path (thumb-driven scrolling)
+   - Copy formulas (headline formula, feature vs. benefit, microcopy)
+   - Visual design (60-30-10 rule, visual hierarchy, color psychology)
+   - Social proof strategies (types, testimonials, trust badges, placement)
+   - CTA optimization (anatomy, copywriting, testing variables)
+   - Performance optimization (speed impact, Core Web Vitals, image optimization)
+   - A/B testing strategy (what to test, testing process, statistical significance)
+   - Analytics & measurement (key metrics, tracking setup, heatmaps)
+   - 10 common mistakes to avoid
+
+**Key Insight:** App landing pages are NOT generic websites—they're conversion-optimized experiences designed specifically to drive app installs or sign-ups.
+
+**Differentiation from Other Sectors:**
+- Focus on CONVERSION (not brand/trust alone)
+- Heavy emphasis on A/B testing and iteration
+- Mobile-first mandatory (80% of traffic is mobile)
+- Complete analytics implementation required
+- 5 proven frameworks specific to app discovery
+- Includes CTA psychology and optimization
+
+**5 App Type Palettes Provided:**
+1. **Productivity** — Blue + Green (professionalism + action)
+2. **Health/Wellness** — Green + Coral (wellness + energy)
+3. **Entertainment** — Magenta + Gold (fun + premium)
+4. **Finance** — Navy + Green (trust + growth)
+5. **Social** — Purple + Coral (modern + connection)
+
+**Conversion Frameworks Covered:**
+- AIDA: Best for awareness-focused campaigns
+- PAS: Best for pain-point focused solutions
+- FAB: Best for tech-forward audiences
+- Hero's Journey: Best for transformation apps
+- Mobile-First Path: Best for all apps (80%+ mobile traffic)
+
+**CTA Testing Variables:**
+Copy, color, size, position, button style, icon — each systematically tested
+
+**A/B Testing Roadmap:**
+Week 1: Headlines | Week 2: CTA color | Week 3: Hero visual | Week 4: Social proof | Week 5: Benefit order | Week 6: Implement winners
+
+**Key Metrics to Track:**
+CTR, Conversion Rate, Bounce Rate, Time on Page, Scroll Depth, Exit Rate
+
+**Performance Targets:**
+- Page load < 3 seconds
+- LCP < 2.5s (Largest Contentful Paint)
+- CLS < 0.1 (Cumulative Layout Shift)
+- Images < 100KB each
+- Total page < 500KB
+
+**Why This Sector Exists:**
+Unlike client sectors (which need multiple pages, navigation, content systems), app landing pages have a SINGLE goal: drive conversions (downloads, sign-ups). This sector provides templates specifically designed for this constraint.
+
 ---
 
 **Last Updated:** 2026-02-17
 **Skills Added:** policy-pages, color-selection
-**Enhancements:** Photo naming conventions, gallery/slideshow recognition, comprehensive color theory framework
+**Sectors Added:** app-landing-pages
+**Enhancements:** Photo naming conventions, gallery/slideshow recognition, comprehensive color theory framework, app landing page conversion optimization
