@@ -20,18 +20,21 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── SKILL.md
 ├── design-reference/        Analyses reference URLs and generates a design guide
 │   └── SKILL.md
-├── sector-strategies/       Industry-specific website design (7 sectors) with authentic patterns
+├── sector-strategies/       Industry-specific website design (9 sectors + app landing pages) with authentic patterns
 │   ├── SKILL.md
 │   ├── DARK-MODE-IMPLEMENTATION.md
 │   ├── templates/
 │   │   ├── branding-colors-template.md
 │   │   ├── tour-travel/
+│   │   ├── corporate-consulting/
+│   │   ├── personal-portfolio/
 │   │   ├── education/
 │   │   ├── healthcare/
 │   │   ├── ecommerce/
 │   │   ├── professional-services/
 │   │   ├── hobbyist-creator/
-│   │   └── nonprofit/
+│   │   ├── nonprofit/
+│   │   └── app-landing-pages/      (For app developers — 3 comprehensive guides)
 │   └── README.md
 ├── website-builder/         Master orchestrator — coordinates all other skills
 │   └── SKILL.md
@@ -85,13 +88,13 @@ Accepts up to 5 URLs of websites the client admires, visits each one, and extrac
 
 ### sector-strategies (Industry-Specific Design Framework)
 
-Guides users to choose a sector (7 available: tour & travel, education, healthcare, e-commerce, professional services, hobbyist creator, nonprofit/charity), then applies proven design patterns, psychology, and trust signals unique to that industry. Each sector includes customization templates, dark/light mode design tokens, component patterns based on exemplary reference sites, and brand color guidance. Ensures generated sites look professionally industry-authentic, not AI-generic.
+Guides users to choose a sector (9+ available: tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creator, nonprofit/charity, PLUS app landing pages for developers), then applies proven design patterns, psychology, and trust signals unique to that industry. Each sector includes customization templates, dark/light mode design tokens, component patterns based on exemplary reference sites, and brand color guidance. **App landing pages sector is optimized for conversion frameworks, A/B testing, and mobile-first design** — for app developers building their own landing pages.
 
-**Sectors:** Tour & Travel, Education, Healthcare, E-commerce, Professional Services, Hobbyist Creator, Nonprofit/Charity/NGO
+**Sectors:** Tour & Travel, Corporate & Consulting, Personal & Portfolio, Education, Healthcare, E-commerce, Professional Services, Hobbyist Creator, Nonprofit/Charity/NGO, **App Landing Pages** (new)
 
-**Features:** Full dark/light mode support, automatic logo detection and selection, branding color documentation with WCAG accessibility compliance, 10+ pre-designed industry-specific components, 800+ line education implementation guide, comprehensive nonprofit dark mode support
+**Features:** Full dark/light mode support, automatic logo detection and selection, branding color documentation with WCAG accessibility compliance, 10+ pre-designed industry-specific components, 800+ line education implementation guide, comprehensive nonprofit dark mode support, **app landing page conversion frameworks (AIDA, PAS, FAB, Hero's Journey), complete A/B testing strategy, performance optimization guide**
 
-**Trigger phrases:** "I want this to look like a school website", "This is a tour company", "Make it nonprofit-friendly", "Dark mode support", "Professional services firm"
+**Trigger phrases:** "I want this to look like a school website", "This is a tour company", "Make it nonprofit-friendly", "Dark mode support", "Professional services firm", **"Build an app landing page", "I need a landing page for my app"**
 
 **Produces:** `docs/sector-brief.md`, branding color configuration, dark mode setup
 
