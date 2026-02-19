@@ -14,7 +14,10 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 ├── .gitignore
 ├── new-project.sh           Helper: scaffold a new client project
 ├── update-skills.sh         Helper: pull latest skills into a project
-├── east-african-english/    Language & tone standard — British spelling, formal, respectful
+├── i18n/                    Multi-language infrastructure (3 languages: en, fr, sw)
+│   ├── SKILL.md
+│   └── docs-i18n-config-template.md
+├── language-standards/      Language & tone standards — 3 languages: British English, Francophone French, East African Kiswahili
 │   └── SKILL.md
 ├── brand-alignment/         Ensures site reflects client brand and speaks to ideal customer
 │   └── SKILL.md
@@ -66,11 +69,23 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 
 ## Skills
 
-### east-african-english (Language & Tone Standard)
+### i18n (Multi-Language Infrastructure) — NEW
 
-The foundational writing standard applied to all generated content. Enforces authentic East African English as used in Uganda, Kenya, and Tanzania — formal, clear, respectful, British-influenced, and professionally courteous. Covers spelling (British), tone (warm but professional), vocabulary (measured, never exaggerated), sentence style, CTAs, and country-specific nuances. This skill runs alongside every other skill.
+Establishes complete multi-language support from the start. Every website automatically supports 3 languages: English (en), French (fr), and Kiswahili (sw). Implements path-based URLs (`/en/`, `/fr/`, `/sw/`), generates hreflang tags for SEO, creates language-specific sitemaps, handles text expansion (French ~30% longer, Kiswahili ~20% longer), and orchestrates per-language content builds. Root domain redirects to configured default language. Includes flag-based language switcher (🇬🇧 🇫🇷 🇪🇦) visible on all pages.
 
-**Applies to:** All visible website text, meta descriptions, alt text, form labels, error messages
+**Content Structure:** `docs/{lang}/` with complete independent content per language
+
+**Produces:** `docs/i18n-config.md`, language detection utilities, multi-language sitemaps, hreflang tags
+
+**Applies to:** Content organization, URL routing, sitemap generation, SEO metadata
+
+**Trigger phrases:** "Build a multi-language website", "I need French and Kiswahili support", "Support multiple languages"
+
+### language-standards (Language & Tone Standards)
+
+The foundational writing standard applied to all generated content in all 3 languages. **English:** Authentic East African English as used in Uganda, Kenya, and Tanzania — formal, clear, respectful, British-influenced, professionally courteous. Covers spelling (British), tone (warm but professional), vocabulary (measured, never exaggerated), sentence style, CTAs, country-specific nuances. **French:** Formal francophone African standard (no Québécois variants) with guidance on tu/vous usage and regional vocabulary. **Kiswahili:** Standard East African Kiswahili with formal register, harmony and humility-focused communication, proper noun class agreement. This skill runs alongside every other skill.
+
+**Applies to:** All visible website text in all languages, meta descriptions, alt text, form labels, error messages, CTAs
 
 ### brand-alignment (Brand Quality Gate)
 
@@ -100,7 +115,7 @@ Guides users to choose a sector (9+ available: tour & travel, corporate & consul
 
 ### website-builder (Orchestrator)
 
-The entry point. When Claude is told to "build this website", this skill reads all content from `docs/`, scans photos in `photo-bank/`, then coordinates the other skills in order: design-system → photo-manager → page-builder → deploy.
+The entry point. When Claude is told to "build this website", this skill reads `docs/i18n-config.md` to detect enabled languages, then reads language-specific content from `docs/{lang}/`, scans photos in `photo-bank/`, and coordinates the other skills in order: design-system → photo-manager → page-builder → seo → deploy. Automatically builds all enabled language versions.
 
 **Trigger phrases:** "Build this website", "Create a site", "Rebuild the site"
 
@@ -118,23 +133,23 @@ Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, 
 
 ### page-builder (Content → Pages)
 
-Reads markdown content from `docs/`, the design tokens, and the photo catalog, then generates Astro pages and reusable components. Builds mobile-first with scroll animations, Alpine.js interactivity, proper SEO meta tags, and accessibility compliance.
+Reads markdown content from `docs/{lang}/` for each enabled language, the design tokens, and the photo catalog, then generates Astro pages and reusable components. Creates dynamic `[lang]` routes for multi-language support. Builds mobile-first with scroll animations, Alpine.js interactivity, proper SEO meta tags, language-aware text expansion, and accessibility compliance. Includes LanguageSwitcher component.
 
-**Produces:** `src/layouts/`, `src/components/`, `src/pages/`
+**Produces:** `src/layouts/`, `src/components/`, `src/pages/[lang]/`, `src/utils/i18n.ts`
 
-### seo (Search Engine Optimization)
+### seo (Search Engine Optimization — Multi-Language)
 
-Implements a 4-layer SEO architecture: (1) **Technical SEO** — sitemap generation via @astrojs/sitemap, robots.txt, canonical URLs; (2) **On-Page SEO** — per-page meta tags (title 50-60 chars, description 150-160 chars) read from `docs/seo.md`; (3) **Structured Data** — JSON-LD schema generation for Organization, WebSite, WebPage, BreadcrumbList, Service, Person, FAQPage; (4) **Off-Page** — post-launch manual checklist for Google Business Profile, directory submissions, review requests.
+Implements a 4-layer SEO architecture: (1) **Technical SEO** — multi-language sitemap generation (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml), hreflang tags pointing to all language versions, robots.txt, canonical URLs; (2) **On-Page SEO** — per-page, per-language meta tags (title 50-60 chars, description 150-160 chars) read from `docs/{lang}/seo.md`; (3) **Structured Data** — JSON-LD schema generation for Organization, WebSite, WebPage, BreadcrumbList, Service, Person, FAQPage with language variants; (4) **Off-Page** — post-launch manual checklist for Google Business Profile, directory submissions, review requests per language.
 
-**Produces:** Integrated meta tags in BaseLayout.astro, JSON-LD schemas in src/utils/schema.ts, `public/sitemap.xml`, `public/robots.txt`, `seo-audit.md` report
+**Produces:** Hreflang tags in BaseLayout, language-specific meta tags, JSON-LD schemas in src/utils/schema.ts, language-specific sitemaps, sitemap-index.xml, `public/robots.txt`, `seo-audit.md` report
 
 **Integrates during:** deploy step as pre-build configuration
 
-### deploy (Build & Ship)
+### deploy (Build & Ship — Multi-Language)
 
-Runs `npm run build`, verifies output, checks for broken references, and generates `deploy.sh` and `nginx.conf` with aggressive caching headers. Outputs a pre-launch checklist.
+Runs `npm run build`, verifies output for all language versions, checks for broken references, and generates `deploy.sh` and language-aware `nginx.conf` with aggressive caching headers and root domain redirect. Outputs a comprehensive multi-language pre-launch checklist. Verifies hreflang tags, language-specific sitemaps, and per-language Lighthouse scores.
 
-**Produces:** `dist/`, `deploy.sh`, `nginx.conf`
+**Produces:** `dist/{en,fr,sw}/`, `deploy.sh`, `nginx.conf` (with root redirect and language routing)
 
 ### policy-pages (Legal — Privacy & Terms)
 
@@ -179,22 +194,25 @@ Systematically updates project documentation (README.md, CLAUDE.md, and related 
 Skills must run in this order — each depends on outputs from the previous:
 
 ```
-east-african-english        ← active throughout (language & tone standard)
+i18n                        ← mandatory first step (detects enabled languages: en, fr, sw)
+language-standards          ← active throughout (multi-language tone & style guide)
 brand-alignment             ← active throughout (brand coherence quality gate)
 design-reference            ← optional first step (if client provides reference URLs)
 sector-strategies           ← optional step 0.5 (if starting from sector template)
         ↓
-  docs/design-reference.md or docs/sector-brief.md
+  docs/i18n-config.md (detected)
+  docs/{lang}/design-reference.md or docs/sector-brief.md
         ↓
 website-builder
-  ├── 1. design-system    → tailwind.config, global.css, design-tokens.md
-  ├── 2. photo-manager    → src/assets/images/, branding/logo.png, _catalog.json
-  ├── 3. page-builder     → src/pages/, src/components/, src/layouts/
-  ├── 4. seo (integrates) → meta tags, schemas, sitemap config
-  └── 5. deploy           → dist/, deploy.sh, nginx.conf, seo-audit.md
+  ├── 1. design-system      → tailwind.config, global.css, design-tokens.md (shared)
+  ├── 2. photo-manager      → src/assets/images/, branding/logo.png, _catalog.json (shared)
+  ├── 3. page-builder       → src/pages/[lang]/, src/components/, src/layouts/ (per-language)
+  ├── 4. seo (integrates)   → hreflang tags, multi-lang sitemaps, locale meta tags
+  └── 5. deploy             → dist/{en,fr,sw}/, deploy.sh, nginx.conf (multi-language)
 
 Utility skills (not part of the build pipeline):
-  policy-pages               ← use when creating Privacy Policy and Terms of Use pages
+  policy-pages               ← use when creating Privacy Policy and Terms of Use pages (per-language)
+  color-selection            ← use when defining color palettes (shared across languages)
   skill-writing              ← use when creating/updating any SKILL.md
   skill-safety-audit         ← mandatory audit before accepting new/changed skills
   update-claude-documentation← use after significant changes to update all docs
