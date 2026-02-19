@@ -77,6 +77,20 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - Performance budget — 95+ Lighthouse, under 500KB first load
 - Every website includes Privacy Policy and Terms of Use — legal protection + user trust
 
+## Client Content Templates
+
+The `templates/` directory contains markdown templates that clients copy into their `docs/` folder and fill in. These provide all the content the skills need to build a website.
+
+**Core (required):** `company-profile.md`, `pages.md`, `style-brief.md`
+**Recommended:** `services.md`, `team-profiles.md`, `contact.md`
+**Optional:** `testimonials.md`, `portfolio.md`, `faq.md`, `about-story.md`, `gallery.md`
+
+Additional templates live in skill directories: `seo/docs-seo-template.md`, `sector-strategies/templates/branding-colors-template.md`, `sector-strategies/templates/{sector}/sector-brief-template.md`.
+
+If a client skips an optional template, skills use available information from core files to generate content — or omit that section entirely. The only truly required file is `company-profile.md`.
+
+See `templates/README.md` for the full guide.
+
 ## Client Project Structure (Where Skills Are Consumed)
 
 ```
