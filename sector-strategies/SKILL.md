@@ -13,7 +13,7 @@ A tour company's website needs wanderlust and discovery cues (but each tour oper
 
 Same build pipeline. Same component structure. Different psychology. Different trust signals. Different components. Different content order. **DIFFERENT VISUAL IDENTITY.**
 
-This skill provides templates for eight core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
+This skill provides templates for nine core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
 - **Design tokens** (reference palettes — not prescriptive)
 - **Sector-brief template** (customization questionnaire — REQUIRED to answer)
 - **Component patterns** (patterns to follow, with YOUR styling)
@@ -124,6 +124,18 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 **Key components**: Portfolio grid, process/behind-scenes, subscribe CTA, community signals
 **Content order**: Hero + personality → Best work → Process/behind-scenes → Community/subscribe → Contact
 **Distinctive traits**: Personal voice, authentic storytelling, niche focus, less corporate, more human
+
+### App Landing Pages
+
+**💡 For app developers building their own landing pages**
+
+**Trust cues**: Conversion-focused design, social proof, clear value proposition, urgency/scarcity
+**Visual identity**: Varies by app type (see design-tokens.md for 5 category-specific palettes)
+**Key components**: Hero with sticky CTA, benefit cards, demo video/screenshots, testimonials, FAQ, app store badges
+**Content order**: Hero + CTA → Key benefits → How it works → Social proof → FAQ → Download CTA
+**Distinctive traits**: Mobile-first design (80% traffic), conversion optimization focus, clear problem-solution narrative
+
+**Special note:** Unlike client sectors, app landing pages emphasize conversion frameworks (AIDA, PAS, FAB, Hero's Journey) and include comprehensive A/B testing strategies.
 
 ## How to Use This Skill
 
