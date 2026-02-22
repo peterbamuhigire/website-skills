@@ -421,6 +421,7 @@ For EVERY page in EVERY language, mentally verify:
 - aria-labels on icon-only buttons
 - Focus-visible styles on interactive elements
 - Sufficient color contrast (4.5:1 for body text, 3:1 for large text)
+- **Element-vs-background contrast check (MANDATORY):** Before using ANY colour class on a button, badge, text, or element, verify that the colour token actually exists in the theme (`global.css` `@theme` block) AND that it contrasts against its parent section background. For example, `bg-amber` does not exist if the theme only defines `bg-amber-500`; an undefined class renders no background, making the element invisible. Always cross-reference the exact token names in `@theme`. On dark backgrounds (navy, sea-800, sea-900), use `bg-highlight` (amber) or `bg-white`; on light backgrounds, use `bg-primary`, `bg-sea-800`, or `bg-navy`.
 - Skip-to-content link in BaseLayout
 - Keyboard navigable mobile menu
 
