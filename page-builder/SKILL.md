@@ -355,6 +355,10 @@ Bold, contrasting background. Clear action. One button, one message.
 - Embedded map (optional, use iframe)
 - Social links
 
+## Nested Border Radius Rule (MANDATORY)
+
+Never round inner elements the same as their parent container. Apply the formula: **outer radius = inner radius + padding**. When a card uses `rounded-2xl` (16px) with `p-4` (16px padding), inner images/buttons/elements must use a smaller radius like `rounded-lg` (8px) or `rounded-xl` (12px). Matching radii on parent and child creates bulgy, uneven corners. Always subtract the gap/padding from the parent radius.
+
 ## Image Usage Rules
 
 **ALWAYS use Astro's Image component:**
@@ -370,7 +374,7 @@ import heroImg from '../assets/images/hero-office.jpg';
   widths={[640, 1024, 1920]}
   sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
   loading="lazy"
-  class="rounded-2xl object-cover"
+  class="rounded-xl object-cover"  {/* inner radius < parent card radius */}
 />
 ```
 

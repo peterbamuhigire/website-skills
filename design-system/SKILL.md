@@ -188,6 +188,7 @@ Document these design decisions for the page-builder to follow:
 
 **Cards:**
 - Consistent border-radius (match button radius)
+- **Nested radius rule (MANDATORY):** Never round inner elements the same as their parent card. Use the formula: `outer radius = inner radius + padding`. For example, a card with `rounded-2xl` (16px) and `p-4` (16px) padding means inner elements get `rounded-xl` (12px) or less — NOT `rounded-2xl`. If both radii match, nested corners look bulgy and uneven. Subtract the padding from the parent radius to get the correct inner radius.
 - Subtle shadow or border — not both
 - Hover: lift effect (translateY(-4px) + shadow increase)
 
