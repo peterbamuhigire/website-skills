@@ -9,6 +9,20 @@ You are building a beautiful, blazing-fast static website using Astro + Tailwind
 
 ## Before You Start
 
+### Required Claude Code Plugins
+
+Install these plugins before building any website. They are essential for high-quality frontend development:
+
+```
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+/plugin install frontend-design@claude-plugins-official
+```
+
+If already installed, these commands are safe to re-run. Do this at the start of every new website project.
+
+### Read Content Files
+
 **ALWAYS read these files first, in this order:**
 
 1. **`docs/i18n-config.md`** — language configuration (NEW: Multi-language support)
