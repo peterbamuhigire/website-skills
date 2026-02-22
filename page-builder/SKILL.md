@@ -287,8 +287,26 @@ Content loaded from `docs/{lang}/`, not `docs/`.
 ```
 
 ### Testimonials
-Options: carousel (Alpine.js), grid, or single featured quote.
-Use display font for the quote, smaller text for attribution.
+
+**Always exactly 3 testimonials** in a `grid grid-cols-1 md:grid-cols-3` layout.
+
+**Convention — no real customers exist yet, so generate realistic fictional ones:**
+- Use realistic East African names (Ugandan, Kenyan, Tanzanian)
+- Use real Ugandan/East African town names for location
+- **Never include business names** — only: name, location, industry type
+- Each testimonial covers a different industry, sector or service the product serves
+- Quotes should reference specific product features relevant to that industry
+
+**TestimonialCard props:** `quote`, `name`, `location`, `type` (no `business` prop).
+
+```astro
+<TestimonialCard
+  quote="The specific feature changed how I run my business..."
+  name="Nakato Grace"
+  location="Mbale, Uganda"
+  type="Retail"
+/>
+```
 
 ### Screenshots / Product Previews (Lightbox Required)
 
