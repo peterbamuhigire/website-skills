@@ -65,6 +65,22 @@ Utility skills run independently of the build pipeline:
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
 
+## Required Claude Code Plugins
+
+These plugins MUST be installed before any website development work. They are force multipliers — use them proactively wherever they can improve output quality, not just when explicitly invoked.
+
+```
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+/plugin install frontend-design@claude-plugins-official
+```
+
+**Superpowers plugin:** Use throughout the entire build pipeline — design decisions, code generation, debugging, quality checks, and any task where it offers enhanced capabilities. If superpowers provides a better way to accomplish something, prefer it over the default approach.
+
+**Frontend Design plugin:** Use for all design system work, component styling, layout decisions, colour selection, typography, responsive design, and visual QA. Lean on it during design-system, page-builder, and any skill that produces visual output.
+
+Install at the start of every new client project. These commands are idempotent (safe to re-run).
+
 ## Generated Site Tech Stack
 
 Sites built by these skills use: Astro (static site generator), Tailwind CSS v4, Alpine.js (interactivity), GSAP (scroll animations, optional), Fontsource (self-hosted fonts), Lucide (SVG icons).
