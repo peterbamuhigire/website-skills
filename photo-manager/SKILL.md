@@ -150,12 +150,25 @@ src/assets/images/
 - **No path confusion** — one import path for all images
 - **Astro handles optimization** — file location doesn't affect WebP/AVIF generation
 
-## Step 3: Copy and Catalog
+## Step 2.5: Compress Photos (image-compression skill)
 
-For each photo in photo-bank/ (scanning all subdirectories recursively):
+**Before copying**, run the **image-compression** skill to ensure no photo exceeds 500 KB:
+
+1. Run `node scripts/compress-photos.mjs` (or the compression logic from image-compression/SKILL.md)
+2. This reads from `photo-bank/`, compresses oversized photos, and writes to `src/assets/images/`
+3. Photos already under 500 KB are copied as-is
+4. Photos over 500 KB are resized (max 1920px) and compressed (quality 80 → 60)
+5. Logos/SVGs are copied without lossy compression
+6. **Originals in photo-bank/ are never modified**
+
+After compression, all further steps work with the compressed copies in `src/assets/images/`.
+
+## Step 3: Catalog
+
+For each photo now in `src/assets/images/` (post-compression):
 1. Determine the logical category based on filename hints and the page structure in `docs/pages.md`
-2. Copy (not move!) to `src/assets/images/` (flat — all photos in one directory)
-3. Record in _catalog.json with category as metadata
+2. Record in _catalog.json with category as metadata
+3. Use the **compressed** dimensions and file sizes, not the originals
 
 ### Filename Conventions
 
