@@ -16,8 +16,11 @@ Install these plugins before building any website. They are essential for high-q
 ```
 /plugin marketplace add obra/superpowers-marketplace
 /plugin install superpowers@superpowers-marketplace
-/plugin install frontend-design@claude-plugins-official
+/plugin marketplace add anthropics/claude-code
+/plugin install frontend-design@claude-code-plugins
 ```
+
+**Prerequisites:** Node.js and the `claude` CLI (`npm install -g @anthropic-ai/claude-code`) with a Pro/Max subscription. Restart Claude Code after installing plugins.
 
 If already installed, these commands are safe to re-run. Do this at the start of every new website project.
 

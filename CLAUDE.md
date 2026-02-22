@@ -72,8 +72,11 @@ These plugins MUST be installed before any website development work. They are fo
 ```
 /plugin marketplace add obra/superpowers-marketplace
 /plugin install superpowers@superpowers-marketplace
-/plugin install frontend-design@claude-plugins-official
+/plugin marketplace add anthropics/claude-code
+/plugin install frontend-design@claude-code-plugins
 ```
+
+**Prerequisites:** Node.js and the `claude` CLI (`npm install -g @anthropic-ai/claude-code`) with a Pro/Max subscription. Restart Claude Code after installing plugins.
 
 **Superpowers plugin:** Use throughout the entire build pipeline — design decisions, code generation, debugging, quality checks, and any task where it offers enhanced capabilities. If superpowers provides a better way to accomplish something, prefer it over the default approach.
 
