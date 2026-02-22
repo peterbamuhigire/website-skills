@@ -1,6 +1,6 @@
 ---
 name: photo-manager
-description: Catalogs photos from photo-bank/, records dimensions, copies to organized src/assets/images/ folders, and generates _catalog.json. Use whenever photos need to be processed, cataloged, or placed in the website.
+description: Catalogs photos from photo-bank/, records dimensions, copies to a single flat src/assets/images/ directory, and generates _catalog.json with category metadata. Use whenever photos need to be processed, cataloged, or placed in the website.
 ---
 
 # Photo Manager Skill
@@ -130,28 +130,32 @@ for f in os.listdir('photo-bank'):
         print(f"{f}: {w}x{h} ({size_kb}KB)")
 ```
 
-## Step 2: Organize into Categories
+## Step 2: Prepare the Images Directory
 
-Create subdirectories in `src/assets/images/`:
+All photos go into a **single flat directory** — `src/assets/images/`. No subdirectories. This makes photo replacement trivial: the client drops a new file with the same name and rebuilds.
 
 ```
 src/assets/images/
-├── hero/          # Full-width hero/banner images (wide: 16:9, 21:9)
-├── team/          # Team member headshots (square: 1:1, or 3:4)
-├── services/      # Service/product images (flexible)
-├── gallery/       # Photo gallery images (flexible)
-├── about/         # About page images (flexible)
-├── testimonials/  # Client logos or photos (small, square)
-├── misc/          # Everything else
-└── _catalog.json  # Master catalog
+├── Logo-Light-Mode.png     # Branding
+├── Hero-Office-Team.jpg    # Hero images
+├── Team-John-Doe.jpg       # Team headshots
+├── Service-Consulting.jpg  # Service images
+├── Gallery-Project-01.jpg  # Gallery images
+├── ...                     # All other photos
+└── _catalog.json           # Master catalog (tracks category via metadata)
 ```
+
+**Category is metadata, not a folder.** The `_catalog.json` tracks each photo's logical category (hero, team, services, gallery, etc.) but all files live side-by-side in one directory. This means:
+- **Easy replacement** — client finds the exact file by name and replaces it
+- **No path confusion** — one import path for all images
+- **Astro handles optimization** — file location doesn't affect WebP/AVIF generation
 
 ## Step 3: Copy and Catalog
 
-For each photo in photo-bank/:
-1. Determine the best category based on filename hints and the page structure in `docs/pages.md`
-2. Copy (not move!) to the appropriate subfolder
-3. Record in _catalog.json
+For each photo in photo-bank/ (scanning all subdirectories recursively):
+1. Determine the logical category based on filename hints and the page structure in `docs/pages.md`
+2. Copy (not move!) to `src/assets/images/` (flat — all photos in one directory)
+3. Record in _catalog.json with category as metadata
 
 ### Filename Conventions
 
@@ -246,9 +250,9 @@ def find_best_logo(photo_bank_path='photo-bank'):
     # Select best logo
     best_logo = max(logos, key=lambda x: x['score'])
 
-    # Copy to branding directory
-    os.makedirs('src/assets/images/branding', exist_ok=True)
-    dest = 'src/assets/images/branding/logo.png'
+    # Copy to flat images directory
+    os.makedirs('src/assets/images', exist_ok=True)
+    dest = 'src/assets/images/logo.png'
 
     # Convert to PNG if needed
     if best_logo['format'] != 'PNG':
@@ -281,7 +285,7 @@ Update `_catalog.json` with logo entry:
       "id": "logo-primary",
       "original_filename": "logo-color.png",
       "source": "photo-bank/logo-color.png",
-      "destination": "src/assets/images/branding/logo.png",
+      "destination": "src/assets/images/logo.png",
       "category": "branding",
       "width": 600,
       "height": 150,
@@ -311,7 +315,7 @@ Update `_catalog.json` with logo entry:
       "id": "hero-main",
       "original_filename": "hero-office.jpg",
       "source": "photo-bank/hero-office.jpg",
-      "destination": "src/assets/images/hero/hero-office.jpg",
+      "destination": "src/assets/images/hero-office.jpg",
       "category": "hero",
       "width": 1920,
       "height": 1080,
@@ -369,13 +373,13 @@ After the site is built, provide the user with a replacement checklist:
 ## Photos to Replace
 
 ### Hero Images
-- [ ] `src/assets/images/hero/hero-office.jpg` (1920x1080, 16:9)
+- [ ] `src/assets/images/hero-office.jpg` (1920x1080, 16:9)
       Used on: Homepage hero
       Current: Placeholder gradient
       Need: Wide shot of company office or related imagery
 
-### Team Photos  
-- [ ] `src/assets/images/team/team-john.jpg` (800x800, 1:1)
+### Team Photos
+- [ ] `src/assets/images/team-john.jpg` (800x800, 1:1)
       Used on: Team page, About page sidebar
       Current: Using photo from photo-bank
       Need: Professional headshot, square crop
@@ -383,7 +387,7 @@ After the site is built, provide the user with a replacement checklist:
 ### How to Replace
 1. Prepare your photo at the recommended dimensions
 2. Name it exactly as shown above
-3. Drop it into the exact path shown
+3. Drop it into `src/assets/images/` (all photos live in ONE flat directory)
 4. Run `npm run build` to regenerate optimized versions
 5. Astro will auto-generate WebP/AVIF and responsive sizes
 ```

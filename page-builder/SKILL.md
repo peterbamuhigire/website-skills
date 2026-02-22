@@ -305,7 +305,7 @@ Bold, contrasting background. Clear action. One button, one message.
 ```astro
 ---
 import { Image } from 'astro:assets';
-import heroImg from '../assets/images/hero/hero-office.jpg';
+import heroImg from '../assets/images/hero-office.jpg';
 ---
 
 <Image
