@@ -69,10 +69,34 @@ Every project must have `docs/i18n-config.md` defining:
 - sw: Kiswahili (enabled)
 
 ## Default Language
-en
+en (fallback), but root `/` auto-detects browser language.
+
+## Browser Language Detection (Required)
+
+The root page (`src/pages/index.astro`) must detect the visitor's browser language and redirect:
+- **French** (`navigator.language` starts with `fr`) → `/fr/`
+- **Everything else** → `/en/`
+
+This covers 75–90% of African visitors (Francophone and Anglophone Africa). No server-side detection needed — a small inline `<script>` in the root index page handles it. The `<noscript>` fallback redirects to `/en/`.
+
+**Root page pattern:**
+```html
+<script is:inline>
+  (function () {
+    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    var dest = lang.startsWith('fr') ? '/fr/' : '/en/';
+    window.location.replace(dest);
+  })();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0;url=/en/" />
+</noscript>
+```
+
+Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The `.htaccess` should skip the root and let the HTML page handle it.
 
 ## URL Structure
-- Root domain (/) redirects to /{default-language}/
+- Root domain (/) → browser language detection → /en/ or /fr/
 - All pages served under language path: /en/, /fr/, /sw/
 - Language switcher appears on all pages
 
