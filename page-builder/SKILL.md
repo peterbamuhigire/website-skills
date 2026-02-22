@@ -290,6 +290,44 @@ Content loaded from `docs/{lang}/`, not `docs/`.
 Options: carousel (Alpine.js), grid, or single featured quote.
 Use display font for the quote, smaller text for attribution.
 
+### Screenshots / Product Previews (Lightbox Required)
+
+Screenshots and product images MUST be clickable with a fullscreen lightbox so users can view them at real size. Thumbnails alone don't communicate enough detail.
+
+**Implementation pattern:**
+
+1. **Lightbox component** (`src/components/Lightbox.astro`) — included once per page via BaseLayout. Uses Alpine.js `x-on:open-lightbox.window` to listen for custom events. Renders a fullscreen overlay with close button (X), Escape key, click-outside-to-close, caption bar, and `cursor-zoom-out`.
+
+2. **BaseLayout** includes `<Lightbox />` just before the Alpine.js script tag. This makes the lightbox available on every page automatically.
+
+3. **Screenshot thumbnails** use the `.screenshot-trigger` CSS class and dispatch Alpine events:
+
+```astro
+<div
+  x-data
+  @click="$dispatch('open-lightbox', { src: '/screenshots/FILENAME.jpg', alt: 'Description' })"
+  class="rounded-lg overflow-hidden shadow-hero screenshot-trigger"
+>
+  <img src="/screenshots/FILENAME.jpg" alt="Description" class="w-full h-auto" loading="lazy" />
+  <span class="expand-hint">
+    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+    </svg>
+    Click to enlarge
+  </span>
+</div>
+```
+
+4. **CSS** (in `global.css`) for `.screenshot-trigger`: `cursor: zoom-in`, hover scale, gradient overlay, and `.expand-hint` label that fades in on hover.
+
+5. **French label:** Use "Cliquez pour agrandir" instead of "Click to enlarge". Mobile screenshots: use "Enlarge" / "Agrandir".
+
+**Rules:**
+- NEVER show screenshots as static thumbnails — always make them clickable
+- Every screenshot container needs `x-data` and `@click="$dispatch('open-lightbox', ...)"`
+- The lightbox is zero-dependency (Alpine.js only, no external library)
+- Mobile screenshots also get the lightbox treatment
+
 ### CTA Sections
 Bold, contrasting background. Clear action. One button, one message.
 
