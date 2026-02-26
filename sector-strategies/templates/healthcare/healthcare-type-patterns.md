@@ -56,6 +56,20 @@ Each healthcare facility type serves different patients with different needs and
 - **Key elements:** Test/scan menu, preparation instructions, results portal, referring doctor info, equipment list
 - **Unique:** Test preparation checklist, online results access, referral form, scan type comparison
 
+## Teaching / Research Hospital
+
+- **Palette:** Deep navy + burgundy + gold accent. Academic authority, prestige, heritage.
+- **Typography:** Traditional serif headers (DM Serif Display) + accessible sans body (DM Sans). Academic gravitas.
+- **Key elements:** Department microsites, research publications, clinical trials recruitment, medical education programmes, residency/fellowship info, physician scientist profiles, grant/funding info
+- **Unique:** Research publication feed, clinical trial finder, medical education portal, academic conference calendar, "Our Research in Numbers" stats section, dual audience (patients + medical professionals)
+
+## Pharmacy / Dispensary
+
+- **Palette:** Green + white + warm accent. Trust, health, accessibility.
+- **Typography:** Clean, readable sans (DM Sans, Source Sans Pro). Clear, no-frills.
+- **Key elements:** Medication search, prescription upload/transfer, delivery options, pharmacist profiles, operating hours, insurance accepted, health screening services
+- **Unique:** Prescription refill/transfer form, medication reminder signup, pharmacist consultation booking, drug interaction checker link, vaccination services
+
 ## Branding Personality Framework
 
 | Trait | Spectrum | Design Impact |
@@ -65,11 +79,27 @@ Each healthcare facility type serves different patients with different needs and
 | **Accessibility** | Standard ←→ Maximum | Font size, contrast, language simplicity |
 | **Urgency** | Planned care ←→ Emergency | CTA prominence, contact info visibility |
 | **Specialism** | Generalist ←→ Specialist | Service depth vs breadth, credential focus |
+| **Scale** | Single practice ←→ Hospital network | Campus map, department navigation, multi-location |
+
+### Premium Feature Matrix by Facility Type
+
+| Feature | Hospital | Specialist | Wellness | Paediatric | Mental Health | Dental | Teaching |
+|---------|----------|-----------|----------|------------|---------------|--------|----------|
+| Provider directory | ★★★ | ★★ | ★ | ★★ | ★★ | ★ | ★★★ |
+| Online booking | ★★★ | ★★★ | ★★★ | ★★ | ★★ | ★★★ | ★★ |
+| Condition pages | ★★★ | ★★★ | ★ | ★★ | ★★ | ★★ | ★★★ |
+| Patient portal | ★★★ | ★★ | ★ | ★★ | ★ | ★ | ★★★ |
+| Telemedicine | ★★ | ★★★ | ★★ | ★★ | ★★★ | ★ | ★★ |
+| Research/education | ★ | ★ | — | — | ★ | — | ★★★ |
+| Emergency info | ★★★ | ★ | — | ★★ | ★★ (crisis) | — | ★★★ |
+
+★★★ = Essential  ★★ = Important  ★ = Nice to have  — = Not applicable
 
 ---
 
 ## Related References
 
+- **premium-hospital-playbook.md** — Complete guide to building $5K+ hospital websites
 - **healthcare-branding.md** — Color psychology, typography, photography, brand voice
 - **patient-trust-design.md** — Patient trust architecture, appointment conversion, accessibility
 - **design-tokens.md** — Reference palettes, component specs

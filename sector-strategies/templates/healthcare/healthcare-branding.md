@@ -21,10 +21,50 @@ Healthcare websites must prioritise clarity and trust above all else. Patients a
 | **Clean White + Gray** | Sterile, precise, professional | Diagnostics, labs, imaging centres | Community warmth needed |
 
 ### Critical Rule: Accessibility First
-- **All text**: Minimum 4.5:1 contrast (WCAG AA) — many patients have visual impairments
+- **All text**: Minimum 4.5:1 contrast (WCAG AA), target 7:1 (AAA) for body text
 - **Large text exceptions**: No exceptions in healthcare — everything must be readable
 - **Colour-blind safe**: Never use colour alone to convey information (always pair with icons/text)
 - **High contrast mode**: Must work for visually impaired users
+- **Touch targets**: 48px minimum (larger than standard 44px) — patients may have tremors, injuries, reduced dexterity
+
+### Clinical Semantic Color System
+
+Adapted from clinical-grade healthcare application design. Map these semantic roles to your chosen palette:
+
+| Semantic Role | Purpose | Example Hex | Usage |
+|--------------|---------|-------------|-------|
+| **Primary** | Trust, navigation, headers | `#2563EB` | Header, primary buttons, navigation |
+| **Secondary** | Supporting actions | `#0F766E` | Secondary buttons, accent elements |
+| **Surface** | Clean backgrounds | `#F8FAFC` | Card backgrounds, content areas |
+| **Success/Normal** | Positive status, confirmations | `#059669` | "Available", "Open", trust badges |
+| **Warning** | Attention needed | `#D97706` | Wait times, limited availability |
+| **Critical/Emergency** | Urgent information | `#DC2626` | Emergency info, urgent notices |
+| **Info** | Informational content | `#0284C7` | Health tips, patient education |
+| **Muted** | Secondary text, metadata | `#64748B` | Timestamps, captions, fine print |
+
+### Colour-Blind Safety Rules
+
+8% of males have red-green colour blindness. Healthcare sites MUST:
+
+| Instead Of | Use | Why |
+|-----------|-----|-----|
+| Red/green for status | Blue/amber + icons + text labels | Distinguishable by all |
+| Colour-only badges | Colour + icon (✓/⚠/✕) + text ("Available"/"Urgent") | Triple redundancy |
+| Red/green charts | Different patterns (solid, dashed, dotted) + distinct markers | Pattern-based |
+
+Test all palettes with Deuteranopia, Protanopia, and Tritanopia simulators.
+
+### Competitive Differentiation
+
+| Market | Overused Colors | Differentiation Territory |
+|--------|----------------|--------------------------|
+| **General hospitals** | Blue + white | Warm teal, sage green, earthy blue-gray |
+| **Specialist clinics** | Clinical teal | Deep navy + warm accent, warm charcoal |
+| **Wellness centres** | Sage green + cream | Warm lavender, sunset coral, rich earth |
+| **Dental** | Teal + white | Warm blue + gold, coral accents |
+| **Mental health** | Lavender | Warm sage, soft terracotta, calm blue-gray |
+
+**Rule**: Research the top 3 competing facilities in the same city. Note their primary colours. Choose the opposite visual territory. Two hospitals in the same city should never look alike.
 
 ## Typography for Healthcare
 
@@ -42,6 +82,20 @@ Healthcare websites must prioritise clarity and trust above all else. Patients a
 - Line height: **1.7-1.8** (generous for readability)
 - Never use decorative or script fonts in healthcare
 - Atkinson Hyperlegible is the gold standard for accessibility
+- **Monospace for clinical data**: Use monospace font for any displayed clinical values (phone numbers, hours, appointment times) — improves scanning accuracy
+- **Font loading**: Self-host via Fontsource. Never use web fonts that may fail — fallback must remain readable
+
+### Typography Hierarchy for Hospital Sites
+
+| Element | Size (Desktop) | Size (Mobile) | Weight | Purpose |
+|---------|---------------|---------------|--------|---------|
+| **H1 Page Title** | 40px | 32px | 700 | Page identification |
+| **H2 Section** | 28px | 24px | 600 | Major sections |
+| **H3 Subsection** | 22px | 20px | 600 | Department/service names |
+| **Body** | 18px | 18px | 400 | All patient-facing text |
+| **Large body** | 20px | 18px | 400 | Key information (hours, address) |
+| **Small/caption** | 14px | 14px | 400 | Timestamps, metadata only |
+| **CTA buttons** | 18px | 18px | 600 | Minimum size for all buttons |
 
 ## Photography Direction
 
@@ -61,10 +115,21 @@ Healthcare websites must prioritise clarity and trust above all else. Patients a
 | **Emergency/urgent** | Direct, calm, action-oriented | "Need urgent care? Walk in or call: +256..." |
 | **Staff recruitment** | Professional, mission-driven | "Join a team dedicated to compassionate care" |
 
+## Multi-Language Medical Terminology
+
+Healthcare sites in multi-language markets (en/fr/sw) must:
+
+- **Localise medical terms**: Not just translate, but use locally understood terminology
+- **Consistent formatting**: Same visual treatment of condition names across languages
+- **Cultural sensitivity**: Photography and language appropriate per audience
+- **Text expansion**: French medical content ~30% longer; Kiswahili ~20% longer; design must flex
+- **Emergency info**: Must be in ALL enabled languages on every page
+
 ---
 
 ## Related References
 
+- **premium-hospital-playbook.md** — Complete guide to building $5K+ hospital websites
 - **patient-trust-design.md** — Patient trust architecture, appointment conversion, accessibility requirements
 - **healthcare-type-patterns.md** — Design patterns for 7 facility types
 - **design-tokens.md** — Reference palettes, component specs
