@@ -216,6 +216,16 @@ Use visuals that enhance communication and emotional connection.
 - Use consistent image aspect ratios by section
 - Avoid generic stock photos where possible
 
+**Video Policy:**
+- **NEVER upload video files to the repository or server** — video files are too large for static hosting
+- **Host all videos on YouTube** — free, unlimited storage, global CDN, adaptive bitrate
+- Clients upload their videos to their YouTube channel, then provide YouTube URLs in their docs
+- Embed using `<iframe>` with `loading="lazy"` and `title` attribute for accessibility
+- Use `youtube-nocookie.com` embed domain for privacy compliance
+- Provide a poster/thumbnail image as fallback (shows before video loads)
+- Always include `title` attribute describing the video content for screen readers
+- Autoplay only with `muted` attribute; never autoplay with sound
+
 **Icon Standards:**
 - Use recognizable, standard icons (Lucide, Heroicons)
 - Include text labels when icon meaning unclear

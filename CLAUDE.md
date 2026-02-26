@@ -100,6 +100,7 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - **Language standards enforced** — British English, formal francophone French, East African Kiswahili; in-country reviewers approve translations
 - Mobile-first — designed for 375px, enhanced for 768px and 1280px+ (all languages)
 - Performance budget — 95+ Lighthouse per language, under 500KB first load (images shared across languages)
+- **Videos hosted on YouTube only** — never upload video files to repos or servers; clients upload to their YouTube channel and provide URLs in docs; embed via `youtube-nocookie.com` iframe with `loading="lazy"`
 - Every website includes Privacy Policy and Terms of Use in all enabled languages — legal protection + user trust
 
 ## Client Content Templates
