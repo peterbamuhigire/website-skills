@@ -191,6 +191,7 @@ Document these design decisions for the page-builder to follow:
 - **Nested radius rule (MANDATORY):** Never round inner elements the same as their parent card. Use the formula: `outer radius = inner radius + padding`. For example, a card with `rounded-2xl` (16px) and `p-4` (16px) padding means inner elements get `rounded-xl` (12px) or less — NOT `rounded-2xl`. If both radii match, nested corners look bulgy and uneven. Subtract the padding from the parent radius to get the correct inner radius.
 - Subtle shadow or border — not both
 - Hover: lift effect (translateY(-4px) + shadow increase)
+- **Glass effect option:** For cards over gradient/image backgrounds, consider `bg-white/15 backdrop-blur-lg border border-white/20` — see `liquid-glass-effects.md` for full guide and sector-specific suitability
 
 **Sections:**
 - Generous vertical padding (py-20 to py-32)
@@ -202,6 +203,18 @@ Document these design decisions for the page-builder to follow:
 - rounded-lg or rounded-2xl consistently
 - object-cover for all background/hero images
 - Subtle hover zoom on interactive images
+
+## Liquid Glass / Glassmorphism
+
+For projects where glassmorphism suits the brand (Corporate, Tourism, Portfolio, Creator sectors), consult **`liquid-glass-effects.md`** for:
+- Tailwind CSS v4 implementation patterns (cards, navbars, modals, hero overlays)
+- Sector-specific suitability matrix (HIGH for Corporate/Tourism/Portfolio, LOW for Healthcare)
+- Performance guidelines (max 3 glass elements, blur 8-16px, solid fallbacks)
+- Accessibility requirements (contrast, `prefers-reduced-motion`, `prefers-contrast`)
+- SVG liquid distortion filter (advanced, Chromium-only)
+- Dark mode glass adaptation
+
+**Rule of thumb:** Glass is seasoning, not the main course — use it on 2-3 key elements, not the entire page.
 
 ## Universal Guidelines
 
