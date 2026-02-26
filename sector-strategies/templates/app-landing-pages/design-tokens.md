@@ -424,6 +424,14 @@ Remember: This template is a starting point. The best landing pages differentiat
 
 ---
 
+## Related References
+
+- **app-branding.md** — Color psychology for 8 hues, CTA color strategy, typography by app type, screenshot strategy, brand voice
+- **app-conversion.md** — Download funnel, hero design, CTA strategy, pricing pages, trust architecture, A/B testing
+- **app-type-patterns.md** — 7 app types with distinct design systems + branding personality framework
+
+---
+
 **Last Updated:** February 2026
 **Framework:** Mobile-first, WCAG AA accessible, performance-optimized
 **Tested on:** iOS Safari, Android Chrome, Desktop Chrome/Firefox/Safari

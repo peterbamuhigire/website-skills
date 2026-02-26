@@ -73,19 +73,23 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 ### Corporate & Consulting
 
-**Trust cues**: Leadership, expertise, client wins, market authority, thought leadership
-**Visual identity**: Deep navy + slate gray + accent blue; professional sans-serif + serif accents
-**Key components**: Hero with value prop, mega menu, leadership team, company stats, case studies, investor relations
-**Content order**: Hero + demo CTA → Solutions grid → Case studies → Leadership team → Insights hub → Contact
-**Distinctive traits**: Professional photography, credential visibility, testimonials/client logos, downloadable resources, demo booking flow
+**Trust cues**: Leadership, expertise, client wins, market authority, thought leadership, industry credentials
+**Visual identity**: Firm-type dependent (see corporate-type-patterns.md: strategy=navy+serif, tech=dark+geometric, financial=charcoal+gold, creative=bold+display, boutique=warm+personal). Distinctive brand colors per firm — never default corporate blue.
+**Key components**: Hero with value prop, mega menu, leadership team, company stats with animated counters, case studies with metrics, thought leadership hub, investor relations, demo booking flow
+**Content order**: Hero + demo CTA → Trust bar (client logos) → Solutions grid → Case studies → Leadership team → Insights hub → Contact
+**Distinctive traits**: Professional photography, credential visibility, testimonials/client logos, downloadable resources, demo booking flow, thought leadership content
+
+**Special note:** Corporate templates include 3 additional references: corporate-branding.md (color psychology by firm type, competitive differentiation with real examples, typography pairing, brand voice), client-conversion.md (B2B funnel, 6-second test, trust architecture, case study design pattern, CTA hierarchy), corporate-type-patterns.md (6 firm types with distinct design systems + branding personality framework).
 
 ### Personal & Portfolio
 
-**Trust cues**: Authenticity, personality, quality work, expertise, approachability
-**Visual identity**: Personalized colors + distinctive fonts that reflect individual brand (NOT defaults)
-**Key components**: Hero with personality, portfolio/projects grid, about section, skills/experience, blog (optional), contact CTA
-**Content order**: Hero + primary CTA → Featured projects → About/story → Skills or experience → Contact
-**Distinctive traits**: Personal photo/branding, curated project showcase, authentic storytelling, unique visual identity, blog (if applicable)
+**Trust cues**: Authenticity, personality, quality work, expertise, approachability, niche authority
+**Visual identity**: Creator-type dependent (see portfolio-type-patterns.md: designer=bold+saturated, developer=dark+electric, writer=warm+serif, photographer=minimal+image-dominant). Distinctive brand colors per individual — never default slate.
+**Key components**: Hero with personality, portfolio/projects grid (masonry/uniform/card), about section with personal story, skills/experience, case study detail pages, blog (optional), contact CTA
+**Content order**: Hero + primary CTA → Featured projects → About/story → Skills or experience → Testimonials → Contact
+**Distinctive traits**: Personal photo/branding, curated project showcase, authentic storytelling, unique visual identity, case study pages, blog (if applicable)
+
+**Special note:** Personal templates include 3 additional references: portfolio-branding.md (color psychology, typography by creator type, photography direction, brand voice), portfolio-conversion.md (portfolio funnel, project showcase design, social proof, CTA hierarchy), portfolio-type-patterns.md (7 creator types with distinct design systems + branding personality framework).
 
 ### Education
 
@@ -99,35 +103,43 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 ### Healthcare
 
-**Trust cues**: Expert credentials, patient safety, accessibility, appointment availability
-**Visual identity**: Calming blue-green + trust neutrals; accessible sans-serif with generous spacing
-**Key components**: Specialty finder, doctor profiles, appointment button, insurance badges, hours
-**Content order**: Hero + appointment CTA → Specialties → Doctors → Hours/Insurance/Accessibility → Contact
-**Distinctive traits**: Accessibility-first, credential visibility, frictionless appointment booking
+**Trust cues**: Expert credentials, patient safety, accessibility, appointment availability, accreditation, doctor qualifications
+**Visual identity**: Facility-type dependent (see healthcare-type-patterns.md: hospital=blue+authoritative, specialist=teal+focused, wellness=sage+organic, paediatric=warm+friendly, mental-health=lavender+calming). WCAG AAA mandatory for body text. 18px minimum body, 48px touch targets.
+**Key components**: Specialty finder, doctor profiles (photo+credentials+specialties+reviews), appointment booking widget, insurance badges, hours/emergency info, patient portal, trust stats banner, accessibility toolbar
+**Content order**: Hero + appointment CTA → Trust stats → Specialties grid → Doctor profiles → Patient testimonials → Hours/Insurance/Accessibility → Contact
+**Distinctive traits**: Accessibility-first (WCAG AAA body text), credential visibility, frictionless appointment booking, mobile-first (52%+ healthcare traffic), calm colour psychology, emergency information prominent
+
+**Special note:** Healthcare templates include 3 additional references: healthcare-branding.md (color psychology for 8 hues, accessibility-first design rules, typography by 6 facility types), patient-trust-design.md (patient funnel, trust architecture, doctor profile design, appointment booking UX, WCAG requirements), healthcare-type-patterns.md (7 facility types with distinct design systems + branding personality framework).
 
 ### E-commerce
 
-**Trust cues**: Product quality, customer reviews, fast checkout, secure payment
-**Visual identity**: Bold accent + trust neutrals; clean sans-serif for product names
-**Key components**: Product cards with reviews, quantity selectors, checkout CTA, trust badges (secure, returns)
-**Content order**: Hero + shop CTA → Featured products → Customer reviews → Policy clarity → Checkout
-**Distinctive traits**: Social proof (reviews), urgency signals (in-stock), transparent pricing and returns
+**Trust cues**: Product quality, customer reviews, fast checkout, secure payment, return policy, shipping transparency
+**Visual identity**: Store-type dependent (see store-type-patterns.md: luxury=black+gold+sparse, fashion=trend-forward+lookbook, food=warm+appetite, tech=dark+spec-heavy, handmade=earth+artisan, beauty=blush+elegant, kids=bright+safe). Distinctive brand per store — never generic white.
+**Key components**: Product cards (image+price+rating+CTA), category filters, product gallery with zoom, size/variant selectors, add-to-cart (always visible), trust badges (secure checkout, free returns), review section with photos, related products
+**Content order**: Hero + shop CTA → Featured products → Categories → Customer reviews → Trust badges → Policy clarity → Newsletter
+**Distinctive traits**: Social proof (reviews with photos), urgency signals (honest stock levels), transparent pricing (no hidden fees), guest checkout, mobile-optimised (60%+ mobile traffic)
+
+**Special note:** E-commerce templates include 3 additional references: ecommerce-branding.md (color psychology for 8 hues, store type palettes, typography, photography, brand voice), shopping-conversion.md (shopping funnel, product page design, trust architecture, checkout optimisation, pricing display), store-type-patterns.md (7 store types with distinct design systems + branding personality framework). Cart abandonment is 70% — design must reduce friction at every step.
 
 ### Professional Services
 
-**Trust cues**: Expertise, credentials, client wins, established track record
-**Visual identity**: Sophisticated palette (navy/charcoal + one accent); premium spacing
-**Key components**: Service cards, team profiles, client logos, case study cards, contact CTA
-**Content order**: Hero + service menu → Services grid → Team bios → Case studies → Testimonials → Contact
-**Distinctive traits**: Portfolio/case studies, expert bios, premium photography, credential visibility
+**Trust cues**: Expertise, credentials, client wins, established track record, professional body memberships, years in practice
+**Visual identity**: Service-type dependent (see services-type-patterns.md: accounting=green+gold+serif, legal=navy+burgundy+traditional, architecture=minimal+geometric, engineering=blue+technical, IT=teal+modern, real-estate=navy+gold+elegant, marketing=bold+creative). Distinctive brand per firm — never generic corporate.
+**Key components**: Service cards with methodology, team profiles (credentials+specialisations+contact), client logos, case study cards (challenge+approach+results), testimonials (named+titled+company), consultation booking CTA
+**Content order**: Hero + consultation CTA → Service grid → Trust bar (client logos) → Team bios → Case studies → Testimonials → Contact
+**Distinctive traits**: Portfolio/case studies with quantified results, expert bios with credentials, premium photography, credential visibility, transparent process explanation
+
+**Special note:** Professional services templates include 3 additional references: services-branding.md (color psychology for 7 hues, typography by 7 service types, brand voice), client-acquisition.md (trust-first test, client funnel, service page design pattern, testimonial strategy), services-type-patterns.md (7 service types with distinct design systems + branding personality framework). 82% of clients research providers online before making contact.
 
 ### Hobbyist/Creator
 
-**Trust cues**: Authenticity, personal brand, niche expertise, behind-the-scenes, community
-**Visual identity**: Bold personality-driven fonts; high-saturation accent + authentic substrate
-**Key components**: Portfolio grid, process/behind-scenes, subscribe CTA, community signals
-**Content order**: Hero + personality → Best work → Process/behind-scenes → Community/subscribe → Contact
-**Distinctive traits**: Personal voice, authentic storytelling, niche focus, less corporate, more human
+**Trust cues**: Authenticity, personal brand, niche expertise, behind-the-scenes process, community engagement, follower/subscriber counts
+**Visual identity**: Creator-type dependent (see creator-type-patterns.md: artist=bold+saturated, developer=dark+terminal, writer=warm+literary, photographer=minimal+image-dominant, YouTuber=bold+energetic, craftsperson=warm+artisanal, educator=accessible+structured). Bold personality-driven fonts; high-saturation accent + authentic substrate.
+**Key components**: Portfolio grid (masonry/uniform/card by type), process/behind-scenes gallery, subscribe/newsletter CTA with lead magnet, community links (Discord), social proof (follower counts, press mentions), shop/commission section, about story
+**Content order**: Hero + personality → Best work → About teaser → Subscribe CTA → Social proof → Community/shop
+**Distinctive traits**: Personal voice, authentic storytelling, niche focus, less corporate, more human, email capture priority, YouTube-hosted content videos
+
+**Special note:** Hobbyist/creator templates include 3 additional references: creator-branding.md (color psychology for 8 hues, typography by 7 creator types, photography, brand voice, logo types), engagement-design.md (creator funnel, portfolio showcase, subscribe strategy, community building, monetisation), creator-type-patterns.md (7 creator types with distinct design systems + branding personality framework).
 
 ### Nonprofit / Charity / NGO
 
@@ -143,13 +155,13 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 **💡 For app developers building their own landing pages**
 
-**Trust cues**: Conversion-focused design, social proof, clear value proposition, urgency/scarcity
-**Visual identity**: Varies by app type (see design-tokens.md for 5 category-specific palettes)
-**Key components**: Hero with sticky CTA, benefit cards, demo video/screenshots, testimonials, FAQ, app store badges
-**Content order**: Hero + CTA → Key benefits → How it works → Social proof → FAQ → Download CTA
-**Distinctive traits**: Mobile-first design (80% traffic), conversion optimization focus, clear problem-solution narrative
+**Trust cues**: App store badges, user/download count, star ratings, press mentions, security badges (for finance/health), named testimonials with specific results
+**Visual identity**: App-type dependent (see app-type-patterns.md: SaaS=blue+professional, consumer=warm+inviting, dev-tools=dark+terminal, health=green+calm, finance=navy+trust, gaming=bold+neon, education=warm+structured). CTA button must be highest contrast element on page.
+**Key components**: Hero with sticky CTA + app screenshot, social proof bar (user count + rating + press logos), benefit cards (3-4 max), how-it-works steps, feature deep-dive with screenshots, named testimonials, pricing tiers (3 max), FAQ, app store badges, sticky mobile CTA bar
+**Content order**: Hero + CTA + screenshot → Social proof bar → Key benefits → How it works → Feature deep-dive → Testimonials → Pricing → FAQ → Final CTA
+**Distinctive traits**: Mobile-first design (70%+ traffic), conversion optimization focus, clear problem-solution narrative, A/B testing strategy, YouTube-hosted demo videos
 
-**Special note:** Unlike client sectors, app landing pages emphasize conversion frameworks (AIDA, PAS, FAB, Hero's Journey) and include comprehensive A/B testing strategies.
+**Special note:** App landing pages include 3 additional references: app-branding.md (color psychology for 8 hues, CTA color strategy, typography by app type, screenshot strategy, copy frameworks), app-conversion.md (download funnel, hero design, CTA strategy, pricing page design, trust architecture, A/B testing), app-type-patterns.md (7 app types with distinct design systems + branding personality framework). Conversion frameworks (AIDA, PAS, FAB, BAB) guide copy structure.
 
 ## How to Use This Skill
 

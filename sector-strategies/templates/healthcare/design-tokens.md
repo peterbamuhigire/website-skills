@@ -27,4 +27,10 @@ Trust, accessibility, calm. Blues/greens convey safety. High contrast for readab
 
 ---
 
+## Related References
+
+- **healthcare-branding.md** — Color psychology for 8 hues, accessibility-first design, typography by 6 facility types
+- **patient-trust-design.md** — Patient funnel, trust architecture, doctor profile design, appointment booking, WCAG requirements
+- **healthcare-type-patterns.md** — 7 facility types with distinct design systems + branding personality framework
+
 Reference **tour-travel/design-tokens.md** and **education/design-tokens.md** for complete formatting and detailed examples.

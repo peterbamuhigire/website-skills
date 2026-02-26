@@ -27,4 +27,10 @@ Authority, expertise, trustworthiness. Sophisticated, not flashy. Premium feel.
 
 ---
 
-See **tour-travel/design-tokens.md** for complete template with detailed color scales, spacing, and accessibility standards.
+## Related References
+
+- **services-branding.md** — Color psychology for 7 hues, typography by 7 service types, brand voice
+- **client-acquisition.md** — Trust-first test, client funnel, service page design, testimonial strategy
+- **services-type-patterns.md** — 7 service types with distinct design systems + branding personality framework
+
+See **tour-travel/design-tokens.md** for complete formatting and detailed examples.
