@@ -235,6 +235,12 @@ Better approach: Find 3 competitors and decide what visual territory they DON'T 
 
 ---
 
+## Related References
+
+- **corporate-branding.md** — Color psychology for 8 hues, competitive differentiation (McKinsey/Bain/BCG examples), typography by 6 firm types, brand voice
+- **client-conversion.md** — B2B 6-second test, client funnel, trust architecture, case study design, CTA hierarchy, thought leadership
+- **corporate-type-patterns.md** — 6 firm types with distinct design systems + branding personality framework
+
 ## Next Steps
 
 1. **Read your sector-brief-template.md carefully** — especially the Brand Identity and Visual Identity sections

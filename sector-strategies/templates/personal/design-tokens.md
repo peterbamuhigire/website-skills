@@ -157,6 +157,12 @@ Better approach: Find 3 people in your exact field/niche and decide what visual 
 
 ---
 
+## Related References
+
+- **portfolio-branding.md** — Color psychology for 8 hues, typography by 6 creator types, photography, brand voice
+- **portfolio-conversion.md** — Portfolio funnel, project showcase design, social proof, CTA hierarchy
+- **portfolio-type-patterns.md** — 7 creator types with distinct design systems + branding personality framework
+
 ## Next Steps
 
 1. **Read your sector-brief-template.md carefully** — especially the Brand Identity and Visual Identity sections

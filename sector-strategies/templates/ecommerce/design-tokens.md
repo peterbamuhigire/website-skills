@@ -27,4 +27,10 @@ Conversion-focused. Bold accent for CTAs. Trust neutrals for credibility. Social
 
 ---
 
-See **tour-travel/design-tokens.md** for complete template with color palettes, spacing scale, and accessibility guidelines.
+## Related References
+
+- **ecommerce-branding.md** — Color psychology for 8 hues, store type palettes, typography, photography, brand voice
+- **shopping-conversion.md** — Shopping funnel, product page design, trust architecture, checkout optimisation, pricing display
+- **store-type-patterns.md** — 7 store types with distinct design systems + branding personality framework
+
+See **tour-travel/design-tokens.md** for complete formatting and detailed examples.
