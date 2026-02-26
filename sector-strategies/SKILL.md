@@ -63,11 +63,13 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 ### Tour & Travel
 
-**Trust cues**: Wanderlust, authentic experiences, community, discovery
-**Visual identity**: Warm earth tones + sunset gradients; serif (heritage) + playful display font
-**Key components**: Destination cards, itinerary timelines, booking widgets, experiential imagery
-**Content order**: Hero + adventure CTA → Popular destinations → Travel guides → Testimonials → Booking
-**Distinctive traits**: Real photography, storytelling copy, "you could be there" language
+**Trust cues**: Wanderlust, authentic experiences, booking confidence, guide expertise, cancellation flexibility, review social proof
+**Visual identity**: Tour-type dependent (see travel-type-patterns.md: luxury=navy+gold+serif, adventure=bold+geometric, eco=green+organic, cultural=terracotta+warm). Distinctive brand colors per operator — never default sky blue + generic sans.
+**Key components**: Search widget (above fold, 42% of bookings), destination cards, itinerary timelines, booking widget (sticky mobile), pricing display, review aggregate, trust badges, urgency signals, gallery carousel, guide profiles
+**Content order**: Hero + search CTA → Featured destinations → Tour highlights → Testimonials → Trust signals → Booking CTA
+**Distinctive traits**: Real photography, storytelling copy, "you could be there" language, transparent pricing, mobile-first (58%+ mobile bookings), YouTube-hosted destination videos
+
+**Special note:** Tour & travel templates include 3 additional references: travel-branding.md (color psychology by tour type, typography pairing, photography direction, competitive differentiation), booking-conversion.md (3-second test, booking funnel, urgency/scarcity, trust architecture, pricing display, search widget, review design), travel-type-patterns.md (9 travel types with distinct design systems + branding personality framework).
 
 ### Corporate & Consulting
 

@@ -213,6 +213,16 @@ Better approach: Find 3 competitors in your exact market and decide what visual 
 
 ---
 
+---
+
+## Related References
+
+- **travel-branding.md** — Full color psychology guide, typography pairing by tour type, photography direction, competitive differentiation, brand voice, brand audit checklist
+- **booking-conversion.md** — Booking funnel, 3-second test, urgency/scarcity patterns, trust architecture (3 tiers), pricing display, review design, search widget, gallery patterns
+- **travel-type-patterns.md** — Design patterns for 9 travel types (luxury safari, budget/backpacker, cultural, eco-tourism, adventure, wellness, cruise, city breaks, family) with branding personality framework
+- **component-patterns.md** — HTML/Tailwind component code examples (destination cards, itinerary timeline, testimonials, booking CTA, gallery, hero, trust section)
+- **IMPLEMENTATION-GUIDE.md** — Full Astro + Tailwind implementation guide with booking flow, revenue optimisation, SEO, performance benchmarks
+
 ## Next Steps
 
 1. **Read your sector-brief-template.md carefully** — especially the Brand Identity and Visual Identity sections
