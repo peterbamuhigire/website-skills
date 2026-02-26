@@ -216,6 +216,19 @@ Use visuals that enhance communication and emotional connection.
 - Use consistent image aspect ratios by section
 - Avoid generic stock photos where possible
 
+**Background Zoom & Image Motion Effects:**
+
+Background zoom adds dynamism and depth to hero sections, cards, and galleries. Use Tailwind's `group-hover:scale-*` with `transition-transform` for smooth, performant effects.
+
+- **Hover zoom on cards/images:** Wrap image in `overflow-hidden` container, apply `group-hover:scale-110 transition-transform duration-500 ease-out` to the image. Keep scale between 105-115% — more feels aggressive
+- **Overlay fade with zoom:** Combine image zoom with overlay transition: `bg-black/40 group-hover:bg-black/20` reveals more image as it zooms
+- **Text lift on zoom:** Add `group-hover:scale-105` to text overlay for subtle depth parallax
+- **Responsive scaling:** Use `md:hover:scale-125` to increase zoom on larger screens where the effect has more visual impact
+- **Performance:** Use `transition-transform` (GPU-accelerated), not `transition-all`. Apply `will-change-transform` only on elements that will animate. Optimize source image file sizes
+- **Accessibility:** Always respect `prefers-reduced-motion` — disable zoom animations for users who request it. Ensure text contrast is maintained at both normal and zoomed states
+- **When to use:** Hero sections, portfolio/gallery grids, feature cards over images, destination/product cards, team member photos
+- **When to avoid:** Navigation elements, form areas, text-heavy sections, anywhere zoom could cause content reflow or reading difficulty
+
 **Video Policy:**
 - **NEVER upload video files to the repository or server** — video files are too large for static hosting
 - **Host all videos on YouTube** — free, unlimited storage, global CDN, adaptive bitrate
