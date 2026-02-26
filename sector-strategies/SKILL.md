@@ -109,7 +109,7 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 **Content order**: Hero + appointment CTA → Trust stats → Specialties grid → Doctor profiles → Patient testimonials → Hours/Insurance/Accessibility → Contact
 **Distinctive traits**: Accessibility-first (WCAG AAA body text), credential visibility, frictionless appointment booking, mobile-first (52%+ healthcare traffic), calm colour psychology, emergency information prominent
 
-**Special note:** Healthcare templates include 3 additional references: healthcare-branding.md (color psychology for 8 hues, accessibility-first design rules, typography by 6 facility types), patient-trust-design.md (patient funnel, trust architecture, doctor profile design, appointment booking UX, WCAG requirements), healthcare-type-patterns.md (7 facility types with distinct design systems + branding personality framework).
+**Special note:** Healthcare templates include 4 additional references — the most comprehensive sector in the library. premium-hospital-playbook.md ($5K+ hospital website complete guide: multi-audience architecture, provider directory, condition landing pages, booking flows, patient portal showcase, telemedicine, competitive analysis, accessibility audit). healthcare-branding.md (clinical color system with semantic roles, colour-blind safety, accessibility-first design). patient-trust-design.md (patient funnel, trust architecture, provider directory, appointment booking, portal showcase, telemedicine). healthcare-type-patterns.md (9 facility types + premium feature matrix). Incorporates clinical-grade UI patterns adapted from healthcare application design.
 
 ### E-commerce
 
