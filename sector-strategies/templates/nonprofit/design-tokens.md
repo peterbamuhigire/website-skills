@@ -16,6 +16,10 @@ Nonprofit sites succeed when they convey **hope, trust, and tangible impact**. C
 - **Accessible**: High contrast in light AND dark modes
 - **Emotional**: Colors that resonate with the cause
 
+**A signature color increases brand recognition by 80%.** Choose one dominant primary + one high-contrast accent for CTAs. The accent appears ONLY on donate buttons, key CTAs, and action headlines. See **color-psychology.md** for full hue-by-hue guide and sub-sector palette recommendations.
+
+**Competitive differentiation:** Before choosing colors, audit 5-10 similar orgs. Charity: water chose bright yellow in a blue sector. Susan G. Komen chose pink against healthcare's cool tones. Stand out while staying mission-aligned.
+
 ## Primary Palette (Sector Standard)
 
 ### Light Mode Colors
@@ -188,4 +192,9 @@ Many nonprofits are adopting dark mode for:
 
 ---
 
-See **tour-travel/design-tokens.md** for detailed spacing scale, breakpoints, and animation timing patterns. Apply the same structure here with nonprofit-specific adaptations.
+## Related References
+
+- **color-psychology.md** — Full hue guide, sub-sector palettes, competitive differentiation, palette construction formula
+- **storytelling-design.md** — Dignity principle, hero patterns, impact numbers, donation conversion, trust architecture, photography direction
+- **sub-sector-patterns.md** — Design patterns for environment/agriculture, healthcare, education, humanitarian, arts/culture, research/science
+- **tour-travel/design-tokens.md** — Detailed spacing scale, breakpoints, animation timing (apply with nonprofit adaptations)

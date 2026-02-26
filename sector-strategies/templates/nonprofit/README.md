@@ -12,7 +12,7 @@ Complete, production-ready templates for building stunning nonprofit and charity
 
 ## What's Included
 
-### 📋 Templates (Copy to Your Project)
+### Templates (Copy to Your Project)
 
 1. **sector-brief-template.md** → `docs/sector-brief.md`
    - Mission statement & organization identity
@@ -23,20 +23,17 @@ Complete, production-ready templates for building stunning nonprofit and charity
    - Stories & testimonials
    - Engagement CTAs
 
-2. **design-tokens.md** (Reference)
-   - Light & dark mode colors (Charitable Blue, Impact Magenta, Warm Gold)
-   - Typography scale (serif for stories, sans-serif for clarity)
-   - Spacing & layout scale
-   - Animations (fade-in, slide-up, pulse)
-   - Accessibility contrast requirements (both modes)
-   - 6 reference nonprofit websites with examples
+### Design References
 
-3. **COMPONENT-PATTERNS-INDEX.md** (Reference)
-   - 10 core components (Donation Button, Impact Stats, Story Carousel, etc.)
-   - Dark mode implementation for each
-   - Copy-paste templates
-   - Testing guide for dark mode
-   - Quick reference patterns
+2. **design-tokens.md** — Color palettes, typography scale, spacing, animations, accessibility contrast (light + dark mode)
+
+3. **COMPONENT-PATTERNS-INDEX.md** — 10 core components with dark mode support, copy-paste HTML/Tailwind templates
+
+4. **color-psychology.md** — Nonprofit color psychology by hue, competitive differentiation strategies, palette construction formula, sub-sector color guide, semantic token naming
+
+5. **storytelling-design.md** — The dignity principle, hero section patterns, impact numbers, donation conversion design (54% uplift), trust architecture, photography direction, navigation for multiple audiences
+
+6. **sub-sector-patterns.md** — Design patterns for 6 nonprofit sub-sectors: Environment/Agriculture, Healthcare, Education/Youth, Humanitarian, Arts/Culture, Research/Science. Branding personality framework.
 
 ### 🎨 Dark Mode Support
 
@@ -193,13 +190,16 @@ The design-system skill reads `docs/sector-brief.md` and auto-generates:
 
 ---
 
-## 📚 File Structure
+## File Structure
 
 ```
 nonprofit/
 ├── sector-brief-template.md        (Copy to docs/sector-brief.md)
-├── design-tokens.md                (Reference file)
-├── COMPONENT-PATTERNS-INDEX.md     (Reference file)
+├── design-tokens.md                (Reference: palettes, typography, spacing)
+├── COMPONENT-PATTERNS-INDEX.md     (Reference: 10 components + dark mode)
+├── color-psychology.md             (Reference: color meanings, sub-sector palettes)
+├── storytelling-design.md          (Reference: dignity principle, trust, donation UX)
+├── sub-sector-patterns.md          (Reference: 6 sub-sector design patterns)
 └── README.md                       (This file)
 ```
 

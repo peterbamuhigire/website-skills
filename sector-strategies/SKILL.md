@@ -1,6 +1,6 @@
 ---
 name: sector-strategies
-description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
+description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators, nonprofit/charity/NGO) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
 ---
 
 ## Why Sector Strategy Matters
@@ -124,6 +124,16 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 **Key components**: Portfolio grid, process/behind-scenes, subscribe CTA, community signals
 **Content order**: Hero + personality → Best work → Process/behind-scenes → Community/subscribe → Contact
 **Distinctive traits**: Personal voice, authentic storytelling, niche focus, less corporate, more human
+
+### Nonprofit / Charity / NGO
+
+**Trust cues**: Mission clarity, impact proof, financial transparency, beneficiary dignity, credentials, partner logos
+**Visual identity**: Sector-dependent (see sub-sector patterns: environment=green+gold, healthcare=blue+coral, humanitarian=red+navy, research=blue+gold, arts=bold+vibrant). Warm + professional, never generic "charity blue."
+**Key components**: Impact-tied donation CTA, story carousel, stat counters, trust bar (partner logos), team section, contact with multiple offices, multilingual support
+**Content order**: Hero + mission CTA → Trust bar → Impact stats → Beneficiary stories → Programs/services → How to help → News/events → Contact
+**Distinctive traits**: Authentic photography (never stock), dignity-first storytelling, impact-tied donation amounts ("$50 trains one farmer"), multiple audience paths (donors, volunteers, beneficiaries, partners, media), WCAG AA+ accessibility, mobile-first (52% nonprofit traffic), YouTube-hosted video embeds
+
+**Special note:** Nonprofit templates include 3 additional references: color-psychology.md (hue-by-hue guide with competitive differentiation), storytelling-design.md (dignity principle, trust architecture, donation conversion), sub-sector-patterns.md (6 sub-sector design systems). Stories are remembered 22x more than facts — design must channel empathy into action.
 
 ### App Landing Pages
 
