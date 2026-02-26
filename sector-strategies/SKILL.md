@@ -87,11 +87,13 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 ### Education
 
-**Trust cues**: Credibility, structure, student success, enrollment
-**Visual identity**: Clean sans-serif + readable serif; primary colors + professional gray
-**Key components**: Course catalog, staff directory, event calendar, application CTAs
-**Content order**: Hero + enrollment CTA → Academics grid → Faculty profiles → Events → Apply
-**Distinctive traits**: Clear hierarchy, accreditation badges, student testimonials, enrollment clarity
+**Trust cues**: Credibility, structure, student success, enrollment conversion, parent trust, accreditation
+**Visual identity**: School-type dependent (see school-type-patterns.md: private=serif+premium, public=accessible+warm, international=global+sophisticated, religious=reverent+warm). Distinctive brand colors per school — never default blue+white.
+**Key components**: Enrollment CTA hero, programme cards, faculty profiles, event calendar, trust stats banner, audience segmentation tabs, virtual campus tour, fee structure table, testimonial carousel, parent portal
+**Content order**: Hero + enrollment CTA → Trust stats → Academics grid → Faculty profiles → Testimonials → Events → Apply
+**Distinctive traits**: Clear hierarchy, accreditation badges, student testimonials, enrollment clarity, audience segmentation (parents/students/alumni/donors), transparent fee structure, mobile-first (52%+ school traffic), YouTube-hosted campus tour videos
+
+**Special note:** Education templates include 3 additional references: school-branding.md (color psychology, typography pairing, competitive differentiation, brand voice), enrollment-design.md (conversion funnel, parent trust architecture, CTA hierarchy, form design), school-type-patterns.md (7 school types with distinct design systems + branding personality framework).
 
 ### Healthcare
 

@@ -14,6 +14,10 @@ Education sites succeed when they convey **credibility, safety, and clear struct
 - Energetic but not chaotic (primary colors for energy, neutrals for stability)
 - Accessible (high contrast for readability)
 
+**A signature color increases brand recognition by 80%.** Choose one dominant primary + one high-contrast accent for CTAs. The accent appears ONLY on enrollment buttons, key CTAs, and achievement badges. See **school-branding.md** for full color psychology guide and school-type-specific palette recommendations.
+
+**Competitive differentiation:** Before choosing colors, audit 5-10 similar schools in your area. If every school uses blue + white, choose green + gold. Stand out while staying education-appropriate.
+
 ### Primary Palette (Sector Standard)
 
 | Role | Hex | Usage |
@@ -107,4 +111,13 @@ Study these exemplary education websites for UI/UX inspiration. Note: These use 
 
 ---
 
-See **tour-travel/design-tokens.md** for detailed example with full spacing scale, breakpoints, and complete accessibility standards. Apply the same structure here.
+---
+
+## Related References
+
+- **school-branding.md** — Full color psychology guide, typography pairing, competitive differentiation, photography direction, brand voice
+- **enrollment-design.md** — Enrollment conversion patterns, parent trust architecture, CTA hierarchy, form design, 5-second test
+- **school-type-patterns.md** — Design patterns for 7 school types (public, private, charter, international, higher ed, religious, vocational) with branding personality framework
+- **component-patterns-full.md** — Complete HTML/Tailwind code examples with reference site inspiration
+- **IMPLEMENTATION-GUIDE.md** — Full Astro + Tailwind implementation guide for school websites
+- **tour-travel/design-tokens.md** — Detailed spacing scale, breakpoints, and complete accessibility standards (apply with education adaptations)
