@@ -383,6 +383,7 @@ import heroImg from '../assets/images/hero-office.jpg';
 - ALWAYS provide descriptive alt text
 - ALWAYS use object-cover for background-style images
 - Check _catalog.json for available images before using ANY image
+- **Image cards MUST NEVER have white space.** Always add `img { display: block; }` in the base layer of global.css. Every image inside a card must use `w-full h-full object-cover` (or `object-contain` for product shots only). The image container must have `overflow-hidden` and a height constraint (`h-full`, `aspect-[ratio]`, or explicit height). Never leave an image at its default inline display — this causes a baseline gap that produces ugly white space at the bottom of cards.
 
 ## Multi-Language Text Expansion (NEW)
 
