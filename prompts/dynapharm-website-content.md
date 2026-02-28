@@ -27,6 +27,7 @@ Read the following files and database tables from the existing Dynapharm ERP (DM
 - `C:/wamp64/www/DMS_web/CLAUDE.md` — architecture and business context
 - `C:/wamp64/www/DMS_web/docs/INDEX.md` — full documentation index
 - `C:/wamp64/www/DMS_web/.github/copilot-instructions.md` — comprehensive development standards (first 60 lines for business context)
+- `C:/wamp64/www/DMS_web/docs/testing/DYNAPHARM_BRAND_DESCRIPTION.md` — official brand copy, taglines, messaging pillars, tone guidelines (USE THIS for brand voice and about page content)
 
 **MLM & distributor documentation (read for business model details):**
 
@@ -89,29 +90,32 @@ After copying, generate a `docs/en/products-catalog.md` file (see below) that ma
 
 ### What You Are Generating
 
-Generate all 11 content files in `docs/en/` for a **marketing website** that presents Dynapharm to three audiences:
+Generate all content files in `docs/en/` (then translate to `docs/fr/`) for a **marketing website** that presents Dynapharm Africa to three audiences:
 
 1. **Prospective distributors** — people considering the business opportunity
 2. **Health-conscious consumers** — people interested in natural health products
 3. **Existing distributors** — people already in the network who want to share a professional brand site with prospects
 
-This is NOT an ERP documentation site. It is a conversion-focused brand website that sells the Dynapharm lifestyle, products, and business opportunity.
+This is NOT an ERP documentation site. It is a conversion-focused brand website that sells the Dynapharm Africa lifestyle, products, and business opportunity.
 
 ### Brand Identity
 
-- **Company name:** Dynapharm (full: Dynapharm International)
-- **Tagline:** Derive from research — something like "Nature's Best, Your Business" or "Health, Wealth, and Wellness Through Nature" — read the product catalogue first to craft something authentic
+- **Company name:** Dynapharm Africa
+- **Tagline:** "Health, Wealth, Freedom — The Dynapharm Way" (from official brand doc — or refine after reading brand description)
 - **Industry:** Health & Wellness / MLM / Network Marketing
 - **Founded:** [PLACEHOLDER — confirm founding year]
-- **Headquarters:** Malaysia (global HQ); Africa operations span multiple countries
-- **Target market:** Africa-wide — Uganda, Kenya, Tanzania, DRC, Rwanda, Senegal, Sierra Leone, Egypt, and expanding
+- **Headquarters:** Malaysia (global HQ); Dynapharm Africa operates across the continent
+- **Global reach:** Operates in **40+ countries** worldwide. Do NOT list specific country names — just "40+ countries".
 - **Primary audiences:**
   - Health-conscious individuals seeking natural supplements
   - Entrepreneurs looking for a low-barrier business opportunity
   - Existing distributors building their networks
-- **Tone:** Aspirational, warm, trustworthy, community-driven. Speak to people who want better health AND financial independence. Avoid hype or "get rich quick" language — emphasise genuine wellness and sustainable business building.
-- **Company positioning:** Present Dynapharm as a company, not as an individual's business. The brand is larger than any franchise.
-- **Franchise neutrality:** NEVER mention specific franchise names, country-specific pricing, or local contact details. Use language like "Find your local Dynapharm office" or "Contact your nearest Distribution Point Centre (DPC)."
+- **Tone:** Aspirational, warm, trustworthy, community-driven. Speak to people who want better health AND financial independence. Avoid hype or "get rich quick" language — emphasise genuine wellness and sustainable business building. Read `DYNAPHARM_BRAND_DESCRIPTION.md` for official tone: inspirational, credible, empowering, African-centric.
+- **Company positioning:** Present Dynapharm Africa as a company, not as an individual's business. The brand is larger than any franchise.
+- **Franchise neutrality:** NEVER mention specific franchise names, country-specific pricing, or local contact details. Use "Dynapharm Africa" as the brand. Say "40+ countries" — never list them. Contact is email only: **info@dynapharmafrica.com**
+- **Logo:** Already in `photo-bank/branding/` — `Logo-Full-Color.png` (colour version, ~387KB) and `Logo-Dark-Mode.png` (white version for dark backgrounds, ~37KB)
+- **Languages:** Website is in **English and French** only (2 languages, not 3)
+- **Brand pillars** (from official brand doc): **Health** (premium natural products), **Wealth** (proven business opportunity), **Freedom** (financial independence)
 
 ### Product Categories (extracted from actual catalogue)
 
@@ -162,15 +166,15 @@ The ERP maps products to 11 health categories. Present these as "Wellness Soluti
 
 #### 1. `docs/en/company-profile.md`
 
-- Position Dynapharm as a global health and wellness company with deep roots in natural, traditional remedies
+- Position Dynapharm Africa as a health and wellness company with deep roots in natural, traditional remedies
 - Malaysian origins with a strong African presence — emphasise the Africa growth story
 - Mission: Empowering people with natural health products and entrepreneurial opportunity
 - Vision: A healthier world where everyone has access to nature's best supplements and the opportunity to build a sustainable business
 - Values: Quality, Integrity, Community, Natural Wellness, Entrepreneurship
-- Key numbers: 90+ products, 6,000+ active distributors, presence in 10+ countries, 11 wellness categories, 7 achievement ranks
-- Social media: leave placeholders
-- Contact: "Visit dynapharm.com" or equivalent placeholder — franchise-neutral
-- Do NOT list a single country address — instead say "With offices and Distribution Point Centres across Africa and Asia"
+- Key numbers: 90+ products, active distributors across the continent, presence in **40+ countries**, 11 wellness categories, 7 achievement ranks
+- Contact: **info@dynapharmafrica.com** (this is the ONLY contact — no phone, no address, no social media links)
+- Do NOT list specific countries — say "operating in 40+ countries across Africa and beyond"
+- Use content from `DYNAPHARM_BRAND_DESCRIPTION.md` for the brand pillars (Health, Wealth, Freedom)
 
 #### 2. `docs/en/pages.md`
 
@@ -181,7 +185,7 @@ Design a website with these pages:
 - **Business Opportunity** — The MLM business model explained clearly and honestly: how it works, rank progression, earning potential (without specific numbers), what a typical day looks like, registration process, support and training
 - **Wellness Guide** — Health categories mapped to product recommendations (the 11 wellness categories); educational content about natural health; NOT medical advice
 - **About** — Company history, mission, values, global reach, manufacturing quality, certifications
-- **Contact** — "Find Your Local Office" with a country selector or map; generic enquiry form; social media links; "Interested in becoming a distributor?" CTA
+- **Contact** — Simple enquiry form (sends to info@dynapharmafrica.com); "Interested in becoming a distributor?" CTA; no phone/address/social media
 
 Nav order: Home, Products, Business Opportunity, Wellness Guide, About, Contact
 Primary CTA: "Start Your Journey" or "Become a Distributor" linking to /contact
@@ -262,7 +266,7 @@ Reframe as "What We Offer" — Dynapharm's value propositions:
 3. **Training & Development** — Comprehensive training for new distributors: product knowledge, sales techniques, network building, leadership development. Both online and in-person at DPCs.
 4. **Wellness Solutions** — Products mapped to 11 health categories. Personalised wellness recommendations through trained distributors. Holistic approach: nutrition, energy, immunity, beauty.
 5. **Community & Support** — Join a network of 6,000+ distributors. Mentorship from upline leaders. Regular events, conferences, and recognition ceremonies. A culture of mutual support and celebration.
-6. **Global Reach, Local Presence** — International product quality with local Distribution Point Centres (DPCs) across Africa. Products available in your market, priced in your currency, supported in your language.
+6. **Global Reach, Local Presence** — Operating in 40+ countries with local Distribution Point Centres (DPCs). Products available in your market, supported in your language.
 
 Extract accurate ingredient and product details from the database queries. Each section should include 4-6 bullet points of real capabilities.
 
@@ -281,29 +285,30 @@ Extract accurate ingredient and product details from the database queries. Each 
 
 #### 6. `docs/en/contact.md`
 
-- No single address — this is franchise-neutral
-- "Find Your Nearest Office" section with placeholder country list (Uganda, Kenya, Tanzania, DRC, Rwanda, Senegal, Sierra Leone, Egypt)
-- Email: placeholder (info@dynapharm.com or similar)
-- WhatsApp: placeholder (important for African markets)
-- "Interested in Becoming a Distributor?" — prominent section with enquiry form
-- "Already a Distributor?" — link to DMS login or franchise-specific portal
-- Social media links: placeholders for Facebook, Instagram, YouTube, TikTok
-- Operating hours: Leave flexible — "Contact your local office for operating hours"
+- **Email is the ONLY contact method:** info@dynapharmafrica.com
+- No phone number, no physical address, no WhatsApp, no social media links
+- Simple, clean contact page with:
+  - A contact/enquiry form that sends to info@dynapharmafrica.com
+  - "Interested in Becoming a Distributor?" — prominent section
+  - "Already a Distributor?" — brief note to contact their local DPC
+- Do NOT include country lists, maps, or "find your nearest office" sections
+- Keep it minimal and professional
 
 #### 7. `docs/en/testimonials.md`
 
-Create 6-8 realistic testimonial placeholders covering:
+Create exactly **4 testimonials** with realistic, culturally appropriate full names from these specific countries:
 
-- A distributor who improved their family's health through Dynapharm products (product testimonial)
-- A young entrepreneur who built a team and achieved Manager rank (business opportunity)
-- A mother who uses Spirulina and Chlorophyll for her family's nutrition (product)
-- A retired teacher who found purpose and income as a Senior Manager (business)
-- A farmer who uses D.I. Grow fertiliser and saw crop improvements (agriculture product)
-- A Diamond Manager sharing their leadership journey (aspiration)
-- A health-conscious professional who replaced synthetic supplements with Dynapharm (product)
-- A community leader who brought wellness to their village through Dynapharm (social impact)
+1. **Senegal** — A distributor testimonial. Use a realistic Senegalese name (e.g., Aminata Diallo, Ousmane Ndiaye, Fatou Sow). Focus on either the business opportunity or a product experience.
+2. **Uganda** — A product testimonial. Use a realistic Ugandan name (e.g., Grace Nakamya, Joseph Ssemakula, Prossy Nalubega). Focus on a specific product like Spirulina, Chlorophyll, or Ganoderma Coffee.
+3. **Mozambique** — A business opportunity testimonial. Use a realistic Mozambican name (e.g., Ana Mondlane, Carlos Machel, Esperança Nhantumbo). Focus on building a team and achieving a rank (Manager, Senior Manager, etc.).
+4. **Lesotho** — A product or agriculture testimonial. Use a realistic Basotho name (e.g., Thabo Mokhesi, Mamello Ramatla, Lerato Moshoeshoe). Could focus on D.I. Grow fertiliser or health products.
 
-Mark clearly as `[PLACEHOLDER — replace with real testimonials]` but write realistic quotes that highlight actual Dynapharm products and the rank names. Include variety of countries across Africa. Use first names only with country.
+Each testimonial should:
+- Include the person's full name and country
+- Reference specific Dynapharm products by their real names from the catalogue
+- Feel authentic and grounded — no hype
+- Be 2-4 sentences
+- Mark as `[PLACEHOLDER — replace with real testimonial]` but make them realistic enough to use as templates
 
 #### 8. `docs/en/portfolio.md`
 
@@ -356,13 +361,14 @@ Tell the Dynapharm story:
 - **The Africa Chapter:** Expansion into Africa — bringing world-class health supplements to a continent hungry for natural wellness alternatives. Dynapharm found a natural fit: African communities value natural remedies and entrepreneurial spirit.
 - **The Model:** MLM as a vehicle for economic empowerment — not just selling products but building entrepreneurs. Low barrier to entry. No formal qualifications needed. Just a desire to help people live healthier and a willingness to learn.
 - **Products:** From a handful of products to 90+ items spanning beverages, supplements, personal care, and even agriculture (D.I. Grow). Every product is manufactured to international quality standards.
-- **Impact:** Thousands of distributors across Africa earning income while improving their communities' health. DPCs serving as local wellness hubs.
+- **Impact:** Distributors across 40+ countries earning income while improving their communities' health. DPCs serving as local wellness hubs.
 - **Values:**
   - Quality First — every product meets international standards
   - Natural Always — sourced from nature, backed by science
   - People Before Profit — distributors are partners, not salespeople
   - Community Impact — healthy people build healthy communities
-- **Milestones:** leave as placeholders — founding year, first African franchise, first 1,000 distributors, product catalogue milestones, country expansion dates
+- **Brand pillars:** Health, Wealth, Freedom (from `DYNAPHARM_BRAND_DESCRIPTION.md` — weave these throughout)
+- **Milestones:** leave as placeholders — founding year, expansion milestones, product catalogue growth
 - **Vision:** "A world where natural health and financial independence are within everyone's reach"
 
 #### 11. `docs/en/gallery.md`
@@ -429,13 +435,13 @@ categories:
 
 #### `docs/i18n-config.md`
 
-Update the i18n config to enable all 3 languages (en, fr, sw). Set English as default. Note that the Dynapharm ERP supports 7 languages but the marketing website starts with 3 major African languages.
+Update the i18n config to enable **2 languages: English (en) and French (fr)**. Set English as default. Disable Kiswahili (sw). The website serves Dynapharm Africa's anglophone and francophone markets.
 
 #### `docs/seo.md`
 
 Fill in the SEO template with:
 
-- Site URL: `https://dynapharm.africa` (placeholder — or dynapharm-africa.com)
+- Site URL: `https://dynapharmafrica.com`
 - Schema type: `Organization` + `Product` (for product pages)
 - Per-page meta titles and descriptions optimised for:
   - "Dynapharm products Africa"
@@ -447,15 +453,15 @@ Fill in the SEO template with:
   - "become a distributor Dynapharm"
   - "network marketing health products"
   - "Chlorophyll drink benefits"
-  - "natural wellness products [country]" (for multiple African countries)
+  - "natural wellness products Africa"
 
 ### Quality Standards
 
 1. **Accuracy:** Every product mentioned must exist in the Dynapharm product catalogue (from database queries). Every rank must match the actual rank codes (DI, M, SM, RM, PM, DM, CDM). Do not invent products or ranks.
-2. **Franchise neutrality:** NEVER mention specific franchise names (no "Dynapharm Uganda" or "Dynapharm Egypt"). Use "Dynapharm" or "your local Dynapharm office". No country-specific pricing. No single-country contact details.
+2. **Franchise neutrality:** NEVER mention specific franchise names (no "Dynapharm Uganda" or "Dynapharm Egypt"). Use "Dynapharm Africa" or "your local Dynapharm office". No country-specific pricing. No country lists. Only contact: info@dynapharmafrica.com. Say "40+ countries" when referencing reach.
 3. **No medical claims:** Products "support wellness", they do not "cure" or "treat" anything. Use careful, compliant language throughout.
 4. **Marketing tone:** Write for real people — aspiring entrepreneurs and health-conscious families. "Support your immune system naturally with Spirulina" not "Spirulina platensis provides immunomodulatory polysaccharides."
-5. **African context:** Use examples and language relevant to Africa — communities, families, local markets, farming, mobile money, WhatsApp. Authentic, not tokenistic.
+5. **African context:** Use examples and language relevant to Africa — communities, families, local markets, farming. Authentic, not tokenistic. Do NOT name specific countries.
 6. **Balanced MLM presentation:** Present the business opportunity honestly. Emphasise effort, training, and gradual growth. Avoid income guarantees, lifestyle promises, or "unlimited earning potential" language. Success requires work.
 7. **Placeholders clearly marked:** Use `[PLACEHOLDER]` for any content that needs real data (testimonials, exact milestones, leadership photos, event dates, certifications).
 8. **British English:** As per the language-standards skill — colour, organisation, travelling, etc.
@@ -488,7 +494,4 @@ Once all files are generated:
    - Company leadership profiles and photos
    - Founding date and milestone dates
    - Certifications and quality standard documentation
-   - Country-specific DPC locations for the contact page
-   - Social media account URLs
-   - Official domain name decision
    - Lifestyle/hero/event photos for non-product pages
