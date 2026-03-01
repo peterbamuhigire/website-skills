@@ -24,6 +24,7 @@ Read these files first:
 
 Read the reference files as needed during writing:
 
+- `references/human-voice-standards.md` — **READ FIRST** — AI vocabulary/phrase/structure blacklists, human voice techniques, self-check (ensures content sounds 100% human)
 - `references/writing-craft.md` — 7-step process, sentence craft, paragraph structure, opening hooks, clarity, conciseness
 - `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, value-first principle, pillar content, touchpoints
 - `references/reader-experience.md` — touchpoint mapping, reader types, quality gates, tone calibration, publishing rhythm
@@ -50,7 +51,7 @@ From this simple prompt, generate the complete article pipeline below.
 
 ### Step 1: Research and Plan
 
-1. Read the company profile to understand the author's expertise and experience
+1. Read the company profile to understand the author's expertise and experience. **Build a voice profile** (see `references/human-voice-standards.md` — Voice DNA Extraction): analyse the author's sentence patterns, vocabulary, opinions, register from their docs. Extract 5-10 characteristic sentences as tone anchors.
 2. Identify the target audience segment for this article (see `references/content-strategy.md`)
 3. Identify the reader types this article must serve: Scanner, Deep Diver, Sceptic, Action-Taker (see `references/reader-experience.md`)
 4. Determine which buyer journey stage the article targets: Awareness, Consideration, or Decision
@@ -110,6 +111,18 @@ Article body here...
 - **Clarity** — use "because" not "since", "although" not "while", "can" for ability, "might" for possibility. No ambiguous words for multilingual readers.
 - **Conciseness** — cut filler ("in order to" → "to", "due to the fact that" → "because"). Delete weak modifiers (really, very, quite, basically).
 - **Linking flow** — every paragraph connects to the previous one with a logical bridge or transition word.
+
+**Human voice requirements** (from `references/human-voice-standards.md`):
+
+- **Zero AI vocabulary** — never use Tier 1 blacklist words (delve, tapestry, landscape, leverage, navigate, foster, realm, etc.). Check every sentence.
+- **Zero AI phrases** — never open with "In today's...", "Have you ever wondered...", "It's important to note...". See full blacklist.
+- **Burstiness mandatory** — every 500-word section must contain 3+ sentences under 8 words and 1+ sentence over 25 words.
+- **Take positions** — at least 3 clear opinions per article. "I recommend" not "One might consider".
+- **Client language** — mine vocabulary from docs/ files and use the client's own words.
+- **Strategic contractions** — 2-4 per 500 words (don't, can't, it's). Never in headlines.
+- **Sensory detail in stories** — what it looked like, felt like, sounded like. Not just what happened.
+- **Write then cut** — draft 30% more than needed, then cut ruthlessly in revision.
+- **Max 2 em dashes per article**. Vary paragraph lengths (1 sentence, then 4, then 2).
 
 ### Step 4: Write French Article
 
@@ -191,6 +204,13 @@ Write as the author would write for a business audience — the register of a se
 | I have found that | It is widely acknowledged that |
 | In our experience | Research conclusively demonstrates |
 | This approach works because | This paradigm shift enables |
+| I recommend | One might consider |
+| This works | This can potentially |
+| Two approaches matter | There are several approaches |
+
+**Contraction calibration:** Use contractions sparingly for natural rhythm (don't, can't, it's — 2-4 per 500 words). Zero contractions sounds like AI or academia. Too many sounds casual.
+
+**Commit, don't hedge:** Say what you think. "This is the best approach for SMEs" not "This could arguably be considered a viable approach." Readers trust writers who commit.
 
 **Read `references/editorial-standards.md`** for punctuation, capitalisation, numbers, and grammar rules.
 
@@ -311,6 +331,17 @@ Every article targets at least one keyword cluster. Research what the target aud
 - [ ] No filler phrases (in order to, due to the fact that, it is important to note)
 - [ ] No weak modifiers (really, very, quite, basically, actually)
 - [ ] Every paragraph connects to the previous one with a logical bridge
+
+### Human Voice (from `references/human-voice-standards.md`)
+- [ ] Zero Tier 1 AI blacklist words (delve, tapestry, landscape, leverage, realm, navigate, foster, etc.)
+- [ ] Zero banned AI phrases ("In today's...", "It's important to note...", "Game-changer", etc.)
+- [ ] Burstiness present — 3+ short sentences (<8 words) per 500-word section
+- [ ] At least 3 clear opinions the author stands behind
+- [ ] Paragraph lengths vary (1, 2, 3, 4 sentences — not all the same)
+- [ ] Max 2 em dashes in the entire article
+- [ ] No "Furthermore/Moreover/Additionally" as paragraph openers
+- [ ] Stories contain at least one sensory or physical detail
+- [ ] 2-4 contractions per 500 words (natural rhythm, not zero)
 
 ### Language
 - [ ] English: British spelling, East African professional tone, warm but measured

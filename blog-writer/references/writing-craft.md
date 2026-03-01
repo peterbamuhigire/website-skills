@@ -20,6 +20,8 @@ Follow these steps in order. Steps 1-4 are prewriting — they eliminate writer'
 
 **Key principle:** "Work hard at your writing so your readers do not have to work hard at reading." Draft the summary and conclusion LAST — write the body first.
 
+**The Write-Then-Cut principle:** Draft 30% more content than needed. Don't edit while drafting — get everything out. Then cut ruthlessly. The best writing happens in the cutting: remove sentences that don't earn their place, replace 5-word phrases with 2-word phrases, delete modifiers. What you remove matters as much as what you keep.
+
 ---
 
 ## Opening Hook Techniques
@@ -168,15 +170,45 @@ Seven methods to highlight what matters:
 
 ---
 
-## Variety Techniques
+## Variety and Burstiness Techniques
 
-To avoid monotonous writing:
+AI writing has a flat, uniform rhythm — sentences of similar length, paragraphs of similar size, predictable cadence. Human writing has "burstiness": dramatic variation that keeps readers engaged.
 
-- Use **synonyms** after the first mention (then switch to pronouns or shorter references)
-- **Vary sentence openings** — not every sentence should start with subject-verb
-- Start some with: adverbs, prepositional phrases, dependent clauses, participial phrases
-- **Vary sentence length** — alternate short and medium sentences
-- **Vary paragraph length** — a one-sentence paragraph creates emphasis
+### Sentence Length Variation (Burstiness)
+
+**Mandatory metrics per 500-word section:**
+- At least 3 sentences under 8 words
+- At least 1 sentence over 25 words
+- Average sentence length should differ between sections
+
+**Rhythm pattern:** Short sentence. Then a longer one that develops the point with more detail and nuance. Then short again. Like breathing.
+
+Bad (AI-uniform, ~18 words each):
+> The implementation process requires careful planning and consideration of business needs. Companies should evaluate their options thoroughly before committing to a solution. Training and support programmes are essential for ensuring successful adoption.
+
+Good (human-varied, 4 to 28 words):
+> Start with the problem. Too many businesses buy software first and plan later — I've watched it happen across three countries. The result? Expensive systems gathering dust. Planning takes weeks. Recovery takes months.
+
+### Paragraph Length Variation
+
+- Alternate deliberately: 1 sentence, then 4, then 2, then 3
+- Use one-sentence paragraphs for emphasis (powerful tool — don't overuse)
+- Not every paragraph needs a clean topic sentence
+
+### Sentence Opening Variation
+
+Don't start every sentence with subject-verb. Mix:
+- Adverbs: "Surprisingly, the team adapted within a week"
+- Prepositional phrases: "In the third month, results changed"
+- Dependent clauses: "When the CEO finally saw the numbers, she approved the expansion"
+- Conjunctions: "And that changed everything." / "But here's what nobody expected."
+- Synonyms after first mention (then switch to pronouns or shorter references)
+
+### Word-Level Variation
+
+- Use **synonyms** after the first mention
+- Start some sentences with "And" or "But" (2-3 per article)
+- A sentence fragment. For emphasis.
 
 ---
 
@@ -327,6 +359,34 @@ Every paragraph must logically connect to the one before it. Use transition word
 - **Examples:** for instance, for example, such as, in particular
 
 If two consecutive paragraphs have no linking word and no logical bridge, the structure needs revision.
+
+---
+
+## Anti-AI Structural Patterns
+
+Avoid these patterns that mark text as AI-generated:
+
+### Transitions
+- **Ban as paragraph openers:** Furthermore, Moreover, Additionally, In addition, Consequently
+- **Max frequency:** 1 instance of furthermore/moreover/additionally per 1,000 words
+- **Prefer invisible transitions:** let the logic flow from context
+- **When connectors are needed, use conversational ones:** "But here's the thing", "The real question is", "And that changes everything", "Look."
+
+### Lists
+- Don't default to three-item lists — vary: 2, 4, 5, 7 items
+- Not every point needs parallel structure — vary the length of list items
+- Some things work better as sentences than as bullets
+
+### Em Dashes
+- Maximum 2 per article (AI overuses them — often 2-3 per paragraph)
+- Use parentheses or restructure instead
+
+### Structural Tells
+- Never use "Not only X, but also Y" (AI's favourite construction)
+- Never use "X isn't just Y; it's Z" (AI rhetorical pattern)
+- Avoid present participial phrases as sentence openers ("Leveraging our...", "Fostering an environment...") — AI uses these at 2-5x the human rate
+
+See `references/human-voice-standards.md` for the complete blacklist.
 
 ---
 

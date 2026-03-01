@@ -16,6 +16,17 @@ Read these files in order and extract the brand signals:
 3. `docs/services.md` — what they offer and how they describe it
 4. All other `docs/*.md` — tone patterns, recurring themes, language choices
 
+### Client Language Mining
+
+Before writing anything, extract the client's vocabulary from their docs:
+
+1. **Read every file in `docs/{lang}/`** — company profile, services, pages, style brief, all of them
+2. **Write down the exact words they use** to describe: their business, their customers, their problems, their solutions, their industry
+3. **Use those words in the website copy** — the site should sound like the business owner talking, not a copywriter describing the business from outside
+4. **Note their natural register** — formal? semi-formal? technical? The site matches their voice, not yours
+
+When the business owner reads the site, they should think "that's exactly how I would say it."
+
 Answer these questions before generating any page:
 
 ### Who Is the Ideal Customer?
@@ -26,6 +37,12 @@ The ideal customer determines everything. Identify from the docs:
 - How much context or explanation do they need?
 - What language feels accessible and appropriate to them?
 - What kind of reassurance builds their trust?
+
+**Build an audience profile from real data** — if the client's docs mention: testimonials from customers, subscriber messages, survey responses, or descriptions of who buys from them, extract:
+- Their role, industry, company size, geography
+- Specific challenges and aspirations they describe
+- What triggers their decision to buy (pain points they mention)
+- What words THEY use to describe their problems (mirror these)
 
 A website that tries to speak to everyone ends up speaking clearly to no one. Every layout decision, content emphasis, and CTA should serve the identified audience.
 
@@ -200,9 +217,21 @@ After building all pages, review the complete site against these questions:
 
 If any answer is no, identify the specific pages or sections that break coherence and correct them before proceeding to the deploy skill.
 
+### Voice Authenticity Check
+
+After the coherence check, verify the site sounds like the business — not like AI, not like a template:
+
+1. **Does the copy use the client's own vocabulary?** Words and phrases should come from their docs, not from a copywriter's toolkit. Read the client's `docs/{lang}/` files and check the site mirrors their language.
+2. **Zero AI vocabulary across all pages?** Scan every page for Tier 1 banned words (delve, tapestry, landscape, leverage, navigate, foster, realm, harness, robust, vibrant, pivotal, testament, bolster, etc.). See `blog-writer/references/human-voice-standards.md` for the full three-tier blacklist.
+3. **Would the business owner recognise their own voice?** The ultimate test. If the copy sounds like it could belong to any business in any country, it hasn't been personalised enough.
+4. **Is the voice consistent across pages?** The about page and the services page should sound like the same person wrote them. Check tone, formality, and sentence style across at least 3 pages.
+5. **Are opinions present where appropriate?** The site should take clear positions, not hedge with "could potentially" and "might consider". Measured confidence, not vague diplomacy.
+
+For individual article voice checks (burstiness, sentence rhythm, structural patterns), see the blog-writer's Human Voice Self-Check in `blog-writer/references/human-voice-standards.md`.
+
 ## How This Skill Relates to Others
 
-- **east-african-english** governs the language and tone of the words
+- **language-standards** governs the language and tone of the words
 - **design-system** governs the visual identity (fonts, colours, spacing)
 - **brand-alignment** (this skill) ensures both work together to create a coherent brand experience that serves the ideal customer
 

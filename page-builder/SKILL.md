@@ -7,6 +7,10 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 
 Transform markdown content into stunning, production-grade Astro pages.
 
+## Copywriting Reference
+
+Before writing ANY page copy, read **`references/website-copywriting.md`** for page-by-page copy formulas (homepage, about, services, contact, FAQ, testimonials) and **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary/phrase blacklist. All generated text must sound 100% human-written.
+
 ## Universal Guidelines Reference
 
 Before building pages, review **Universal Design Guidelines** for:
@@ -28,6 +32,7 @@ This skill applies these universal content and UX principles to Astro implementa
 4. The specific `docs/{lang}/*.md` file for the page content
 5. **Universal Design Guidelines** — for content strategy and UX principles
 6. **Language Standards** — tone, grammar, and style for THIS language (from language-standards skill)
+7. **Voice DNA** — if the client has existing writing (blog posts, LinkedIn, proposals), build a voice profile before writing any copy (see `blog-writer/references/human-voice-standards.md` — Voice DNA Extraction)
 
 **Multi-Language Note:** You are building pages for ONE language at a time. The website-builder will call you once per enabled language. Read content from `docs/{lang}/` (e.g., `docs/en/`, `docs/fr/`, `docs/sw/`), not the root `docs/` directory.
 
@@ -441,41 +446,38 @@ For EVERY page in EVERY language, mentally verify:
 
 ## Content Best Practices
 
+### Copywriting Standards (Mandatory)
+
+All visible text must follow `references/website-copywriting.md` and `blog-writer/references/human-voice-standards.md`:
+
+- **Headlines sell, body explains** — write all headlines first. If headings alone don't tell the story, fix them before writing body text.
+- **The Specificity Ladder** — climb from vague to specific. "We help businesses" → "We help East African SMEs" → "We build inventory systems for manufacturers with 50-200 staff"
+- **Client language mining** — read every `docs/{lang}/` file and extract the client's own words. The site should sound like the business owner talking.
+- **Zero AI vocabulary** — never use: delve, tapestry, landscape (metaphor), leverage, navigate (metaphor), foster, realm, harness, synergy, embark, beacon, robust, vibrant, pivotal, paramount, testament, bolster. See full blacklist in `blog-writer/references/human-voice-standards.md`.
+- **Outcome over feature** — "Get paid faster" not "Invoicing module". Apply the "So What?" filter to every sentence.
+- **Mirror technique on homepage** — reflect the visitor's reality before talking about the business.
+
 ### Scannable Content Formatting
 
 Users scan, they don't read. Format all content for quick comprehension:
 
-**Formatting Rules:**
 - Descriptive headings (tell story in headlines)
 - Bullet points for features/benefits (break up paragraphs)
-- Short paragraphs (3-4 lines maximum)
+- Short paragraphs (3-4 lines maximum), vary lengths (1 sentence, then 4, then 2)
 - Bold key terms and phrases
 - Images/visuals every 200-300 words
 - Adequate whitespace between sections
 
-**Content Structure:**
-```
-Headline (value prop)
-↓
-2-3 short paragraphs (context)
-↓
-Bullet points (benefits/features)
-↓
-Visual break (image/graphic)
-↓
-CTA or next section
-```
-
 ### Clear Calls-to-Action
 
-Tell users exactly what to do next.
+Tell users exactly what to do next. See `references/website-copywriting.md` for page-specific CTA formulas.
 
-**CTA Best Practices:**
-- Use action language ("Get Started", "Download", "Subscribe")
+- Use specific action language ("Discuss Your Project" not "Contact Us", "See How It Works" not "Learn More")
 - Make buttons visually distinct (highest contrast)
 - Position after value prop and benefits
 - Limit 1-2 primary CTAs per section
-- Include secondary CTA for users not ready
+- CTA wording must be consistent across the site
+- Never use manipulative language ("Don't miss out!", "Act now!", "Last chance!")
 
 ## Content Parsing (Multi-Language)
 
