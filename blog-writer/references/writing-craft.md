@@ -258,3 +258,100 @@ Before writing, answer:
 - What tone matches their expectations? (Senior executives expect formal; startup founders accept conversational)
 
 **The 80/20 Rule:** 80% of the article provides value (education, insight, practical advice). No more than 20% promotes Peter's services — and even that should be woven in naturally, not pitched.
+
+---
+
+## Clarity and Precision (from Hargis et al.)
+
+### Avoiding Ambiguity
+
+English has many words that carry double meanings. In blog writing for a multilingual African audience, precision prevents misunderstanding:
+
+- Use **"because"** not "since" (which can mean time)
+- Use **"although"** not "while" (which can mean simultaneous)
+- Use **"can"** for ability, **"might"** for possibility — never use "may" interchangeably
+- Use **"after"** not "once" (which can mean "if ever")
+
+### Task-Oriented Writing
+
+Every article section should answer: **"What can the reader do with this?"**
+
+- Present information from the **reader's point of view** — use "you" and "your"
+- Give the **reason** for every recommendation ("Do X because Y")
+- When advising action, use **numbered steps** — each step = one action
+- Provide **context before detail** — tell the reader what they're about to learn
+
+### Concreteness Over Abstraction
+
+| Vague | Concrete |
+|-------|----------|
+| "significant savings" | "reduced hosting costs by 40%" |
+| "improved performance" | "page load dropped from 4.2s to 0.8s" |
+| "many African countries" | "Uganda, Kenya, Tanzania, Rwanda, and the DRC" |
+| "enterprise-grade solution" | "system handling 500 concurrent users across 12 branches" |
+
+---
+
+## Concise Writing Techniques (from Whitmell)
+
+### Wordy Phrases to Replace
+
+| Wordy | Concise |
+|-------|---------|
+| at this point in time | now |
+| in order to | to |
+| due to the fact that | because |
+| it is important to note that | (delete — just state the point) |
+| a large number of | many |
+| in the event that | if |
+| with regard to | about |
+| on a daily basis | daily |
+| in the near future | soon |
+| for the purpose of | to / for |
+| in spite of the fact that | although |
+
+### Intensifiers That Weaken
+
+Remove these unless they genuinely change the meaning: absolutely, actually, basically, certainly, completely, definitely, fairly, just, of course, particularly, perfectly, quite, really, significantly, simply, some, specifically, totally, very.
+
+**Test:** Delete the intensifier. Read the sentence. If the meaning is unchanged, keep it deleted.
+
+### Linking for Flow
+
+Every paragraph must logically connect to the one before it. Use transition words consciously:
+
+- **Adding:** furthermore, moreover, in addition
+- **Contrasting:** however, nevertheless, on the other hand
+- **Cause/result:** because, therefore, consequently, as a result
+- **Sequencing:** firstly, next, then, finally
+- **Examples:** for instance, for example, such as, in particular
+
+If two consecutive paragraphs have no linking word and no logical bridge, the structure needs revision.
+
+---
+
+## The Publishing Process (from Rowse)
+
+### Pre-Publication Checklist
+
+Before every article goes live, verify:
+
+1. The post has a **keyword-rich title** that speaks to the reader's problem
+2. The post has a **featured image** that is relevant and properly credited
+3. The post has been **spellchecked** and proofread
+4. The post has been **read aloud** (or at minimum, read through once with fresh eyes)
+5. All **facts and figures have been verified**
+6. The conclusion includes a **signoff that invites engagement** (comment, share, or contact)
+7. The post **cross-links** to other articles and service pages where appropriate
+8. The **meta description** accurately represents the article content
+
+### The Fresh Eyes Principle (Rowse)
+
+Never publish on the same day you write. At minimum:
+- Write the article
+- Take a break (hours, not minutes)
+- Return and review with fresh perspective
+- Fix issues you couldn't see while writing
+- Then publish
+
+This single habit catches more errors than any spell-checker.

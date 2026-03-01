@@ -24,8 +24,9 @@ Read these files first:
 
 Read the reference files as needed during writing:
 
-- `references/writing-craft.md` — 7-step process, sentence craft, paragraph structure, opening hooks
-- `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, value-first principle
+- `references/writing-craft.md` — 7-step process, sentence craft, paragraph structure, opening hooks, clarity, conciseness
+- `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, value-first principle, pillar content, touchpoints
+- `references/reader-experience.md` — touchpoint mapping, reader types, quality gates, tone calibration, publishing rhythm
 - `references/storytelling.md` — authentic stories, human touch, cultural markers
 - `references/editorial-standards.md` — punctuation, capitalisation, numbers, grammar, British spelling
 - `references/article-design.md` — image requirements, layout variations, design variety system
@@ -51,12 +52,15 @@ From this simple prompt, generate the complete article pipeline below.
 
 1. Read the company profile to understand the author's expertise and experience
 2. Identify the target audience segment for this article (see `references/content-strategy.md`)
-3. Identify 2-3 target SEO keywords from the topic (see Keyword Strategy below)
-4. Choose the content organisation pattern (see `references/writing-craft.md`)
-5. Choose an opening hook technique (question, startling fact, story, bold assertion)
-6. Produce an outline with 5-8 section headings (h2s)
-7. Identify which stories from the author's experience to include (see `references/storytelling.md`)
-8. Present the outline to the user for approval before writing
+3. Identify the reader types this article must serve: Scanner, Deep Diver, Sceptic, Action-Taker (see `references/reader-experience.md`)
+4. Determine which buyer journey stage the article targets: Awareness, Consideration, or Decision
+5. Identify 2-3 target SEO keywords from the topic (see Keyword Strategy below)
+6. Choose the content organisation pattern (see `references/writing-craft.md`)
+7. Choose an opening hook technique (question, startling fact, story, bold assertion)
+8. Map the 5 touchpoints: pre-touch (title/meta), first touch (hero/opening), core touch (body), last touch (conclusion/CTA), in-touch (related articles/newsletter)
+9. Produce an outline with 5-8 section headings (h2s)
+10. Identify which stories from the author's experience to include (see `references/storytelling.md`)
+11. Present the outline to the user for approval before writing
 
 ### Step 2: Process Article Photos
 
@@ -103,6 +107,9 @@ Article body here...
 - **Internal links** — link to relevant service, portfolio, about, and contact pages.
 - **Image placement markers** — indicate where in-article images should appear: `[IMAGE: landscape-image.jpg — caption text]`
 - **CTA conclusion** — end with a clear, natural call to action (not a sales pitch).
+- **Clarity** — use "because" not "since", "although" not "while", "can" for ability, "might" for possibility. No ambiguous words for multilingual readers.
+- **Conciseness** — cut filler ("in order to" → "to", "due to the fact that" → "because"). Delete weak modifiers (really, very, quite, basically).
+- **Linking flow** — every paragraph connects to the previous one with a logical bridge or transition word.
 
 ### Step 4: Write French Article
 
@@ -287,6 +294,13 @@ Every article targets at least one keyword cluster. Research what the target aud
 
 ## Publishing Checklist
 
+### Quality Gates (from `references/reader-experience.md`)
+- [ ] **8-Second Test** — title, hero image, and first paragraph make you want to keep reading
+- [ ] **Scanner Test** — headings, bold text, and first sentence of each section convey the key points
+- [ ] **So-What Test** — every major claim is followed by what the reader can do with it
+- [ ] **Ambiguity Test** — no word could mean two things to a non-native English speaker
+- [ ] **Touchpoint Test** — every transition feels natural and the conclusion has a clear "what's next"
+
 ### Content Quality
 - [ ] Article is detailed, educating, and provides genuine value
 - [ ] At least one authentic story with specific details (places, outcomes)
@@ -294,6 +308,9 @@ Every article targets at least one keyword cluster. Research what the target aud
 - [ ] Active voice in 90%+ of sentences
 - [ ] Opening hook captures attention (not a definition or generic statement)
 - [ ] Conclusion has a clear, natural CTA
+- [ ] No filler phrases (in order to, due to the fact that, it is important to note)
+- [ ] No weak modifiers (really, very, quite, basically, actually)
+- [ ] Every paragraph connects to the previous one with a logical bridge
 
 ### Language
 - [ ] English: British spelling, East African professional tone, warm but measured
@@ -335,8 +352,9 @@ Every article targets at least one keyword cluster. Research what the target aud
 
 | File | When to Read |
 |------|-------------|
-| `references/writing-craft.md` | During outlining and writing — 7-step process, sentence craft, hooks, emphasis |
-| `references/content-strategy.md` | During planning — audience segments, buyer journey, SEO strategy, value-first |
+| `references/writing-craft.md` | During outlining and writing — 7-step process, sentence craft, hooks, clarity, conciseness |
+| `references/content-strategy.md` | During planning — audience segments, buyer journey, SEO strategy, pillar content, touchpoints |
+| `references/reader-experience.md` | During planning and review — touchpoint mapping, reader types, quality gates, tone calibration |
 | `references/storytelling.md` | During writing — authentic stories, cultural markers, the human touch |
 | `references/editorial-standards.md` | During proofing — punctuation, capitalisation, numbers, grammar, British spelling |
 | `references/article-design.md` | During page building — layout variations, image placement, design variety |
