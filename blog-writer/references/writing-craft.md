@@ -1,0 +1,260 @@
+# Writing Craft Reference — Blog Writer Skill
+
+Principles distilled from *7 Steps to Better Writing* (Maxwell) and *Developing Quality Technical Information* (Hargis, Carey et al.).
+
+---
+
+## The 7-Step Writing Process
+
+Follow these steps in order. Steps 1-4 are prewriting — they eliminate writer's block and reduce revision time.
+
+| Step | Action | Time Share |
+|------|--------|-----------|
+| 1. Identify Readers | Who reads this? What do they need? What should they do after? | 5% |
+| 2. Collect Information | Gather facts, examples, data, stories from Peter's experience | 15% |
+| 3. Brainstorm | Generate ideas freely — no judgment, no editing | 10% |
+| 4. Organise | Cluster related ideas, order them, fill gaps, cut duplicates | 15% |
+| 5. Draft | Write fast. Skip mistakes. Short sentences. Talk to the reader. | 20% |
+| 6. Revise | Edit for readers → ideas → language (biggest problems first) | 25% |
+| 7. Proof | Systematic passes: substance, logic, transitions, grammar, spelling | 10% |
+
+**Key principle:** "Work hard at your writing so your readers do not have to work hard at reading." Draft the summary and conclusion LAST — write the body first.
+
+---
+
+## Opening Hook Techniques
+
+Never open with a dictionary definition or generic statement. Choose one:
+
+1. **Ask a question** the reader is already thinking
+2. **State a startling fact** — a number, a statistic, a counterintuitive truth
+3. **Share a short story** from Peter's own experience (concrete scene, named places)
+4. **Link to a current event** or trend the reader recognises
+5. **Make a bold assertion** that the article will prove
+
+The first paragraph must link to the reader's interests. Help them believe the article will provide value.
+
+---
+
+## Content Organisation Patterns
+
+Choose the pattern that best serves the article's purpose:
+
+| Pattern | When to Use | Structure |
+|---------|-------------|-----------|
+| **Problem/Solution** | Most blog articles | State problem → describe impact → identify causes → propose solutions → justify best one |
+| **What/Why/How** | Educational articles | Introduce concept → demonstrate importance with examples → show how to apply it |
+| **Chronological** | Experience stories | Events in time order, with lessons drawn |
+| **List** | Practical guides | Enumerated points with supporting evidence |
+| **Persuading** | Opinion pieces | Establish credibility → explain importance → show reader benefit → call to action |
+
+**Unity rule:** Every article focuses on ONE big idea. Every paragraph supports that idea. If a paragraph does not contribute, cut it.
+
+---
+
+## The Pain Point Formula
+
+From *Faster, Smarter, Louder*. The most effective content structure for business blogs:
+
+1. **Identify the pain** your reader is experiencing
+2. **Describe the problem in detail** — the impact, the frustration, the cost
+3. **Demonstrate understanding** better than the reader can articulate it themselves
+4. **Only then offer solutions** — you earn the right to advise by proving you understand
+
+> If you can explain the pain someone is experiencing better than they can, you will be seen as an authority in that field.
+
+---
+
+## Sentence-Level Craft
+
+### Length
+- Average 15-20 words per sentence
+- Mix short (8-10 words) with longer (25-30 words) for rhythm
+- Never exceed 35 words in a single sentence
+- Too many prepositions in a sentence signals it needs breaking up
+
+### Active Voice
+Use active voice by default. Passive voice hides the actor and weakens sentences.
+
+| Passive (avoid) | Active (use) |
+|-----------------|-------------|
+| The system was installed by the team | The team installed the system |
+| It was decided that the project would be delayed | We decided to delay the project |
+| The report can be downloaded | You can download the report |
+
+### Positive Assertions
+State what IS, not what is NOT:
+
+| Negative (avoid) | Positive (use) |
+|-------------------|----------------|
+| did not pay attention | ignored |
+| did not include | excluded |
+| was not important | was minor |
+| do not forget | remember |
+
+### Short Words Over Long Words
+
+| Long (avoid) | Short (use) |
+|-------------|-------------|
+| additional | more |
+| anticipate | expect |
+| compensate | pay |
+| currently | now |
+| endeavour | try |
+| facilitate | help |
+| indicate | show |
+| requisition | order |
+| utilise | use |
+| commence | begin |
+| terminate | end |
+| prior to | before |
+| subsequent to | after |
+
+### Eliminate Filler
+
+| Wordy (avoid) | Concise (use) |
+|---------------|---------------|
+| at the current point in time | now |
+| due to the fact that | because |
+| in the event that | if |
+| performed an evaluation of | evaluated |
+| in order to | to |
+| it is important to note that | (delete — just state the thing) |
+| the fact of the matter is | (delete) |
+| facilitate a change | update |
+
+### Remove Weak Modifiers
+Delete these words unless they add measurable meaning: really, very, kind of, sort of, quite, rather, somewhat, basically, actually, literally.
+
+### Watch for "-ation" and "-sion" Nouns
+Replace with the corresponding verb:
+
+| Noun (weaker) | Verb (stronger) |
+|--------------|-----------------|
+| implementation | implement |
+| transformation | transform |
+| coordination | coordinate |
+| utilisation | use |
+| communication | communicate (or: email, call, write) |
+
+---
+
+## Paragraph Structure
+
+- **One idea per paragraph.** If you find mixed ideas during editing, split them.
+- **Lead with a topic sentence** that previews the paragraph's point.
+- **2-4 sentences** per paragraph. Never more than 5.
+- **End with a sentence** that leads to the next paragraph or summarises.
+- **Use transitions** between paragraphs to signal direction:
+  - Continuation: moreover, furthermore, in addition, also
+  - Contrast: however, on the other hand, yet, nevertheless
+  - Cause/effect: therefore, consequently, as a result, because
+  - Sequence: first, next, then, finally
+  - Example: for instance, for example, such as
+
+---
+
+## Emphasis Techniques
+
+Seven methods to highlight what matters:
+
+1. **Location** — first and last positions in documents, sections, paragraphs, and sentences receive natural emphasis
+2. **Repetition** — state key points in the intro, develop in the body, restate in the conclusion
+3. **Space** — give more words to more important points
+4. **Detail** — supply more supporting evidence for critical claims
+5. **Contrast** — surround an idea with contrasting ideas to make it stand out
+6. **Climactic order** — build toward the most important point
+7. **Formatting** — bold, headings, pull quotes (use sparingly — overuse dilutes impact)
+
+---
+
+## Variety Techniques
+
+To avoid monotonous writing:
+
+- Use **synonyms** after the first mention (then switch to pronouns or shorter references)
+- **Vary sentence openings** — not every sentence should start with subject-verb
+- Start some with: adverbs, prepositional phrases, dependent clauses, participial phrases
+- **Vary sentence length** — alternate short and medium sentences
+- **Vary paragraph length** — a one-sentence paragraph creates emphasis
+
+---
+
+## Concrete vs Abstract Language
+
+Always prefer concrete, specific language over vague abstractions:
+
+| Abstract (avoid) | Concrete (use) |
+|-------------------|----------------|
+| a communication | an email / a phone call / a report |
+| a significant effort | 120 hours of development work |
+| improved performance | reduced page load time from 8 seconds to 2 |
+| enhanced capabilities | added mobile payments and offline sync |
+| various stakeholders | the CFO, the warehouse manager, and two line supervisors |
+
+---
+
+## Quality Characteristics (from Hargis/Carey)
+
+Use this framework to evaluate article quality:
+
+### Easy to Use
+- **Task-oriented** — does the article help the reader DO something or DECIDE something?
+- **Accurate** — are all facts, names, and technical details correct?
+- **Complete** — does it cover everything the reader needs? Does it include ONLY what is needed?
+
+### Easy to Understand
+- **Clear** — can the reader understand every sentence on first reading?
+- **Concrete** — does it use real examples, specific numbers, named places?
+- **Appropriate style** — is the tone right? Active voice? No condescending words ("simply", "just", "obviously")?
+
+### Easy to Find
+- **Well-organised** — do headings reveal the content? Is the order logical?
+- **Scannable** — can a reader skim headings and lists to find what they need?
+- **Visually effective** — do formatting choices (bold, lists, blockquotes) aid comprehension?
+
+---
+
+## Editing Order
+
+Fix the biggest problems first. Do not polish punctuation while whole sections need rewriting.
+
+**Pass 1 — Serving readers:** Did I address their needs? Is the tone right? Would Peter say this?
+**Pass 2 — Quality of ideas:** Is the main point clear? Is the logic sound? Can I cut fluff?
+**Pass 3 — Language:** Do words flow naturally? Is grammar correct? Can I use fewer words?
+**Pass 4 — Editorial standards:** See `references/editorial-standards.md` for punctuation, capitalisation, numbers, and usage rules.
+
+### Self-Editing Techniques
+- Read the article aloud — the most powerful technique for spotting problems
+- Let the article sit before final review (even 30 minutes helps)
+- Check readability: aim for Flesch Reading Ease of 60-70 (comfortable for business readers)
+- Count passive voice usage — keep below 10% of sentences
+
+---
+
+## Headline Rules (Research-Backed)
+
+| Context | Optimal Length |
+|---------|---------------|
+| B2B articles | 6-12 words |
+| B2C articles | 12-18 words |
+| Online headlines | 8 words |
+
+- The **first 2-3 words and last 2-3 words** are what readers actually scan
+- The title must both **capture attention** AND **summarise the article**
+- Use a main headline + a shorter subtitle/meta description
+- Include a target keyword in the headline
+- Headlines that speak to the reader's problem outperform generic titles
+
+---
+
+## Audience Awareness
+
+Before writing, answer:
+- Who will read this? (Business owners, CTOs, startup founders, procurement officers?)
+- What problem are they trying to solve?
+- What do they already know? What must I explain?
+- What do I want them to DO after reading?
+- What tone matches their expectations? (Senior executives expect formal; startup founders accept conversational)
+
+**The 80/20 Rule:** 80% of the article provides value (education, insight, practical advice). No more than 20% promotes Peter's services — and even that should be woven in naturally, not pitched.

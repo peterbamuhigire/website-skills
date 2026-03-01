@@ -1,0 +1,343 @@
+---
+name: blog-writer
+description: Generate SEO-optimised, bilingual blog articles with featured images, in-article photography, and distinctive per-article design. Creates article content in docs/{lang}/blog/, builds Astro blog pages with Article JSON-LD, and updates the blog index. Works for any client website and any topic. Use when the user says "write a blog article", "create a blog post", "publish a blog", "write about [topic]", or wants to add content to the blog section.
+---
+
+# Blog Writer — Article Generation Skill
+
+Generate detailed, rich, educating, and captivating blog articles with authentic human voice, professional photography, and full SEO optimisation. Each article is a marketing asset — a demonstration of expertise that builds trust and attracts clients through organic search.
+
+**Use the `frontend-design` plugin** throughout article page creation for distinctive, high-quality design.
+
+## Before Writing
+
+Read these files first:
+
+1. `docs/en/company-profile.md` (and all enabled language versions) — author background, services, expertise
+2. `src/pages/en/blog.astro` — current blog index structure (check for existing articles)
+3. `src/pages/fr/blog.astro` — French blog index (if FR enabled)
+4. `src/layouts/BaseLayout.astro` — layout props, structured data, design system
+5. `src/styles/global.css` — current styles (add prose styles if missing)
+6. Existing articles in `src/pages/{lang}/blog/` — count them to determine layout variation
+7. `photo-bank/` — scan for article photos the user has uploaded
+8. `src/assets/images/_catalog.json` — current image catalog
+
+Read the reference files as needed during writing:
+
+- `references/writing-craft.md` — 7-step process, sentence craft, paragraph structure, opening hooks
+- `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, value-first principle
+- `references/storytelling.md` — authentic stories, human touch, cultural markers
+- `references/editorial-standards.md` — punctuation, capitalisation, numbers, grammar, British spelling
+- `references/article-design.md` — image requirements, layout variations, design variety system
+- `references/topic-ideas.md` — curated topic suggestions (project-specific, if present)
+
+---
+
+## User Input
+
+The user provides:
+
+1. **Article title** (or topic idea)
+2. **Brief summary** (2-5 sentences describing what the article should cover)
+3. **Photos** uploaded to `photo-bank/` (at least 3: 1 featured/hero + 2 in-article)
+
+From this simple prompt, generate the complete article pipeline below.
+
+---
+
+## Article Content Pipeline
+
+### Step 1: Research and Plan
+
+1. Read the company profile to understand the author's expertise and experience
+2. Identify the target audience segment for this article (see `references/content-strategy.md`)
+3. Identify 2-3 target SEO keywords from the topic (see Keyword Strategy below)
+4. Choose the content organisation pattern (see `references/writing-craft.md`)
+5. Choose an opening hook technique (question, startling fact, story, bold assertion)
+6. Produce an outline with 5-8 section headings (h2s)
+7. Identify which stories from the author's experience to include (see `references/storytelling.md`)
+8. Present the outline to the user for approval before writing
+
+### Step 2: Process Article Photos
+
+1. Scan `photo-bank/` for photos the user uploaded for this article
+2. Measure dimensions of each photo
+3. Copy to `src/assets/images/` following the photo-manager pipeline
+4. Assign roles: **featured** (hero), **landscape** (in-article), **portrait** (in-article)
+5. Update `_catalog.json` with article photo entries
+6. Minimum: 1 featured + 1 landscape + 1 portrait = 3 photos. Maximum: 1 featured + 4 in-article = 5 photos.
+7. If fewer than 3 photos are available, note what is needed and proceed with available images
+
+### Step 3: Write English Article
+
+Save to `docs/en/blog/{slug}.md`:
+
+```markdown
+---
+title: "Article Title in Title Case"
+slug: "article-slug-here"
+date: "YYYY-MM-DD"
+author: "Author Name"
+category: "Category Name"
+description: "SEO meta description — under 155 characters, includes primary keyword and location."
+keywords: ["primary keyword", "secondary keyword", "tertiary keyword"]
+featured_image: "filename-of-hero-image.jpg"
+images: ["landscape-image.jpg", "portrait-image.jpg"]
+read_time: "X min read"
+---
+
+Article body here...
+```
+
+**Writing requirements** (detailed in `references/writing-craft.md`):
+
+- **1,500-2,500 words** — detailed, rich, educational. Every word earns its place.
+- **Opening hook** — first paragraph grabs attention. Never open with a definition or generic statement.
+- **Pain point formula** — demonstrate understanding of the reader's problem before offering solutions.
+- **At least one story** from the author's real experience with specific details (places, outcomes, lessons).
+- **Concrete language** — specific numbers, named places, real examples. No vague abstractions.
+- **Active voice** — at least 90% of sentences. Passive voice only when the actor is unknown or unimportant.
+- **Sentence variety** — average 15-20 words. Mix short (8-10) with medium (25-30). Never exceed 35.
+- **One idea per paragraph** — 2-4 sentences each. Topic sentence leads.
+- **Scannable** — clear h2 headings, bulleted lists where enumerable, bold for key terms.
+- **Internal links** — link to relevant service, portfolio, about, and contact pages.
+- **Image placement markers** — indicate where in-article images should appear: `[IMAGE: landscape-image.jpg — caption text]`
+- **CTA conclusion** — end with a clear, natural call to action (not a sales pitch).
+
+### Step 4: Write French Article
+
+Save to `docs/fr/blog/{slug}.md` with identical frontmatter structure.
+
+**This is adaptation, not translation.** The French article must:
+
+- Restructure paragraphs for natural French flow
+- Use francophone African examples (Dakar, Abidjan, Douala) where English uses anglophone ones
+- Feel like it was written in French first
+- Use formal register throughout (vous, never tu)
+- Follow West African francophone business conventions (see voice guides below)
+- **1,800-3,000 words** — French naturally expands 20-30% from English
+- Accents mandatory on every character (é, è, ê, ç, à, ù, ô, î)
+
+### Step 5: Design and Build Astro Pages
+
+**Invoke the `frontend-design` plugin** for article page design.
+
+1. Count existing articles to determine which layout variation to use (cycle through A, B, C, D)
+2. Select colour accent based on article category/tone
+3. Create `src/pages/en/blog/{slug}.astro` and `src/pages/fr/blog/{slug}.astro`
+4. Include: Article JSON-LD schema, featured image, in-article images, author bio, CTA
+5. Add prose styles to `global.css` if not already present
+
+See `references/article-design.md` for layout variations, image treatment, and design variety system.
+
+### Step 6: Update Blog Index
+
+Update `src/pages/en/blog.astro` and `src/pages/fr/blog.astro`:
+
+- Add the new article card with featured image thumbnail, title, category, date, read time, excerpt
+- If this is the **first real article**: remove "Coming Soon" cards and remove `noindex` meta tag
+- Keep the newsletter section
+- Order articles newest-first
+
+### Step 7: SEO Verification
+
+Verify every SEO requirement (see full SEO checklist below):
+
+- [ ] Title tag under 60 chars with primary keyword
+- [ ] Meta description under 155 chars with primary keyword + location
+- [ ] Article JSON-LD schema (headline, author, datePublished, publisher, description, image)
+- [ ] Primary keyword in first 100 words, at least one h2, and conclusion
+- [ ] Internal links to service/portfolio/contact pages
+- [ ] Featured image has descriptive alt text with keyword
+- [ ] Canonical URL correct
+- [ ] Hreflang links between EN and FR versions
+
+### Step 8: Build and Verify
+
+Run `npm run build` and confirm:
+- No build errors
+- Article pages render correctly in both languages
+- All images load and are optimised
+- Blog index shows the new article
+
+---
+
+## English Voice
+
+Write as the author would write for a business audience — the register of a senior professional writing a LinkedIn article or industry blog. Not academic, not casual.
+
+**Read `references/storytelling.md`** for authentic human touch and cultural markers.
+
+- **Simple and clear.** Short sentences. One idea per paragraph. No jargon without explanation.
+- **British spelling.** organisation, programme, centre, colour, specialise.
+- **Warm but professional.** Polite, measured, confident. Not stiff, not chatty.
+- **First person where natural.** "In my experience" and "I have found" — the author has authority.
+- **Practical focus.** Every article should leave the reader with something they can use.
+- **Real examples.** Reference actual business contexts and projects from the company profile.
+
+| Use | Avoid |
+|-----|-------|
+| practical, effective, significant | cutting-edge, game-changing, revolutionary |
+| I have found that | It is widely acknowledged that |
+| In our experience | Research conclusively demonstrates |
+| This approach works because | This paradigm shift enables |
+
+**Read `references/editorial-standards.md`** for punctuation, capitalisation, numbers, and grammar rules.
+
+---
+
+## French Voice
+
+Write as a bilingual professional would for francophone African business readers — Dakar boardrooms and Abidjan tech meetups, not Parisian literary prose.
+
+- **Formal but accessible.** Vous throughout. Professional register. Not stiff or bureaucratic.
+- **Concrete vocabulary.** "entreprise" not "firme", "mettre en place" not "implémenter", "formation" not "enseignement".
+- **No anglicisms where French words exist.** Say "logiciel" not "software", "numérique" not "digital", "réseau" not "network". Technical terms (ERP, API, SaaS) stay in English.
+- **Accents mandatory.** Every é, è, ê, ç, à, ù must be correct. Gender agreement verified.
+
+---
+
+## SEO Requirements (Every Article)
+
+### On-Page SEO Checklist
+
+1. **Title tag** — `{Article Title} — {Author Name}` (under 60 chars). Must contain primary keyword.
+2. **Meta description** — under 155 chars. Must include primary keyword + geographic location.
+3. **URL slug** — lowercase, hyphenated, keyword-rich: `/en/blog/erp-implementation-mistakes/`
+4. **Heading hierarchy** — one h1 (article title), 4-7 h2s (main sections), h3s for subsections.
+5. **Keyword placement:**
+   - Primary keyword in the title (h1)
+   - Primary keyword in the first 100 words
+   - Primary keyword in at least one h2
+   - Primary keyword in the conclusion
+   - Secondary keywords distributed naturally through body text
+   - **Never keyword-stuff.** Every instance must read naturally.
+6. **Alt text** — every image has descriptive alt text. Include the primary keyword in the featured image alt.
+7. **Internal links** — at least 3 per article: one to a service page, one to about/portfolio, one to contact.
+8. **External links** — link to authoritative sources when citing facts or data (opens in new tab).
+
+### Structured Data (Article JSON-LD)
+
+Every article page must include:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article Title",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "url": "https://site.com/en/about/"
+  },
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Company Name",
+    "url": "https://site.com"
+  },
+  "description": "Meta description",
+  "image": "https://site.com/path/to/featured-image.jpg",
+  "inLanguage": "en-GB",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://site.com/en/blog/article-slug/"
+  }
+}
+```
+
+### Technical SEO
+
+- **Canonical URL** — automatic from BaseLayout
+- **Hreflang** — links between all language versions (automatic from BaseLayout)
+- **Open Graph** — title, description, featured image (automatic from BaseLayout)
+- **Sitemap** — remove `noindex` after first real article so blog pages are indexed
+- **Page speed** — all images optimised via Astro `<Image>`, lazy loading on in-article images
+
+### Keyword Research Per Article
+
+Every article targets at least one keyword cluster. Research what the target audience searches for:
+
+- Use the primary service terms from the company profile
+- Append geographic modifiers (city, country, region)
+- Prefer long-tail phrases (higher intent, less competition)
+- Include the primary keyword and 2-3 secondary keywords naturally
+
+---
+
+## Article Quality Standards
+
+| Element | Standard |
+|---------|----------|
+| Word count | 1,500-2,500 words (EN) / 1,800-3,000 words (FR) |
+| Paragraphs | 2-4 sentences each, max 5. One idea per paragraph. |
+| Headings | h2 for main sections (4-7 per article), h3 for subsections |
+| Lists | Use where content is naturally enumerable (max 9 items per list) |
+| Images | 1 featured + 2-4 in-article (at least 1 landscape + 1 portrait) |
+| Stories | At least 1 concrete story from the author's experience |
+| Internal links | At least 3 (service, about/portfolio, contact) |
+| CTA | Natural call to action in the conclusion |
+| Read time | Calculate at 200 words/min (EN) or 180 words/min (FR) |
+
+---
+
+## Publishing Checklist
+
+### Content Quality
+- [ ] Article is detailed, educating, and provides genuine value
+- [ ] At least one authentic story with specific details (places, outcomes)
+- [ ] Concrete language throughout — no vague abstractions
+- [ ] Active voice in 90%+ of sentences
+- [ ] Opening hook captures attention (not a definition or generic statement)
+- [ ] Conclusion has a clear, natural CTA
+
+### Language
+- [ ] English: British spelling, East African professional tone, warm but measured
+- [ ] French: formal francophone African register, vous throughout, accents correct
+- [ ] French article feels native — not a translation
+
+### Images
+- [ ] Featured image present, minimum 1200px wide, `loading="eager"`
+- [ ] At least 2 in-article images (1 landscape + 1 portrait)
+- [ ] All images have descriptive alt text
+- [ ] All images use Astro `<Image>` component
+- [ ] Images distributed through article body, not clustered
+
+### Design
+- [ ] Layout variation differs from the previous article
+- [ ] Design matches article tone and website brand
+- [ ] Mobile-responsive at 375px, 768px, 1280px
+- [ ] Author bio section present
+- [ ] `frontend-design` plugin used for design decisions
+
+### SEO
+- [ ] Title tag under 60 chars with primary keyword
+- [ ] Meta description under 155 chars with keyword + location
+- [ ] Primary keyword in first 100 words, one h2, and conclusion
+- [ ] Article JSON-LD schema with all required fields including image
+- [ ] Internal links to at least 3 other pages
+- [ ] Featured image alt text includes primary keyword
+- [ ] Hreflang tags present
+
+### Technical
+- [ ] `npm run build` passes with no errors
+- [ ] Blog index updated with new article card
+- [ ] `noindex` removed from blog pages (if first real article)
+- [ ] All images tracked in `_catalog.json`
+
+## References
+
+| File | When to Read |
+|------|-------------|
+| `references/writing-craft.md` | During outlining and writing — 7-step process, sentence craft, hooks, emphasis |
+| `references/content-strategy.md` | During planning — audience segments, buyer journey, SEO strategy, value-first |
+| `references/storytelling.md` | During writing — authentic stories, cultural markers, the human touch |
+| `references/editorial-standards.md` | During proofing — punctuation, capitalisation, numbers, grammar, British spelling |
+| `references/article-design.md` | During page building — layout variations, image placement, design variety |
+| `references/topic-ideas.md` | When suggesting topics — curated list with keyword targets (project-specific) |
+
+Cross-cutting skills that apply throughout:
+- `language-standards` — language and tone standards for all languages
+- `east-african-english` — detailed English voice guide (if present in project)
+- `brand-alignment` — visual and messaging consistency with the overall website brand
