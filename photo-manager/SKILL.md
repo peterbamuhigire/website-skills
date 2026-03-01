@@ -412,3 +412,4 @@ After the site is built, provide the user with a replacement checklist:
 3. **Astro handles optimization.** Don't manually resize or convert formats. Just provide the originals at sufficient resolution.
 4. **Keep the catalog updated.** Every image addition or change must be reflected in _catalog.json.
 5. **Descriptive IDs.** Use kebab-case IDs that describe the content: `team-john-doe`, `hero-about-page`, `service-consulting`.
+6. **Delete from photo-bank/ after copying.** Once a photo has been copied to `src/assets/images/`, delete the original from `photo-bank/`. This prevents clutter and avoids accidentally reusing the same image in multiple places. The `src/assets/images/` copy is now the single source of truth.
