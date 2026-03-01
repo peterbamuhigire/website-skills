@@ -108,6 +108,7 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - Content comes only from `docs/{lang}/` markdown — Claude never fabricates company information; all languages complete before build
 - **Text expansion awareness** — French content ~30% longer, Kiswahili ~20% longer than English; designs flex for all languages
 - **Language standards enforced** — British English, formal francophone French, East African Kiswahili; in-country reviewers approve translations
+- **Human voice mandatory** — all content must pass as 100% human-written; 60+ AI vocabulary words banned (see `blog-writer/references/human-voice-standards.md`), sentence burstiness required, client language mining enforced; page-builder uses copywriting formulas from `page-builder/references/website-copywriting.md`
 - Mobile-first — designed for 375px, enhanced for 768px and 1280px+ (all languages)
 - Performance budget — 95+ Lighthouse per language, under 500KB first load (images shared across languages)
 - **Videos hosted on YouTube only** — never upload video files to repos or servers; clients upload to their YouTube channel and provide URLs in docs; embed via `youtube-nocookie.com` iframe with `loading="lazy"`
