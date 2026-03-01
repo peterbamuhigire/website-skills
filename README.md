@@ -46,7 +46,8 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 ├── design-system/           Fonts, colors, visual identity, animation strategy
 │   └── SKILL.md
 ├── page-builder/            Transforms markdown content into Astro pages
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/          (website copywriting formulas)
 ├── photo-manager/           Catalogs photos, tracks dimensions, auto-detects logos, organizes assets
 │   └── SKILL.md
 ├── seo/                     SEO configuration, meta tags, JSON-LD schema, sitemap
@@ -54,7 +55,7 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── docs-seo-template.md
 ├── blog-writer/             SEO-optimised bilingual blog articles with featured images
 │   ├── SKILL.md
-│   └── references/          (7 writing craft and content strategy guides)
+│   └── references/          (8 writing craft, voice standards, and content strategy guides)
 ├── deploy/                  Builds, verifies, generates deployment configuration
 │   └── SKILL.md
 ├── policy-pages/            Privacy Policies & Terms of Use (legal, trust, compliance)
@@ -166,7 +167,7 @@ Runs `npm run build`, verifies output for all language versions, checks for brok
 
 Generates SEO-optimised, bilingual blog articles with featured images, in-article photography, and distinctive per-article design. Each article is a marketing asset — a demonstration of expertise that builds trust and attracts clients through organic search. Reads company profile for author voice, scans photo-bank for article images, creates content in `docs/{lang}/blog/`, builds Astro blog pages with Article JSON-LD, and updates the blog index. Every article gets a unique layout variation to prevent visual monotony.
 
-**Reference Files:** `writing-craft.md`, `content-strategy.md`, `reader-experience.md`, `storytelling.md`, `editorial-standards.md`, `article-design.md`, `topic-ideas.md`
+**Reference Files:** `human-voice-standards.md`, `writing-craft.md`, `content-strategy.md`, `reader-experience.md`, `storytelling.md`, `editorial-standards.md`, `article-design.md`, `topic-ideas.md`
 
 **Produces:** Blog articles in `docs/{lang}/blog/`, Astro pages in `src/pages/{lang}/blog/`, Article JSON-LD, updated blog index
 
@@ -490,7 +491,7 @@ Track significant skill improvements here.
 | 2026-03-01 | blog-writer | Added bilingual blog skill with 7 reference files, per-article design, OG images, Article JSON-LD |
 | 2026-03-01 | seo-audit | Added post-build SEO audit — 11 categories, scored report, action items |
 | 2026-03-01 | photo-manager | Delete originals after copying to prevent clutter |
-| 2026-03-01 | all | Docs update — added blog-writer, seo-audit, email-sender, image-compression to all docs |
+| 2026-03-01 | all | Human voice standards — AI blacklists (60+ words, 30+ phrases), copywriting formulas, Voice DNA extraction across content skills |
 
 ---
 
