@@ -57,7 +57,7 @@ From this simple prompt, generate the complete article pipeline below.
 4. Determine which buyer journey stage the article targets: Awareness, Consideration, or Decision
 5. Identify 2-3 target SEO keywords from the topic (see Keyword Strategy below)
 6. Choose the content organisation pattern (see `references/writing-craft.md`)
-7. Choose an opening hook technique (question, startling fact, story, bold assertion)
+7. Choose an opening hook technique (question, startling fact, story, current event, bold assertion, poster child, scene-setter, significant detail, profile lead — see `references/writing-craft.md`)
 8. Map the 5 touchpoints: pre-touch (title/meta), first touch (hero/opening), core touch (body), last touch (conclusion/CTA), in-touch (related articles/newsletter)
 9. Produce an outline with 5-8 section headings (h2s)
 10. Identify which stories from the author's experience to include (see `references/storytelling.md`)
@@ -97,7 +97,8 @@ Article body here...
 **Writing requirements** (detailed in `references/writing-craft.md`):
 
 - **1,500-2,500 words** — detailed, rich, educational. Every word earns its place.
-- **Opening hook** — first paragraph grabs attention. Never open with a definition or generic statement.
+- **Opening hook** — first paragraph grabs attention. Never open with a definition or generic statement. Consider poster child, scene-setter, significant detail, or profile lead types (see `references/writing-craft.md`).
+- **Nut 'graph** — if the opening uses a story or anecdote, follow it (paragraphs 2-4) with a grounding paragraph that states what the article is actually about. Without this, soft openings feel directionless.
 - **Pain point formula** — demonstrate understanding of the reader's problem before offering solutions.
 - **At least one story** from the author's real experience with specific details (places, outcomes, lessons).
 - **Concrete language** — specific numbers, named places, real examples. No vague abstractions.
@@ -107,6 +108,7 @@ Article body here...
 - **Scannable** — clear h2 headings, bulleted lists where enumerable, bold for key terms.
 - **Internal links** — link to relevant service, portfolio, about, and contact pages.
 - **Image placement markers** — indicate where in-article images should appear: `[IMAGE: landscape-image.jpg — caption text]`
+- **Full circle ending** — reconnect the conclusion to the opening. If you opened with a poster child, bring them back. If you opened with a scene, return to it transformed. Readers feel closure and reward.
 - **CTA conclusion** — end with a clear, natural call to action (not a sales pitch).
 - **Clarity** — use "because" not "since", "although" not "while", "can" for ability, "might" for possibility. No ambiguous words for multilingual readers.
 - **Conciseness** — cut filler ("in order to" → "to", "due to the fact that" → "because"). Delete weak modifiers (really, very, quite, basically).
@@ -231,7 +233,7 @@ Write as a bilingual professional would for francophone African business readers
 
 ### On-Page SEO Checklist
 
-1. **Title tag** — `{Article Title} — {Author Name}` (under 60 chars). Must contain primary keyword.
+1. **Title tag** — `{Article Title} — {Author Name}` (under 60 chars). Must contain primary keyword. Don't write cute-only headlines — combine creative hook with search-practical keywords: "The Three-Hour Problem: Fixing Slow Reconciliation in Multi-Branch Retail". See `references/writing-craft.md` headline rules.
 2. **Meta description** — under 155 chars. Must include primary keyword + geographic location.
 3. **URL slug** — lowercase, hyphenated, keyword-rich: `/en/blog/erp-implementation-mistakes/`
 4. **Heading hierarchy** — one h1 (article title), 4-7 h2s (main sections), h3s for subsections.
@@ -383,7 +385,7 @@ Every article targets at least one keyword cluster. Research what the target aud
 
 | File | When to Read |
 |------|-------------|
-| `references/writing-craft.md` | During outlining and writing — 7-step process, sentence craft, hooks, clarity, conciseness |
+| `references/writing-craft.md` | During outlining and writing — 7-step process, lead types (9 techniques), article arc (nut 'graph, full circle), sentence craft, headline SEO formula, clarity, conciseness |
 | `references/content-strategy.md` | During planning — audience segments, buyer journey, SEO strategy, pillar content, touchpoints |
 | `references/reader-experience.md` | During planning and review — touchpoint mapping, reader types, quality gates, tone calibration |
 | `references/storytelling.md` | During writing — authentic stories, cultural markers, the human touch |

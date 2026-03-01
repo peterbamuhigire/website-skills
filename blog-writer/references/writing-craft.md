@@ -24,17 +24,38 @@ Follow these steps in order. Steps 1-4 are prewriting — they eliminate writer'
 
 ---
 
-## Opening Hook Techniques
+## Opening Hook Techniques (Lead Types)
 
 Never open with a dictionary definition or generic statement. Choose one:
 
 1. **Ask a question** the reader is already thinking
 2. **State a startling fact** — a number, a statistic, a counterintuitive truth
-3. **Share a short story** from Peter's own experience (concrete scene, named places)
+3. **Share a short story** from the author's own experience (concrete scene, named places)
 4. **Link to a current event** or trend the reader recognises
 5. **Make a bold assertion** that the article will prove
+6. **Poster child** — open with one specific person or company who represents the many. "When Sarah's warehouse ran out of stock for the third time in a month..." Then broaden to the wider point. The poster child is not the subject of the article — they humanise it.
+7. **Scene-setter** — open with vivid physical description that creates a stage. "A woman with tormented eyes talks to herself as she plays a battered piano in Ward D's dayroom." Works for location-dependent stories and immersive pieces.
+8. **Significant detail** — one symbolic detail that encapsulates the entire theme. "Hidden beneath a heap of inner tubes in a tiny storeroom is the statue of Lenin." The detail does all the thematic work.
+9. **Profile lead** — give away the happy ending first, then tell the story of getting there. "Paul considers himself successfully retired from reality." Builds suspense by making readers ask "how?"
 
 The first paragraph must link to the reader's interests. Help them believe the article will provide value.
+
+---
+
+## Article Arc: Hook → Nut 'Graph → Body → Full Circle
+
+Every article longer than 500 words needs a deliberate arc, not just a topic followed by paragraphs.
+
+**Focus statement (pre-writing):** Before writing anything, state the article's focus in one sentence. If you can't, you aren't ready to write. Know your Who, What, Where, When, Why — then decide which to emphasise and which to omit.
+
+**The Nut 'Graph:** After a storytelling or anecdotal opening (poster child, scene-setter, profile lead), the reader needs grounding. The nut 'graph — typically the 2nd to 4th paragraph — states the article's point in a nutshell. It answers: "Here's what this article is actually about." Without it, soft openings feel directionless.
+
+> Lead: "When Angie Dick heard her husband might be laid off, she knew it was time to start working..."
+> Nut 'graph: "As the economic downturn worsens, experts say Dick is part of a trend in which women find it easier to get jobs and could soon outnumber men in the workforce."
+
+**Full circle ending:** The ending reconnects to the opening. If you opened with a poster child, bring them back in the final paragraphs. If you opened with a scene, return to it transformed. Readers feel closure and reward. The article feels planned, not abandoned.
+
+**Thematic glue:** Words from the same thematic set — including opposites — hold an article together. Before/after, problem/solution, old/new, easy/hard should echo through the piece. Using related or contrasting concepts in the opening and closing creates subconscious coherence.
 
 ---
 
@@ -192,7 +213,7 @@ Good (human-varied, 4 to 28 words):
 ### Paragraph Length Variation
 
 - Alternate deliberately: 1 sentence, then 4, then 2, then 3
-- Use one-sentence paragraphs for emphasis (powerful tool — don't overuse)
+- **One-line paragraphs as punctuation** — a standalone short sentence acts like an exclamation mark in narrative. "The first year was hell." or "And that changed everything." These create Aha moments for the reader. Use 1-2 per article for maximum impact.
 - Not every paragraph needs a clean topic sentence
 
 ### Sentence Opening Variation
@@ -277,6 +298,13 @@ Fix the biggest problems first. Do not polish punctuation while whole sections n
 - Use a main headline + a shorter subtitle/meta description
 - Include a target keyword in the headline
 - Headlines that speak to the reader's problem outperform generic titles
+
+**Blog headline SEO formula:** Don't write cute headlines — write search-practical ones that accurately reflect the content. Cute headlines fail SEO because nobody searches for them. Combine creative hook with practical keywords using a colon or dash:
+
+| Weak (cute only) | Strong (practical + creative) |
+|-------------------|-------------------------------|
+| "Draining the Well" | "Draining the Well: Why East African Factories Lose 30% of Revenue to Stock-Outs" |
+| "The Three-Hour Problem" | "The Three-Hour Problem: Fixing Slow Reconciliation in Multi-Branch Retail" |
 
 ---
 

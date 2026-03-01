@@ -191,6 +191,10 @@ In East Africa, WhatsApp is often preferred over email. Always include:
 
 ## Testimonials Copy
 
+### The Poster Child Pattern
+
+When you have multiple testimonials, lead with a **poster child** — one detailed client story that represents the many. A 3-4 sentence mini-narrative with situation → what changed → result is more persuasive than five one-line quotes. Follow the poster child with 2-3 shorter testimonials from different sectors/sizes. The detailed one draws readers in; the shorter ones prove breadth.
+
 ### Specific Over Glowing
 
 | Vague (weak) | Specific (strong) |
@@ -241,7 +245,47 @@ Every FAQ is a chance to address buying objections:
 
 ---
 
+## Case Study / Portfolio Page Copy
+
+Many business websites need a page showcasing past work. Case studies follow a specific structure that builds credibility through narrative proof.
+
+### Case Study Structure
+
+Each case study follows: **Problem → Process → Solution → Benefits**
+
+1. **The poster child** — open with a specific client (with permission) who represents the type of customer you serve. Name the industry, the company size, the location. One company who represents the many.
+2. **The problem** — describe the industry-wide problem through this specific client's experience. Make it feel real: what was breaking, what was costing money, what was frustrating staff.
+3. **The process** — briefly describe how the client found you and what evaluation they went through. This section can be short or omitted for simpler projects.
+4. **The solution** — what you delivered. Be specific: name the technologies, the timeline, the team size. Show, don't just tell.
+5. **The benefits** — measurable results. "Picking productivity doubled, from 22 lines per hour to over 40." Numbers build trust. Vague praise does not.
+6. **Quote paragraph** — a direct quote from the client spokesperson that reinforces the key benefit. Place it after the benefits section for maximum impact.
+7. **About section** — brief company description and contact information.
+
+### Quote Paragraph Placement Strategy
+
+Don't front-load direct quotes. Follow this pattern:
+- **Lead/opening** — paraphrase the key message (concise, punchy)
+- **Body paragraphs 2-4** — expand with facts and context
+- **First quote** — place 3-4 paragraphs in, where it provides emotional punch after the factual setup
+- **Second quote** (if needed) — deeper in the article, from a different source or angle
+- **Closing quote** — a forward-looking statement that ends on a positive note
+
+Paraphrasing in the opening lets you be concise. Saving the full quote for later gives it weight. This applies to case studies, testimonials sections, About pages, and blog posts.
+
+---
+
 ## CTA Writing
+
+### The AIAA Framework for CTAs
+
+Every CTA section should follow the Attention → Interest → Attitude → Action progression:
+
+1. **Attention** — a headline that stops the scroll (problem statement or aspiration)
+2. **Interest** — 1-2 sentences that make the reader care (specific benefit or proof point)
+3. **Attitude** — shift the reader's mindset before asking for action. Address the objection they're thinking: "You don't need to commit to anything today" or "Most projects start with a 30-minute conversation"
+4. **Action** — the specific CTA button or link
+
+The "Attitude" step separates effective CTAs from pushy ones. Changing the reader's emotional state — from hesitant to comfortable, from sceptical to curious — before the ask improves conversion.
 
 ### Make CTAs Specific
 
