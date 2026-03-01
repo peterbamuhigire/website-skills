@@ -246,3 +246,75 @@ Before publishing, ask:
 3. **Would a reader learn something they cannot find elsewhere?** — If this is generic advice available on 100 other blogs, add Peter's unique perspective.
 4. **Does it respect the reader's intelligence?** — Never talk down. The reader is a capable professional facing a specific challenge.
 5. **Could this article stand alone as valuable, even if the reader never hires Peter?** — If yes, it will build trust. If no, it reads as a sales pitch.
+
+---
+
+## Pillar Content and Series Strategy (from Rowse)
+
+### Pillar Content
+
+Pillar content is foundational, evergreen material that serves as the backbone of the blog. It:
+- Answers questions your target audience searches for repeatedly
+- Remains relevant months and years after publication
+- Becomes the page that other articles link back to
+- Demonstrates deep expertise in core service areas
+
+Every blog should have 3-5 pillar articles that cover the author's primary service areas comprehensively.
+
+### Series Planning
+
+When a topic has 3+ natural subtopics, plan it as a connected series:
+
+1. **Mindmap the core topic** — break it into component parts
+2. **Order logically** — what must the reader know first?
+3. **Each post stands alone** — a reader arriving at Part 3 should understand it without needing Part 1
+4. **Cross-link the series** — every post links to the others in the series
+5. **Vary the format** — if Part 1 is a guide, make Part 2 a case study and Part 3 a checklist
+
+### Content Type Mix
+
+A healthy blog rotates between these types:
+
+| Type | Purpose | Frequency |
+|------|---------|-----------|
+| **Pillar** | Evergreen SEO anchors | 1 per quarter |
+| **How-to** | Practical guides readers can act on | Monthly |
+| **Story** | Trust-building through real experience | Every other article |
+| **Opinion** | Thought leadership, differentiation | Quarterly |
+| **Cost/comparison** | Buying-stage readers, high commercial intent | Quarterly |
+| **Series** | Comprehensive coverage across connected posts | 1 series per quarter |
+
+---
+
+## Reader as Customer: Touchpoint Thinking (from Webb)
+
+### Five Touchpoints of an Article
+
+Every article is a product with its own customer journey:
+
+| Touchpoint | What It Is | Design Goal |
+|------------|-----------|-------------|
+| **Pre-touch** | Search snippet, social share, newsletter preview | Generate enough curiosity to click |
+| **First touch** | Hero image, title, opening paragraph | Confirm the promise in 8 seconds |
+| **Core touch** | Article body — sections, images, stories | Deliver value that justifies the time investment |
+| **Last touch** | Conclusion, CTA, author bio | Leave the reader wanting more — not feeling sold to |
+| **In-touch** | Related articles, newsletter, social | Maintain the relationship beyond this single visit |
+
+### Design for What Readers Love and Hate
+
+| Readers Love | Readers Hate |
+|-------------|-------------|
+| Specific, actionable advice they can use today | Vague platitudes and theory without application |
+| Real stories with named places and outcomes | Generic examples that could be from any blog |
+| Honest limitations and trade-offs | Hype and overselling without evidence |
+| Scannable structure with clear headings | Walls of unbroken text |
+| Beautiful images that add meaning | Stock photos that add nothing |
+| A clear next step at the end | Dead-end articles with no "what now?" |
+
+### The Experience Innovation Principle (Webb)
+
+"Most organisations pay millions to acquire customer insights, yet spend virtually nothing on creating outstanding experiences." Apply this to content:
+
+- Don't just research what to write about — invest the effort in *how* you present it
+- The same information presented beautifully, with real stories and clear structure, vastly outperforms a wall of text with the same facts
+- Every article should feel like it was designed, not just written
