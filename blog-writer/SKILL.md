@@ -126,7 +126,10 @@ Save to `docs/fr/blog/{slug}.md` with identical frontmatter structure.
 2. Select colour accent based on article category/tone
 3. Create `src/pages/en/blog/{slug}.astro` and `src/pages/fr/blog/{slug}.astro`
 4. Include: Article JSON-LD schema, featured image, in-article images, author bio, CTA
-5. Add prose styles to `global.css` if not already present
+5. Pass the featured image as the OG image: `<BaseLayout ... ogImage={heroImg.src}>` — each article must use its own featured image for Open Graph, not the default site OG image
+6. Use `heroImg.src` in the JSON-LD `image` field: `"image": \`\${siteUrl}\${heroImg.src}\``
+7. The featured image must be landscape orientation (wider than tall) for optimal OG display
+8. Add prose styles to `global.css` if not already present
 
 See `references/article-design.md` for layout variations, image treatment, and design variety system.
 
@@ -251,7 +254,7 @@ Every article page must include:
 
 - **Canonical URL** — automatic from BaseLayout
 - **Hreflang** — links between all language versions (automatic from BaseLayout)
-- **Open Graph** — title, description, featured image (automatic from BaseLayout)
+- **Open Graph** — title, description, featured image via `ogImage={heroImg.src}` prop on BaseLayout (each article uses its own featured image, not the default site OG image)
 - **Sitemap** — remove `noindex` after first real article so blog pages are indexed
 - **Page speed** — all images optimised via Astro `<Image>`, lazy loading on in-article images
 
@@ -315,7 +318,9 @@ Every article targets at least one keyword cluster. Research what the target aud
 - [ ] Title tag under 60 chars with primary keyword
 - [ ] Meta description under 155 chars with keyword + location
 - [ ] Primary keyword in first 100 words, one h2, and conclusion
-- [ ] Article JSON-LD schema with all required fields including image
+- [ ] Article JSON-LD schema with all required fields including image (`heroImg.src`)
+- [ ] OG image uses article's featured image via `ogImage={heroImg.src}` (not default site OG)
+- [ ] Featured image is landscape orientation for optimal OG/social sharing display
 - [ ] Internal links to at least 3 other pages
 - [ ] Featured image alt text includes primary keyword
 - [ ] Hreflang tags present
