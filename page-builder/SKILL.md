@@ -208,7 +208,9 @@ const currentPath = new URL(Astro.request.url).pathname.replace(/^\/[a-z]{2}/, '
 Every page gets a hero. Vary the style per page:
 
 - **Homepage hero:** Full-viewport, dramatic. Background image or gradient, large display font headline, subtitle, CTA button. Consider split layout (text left, image right) or full-bleed image with overlay.
-- **Inner page hero:** Shorter (40-50vh), page title prominent, optional breadcrumb, subtle background texture or color.
+- **Inner page hero:** Shorter (40-50vh), page title prominent, optional breadcrumb, background image with overlay.
+
+**MANDATORY:** Every Hero component MUST include a `bgImage` prop with a relevant photograph and an appropriate gradient overlay (e.g. `bg-gradient-to-r from-primary-900/80 to-primary-900/40`). Plain-colour heroes without a background image are not permitted. Select a contextually appropriate photo from `src/assets/images/` for each page.
 
 ```astro
 <!-- Homepage Hero Example -->
