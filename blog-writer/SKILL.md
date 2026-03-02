@@ -26,7 +26,8 @@ Read the reference files as needed during writing:
 
 - `references/human-voice-standards.md` — **READ FIRST** — AI vocabulary/phrase/structure blacklists, human voice techniques, self-check (ensures content sounds 100% human)
 - `references/writing-craft.md` — 7-step process, sentence craft, paragraph structure, opening hooks, clarity, conciseness
-- `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, value-first principle, pillar content, touchpoints
+- `references/content-strategy.md` — audience segments, buyer journey, SEO strategy, R.E.S.U.L.T.S. framework, blog creation checklist, 5-stage keyword mapping
+- `seo/references/seo-content-writing.md` — keyword density rules, search intent types, featured snippets, voice search, on-page SEO checklist
 - `references/reader-experience.md` — touchpoint mapping, reader types, quality gates, tone calibration, publishing rhythm
 - `references/storytelling.md` — authentic stories, human touch, cultural markers
 - `references/editorial-standards.md` — punctuation, capitalisation, numbers, grammar, British spelling

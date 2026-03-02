@@ -70,6 +70,16 @@ Extract from the content:
 
 If the docs do not make these clear, note the gaps and work with what is available. Never fabricate a brand position.
 
+### The StoryBrand Principle: Customer = Hero, Brand = Guide
+
+The customer is the hero of the story, not the brand. The brand is the guide — like Yoda to Luke Skywalker. Every page must follow this principle:
+
+- **Hero (customer):** Has a problem, desires a transformation, needs help
+- **Guide (brand):** Understands the problem, has a plan, offers a clear path forward
+- **The plan:** A named framework, process, or methodology that makes the path concrete
+
+**Application:** Never position the business as the star. Headlines speak to the customer's problem, not the brand's achievements. The About page opens with the customer's world, not the company's history. CTAs frame the customer as the one taking action, with the brand as their support.
+
 ## Homepage: Set Expectations Immediately
 
 The homepage is the most important brand moment. Visitors must quickly understand:

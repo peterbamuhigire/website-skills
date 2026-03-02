@@ -6,6 +6,39 @@ Source: Gill Andrews, *Making Your Website Work: 100 Copy & Design Tweaks*.
 
 ---
 
+## The 7-Second First Impression
+
+Online visitors form a first impression in 7 seconds. In that window they decide whether to stay or leave. Everything above the fold must pass this test:
+
+1. **Headline answers "what is this?"** — no ambiguity, no cleverness over clarity
+2. **Subheadline answers "is this for me?"** — identify the audience
+3. **Visual hierarchy guides the eye** — headline → subheadline → CTA, in that order
+4. **Nothing competes for attention** — no auto-playing videos, no pop-ups, no competing CTAs
+5. **The page looks professional** — consistent fonts, aligned elements, quality imagery
+
+If a visitor has to scroll to understand what the business does, the above-fold content has failed.
+
+---
+
+## Readability Typography Standards
+
+Body copy must be physically comfortable to read. These are hard minimums:
+
+| Element | Standard | Implementation |
+|---------|----------|----------------|
+| Body font size | Minimum 16px (never below 14px) | `text-base` (16px) or `text-lg` (18px) |
+| Line height | 1.5-1.75 (24-28px at 16px font) | `leading-relaxed` or `leading-7` |
+| Line width | Maximum 65 characters (~600px) | `max-w-prose` (65ch) |
+| Paragraph spacing | Visible gap between paragraphs | `space-y-4` or `space-y-6` on containers |
+| Sub-headlines | Every 2-3 paragraphs | Break text walls with H2/H3 headings |
+| Contrast | Dark text on light background | WCAG AA minimum (4.5:1 ratio) |
+
+**Reading level target:** 8th-grade level. Use short words, short sentences, and conversational language. If a reader needs a dictionary, you've lost them.
+
+**ALL CAPS:** Avoid in body text (slows word recognition). Acceptable only for very short labels like "NEW" or "FREE".
+
+---
+
 ## CTA Placement & Isolation
 
 ### CTAs Come After Persuasion, Not Before

@@ -432,3 +432,106 @@ If the site includes a newsletter signup:
 - **Text:** Short. State benefits and set expectations. Include social proof if impressive list size ("Join 5,000+ peers")
 - **Button:** Text must work out of context ("Sign up for weekly tips", not "Yes, please!")
 - **Never say "I won't spam you"** — if your site looks credible, the thought of spam won't cross their minds. Don't plant it.
+
+---
+
+## Premium Copywriting Formulas
+
+### The H.O.B.O. Formula (Page Structure)
+
+Use this formula for any page that needs to persuade — landing pages, service pages, sales pages:
+
+- **H = Headline** — Your attention grabber. Combines self-interest and curiosity. The headline carries most of the persuasion load.
+- **O = Opening** — Your golden promise. Bridges the headline and the bullet points. Amplifies and builds energy with a lead sentence, a promise, and build-up.
+- **B = Bullets** — Your bold list of benefits. Ignites the buying impulse. Each bullet is a mini-headline combining a super benefit + curiosity generator.
+- **O = Offer** — Your close call to action. Provides a clear pathway for action after benefits ignite interest.
+
+The headline and bullets carry the main persuasive load. Everything else supports them.
+
+### The Uncle B.E.N. Headline Formula
+
+When writing headlines for any page section, apply all three elements:
+
+- **B = Benefit** — Lead with a large, specific benefit
+- **E = Emotion** — Press on a negative emotion the visitor feels (frustration, fear, anger, need for approval)
+- **N = Novelty** — Insert an unexpected contradiction from mixing two elements that don't usually go together
+
+Example: "Stop Losing Customers to Spreadsheet Chaos" (Benefit: stop losing customers. Emotion: frustration/fear. Novelty: "spreadsheet chaos" is unexpected pairing.)
+
+### The PAPA Formula (Service / Landing Pages)
+
+For service pages and landing pages, structure each section using:
+
+1. **P = Problem** — Present the pain point or need. Name it specifically.
+2. **A = Advantages** — Explain why solving this problem matters. What do they gain?
+3. **P = Proof** — Show evidence your solution works (testimonials, case studies, numbers).
+4. **A = Action** — Seal with a specific CTA (watch video, book consultation, sign up).
+
+### The 6 Primary Driving Emotions
+
+All persuasive copy appeals to one or more of these emotions. Identify which emotions are appropriate for the client's industry and audience, then weave them through headlines, opening copy, and CTAs:
+
+1. **Guilt** — "Your team deserves better tools than the ones you're giving them"
+2. **Fear** — "Every day without a proper system is another day of preventable losses"
+3. **Anger** — "You shouldn't have to work around software that was supposed to work for you"
+4. **Exclusivity** — "Built for businesses that refuse to settle for generic solutions"
+5. **Flattery** — "Smart business owners already know spreadsheets aren't enough"
+6. **Salvation** — "There's a way out of the complexity — and it starts here"
+
+**Rule:** Use emotion to open a door, not to manipulate. The copy should feel truthful, not exploitative. Professional audiences reject high-pressure emotional tactics.
+
+### The Benefit Explosion System
+
+Before writing any page, systematically extract all client benefits. Spend 3 minutes on each step:
+
+1. **Brain dump** — Write every benefit that comes to mind
+2. **Stimulus words** — Expand with: cheaper, faster, bigger, better, easier, safer, more reliable
+3. **Competitor benefits** — What do competitors claim? What can you claim better?
+4. **Customer language** — What do the client's happiest customers say? (Mine from testimonials in `docs/`)
+5. **Competitor websites** — Visit competitor sites and note compelling benefit language
+6. **Extract hooks** — From each competitor bullet, adapt one benefit for your client
+7. **Killer list** — Reread everything and create the final "killer benefits" list
+
+Use this list as the raw material for headlines, bullet points, service descriptions, and CTAs throughout the site.
+
+### The "TED Talk" About Page Enhancement
+
+Beyond the "You Before Me" rule, the About page must put what the business BELIEVES front and centre — not buried in a corner. Communicate the big idea the business wants to spread.
+
+- State the company's core belief or philosophy prominently (first or second section)
+- Frame it as a mission the visitor can relate to, not corporate jargon
+- Example: A restaurant doesn't say "We source locally" buried in a footer. They make "food ethos" a headline section.
+
+**Trap to avoid — the "Quiet Cause":** If the business has social responsibility commitments, sustainability practices, or community values, don't treat them as afterthoughts. 66% of users prefer spending on products from sustainable brands. Make values visible.
+
+### Bullet Point Writing Rules
+
+Bullet points are mini-headlines. Each one must sell.
+
+**Rules:**
+1. Each bullet expresses a prominent benefit AND a promise
+2. Keep bullets symmetrical — one or two lines each, consistent length
+3. Avoid clutter — no complex jumble of sub-bullets and sub-titles within bullet lists
+4. Practice parallelism — same grammatical form, thematically grouped
+5. Bullets don't have to be full sentences (use numbered lists for sequential steps)
+6. Alternate bold and plain text for visual rhythm (first bullet bold, second plain, third bold)
+
+**The Magic Bullet Template:** Combine a "super benefit" + a "curiosity generator" (omit important detail to create curiosity) + an "unexpected twist."
+
+### The "Don't Make Them Think" Rule
+
+Immediately below the hero headline, describe in a few clear lines:
+
+1. **What the product/service is**
+2. **What it does**
+3. **Who it's for**
+
+If a visitor has to think about what the business offers, you've already lost them. Clarity in the first screen view is non-negotiable.
+
+### The "One Focus" Rule
+
+Each service page or landing page should address ONE primary pain point. Don't overwhelm readers with multiple problems on a single page. Choose the most relevant pain point based on the customer persona and available data. Secondary pain points can appear further down the page, but the hero and opening must laser-focus on one.
+
+### The "Friend Test"
+
+Read your copy aloud. If there's a sentence you wouldn't say in conversation with a friend, remove it or rewrite it. Copy that sounds natural when spoken works on screen. Copy that sounds stilted when spoken will feel stilted when read.
