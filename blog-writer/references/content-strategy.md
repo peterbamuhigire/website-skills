@@ -146,17 +146,21 @@ Do not compete for broad keywords like "IT consultant." Target specific, intent-
 
 ### Keyword Placement (Natural, Not Stuffed)
 - Primary keyword in the title (h1)
-- Primary keyword in the first 100 words
+- Primary keyword in the first 50 words (ideally mentioned 2-3 times in the first 50 words)
 - Primary keyword in at least one h2 heading
 - Primary keyword in the meta description
-- Secondary keywords spread naturally through the body
+- Secondary/ancillary keywords spread naturally through the body
 - Primary keyword in the conclusion
+- **Keyword density must stay under 1%.** Anything close to 2% reads as keyword stuffing. The old 3-5% recommendation is obsolete and penalised.
 - **Never repeat a keyword unnaturally.** If it reads awkwardly, rephrase.
 
-### Content Length for SEO
+### Content Length and Engagement Benchmarks
+
 Research shows longer content ranks better in search results:
 - **Minimum:** 1,200 words (EN) / 1,500 words (FR)
 - **Ideal:** 1,500-2,500 words (EN) / 1,800-3,000 words (FR)
+- **Peak ranking range:** 2,000-2,400 words rank highest on Google (HubSpot/SerpIQ research)
+- **Peak engagement:** 7-minute read time generates the most engagement (Medium research)
 - **Never pad for length.** Every word must earn its place. A focused 1,500-word article outranks a padded 3,000-word one.
 
 ### Internal Linking Strategy
@@ -318,3 +322,115 @@ Every article is a product with its own customer journey:
 - Don't just research what to write about — invest the effort in *how* you present it
 - The same information presented beautifully, with real stories and clear structure, vastly outperforms a wall of text with the same facts
 - Every article should feel like it was designed, not just written
+
+---
+
+## The R.E.S.U.L.T.S. Blog Writing Framework
+
+Apply this 7-component framework to every blog article. It ensures each post is complete, compelling, and optimised for both readers and search engines.
+
+### R — Riveting Headline
+
+- **4 headline formats that work:**
+  1. Humor or controversy ("10 Things Your IT Vendor Is Not Telling You")
+  2. Numbered list ("7 Ways To Reduce ERP Implementation Costs")
+  3. Mistakes or secrets ("The 5 Biggest Software Mistakes — And How to Avoid Them")
+  4. Promise a result ("How to Cut Reconciliation Time from 3 Days to 2 Hours")
+- **Title length:** max 60 characters (Google truncates beyond this)
+- **Include a number** — titles with numbers have higher click-through rates
+- **Include the primary keyword** — both for SEO and for clarity
+- **Headline process:** Write a working title first → conduct keyword research → finalise with optimal word count → test by reading aloud
+
+### E — Exciting Introduction
+
+The introduction must contain three elements in order:
+
+1. **State the problem** — name the reader's pain point directly
+2. **Point out the risk** — what happens if they don't act?
+3. **Reveal the promise** — what this article will cover and the benefit of reading it
+
+Then add an **open loop** — create suspense by hinting at something you'll reveal later in the article. This "slippery slide" pulls the reader from the introduction into the body.
+
+**8-second rule:** You have 8 seconds to capture a reader's attention. If the introduction doesn't hook them by the third sentence, they leave.
+
+### S — Smart SEO Strategy
+
+- Use buyer-journey-aligned keywords (see 5-Stage Keyword Mapping below)
+- Mix broad and long-tail keywords
+- Target keywords with 1,000+ monthly searches and low competition
+- Place primary keyword in headline + introduction + first H2
+- Use keywords as anchor text for internal links
+- Keyword density under 1% (see Keyword Placement section above)
+
+### U — Uncomplicated Content
+
+- Target 7-minute read time for maximum engagement
+- Aim for 2,000-2,400 words (peak ranking range)
+- Use H2 subheadings with keywords every 2-3 paragraphs
+- Short sentences and short paragraphs
+- Bulleted and numbered lists to break up text
+- Simple words — avoid jargon unless writing for a technical audience
+- 8th-grade reading level target
+
+### L — Leverage Graphics
+
+- Every post needs at least one high-quality image
+- Use charts, infographics, and relevant photos
+- Break up text blocks with multimedia where appropriate
+- Images of people and real situations outperform stock photos
+- Every image must have descriptive alt text for SEO and accessibility
+
+### T — Tactical Summary
+
+1. Sum up content in a 1-3 sentence takeaway
+2. Build social proof and authority (reference credible sources)
+3. List additional resources or related reading
+4. Link to other blog posts on the same site (internal linking)
+
+### S — Simple Next Steps
+
+1. **Primary CTA** — a lead-capturing action (contact form, consultation booking, newsletter signup)
+2. **Secondary CTA** — ask for feedback, encourage social sharing, or suggest a related article
+
+**Every post must have exactly 2 CTAs** — one primary, one secondary.
+
+---
+
+## 5-Stage Keyword-to-Buyer-Journey Mapping
+
+Map keywords to the buyer's journey stage to ensure content covers the full funnel:
+
+| Stage | Buyer State | Keyword Type | Content Goal |
+|-------|-------------|-------------|--------------|
+| 1. No Awareness | Not aware of the problem | High-volume broad terms | Audience development |
+| 2. Problem Aware | Aware of problem, not of solutions | Pain-point keywords | Build rapport, name the frustration |
+| 3. Consideration | Looking for solution categories | Solution keywords + modifiers ("affordable", "best", "easy") | Educate on solution options |
+| 4. Decision | Comparing specific solutions | Brand vs brand, reviews, testimonials | Position as preferred choice |
+| 5. Action | Ready to buy, finalising | Product-specific feature/FAQ keywords | Remove friction, close |
+
+**Marketing triggers** drive movement between stages — events that push prospects from one stage to the next. For each stage, identify what trigger causes a search, what terms it generates, and create content targeting those terms.
+
+**Website visitor intent distribution:** Only 5% of visitors are ready to buy. 25% are considering, 40% are not yet considering, 15% are thinking about considering, and 15% believe they're not in the market. Content marketing's job is to move the 95% through the funnel.
+
+---
+
+## Blog Creation Quality Checklist
+
+Before publishing any article, verify every item:
+
+- [ ] Created a click-worthy title (Uncle B.E.N. formula: Benefit + Emotion + Novelty)
+- [ ] Researched reference articles for accuracy
+- [ ] Written in conversational, human tone (passed Friend Test)
+- [ ] Article delivers on the headline promise
+- [ ] Set reader expectations in the introduction (Problem → Risk → Promise)
+- [ ] Organised into scannable subheadings and sections
+- [ ] Used short, readable sentences and paragraphs
+- [ ] Used simple, accessible language
+- [ ] Highlighted key texts with bold/emphasis (but 60%+ remains unhighlighted)
+- [ ] Provided links to 1 credible external source per 500 words
+- [ ] Linked to at least 1 existing article on the same blog (internal linking)
+- [ ] Included expert quotes or data points where appropriate
+- [ ] Included 2 data points or statistics from industry research
+- [ ] Included 2 CTAs (1 primary + 1 secondary)
+- [ ] Checked for originality — no copied content
+- [ ] Passed all human voice quality gates (see human-voice-standards.md)
