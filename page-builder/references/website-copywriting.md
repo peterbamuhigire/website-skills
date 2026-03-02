@@ -43,6 +43,87 @@ Every section on every page has one job. If a section tries to communicate two t
 
 After writing any sentence about a feature, capability, or credential, ask: "So what does this mean for the visitor?" If you can't answer clearly, either add the answer or delete the sentence.
 
+### The I/You Ratio Test
+
+On every page, "you" and "your" must outnumber "I", "my", "we", and "our". Run a find-and-count check after writing. If the ratio favours the business over the visitor, rephrase.
+
+**Pronoun strategy:**
+- Address visitors as "you" — never "individuals", "business owners", or "clients" in third person. Direct address creates personal connection.
+- When describing visitor problems, use "you", never "we" ("We all want to work less" → "You work endless hours but know it can't go on forever").
+- Use "we" only when describing working together as a team ("We'll walk you through every step").
+
+**Common rephrasing patterns:**
+- "I'll provide" → "You'll get"
+- "I'll teach" → "You'll learn"
+- "I work with one client at a time" → "Your project will have my undivided attention"
+- "Business owners who need growth plans" → "Need a plan to take your business to the next stage?"
+
+### Eugene Schwartz's 5 Awareness Levels
+
+Match copy depth to the visitor's awareness level on each specific page:
+
+| Level | Visitor State | What Copy Must Do | Typical Page |
+|-------|-------------|-------------------|--------------|
+| Unaware | Don't know they have a problem | Speak to their state of mind, name the frustration | Blog posts, social landing pages |
+| Problem-aware | Know the problem, don't know a solution exists | Show you understand their pain, present the "what" | Homepage, problem-focused landing pages |
+| Solution-aware | Know the result they want, don't know your product | Show how and why YOUR solution works, explain benefits | Services page, features page |
+| Product-aware | Know your product, not sure it's right for them | Show how you're different, prove it works (testimonials, case studies) | About page, comparison page |
+| Most aware | Know you can help, ready to act | Show them the deal — pricing, next steps, CTA | Contact page, pricing page |
+
+**Rule:** For every page, ask: "What does the visitor already know about their situation and my offer? What's missing for them to take the next step?"
+
+### The 5 Sources of Visitor Uncertainty
+
+Fear creates uncertainty, and uncertainty kills conversions. Every service/product page must address these five sources:
+
+1. **Not sure what you mean** → Be crystal clear in your copy. No jargon without explanation.
+2. **Not sure about fees** → State fees, mention a range, or explain what fees depend on. Silence on pricing makes visitors assume the worst.
+3. **Not sure how it works** → Explain your process. What happens after they contact you?
+4. **Not sure you'll do a good job** → Use testimonials. State what happens if the client is unsatisfied.
+5. **Not sure if you'll get along** → Include photos, let personality shine through copy. A short video is even better.
+
+### The BS Test for Vague Copy
+
+Imagine using the same words from your web page in a real conversation with a prospect, face to face. If they'd need you to explain further — or if an awkward silence would follow — your copy is too vague. Rewrite using plain words. If it's a complicated concept, use a real-world analogy.
+
+**Tagline formulas that pass the BS test:**
+- `{What} for {whom}` — "Branding and design for creative women entrepreneurs"
+- `{Do this} to/and {benefit}` — "Turn your underperforming website into a lead-generating machine"
+- `{What} {with benefit}` — "Web copy that wins your prospects' hearts (and wallets)"
+- `{Get benefit} {by doing this}` — "Turn lurkers into loyal customers with personality-driven copy"
+- `Helping {whom} {do what} {with benefit}` — "Helping marketers publish research that gets attention"
+
+### Questions-in-Copy Rules
+
+1. **Only ask questions that get a "yes"** from your target audience. Communicate the benefit inside the question.
+   - Bad: "Ready to upgrade your plan?" (Who is ever ready?)
+   - Good: "Want to do more in less time?" (Sure!)
+   - If unsure whether a question will get a "yes," use a declarative sentence instead.
+2. **Max 2-3 questions per page section.** Every question creates friction — like a speed bump. A couple are fine; an entire stretch is a bumpy road.
+
+### Banned Filler Phrases
+
+Never use on any page:
+- "Welcome to our website" / "I invite you to look around" (implied — waste of words)
+- "Easy, isn't it?" / "Isn't it great?" / "How awesome is that?" (patronising — show transformation, don't tell emotions)
+- "Research suggests that..." (unspecific — which research? what niche?)
+- "If you're a business owner..." (redundant — if you know your audience, address them directly)
+- "Everything" / "all your needs" / "any person" / "a number of services" (too vague — enumerate specifically)
+
+### The Google Translate Test
+
+If you speak another language, auto-translate your copy. Your brain won't automatically fill in blanks, and Google Translate doesn't handle metaphors. If the essence of your message is lost in translation, you're being too clever. Rewrite with plain, specific words.
+
+### Testimonial Mining: The 5-Column Method
+
+Systematically extract customer language from testimonials into 5 columns:
+
+| State Before | Needs | Reservations | Experience | State After |
+|-------------|-------|-------------|-----------|------------|
+| "lost", "stuck", "overwhelmed" | "stable income", "direction" | "too expensive", "will it work?" | "patient", "thorough" | "confident", "growing" |
+
+Use these extracted phrases directly in your copy. The most compelling copy comes from your customers' own words, not a copywriter's toolkit.
+
 ---
 
 ## Homepage Copy
@@ -157,6 +238,20 @@ If you don't show prices, address the elephant in the room:
 - What the first step costs ("Initial consultation is free / costs X")
 
 Leaving price completely unaddressed makes visitors assume the worst.
+
+### Service Page Completeness Checklist
+
+If service pages don't convert, prospects need more detail. Ensure every service page answers:
+
+1. **What happens after they contact you** — the immediate next step
+2. **How you deliver the service** — your process (3-5 steps)
+3. **Why they can be certain you'll do a good job** — case studies, testimonials, credentials
+4. **What happens if they aren't happy** — satisfaction policy or revision process
+5. **How much you charge** — or what determines cost (see Pricing Signals above)
+
+### Separate Benefits by Context
+
+Never lump benefits from multiple services into one section. Each service section must contain only its own benefits. Copywriting benefits go in the copywriting section; design benefits go in the design section. Benefits in the right context get the attention they deserve because fewer sentences compete for the reader's attention.
 
 ---
 
@@ -303,6 +398,37 @@ The "Attitude" step separates effective CTAs from pushy ones. Changing the reade
 - Long pages: add a secondary CTA mid-page
 - CTA wording must be consistent across the site — don't say "Contact Us" on one page and "Reach Out" on another for the same action
 
+### CTA Copy Must Complete "I'd like you to..."
+
+CTA button text must work as an imperative verb phrase. Test by completing: "I'd like you to [CTA text]". "Download your guide" works. "Info" or "More" do not — nobody would say "I'd like you to info." Make CTA copy work out of context — understandable even without reading surrounding content.
+
 ### Never Use Manipulative Language
 
 No "Don't miss out!", "Last chance!", "Act now!", "Limited time offer!", "You can't afford NOT to...". These destroy trust with professional audiences.
+
+---
+
+## Cross-Pollination Rule
+
+Don't compartmentalise content by page type like a department store. Mix relevant information across pages to serve the visitor's needs in context:
+
+- **Homepage:** Include service overview + testimonials + credibility signals + about snippet — not just links
+- **Service pages:** Include relevant testimonials and case studies, not just on a separate Testimonials page
+- **About page:** Include how you help, not just who you are
+- **Every sales page:** Include social proof right where claims are made
+
+Your competitor is one click away. Don't make visitors navigate to another page for a missing piece of information.
+
+### Meaningful Social Proof
+
+Client testimonials always outperform credentials, badges, and certificates. Prospects care about what real people like them say about your work — not which university you attended or which organisations you belong to.
+
+**Exception:** Name-dropping famous companies works. Mention the name and what results you achieved. Do NOT link out to their website — that's an exit.
+
+### Newsletter Opt-in Copy
+
+If the site includes a newsletter signup:
+- **Heading must be visually prominent** — signals to impressed visitors they can get tips delivered
+- **Text:** Short. State benefits and set expectations. Include social proof if impressive list size ("Join 5,000+ peers")
+- **Button:** Text must work out of context ("Sign up for weekly tips", not "Yes, please!")
+- **Never say "I won't spam you"** — if your site looks credible, the thought of spam won't cross their minds. Don't plant it.

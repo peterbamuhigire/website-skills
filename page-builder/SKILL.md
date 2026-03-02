@@ -9,7 +9,7 @@ Transform markdown content into stunning, production-grade Astro pages.
 
 ## Copywriting Reference
 
-Before writing ANY page copy, read **`references/website-copywriting.md`** for page-by-page copy formulas (homepage, about, services, contact, FAQ, testimonials) and **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary/phrase blacklist. All generated text must sound 100% human-written.
+Before writing ANY page copy, read **`references/website-copywriting.md`** for copy formulas and **`references/conversion-design-rules.md`** for layout, CTA, and UX anti-pattern rules. Also read **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary blacklist. All generated text must sound 100% human-written.
 
 ## Universal Guidelines Reference
 

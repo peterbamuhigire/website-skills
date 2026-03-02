@@ -58,7 +58,16 @@ Import in `src/styles/global.css`:
 - NEVER use Inter, Roboto, Arial, system-ui as primary fonts
 - NEVER use the same font pair across different projects
 - Heading font should feel distinctive; body font should be invisible (easy to read)
-- Limit to 2 font families max
+- Limit to 2 font families max (a third readable script font is acceptable for very short phrases only)
+
+### Safe Design Limits (Hard Maximums)
+
+Each additional colour, font, or font size creates friction. Friction is good if you want visitors to pause and notice something. Friction is bad if you want them to read without interruption.
+
+- **Max 2 font families** (heading + body)
+- **Max 4 font sizes** (heading / subheading / body / CTA or small text)
+- **Max 2-3 text colours** (body / headings / CTA — use 3 only if headings and body need different colours)
+- Everything must remain readable: readable families, large enough sizes, good contrast to background
 
 ### 3. Color Palette
 
@@ -198,6 +207,9 @@ Document these design decisions for the page-builder to follow:
 - Max-width container with comfortable side padding
 - Alternating background tones for visual rhythm
 - Section headings: display font, large, with a subtle accent element (line, dot, gradient text)
+
+**Footer:**
+- Footer MUST have a visually distinct background colour from the page body. When footer blends into the page, visitors can't find policies, contact info, or social links — or they scroll past CTAs thinking the page continues.
 
 **Images:**
 - rounded-lg or rounded-2xl consistently
