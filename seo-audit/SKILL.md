@@ -1,11 +1,11 @@
 ---
 name: seo-audit
-description: Comprehensive SEO audit for static websites. Analyses 11 categories — technical SEO, on-page, content quality, structured data, Core Web Vitals, mobile usability, local SEO, internal linking, security, accessibility, and competitive positioning. Produces a scored audit report with prioritised action items. Works with any Astro static site. Run after deploy or on demand to identify SEO gaps and improvement opportunities.
+description: Comprehensive SEO audit for static websites. Analyses 14 categories — technical SEO, on-page, content quality, structured data, pagespeed & performance, mobile usability, local SEO, internal linking, security & trust, accessibility, competitive positioning, voice search readiness, off-page signals, and SEO measurement. Produces a scored audit report with prioritised action items. Works with any Astro static site. Run after deploy or on demand to identify SEO gaps and improvement opportunities.
 ---
 
 # SEO Audit Skill — Static Website Factory
 
-Run a comprehensive SEO audit across the entire site, scoring 11 categories and producing a prioritised action plan.
+Run a comprehensive SEO audit across the entire site, scoring 14 categories and producing a prioritised action plan.
 
 ## When to Use
 
@@ -20,23 +20,26 @@ Run a comprehensive SEO audit across the entire site, scoring 11 categories and 
 - `docs/seo.md` should exist (but audit works without it)
 - Existing SEO skill should have run (meta tags, structured data in place)
 
-## Audit Categories (11 Total)
+## Audit Categories (14 Total)
 
 Each category is scored 0-10. Overall score is weighted average.
 
 | # | Category | Weight | What It Checks |
 |---|----------|--------|----------------|
-| 1 | Technical SEO | 15% | Sitemap, robots.txt, canonical URLs, hreflang, crawlability |
-| 2 | On-Page SEO | 15% | Title tags, meta descriptions, heading hierarchy, keyword placement |
-| 3 | Content Quality | 10% | Unique content, word count, keyword density, E-E-A-T signals |
-| 4 | Structured Data | 10% | JSON-LD schemas, Organization, Service, BreadcrumbList, validation |
-| 5 | Core Web Vitals | 10% | Page weight, image optimisation, render-blocking resources, LCP |
-| 6 | Mobile Usability | 10% | Viewport meta, touch targets, responsive images, no horizontal scroll |
-| 7 | Local SEO | 10% | NAP consistency, geo meta tags, LocalBusiness schema, area served |
-| 8 | Internal Linking | 5% | Navigation structure, orphan pages, link depth, anchor text |
-| 9 | Security & Trust | 5% | HTTPS references, mixed content, external link safety |
-| 10 | Accessibility | 5% | Alt text, aria labels, heading order, skip links, focus styles |
+| 1 | Technical SEO | 12% | Sitemap, robots.txt, canonical URLs, hreflang, crawlability, crawl errors |
+| 2 | On-Page SEO | 12% | Title tags, meta descriptions, heading hierarchy, keyword placement |
+| 3 | Content Quality | 10% | Unique content, word count, keyword density, E-E-A-T signals, buyer journey coverage |
+| 4 | Structured Data | 8% | JSON-LD schemas (Organization, Service, FAQ, HowTo, BreadcrumbList), Rich Snippet readiness |
+| 5 | Pagespeed & Performance | 10% | Page weight, image compression, minification, caching, font loading, CLS, LCP, FID |
+| 6 | Mobile Usability | 8% | Viewport meta, touch targets, responsive images, no horizontal scroll |
+| 7 | Local SEO | 8% | NAP consistency, Google Business Profile, geo meta tags, citations, reviews, local landing pages |
+| 8 | Internal Linking | 5% | Navigation structure, orphan pages, link depth, anchor text quality |
+| 9 | Security & Trust | 5% | HTTPS references, mixed content, external link safety, privacy policy |
+| 10 | Accessibility | 5% | Alt text, aria labels, heading order, skip links, focus styles, contrast |
 | 11 | Competitive Positioning | 5% | Keyword targeting, title uniqueness, geo-targeting, service coverage |
+| 12 | Voice Search Readiness | 4% | FAQ pages, conversational keywords, featured snippet targeting, reading level |
+| 13 | Off-Page Signals | 4% | Backlink profile quality, social presence, directory listings, brand mentions |
+| 14 | SEO Measurement | 4% | Analytics setup, conversion tracking, rank monitoring, KPI framework |
 
 ---
 
@@ -72,26 +75,39 @@ For each HTML page in `dist/`:
 - [ ] Primary keyword appears in first 100 words of body content
 
 **Content Quality checks:**
-- [ ] Each page has >300 words of unique text content
+- [ ] Each page has minimum word count (homepage 500+, services 800+, about 500+, contact 200+)
 - [ ] No placeholder text ("Lorem ipsum", "[Write...]", "Coming soon" as main content)
 - [ ] E-E-A-T signals present (author info, company details, credentials)
 - [ ] Content addresses user search intent for target keywords
+- [ ] Keyword density under 1% (close to 2% = keyword stuffing)
+- [ ] Primary keyword appears within first 50 words of body content
+- [ ] Buyer journey coverage: awareness, consideration, and decision content present
+- [ ] No duplicate content across pages (unique titles, descriptions, body text)
 
 **Structured Data checks:**
 - [ ] Organization/ProfessionalService schema on homepage
 - [ ] Service schemas on service pages
 - [ ] BreadcrumbList schema on all pages
+- [ ] FAQPage schema on FAQ sections
+- [ ] HowTo schema on instructional content (if applicable)
 - [ ] All schemas validate (no missing required fields)
 - [ ] areaServed and serviceType populated
 - [ ] Logo, address, contact info in Organization schema
+- [ ] Rich Snippet eligibility: structured data matches visible page content (no cloaking)
+- [ ] Author/Person schema with credentials on blog posts and team pages
 
-**Core Web Vitals checks:**
+**Pagespeed & Performance checks:**
 - [ ] Total page weight under 500KB (excluding lazy images)
 - [ ] All images use `<img>` with width/height (no CLS)
 - [ ] Hero images use `loading="eager"`, rest use `loading="lazy"`
 - [ ] No render-blocking external scripts
 - [ ] Fonts preloaded or self-hosted with `font-display: swap`
 - [ ] CSS inlined or minimal external sheets
+- [ ] Images compressed (JPEG quality 70-85%, WebP/AVIF where supported)
+- [ ] GZIP or Brotli compression enabled on server
+- [ ] Browser caching headers set (static assets: 1 year, HTML: no-cache)
+- [ ] No redirect chains (max 1 redirect per URL)
+- [ ] HTML/CSS/JS minified in production build
 
 **Mobile Usability checks:**
 - [ ] `<meta name="viewport">` present on every page
@@ -106,7 +122,11 @@ For each HTML page in `dist/`:
 - [ ] Geo meta tags (geo.region, geo.placename, ICBM)
 - [ ] Target location appears in titles and descriptions
 - [ ] Contact page has full address and phone
-- [ ] Google Business Profile mentioned or linked (if applicable)
+- [ ] Google Business Profile set up and linked (if applicable)
+- [ ] NAP (Name, Address, Phone) consistent across all pages and structured data
+- [ ] Local citations in relevant directories (Yellow Pages, industry-specific)
+- [ ] Reviews/ratings strategy documented or linked
+- [ ] Location-specific landing pages for each area served (if multi-location)
 
 **Internal Linking checks:**
 - [ ] Every page reachable within 3 clicks from homepage
@@ -135,6 +155,32 @@ For each HTML page in `dist/`:
 - [ ] Service types match what users search for
 - [ ] Unique value proposition visible above the fold
 - [ ] Competitor keywords not missing from coverage
+
+**Voice Search Readiness checks:**
+- [ ] FAQ page exists with natural-language questions as H2/H3 headings
+- [ ] Answers are concise (30-50 words for snippet capture) before expanded detail
+- [ ] Conversational long-tail keywords targeted (5+ words, question format)
+- [ ] Content reads naturally aloud (no keyword stuffing, natural sentence flow)
+- [ ] Reading level at 8th-9th grade (simple vocabulary, short sentences)
+- [ ] Featured snippet format used: question heading → direct answer → expanded detail
+- [ ] "Near me" and location-based content optimised for local voice queries
+
+**Off-Page Signals checks:**
+- [ ] Social media profiles exist and link back to website
+- [ ] Business listed in relevant online directories
+- [ ] Google Business Profile claimed and complete
+- [ ] Bing Places listing created
+- [ ] No toxic backlinks pointing to site (check for spam, PBNs, link farms)
+- [ ] Brand name searchable in Google (Knowledge Graph presence or potential)
+- [ ] No black hat signals: no hidden text, no keyword stuffing, no cloaking, no doorway pages
+
+**SEO Measurement checks:**
+- [ ] Google Analytics (GA4) tracking code installed and verified
+- [ ] Google Search Console connected and sitemap submitted
+- [ ] Bing Webmaster Tools set up (critical for AI search visibility)
+- [ ] Conversion goals defined (contact form, phone call, email click)
+- [ ] Core Web Vitals monitored (LCP, FID, CLS baselines established)
+- [ ] Organic traffic baseline recorded for month-over-month comparison
 
 ### Step 3: Score Each Category
 
@@ -202,12 +248,15 @@ Save to `docs/seo-audit-[YYYY-MM-DD].md` in the project root docs directory.
 
 ## References
 
-- `references/audit-checklist.md` — Detailed per-check explanations
-- `references/keyword-research.md` — How to identify target keywords
-- `references/local-seo-guide.md` — Local SEO best practices for African businesses
+- `references/audit-checklist.md` — Detailed per-check explanations, pagespeed deep-dive, voice search readiness, off-page assessment, black hat detection, structured data completeness
+- `references/keyword-research.md` — Keyword categories, long-tail strategy, voice search patterns, keyword-to-intent mapping
+- `references/local-seo-guide.md` — Local SEO best practices, Google Business Profile optimisation, citation building, review strategy, local landing pages
+- `references/seo-measurement-guide.md` — KPI framework, traffic analysis, bounce rate benchmarks, conversion tracking, ranking visibility, off-page metrics (DA, PA, TrustFlow), brand search monitoring
 
 ## Relationship to Other Skills
 
 - **seo** skill implements the SEO — this skill audits the result
 - Run **seo** first to build the SEO layer, then run **seo-audit** to verify
 - Findings from audit should feed back into seo skill configuration
+- **blog-writer** content strategy affects Content Quality and Voice Search scores
+- **brand-alignment** messaging consistency affects Competitive Positioning score

@@ -61,8 +61,9 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 ├── policy-pages/            Privacy Policies & Terms of Use (legal, trust, compliance)
 │   ├── SKILL.md
 │   └── references/
-├── seo-audit/               Post-build SEO audit (11 categories, scored report)
-│   └── SKILL.md
+├── seo-audit/               Post-build SEO audit (14 categories, scored report)
+│   ├── SKILL.md
+│   └── references/          (audit checklist, keyword research, local SEO, measurement)
 ├── email-sender/            PHP + PHPMailer self-hosted contact form handler
 │   └── SKILL.md
 ├── image-compression/       Build-time image compression via Sharp (photo-manager pipeline)
@@ -175,7 +176,9 @@ Generates SEO-optimised, bilingual blog articles with featured images, in-articl
 
 ### seo-audit (Post-Build SEO Audit)
 
-Comprehensive SEO audit for static websites. Analyses 11 categories — technical SEO, on-page, content quality, structured data, Core Web Vitals, mobile usability, local SEO, internal linking, security, accessibility, and competitive positioning. Produces a scored audit report with prioritised action items. Run after deploy or on demand.
+Comprehensive SEO audit for static websites. Analyses 14 categories — technical SEO, on-page, content quality, structured data, pagespeed & performance, mobile usability, local SEO, internal linking, security & trust, accessibility, competitive positioning, voice search readiness, off-page signals, and SEO measurement. Produces a scored audit report with prioritised action items. Run after deploy or on demand.
+
+**Reference Files:** `audit-checklist.md` (detailed per-check explanations), `keyword-research.md` (long-tail, voice search, intent mapping), `local-seo-guide.md` (Google Business Profile, citations, reviews), `seo-measurement-guide.md` (KPI framework, traffic/conversion benchmarks)
 
 **Produces:** Scored audit report with category breakdowns and prioritised action plan
 
@@ -213,8 +216,6 @@ Secure email sending from static websites using PHP + PHPMailer on Apache/WAMP. 
 
 **Produces:** PHP contact form handler, Alpine.js form component, branded HTML email templates
 
-**Trigger phrases:** "Add a contact form", "Set up email sending", "I need a contact form that sends email"
-
 ### image-compression (Utility — Build-Time Compression)
 
 Build-time image compression for static websites. Compresses photos from `photo-bank/` to under 500KB while retaining quality before copying to `src/assets/images/`. Uses Sharp (Node.js) as primary tool. Runs as part of the photo-manager pipeline (Step 2.5: between scanning and cataloguing). Astro then generates optimised WebP/AVIF variants from these already-compressed sources.
@@ -248,7 +249,7 @@ website-builder
   ├── 4. seo (integrates)   → hreflang tags, multi-lang sitemaps, locale meta tags
   ├── 5. blog-writer        → (optional) bilingual blog articles, Article JSON-LD, blog index
   ├── 6. deploy             → dist/{en,fr,sw}/, deploy.sh, nginx.conf (multi-language)
-  └── 7. seo-audit          → (optional, post-deploy) 11-category scored audit report
+  └── 7. seo-audit          → (optional, post-deploy) 14-category scored audit report
 
 Utility skills (not part of the build pipeline):
   policy-pages               ← use when creating Privacy Policy and Terms of Use pages (per-language)
@@ -485,13 +486,11 @@ Track significant skill improvements here.
 
 | Date | Skill | Change |
 |------|-------|--------|
-| 2026-02-17 | all | Initial release — 5 core skills, 3 utility skills, sector-strategies (7 sectors), policy-pages, photo naming, SEO 4-layer architecture |
+| 2026-02-17 | all | Initial release — 5 core skills, 3 utility skills, sector-strategies (7 sectors), policy-pages, SEO 4-layer architecture |
 | 2026-02-22 | new-project | Setup scripts (`.sh` + `.ps1`) with i18n dirs, templates, photo-bank categories |
-| 2026-02-22 | prompts/ | Added Maduuka SaaS marketing website content prompt |
-| 2026-03-01 | blog-writer | Added bilingual blog skill with 7 reference files, per-article design, OG images, Article JSON-LD |
-| 2026-03-01 | seo-audit | Added post-build SEO audit — 11 categories, scored report, action items |
-| 2026-03-01 | photo-manager | Delete originals after copying to prevent clutter |
-| 2026-03-01 | all | Human voice standards — AI blacklists (60+ words, 30+ phrases), copywriting formulas, Voice DNA extraction across content skills |
+| 2026-03-01 | blog-writer, seo-audit | Bilingual blog skill; SEO audit (11 categories); human voice standards (60+ AI words banned) |
+| 2026-03-02 | seo-audit | Enhanced from 11→14 categories (voice search, off-page, measurement); new seo-measurement-guide.md; major expansions to all reference files |
+| 2026-03-02 | seo, page-builder, blog-writer, brand-alignment | Premium content: copywriting formulas (H.O.B.O., PAPA, Uncle B.E.N.), R.E.S.U.L.T.S. framework, StoryBrand, SEO content writing rules |
 
 ---
 
