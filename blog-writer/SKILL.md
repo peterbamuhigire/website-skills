@@ -397,3 +397,31 @@ Cross-cutting skills that apply throughout:
 - `language-standards` — language and tone standards for all languages
 - `east-african-english` — detailed English voice guide (if present in project)
 - `brand-alignment` — visual and messaging consistency with the overall website brand
+
+---
+
+## Blog Index Page Structure
+
+The blog index page (`/en/blog/`, `/fr/blog/`) is one of the most visited pages. Don't just show a grid of latest posts. Structure it for discovery:
+
+1. **Blog focus statement** (1-2 sentences at the top) — tell readers what you blog about
+2. **Featured posts row** — 2-3 hand-picked posts (most popular, posts with lead magnets)
+3. **Newsletter signup** — prominently placed for visitors impressed by your content
+4. **Topic categories** — list several post categories so readers can jump to topics of interest
+5. **Latest posts grid** — chronological listing below the curated sections
+
+### Heading Substance Test
+
+After writing a blog post, scroll through reading only the section headings. If a reader could learn everything from the headings alone, the article lacks substance — you've written "X obvious things about Y" formatted beautifully but without depth.
+
+**Fix:** Don't just repeat what everyone else says. Add your own perspective, look at the topic from an unexpected angle, add a twist in the headings while keeping them clear, inject personality and humour.
+
+### Blog Taxonomy Rules
+
+If the site has blog categories and tags:
+- All categories should contain approximately equal numbers of posts
+- If one category is twice as large as the rest, split it into two
+- Do not assign too many categories or tags to a single post
+- Remove tags or categories used only once or twice
+- Show categories early on the page (near the top), not hidden at the bottom in small grey text
+- Each category and tag page should have a title and short description

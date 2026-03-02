@@ -120,6 +120,27 @@ Also avoid: American slang (FYI, ASAP, BTW), dramatic emotional tone, excessive 
 
 Instead of abbreviations, write in full: "Please respond as soon as possible."
 
+### Assertive Language (All Languages)
+
+Hedging language communicates uncertainty. If you're not sure you're any good, how can prospects be? Replace weak phrasing with confident, assertive alternatives:
+
+| Hedging (weak) | Assertive (strong) |
+|---------------|-------------------|
+| Feel free to reach out | Contact me / Get in touch |
+| In case you're interested | Interested? Contact me |
+| Perhaps we can work together | Let's work together |
+| Maybe we're a good fit | Add a "Who is this for?" section |
+| We might be able to help | We can help |
+| It could potentially improve | It improves |
+
+This applies across all three languages. In French: "N'hésitez pas à nous contacter" is acceptable (culturally standard), but avoid excessive hedging like "Il serait éventuellement possible de...". In Kiswahili: use direct invitations ("Wasiliana nasi" not "Labda unaweza kuwasiliana nasi").
+
+### Condescending Phrases Ban (All Languages)
+
+Never use these patterns in any language:
+- **"Research suggests that..."** — Which research? What niche? What size businesses? Too vague to be credible. Only cite research if it features your target audience and their specific problems.
+- **"If you're a business owner..."** / "Si vous êtes un entrepreneur..." / "Kama wewe ni mfanyabiashara..." — If you know your audience IS business owners, address them directly. Don't do the "if" dance.
+
 ### AI Language Avoidance (All Languages)
 
 AI-generated text has recognisable vocabulary and patterns. Every piece of content must pass as entirely human-written.

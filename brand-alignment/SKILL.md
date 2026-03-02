@@ -27,6 +27,19 @@ Before writing anything, extract the client's vocabulary from their docs:
 
 When the business owner reads the site, they should think "that's exactly how I would say it."
 
+### Six Foundational Questions (Pre-Build Gate)
+
+Before the client provides any content, they must be able to answer these six questions. If they cannot, the website will have structural problems no amount of design can fix.
+
+1. Can you explain your offer in a couple of sentences?
+2. What is your unique value proposition? Why should someone hire you and not your competitor?
+3. Who is your ideal client — specifically?
+4. What is your strategy for getting new clients through your website?
+5. What are your current traffic sources (or expected sources)?
+6. Who are your competitors?
+
+If any answer is missing or vague, note it as a gap. The website must not paper over unclear positioning with pretty design.
+
 Answer these questions before generating any page:
 
 ### Who Is the Ideal Customer?
@@ -183,12 +196,21 @@ For each page, rank content by:
 
 Lead with understanding, then trust, then action. Depth supports but does not lead.
 
+### Cross-Pollination: Mix Content Across Pages
+
+Don't silo content by page type like a department store. Relevant information should appear wherever the visitor needs it:
+- Homepage: include service overview + testimonials + credibility + about snippet
+- Service pages: include relevant testimonials and case studies inline
+- About page: mention how you help, not just who you are
+- Every page making claims: include social proof next to those claims
+
 ### What to Omit or De-emphasise
 
 - Internal company milestones that do not matter to the visitor
 - Awards or certifications the audience would not recognise
 - Technical details that belong in a conversation, not a homepage
 - History sections that are longer than the service descriptions
+- Self-serving adjectives ("hard-working", "pragmatic", life mottos, "passionate about coffee") — replace with specific expertise and problem-solving evidence
 
 ## Common Brand Misalignment Pitfalls
 
@@ -202,6 +224,8 @@ Watch for and correct these patterns:
 | Visual inconsistency | Each page feels like a different website | Apply the same component patterns and spacing everywhere |
 | Buried CTAs | Visitors cannot figure out how to take action | Primary action visible on every page, above the fold |
 | Speaking to everyone | Vague value propositions that resonate with no one | Address the identified ideal customer directly |
+| Condescending phrases | "Research suggests..." or "If you're a business owner..." | State fears and benefits directly; don't lecture your audience |
+| Self-serving team bios | "Hard-working, pragmatic, passionate about coffee" | Replace with specific expertise and how they solve problems |
 
 ## Validation: The Brand Coherence Check
 

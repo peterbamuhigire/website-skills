@@ -254,6 +254,16 @@ Hidden via CSS (not `display:none` which some bots detect):
 - [ ] Test: 6th submit → 429 rate limit
 - [ ] Test: invalid CSRF → 403
 
+## Contact Form UX Rules
+
+A contact form that is difficult to spot or use costs valuable enquiries. Apply these rules:
+
+1. **Make forms look like forms** — placeholder text must be visually distinct from body text (grey, italic). Input fields need visible borders (thin border, white background). The submit button must look like a button (contrast colour, prominent).
+2. **Ask only for absolutely necessary data** — multiple fields make the task seem complicated. Name, email, message is usually enough. Only add phone if truly needed. If requesting sensitive info, explain why.
+3. **Remove the Subject field** — set it to a fixed value in the form handler (e.g., "New enquiry"). For forms on different pages, use page-specific subjects automatically (e.g., "New enquiry: Website Design").
+4. **Include forms on service pages** — don't force visitors to navigate to the Contact page. Place a compact enquiry form at the bottom of each service page so visitors can act on the spot.
+5. **Add your photo and response time** — a photo of a real person and "We typically respond within 24 hours" makes the form feel human, not robotic.
+
 ## Troubleshooting
 
 | Problem | Cause | Fix |
