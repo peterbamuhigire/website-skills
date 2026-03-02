@@ -28,7 +28,7 @@ deploy/SKILL.md                ← Build verification, language-aware Nginx conf
 ### Utility Skills
 
 ```
-seo-audit/SKILL.md                    ← Post-build SEO audit (11 categories, scored report, action items)
+seo-audit/SKILL.md                    ← Post-build SEO audit (14 categories, scored report, action items)
 email-sender/SKILL.md                 ← PHP + PHPMailer contact form handler (self-hosted, 4-layer spam prevention)
 image-compression/SKILL.md            ← Build-time image compression via Sharp (runs inside photo-manager pipeline)
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
@@ -54,7 +54,7 @@ Website build skills are sequential — each depends on outputs from the previou
 5. **seo** → integrates multi-language SEO: hreflang tags, language-specific sitemaps, Open Graph locale tags
 5.5. **blog-writer** (optional) → produces bilingual blog articles in `docs/{lang}/blog/`, Astro blog pages, Article JSON-LD, updates blog index
 6. **deploy** → produces `dist/`, per-language directories, `deploy.sh`, language-aware `nginx.conf` with root redirect
-7. **seo-audit** (optional, post-deploy) → audits 11 SEO categories, produces scored report with prioritised action items
+7. **seo-audit** (optional, post-deploy) → audits 14 SEO categories, produces scored report with prioritised action items
 
 The `website-builder` skill orchestrates this entire sequence. It reads `docs/i18n-config.md` first, then all language-specific content from `docs/{lang}/` and `photo-bank/` photos.
 
@@ -70,7 +70,7 @@ Utility skills run independently of the build pipeline:
 - **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
 - **skill-writing** — use when creating or updating any SKILL.md
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
-- **seo-audit** — use after deploy to audit SEO across 11 categories; produces scored report with prioritised action items
+- **seo-audit** — use after deploy to audit SEO across 14 categories (including voice search readiness, off-page signals, SEO measurement); produces scored report with prioritised action items
 - **email-sender** — use when adding contact forms; self-hosted PHP + PHPMailer with 4-layer spam prevention, no external services
 - **image-compression** — runs inside photo-manager pipeline; compresses photos to under 500KB via Sharp before cataloguing
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
