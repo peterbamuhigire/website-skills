@@ -120,6 +120,45 @@ Also avoid: American slang (FYI, ASAP, BTW), dramatic emotional tone, excessive 
 
 Instead of abbreviations, write in full: "Please respond as soon as possible."
 
+### Assertive Language (All Languages)
+
+Hedging language communicates uncertainty. If you're not sure you're any good, how can prospects be? Replace weak phrasing with confident, assertive alternatives:
+
+| Hedging (weak) | Assertive (strong) |
+|---------------|-------------------|
+| Feel free to reach out | Contact me / Get in touch |
+| In case you're interested | Interested? Contact me |
+| Perhaps we can work together | Let's work together |
+| Maybe we're a good fit | Add a "Who is this for?" section |
+| We might be able to help | We can help |
+| It could potentially improve | It improves |
+
+This applies across all three languages. In French: "N'hésitez pas à nous contacter" is acceptable (culturally standard), but avoid excessive hedging like "Il serait éventuellement possible de...". In Kiswahili: use direct invitations ("Wasiliana nasi" not "Labda unaweza kuwasiliana nasi").
+
+### Condescending Phrases Ban (All Languages)
+
+Never use these patterns in any language:
+- **"Research suggests that..."** — Which research? What niche? What size businesses? Too vague to be credible. Only cite research if it features your target audience and their specific problems.
+- **"If you're a business owner..."** / "Si vous êtes un entrepreneur..." / "Kama wewe ni mfanyabiashara..." — If you know your audience IS business owners, address them directly. Don't do the "if" dance.
+
+### AI Language Avoidance (All Languages)
+
+AI-generated text has recognisable vocabulary and patterns. Every piece of content must pass as entirely human-written.
+
+**Tier 1 — Banned words (instant AI tells):** delve, tapestry, landscape (as metaphor), multifaceted, testament, realm, harness, leverage, synergy, embark, navigate (as metaphor), foster, beacon, forge, unleash, pivotal, paramount, robust, vibrant, bolster, seamless, holistic, curate, resonate, underscore, showcase
+
+**Tier 2 — Overused by AI (use sparingly, never in headlines):** compelling, captivating, cutting-edge, game-changer, revolutionary, transformative, innovative, streamline, empower, unparalleled, elevate, ignite, safeguard, enduring, seamless, holistic, curate, resonate, underscore, showcase
+
+**Tier 3 — Flagged in combination (fine alone, AI-tell together):** crucial, facilitate, enhance, ensure, enable, encourage, essential, navigate, compelling, drive, embodies, emphasises. Rule: no more than one Tier 3 word per paragraph.
+
+**Banned phrases:** "In today's fast-paced world", "It's important to note", "In the realm of", "Embark on a journey", "Game-changer", "Treasure trove", "Digital landscape", "Ever-evolving", "Not only X but also Y" (overused), "X isn't just Y; it's Z", "From X to Y, [subject] has..." (listicle pattern), "Whether you're [X] or [Y]..." (false inclusivity)
+
+**Banned structural patterns:** Uniform sentence lengths (vary deliberately), "Furthermore/Moreover/Additionally" as paragraph openers, excessive em dashes (max 2 per article), three-item lists in every paragraph, present participial openers ("Leveraging our...", "Fostering an environment...")
+
+**Required human markers:** Vary sentence length (mix 4-word and 30-word sentences), take clear positions ("I recommend" not "One might consider"), use the client's own vocabulary from their docs, include strategic contractions (2-4 per 500 words in English)
+
+See `blog-writer/references/human-voice-standards.md` for the full blacklist with replacements, detailed techniques, and Voice DNA extraction process.
+
 ## English CTAs and Button Text
 
 Apply respectful tone to buttons and UI text:
@@ -151,6 +190,17 @@ Use standard French orthography:
 - Accent marks required: é, è, ê, ë, à, ù, ç, œ, æ
 - Double-check diacritical marks (many African translators omit them)
 - UTF-8 encoding mandatory
+
+### Apostrophes in Astro JSX Templates (French, Swahili, all languages)
+
+**CRITICAL:** Single-quoted JS strings inside Astro JSX expressions (`.astro` template section) CANNOT contain straight apostrophes (`'`). This breaks the build because the apostrophe terminates the string early.
+
+**Rules for any text containing apostrophes (e.g. French `d'`, `l'`, `n'`, `qu'`; Swahili `ng'`):**
+1. **Use double-quoted strings** for any JS string literal that contains an apostrophe: `"d'excellence"` not `'d\'excellence'`
+2. **Never use `\u2019` escape sequences** — Astro's template compiler may not handle them correctly
+3. **Never use backslash-escaped apostrophes** (`\'`) in JSX template expressions — they work in frontmatter JS but fail in template JSX
+4. **HTML text content is fine** — apostrophes in regular HTML `<p>d'excellence</p>` work without escaping
+5. For JSX expression strings that need both `"` and `'`, use template literals: `` `string with ' and "` ``
 
 ### Verb Conjugation
 - Use **vous** for all formal communication (not tu)
