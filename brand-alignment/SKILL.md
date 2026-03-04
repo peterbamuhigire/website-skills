@@ -16,6 +16,30 @@ Read these files in order and extract the brand signals:
 3. `docs/services.md` — what they offer and how they describe it
 4. All other `docs/*.md` — tone patterns, recurring themes, language choices
 
+### Client Language Mining
+
+Before writing anything, extract the client's vocabulary from their docs:
+
+1. **Read every file in `docs/{lang}/`** — company profile, services, pages, style brief, all of them
+2. **Write down the exact words they use** to describe: their business, their customers, their problems, their solutions, their industry
+3. **Use those words in the website copy** — the site should sound like the business owner talking, not a copywriter describing the business from outside
+4. **Note their natural register** — formal? semi-formal? technical? The site matches their voice, not yours
+
+When the business owner reads the site, they should think "that's exactly how I would say it."
+
+### Six Foundational Questions (Pre-Build Gate)
+
+Before the client provides any content, they must be able to answer these six questions. If they cannot, the website will have structural problems no amount of design can fix.
+
+1. Can you explain your offer in a couple of sentences?
+2. What is your unique value proposition? Why should someone hire you and not your competitor?
+3. Who is your ideal client — specifically?
+4. What is your strategy for getting new clients through your website?
+5. What are your current traffic sources (or expected sources)?
+6. Who are your competitors?
+
+If any answer is missing or vague, note it as a gap. The website must not paper over unclear positioning with pretty design.
+
 Answer these questions before generating any page:
 
 ### Who Is the Ideal Customer?
@@ -26,6 +50,12 @@ The ideal customer determines everything. Identify from the docs:
 - How much context or explanation do they need?
 - What language feels accessible and appropriate to them?
 - What kind of reassurance builds their trust?
+
+**Build an audience profile from real data** — if the client's docs mention: testimonials from customers, subscriber messages, survey responses, or descriptions of who buys from them, extract:
+- Their role, industry, company size, geography
+- Specific challenges and aspirations they describe
+- What triggers their decision to buy (pain points they mention)
+- What words THEY use to describe their problems (mirror these)
 
 A website that tries to speak to everyone ends up speaking clearly to no one. Every layout decision, content emphasis, and CTA should serve the identified audience.
 
@@ -39,6 +69,16 @@ Extract from the content:
 - **What feeling they want to create** — trust, warmth, authority, innovation, approachability
 
 If the docs do not make these clear, note the gaps and work with what is available. Never fabricate a brand position.
+
+### The StoryBrand Principle: Customer = Hero, Brand = Guide
+
+The customer is the hero of the story, not the brand. The brand is the guide — like Yoda to Luke Skywalker. Every page must follow this principle:
+
+- **Hero (customer):** Has a problem, desires a transformation, needs help
+- **Guide (brand):** Understands the problem, has a plan, offers a clear path forward
+- **The plan:** A named framework, process, or methodology that makes the path concrete
+
+**Application:** Never position the business as the star. Headlines speak to the customer's problem, not the brand's achievements. The About page opens with the customer's world, not the company's history. CTAs frame the customer as the one taking action, with the brand as their support.
 
 ## Homepage: Set Expectations Immediately
 
@@ -166,12 +206,21 @@ For each page, rank content by:
 
 Lead with understanding, then trust, then action. Depth supports but does not lead.
 
+### Cross-Pollination: Mix Content Across Pages
+
+Don't silo content by page type like a department store. Relevant information should appear wherever the visitor needs it:
+- Homepage: include service overview + testimonials + credibility + about snippet
+- Service pages: include relevant testimonials and case studies inline
+- About page: mention how you help, not just who you are
+- Every page making claims: include social proof next to those claims
+
 ### What to Omit or De-emphasise
 
 - Internal company milestones that do not matter to the visitor
 - Awards or certifications the audience would not recognise
 - Technical details that belong in a conversation, not a homepage
 - History sections that are longer than the service descriptions
+- Self-serving adjectives ("hard-working", "pragmatic", life mottos, "passionate about coffee") — replace with specific expertise and problem-solving evidence
 
 ## Common Brand Misalignment Pitfalls
 
@@ -185,6 +234,8 @@ Watch for and correct these patterns:
 | Visual inconsistency | Each page feels like a different website | Apply the same component patterns and spacing everywhere |
 | Buried CTAs | Visitors cannot figure out how to take action | Primary action visible on every page, above the fold |
 | Speaking to everyone | Vague value propositions that resonate with no one | Address the identified ideal customer directly |
+| Condescending phrases | "Research suggests..." or "If you're a business owner..." | State fears and benefits directly; don't lecture your audience |
+| Self-serving team bios | "Hard-working, pragmatic, passionate about coffee" | Replace with specific expertise and how they solve problems |
 
 ## Validation: The Brand Coherence Check
 
@@ -200,9 +251,21 @@ After building all pages, review the complete site against these questions:
 
 If any answer is no, identify the specific pages or sections that break coherence and correct them before proceeding to the deploy skill.
 
+### Voice Authenticity Check
+
+After the coherence check, verify the site sounds like the business — not like AI, not like a template:
+
+1. **Does the copy use the client's own vocabulary?** Words and phrases should come from their docs, not from a copywriter's toolkit. Read the client's `docs/{lang}/` files and check the site mirrors their language.
+2. **Zero AI vocabulary across all pages?** Scan every page for Tier 1 banned words (delve, tapestry, landscape, leverage, navigate, foster, realm, harness, robust, vibrant, pivotal, testament, bolster, etc.). See `blog-writer/references/human-voice-standards.md` for the full three-tier blacklist.
+3. **Would the business owner recognise their own voice?** The ultimate test. If the copy sounds like it could belong to any business in any country, it hasn't been personalised enough.
+4. **Is the voice consistent across pages?** The about page and the services page should sound like the same person wrote them. Check tone, formality, and sentence style across at least 3 pages.
+5. **Are opinions present where appropriate?** The site should take clear positions, not hedge with "could potentially" and "might consider". Measured confidence, not vague diplomacy.
+
+For individual article voice checks (burstiness, sentence rhythm, structural patterns), see the blog-writer's Human Voice Self-Check in `blog-writer/references/human-voice-standards.md`.
+
 ## How This Skill Relates to Others
 
-- **east-african-english** governs the language and tone of the words
+- **language-standards** governs the language and tone of the words
 - **design-system** governs the visual identity (fonts, colours, spacing)
 - **brand-alignment** (this skill) ensures both work together to create a coherent brand experience that serves the ideal customer
 

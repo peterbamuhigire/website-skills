@@ -277,6 +277,14 @@ A:
 4. Have design-reference analyze your competitors (so you know what to avoid)
 5. Let design-system generate unique output based on your inputs
 
+## The 80/20 Prototypicality Rule
+
+~80% of your website patterns should match niche conventions — navigation structure, colour schemes, homepage layout, content hierarchy. This is what visitors in your sector expect. Prototypical feels familiar, and familiarity evokes trust.
+
+Uniqueness comes from the remaining ~20%: distinctive fonts, accent colours, brand personality, copywriting voice, and the specific visual identity generated from your sector-brief.
+
+**Don't compare your site to famous companies** (Amazon, Apple) unless your business is at the same scale with the same audience. Only compare to websites in the same niche, similar size, with similar target audiences. Large companies A/B test their choices — their patterns are data-driven, not arbitrary.
+
 ## Next Steps
 
 1. Choose your sector from the list above

@@ -594,6 +594,7 @@ Detailed guides for SEO and AI visibility:
 - **`references/on-page-content-seo.md`** — URL slug optimisation, keyword placement rules (first 20 words, H1, H2/H3), internal linking strategy (hierarchical linking, keyword-rich anchors), outbound links, content length guidelines, meta description two-part structure, image SEO (filenames, captions), per-page audit checklist
 
 ### Core SEO Implementation
+- **`references/seo-content-writing.md`** — Keyword density rules (<1%), keyword placement, search intent types, featured snippet optimization, voice search, long-tail strategy, on-page SEO checklist, buyer-journey content alignment
 - **`references/analytics-verification.md`** — GA4 via Partytown setup, Google Search Console verification methods (meta tag + HTML file), privacy-friendly alternatives (Plausible, Umami, Fathom), troubleshooting
 - **`references/post-deploy-verification.md`** — Sitemap auto-pinging, IndexNow instant notification setup, robots.txt optimization, Nginx X-Robots-Tag headers, verify-deploy.sh script, monitoring checklist
 - **`references/webmaster-tools-setup.md`** — Complete step-by-step setup for Google Search Console, Google Business Profile, Google Analytics 4, Bing Webmaster Tools, IndexNow, Bing Places, rank tracking tools; security and privacy best practices; measurement framework; troubleshooting common issues

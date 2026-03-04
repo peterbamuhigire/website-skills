@@ -22,17 +22,23 @@ design-system/SKILL.md         ← Fonts, colours, visual identity, animations
 photo-manager/SKILL.md         ← Photo cataloguing, dimensions, logo detection, asset organisation
 page-builder/SKILL.md          ← Multi-language markdown content → Astro pages and components
 seo/SKILL.md                   ← Multi-language SEO, hreflang, language-specific sitemaps
+blog-writer/SKILL.md           ← Bilingual blog articles (EN + FR), East African English & West African French voice
 deploy/SKILL.md                ← Build verification, language-aware Nginx config, sitemap pinging
 ```
 
 ### Utility Skills
 
 ```
+seo-audit/SKILL.md                    ← Post-build SEO audit (14 categories, scored report, action items)
+blog-idea-generator/SKILL.md          ← Guided interview → 15-25 targeted blog topic ideas with titles, angles, keywords
+email-sender/SKILL.md                 ← PHP + PHPMailer contact form handler (self-hosted, 4-layer spam prevention)
+image-compression/SKILL.md            ← Build-time image compression via Sharp (runs inside photo-manager pipeline)
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
 color-selection/SKILL.md              ← Color palette design using brand colors and color theory
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
+east-african-english/SKILL.md         ← Legacy English-only standard (superseded by language-standards)
 ```
 
 Each SKILL.md uses YAML frontmatter (`name`, `description`) followed by markdown instructions that Claude reads when the skill is invoked.
@@ -45,10 +51,12 @@ Website build skills are sequential — each depends on outputs from the previou
 0.5. **design-reference** (optional) → produces `docs/design-reference.md` from up to 5 client-provided URLs
 1. **sector-strategies** (optional) → produces `docs/sector-brief.md` with industry-specific design strategy; reads 7 available sectors for distinctive, authentic sites
 2. **design-system** → produces `tailwind.config.mjs`, `src/styles/global.css`, `design-tokens.md` (shared across languages)
-3. **photo-manager** → produces `src/assets/images/` (flat directory, no subdirectories), `src/assets/images/_catalog.json`, auto-detects best logo (shared across languages)
+3. **photo-manager** (includes **image-compression**) → compresses photos via Sharp, then produces `src/assets/images/` (flat directory, no subdirectories), `src/assets/images/_catalog.json`, auto-detects best logo (shared across languages)
 4. **page-builder** → produces `src/layouts/`, `src/components/`, `src/pages/[lang]/` (per-language content from `docs/{lang}/`)
 5. **seo** → integrates multi-language SEO: hreflang tags, language-specific sitemaps, Open Graph locale tags
+5.5. **blog-writer** (optional) → produces bilingual blog articles in `docs/{lang}/blog/`, Astro blog pages, Article JSON-LD, updates blog index
 6. **deploy** → produces `dist/`, per-language directories, `deploy.sh`, language-aware `nginx.conf` with root redirect
+7. **seo-audit** (optional, post-deploy) → audits 14 SEO categories, produces scored report with prioritised action items
 
 The `website-builder` skill orchestrates this entire sequence. It reads `docs/i18n-config.md` first, then all language-specific content from `docs/{lang}/` and `photo-bank/` photos.
 
@@ -61,10 +69,14 @@ Four skills are cross-cutting — they apply throughout all steps rather than pr
 
 Utility skills run independently of the build pipeline:
 
+- **blog-idea-generator** — use before blog-writer to generate 15-25 targeted blog topic ideas; guided interview reads client docs then applies 5 ideation methods (category drilldown, buyer awareness stages, spin technique, pain point mining, customer question mapping); outputs to `blog-writer/references/topic-ideas.md`
 - **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
 - **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
 - **skill-writing** — use when creating or updating any SKILL.md
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
+- **seo-audit** — use after deploy to audit SEO across 14 categories (including voice search readiness, off-page signals, SEO measurement); produces scored report with prioritised action items
+- **email-sender** — use when adding contact forms; self-hosted PHP + PHPMailer with 4-layer spam prevention, no external services
+- **image-compression** — runs inside photo-manager pipeline; compresses photos to under 500KB via Sharp before cataloguing
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
 
 ## Required Claude Code Plugins
@@ -101,6 +113,7 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - **Text expansion awareness** — French content ~30% longer, Kiswahili ~20% longer than English; designs flex for all languages
 - **Language standards enforced** — British English, formal francophone French, East African Kiswahili; in-country reviewers approve translations
 - **Content writing standards enforced** — benefit-driven headlines, strong ledes (no throat-clearing), Fog Index 8-10 readability, niche vocabulary for authority, scannable subheads every 2-3 paragraphs, features always translated to benefits
+- **Human voice mandatory** — all content must pass as 100% human-written; 60+ AI vocabulary words banned (see `blog-writer/references/human-voice-standards.md`), sentence burstiness required, client language mining enforced; page-builder uses copywriting formulas from `page-builder/references/website-copywriting.md`
 - Mobile-first — designed for 375px, enhanced for 768px and 1280px+ (all languages)
 - Performance budget — 95+ Lighthouse per language, under 500KB first load (images shared across languages)
 - **Videos hosted on YouTube only** — never upload video files to repos or servers; clients upload to their YouTube channel and provide URLs in docs; embed via `youtube-nocookie.com` iframe with `loading="lazy"`

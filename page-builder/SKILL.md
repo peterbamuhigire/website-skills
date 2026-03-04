@@ -7,6 +7,10 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 
 Transform markdown content into stunning, production-grade Astro pages.
 
+## Copywriting Reference
+
+Before writing ANY page copy, read **`references/website-copywriting.md`** for copy formulas and **`references/conversion-design-rules.md`** for layout, CTA, and UX anti-pattern rules. Also read **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary blacklist. All generated text must sound 100% human-written.
+
 ## Universal Guidelines Reference
 
 Before building pages, review **Universal Design Guidelines** for:
@@ -28,6 +32,7 @@ This skill applies these universal content and UX principles to Astro implementa
 4. The specific `docs/{lang}/*.md` file for the page content
 5. **Universal Design Guidelines** — for content strategy and UX principles
 6. **Language Standards** — tone, grammar, and style for THIS language (from language-standards skill)
+7. **Voice DNA** — if the client has existing writing (blog posts, LinkedIn, proposals), build a voice profile before writing any copy (see `blog-writer/references/human-voice-standards.md` — Voice DNA Extraction)
 
 **Multi-Language Note:** You are building pages for ONE language at a time. The website-builder will call you once per enabled language. Read content from `docs/{lang}/` (e.g., `docs/en/`, `docs/fr/`, `docs/sw/`), not the root `docs/` directory.
 
@@ -203,7 +208,9 @@ const currentPath = new URL(Astro.request.url).pathname.replace(/^\/[a-z]{2}/, '
 Every page gets a hero. Vary the style per page:
 
 - **Homepage hero:** Full-viewport, dramatic. Background image or gradient, large display font headline, subtitle, CTA button. Consider split layout (text left, image right) or full-bleed image with overlay.
-- **Inner page hero:** Shorter (40-50vh), page title prominent, optional breadcrumb, subtle background texture or color.
+- **Inner page hero:** Shorter (40-50vh), page title prominent, optional breadcrumb, background image with overlay.
+
+**MANDATORY:** Every Hero component MUST include a `bgImage` prop with a relevant photograph and an appropriate gradient overlay (e.g. `bg-gradient-to-r from-primary-900/80 to-primary-900/40`). Plain-colour heroes without a background image are not permitted. Select a contextually appropriate photo from `src/assets/images/` for each page.
 
 ```astro
 <!-- Homepage Hero Example -->
@@ -443,27 +450,41 @@ For EVERY page in EVERY language, mentally verify:
 
 **Always apply the content-writing skill** when creating any page text. That skill defines the full copywriting standard — headlines, ledes, readability, niche vocabulary, scannable formatting, and persuasive structure.
 
+### Copywriting Standards (Mandatory)
+
+All visible text must follow `references/website-copywriting.md` and `blog-writer/references/human-voice-standards.md`:
+
+- **Headlines sell, body explains** — write all headlines first. If headings alone don't tell the story, fix them before writing body text.
+- **The Specificity Ladder** — climb from vague to specific. "We help businesses" → "We help East African SMEs" → "We build inventory systems for manufacturers with 50-200 staff"
+- **Client language mining** — read every `docs/{lang}/` file and extract the client's own words. The site should sound like the business owner talking.
+- **Zero AI vocabulary** — never use: delve, tapestry, landscape (metaphor), leverage, navigate (metaphor), foster, realm, harness, synergy, embark, beacon, robust, vibrant, pivotal, paramount, testament, bolster. See full blacklist in `blog-writer/references/human-voice-standards.md`.
+- **Outcome over feature** — "Get paid faster" not "Invoicing module". Apply the "So What?" filter to every sentence.
+- **Mirror technique on homepage** — reflect the visitor's reality before talking about the business.
+
+### Scannable Content Formatting
+
 ### Quick Reference (from content-writing skill)
 
 - **Headlines**: Benefit-driven, specific, written AFTER content. Five times more people read the headline than the body.
 - **Lede**: First 10 words hook the reader. Opening paragraph max 11 words. No throat-clearing.
-- **Readability**: Target Fog Index 8-10. Short sentences (avg 15-20 words), short paragraphs (4 lines max).
+- **Readability**: Target Fog Index 8-10. Short sentences (avg 15-20 words), short paragraphs (3-4 lines max), vary lengths.
 - **Subheads**: Every 2-3 paragraphs. Readers should understand the page by scanning subheads alone.
-- **Benefits over features**: Always translate features into reader benefits.
+- **Benefits over features**: Always translate features into reader benefits. Bullet points for features/benefits.
 - **Niche vocabulary**: Use topic-specific expert terms naturally — signals authority to readers and search engines.
 - **Visuals**: Images every 200-300 words. Captions on all images (read 2x more than body copy).
 - **Takeaways**: End blog posts and long pages with 3-5 bulleted key points.
+- Bold key terms and phrases. Adequate whitespace between sections.
 
 ### Clear Calls-to-Action
 
-Tell users exactly what to do next.
+Tell users exactly what to do next. See `references/website-copywriting.md` for page-specific CTA formulas.
 
-**CTA Best Practices:**
-- Use action language ("Get Started", "Download", "Subscribe")
+- Use specific action language ("Discuss Your Project" not "Contact Us", "See How It Works" not "Learn More")
 - Make buttons visually distinct (highest contrast)
 - Position after value prop and benefits
 - Limit 1-2 primary CTAs per section
-- Include secondary CTA for users not ready
+- CTA wording must be consistent across the site
+- Never use manipulative language ("Don't miss out!", "Act now!", "Last chance!")
 
 ## Content Parsing (Multi-Language)
 

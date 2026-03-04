@@ -412,3 +412,31 @@ After the site is built, provide the user with a replacement checklist:
 3. **Astro handles optimization.** Don't manually resize or convert formats. Just provide the originals at sufficient resolution.
 4. **Keep the catalog updated.** Every image addition or change must be reflected in _catalog.json.
 5. **Descriptive IDs.** Use kebab-case IDs that describe the content: `team-john-doe`, `hero-about-page`, `service-consulting`.
+6. **Delete from photo-bank/ after copying.** Once a photo has been copied to `src/assets/images/`, delete the original from `photo-bank/`. This prevents clutter and avoids accidentally reusing the same image in multiple places. The `src/assets/images/` copy is now the single source of truth.
+
+## Image Emotional Quality Gates
+
+Before using any image on the website, verify these three checks:
+
+1. **Will it evoke a positive emotion?** Avoid images that could trigger unintended negative associations (e.g., hospital imagery that evokes illness rather than care). Every image must evoke an emotion that helps sell.
+2. **Is the meaning unambiguous?** Make sure the image can't be misinterpreted. A fallen chess queen could mean "winning" to you and "losing" to the visitor.
+3. **Does it match the colour palette?** Especially critical for hero/header images. A dominant colour that clashes with the design system undermines the first impression.
+
+## Team Photo Quality Rules
+
+Team headshots must meet these standards:
+
+**Required:**
+- High resolution (min 400x400)
+- Plain or uncluttered background
+- Face takes up most of the frame (not standing far from camera)
+- Friendly, approachable facial expression
+- Facing straight at the camera or towards the adjacent text/CTA on the page
+
+**Banned:**
+- Low resolution or pixelated photos
+- Busy or distracting backgrounds
+- Shadows on the face
+- Looking away from the text content
+- Other people or animals in the photograph
+- Face taking up too little space (full-body shot where face is tiny)
