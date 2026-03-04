@@ -29,6 +29,7 @@ deploy/SKILL.md                ← Build verification, language-aware Nginx conf
 
 ```
 seo-audit/SKILL.md                    ← Post-build SEO audit (14 categories, scored report, action items)
+blog-idea-generator/SKILL.md          ← Guided interview → 15-25 targeted blog topic ideas with titles, angles, keywords
 email-sender/SKILL.md                 ← PHP + PHPMailer contact form handler (self-hosted, 4-layer spam prevention)
 image-compression/SKILL.md            ← Build-time image compression via Sharp (runs inside photo-manager pipeline)
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
@@ -66,6 +67,7 @@ Three skills are cross-cutting — they apply throughout all steps rather than p
 
 Utility skills run independently of the build pipeline:
 
+- **blog-idea-generator** — use before blog-writer to generate 15-25 targeted blog topic ideas; guided interview reads client docs then applies 5 ideation methods (category drilldown, buyer awareness stages, spin technique, pain point mining, customer question mapping); outputs to `blog-writer/references/topic-ideas.md`
 - **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
 - **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
 - **skill-writing** — use when creating or updating any SKILL.md
