@@ -1,6 +1,6 @@
 # Writing Craft Reference — Blog Writer Skill
 
-Principles distilled from *7 Steps to Better Writing* (Maxwell) and *Developing Quality Technical Information* (Hargis, Carey et al.).
+Principles distilled from *7 Steps to Better Writing* (Maxwell), *Developing Quality Technical Information* (Hargis, Carey et al.), *Fundamentals of Writing* (Lima), *How to Write and Sell Simple Information* (Bly), and *Writing for Profit* (Graves).
 
 ---
 
@@ -55,6 +55,14 @@ Every article longer than 500 words needs a deliberate arc, not just a topic fol
 
 **Full circle ending:** The ending reconnects to the opening. If you opened with a poster child, bring them back in the final paragraphs. If you opened with a scene, return to it transformed. Readers feel closure and reward. The article feels planned, not abandoned.
 
+**Other ending techniques** (use when full circle doesn't fit):
+- **Forward-looking** — point to what comes next, a future trend, or the reader's next step
+- **The call-back** — reference a specific detail from the body (not the opening) that crystallises the main point
+- **The question** — leave the reader with a thought-provoking question that lingers
+- **The action ending** — close with a concrete, specific instruction the reader can execute today
+- **The quotation** — end with a powerful quote from an expert or the subject of the article
+- **Summary-with-a-twist** — recap the main point, then add one final insight that reframes everything
+
 **Thematic glue:** Words from the same thematic set — including opposites — hold an article together. Before/after, problem/solution, old/new, easy/hard should echo through the piece. Using related or contrasting concepts in the opening and closing creates subconscious coherence.
 
 ---
@@ -67,11 +75,58 @@ Choose the pattern that best serves the article's purpose:
 |---------|-------------|-----------|
 | **Problem/Solution** | Most blog articles | State problem → describe impact → identify causes → propose solutions → justify best one |
 | **What/Why/How** | Educational articles | Introduce concept → demonstrate importance with examples → show how to apply it |
-| **Chronological** | Experience stories | Events in time order, with lessons drawn |
-| **List** | Practical guides | Enumerated points with supporting evidence |
+| **Chronological** | Experience stories, case studies | Events in time order, with lessons drawn |
+| **List** | Practical guides, roundups | Enumerated points with supporting evidence |
 | **Persuading** | Opinion pieces | Establish credibility → explain importance → show reader benefit → call to action |
+| **Question & Answer** | FAQ-style, common objections | Series of questions readers are likely to have, each answered in turn |
+| **Deductive** | Expert analysis, editorials | Lead with a generalisation → support with evidence and examples |
+| **Inductive** | Research-based, discovery pieces | Begin with specific instances → lead to the principles they suggest |
+| **Order of difficulty** | Tutorials, training content | Start easy → build to complex. Reader experiences early success. |
+| **Inverted pyramid** | News-style, data-driven posts | Most important facts first → expand in decreasing importance. Can be cut from the bottom. |
 
 **Unity rule:** Every article focuses on ONE big idea. Every paragraph supports that idea. If a paragraph does not contribute, cut it.
+
+---
+
+## Four Levels of How-To Depth
+
+When writing educational content, aim for the deepest level appropriate:
+
+| Level | What it does | Example |
+|-------|-------------|---------|
+| **Why to do it** | Motivates. Explains why something matters. | "Why every business needs inventory software" |
+| **What to do** | Tells the reader what actions to take (surface). | "Track your stock levels weekly" |
+| **How to do it** | Shows step-by-step instructions. | "Open Settings → Inventory → Set reorder points → Configure alerts" |
+| **Do it for them** | Provides templates, tools, checklists the reader can copy. | Downloadable reorder-point calculator spreadsheet |
+
+Most lazy content stops at "what to do." The best articles reach "how to do it" at minimum, and ideally "do it for them" by providing templates, checklists, decision trees, or model documents.
+
+**Quick-start pattern:** For long how-to articles, include a numbered summary at the top (each step in 1-2 sentences). The reader learns the gist in under 2 minutes, then dives into detail sections.
+
+---
+
+## Show vs Tell
+
+Telling relies on flat exposition: "The implementation was difficult." Showing uses evocative description that lets the reader experience it: "Three developers quit in the first month. The database crashed twice on launch day. By week six, the client called at 2am asking if we could start over."
+
+**Rules:**
+- Show in stories and openings. Tell in summaries and transitions.
+- Replace adjectives ("difficult", "impressive", "successful") with the evidence that proves them.
+- If you write "significant" or "major" — cut it and add a number instead.
+
+---
+
+## Seven Writing Mistakes to Avoid
+
+1. **Laziness** — not doing the research. Saying "there's no good answer" when there is. The writer's job is to find the answer.
+2. **"Google it" redirects** — telling the reader to look something up instead of presenting it. The reader came to you for the answer.
+3. **Logical contradictions** — statements that cannot both be true within the same piece.
+4. **Rambling** — using many words to say nothing. If 135 words boil down to "metrics are important," write that.
+5. **Content-free filler** — "To have a career in marketing, you need to study marketing." Obvious statements waste the reader's time.
+6. **Content overload** — cramming every fact found on Google into the article. Curate; don't dump.
+7. **Running out of steam** — starting strong, then declining in quality. Later sections get thinner, less detailed, less useful. Budget energy across the whole article.
+
+**Content selectivity rule:** In each section, include only facts that prove, illustrate, or support your points. Omit everything else. Don't fall in love with research materials.
 
 ---
 
@@ -308,6 +363,28 @@ Fix the biggest problems first. Do not polish punctuation while whole sections n
 
 ---
 
+## Subheading Craft
+
+Subheadings (h2, h3) serve three audiences simultaneously: scanners, deep readers, and search engines. They deserve as much craft as headlines.
+
+**Rules:**
+- Each subheading should be **descriptive yet intriguing** — tell the reader what the section covers while making them want to read it
+- A reader scrolling through headings alone should get the article's key points
+- Use sentence case for h2/h3 (capitalise only the first word)
+- Vary subheading structure: mix questions, statements, commands, and phrases
+- Include a target keyword in at least one h2
+
+**Test:** After writing, scroll through reading only the headings. If they tell the whole story by themselves, the article body lacks depth. Good headings hint at the point but don't give everything away.
+
+| Weak subheading | Strong subheading |
+|-----------------|-------------------|
+| "Implementation" | "Why most implementations fail in the first month" |
+| "Benefits" | "Three benefits your CFO actually cares about" |
+| "Step 3" | "Step 3: Configure your reorder points (the step everyone skips)" |
+| "Our approach" | "How we cut reconciliation time from 3 days to 3 hours" |
+
+---
+
 ## Audience Awareness
 
 Before writing, answer:
@@ -352,41 +429,11 @@ Every article section should answer: **"What can the reader do with this?"**
 
 ---
 
-## Concise Writing Techniques (from Whitmell)
+## Additional Concise Writing Rules
 
-### Wordy Phrases to Replace
+**Intensifiers that weaken:** Delete unless they genuinely change the meaning: absolutely, actually, basically, certainly, completely, definitely, fairly, just, of course, particularly, perfectly, quite, really, significantly, simply, some, specifically, totally, very. **Test:** remove the word — if the meaning is unchanged, keep it deleted.
 
-| Wordy | Concise |
-|-------|---------|
-| at this point in time | now |
-| in order to | to |
-| due to the fact that | because |
-| it is important to note that | (delete — just state the point) |
-| a large number of | many |
-| in the event that | if |
-| with regard to | about |
-| on a daily basis | daily |
-| in the near future | soon |
-| for the purpose of | to / for |
-| in spite of the fact that | although |
-
-### Intensifiers That Weaken
-
-Remove these unless they genuinely change the meaning: absolutely, actually, basically, certainly, completely, definitely, fairly, just, of course, particularly, perfectly, quite, really, significantly, simply, some, specifically, totally, very.
-
-**Test:** Delete the intensifier. Read the sentence. If the meaning is unchanged, keep it deleted.
-
-### Linking for Flow
-
-Every paragraph must logically connect to the one before it. Use transition words consciously:
-
-- **Adding:** furthermore, moreover, in addition
-- **Contrasting:** however, nevertheless, on the other hand
-- **Cause/result:** because, therefore, consequently, as a result
-- **Sequencing:** firstly, next, then, finally
-- **Examples:** for instance, for example, such as, in particular
-
-If two consecutive paragraphs have no linking word and no logical bridge, the structure needs revision.
+**Additional wordy phrases:** a large number of → many; with regard to → about; on a daily basis → daily; in the near future → soon; for the purpose of → to/for; in spite of the fact that → although.
 
 ---
 
