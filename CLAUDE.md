@@ -13,6 +13,7 @@ This is a **Claude Code skills library** — a collection of SKILL.md files that
 ```
 i18n/SKILL.md                  ← Multi-language infrastructure (en, fr, sw) → docs/i18n-config.md
 language-standards/SKILL.md    ← Language & tone standards (3 languages: cross-cutting, always active)
+content-writing/SKILL.md       ← Copywriting standards: headlines, ledes, readability, niche vocabulary (cross-cutting, always active)
 brand-alignment/SKILL.md       ← Brand coherence quality gate (cross-cutting, always active)
 design-reference/SKILL.md      ← Analyses reference URLs → docs/design-reference.md
 sector-strategies/SKILL.md     ← Industry-specific design & trust signals → docs/sector-brief.md
@@ -51,10 +52,11 @@ Website build skills are sequential — each depends on outputs from the previou
 
 The `website-builder` skill orchestrates this entire sequence. It reads `docs/i18n-config.md` first, then all language-specific content from `docs/{lang}/` and `photo-bank/` photos.
 
-Three skills are cross-cutting — they apply throughout all steps rather than producing specific files:
+Four skills are cross-cutting — they apply throughout all steps rather than producing specific files:
 
 - **i18n** — defines language infrastructure, URL routing, language-specific sitemaps
 - **language-standards** — all generated text in each language must follow standards (English: British spelling, formal tone; French: formal francophone African; Kiswahili: East African standard)
+- **content-writing** — copywriting standards for all website text: benefit-driven headlines, strong ledes, readability (Fog Index 8-10), niche vocabulary, scannable formatting, features-to-benefits translation, and page structure templates
 - **brand-alignment** — every page must reflect the client's brand identity, speak to their ideal customer, and maintain consistent messaging, visual treatment, and CTAs across the entire site and all languages
 
 Utility skills run independently of the build pipeline:
@@ -98,6 +100,7 @@ Sites built by these skills use: Astro (static site generator), Tailwind CSS v4,
 - Content comes only from `docs/{lang}/` markdown — Claude never fabricates company information; all languages complete before build
 - **Text expansion awareness** — French content ~30% longer, Kiswahili ~20% longer than English; designs flex for all languages
 - **Language standards enforced** — British English, formal francophone French, East African Kiswahili; in-country reviewers approve translations
+- **Content writing standards enforced** — benefit-driven headlines, strong ledes (no throat-clearing), Fog Index 8-10 readability, niche vocabulary for authority, scannable subheads every 2-3 paragraphs, features always translated to benefits
 - Mobile-first — designed for 375px, enhanced for 768px and 1280px+ (all languages)
 - Performance budget — 95+ Lighthouse per language, under 500KB first load (images shared across languages)
 - **Videos hosted on YouTube only** — never upload video files to repos or servers; clients upload to their YouTube channel and provide URLs in docs; embed via `youtube-nocookie.com` iframe with `loading="lazy"`
