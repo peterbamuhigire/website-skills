@@ -441,30 +441,18 @@ For EVERY page in EVERY language, mentally verify:
 
 ## Content Best Practices
 
-### Scannable Content Formatting
+**Always apply the content-writing skill** when creating any page text. That skill defines the full copywriting standard — headlines, ledes, readability, niche vocabulary, scannable formatting, and persuasive structure.
 
-Users scan, they don't read. Format all content for quick comprehension:
+### Quick Reference (from content-writing skill)
 
-**Formatting Rules:**
-- Descriptive headings (tell story in headlines)
-- Bullet points for features/benefits (break up paragraphs)
-- Short paragraphs (3-4 lines maximum)
-- Bold key terms and phrases
-- Images/visuals every 200-300 words
-- Adequate whitespace between sections
-
-**Content Structure:**
-```
-Headline (value prop)
-↓
-2-3 short paragraphs (context)
-↓
-Bullet points (benefits/features)
-↓
-Visual break (image/graphic)
-↓
-CTA or next section
-```
+- **Headlines**: Benefit-driven, specific, written AFTER content. Five times more people read the headline than the body.
+- **Lede**: First 10 words hook the reader. Opening paragraph max 11 words. No throat-clearing.
+- **Readability**: Target Fog Index 8-10. Short sentences (avg 15-20 words), short paragraphs (4 lines max).
+- **Subheads**: Every 2-3 paragraphs. Readers should understand the page by scanning subheads alone.
+- **Benefits over features**: Always translate features into reader benefits.
+- **Niche vocabulary**: Use topic-specific expert terms naturally — signals authority to readers and search engines.
+- **Visuals**: Images every 200-300 words. Captions on all images (read 2x more than body copy).
+- **Takeaways**: End blog posts and long pages with 3-5 bulleted key points.
 
 ### Clear Calls-to-Action
 

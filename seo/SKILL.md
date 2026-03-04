@@ -494,16 +494,23 @@ Generated: [Date]
 
 ## Validation Rules
 
-1. **Title tags:** 50-60 characters max. Flag any exceeding 60.
-2. **Meta descriptions:** 150-160 characters max. Flag any exceeding 160.
-3. **One H1 per page.** H1 should match (closely) the `<title>` tag.
-4. **Heading hierarchy:** No skipped levels (no H1 → H3).
-5. **Internal links:** Every page reachable within 2 clicks from homepage.
-6. **Alt text:** Every image has meaningful alt text (not empty unless decorative).
-7. **Canonical URLs:** Every page has a canonical (Astro does this by default).
-8. **JSON-LD validity:** No trailing commas, proper escaping, valid syntax.
-9. **No duplicate titles/descriptions:** Every page must be unique.
-10. **Schema types accuracy:** Use most specific type (e.g., `LegalService` not `LocalBusiness` for law firms).
+1. **Title tags:** 50-60 characters max. Primary keyword at the beginning, not the end. Flag any exceeding 60.
+2. **Meta descriptions:** 150-155 characters. Write in two parts: first 120 chars compelling for mobile, full 155 for desktop. Include CTA.
+3. **One H1 per page.** H1 must contain primary keyword and closely match the `<title>` tag.
+4. **Heading hierarchy:** No skipped levels (no H1 → H3). H2/H3 should contain secondary/related keywords naturally.
+5. **First 20 words:** Primary keyword must appear within the first sentence or first 20 words of body copy.
+6. **URL slugs:** Short, keyword-included, hyphens only, no stop words, lowercase. Match the page title.
+7. **Internal links:** Every page reachable within 2 clicks from homepage. 2-5 internal links per page body with keyword-rich anchor text (never "click here").
+8. **Outbound links:** 1-2 links to authoritative external sources per page where relevant.
+9. **Alt text:** Every image has meaningful alt text (not empty unless decorative). Primary keyword in at least one image ALT per page.
+10. **Image filenames:** Descriptive, keyword-rich filenames before upload (`banana-research-lab.jpg` not `IMG_4523.jpg`).
+11. **Canonical URLs:** Every page has a canonical (Astro does this by default).
+12. **JSON-LD validity:** No trailing commas, proper escaping, valid syntax.
+13. **No duplicate titles/descriptions:** Every page must be unique.
+14. **Schema types accuracy:** Use most specific type (e.g., `LegalService` not `LocalBusiness` for law firms).
+15. **Content length:** Pages must meet minimum word counts (see `references/on-page-content-seo.md`). Thin pages (<300 words) flagged.
+
+**Full on-page checklist:** See `references/on-page-content-seo.md` for the complete per-page audit.
 
 ---
 
@@ -582,6 +589,9 @@ After running this skill, the project has:
 ## Reference Files
 
 Detailed guides for SEO and AI visibility:
+
+### On-Page Content SEO
+- **`references/on-page-content-seo.md`** — URL slug optimisation, keyword placement rules (first 20 words, H1, H2/H3), internal linking strategy (hierarchical linking, keyword-rich anchors), outbound links, content length guidelines, meta description two-part structure, image SEO (filenames, captions), per-page audit checklist
 
 ### Core SEO Implementation
 - **`references/analytics-verification.md`** — GA4 via Partytown setup, Google Search Console verification methods (meta tag + HTML file), privacy-friendly alternatives (Plausible, Umami, Fathom), troubleshooting
