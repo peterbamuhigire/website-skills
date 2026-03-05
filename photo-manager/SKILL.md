@@ -178,6 +178,9 @@ Interpret filenames to determine category and usage:
 - `logo-*` → `branding/` (auto-detects best logo)
 - `favicon-*`, `icon-*` → `branding/`
 
+**HD / OG Image Candidates:**
+- `*-HD.jpg`, `*-HD.png` → `og/` (high-definition images for Open Graph; prefer these for og:image tags)
+
 **Page Heroes:**
 - `hero-*`, `banner-*`, `bg-*` → `hero/`
 
@@ -413,6 +416,22 @@ After the site is built, provide the user with a replacement checklist:
 4. **Keep the catalog updated.** Every image addition or change must be reflected in _catalog.json.
 5. **Descriptive IDs.** Use kebab-case IDs that describe the content: `team-john-doe`, `hero-about-page`, `service-consulting`.
 6. **Delete from photo-bank/ after copying.** Once a photo has been copied to `src/assets/images/`, delete the original from `photo-bank/`. This prevents clutter and avoids accidentally reusing the same image in multiple places. The `src/assets/images/` copy is now the single source of truth.
+
+## OG Image Selection (Mandatory Per Page)
+
+Every page and blog post MUST have a unique `og:image`. Never rely on a single site-wide default.
+
+**Selection priority:**
+1. **HD photos** — search photo-bank for `*-HD.jpg` / `*-HD.png` files first; these are uploaded specifically for social sharing
+2. **Hero images** — the page's hero/banner image, if ≥1200px wide
+3. **Featured image** — for blog posts, the article's featured image
+4. **Best available** — highest-resolution photo from the page's content category
+
+**Requirements:**
+- Minimum 1200×630px (ideal OG image dimensions)
+- Must be relevant to the page content
+- Pass to BaseLayout via `ogImage` prop: `<BaseLayout ogImage={selectedImage.src}>`
+- Record in `_catalog.json` with `"role": "og-image"` and `"used_in": ["og:image"]`
 
 ## Image Emotional Quality Gates
 
