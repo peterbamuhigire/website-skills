@@ -212,6 +212,19 @@ The footer appears on every page — don't leave it empty. Include what's releva
 
 ---
 
+## OG Image — Mandatory Per Page
+
+Every page and blog post MUST pass a unique `ogImage` to BaseLayout. The site-wide `/og-image.png` default is a **fallback only** — it should never be the final value for any published page.
+
+**Page builder must:**
+1. Search `_catalog.json` for HD images (`*-HD.jpg`) or hero images matching the page
+2. Pass the best match via `<BaseLayout ogImage={img.src}>`
+3. For blog posts, always use the article's featured image
+
+If no suitable image exists, flag it in the replacement checklist as a missing OG image.
+
+---
+
 ## 80/20 Prototypicality Rule
 
 ~80% of website patterns should match niche conventions (navigation structure, colour schemes, homepage layout, content hierarchy). Uniqueness comes from the remaining ~20% — distinctive fonts, accent colours, brand personality, copywriting voice.

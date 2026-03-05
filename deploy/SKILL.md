@@ -244,7 +244,9 @@ Output this checklist for the user:
 - [ ] Company contact info verified in docs/{lang}/company-profile.md (all languages)
 - [ ] All links working and using correct language paths (/en/, /fr/, /sw/)
 - [ ] Favicon uploaded to public/favicon.svg
-- [ ] OG image uploaded to public/og-image.png (1200x630px)
+- [ ] Every page has a unique OG image (≥1200x630px) — no page uses default fallback
+- [ ] HD images (*-HD.jpg) from photo-bank prioritised for OG where available
+- [ ] Fallback OG image uploaded to public/og-image.png (1200x630px) — emergency default only
 - [ ] Meta descriptions set for all pages in all languages
 
 ### Server Setup
