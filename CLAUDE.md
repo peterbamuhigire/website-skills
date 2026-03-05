@@ -35,6 +35,7 @@ email-sender/SKILL.md                 ← PHP + PHPMailer contact form handler (
 image-compression/SKILL.md            ← Build-time image compression via Sharp (runs inside photo-manager pipeline)
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
 color-selection/SKILL.md              ← Color palette design using brand colors and color theory
+sales-copywriting/SKILL.md            ← Persuasion and conversion copywriting (hybrid: cross-cutting headlines/CTAs + on-demand PASTOR/4P's for sales pages)
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
@@ -72,6 +73,7 @@ Utility skills run independently of the build pipeline:
 - **blog-idea-generator** — use before blog-writer to generate 15-25 targeted blog topic ideas; guided interview reads client docs then applies 5 ideation methods (category drilldown, buyer awareness stages, spin technique, pain point mining, customer question mapping); outputs to `blog-writer/references/topic-ideas.md`
 - **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
 - **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
+- **sales-copywriting** — hybrid persuasion skill: cross-cutting core (headlines, CTAs, anti-resistance, proof integration) applies to all pages; sales frameworks (PASTOR, 4 P's, guarantees, fascination bullets) activate for landing/sales pages; Level 2 persuasion default
 - **skill-writing** — use when creating or updating any SKILL.md
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
 - **seo-audit** — use after deploy to audit SEO across 14 categories (including voice search readiness, off-page signals, SEO measurement); produces scored report with prioritised action items

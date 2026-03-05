@@ -72,6 +72,9 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   ├── SKILL.md
 │   ├── references/          (8 detailed color theory and application guides)
 │   └── scripts/
+├── sales-copywriting/       Persuasion and conversion copywriting (hybrid cross-cutting + on-demand)
+│   ├── SKILL.md
+│   └── references/          (5 reference guides: headlines, bullets, resistance, PASTOR/4Ps, closing)
 ├── east-african-english/    English-only language standard (legacy — see language-standards)
 │   └── SKILL.md
 ├── skill-writing/           Guide for creating and updating skills (utility)
@@ -200,6 +203,14 @@ Transforms brand colors into harmonious website color palettes using 7 color the
 
 **Produces:** Color palette with semantic tokens, CSS variables, Tailwind config, WCAG compliance report
 
+### sales-copywriting (Persuasion & Conversion Copywriting)
+
+Hybrid skill: cross-cutting core principles (headline craft, CTA formulas, anti-resistance writing, proof integration) apply to all pages built by page-builder and blog-writer. Sales-specific frameworks (PASTOR, 4 P's, fascination bullets, named guarantees, value anchoring) activate for landing pages, sales pages, and product pages. Level 2 persuasion (confident, professional) is the default ceiling.
+
+**Reference Files:** 5 guides (headline mastery, 21 fascination bullet templates, resistance & objection handling, PASTOR & 4 P's frameworks, closing templates & guarantee formulas)
+
+**Sources:** Ray Edwards, Paul Hollingshead (AWAI), Angie T. Lee
+
 ### skill-writing (Utility — Skill Creation Guide)
 
 Guide for creating effective skills. Covers skill anatomy (YAML frontmatter, body, bundled resources), progressive disclosure design, the 500-line hard limit, and a six-step creation process. Use when creating or updating any SKILL.md in this repo.
@@ -254,6 +265,7 @@ website-builder
 Utility skills (not part of the build pipeline):
   policy-pages               ← use when creating Privacy Policy and Terms of Use pages (per-language)
   color-selection            ← use when defining color palettes (shared across languages)
+  sales-copywriting          ← cross-cutting headlines/CTAs + on-demand PASTOR/4P's for sales pages
   email-sender               ← use when adding contact forms (self-hosted PHP + PHPMailer)
   image-compression          ← runs inside photo-manager pipeline (Sharp, under 500KB)
   skill-writing              ← use when creating/updating any SKILL.md
