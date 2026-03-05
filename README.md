@@ -53,11 +53,14 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 ├── seo/                     SEO configuration, meta tags, JSON-LD schema, sitemap
 │   ├── SKILL.md
 │   └── docs-seo-template.md
-├── blog-writer/             SEO-optimised bilingual blog articles with featured images
+├── blog-writer/             SEO-ready bilingual blog articles with format templates and quality gates
 │   ├── SKILL.md
-│   └── references/          (8 writing craft, voice standards, and content strategy guides)
+│   └── references/          (9 writing craft, voice standards, content strategy, and format guides)
 ├── deploy/                  Builds, verifies, generates deployment configuration
 │   └── SKILL.md
+├── blog-idea-generator/     Adaptive 20-method ideation → 15-25 blog ideas with 200-word summaries
+│   ├── SKILL.md
+│   └── references/          (ideation frameworks, content formats)
 ├── policy-pages/            Privacy Policies & Terms of Use (legal, trust, compliance)
 │   ├── SKILL.md
 │   └── references/
@@ -169,9 +172,9 @@ Runs `npm run build`, verifies output for all language versions, checks for brok
 
 ### blog-writer (Content Marketing — Blog Articles)
 
-Generates SEO-optimised, bilingual blog articles with featured images, in-article photography, and distinctive per-article design. Each article is a marketing asset — a demonstration of expertise that builds trust and attracts clients through organic search. Reads company profile for author voice, scans photo-bank for article images, creates content in `docs/{lang}/blog/`, builds Astro blog pages with Article JSON-LD, and updates the blog index. Every article gets a unique layout variation to prevent visual monotony.
+Generates SEO-ready bilingual blog articles with featured images, in-article photography, and distinctive per-article design. Each article is a marketing asset — a demonstration of expertise that builds trust and attracts clients through organic search. Step 0 reads idea summaries from blog-idea-generator (audience, format, angle, SEO keywords); 7 format-specific structural templates (How-to, Case study, List, Opinion, Guide, Story, Comparison) guide article structure; quality gate verifies alignment before design. Reads company profile for author voice, scans photo-bank for article images, creates content in `docs/{lang}/blog/`, builds Astro blog pages with Article JSON-LD, and updates the blog index.
 
-**Reference Files:** `human-voice-standards.md`, `writing-craft.md`, `content-strategy.md`, `reader-experience.md`, `storytelling.md`, `editorial-standards.md`, `article-design.md`, `topic-ideas.md`
+**Reference Files:** `human-voice-standards.md`, `writing-craft.md` (+ 7 format templates), `content-strategy.md` (+ calendar planning, seasonal mapping, cross-language planning), `reader-experience.md`, `storytelling.md`, `editorial-standards.md`, `article-design.md`, `ideation-and-research.md`, `topic-ideas.md`
 
 **Produces:** Blog articles in `docs/{lang}/blog/`, Astro pages in `src/pages/{lang}/blog/`, Article JSON-LD, updated blog index
 
@@ -202,6 +205,16 @@ Transforms brand colors into harmonious website color palettes using 7 color the
 **Scripts:** `palette_generator.py` — generates any scheme from hex color
 
 **Produces:** Color palette with semantic tokens, CSS variables, Tailwind config, WCAG compliance report
+
+### blog-idea-generator (Blog Ideation Engine)
+
+Generates 15-25 targeted blog post ideas with 200-word hybrid summaries (narrative brief + structured specs). Reads all client docs, assesses available information across 6 dimensions, then adaptively selects 5-7 methods from a 20-method library. Guided interview fills gaps. Each idea includes audience, buyer stage, format, angle, key points, CTA goal, SEO keywords, and tier classification. Output feeds directly into blog-writer Step 0.
+
+**Reference Files:** `ideation-frameworks.md` (20-method library with selection logic), `content-formats.md` (20 formats with structural templates)
+
+**Produces:** `blog-writer/references/topic-ideas.md`
+
+**Trigger phrases:** "Generate blog ideas", "What should I blog about?", "Blog topic ideas", "Content ideas"
 
 ### sales-copywriting (Persuasion & Conversion Copywriting)
 
@@ -379,13 +392,9 @@ git push
 ### Updating ALL client projects at once
 
 ```bash
-# If all your projects are in a clients/ folder:
 for project in clients/*/; do
-  echo "=== Updating $project ==="
   (cd "$project" && git submodule update --remote .claude/skills \
-    && git add .claude/skills \
-    && git commit -m "Update website skills" \
-    && git push) || echo "  Skipped (no changes or error)"
+    && git add .claude/skills && git commit -m "Update website skills" && git push) 2>/dev/null
 done
 ```
 
@@ -393,51 +402,21 @@ done
 
 ## Project Structure (Client Side)
 
-Every client project that uses these skills should have this structure:
+Use `new-project.sh` (Linux/macOS) or `new-project.ps1` (Windows) to create this structure automatically.
 
 ```
 client-project/
 ├── CLAUDE.md                  # Project intelligence for Claude Code
-├── .gitmodules                # Auto-generated, references this repo
-├── .claude/
-│   └── skills/                # ← THIS REPO (submodule)
+├── .claude/skills/            # ← THIS REPO (submodule)
 ├── docs/                      # Client content (markdown)
 │   ├── i18n-config.md         # Language configuration (en, fr, sw)
-│   ├── seo.md                 # SEO meta tags and structured data
-│   ├── en/                    # English content (source language)
-│   │   ├── company-profile.md #   Core (required)
-│   │   ├── pages.md           #   Core (required)
-│   │   ├── style-brief.md     #   Core (required)
-│   │   ├── services.md        #   Recommended
-│   │   ├── team-profiles.md   #   Recommended
-│   │   ├── contact.md         #   Recommended
-│   │   ├── testimonials.md    #   Optional
-│   │   ├── portfolio.md       #   Optional
-│   │   ├── faq.md             #   Optional
-│   │   ├── about-story.md     #   Optional
-│   │   └── gallery.md         #   Optional
+│   ├── en/                    # English: company-profile.md, pages.md, style-brief.md (required) + optional files
 │   ├── fr/                    # French content (translated from en/)
 │   └── sw/                    # Kiswahili content (translated from en/)
-├── photo-bank/                # Raw client photos (shared across languages)
-│   ├── branding/              #   Logos, brand marks
-│   ├── hero/                  #   Hero/banner images
-│   ├── team/                  #   Team headshots
-│   ├── services/              #   Service images
-│   ├── gallery/               #   Portfolio images
-│   ├── about/                 #   About page images
-│   ├── testimonials/          #   Client photos
-│   └── misc/                  #   Other images
+├── photo-bank/                # Raw client photos: branding/, hero/, team/, services/, gallery/, about/, testimonials/, misc/
 ├── public/                    # Static assets (favicon, og-image)
-└── src/                       # Generated by Claude Code
-    ├── assets/images/         #   Processed photos with _catalog.json
-    ├── components/            #   Shared Astro components
-    ├── layouts/               #   Page layouts (accept lang prop)
-    ├── pages/                 #   Per-language pages (en/, fr/, sw/)
-    ├── styles/                #   Global CSS and design tokens
-    └── utils/                 #   i18n utilities
+└── src/                       # Generated by Claude Code (assets, components, layouts, pages, styles, utils)
 ```
-
-Use `new-project.sh` (Linux/macOS) or `new-project.ps1` (Windows) to create this structure automatically.
 
 ---
 
@@ -503,6 +482,8 @@ Track significant skill improvements here.
 | 2026-03-01 | blog-writer, seo-audit | Bilingual blog skill; SEO audit (11 categories); human voice standards (60+ AI words banned) |
 | 2026-03-02 | seo-audit | Enhanced from 11→14 categories (voice search, off-page, measurement); new seo-measurement-guide.md; major expansions to all reference files |
 | 2026-03-02 | seo, page-builder, blog-writer, brand-alignment | Premium content: copywriting formulas (H.O.B.O., PAPA, Uncle B.E.N.), R.E.S.U.L.T.S. framework, StoryBrand, SEO content writing rules |
+| 2026-03-05 | sales-copywriting | New hybrid skill: 5 reference files, PASTOR/4P's, fascination bullets, guarantees, anti-resistance; enhanced storytelling.md, writing-craft.md, website-copywriting.md |
+| 2026-03-05 | blog-idea-generator, blog-writer | Adaptive 20-method ideation, 200-word summaries, 20 content formats; blog-writer Step 0, 7 format templates, quality gate, calendar/seasonal/cross-language planning |
 
 ---
 

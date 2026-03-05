@@ -218,26 +218,13 @@ Structure: problem statement + why the current approach fails + the alternative 
 - **November-December:** Year-end reflection — lessons learned, trends for next year
 
 ### Guest Posting (Future)
-Once 6-8 strong articles are published on techguypeter.com:
-1. Pitch shorter versions to East African business publications
-2. Contribute to technology blogs and LinkedIn articles
-3. Each guest post links back to the full article on techguypeter.com
-4. This builds external links (SEO pillar 3) and brand visibility
+After 6-8 published articles, pitch shorter versions to East African business publications and LinkedIn — each linking back to the full article on techguypeter.com to build external links (SEO pillar 3).
 
 ---
 
 ## Measuring Success
 
-Track these metrics once the blog is live:
-
-| Metric | What It Tells You | Target |
-|--------|-------------------|--------|
-| Organic search traffic | Are articles ranking? | Growing month over month |
-| Time on page | Are readers engaged? | Over 3 minutes per article |
-| Bounce rate | Do readers explore further? | Under 60% |
-| Contact form submissions | Are articles generating leads? | 1-2 per month from blog |
-| Social shares | Is content resonating? | Any shares = good signal |
-| Keyword rankings | Which terms are we ranking for? | First page for target long-tails |
+Track organic search traffic (growing MoM), time on page (3+ min), bounce rate (under 60%), contact form submissions (1-2/month from blog), and keyword rankings (first page for target long-tails). For comprehensive post-launch measurement, run the **seo-audit** skill which covers all 14 SEO categories with scored reporting.
 
 ---
 
@@ -411,6 +398,76 @@ Map keywords to the buyer's journey stage to ensure content covers the full funn
 **Marketing triggers** drive movement between stages — events that push prospects from one stage to the next. For each stage, identify what trigger causes a search, what terms it generates, and create content targeting those terms.
 
 **Website visitor intent distribution:** Only 5% of visitors are ready to buy. 25% are considering, 40% are not yet considering, 15% are thinking about considering, and 15% believe they're not in the market. Content marketing's job is to move the 95% through the funnel.
+
+---
+
+## Content Calendar Planning Framework
+
+### Building a 6-Month Content Calendar
+
+1. **Audit existing content** — list all published articles, their topics, formats, and performance
+2. **Map to buyer journey** — ensure coverage across all 5 stages (no awareness → action)
+3. **Assign tiers** — balance SEO drivers (Tier 1), authority builders (Tier 2), and thought leadership (Tier 3)
+4. **Alternate formats** — never publish the same format twice in a row (e.g., How-to → Case Study → List → Opinion)
+5. **Schedule by priority** — Tier 1 articles first (they compound SEO value over time)
+6. **Leave flex slots** — reserve 1 slot per quarter for timely/reactive content
+
+### Publishing Cadence by Blog Maturity
+
+| Stage | Articles Published | Recommended Pace | Focus |
+|-------|-------------------|-----------------|-------|
+| Launch | 0-5 | 4/month (intensive) | Pillar content + Tier 1 SEO articles |
+| Growth | 6-15 | 2-3/month | Mix all tiers, start series |
+| Established | 16+ | 2/month | Maintain cadence, update old articles |
+
+---
+
+## Seasonal and Event Mapping
+
+Map content to business cycles, holidays, and industry events for maximum relevance:
+
+### Universal Business Calendar
+
+| Period | Themes | Content Types |
+|--------|--------|---------------|
+| Jan-Feb | Planning, budgeting, new year goals | Strategy guides, prediction posts, planning checklists |
+| Mar-Apr | Q1 review, financial year start (EA) | ROI articles, case studies, vendor selection guides |
+| May-Jun | Mid-year projects, implementation | How-to guides, implementation stories, comparison posts |
+| Jul-Aug | Budget reviews, efficiency drives | Cost articles, optimisation guides, tool roundups |
+| Sep-Oct | Budget season, year-end planning | Investment guides, trend reports, evaluation frameworks |
+| Nov-Dec | Reflection, next-year preparation | Year-in-review, lessons learned, prediction posts |
+
+### Regional Hooks (East and West Africa)
+
+- **East Africa:** EAC summit periods, budget reading (Jun), tech conferences (various), Jamhuri/Independence days
+- **West Africa:** ECOWAS events, AfCFTA milestones, Francophone business summits, national independence celebrations
+- **Pan-African:** Africa CEO Forum (Mar), AfricArena (Nov), Africa Tech Summit, Mo Ibrahim governance index release
+
+**Rule:** Seasonal content should be published 2-4 weeks BEFORE the event/season — not during or after.
+
+---
+
+## Cross-Language Topic Planning
+
+When planning content for bilingual (EN + FR) or trilingual (EN + FR + SW) blogs:
+
+### Same Topic, Different Angles
+
+Not every article needs identical coverage across languages:
+
+| Approach | When to Use |
+|----------|------------|
+| **Direct adaptation** | Core pillar articles, SEO-critical content |
+| **Angle shift** | Same topic but emphasise regional examples (Kampala for EN, Dakar for FR) |
+| **Language-exclusive** | Topics relevant to one market only (e.g., KRA tax compliance for EN, OHADA regulations for FR) |
+
+### Cross-Language SEO Rules
+
+- Each language version targets different long-tail keywords (translated keywords often have different search volume)
+- French articles should target francophone African search terms, not European French
+- Kiswahili articles target East African Community search patterns
+- Hreflang tags link all language versions (handled by seo skill)
+- Publish all language versions simultaneously — staggered publishing confuses search engines
 
 ---
 

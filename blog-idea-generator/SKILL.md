@@ -1,181 +1,206 @@
 ---
 name: blog-idea-generator
-description: Generate a curated list of blog post ideas tailored to a specific business, audience, and goals. Uses a guided interview to gather context (or reads existing client docs), then produces 15-25 prioritised topic ideas with titles, angles, keywords, and suggested structures. Use when the user says "generate blog ideas", "what should I blog about", "blog topic ideas", "content ideas", "blog brainstorm", or wants to populate a topic-ideas.md file.
+description: Generate 15-25 targeted blog post ideas with 200-word summaries for any client website. Reads website content, assesses available information, adaptively selects from 20 ideation methods, and conducts a guided interview. Each idea includes a narrative brief + structured specs. Use when the user says "generate blog ideas", "what should I blog about", "blog topic ideas", "content ideas", or wants to populate topic-ideas.md.
 ---
 
 # Blog Idea Generator
 
-Generate 15-25 targeted blog post ideas for any client website. Each idea includes a working title, unique angle, target keyword, buyer journey stage, suggested article structure, and estimated word count.
+Generate 15-25 targeted blog post ideas, each presented as a 200-word hybrid summary with narrative brief + structured specs. The system adapts its ideation methods to the specific client and available information.
 
-**Read `references/ideation-frameworks.md`** before generating ideas — it contains the complete toolkit of techniques used in the process below.
+**Read `references/ideation-frameworks.md`** for the full 20-method library and selection logic.
+**Read `references/content-formats.md`** for 20 content formats with structural templates.
+**Read `sales-copywriting/references/headline-mastery.md`** for headline formulas and 4 U's scoring.
 
 ---
 
 ## Step 1: Gather Context
 
-### If client docs exist (preferred)
+### Read client docs (mandatory)
 
-Read these files to pre-fill context:
+Read every available file to build a complete picture:
 
-1. `docs/en/company-profile.md` — business description, services, expertise, location
+1. `docs/en/company-profile.md` (and all enabled language versions)
 2. `docs/en/services.md` — service offerings, target customers
 3. `docs/en/pages.md` — existing website pages and content
 4. `docs/sector-brief.md` — industry context (if present)
-5. `blog-writer/references/topic-ideas.md` — existing topics (if present, avoid duplicates)
-6. `src/pages/en/blog/` — existing articles (avoid overlap)
+5. `docs/style-brief.md` — brand voice and tone
+6. `blog-writer/references/topic-ideas.md` — existing topics (avoid duplicates)
+7. `src/pages/en/blog/` — existing articles (avoid overlap)
+8. All other `docs/en/` files — testimonials, FAQ, portfolio, about-story
 
-Extract from these files:
-- What the business does (core services)
-- Who they serve (target audience segments)
-- Where they operate (geographic focus)
-- What makes them different (competitive advantage)
-- What expertise the author has (experience, credentials)
+Extract and note:
+- What the business does (core services, products)
+- Who they serve (audience segments, industries, company sizes)
+- Where they operate (geographic focus, markets)
+- What makes them different (competitive advantage, methodology)
+- What expertise the author has (experience, credentials, stories)
+- What problems customers face (pain points, challenges)
+- What content already exists (published articles, covered topics)
 
-### Then ask the user these questions
+### Guided interview (3-5 questions)
 
-Even after reading docs, confirm and fill gaps with the guided interview. Ask one question at a time using AskUserQuestion. Skip questions already answered by the docs.
+After reading docs, ask targeted questions to fill gaps. Ask one at a time. Skip questions already answered by docs.
 
-**The 8 Essential Questions:**
+**Core questions (ask what's missing):**
 
-1. **Target audience** — "Who is your ideal reader? Be as specific as possible (job title, company size, industry, location)."
-2. **Pain points** — "What are the top 3 problems your customers face that your business solves?"
-3. **Business goals** — "What should blog readers DO after reading? (Contact you, book a demo, download something, understand a concept?)"
-4. **Competitor content** — "Name 2-3 competitor websites or blogs in your space. What topics do they cover?"
-5. **Unique expertise** — "What do you know that most of your competitors don't? What's your unfair advantage?"
-6. **Customer questions** — "What questions do customers ask most often before buying?"
-7. **Content gaps** — "What topics have you wanted to write about but haven't yet?"
-8. **Tone and voice** — "How should the blog sound? (Technical expert, friendly advisor, industry insider, thought leader?)"
+1. **Audience specifics** — "Who is your ideal reader? (Job title, company size, industry, location)"
+2. **Top pain points** — "What are the top 3 problems your customers face that your business solves?"
+3. **Content goals** — "What should readers DO after reading? (Contact you, book a demo, understand a concept?)"
+4. **Competitor landscape** — "Name 2-3 competitors. What topics do they cover?"
+5. **Unique knowledge** — "What do you know that competitors don't? What's your unfair advantage?"
+6. **Customer questions** — "What questions do customers ask most before buying?"
+7. **Content gaps** — "Topics you've wanted to write about but haven't?"
+8. **Context/audience** — any additional context the user provides (specific themes, campaigns, seasonal needs)
 
-If the user provides brief answers, that's fine — work with what you have. Don't over-question.
-
----
-
-## Step 2: Generate Ideas Using the Five-Method System
-
-Apply all five ideation methods from `references/ideation-frameworks.md` to produce a diverse set of ideas. Aim for 25-30 raw ideas, then filter to the best 15-25.
-
-### Method 1: Expert Method (Category Drilldown)
-
-Identify 4-6 content categories from the business's services and expertise. For each category, generate 3-5 specific blog post ideas by drilling into sub-topics.
-
-### Method 2: Offer Method (Buyer Awareness Stages)
-
-Map ideas to each stage of the buyer's awareness:
-- **Unaware** — articles that surface a problem the reader doesn't know they have
-- **Problem-aware** — articles that help the reader understand their problem better
-- **Solution-aware** — articles that show approaches to solving the problem
-- **Decision-ready** — articles that help the reader choose the right solution
-
-Generate at least 2 ideas per stage.
-
-### Method 3: Pain Point Mining
-
-For each of the top 3 customer pain points, generate 2-3 article ideas using these angles:
-- The mistake angle ("5 mistakes that cause [pain point]")
-- The how-to angle ("How to fix [pain point] in [timeframe]")
-- The case study angle ("How [type of business] solved [pain point]")
-
-### Method 4: Spin Technique (Competitor Gap Analysis)
-
-Based on the competitor info provided, identify:
-- What topics competitors cover well (avoid these unless you have a better angle)
-- What topics they miss entirely (opportunity)
-- What consensus advice you can challenge with evidence (contrarian angle)
-
-Generate 3-5 ideas from gaps and counter-angles.
-
-### Method 5: Customer Question Mapping
-
-Turn each frequently asked customer question into a blog post idea. The title should echo the question; the article should be the definitive answer.
+If the user provides additional context (audience details, campaign goals, seasonal focus), incorporate it into the assessment.
 
 ---
 
-## Step 3: Filter and Prioritise
+## Step 2: Assess Available Information
+
+Score each dimension to determine which ideation methods will work best:
+
+| Dimension | Rich (3) | Moderate (2) | Sparse (1) |
+|-----------|----------|--------------|------------|
+| **Client docs** | Detailed company-profile, services, testimonials, stories | Basic company-profile and services | Minimal — just a business name and description |
+| **Competitor visibility** | Named competitors with active blogs | Competitors named but blogs unknown | No competitor info |
+| **Audience specificity** | Named segments with pain points | General audience description | Vague ("businesses") |
+| **Industry dynamism** | Active news cycle, regulations, trends | Moderate change rate | Stable/static industry |
+| **Existing content** | 5+ published articles to spin off | 1-4 articles | No existing content |
+| **Customer interaction** | Direct customer questions available | Some FAQ data | No customer feedback |
+
+---
+
+## Step 3: Select Ideation Methods
+
+Based on the assessment, select 5-7 methods from the 20-method library. **Always include Methods 1 and 2** as foundation.
+
+### Selection Matrix
+
+| Method | Best When | Min Score |
+|--------|-----------|-----------|
+| 1. Category Drilldown | Always | — (always include) |
+| 2. Buyer Awareness Stages | Always | — (always include) |
+| 3. Pain Point Mining | Client docs ≥ 2 or customer interaction ≥ 2 | — |
+| 4. Competitor Gap Analysis | Competitor visibility ≥ 2 | Competitor 2+ |
+| 5. Customer Question Mapping | Customer interaction ≥ 2 | Customer 2+ |
+| 6. They Ask, You Answer | Customer interaction = 3 | Customer 3 |
+| 7. Amazon/Review Mining | Product-based business | Client docs 2+ |
+| 8. Spin-Off Posts | Existing content ≥ 2 | Content 2+ |
+| 9. Media Mashup | Brand voice is informal/creative | Client docs 2+ |
+| 10. Highlight Good/Bad | Industry has notable examples | Industry 2+ |
+| 11. How-To/Tutorial Mining | Product/service has teachable processes | Client docs 2+ |
+| 12. Success/Failure Stories | Client has real project stories | Client docs 3 |
+| 13. Holiday/Event Mapping | Content calendar needs seasonal hooks | Any |
+| 14. Newsjacking/Trends | Industry dynamism = 3 | Industry 3 |
+| 15. Use Any Object | Need creative/lateral ideas | Any (creative fallback) |
+| 16. Curated Roundups | Industry has notable resources | Industry 2+ |
+| 17. Prediction Posts | Industry dynamism ≥ 2 | Industry 2+ |
+| 18. Jargon/Glossary | Technical niche with newcomer audience | Audience 2+ |
+| 19. Contrarian/Negative | Audience is sophisticated | Audience 3 |
+| 20. Topic-Category Matrix | Need high volume quickly | Any (volume fallback) |
+
+Announce: "Based on available information, I'm using methods: [list]. Here's why: [brief rationale]."
+
+---
+
+## Step 4: Generate Ideas
+
+Run selected methods sequentially. Aim for 25-35 raw ideas, then filter to the best 15-25.
+
+For each method, consult `references/ideation-frameworks.md` for detailed instructions and examples.
 
 ### Quality Filters
 
-Remove any idea that fails these tests:
+Remove any idea that fails:
 
 | Filter | Test |
 |--------|------|
-| **25-topic test** | Could you write 25 variations? If not, the angle is too narrow. |
 | **High-value goal** | Does this help the reader make/save money, reduce risk, save time, or gain advantage? |
-| **Unique expertise** | Does this require knowledge that isn't commonly available? |
+| **Unique angle** | Does this require knowledge that isn't commonly available? |
 | **So-what test** | Would the target reader care enough to click? |
 | **Longevity** | Will this still be relevant in 12 months? |
+| **No overlap** | Not already published or in existing topic-ideas.md? |
+| **Searchable** | Would someone type this into a search engine? |
 
 ### Tier Classification
 
-Sort surviving ideas into three tiers:
-
-| Tier | Purpose | Characteristics |
-|------|---------|-----------------|
-| **Tier 1: SEO drivers** | Attract organic traffic | Long-tail keywords, search intent match, evergreen |
-| **Tier 2: Authority builders** | Establish expertise | Industry analysis, original frameworks, deep guides |
-| **Tier 3: Thought leadership** | Build brand and trust | Opinion pieces, contrarian takes, predictions, stories |
-
-Aim for: 6-8 Tier 1, 5-7 Tier 2, 4-5 Tier 3.
+| Tier | Purpose | Target Count |
+|------|---------|-------------|
+| **Tier 1: SEO drivers** | Attract organic traffic via long-tail keywords | 6-8 ideas |
+| **Tier 2: Authority builders** | Establish expertise with deep guides and analysis | 5-7 ideas |
+| **Tier 3: Thought leadership** | Build brand with opinions, predictions, stories | 4-5 ideas |
 
 ---
 
-## Step 4: Format and Present Ideas
+## Step 5: Create 200-Word Hybrid Summaries
+
+For each approved idea, produce a summary in this exact format:
+
+```markdown
+### [Number]. [Working Title]
+
+[3-4 sentence narrative brief: What this article is about, who it serves,
+why it matters now, and the unique angle that makes it worth reading. This
+paragraph should make someone want to write — and read — this article. It
+captures the creative direction and emotional tone.]
+
+- **Audience:** [specific reader segment — job title, industry, company size]
+- **Buyer Stage:** [Awareness / Consideration / Decision]
+- **Format:** [How-to / Case study / List / Opinion / Guide / Story / Comparison / Interview / Roundup / FAQ]
+- **Angle:** [the specific twist that differentiates from competitors — 1 sentence]
+- **Key Points:**
+  1. [what the article must cover — specific enough to outline from]
+  2. [second key point]
+  3. [third key point]
+  4. [fourth key point — optional]
+  5. [fifth key point — optional]
+- **CTA Goal:** [what action the reader should take after reading]
+- **SEO Keywords:** [primary keyword], [secondary keyword]
+- **Tier:** [1: SEO driver / 2: Authority builder / 3: Thought leadership]
+- **Est. Words:** [1,500-2,500]
+```
+
+### Summary Quality Rules
+
+- The narrative must read like a creative brief — not a dry description
+- Key points must be specific enough to outline section headings from
+- Keywords must be realistic long-tail phrases someone would search
+- The angle must be genuinely different from what a Google search would surface
+- Every title must pass the 4 U's test (see `sales-copywriting/references/headline-mastery.md`): Useful, Unique, Urgent, Ultra-specific — score 3+ on at least 3 dimensions
+
+---
+
+## Step 6: Present and Refine
 
 ### Present to the User
 
-Show the ideas in a table, grouped by tier:
-
-```
-## Tier 1: SEO Drivers (attract organic traffic)
-
-| # | Working Title | Angle | Target Keyword | Journey Stage | Structure | Words |
-|---|---------------|-------|----------------|---------------|-----------|-------|
-| 1 | "How to Choose an ERP System for Your Retail Business" | Buyer's guide with decision framework | "erp system retail" | Solution-aware | What/Why/How | 2,000 |
-```
-
-For each idea, include:
-- **Working title** — practical + creative (see headline patterns in `references/ideation-frameworks.md`)
-- **Angle** — what makes this article different (1 sentence)
-- **Target keyword** — primary long-tail keyword
-- **Journey stage** — Unaware / Problem-aware / Solution-aware / Decision-ready
-- **Structure** — which content organisation pattern (Problem/Solution, How-to, List, Q&A, etc.)
-- **Words** — estimated word count (1,500-2,500 for standard, 2,500+ for pillar content)
-
-### Ask the user for feedback
-
-After presenting, ask:
+Show ideas grouped by tier with full summaries. After presenting, ask:
 - Which ideas excite you most?
 - Any ideas to remove or modify?
 - Any topics you expected but don't see?
+- Any specific campaigns or seasonal needs to address?
 
-Refine based on feedback.
+Refine based on feedback. The user's input overrides the assessment.
 
 ---
 
-## Step 5: Save Output
+## Step 7: Save Output
 
-Save the final approved list to `blog-writer/references/topic-ideas.md` using this format:
+Save the final approved list to `blog-writer/references/topic-ideas.md`:
 
 ```markdown
 # Blog Topic Ideas — [Client Name]
 
 Generated: YYYY-MM-DD
+Methods used: [list of methods applied]
 Target audience: [summary]
 Content categories: [list]
 
 ## Tier 1: SEO Drivers
 
 ### 1. [Title]
-- **Category:** [category]
-- **Keywords:** [primary], [secondary]
-- **Angle:** [1-2 sentences]
-- **Journey stage:** [stage]
-- **Structure:** [pattern] | **Words:** [count]
-- **Section outline:**
-  1. [h2 heading idea]
-  2. [h2 heading idea]
-  3. [h2 heading idea]
-  4. [h2 heading idea]
-  5. [h2 heading idea]
+[Full 200-word hybrid summary as above]
 
 ## Tier 2: Authority Builders
 ...
@@ -191,40 +216,26 @@ Content categories: [list]
 ...
 ```
 
-If the file already exists, merge new ideas — don't overwrite existing topics that haven't been written yet. Mark previously written topics as `[PUBLISHED]`.
-
----
-
-## Headline Patterns Quick Reference
-
-Use these patterns when crafting working titles (more in `references/ideation-frameworks.md`):
-
-| Pattern | Template |
-|---------|----------|
-| Rule-based | "The N Rules of [Topic] Every [Audience] Should Know" |
-| Mistake-based | "N [Topic] Mistakes That Cost [Audience] [Consequence]" |
-| Contrarian | "Are You [Doing Thing] by Following Everyone's [Advice]?" |
-| How-to | "How to [Achieve Goal] in [Timeframe/Context]" |
-| Direct promise | "[Specific Outcome] for [Specific Audience]" |
-| Question | "What Happens When [Scenario]?" |
-| Myth-busting | "N Things the Experts Don't Tell You About [Topic]" |
-| Guide | "The [Audience]'s Guide to [Topic]" |
-| Lazy | "The Lazy [Audience]'s Guide to [Topic]" |
-| Tools | "N Time-Saving [Tools/Services] for [Audience] in [Niche]" |
+If the file already exists, merge new ideas — don't overwrite existing topics. Mark previously written topics as `[PUBLISHED]`.
 
 ---
 
 ## Quality Checklist
 
-Before finalising the idea list:
+Before finalising:
 
 - [ ] At least 15 ideas across all 3 tiers
+- [ ] Each idea has a complete 200-word hybrid summary
 - [ ] No duplicate angles (each idea is distinct)
 - [ ] At least 2 ideas per buyer awareness stage
 - [ ] Ideas span at least 3 content categories
-- [ ] Every title contains a target keyword or keyword-adjacent phrase
+- [ ] Every title passes the 4 U's test (3+ dimensions at 3+)
 - [ ] No overlap with existing published articles
-- [ ] Mix of article structures (not all lists, not all how-tos)
+- [ ] Mix of content formats (not all lists, not all how-tos)
 - [ ] At least 3 ideas that showcase the author's unique expertise
-- [ ] At least 2 ideas based on real customer questions
+- [ ] At least 2 ideas based on real customer questions (if data available)
 - [ ] Content calendar covers at least 6 months at 2 articles/month
+- [ ] All SEO keywords are realistic long-tail phrases
+- [ ] Narrative briefs are compelling — they make you want to write the article
+
+After writing, verify line count is under 500: wc -l blog-idea-generator/SKILL.md

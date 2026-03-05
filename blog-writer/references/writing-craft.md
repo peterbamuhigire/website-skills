@@ -33,10 +33,10 @@ Never open with a dictionary definition or generic statement. Choose one:
 3. **Share a short story** from the author's own experience (concrete scene, named places)
 4. **Link to a current event** or trend the reader recognises
 5. **Make a bold assertion** that the article will prove
-6. **Poster child** — open with one specific person or company who represents the many. "When Sarah's warehouse ran out of stock for the third time in a month..." Then broaden to the wider point. The poster child is not the subject of the article — they humanise it.
-7. **Scene-setter** — open with vivid physical description that creates a stage. "A woman with tormented eyes talks to herself as she plays a battered piano in Ward D's dayroom." Works for location-dependent stories and immersive pieces.
-8. **Significant detail** — one symbolic detail that encapsulates the entire theme. "Hidden beneath a heap of inner tubes in a tiny storeroom is the statue of Lenin." The detail does all the thematic work.
-9. **Profile lead** — give away the happy ending first, then tell the story of getting there. "Paul considers himself successfully retired from reality." Builds suspense by making readers ask "how?"
+6. **Poster child** — one specific person/company who represents the many, then broaden to the wider point
+7. **Scene-setter** — vivid physical description that creates a stage (works for location-dependent stories)
+8. **Significant detail** — one symbolic detail that encapsulates the entire theme
+9. **Profile lead** — give away the happy ending first, then tell the story of getting there
 
 The first paragraph must link to the reader's interests. Help them believe the article will provide value.
 
@@ -55,13 +55,7 @@ Every article longer than 500 words needs a deliberate arc, not just a topic fol
 
 **Full circle ending:** The ending reconnects to the opening. If you opened with a poster child, bring them back in the final paragraphs. If you opened with a scene, return to it transformed. Readers feel closure and reward. The article feels planned, not abandoned.
 
-**Other ending techniques** (use when full circle doesn't fit):
-- **Forward-looking** — point to what comes next, a future trend, or the reader's next step
-- **The call-back** — reference a specific detail from the body (not the opening) that crystallises the main point
-- **The question** — leave the reader with a thought-provoking question that lingers
-- **The action ending** — close with a concrete, specific instruction the reader can execute today
-- **The quotation** — end with a powerful quote from an expert or the subject of the article
-- **Summary-with-a-twist** — recap the main point, then add one final insight that reframes everything
+**Other ending techniques** (use when full circle doesn't fit): forward-looking (next step/trend), call-back (detail from the body that crystallises the point), question (thought-provoking), action ending (concrete instruction), quotation (powerful expert quote), or summary-with-a-twist (recap + reframing insight).
 
 **Thematic glue:** Words from the same thematic set — including opposites — hold an article together. Before/after, problem/solution, old/new, easy/hard should echo through the piece. Using related or contrasting concepts in the opening and closing creates subconscious coherence.
 
@@ -175,31 +169,19 @@ State what IS, not what is NOT:
 | Long (avoid) | Short (use) |
 |-------------|-------------|
 | additional | more |
-| anticipate | expect |
-| compensate | pay |
 | currently | now |
-| endeavour | try |
 | facilitate | help |
-| indicate | show |
-| requisition | order |
 | utilise | use |
-| commence | begin |
-| terminate | end |
 | prior to | before |
-| subsequent to | after |
 
 ### Eliminate Filler
 
 | Wordy (avoid) | Concise (use) |
 |---------------|---------------|
-| at the current point in time | now |
 | due to the fact that | because |
 | in the event that | if |
-| performed an evaluation of | evaluated |
 | in order to | to |
 | it is important to note that | (delete — just state the thing) |
-| the fact of the matter is | (delete) |
-| facilitate a change | update |
 
 ### Remove Weak Modifiers
 Delete these words unless they add measurable meaning: really, very, kind of, sort of, quite, rather, somewhat, basically, actually, literally.
@@ -210,8 +192,6 @@ Replace with the corresponding verb:
 | Noun (weaker) | Verb (stronger) |
 |--------------|-----------------|
 | implementation | implement |
-| transformation | transform |
-| coordination | coordinate |
 | utilisation | use |
 | communication | communicate (or: email, call, write) |
 
@@ -223,26 +203,15 @@ Replace with the corresponding verb:
 - **Lead with a topic sentence** that previews the paragraph's point.
 - **2-4 sentences** per paragraph. Never more than 5.
 - **End with a sentence** that leads to the next paragraph or summarises.
-- **Use transitions** between paragraphs to signal direction:
-  - Continuation: moreover, furthermore, in addition, also
-  - Contrast: however, on the other hand, yet, nevertheless
-  - Cause/effect: therefore, consequently, as a result, because
-  - Sequence: first, next, then, finally
-  - Example: for instance, for example, such as
+- **Use transitions** between paragraphs to signal direction (continuation, contrast, cause/effect, sequence, example)
 
 ---
 
 ## Emphasis Techniques
 
-Seven methods to highlight what matters:
-
-1. **Location** — first and last positions in documents, sections, paragraphs, and sentences receive natural emphasis
-2. **Repetition** — state key points in the intro, develop in the body, restate in the conclusion
-3. **Space** — give more words to more important points
-4. **Detail** — supply more supporting evidence for critical claims
-5. **Contrast** — surround an idea with contrasting ideas to make it stand out
-6. **Climactic order** — build toward the most important point
-7. **Formatting** — bold, headings, pull quotes (use sparingly — overuse dilutes impact)
+- **Location** — first and last positions in documents, sections, paragraphs, and sentences receive natural emphasis
+- **Space and detail** — give more words and more supporting evidence to more important points
+- **Climactic order** — build toward the most important point; use formatting (bold, headings) sparingly
 
 ---
 
@@ -304,22 +273,9 @@ Always prefer concrete, specific language over vague abstractions:
 
 ## Quality Characteristics (from Hargis/Carey)
 
-Use this framework to evaluate article quality:
-
-### Easy to Use
-- **Task-oriented** — does the article help the reader DO something or DECIDE something?
-- **Accurate** — are all facts, names, and technical details correct?
-- **Complete** — does it cover everything the reader needs? Does it include ONLY what is needed?
-
-### Easy to Understand
-- **Clear** — can the reader understand every sentence on first reading?
-- **Concrete** — does it use real examples, specific numbers, named places?
-- **Appropriate style** — is the tone right? Active voice? No condescending words ("simply", "just", "obviously")?
-
-### Easy to Find
-- **Well-organised** — do headings reveal the content? Is the order logical?
-- **Scannable** — can a reader skim headings and lists to find what they need?
-- **Visually effective** — do formatting choices (bold, lists, blockquotes) aid comprehension?
+- **Easy to use** — task-oriented, accurate, complete (everything needed, nothing extra)
+- **Easy to understand** — clear on first reading, concrete examples, appropriate tone (no "simply", "just", "obviously")
+- **Easy to find** — logical headings, scannable structure, formatting aids comprehension
 
 ---
 
@@ -387,45 +343,17 @@ Subheadings (h2, h3) serve three audiences simultaneously: scanners, deep reader
 
 ## Audience Awareness
 
-Before writing, answer:
-- Who will read this? (Business owners, CTOs, startup founders, procurement officers?)
-- What problem are they trying to solve?
-- What do they already know? What must I explain?
-- What do I want them to DO after reading?
-- What tone matches their expectations? (Senior executives expect formal; startup founders accept conversational)
+Before writing, answer: Who reads this? What problem are they solving? What do they already know? What should they DO after reading? What tone do they expect? (Senior executives: formal; startup founders: conversational.)
 
-**The 80/20 Rule:** 80% of the article provides value (education, insight, practical advice). No more than 20% promotes Peter's services — and even that should be woven in naturally, not pitched.
+**The 80/20 Rule:** 80% provides value (education, insight, practical advice). Max 20% promotes services — woven in naturally, never pitched.
 
 ---
 
 ## Clarity and Precision (from Hargis et al.)
 
-### Avoiding Ambiguity
+**Avoiding ambiguity** for multilingual readers: use "because" not "since", "although" not "while", "can" for ability/"might" for possibility, "after" not "once".
 
-English has many words that carry double meanings. In blog writing for a multilingual African audience, precision prevents misunderstanding:
-
-- Use **"because"** not "since" (which can mean time)
-- Use **"although"** not "while" (which can mean simultaneous)
-- Use **"can"** for ability, **"might"** for possibility — never use "may" interchangeably
-- Use **"after"** not "once" (which can mean "if ever")
-
-### Task-Oriented Writing
-
-Every article section should answer: **"What can the reader do with this?"**
-
-- Present information from the **reader's point of view** — use "you" and "your"
-- Give the **reason** for every recommendation ("Do X because Y")
-- When advising action, use **numbered steps** — each step = one action
-- Provide **context before detail** — tell the reader what they're about to learn
-
-### Concreteness Over Abstraction
-
-| Vague | Concrete |
-|-------|----------|
-| "significant savings" | "reduced hosting costs by 40%" |
-| "improved performance" | "page load dropped from 4.2s to 0.8s" |
-| "many African countries" | "Uganda, Kenya, Tanzania, Rwanda, and the DRC" |
-| "enterprise-grade solution" | "system handling 500 concurrent users across 12 branches" |
+**Task-oriented writing** — every section answers "What can the reader do with this?" Use "you"/"your", give reasons for recommendations, use numbered steps for actions, provide context before detail.
 
 ---
 
@@ -465,6 +393,61 @@ See `references/human-voice-standards.md` for the complete blacklist.
 
 ---
 
+## Format-Specific Structural Templates
+
+When the blog-idea-generator assigns a format, follow the matching template below. Each template shows the section flow — adapt headings to the specific topic.
+
+### How-To Template
+1. **Hook** — why this skill/process matters now (pain point or opportunity)
+2. **Prerequisites** — what the reader needs before starting
+3. **Steps** — numbered, one action each, with expected outcome per step
+4. **Common mistakes** — 2-3 pitfalls and how to avoid them
+5. **Result** — what success looks like + CTA
+
+### Case Study Template
+1. **The situation** — client context (industry, size, location — anonymise if needed)
+2. **The challenge** — specific problem with measurable impact
+3. **The approach** — what was done and why (methodology, not just actions)
+4. **The results** — concrete numbers (time saved, revenue gained, errors reduced)
+5. **The lessons** — what this teaches the reader about their own situation + CTA
+
+### List Template
+1. **Hook** — why this list matters (not "Here are N things...")
+2. **Items** — varied depth (some get 2 sentences, key ones get a full paragraph)
+3. **Pattern/insight** — what the list reveals when seen as a whole
+4. **Action** — what the reader should do with this information + CTA
+
+### Opinion/Contrarian Template
+1. **Bold claim** — state the position clearly in the first 2 sentences
+2. **The conventional wisdom** — what most people believe and why
+3. **The evidence** — 2-3 concrete reasons the conventional wisdom is wrong
+4. **Counter-arguments** — strongest objection + your rebuttal
+5. **The implication** — what changes if your position is correct + CTA
+
+### Guide/Pillar Template
+1. **Overview** — what this guide covers and who it's for
+2. **Foundations** — essential context the reader needs first
+3. **Core sections** — 4-6 subtopics, each with examples and actionable advice
+4. **Advanced considerations** — nuances for experienced readers
+5. **Summary + next steps** — key takeaways and CTA
+
+### Story Template
+1. **Scene** — set the physical scene with sensory detail
+2. **Character** — introduce the person (the author or a client)
+3. **Challenge** — what went wrong or what was at stake
+4. **Action** — what was done (show, don't tell)
+5. **Result** — what happened (with specific details)
+6. **Lesson** — what this means for the reader + CTA
+
+### Comparison Template
+1. **Context** — why the reader is choosing between these options
+2. **Criteria** — 3-5 evaluation dimensions that matter most
+3. **Analysis** — each option evaluated against criteria (table or structured prose)
+4. **Verdict** — clear recommendation with reasoning
+5. **Who should choose what** — different options for different situations + CTA
+
+---
+
 ## The Publishing Process (from Rowse)
 
 ### Pre-Publication Checklist
@@ -482,91 +465,32 @@ Before every article goes live, verify:
 
 ### The Fresh Eyes Principle (Rowse)
 
-Never publish on the same day you write. At minimum:
-- Write the article
-- Take a break (hours, not minutes)
-- Return and review with fresh perspective
-- Fix issues you couldn't see while writing
-- Then publish
-
-This single habit catches more errors than any spell-checker.
+Never publish on the same day you write. Take a break (hours, not minutes), return with fresh perspective, then fix issues you couldn't see while writing. This catches more errors than any spell-checker.
 
 ## Advanced Research Methods
 
 ### Gene Schwartz's 4-Read Research Method
 
-Before writing about any product or topic, read all available material 4 times:
-
-1. **First read:** Get the general idea. Don't take notes. Just absorb.
-2. **Second read:** Underline heavily. Aim for 40-50 pages of underlined material from a book-length source.
-3. **Third read:** Type up your underlined material. This forces precision in vocabulary — you'll capture the exact words clients, experts, and users employ.
-4. **Fourth read:** Structure emerges. Go over your typed notes and begin organising.
-
-"Copywriting is research. It has something I call 'claim density.' It's packed with facts, with information, with ideas." — Gene Schwartz
-
-**Adapted for blog writing:** When writing about a client's industry, read their website, marketing materials, competitor sites, and industry publications. Read them multiple times. The vocabulary, the concerns, the specific language — all of this becomes raw material for authentic copy.
+Read all source material 4 times: (1) absorb the general idea, (2) underline heavily, (3) type up underlined material — capturing exact vocabulary clients and experts use, (4) organise typed notes into structure. "Copywriting is research. It's packed with facts, with information, with ideas." For blog writing: read the client's website, competitor sites, and industry publications multiple times. Their vocabulary becomes your raw material.
 
 ### The Golden Nuggets Technique (Don Mahoney, AWAI)
 
-Embed your writing with fascinating bits of information that stimulate the reader's imagination.
-
-**How it works:**
-- When you tell somebody something they didn't know, you give them something for free
-- On a subconscious level, they feel gratitude
-- They're more likely to keep reading and more likely to respond
-- Simultaneously, you build credibility as someone who knows the subject deeply
-
-**Examples:**
-- Instead of "Coffee is popular in East Africa," write: "Ethiopia produces over 400,000 tonnes of coffee annually — and the best lots never leave the country."
-- Instead of "Mobile payments are growing," write: "M-Pesa processes more transactions per month than Western Union does globally in a year."
-
-**How to find Golden Nuggets:**
-- Read industry reports and pull surprising statistics
-- Interview subject matter experts and ask "What's something most people get wrong about this?"
-- Look for historical context — how things used to work vs how they work now
-- Find counter-intuitive facts that challenge assumptions
+Embed fascinating facts that readers didn't know — this builds credibility and gratitude. Instead of "Mobile payments are growing," write: "M-Pesa processes more transactions per month than Western Union does globally in a year." Find nuggets in industry reports, expert interviews, historical contrasts, and counter-intuitive statistics.
 
 ### The Prospect Visualisation Technique (AWAI)
 
-Before writing for any audience:
-1. Sum up the reader in a few lines (demographics, fears, desires)
-2. Think of someone you personally know who fits this description
-3. If possible, find a photo and keep it visible while writing
-4. Think about how you'd talk to this specific person
-5. What words would you use? What tone? How much evidence would they need?
-
-This transforms "writing for an audience" into "writing for a person" — the single most effective way to produce authentic copy.
+Before writing, picture one specific person who matches the target reader. What words would you use with them? What tone? How much evidence would they need? Writing for a person produces better copy than writing for an audience.
 
 ## Advanced Authenticity Techniques
 
 ### Writing With Passion (AWAI)
 
-1. Study the subject and list all its good qualities
-2. Get genuinely excited about it — find the angle that interests YOU
-3. Start naturally "selling" the topic in casual conversation
-4. Even temporary enthusiasm that fades after writing is effective in the draft
-5. If you fail to write with passion, you'll put the reader to sleep
+Find the angle that genuinely interests you — even temporary enthusiasm produces better drafts. Writing without passion puts the reader to sleep.
 
-### Three Tricks to Eliminate "Adspeak" (Paul Hollingshead)
+### Eliminating "Adspeak" (Paul Hollingshead)
 
-1. **Imagine the person you're writing to.** Picture them as a friend.
-2. **Believe that what you're writing about will improve their life.** If you don't believe it, find the angle where it's true.
-3. **Figure out what it would take to convince YOU.** Your skepticism mirrors theirs.
+Picture the reader as a friend. Believe the topic will improve their life. Figure out what would convince YOU — your skepticism mirrors theirs.
 
-### Claude Hopkins' 3 Rules for Connecting With Readers
+### Claude Hopkins' 3 Rules
 
-1. **Know who you're writing for.** Ask who benefits most. Ask who has purchased before.
-2. **Speak in their language.** Don't preach, bully, or talk down. Don't be bigger, smarter, or more sophisticated. Write the way you'd talk to a friend.
-3. **Take helping seriously.** Offer real solutions, not flimsy ones. Back everything with research, details, facts, numbers. No humour that steals credibility or breaks momentum.
-
-### Ted Nicholas' Peak State Preparation
-
-For writing sessions that require genuine energy and voice:
-1. Get fully rested
-2. Eat lightly before writing
-3. Light exercise to get alert
-4. Eliminate interruptions
-5. Prime your mind with positive thoughts
-6. Take a brisk 5-minute walk before writing
-
-"When writing, imagine you are talking to a friend or loved one. Credibility, tone, and warmth come from the feelings you generate through the words you write." — Ted Nicholas
+Know who you're writing for. Speak in their language — don't preach or talk down, write as you'd talk to a friend. Take helping seriously — real solutions backed by research, details, and numbers.

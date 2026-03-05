@@ -36,6 +36,9 @@ Read the reference files as needed during writing:
 - `references/article-design.md` — image requirements, layout variations, design variety system
 - `references/ideation-and-research.md` — ideation techniques, research methods, competitor analysis, headline generation
 - `references/topic-ideas.md` — curated topic suggestions (project-specific, if present)
+- `blog-idea-generator/references/content-formats.md` — 20 content formats with structural templates (How-to, Case study, List, Opinion, Guide, Story, Comparison, etc.)
+- `sales-copywriting/references/fascination-bullets.md` — 21 bullet point templates for engaging list items and key takeaways
+- `sales-copywriting/references/closing-and-guarantees.md` — closing templates for strong article conclusions and CTAs
 
 ---
 
@@ -52,6 +55,24 @@ From this simple prompt, generate the complete article pipeline below.
 ---
 
 ## Article Content Pipeline
+
+### Step 0: Read Idea Summary (if available)
+
+If `references/topic-ideas.md` exists and contains a summary for this article's topic:
+
+1. Read the full 200-word hybrid summary for this topic
+2. Extract and use as planning inputs:
+   - **Audience** — target reader segment
+   - **Buyer Stage** — awareness, consideration, or decision
+   - **Format** — content format (how-to, case study, list, etc.) → read `blog-idea-generator/references/content-formats.md` for the structural template
+   - **Angle** — the specific twist that differentiates this article
+   - **Key Points** — section headings or core coverage areas
+   - **CTA Goal** — what action the reader should take
+   - **SEO Keywords** — primary and secondary targets
+   - **Tier** — SEO driver, authority builder, or thought leadership
+3. The idea summary is a starting point, not a straitjacket — adapt based on research in Step 1
+
+If no idea summary exists, proceed directly to Step 1.
 
 ### Step 1: Research and Plan
 
@@ -143,6 +164,20 @@ Save to `docs/fr/blog/{slug}.md` with identical frontmatter structure.
 - Follow West African francophone business conventions (see voice guides below)
 - **1,800-3,000 words** — French naturally expands 20-30% from English
 - Accents mandatory on every character (é, è, ê, ç, à, ù, ô, î)
+
+### Quality Gate: Verify Against Idea Summary
+
+If this article was generated from an idea summary (Step 0), verify alignment before proceeding to design:
+
+- [ ] **Audience match** — article addresses the specified reader segment
+- [ ] **Format compliance** — article follows the structural template for the specified format
+- [ ] **Key points covered** — all key points from the summary are addressed in the article
+- [ ] **Angle delivered** — the unique angle is evident, not generic
+- [ ] **SEO keywords placed** — primary keyword in title, first 100 words, at least one h2, and conclusion
+- [ ] **CTA goal achieved** — conclusion drives the specified action
+- [ ] **Tier alignment** — Tier 1 articles prioritise SEO; Tier 2 prioritise depth; Tier 3 prioritise voice
+
+If any check fails, revise the article before proceeding.
 
 ### Step 5: Design and Build Astro Pages
 
@@ -402,6 +437,8 @@ Cross-cutting skills that apply throughout:
 - `language-standards` — language and tone standards for all languages
 - `east-african-english` — detailed English voice guide (if present in project)
 - `brand-alignment` — visual and messaging consistency with the overall website brand
+- `seo` — multi-language SEO, hreflang, language-specific sitemaps (ensures articles are SEO-ready)
+- `sales-copywriting` — headline formulas, fascination bullets, closing techniques (always active for all articles)
 
 ---
 

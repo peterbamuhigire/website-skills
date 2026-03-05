@@ -24,6 +24,8 @@ Last updated: 2026-03-05
 
 ## ✅ Recently Completed
 
+**Blog enhancement** (2026-03-05) — Rewrote blog-idea-generator with adaptive 20-method ideation system, 200-word hybrid summaries, 20 content formats. Enhanced blog-writer with Step 0 (reads idea summaries), 7 format-specific structural templates, quality gate, content calendar framework, seasonal/event mapping, cross-language topic planning. Sources: Iny, Livermore, Eddy.
+
 **Sales copywriting skill** (2026-03-05) — Hybrid persuasion skill with 5 reference files. Cross-cutting headlines, CTAs, anti-resistance writing for all pages. PASTOR, 4 P's, fascination bullets, guarantees for sales pages. Enhanced storytelling.md, writing-craft.md, website-copywriting.md. Sources: Edwards, Hollingshead/AWAI, Lee.
 
 **Blog idea generator** (2026-03-04) — Guided interview producing 15-25 targeted blog ideas using 5 ideation methods from 5 writing books.

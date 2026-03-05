@@ -55,7 +55,7 @@ Website build skills are sequential — each depends on outputs from the previou
 3. **photo-manager** (includes **image-compression**) → compresses photos via Sharp, then produces `src/assets/images/` (flat directory, no subdirectories), `src/assets/images/_catalog.json`, auto-detects best logo (shared across languages)
 4. **page-builder** → produces `src/layouts/`, `src/components/`, `src/pages/[lang]/` (per-language content from `docs/{lang}/`)
 5. **seo** → integrates multi-language SEO: hreflang tags, language-specific sitemaps, Open Graph locale tags
-5.5. **blog-writer** (optional) → produces bilingual blog articles in `docs/{lang}/blog/`, Astro blog pages, Article JSON-LD, updates blog index
+5.5. **blog-writer** (optional) → produces SEO-ready bilingual blog articles in `docs/{lang}/blog/`, reads idea summaries from blog-idea-generator, Astro blog pages, Article JSON-LD, updates blog index
 6. **deploy** → produces `dist/`, per-language directories, `deploy.sh`, language-aware `nginx.conf` with root redirect
 7. **seo-audit** (optional, post-deploy) → audits 14 SEO categories, produces scored report with prioritised action items
 
@@ -70,7 +70,7 @@ Four skills are cross-cutting — they apply throughout all steps rather than pr
 
 Utility skills run independently of the build pipeline:
 
-- **blog-idea-generator** — use before blog-writer to generate 15-25 targeted blog topic ideas; guided interview reads client docs then applies 5 ideation methods (category drilldown, buyer awareness stages, spin technique, pain point mining, customer question mapping); outputs to `blog-writer/references/topic-ideas.md`
+- **blog-idea-generator** — use before blog-writer to generate 15-25 targeted blog topic ideas with 200-word hybrid summaries; reads website content, assesses 6 information dimensions, adaptively selects 5-7 methods from a 20-method library; outputs to `blog-writer/references/topic-ideas.md`
 - **policy-pages** — use when creating Privacy Policies and Terms of Use pages; reads docs/company-profile.md for jurisdiction context
 - **color-selection** — use when defining website color palettes; generates harmonious colors from brand colors using color theory (monochromatic, analogous, complementary, split-complementary, triadic, tetradic, semantic); validates WCAG accessibility compliance
 - **sales-copywriting** — hybrid persuasion skill: cross-cutting core (headlines, CTAs, anti-resistance, proof integration) applies to all pages; sales frameworks (PASTOR, 4 P's, guarantees, fascination bullets) activate for landing/sales pages; Level 2 persuasion default

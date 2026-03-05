@@ -1,265 +1,273 @@
-# Blog Ideation Frameworks Reference
+# Blog Ideation Frameworks — 20-Method Library
 
-Consolidated techniques from Lima (*Fundamentals of Writing*), Bly (*How to Write and Sell Simple Information*), Graves (*Writing for Profit*), Aaron (*How to Find a Profitable Blog Topic Idea*), and Kothand (*The One Hour Content Plan*).
+Adaptive ideation system. The blog-idea-generator selects 5-7 methods based on available client information. Methods 1-2 always run. Methods 3-20 activate based on assessment scores.
+
+Sources: Kothand (One Hour Content Plan), Graves (Writing for Profit), Aaron (Profitable Blog Topics), Lima (Fundamentals of Writing), Bly (How to Write Simple Information), Danny Iny (Blog Post Ideas: 21 Proven Ways), Rebecca Livermore (Blogger's Quick Guide), Eddy (Blog It Right).
 
 ---
 
-## The Five-Method Ideation System
+## Foundation Methods (Always Run)
 
-### Method 1: Expert Method — Category Drilldown (Kothand)
+### Method 1: Category Drilldown (Kothand)
 
-The most systematic technique for generating endless topic ideas.
-
-**Category → Sub-category → Blog posts**
-
-1. Define 4-7 content categories from the business's services and expertise
-2. For each category ask: "What does the reader need to know to become proficient here?"
-3. List sub-categories under each category
-4. Break each sub-category into 3-7 specific blog post topics
+The most systematic technique. Define 4-7 content categories from the business's services. For each, ask "What does the reader need to become proficient here?" Break into sub-categories, then into 3-7 specific topics.
 
 **Example:**
 - Category: Inventory management
-  - Sub-category: Stock counting
-    - "5 stock-counting methods ranked by accuracy and speed"
-    - "Why your stock count is always wrong (and how to fix it)"
-    - "The busy owner's guide to cycle counting"
-  - Sub-category: Reorder points
-    - "How to calculate reorder points without a spreadsheet"
-    - "3 signs your reorder points are set too high"
+  - Sub: Stock counting → "5 stock-counting methods ranked by accuracy", "Why your stock count is always wrong"
+  - Sub: Reorder points → "How to calculate reorder points without a spreadsheet"
 
-When generating ideas at this stage, **don't worry about perfect titles** — focus on the topic and angle. Titles get refined later.
+### Method 2: Buyer Awareness Stages (Kothand)
 
-### Method 2: Offer Method — Buyer Awareness Stages (Kothand)
+Generate ideas for each stage:
 
-Generate ideas mapped to where the reader is in their buying journey:
+| Stage | Reader State | Formula Examples |
+|-------|-------------|-----------------|
+| **Unaware** | Doesn't know the problem exists | "X things you didn't know about [topic]", "Why your [thing] isn't working" |
+| **Problem-aware** | Recognises the problem | "X shortcuts to [result]", "The lazy [audience]'s guide to [topic]" |
+| **Solution-aware** | Trusts you, not ready to buy | "X questions before choosing [category]", "How [business] solved [problem]" |
+| **Decision-ready** | Ready to buy, final questions | "X vs Y: which is right for [audience]?", "What to expect in your first month" |
 
-**Stage 1 — Unaware:** Reader doesn't know they have a problem.
-- Surface the problem. Pain is more effective than benefits.
-- Formulas: "X things you didn't know about [topic]", "Why your [thing] sucks", "X mistakes [audience] make", "X reasons your [thing] will fail"
+Generate at least 2 ideas per stage.
 
-**Stage 2 — Problem-aware:** Reader recognises the problem, has questions.
-- Show how to avoid or fix the mistakes. Build interest.
-- Formulas: "X ridiculously simple shortcuts to [result]", "The lazy [audience]'s guide to [topic]", "How to create a [thing] and follow it"
+---
 
-**Stage 3 — Solution-aware:** Reader trusts you but isn't ready to buy.
-- Case studies, personal experience, comparison posts. Instil desire.
-- Formulas: "X questions to ask before choosing [product category]", "Why I [action] when I had [situation]", "How [business] solved [problem]"
+## Client-Data Methods (Require Client Docs)
 
-**Stage 4 — Decision-ready:** Reader is ready to buy, has final questions.
-- FAQ posts, comparison guides, "what to expect" articles.
-- Formulas: "X vs Y: which is right for [audience]?", "What to expect in your first month with [solution]"
+### Method 3: Pain Point Mining (Graves/Aaron)
 
-### Method 3: Spin Technique — Competitor Gap Analysis (Graves)
+For each customer pain point, generate ideas from three angles:
+- Mistake angle: "5 mistakes that cause [pain]"
+- How-to angle: "How to fix [pain] in [timeframe]"
+- Case study angle: "How [business type] solved [pain]"
 
-1. Search the target keyword, read the top 10 results
-2. Note the consensus advice everyone gives
-3. Look for contradictions, surprises, or patterns others missed
-4. Build your article around that gap
+Sources for pain points: sales emails, support tickets, FAQ pages, Google "People Also Ask", competitor blog comments.
 
-**Five types of content gaps:**
-- **Missing angle** — a perspective nobody has taken
-- **Depth gap** — everyone writes surface-level; you go step-by-step
-- **Local gap** — generic advice exists; you apply it to a specific market
-- **Freshness gap** — top results are 2+ years old; write the updated version
+### Method 4: Competitor Gap Analysis — Spin Technique (Graves)
+
+Search target keywords, read top 10 results. Find:
+- **Missing angle** — perspective nobody has taken
+- **Depth gap** — everyone writes surface-level; you go deep
+- **Local gap** — generic advice exists; you localise it
+- **Freshness gap** — top results are 2+ years old
 - **Resource gap** — a resource everyone links to but nobody has created
 
-### Method 4: Pain Point Mining (Graves + Aaron)
+### Method 5: Customer Question Mapping (Aaron/Graves)
 
-For each major customer pain point, generate ideas using three angles:
-- The mistake angle ("5 mistakes that cause [pain]")
-- The how-to angle ("How to fix [pain] in [timeframe]")
-- The case study angle ("How [business type] solved [pain]")
+Turn real customer questions into blog posts. The title echoes the question; the article is the definitive answer. Mine from: customer service logs, sales call objections, social media DMs, industry forums, Google "People Also Ask", AnswerThePublic.
 
-**Sources for pain points:**
-- Sales enquiry emails and customer questions
-- Support tickets and FAQ pages
-- Facebook group searches: "need help", "desperate for", "have no clue", "advice about"
-- Competitor blog comments (what questions do readers ask?)
-- "People Also Ask" boxes in Google
-- Amazon/review site comments about products in the niche
+### Method 6: They Ask, You Answer (Marcus Sheridan / Livermore)
 
-### Method 5: Customer Question Mapping (Aaron + Graves)
+Every question a customer has ever asked becomes a blog post. Make it a habit: when someone emails a question, write a blog post answering it, then send them the link. For teams: have everyone write down customer questions — typically generates 10+ ideas per session.
 
-Turn real customer questions into blog posts. The title echoes the question; the article provides the definitive answer.
+### Method 7: Amazon/Review Mining (Livermore)
 
-**Mining questions from:**
-- Customer service logs (ranked by frequency)
-- Sales call objections
-- Social media DMs and comments
-- Industry forum threads
-- Google's "People Also Ask" for target keywords
-- Answer The Public (free tool)
+For product-based businesses:
+1. Find bestsellers in the niche on Amazon
+2. Scan book titles for trending topics
+3. Read tables of contents for sub-topic ideas
+4. Read negative reviews — they reveal what people actually want covered
+5. Check product reviews for questions and frustrations
+
+Can generate 25 ideas in 10 minutes.
+
+---
+
+## Content-Based Methods (Require Existing Content)
+
+### Method 8: Spin-Off Posts (Livermore)
+
+1. List the last 5 published articles
+2. For each, generate spin-offs: answer a reader question, write the practical implementation, write the opposite viewpoint
+3. Target: 5 spin-offs per post = 25 ideas
+4. Dig deeper: repeat using spin-offs as new starting points
+
+For new blogs with no content: use blog categories instead.
+
+---
+
+## Industry-Driven Methods (Require Industry Knowledge)
+
+### Method 9: Media Mashup (Iny)
+
+Take a familiar media property + a topic in your niche:
+- Nostalgia: "[Classic Character]'s Guide to [Your Topic]"
+- Current hit: "[Trending Show] Lessons for [Your Industry]"
+- Blockbuster: ride ongoing franchise buzz
+
+Rules: the connection must be genuine (don't force it), do keyword research on trending shows first. Best for brands with informal/creative voice.
+
+### Method 10: Highlight the Good / Feature the Bad (Iny)
+
+**Good:** Case study of something excellent — favourite product, company, approach. Formula: praise + analysis + lessons others can learn.
+
+**Bad:** Case study of something frustrating. Three-step formula: your frustration + WHY it makes you angry + offer a solution + step back for bigger picture.
+
+### Method 11: How-To/Tutorial Mining (Iny)
+
+Don't just advise — teach the process. Formula: question people ask + step-by-step breakdown + screenshots/photos + show the outcome/results. Over-deliver: share the methodology, show the actual numbers. Evergreen potential: how-to posts rank for years.
+
+### Method 12: Success/Failure Stories (Iny/Livermore)
+
+**Success:** Write about a time something went right. Not bragging — draw out lessons. Formula: what happened + what worked + what went wrong + lessons.
+
+**Failure:** Failure stories build trust. Formula: tell honestly + analyse what went wrong + what you learned + what you'd do differently. Focus on analysis, not dwelling.
+
+### Method 13: Holiday/Event Mapping (Livermore/Eddy)
+
+Map holidays and events to your niche:
+1. Identify what the holiday represents (Easter = renewal, MLK Day = perseverance)
+2. Map the symbol to your niche ("How to Resurrect a Dying Business")
+3. Plan seasonal content 4-6 weeks in advance
+
+Also: industry events, conferences, product launches, fiscal year dates.
+
+### Method 14: Newsjacking/Trends (Iny)
+
+Ride piggyback on trending stories. Five sources:
+1. Google Trends — search interest over time
+2. Twitter/X — trending topics and hashtags
+3. Facebook — trending stories
+4. News sites — most shared articles
+5. Industry influencers — their commentary and reactions
+
+Write about emerging trends early to make readers feel like insiders.
+
+---
+
+## Creative Methods (Fallbacks for When Other Methods Dry Up)
+
+### Method 15: Use Any Object (Livermore)
+
+Lateral thinking framework:
+1. Pick any random object (e.g., a car)
+2. List parts (tires, steering wheel, brakes, mirrors, engine)
+3. List uses (transport, commuting, vacations)
+4. List problems (costs money, breaks down)
+5. Map every part/use/problem to your niche
+
+Example: Steering wheel → "How to know it's time to change direction in your business"; Brakes → "Things you need to stop doing for your business to succeed."
+
+### Method 16: Curated Roundups (Iny/Livermore)
+
+List top resources in your niche. Always add your own commentary (1-3 sentences per item):
+- **Problems and Products:** "12 Best Tools for [Task]"
+- **People:** "7 [Industry] Experts You'll Actually Learn From"
+- **Resources:** master list of everything needed to accomplish a goal
+- **Media:** best TED talks, podcasts, videos in the niche
+
+### Method 17: Prediction Posts (Iny)
+
+Write educated predictions about the future of your niche. Rules: predictions must be researched, not guesses. Support with data. Follow-up opportunity: revisit predictions later for a second post.
+
+### Method 18: Jargon/Glossary Posts (Livermore)
+
+List industry-specific terms. Write one master glossary post OR individual explainer posts per term. Excellent for SEO — beginners search for definitions.
+
+### Method 19: Contrarian/Negative Posts (Livermore)
+
+Address criticisms head-on. Write about problems with your industry. People research negatives before purchasing — be the trusted source that addresses objections honestly.
+
+### Method 20: Topic-Category Matrix (Eddy)
+
+For high-volume idea generation. Take any topic category, apply two angles:
+- Angle 1: "The Complete Guide to [Topic]" (comprehensive)
+- Angle 2: "Top [N] Tips for [Topic]" (listicle/actionable)
+
+61 categories available (see `references/content-formats.md` for the full list).
 
 ---
 
 ## Ideation Filters and Validators
 
-### The High-Value Goal Filter (Graves)
+### High-Value Goal Filter (Graves)
+Prioritise topics that help readers: make/save money, build a business, reduce risk, save time, gain advantage, learn a high-value skill.
 
-Prioritise topics that help readers:
-- Make or save money
-- Build or grow a business
-- Reduce risk, debt, or waste
-- Save time or effort
-- Gain competitive advantage
-- Learn a high-value skill
+### Unique Expertise Filter (Graves)
+Best topics: high-value for the reader AND hard to find elsewhere.
 
-**Rule:** The more money your article helps people make (or save), the more valuable it is.
+### The 90/10 Content Originality Rule (Bly)
+90% familiar content (proves you know your stuff) + 10% new insight (creates value). The 10% can be: a new framework, contrarian data, unreported case study, or novel connection.
 
-### The Unique Expertise Filter (Graves)
+### Content Hierarchy (Bly)
+Lean toward higher levels:
+- **Information** (facts): "The average SME loses 15% to stock-outs"
+- **Knowledge** (understanding): "Why stock-outs happen more in seasonal businesses"
+- **Wisdom** (guidance): "How to set reorder points that prevent stock-outs"
 
-The best topics sit at the intersection of:
-1. High-value goal for the reader
-2. Expertise that is not commonly available
+### Nine Value-Adding Angles (Bly/Davidson)
 
-If the topic is both valuable AND hard to find elsewhere, it commands attention.
+| Angle | Meaning |
+|-------|---------|
+| Immediacy | Be first. Cover new developments before competitors |
+| Personalisation | Tailor to a specific audience segment |
+| Interpretation | Don't just report — explain what it means |
+| Trust | Use credentials, case studies, proof |
+| Accessibility | Aggregate scattered info into one resource |
+| Embodiment | Repackage into a preferred format (checklist, template) |
+| Reciprocity | Give away genuinely useful content |
+| Findability | Compile resources others must hunt for |
+| New ideas | Share something the reader hasn't heard elsewhere |
 
-### The 25-Topic Test (Aaron)
-
-Quick validation: can you brainstorm 25 sub-topics in a few minutes? If not, the niche is too narrow or you lack sufficient knowledge.
-
-### The Longevity Test (Aaron)
-
-Will this topic still be relevant in 12 months? Avoid topics that dry up. Choose subjects with sustained audience interest.
-
-### The Clone Test (Aaron)
-
-"If you had 100 new subscribers but they all had to be clones of one existing reader, who would it be?" Find that reader. Build content for them.
-
-### The Content Tilt (Kothand/Pulizzi)
-
-Find your distinctive angle by asking:
+### The Content Tilt (Kothand)
+Find your distinctive angle:
 - What questions are asked but not addressed in your niche?
 - What widely held views do you oppose?
-- What methods do you use that get results others don't?
-- What are common misconceptions in your niche?
+- What methods get you results others don't?
 - What lightbulb moments changed how you do things?
 
 ---
 
-## Nine Value-Adding Angles (Bly/Davidson)
+## Headline Patterns (Enhanced)
 
-Any topic can be approached from nine angles. Use as a checklist:
+In addition to the 10 templates in `sales-copywriting/references/headline-mastery.md`, these blog-specific patterns work well:
 
-| # | Angle | What it means |
-|---|-------|---------------|
-| 1 | **Immediacy** | Be first. Cover new developments before competitors. |
-| 2 | **Personalisation** | Tailor to a specific audience segment. |
-| 3 | **Interpretation** | Don't just report facts — explain what they mean. |
-| 4 | **Trust** | Use credentials, case studies, proof. |
-| 5 | **Accessibility** | Aggregate scattered info into one convenient resource. |
-| 6 | **Embodiment** | Repackage into a preferred format (checklist, template, decision tree). |
-| 7 | **Reciprocity** | Give away free, useful content (templates, calculators). |
-| 8 | **Findability** | Compile resources others must hunt for. |
-| 9 | **New ideas** | Share something the reader hasn't heard elsewhere. |
-
----
-
-## Ten Blog Post Types (Kothand)
-
-Each content idea can be expressed through different formats:
-
-| Type | Purpose | When to use |
-|------|---------|-------------|
-| **Myths / Pick a fight** | Challenge conventional wisdom | When you have evidence against a popular belief |
-| **Ultimate guide** | Establish expertise | For pillar content on core topics |
-| **Mistakes** | Get readers' attention | When the audience is making costly errors |
-| **Trends / Predictions** | Thought leadership | When industry shifts are happening |
-| **Curated roundup** | Drive traffic, build relationships | When you can aggregate expert opinions or resources |
-| **Case study** | Create desire | When you have specific client results to share |
-| **Success / Failure story** | Build connection | When personal experience illustrates a lesson |
-| **Tools / Services review** | Provide utility | When your audience needs tool recommendations |
-| **FAQ / Question posts** | Address common queries | When you see the same questions repeatedly |
-| **Interview** | Borrow authority | When you can feature a client or expert |
-
----
-
-## The 90/10 Content Originality Rule (Bly)
-
-Articles don't need 100% original ideas. **90% familiar content** convinces the reader you know your stuff. **10% new insight** creates the value — a new framework, contrarian data point, unreported case study, or novel connection.
-
-## Content Hierarchy (Bly)
-
-Approach every topic at three levels, leaning toward the higher ones:
-
-| Level | Value | Example |
-|-------|-------|---------|
-| **Information** (facts) | Lowest | "The average African SME loses 15% to stock-outs" |
-| **Knowledge** (understanding) | Medium | "Why stock-outs happen more in seasonal businesses" |
-| **Wisdom** (guidance) | Highest | "How to set reorder points that prevent stock-outs" |
-
----
-
-## Headline Patterns
-
-### Formulas by Type
-
-| Pattern | Template | Example |
-|---------|----------|---------|
-| Rule-based | "The N Rules of [Topic] Every [Audience] Should Know" | "The 7 Rules of ERP Selection Every CFO Should Know" |
-| Mistake-based | "N [Topic] Mistakes That Cost [Audience] [Consequence]" | "5 Inventory Mistakes Costing East African Retailers Millions" |
-| Contrarian | "Are You [Doing Thing] by Following Everyone's [Advice]?" | "Is 'Best Practice' POS Setup Costing You Sales?" |
-| How-to | "How to [Goal] in [Timeframe/Context]" | "How to Choose an ERP System in 30 Days" |
-| Direct promise | "[Specific Outcome] for [Specific Audience]" | "Cut Monthly Reconciliation from 3 Days to 3 Hours" |
-| Question | "What Happens When [Scenario]?" | "What Happens When Your Pharmacy Runs Out of Essentials?" |
-| Myth-busting | "N Things the Experts Don't Tell You About [Topic]" | "4 Things ERP Vendors Won't Tell You About Implementation" |
-| Guide | "The [Audience]'s Guide to [Topic]" | "The Retail Owner's Guide to Inventory Software" |
-| Lazy | "The Lazy [Audience]'s Guide to [Topic]" | "The Lazy Accountant's Guide to Month-End Close" |
-| Tools | "N Time-Saving [Tools] for [Audience]" | "8 Free Tools Every Kampala SME Should Use in 2026" |
+| Pattern | Template |
+|---------|----------|
+| Rule-based | "The N Rules of [Topic] Every [Audience] Should Know" |
+| Mistake-based | "N [Topic] Mistakes That Cost [Audience] [Consequence]" |
+| Contrarian | "Why [Common Advice] Is Wrong for [Specific Audience]" |
+| Myth-busting | "N Things the Experts Don't Tell You About [Topic]" |
+| Lazy guide | "The Lazy [Audience]'s Guide to [Topic]" |
+| Tools/Resources | "N Time-Saving [Tools] for [Audience] in [Year]" |
+| Lessons from | "What [Unexpected Source] Taught Me About [Your Topic]" |
+| Media mashup | "[Character/Show]'s Guide to [Your Niche Topic]" |
+| Day in the life | "A Day in the Life of a [Role]: What Really Happens" |
+| Comparison | "[Option A] vs [Option B]: Which Is Right for [Audience]?" |
 
 ### Three-Headline Method (Graves)
+Always generate 3 headline options per article. Each incorporates: the topic, the unique angle, the audience appeal.
 
-Always generate 3 headline options per article. Each incorporates:
-1. The topic (what it's about)
-2. The unique angle (why this one is different)
-3. The audience appeal (why the reader will care)
-
-### Headline Quality Rules
-
-- **Clear first, clever second** — reader must know what they'll get in 2 seconds
-- **Be specific** — use numbers, timeframes, percentages
-- **Address an emotion** — fear of loss, desire for results, curiosity
-- **Be searchable** — would someone type this into Google?
-- **First 2-3 words and last 2-3 words** are what readers actually scan
+### 4 U's Test (AWAI)
+Score each headline on Useful, Unique, Urgent, Ultra-specific (1-4 each). Publish only if 3+ dimensions score 3+. See `sales-copywriting/references/headline-mastery.md`.
 
 ---
 
-## The Client Questionnaire (Graves)
+## Client Questionnaire (Graves)
 
-When the user provides minimal context, use these 12 questions to surface raw material for ideation:
-
+When minimal context is available:
 1. What is the #1 thing you want blog readers to do?
-2. Who is your target audience? (Be as specific as possible.)
+2. Who is your target audience? (Be specific.)
 3. What is your primary value proposition?
 4. Top 3 problems your business solves?
 5. Top 3 benefits customers receive?
-6. Primary emotional benefits that resonate with clients?
-7. Key data points, case studies, or figures that prompted a "wow" response?
+6. Primary emotional benefits that resonate?
+7. Key data points or case studies that prompted a "wow" response?
 8. What aspect of your pitch has been most effective?
-9. How are you better than competitors? What alternatives do customers consider?
+9. How are you better than competitors?
 10. What tone and brand image are you aiming for?
-11. What are your most impressive case studies?
+11. Most impressive case studies?
 12. Anything else important?
 
 ---
 
 ## Clustering for Idea Expansion (Lima)
 
-When you have a seed topic but need more angles:
-
-1. Place the keyword in the centre of a mental map
-2. Branch outward with every associated word, phrase, or sub-topic
-3. Work fast without censoring — quantity over quality
-4. When one branch dries up, return to the centre and start another
-5. After clustering, the richest branches become article ideas
-
-**Run multiple clusters per project:** business name, ideal customer problem, product category, competitor weakness. Each yields different angles.
-
----
+Place a keyword in the centre of a mental map. Branch outward with every association. Work fast. When one branch dries up, start another. Richest branches become article ideas. Run multiple clusters: business name, ideal customer problem, product category, competitor weakness.
 
 ## W5 Topic Discovery (Lima)
 
-For any potential topic, ask six questions — each surfaces a distinct article angle:
+For any topic, ask six questions — each surfaces a distinct angle:
 
 | Question | Angle |
 |----------|-------|
