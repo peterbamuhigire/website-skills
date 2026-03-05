@@ -1,6 +1,6 @@
 # Next Features — Website Skills
 
-Last updated: 2026-03-01
+Last updated: 2026-03-05
 
 ## 🟠 HIGH PRIORITY
 
@@ -24,6 +24,10 @@ Last updated: 2026-03-01
 
 ## ✅ Recently Completed
 
+**Sales copywriting skill** (2026-03-05) — Hybrid persuasion skill with 5 reference files. Cross-cutting headlines, CTAs, anti-resistance writing for all pages. PASTOR, 4 P's, fascination bullets, guarantees for sales pages. Enhanced storytelling.md, writing-craft.md, website-copywriting.md. Sources: Edwards, Hollingshead/AWAI, Lee.
+
+**Blog idea generator** (2026-03-04) — Guided interview producing 15-25 targeted blog ideas using 5 ideation methods from 5 writing books.
+
 **Human voice & copywriting enhancement** (2026-03-01) — AI vocabulary blacklists (60+ words, 30+ phrases), page-by-page copywriting formulas, Voice DNA extraction, burstiness enforcement. 2 new reference files, 5 skills updated.
 
 **Blog-writer skill** (2026-03-01) — Bilingual blog articles (EN + FR), 8 reference files, per-article design variety, Article JSON-LD, OG images.
@@ -36,4 +40,5 @@ Last updated: 2026-03-01
 
 1. Add Kiswahili support to blog-writer (high-value, moderate effort)
 2. Create voice profile template for client onboarding (quick win)
-3. Test human voice standards against a real client project
+3. Test sales-copywriting + human voice standards against a real client project
+4. Build a client website to validate the full pipeline end-to-end
