@@ -535,3 +535,39 @@ Each service page or landing page should address ONE primary pain point. Don't o
 ### The "Friend Test"
 
 Read your copy aloud. If there's a sentence you wouldn't say in conversation with a friend, remove it or rewrite it. Copy that sounds natural when spoken works on screen. Copy that sounds stilted when spoken will feel stilted when read.
+
+## Cross-References to Sales Copywriting
+
+For enhanced copywriting techniques, consult these references from the `sales-copywriting` skill:
+
+| Technique | Reference | Use When |
+|-----------|-----------|----------|
+| Headline formulas (10 templates + 4 U's scoring) | `sales-copywriting/references/headline-mastery.md` | Writing ANY headline |
+| Fascination bullets (21 templates) | `sales-copywriting/references/fascination-bullets.md` | Writing bullet points that need to persuade |
+| Objection handling and anti-resistance | `sales-copywriting/references/resistance-and-objections.md` | Services pages, pricing, FAQ |
+| PASTOR and 4 P's frameworks | `sales-copywriting/references/pastor-and-4ps.md` | Landing pages, sales pages |
+| Closing templates and guarantees | `sales-copywriting/references/closing-and-guarantees.md` | CTAs, guarantee sections, pricing pages |
+
+## Proof Integration Per Page Type
+
+Proof should be woven throughout copy, not confined to a testimonials page.
+
+| Page | Proof Type | Placement |
+|------|-----------|-----------|
+| **Homepage** | Hero: one bold claim with specific number. Below fold: 2-3 named client logos or results. | Within first 2 scrolls |
+| **Services** | Per-service: one case study snippet or specific result. | Within each service description |
+| **About** | Team credentials, years of experience, number of clients served. | Woven into narrative, not listed |
+| **Contact** | "Join X businesses who..." or one short testimonial. | Above or beside the form |
+| **Pricing** | ROI calculation or "pays for itself in X days." | Before or within pricing table |
+| **FAQ** | Link objection answers to proof: "Here's what [client] experienced..." | Within relevant answers |
+
+## Value Anchoring for Pricing Pages
+
+When building pricing pages or sections:
+
+1. **Lead with the transformation, not the price.** The reader should want the result before they see the cost.
+2. **Itemise value components** to show total value exceeds price.
+3. **Frame as investment:** "Your investment" not "The cost."
+4. **Show ROI:** "Most clients recoup their investment within [timeframe]."
+5. **Avoid round numbers** in pricing — numbers ending in 7 outperform, then 3, then 9.
+6. **Never compete on price.** Compare on value, outcomes, and unique benefits.

@@ -490,3 +490,83 @@ Never publish on the same day you write. At minimum:
 - Then publish
 
 This single habit catches more errors than any spell-checker.
+
+## Advanced Research Methods
+
+### Gene Schwartz's 4-Read Research Method
+
+Before writing about any product or topic, read all available material 4 times:
+
+1. **First read:** Get the general idea. Don't take notes. Just absorb.
+2. **Second read:** Underline heavily. Aim for 40-50 pages of underlined material from a book-length source.
+3. **Third read:** Type up your underlined material. This forces precision in vocabulary — you'll capture the exact words clients, experts, and users employ.
+4. **Fourth read:** Structure emerges. Go over your typed notes and begin organising.
+
+"Copywriting is research. It has something I call 'claim density.' It's packed with facts, with information, with ideas." — Gene Schwartz
+
+**Adapted for blog writing:** When writing about a client's industry, read their website, marketing materials, competitor sites, and industry publications. Read them multiple times. The vocabulary, the concerns, the specific language — all of this becomes raw material for authentic copy.
+
+### The Golden Nuggets Technique (Don Mahoney, AWAI)
+
+Embed your writing with fascinating bits of information that stimulate the reader's imagination.
+
+**How it works:**
+- When you tell somebody something they didn't know, you give them something for free
+- On a subconscious level, they feel gratitude
+- They're more likely to keep reading and more likely to respond
+- Simultaneously, you build credibility as someone who knows the subject deeply
+
+**Examples:**
+- Instead of "Coffee is popular in East Africa," write: "Ethiopia produces over 400,000 tonnes of coffee annually — and the best lots never leave the country."
+- Instead of "Mobile payments are growing," write: "M-Pesa processes more transactions per month than Western Union does globally in a year."
+
+**How to find Golden Nuggets:**
+- Read industry reports and pull surprising statistics
+- Interview subject matter experts and ask "What's something most people get wrong about this?"
+- Look for historical context — how things used to work vs how they work now
+- Find counter-intuitive facts that challenge assumptions
+
+### The Prospect Visualisation Technique (AWAI)
+
+Before writing for any audience:
+1. Sum up the reader in a few lines (demographics, fears, desires)
+2. Think of someone you personally know who fits this description
+3. If possible, find a photo and keep it visible while writing
+4. Think about how you'd talk to this specific person
+5. What words would you use? What tone? How much evidence would they need?
+
+This transforms "writing for an audience" into "writing for a person" — the single most effective way to produce authentic copy.
+
+## Advanced Authenticity Techniques
+
+### Writing With Passion (AWAI)
+
+1. Study the subject and list all its good qualities
+2. Get genuinely excited about it — find the angle that interests YOU
+3. Start naturally "selling" the topic in casual conversation
+4. Even temporary enthusiasm that fades after writing is effective in the draft
+5. If you fail to write with passion, you'll put the reader to sleep
+
+### Three Tricks to Eliminate "Adspeak" (Paul Hollingshead)
+
+1. **Imagine the person you're writing to.** Picture them as a friend.
+2. **Believe that what you're writing about will improve their life.** If you don't believe it, find the angle where it's true.
+3. **Figure out what it would take to convince YOU.** Your skepticism mirrors theirs.
+
+### Claude Hopkins' 3 Rules for Connecting With Readers
+
+1. **Know who you're writing for.** Ask who benefits most. Ask who has purchased before.
+2. **Speak in their language.** Don't preach, bully, or talk down. Don't be bigger, smarter, or more sophisticated. Write the way you'd talk to a friend.
+3. **Take helping seriously.** Offer real solutions, not flimsy ones. Back everything with research, details, facts, numbers. No humour that steals credibility or breaks momentum.
+
+### Ted Nicholas' Peak State Preparation
+
+For writing sessions that require genuine energy and voice:
+1. Get fully rested
+2. Eat lightly before writing
+3. Light exercise to get alert
+4. Eliminate interruptions
+5. Prime your mind with positive thoughts
+6. Take a brisk 5-minute walk before writing
+
+"When writing, imagine you are talking to a friend or loved one. Credibility, tone, and warmth come from the feelings you generate through the words you write." — Ted Nicholas

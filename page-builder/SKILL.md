@@ -11,6 +11,11 @@ Transform markdown content into stunning, production-grade Astro pages.
 
 Before writing ANY page copy, read **`references/website-copywriting.md`** for copy formulas and **`references/conversion-design-rules.md`** for layout, CTA, and UX anti-pattern rules. Also read **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary blacklist. All generated text must sound 100% human-written.
 
+**Persuasion & conversion references** (from `sales-copywriting` skill):
+- `sales-copywriting/references/headline-mastery.md` — Read for ALL headlines (10 formulas + 4 U's scoring)
+- `sales-copywriting/references/fascination-bullets.md` — Read when writing bullet points that need to persuade
+- `sales-copywriting/SKILL.md` — Read FULL skill when building landing pages, sales pages, or product pages
+
 ## Universal Guidelines Reference
 
 Before building pages, review **Universal Design Guidelines** for:
