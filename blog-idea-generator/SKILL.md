@@ -1,6 +1,6 @@
 ---
 name: blog-idea-generator
-description: Generate 15-25 targeted blog post ideas with 200-word summaries for any client website. Reads website content, assesses available information, adaptively selects from 20 ideation methods, and conducts a guided interview. Each idea includes a narrative brief + structured specs. Use when the user says "generate blog ideas", "what should I blog about", "blog topic ideas", "content ideas", or wants to populate topic-ideas.md.
+description: Generate 15-25 targeted blog post ideas with 200-word summaries for any client website. Reads website content, assesses available information, adaptively selects from 20 ideation methods, and conducts a guided interview. Each idea includes a narrative brief + structured specs. Use when the user says "generate blog ideas", "what should I blog about", "blog topic ideas", "content ideas", or wants to populate docs/blogs/topics.md.
 ---
 
 # Blog Idea Generator
@@ -24,7 +24,7 @@ Read every available file to build a complete picture:
 3. `docs/en/pages.md` — existing website pages and content
 4. `docs/sector-brief.md` — industry context (if present)
 5. `docs/style-brief.md` — brand voice and tone
-6. `blog-writer/references/topic-ideas.md` — existing topics (avoid duplicates)
+6. `docs/blogs/topics.md` — existing topics (avoid duplicates)
 7. `src/pages/en/blog/` — existing articles (avoid overlap)
 8. All other `docs/en/` files — testimonials, FAQ, portfolio, about-story
 
@@ -120,7 +120,7 @@ Remove any idea that fails:
 | **Unique angle** | Does this require knowledge that isn't commonly available? |
 | **So-what test** | Would the target reader care enough to click? |
 | **Longevity** | Will this still be relevant in 12 months? |
-| **No overlap** | Not already published or in existing topic-ideas.md? |
+| **No overlap** | Not already published or in existing docs/blogs/topics.md? |
 | **Searchable** | Would someone type this into a search engine? |
 
 ### Tier Classification
@@ -187,7 +187,7 @@ Refine based on feedback. The user's input overrides the assessment.
 
 ## Step 7: Save Output
 
-Save the final approved list to `blog-writer/references/topic-ideas.md`:
+Save the final approved list to `docs/blogs/topics.md`:
 
 ```markdown
 # Blog Topic Ideas — [Client Name]
