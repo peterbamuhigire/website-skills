@@ -514,6 +514,35 @@ Generated: [Date]
 
 ---
 
+## Custom 404 Page (MANDATORY)
+
+Every site MUST have a branded 404 page. Create `src/pages/404.astro`:
+
+- Use the site's BaseLayout and Header/Footer (consistent design)
+- Clear message: "Page not found" (not just "404")
+- Link back to homepage
+- Links to 3-5 popular pages (services, about, contact)
+- Optional: search box or sitemap link
+- Ensure the server returns HTTP 404 status code (Astro does this automatically for `404.astro`)
+
+**Why:** Users follow broken links or mistype URLs. A helpful 404 page guides them back instead of losing them. Google explicitly recommends custom 404 pages that help users find what they need.
+
+---
+
+## Anchor Text Rules
+
+Internal and external links MUST use descriptive anchor text:
+
+- **Never** use "click here", "read more", "this page", or bare URLs as anchor text
+- **Do** use text that describes the destination: "our property management features" not "click here to see features"
+- Keep anchor text concise (a few words or short phrase, never a full paragraph)
+- Internal links should use keyword-relevant text naturally (not stuffed)
+- If an image is used as a link, the `alt` attribute serves as the anchor text — make it descriptive
+
+**Why:** Descriptive anchor text helps both users and search engines understand what the linked page is about. Google uses anchor text as a ranking signal.
+
+---
+
 ## Post-Launch Checklist (Output to docs/SEO-NEXT-STEPS.md)
 
 ```markdown
