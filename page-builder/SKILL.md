@@ -207,6 +207,88 @@ const currentPath = new URL(Astro.request.url).pathname.replace(/^\/[a-z]{2}/, '
 
 **LanguageSwitcher (NEW):** This component is automatically included. It shows language options (English, Français, Kiswahili) and navigates to the same page in the selected language. See i18n/SKILL.md for the component definition.
 
+## Hard UX Rules (from conversion research)
+
+### No Carousels or Sliders (MANDATORY)
+
+Never use auto-rotating carousels, sliders, or any self-moving content on any page. This includes:
+- Homepage header carousels
+- Testimonial carousels
+- Client logo carousels
+- Blog post carousels
+
+**Why:** Carousels rotate faster than visitors can read. Visitors ignore them (banner blindness) or find them annoying. Multiple studies show carousels reduce clicks and conversions. Use static content or tabbed content instead.
+
+**Exception:** A manually controlled image gallery (user clicks arrows) is acceptable for portfolios or product photos.
+
+### No Dropdown Navigation Menus (MANDATORY)
+
+Never use dropdown menus in the main navigation. They:
+- Are annoying and hard to use (especially on mobile)
+- Cause visitors to skip top-level pages
+- Make it harder to find information
+
+**Alternatives:**
+- 3-5 services? List them as top-level navigation items
+- Many services? Create a dedicated Services overview page with links to each
+- About sub-pages (team, story, values)? Combine into one About page
+
+**Exception:** Mobile hamburger menu is fine (it's a toggle, not a hover dropdown). Mega menus are acceptable for e-commerce sites with many product categories.
+
+### Homepage Section Ordering
+
+Homepage sections follow the inverted pyramid — most important information first:
+
+1. **What you do / for whom** — tagline, value proposition (+ photo for solopreneurs, CTA for e-commerce)
+2. **Unique selling point** — if not clear from #1, explain why you're different
+3. **Credibility** — testimonials, client logos, trust signals, statistics
+4. **Overview of offers** — services/products with CTAs to dive deeper
+5. **More credibility** — case studies, awards, certifications that support #4
+6. **Featured content** — lead magnet, blog posts, or specific offer
+7. **Final CTA** — last nudge before footer
+
+**The homepage must NOT simply mirror the navigation.** Don't repeat "About | Services | Blog | Contact" as sections with thin descriptions. Add context, solve problems, build trust.
+
+### CTA Placement Rule
+
+Never place a CTA button before you've given the visitor enough context to want to click it. A CTA asking people to "Contact Us" before explaining what you do is wasted. Place CTAs AFTER:
+- Explaining the benefit
+- Addressing likely objections
+- Providing evidence (testimonial, statistic, case study)
+
+**Homepage exception:** Multiple CTAs are expected on homepages (see ordering above), but each CTA should follow its relevant context section.
+
+### False Bottom Avoidance
+
+A "false bottom" is an area that looks like the end of the page when content continues below. Avoid:
+- Full-width coloured sections followed by another full-width section of the same colour
+- Large amounts of whitespace between sections
+- CTA sections that feel like a natural ending when there's more content below
+
+**Fix:** Ensure visual continuity — alternate section backgrounds, add subtle separators, or use a design element that signals "more below."
+
+### Testimonials in Context (MANDATORY)
+
+Never create a standalone "Testimonials" page. Instead, place testimonials where they support specific claims:
+- Homepage: below the value proposition to reinforce trust
+- Service pages: next to the service the testimonial references
+- About page: reinforcing team credibility
+- Contact page: reducing hesitation before reaching out
+
+Each testimonial should reinforce the claim made in the section above it. A testimonial about fast support belongs near the "support" section, not lumped with unrelated quotes.
+
+### Contact Form Simplicity
+
+Contact forms must be as short as possible:
+- **Required fields only:** Name, Email, Message (3 fields maximum for initial contact)
+- Phone number: optional, with explanation of why you're asking
+- No "Subject" dropdown — set it automatically based on page context
+- Placeholder text must look different from filled text (grey italic vs black regular)
+- Submit button: visually prominent, clear label ("Send Message" not "Submit")
+- Never ask for company size, budget, or detailed project info in an initial contact form
+
+---
+
 ## Section Patterns
 
 ### Hero Sections

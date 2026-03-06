@@ -307,6 +307,92 @@ Before publishing any page or post, verify:
 
 ---
 
+## Customer-Focused Copy
+
+Your website exists for the visitor, not the business owner. Every page must pass the "you" test.
+
+### The You/We Ratio
+
+Count "you" and "your" versus "I", "we", "our" on every page. **"You/your" must outnumber "I/we/our" by at least 2:1.** If the ratio is wrong, rephrase:
+
+| Self-centred | Customer-focused |
+|-------------|-----------------|
+| We provide custom solutions | You get a system built for your workflow |
+| I will teach you | You will learn |
+| Our team has 15 years of experience | Your project benefits from 15 years of experience |
+| We offer 24/7 support | You reach a real person any time you need help |
+
+### No Welcome Text
+
+Never write "Welcome to our website", "Thanks for visiting", or "I invite you to look around." These waste the reader's most valuable seconds — the first impression. Open with what you do and why it matters to them.
+
+### No Telling Visitors How to Feel
+
+Never write "Isn't it great?", "Easy, right?", or "How awesome is that?" Let the content create the feeling. If you have to tell visitors to feel impressed, the content isn't impressive enough.
+
+---
+
+## Assertive Language
+
+Confident copy converts. Tentative language signals doubt about your own offering.
+
+### Banned Hedge Words
+
+| Ban | Replace with |
+|-----|-------------|
+| Maybe we can work together | Let's work together |
+| Feel free to reach out | Contact us |
+| Perhaps this could help | This helps you [specific benefit] |
+| Don't hesitate to contact us | Contact us |
+| In case you're interested | Interested? [CTA] |
+| We think / We believe | [Just state it directly] |
+| Possibly / Potentially | [Delete or be specific] |
+
+### Questions Must Get "Yes"
+
+If you use a question in a headline or CTA, it MUST get a "yes" from the target audience. Questions that prompt "no" or "I don't know" kill conversions.
+
+- Bad: "Ready to upgrade your plan?" (Who is ever ready?)
+- Bad: "Would you like to work together?" (Not sure yet)
+- Good: "Want to spend less time on paperwork?" (Yes!)
+- Good: "Want your tenants to pay on time?" (Always!)
+
+If unsure whether the question will get a "yes", use a declarative sentence instead.
+
+---
+
+## Awareness-Level Copy Matching
+
+Different visitors know different amounts about their problem and your solution. Match your copy to their awareness level (Eugene Schwartz's 5 stages):
+
+| Stage | What they know | What to say |
+|-------|---------------|-------------|
+| **Unaware** | Nothing about the problem | Speak to their current situation |
+| **Problem-aware** | They have a problem, no solution | Show you understand the pain, present the "what" of your solution |
+| **Solution-aware** | They want a result, don't know your product | Show how and why your solution works |
+| **Product-aware** | They know your product, unsure if it's right | Differentiate from alternatives, prove it works |
+| **Most aware** | They know everything, want to buy | Show the deal immediately |
+
+**Homepage** targets Problem-aware and Solution-aware (the majority of first-time visitors).
+**Service/product pages** target Solution-aware and Product-aware.
+**Contact/pricing pages** target Most Aware — don't re-explain benefits, just make it easy to act.
+**Blog posts** target Unaware and Problem-aware — educate first, sell later.
+
+---
+
+## Memorable Key Messages
+
+From cognitive science: people remember at most 10% of what you tell them. Control WHICH 10%.
+
+### Rules for Memorable Messages
+
+1. **One key message per page.** If everything is important, nothing is. Decide the single thing you want visitors to remember and repeat it.
+2. **Make it repeatable.** Your key message should be short enough (under 10 words) that a visitor could repeat it to a friend: "They help landlords get paid on time."
+3. **Attach it to a future action.** People remember content that helps them plan their next step. End sections with what the reader should do, not what they should think.
+4. **Use concrete specifics.** "Reduce vacancy rates by 40%" is remembered. "Improve your property performance" is forgotten.
+
+---
+
 ## Integration with Other Skills
 
 This skill is cross-cutting — it applies alongside:

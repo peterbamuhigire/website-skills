@@ -60,6 +60,32 @@ Import in `src/styles/global.css`:
 - Heading font should feel distinctive; body font should be invisible (easy to read)
 - Limit to 2 font families max (a third readable script font is acceptable for very short phrases only)
 
+### Minimum Body Font Size (MANDATORY)
+
+Body text must be **minimum 16px** (`text-base` in Tailwind). For audiences over 45, consider 18px. Smaller text causes eye strain and drives visitors away — readability trumps aesthetics.
+
+### No Auto-Moving Elements (MANDATORY)
+
+Never use any element that moves, rotates, or changes by itself:
+- No auto-rotating carousels or sliders
+- No auto-scrolling text or tickers
+- No auto-playing videos or audio
+- No animated client logo strips that move continuously
+- No testimonial carousels that rotate on a timer
+
+Self-moving elements are annoying, reduce conversions, and trigger banner blindness. Use static layouts or user-controlled interactions (click/swipe) instead.
+
+**Exception:** Subtle scroll-triggered fade/slide animations (`.animate-on-scroll`) are fine — they respond to user action (scrolling), not a timer.
+
+### Highlight Ratio Rule
+
+On any single screen view, no more than 40% of visible text should be "highlighted" (bold, coloured, large, or in a button). When everything is bold, nothing is bold. Highlights work by contrast with surrounding plain content.
+
+- Use bold text sparingly — 1-2 key phrases per paragraph maximum
+- Avoid colouring more than 2-3 elements per screen view
+- If a section has 3+ buttons visible at once, reduce to 1-2
+- If every heading uses a colour background, remove them — headings should look like text, not buttons
+
 ### Safe Design Limits (Hard Maximums)
 
 Each additional colour, font, or font size creates friction. Friction is good if you want visitors to pause and notice something. Friction is bad if you want them to read without interruption.
