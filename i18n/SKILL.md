@@ -95,6 +95,16 @@ This covers 75–90% of African visitors (Francophone and Anglophone Africa). No
 
 Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The `.htaccess` should skip the root and let the HTML page handle it.
 
+### Zero-Flash Redirect (MANDATORY)
+
+The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any visible redirect artefact when landing on the root URL. The redirect must be instant and invisible:
+
+- **Never use `Astro.redirect()`** for the root page — it renders visible "Redirecting to..." text in dev mode and generates a slow meta refresh in static builds
+- The inline `<script>` above uses `window.location.replace()` which is instant — no flash
+- The `<noscript>` fallback uses `content="0"` (zero-second delay) — no flash
+- The `<body>` of the root page must be empty (or contain only the `<noscript>` tag) — nothing visible to render
+- **Test this**: visit the root URL and confirm no text, no flicker, no intermediate state is visible before the language page loads
+
 ## URL Structure
 - Root domain (/) → browser language detection → /en/ or /fr/
 - All pages served under language path: /en/, /fr/, /sw/
