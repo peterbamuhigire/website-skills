@@ -26,11 +26,11 @@ Generate all 11 content files in `docs/en/` for a **professional services websit
 ### Brand Identity
 
 - **Company name:** Chwezi Core Systems
-- **Domain:** chwezi.co.za
+- **Domain:** chwezicore.com
 - **Tagline:** "Technology, Business & Security Consultants"
 - **Industry:** ICT Consulting / Professional Services
 - **Location:** Kampala, Uganda
-- **Contact:** info@chwezi.co.za | +256 784 464178
+- **Contact:** info@chwezicore.com | +256 784 464178
 - **Primary audiences:**
   - Business owners and executives needing ICT strategy, ERP solutions, or digital transformation
   - Organisations requiring cybersecurity assessments, CCTV, or physical security systems
@@ -152,7 +152,7 @@ These should be woven throughout the site, not listed as bullet points:
 - Vision: The trusted technology partner for African organisations — making world-class ICT and security accessible
 - Values: Technical Excellence, Integrity, Partnership, Practical Innovation, Security-First Thinking
 - Key numbers: 3 service divisions, 2 commercial software products, full-cycle delivery (strategy → implementation → support)
-- Contact: info@chwezi.co.za, +256 784 464178, Kampala, Uganda
+- Contact: info@chwezicore.com, +256 784 464178, Kampala, Uganda
 - Social media: leave as `[PLACEHOLDER]`
 
 #### 2. `docs/en/pages.md`
@@ -203,7 +203,7 @@ Each sub-service should include 3-5 bullet points of specific capabilities. Mark
 
 #### 6. `docs/en/contact.md`
 
-- **Email:** info@chwezi.co.za
+- **Email:** info@chwezicore.com
 - **Phone:** +256 784 464178 (also WhatsApp)
 - **Location:** Kampala, Uganda (leave specific address as `[PLACEHOLDER]`)
 - **Hours:** Monday–Friday 8:00 AM – 6:00 PM EAT, Saturday 9:00 AM – 1:00 PM
@@ -305,7 +305,7 @@ Update the i18n config to enable **2 languages: English (en) and French (fr)**. 
 
 Fill in the SEO template with:
 
-- Site URL: `https://chwezi.co.za`
+- Site URL: `https://chwezicore.com`
 - Schema type: `ProfessionalService` + `Organization`
 - Per-page meta titles and descriptions optimised for:
   - "ICT consultancy Uganda"
