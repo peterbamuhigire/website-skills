@@ -303,6 +303,41 @@ Avoid country-specific terms unless relevant:
 - Avoid France-centric references
 - Avoid Canadian (Québécois) terminology
 
+### Francophone Africa Geographic Scope
+
+**CRITICAL RULE:** French content must target Francophone Africa broadly — NOT just East Africa or Uganda.
+
+The French language version of any website should be written and positioned for the entire Francophone African market:
+
+**Target countries (examples, not exhaustive):**
+Côte d'Ivoire, Cameroun, Sénégal, RDC (Congo-Kinshasa), Guinée, Mali, Burkina Faso, Gabon, Niger, Bénin, Togo, Madagascar, Mauritanie, Djibouti, Comores
+
+**Financial institutions to reference (where relevant):**
+- BCEAO (Banque Centrale des États de l'Afrique de l'Ouest) — West Africa
+- BEAC (Banque des États de l'Afrique Centrale) — Central Africa
+- Ecobank, BOA (Bank of Africa), UBA, Orabank, BGFI
+- BNI (Côte d'Ivoire), Société Générale Afrique
+- BOAD (IFD Ouest-africaine), AFC (Africa Finance Corporation)
+
+**Business regulatory frameworks to use:**
+- OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires)
+- SYSCOHADA (accounting standards)
+- FCFA currency (BCEAO/BEAC zone)
+
+**What to AVOID in French content:**
+- Ugandan-specific references: UDB, Centenary Bank, Stanbic Uganda, DFCU
+- East Africa-only phrasing: "Afrique de l'Est" as the primary qualifier
+- Assuming the French reader is in Uganda or East Africa
+
+**What to DO:**
+- Use "Afrique francophone" as the geographic qualifier
+- Reference institutions and frameworks relevant across West and Central Africa
+- Use examples from Côte d'Ivoire, Sénégal, Cameroun, DRC, Guinée
+- SEO: target "plan d'affaires Côte d'Ivoire", "consultant Sénégal", "financement entreprise Cameroun", "business plan Afrique francophone"
+
+**When a client is specifically in East Africa:**
+If the client is Uganda-based, English pages handle the Ugandan/East African audience. The French pages reach the francophone African audience — these are different markets.
+
 ---
 
 # KISWAHILI (sw) — East African Standard
