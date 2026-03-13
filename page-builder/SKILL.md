@@ -18,13 +18,20 @@ Before writing ANY page copy, read **`references/website-copywriting.md`** for c
 
 ## Universal Guidelines Reference
 
-Before building pages, review **Universal Design Guidelines** for:
-- Visual hierarchy and cognitive load reduction
-- Scannable content formatting (headings, lists, short paragraphs)
-- Clear CTAs (calls-to-action) and value propositions
-- Content strategy and information architecture
-- Keyboard navigation and screen reader compatibility
-- Mobile-first responsive design approach
+Before building pages, review these references:
+
+**`universal-guidelines/UNIVERSAL-DESIGN-GUIDELINES.md`** — core standards for every page.
+
+**`universal-guidelines/ux-laws-and-psychology.md`** — apply these on every page:
+- **F-Pattern**: place the most important words at the start of every line and paragraph
+- **Inverted Pyramid**: most critical information first, always
+- **Hick's Law**: limit navigation items, pricing options, and form fields to ≤7
+- **Von Restorff**: one primary CTA must look like nothing else on the page
+- **Endowed Progress**: show progress bars pre-loaded at 20%; pre-check one onboarding step
+- **Law of Proximity**: group related elements; separate unrelated ones by visible space
+- **Jakob's Law**: use familiar patterns — never reinvent navigation without reason
+
+**`references/conversion-design-rules.md`** — layout and UX anti-patterns to avoid on every page, plus button anatomy (all 6 states), Flow Theory checklist, and Endowed Progress applications.
 
 This skill applies these universal content and UX principles to Astro implementation.
 
