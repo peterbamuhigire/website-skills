@@ -256,13 +256,30 @@ For projects where glassmorphism suits the brand (Corporate, Tourism, Portfolio,
 
 ## Universal Guidelines
 
-Before starting design decisions, review **Universal Design Guidelines** for:
+Before starting design decisions, review these references:
+
+**`universal-guidelines/UNIVERSAL-DESIGN-GUIDELINES.md`** — core standards:
 - Color theory and accessibility requirements
 - Typography scales and readability standards
 - Spacing systems and visual hierarchy
 - Accessibility standards (WCAG 2.1 AA)
 - Mobile-first responsive design approach
 - Trust and credibility signals
+
+**`universal-guidelines/ux-laws-and-psychology.md`** — the psychology behind design decisions:
+- UX laws quick reference table (Hick, Fitts, Miller, Von Restorff, Endowed Progress, etc.)
+- Cognitive load theory — reduce extraneous load in every layout decision
+- Flow theory — how spacing and composition keep users engaged
+- Aesthetic-Usability Effect — why visual quality directly impacts perceived trustworthiness
+- Prospect-Refuge theory — designing for both freedom to explore and sense of safety
+
+**`design-system/references/visual-hierarchy-advanced.md`** — layout physics:
+- 8px spacing system with semantic values (which spacing goes where)
+- Grid type selection (block vs column vs modular vs hierarchical)
+- Visual tension and composition direction (horizontal/vertical/diagonal)
+- Arnheim's Structural Net — how visual forces guide viewer attention
+- Rule of Thirds and Golden Ratio for placement
+- Subject matter and gaze direction — photography choices that direct attention to CTAs
 
 This skill applies those universal principles to your specific sector/brand.
 

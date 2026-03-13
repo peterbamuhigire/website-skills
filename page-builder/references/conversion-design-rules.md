@@ -230,3 +230,74 @@ If no suitable image exists, flag it in the replacement checklist as a missing O
 ~80% of website patterns should match niche conventions (navigation structure, colour schemes, homepage layout, content hierarchy). Uniqueness comes from the remaining ~20% — distinctive fonts, accent colours, brand personality, copywriting voice.
 
 Prototypical feels familiar. Familiar evokes trust. A website that looks radically different from what visitors expect in its niche triggers distrust, no matter how beautiful it is.
+
+---
+
+## Button Anatomy & All Six States
+
+Every interactive button must have all six states designed. Omitting any state breaks the user's mental model of what is happening.
+
+| State | When It Applies | Design Requirement |
+|-------|----------------|--------------------|
+| **Default/Normal** | Resting state | Brand accent colour, clear label |
+| **Hover** (web only) | Cursor rolls over | Colour shift or shadow — signals interactivity |
+| **Focus** | Keyboard Tab navigation | 2px visible outline — required for accessibility |
+| **Active/Pressed** | Click or tap | Slightly darker/inset — confirms the action registered |
+| **Disabled** | Action unavailable | Reduced opacity, cursor not-allowed — always pair with a tooltip explaining why |
+| **Loading/Processing** | Action taken, system is working | Spinner or "Loading…" text — never leave the user wondering if their click registered |
+
+**Button hierarchy on every page:**
+1. Primary button — brand accent colour, filled, one per section
+2. Secondary button — ghost (transparent + border)
+3. Tertiary action — text link only
+
+Only one primary button per screen view. When visitors see five equally prominent buttons, they click none.
+
+**Corner radius signals brand personality:**
+- Rounded (32–64px): friendly, approachable, consumer-facing
+- Slightly rounded (4–8px): professional, modern
+- Sharp corners (0px): authoritative, formal, premium
+
+**Button padding (1x-2x rule):** 8px vertical, 16px horizontal.
+
+---
+
+## The Endowed Progress Effect
+
+People are more motivated to complete tasks when they perceive they've already made progress — even if that progress was artificially given.
+
+**Applications:**
+- Progress bars that start at 20% rather than 0%
+- Profile completion meters (LinkedIn model)
+- Onboarding checklists with one step pre-checked
+- Tutorial flows that begin with the easiest win
+- Form flows that show "Step 1 of 3 complete" on arrival
+
+**Build this into:** multi-step contact forms, quote calculators, booking flows, and any onboarding sequence.
+
+---
+
+## Von Restorff Effect — One Thing Must Stand Out
+
+The primary CTA must look like nothing else on the page. Contrast in colour, size, and shape creates memorability and draws the eye.
+
+**Checklist:**
+- [ ] Primary CTA uses a colour not used anywhere else on the same screen view
+- [ ] Primary CTA is physically larger than surrounding text elements
+- [ ] White space around the CTA creates isolation (isolation amplifies distinctiveness)
+- [ ] No more than one element on the page uses the primary CTA colour
+- [ ] Secondary and tertiary actions are visually subordinate (ghost button or text link)
+
+---
+
+## Flow — Keeping Users in the Zone
+
+Flow is the state where users are so engaged they move through the site naturally toward conversion. It exists at the balance point between boredom and anxiety.
+
+**Design checklist for flow:**
+- [ ] Every page has one clear purpose — the user always knows why they're here
+- [ ] Every action produces immediate feedback (button state change, confirmation message, progress update)
+- [ ] Complex interfaces use progressive disclosure — don't show everything at once
+- [ ] No intrusive interruptions (no pop-ups before scroll, no auto-playing audio)
+- [ ] Each section leads logically to the next — no dead ends, no orphan pages
+- [ ] Users have meaningful control (filters, preferences, self-paced navigation)
