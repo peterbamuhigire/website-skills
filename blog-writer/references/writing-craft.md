@@ -145,14 +145,21 @@ From *Faster, Smarter, Louder*. The most effective content structure for busines
 - Never exceed 35 words in a single sentence
 - Too many prepositions in a sentence signals it needs breaking up
 
-### Active Voice
-Use active voice by default. Passive voice hides the actor and weakens sentences.
+### Active Voice (Default) — Passive Voice (Strategic)
 
-| Passive (avoid) | Active (use) |
-|-----------------|-------------|
+Active voice is the default: subject acts, subject takes credit, sentences are shorter and clearer.
+
+| Passive (usually avoid) | Active (use) |
+|------------------------|-------------|
 | The system was installed by the team | The team installed the system |
 | It was decided that the project would be delayed | We decided to delay the project |
 | The report can be downloaded | You can download the report |
+
+**Deliberate passive voice** — use passive intentionally in two situations:
+- **Tact:** when naming the actor would assign unwanted blame. "The deadline was missed" (not "The client missed the deadline") — diplomatic in client-facing copy.
+- **Emphasis on object:** when what happened matters more than who did it. "A six-month study on inventory waste was conducted across 14 East African factories" foregrounds the study; the active version foregrounds the researchers.
+
+Writers who never use passive will often emphasise the wrong thing. The rule is: active by default, passive by intention.
 
 ### Positive Assertions
 State what IS, not what is NOT:
@@ -194,6 +201,29 @@ Replace with the corresponding verb:
 | implementation | implement |
 | utilisation | use |
 | communication | communicate (or: email, call, write) |
+
+---
+
+## Deliberate Pronoun Strategy
+
+Each pronoun sets a different reader relationship — choose, don't default.
+
+- **I** — personal authority, direct voice. "In my experience" sections, opinion pieces.
+- **We** — organisation speaks. Service pages, company announcements.
+- **You** — reader-centred, immediately relevant. CTAs, benefit statements, problem sections. **Dominant pronoun** — "you/your" must exceed "we/our" by 2:1 minimum on any customer-facing page.
+- **Third person** — objective, evidence-based. Case studies, citing research.
+
+Switching pronouns mid-paragraph creates voice confusion. Select one to dominate each section. Avoid "one" — it sounds academic. Rewrite to "you" or name the audience directly.
+
+---
+
+## Discourse Markers for Cohesion
+
+Use "this + noun" to bridge paragraphs without repeating words. Instead of "This is important because…" write "This **shift** matters because…" or "This **finding** suggests…"
+
+Nouns that work: *analysis, approach, assumption, challenge, change, context, contrast, evidence, factor, finding, gap, insight, pattern, process, shift, structure* — and similar.
+
+**Paragraph coherence test:** Underline the key sentence in each paragraph. Reading only those should give a complete article summary. If not, topic sentences or transitions are weak.
 
 ---
 
@@ -467,30 +497,4 @@ Before every article goes live, verify:
 
 Never publish on the same day you write. Take a break (hours, not minutes), return with fresh perspective, then fix issues you couldn't see while writing. This catches more errors than any spell-checker.
 
-## Advanced Research Methods
-
-### Gene Schwartz's 4-Read Research Method
-
-Read all source material 4 times: (1) absorb the general idea, (2) underline heavily, (3) type up underlined material — capturing exact vocabulary clients and experts use, (4) organise typed notes into structure. "Copywriting is research. It's packed with facts, with information, with ideas." For blog writing: read the client's website, competitor sites, and industry publications multiple times. Their vocabulary becomes your raw material.
-
-### The Golden Nuggets Technique (Don Mahoney, AWAI)
-
-Embed fascinating facts that readers didn't know — this builds credibility and gratitude. Instead of "Mobile payments are growing," write: "M-Pesa processes more transactions per month than Western Union does globally in a year." Find nuggets in industry reports, expert interviews, historical contrasts, and counter-intuitive statistics.
-
-### The Prospect Visualisation Technique (AWAI)
-
-Before writing, picture one specific person who matches the target reader. What words would you use with them? What tone? How much evidence would they need? Writing for a person produces better copy than writing for an audience.
-
-## Advanced Authenticity Techniques
-
-### Writing With Passion (AWAI)
-
-Find the angle that genuinely interests you — even temporary enthusiasm produces better drafts. Writing without passion puts the reader to sleep.
-
-### Eliminating "Adspeak" (Paul Hollingshead)
-
-Picture the reader as a friend. Believe the topic will improve their life. Figure out what would convince YOU — your skepticism mirrors theirs.
-
-### Claude Hopkins' 3 Rules
-
-Know who you're writing for. Speak in their language — don't preach or talk down, write as you'd talk to a friend. Take helping seriously — real solutions backed by research, details, and numbers.
+For research methods, ideation techniques, and authenticity principles — see `references/ideation-and-research.md`.
