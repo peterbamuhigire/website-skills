@@ -90,12 +90,13 @@ Fog Index = 0.4 x (average words per sentence + percentage of words with 3+ syll
 
 ### Readability Rules
 
-1. **Short sentences.** Average 15-20 words per sentence. Mix lengths — some 5-word sentences, some 25-word, but never above 30.
-2. **Short paragraphs.** 1-4 sentences. One idea per paragraph. A single-sentence paragraph is powerful.
-3. **Short words.** Prefer one- and two-syllable words. "Use" not "utilise." "Help" not "facilitate." "Start" not "commence."
-4. **Active voice.** "The farmer harvested the crop" not "The crop was harvested by the farmer."
-5. **Concrete nouns and strong verbs.** "Banana yields dropped 30%" not "There was a significant reduction in production output."
-6. **Cut mercilessly.** If a word adds nothing, delete it. "In order to" → "to." "At this point in time" → "now." "Due to the fact that" → "because."
+1. **Noun-then-verb sentence structure.** Put the subject early, follow it closely with the verb. "The consumer foods division increased revenues by 22%" beats "During the third quarter, revenues in the consumer foods division, which covers all packaged goods, were up 22%." Distance between subject and verb is the enemy of clarity.
+2. **Short sentences.** Average 15-20 words per sentence. Mix lengths — some 5-word sentences, some 25-word, but never above 30.
+3. **Short paragraphs.** 1-4 sentences. One idea per paragraph. A single-sentence paragraph is powerful.
+4. **Short words.** Prefer one- and two-syllable words. "Use" not "utilise." "Help" not "facilitate." "Start" not "commence."
+5. **Active voice by default; passive by intention.** "The farmer harvested the crop" is the default. Use passive deliberately: to avoid assigning blame ("The report was not completed on schedule"), or to foreground the object over the actor ("A study on soil erosion was published by researchers in Nairobi"). Never use passive because you forgot to name the actor.
+6. **Concrete nouns and strong verbs.** "Banana yields dropped 30%" not "There was a significant reduction in production output."
+7. **Cut mercilessly.** If a word adds nothing, delete it. "In order to" → "to." "At this point in time" → "now." "Due to the fact that" → "because."
 
 ### Words That Lose Readers
 
@@ -143,15 +144,52 @@ Readers scan before they read. If scanning reveals nothing useful, they leave.
 
 1. **Subheadings every 2-3 paragraphs.** Subheads are the signposts — readers should understand the page's content by reading only the subheads.
 2. **Bullet points for lists of 3+ items.** Bullets are faster to scan than embedded lists in prose.
-3. **Bold key phrases** within paragraphs — the words a scanner's eye should catch.
+3. **Bold key phrases** within paragraphs — the words a scanner's eye should catch. Bold the introductory keyword of a bullet, not the entire bullet — bolding everything defeats emphasis and makes lists visually muddy.
 4. **Pull quotes or callout boxes** for critical statistics or insights.
 5. **Images or visuals every 200-300 words** to break up text and provide visual rest.
-6. **Captions under images** — captions are read 2x more than body copy (Ogilvy).
+6. **Captions under images** — captions are read 2x more than body copy (Ogilvy). Write them in present tense. Identify people left to right. Describe what the photo alone cannot convey — not "A man at work" but "Thomas Kiggundu, head of operations, checks the new inventory system at the Kampala warehouse." Match name spelling to body text exactly.
 7. **White space is content.** Generous margins and padding help the eye focus.
+
+### Bullet Formats (Pick One Per List, Be Consistent)
+
+Three valid formats — choose the one that fits and apply it to every item in that list:
+
+1. **Single words or short phrases** — no period, no full verb (use in feature lists, tag clouds)
+2. **Intro phrase + colon + explanation.** Each item ends with a period.
+3. **Complete sentences.** Each item is a full, standalone sentence ending with a period.
+
+**Chunking rule:** Working memory holds approximately 7 items. Never exceed 9 items per list. If you have 12 items, split into two grouped lists with a mini-subhead each.
 
 ### Above the Fold
 
 The content visible without scrolling must immediately answer: "Am I in the right place?" and "What's in it for me?" Place the strongest headline, the clearest value proposition, and (on landing pages) a CTA above the fold.
+
+---
+
+## The "So What?" Test
+
+After writing any claim, ask: "So what?" If you cannot answer with a clear, specific benefit or implication, either add the answer or cut the claim. This test applies at sentence, paragraph, and page level.
+
+- "We have 15 years of experience." — So what? → "You get a team that has solved this problem in 23 organisations — and won't repeat the mistakes they made in the first five."
+- "Our platform uses cloud infrastructure." — So what? → "Your team accesses the system from any device, anywhere in Africa, with no server costs."
+
+A claim without a "so what" answer is decoration, not content.
+
+---
+
+## Attribution as Authority
+
+Unsupported claims are assertions. Claims with a source are evidence. Readers trust evidence more, and search engines reward specificity.
+
+**Rule:** Every statistic, research finding, and quoted opinion needs a source. "Who says so?" is the editorial test. If you cannot answer it, either find a source or reframe as an opinion.
+
+| Assertion (weak) | Attributed (strong) |
+|-----------------|---------------------|
+| Post-harvest losses are a major problem | Post-harvest losses in East Africa exceed 40% of production — IFPRI, 2023 |
+| Mobile payments are growing fast | M-Pesa processes more transactions monthly than Western Union does globally in a year |
+| Remote work is increasing | 58% of East African knowledge workers worked remotely at least part-time in 2024 — Jobberman survey |
+
+**How to cite in web copy:** For blog articles — inline attribution in the sentence ("according to the World Bank") and a linked reference at the end. For landing pages — use the claim directly with attribution in small print below or as a footnote. Do not use footnote numbers in running prose — they interrupt flow.
 
 ---
 
@@ -332,6 +370,17 @@ Never write "Isn't it great?", "Easy, right?", or "How awesome is that?" Let the
 
 ---
 
+## The 4 Most Persuasive Words
+
+Research-backed words that increase reader engagement and action (Cialdini, Ariely):
+
+1. **"You"** — immediately signals relevance to the reader. Every sentence with "you" pulls the reader in. Count "you/your" vs "we/our" — "you" must win 2:1 minimum.
+2. **The reader's name** — in personalised emails and direct communication, using the reader's name triggers trust. In web copy: use it in form follow-ups, email sequences, and CRM touchpoints.
+3. **"Free"** — triggers near-irrational engagement even when the reader knows it is a tactic. Use for lead magnets, guides, consultations. Never fake it.
+4. **"Because"** — adding any reason after "because" increases compliance dramatically (Cialdini: from 60% to 94% in queue experiments). Give a reason for every CTA. "Download the guide **because** your competitors already have it" outperforms "Download the guide."
+
+---
+
 ## Assertive Language
 
 Confident copy converts. Tentative language signals doubt about your own offering.
@@ -392,6 +441,10 @@ From cognitive science: people remember at most 10% of what you tell them. Contr
 4. **Use concrete specifics.** "Reduce vacancy rates by 40%" is remembered. "Improve your property performance" is forgotten.
 
 ---
+
+## Extended Reference Files
+
+- `references/business-vocabulary.md` — Formal vs informal vocabulary pairs (22 verb pairs, 14 other word pairs); data and statistics language (15 trend phrases, percentage-to-fraction conversion table, approximate figure qualifiers); linking words and transition phrases; market potential and growth phrases for proposals; discourse markers; business phrasal verbs
 
 ## Integration with Other Skills
 

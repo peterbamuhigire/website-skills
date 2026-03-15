@@ -5,7 +5,7 @@ description: Language and tone standards for all written content across 3 langua
 
 # Language Standards — Multi-Language Tone & Grammar
 
-All website copy, headings, calls to action, descriptions, and microcopy must follow this style guide for their respective language. This is a cross-cutting standard applied throughout every content-writing step.
+All website copy, headings, CTAs, descriptions, and microcopy must follow this style guide for their respective language. Cross-cutting standard — applied throughout every content-writing step.
 
 ## Core Principles (All Languages)
 
@@ -26,6 +26,8 @@ All website copy, headings, calls to action, descriptions, and microcopy must fo
 2. **East African tone** — formal, respectful, professionally courteous (Uganda, Kenya, Tanzania blend).
 3. **Measured and confident** without arrogance or dramatic language.
 4. **Logical sentence structure** — no fragments or telegram-style copy.
+5. **Progressive tense preference** — use simple present or past over continuous tenses. "The company plans to expand" not "The company is planning to expand." Simple tenses are more direct and authoritative.
+6. **Consistent verb tense** — do not switch tenses within a section. If you begin in present, stay present throughout that block. Mixing past and present within the same thought signals uncertainty.
 
 ## British English Spelling
 
@@ -56,28 +58,14 @@ Always use British spelling:
 
 ## Tone by East African Country Context
 
-Adjust tone slightly based on client location:
+Adjust tone slightly based on client location. Use Neutral East African when no country is specified.
 
-### Uganda — Warm and Relational
-- Very polite and appreciative
-- Frequent use of "kindly"
-- Emphasis on harmony and goodwill
-- Example: "We highly appreciate your support in this matter. Kindly be informed that the funds have been received."
-
-### Kenya — Confident and Business-Oriented
-- Efficient and practical
-- Clear timelines and expectations
-- Professional firmness
-- Example: "Please share the signed agreement by Friday, 21 February 2026. The project remains on schedule."
-
-### Tanzania — Calm and Measured
-- Formal and conservative
-- Respectful and patient rhythm
-- Influenced by Kiswahili sentence patterns
-- Example: "We kindly request your guidance on the next steps. The matter is under review, and we shall revert shortly."
-
-### Neutral East African (Default)
-Use when no specific country is indicated. Balanced blend of all three.
+| Country | Tone | Key marker |
+|---------|------|------------|
+| **Uganda** | Warm, relational, appreciative | Frequent "kindly", emphasis on harmony: "We highly appreciate your support. Kindly be informed…" |
+| **Kenya** | Confident, business-oriented, efficient | Clear timelines, professional firmness: "Please share the signed agreement by Friday, 21 February 2026." |
+| **Tanzania** | Calm, measured, conservative | Patient rhythm, influenced by Kiswahili patterns: "We kindly request your guidance. We shall revert shortly." |
+| **Neutral (default)** | Balanced blend | Use when no country is specified |
 
 ## Courteous Phrases (English)
 
@@ -133,6 +121,8 @@ Hedging language communicates uncertainty. If you're not sure you're any good, h
 | We might be able to help | We can help |
 | It could potentially improve | It improves |
 
+Additional: cut qualifiers before statements — "We believe this will…" → "This will…", "This could help…" → "This helps…", "You might want to consider…" → [give the recommendation directly].
+
 This applies across all three languages. In French: "N'hésitez pas à nous contacter" is acceptable (culturally standard), but avoid excessive hedging like "Il serait éventuellement possible de...". In Kiswahili: use direct invitations ("Wasiliana nasi" not "Labda unaweza kuwasiliana nasi").
 
 ### Condescending Phrases Ban (All Languages)
@@ -158,6 +148,18 @@ AI-generated text has recognisable vocabulary and patterns. Every piece of conte
 **Required human markers:** Vary sentence length (mix 4-word and 30-word sentences), take clear positions ("I recommend" not "One might consider"), use the client's own vocabulary from their docs, include strategic contractions (2-4 per 500 words in English)
 
 See `blog-writer/references/human-voice-standards.md` for the full blacklist with replacements, detailed techniques, and Voice DNA extraction process.
+
+---
+
+## Redundant Phrases (All Languages)
+
+Delete constructions where one word does the full job: *close proximity* → proximity, *consensus of opinion* → consensus, *free gift* → gift, *end result* → result, *future plans* → plans, *past history* → history, *refer back* → refer, *revert back* → revert, *advance warning* → warning, *repeat again* → repeat, *exact same* → same. Full list in `blog-writer/references/editorial-standards.md`.
+
+---
+
+## The "Because" Principle (All Languages)
+
+"Because" is the most persuasive connector in professional writing (Cialdini research: giving any reason after "because" dramatically increases reader compliance). Apply in CTAs, headlines, and persuasive paragraphs: "Register today — because the first cohort fills fast." In French: *parce que* or *car*. In Kiswahili: *kwa sababu*. Full guidance in `content-writing/SKILL.md`.
 
 ## English CTAs and Button Text
 
@@ -464,14 +466,9 @@ Kiswahili communication culture emphasizes relationships:
 
 # When This Skill Applies
 
-This skill is **cross-cutting** — it applies throughout all content generation:
+**Cross-cutting** — applies to all visible website text, meta descriptions, alt text, form labels, error messages, email templates, and microcopy in all enabled languages.
 
-- **All visible website text**: headings, body copy, service descriptions, about pages, CTAs
-- **Meta descriptions and SEO text**
-- **Alt text for images**: clear, descriptive, respectful, in target language
-- **Error messages and form labels**: polite, never terse
-- **Email templates and contact responses**
-- **Microcopy**: tooltips, helper text, notifications
+**Extended reference:** `references/business-english-advanced.md` — phrase banks (meetings, presentations, apologies, formal correspondence), 80 ESL grammar rules, register-switching guidance, and anti-jargon rewrites.
 
 ## Integration with Other Skills
 
@@ -479,7 +476,6 @@ This skill is **cross-cutting** — it applies throughout all content generation
 - **page-builder**: Applies language standards when creating content
 - **seo**: Uses language standards for meta tags, titles, descriptions
 - **sector-strategies**: Industry-specific tone within language standards
-- **design-system**: Visualizes language standards in typography and layout
 
 ---
 
@@ -495,8 +491,6 @@ Before publishing any page, verify:
 - [ ] **All pages**: CTAs use respectful, inviting language (not aggressive)
 
 ## Language-Specific Reviewers
-
-Before publishing in any language, assign review:
 
 - **English**: East African professional (optional native review; standards in this guide)
 - **French**: Native francophone speaker from Côte d'Ivoire, Cameroon, Senegal, DRC, or Gabon

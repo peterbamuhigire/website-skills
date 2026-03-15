@@ -197,6 +197,68 @@ Hyphenate when two or more words jointly modify a noun:
 
 ---
 
+## Redundant Phrases
+
+Cut these — one word does the full job alone:
+
+| Redundant (cut) | Use instead |
+|-----------------|-------------|
+| close proximity | proximity |
+| consensus of opinion | consensus |
+| free gift | gift |
+| new record | record |
+| first annual | annual (correct only after year two) |
+| refer back | refer |
+| surround on all sides | surround |
+| end result | result |
+| future plans | plans |
+| past history | history |
+| unexpected surprise | surprise |
+| added bonus | bonus |
+| revert back | revert |
+| advance warning | warning |
+| completely destroy | destroy |
+| exact same | same |
+| join together | join |
+| repeat again | repeat |
+| 12 noon / 12 midnight | noon / midnight |
+
+---
+
+## Progressive Tense Preference
+
+Prefer simple present or past tense over continuous (-ing) forms:
+
+| Weaker (continuous) | Stronger (simple) |
+|--------------------|-------------------|
+| The company is planning to expand | The company plans to expand |
+| We are hoping to launch in Q3 | We aim to launch in Q3 |
+| The team is working on a solution | The team is developing a solution |
+| She was thinking about resigning | She considered resigning |
+
+**Why:** Simple tenses are more direct and authoritative. The progressive tense sounds tentative and adds syllables.
+
+---
+
+## Attribution Format
+
+Every statistic, research finding, and quoted claim needs a source. During the proofing pass, verify that every number has attribution.
+
+**Inline attribution in body text:**
+- "Post-harvest losses exceed 40% in East Africa — IFPRI, 2023"
+- "According to the World Bank, mobile money accounts in sub-Saharan Africa grew by 28% in 2024"
+
+**Block quotation attribution:**
+> "The biggest constraint is not capital — it is management capacity." — Dr Maggie Kigozi, Uganda Investment Authority
+
+**What to verify before publishing:**
+- [ ] Every statistic has a named source and approximate date
+- [ ] Every quotation is verbatim and correctly attributed
+- [ ] Linked sources open correctly (test all external links)
+- [ ] Proper nouns (names of people, companies, organisations) spelled consistently throughout
+
+---
+
 ## Words to Avoid in Professional Writing
 
 ### Condescending Words (Hargis/Carey)
