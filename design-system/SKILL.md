@@ -281,6 +281,17 @@ Before starting design decisions, review these references:
 - Rule of Thirds and Golden Ratio for placement
 - Subject matter and gaze direction — photography choices that direct attention to CTAs
 
+**`design-system/references/ux-quality-checklist.md`** — post-design validation:
+- Design Grid quality check (count alignment lines — fewer = cleaner)
+- 5-Second Test (can users identify the page purpose in 5 seconds?)
+- Association Space verification (does the design trigger the right brand adjectives?)
+- Hierarchy of Needs audit (functional → reliable → usable → pleasurable, in order)
+- Cognitive overload audit (4 causes: inconsistency, unnecessary actions, competing elements, ambiguous signifiers)
+- Expert review against ISO 9241-110 interaction principles
+- Complete pre-launch UX checklist (visual + content + interaction + performance + trust)
+
+**Run the UX quality checklist after completing the design system and before page-builder starts.**
+
 This skill applies those universal principles to your specific sector/brand.
 
 ## Output
