@@ -9,7 +9,9 @@ Transform markdown content into stunning, production-grade Astro pages.
 
 ## Copywriting Reference
 
-Before writing ANY page copy, read **`references/website-copywriting.md`** for copy formulas and **`references/conversion-design-rules.md`** for layout, CTA, and UX anti-pattern rules. Also read **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary blacklist. All generated text must sound 100% human-written.
+Before writing ANY page copy, read **`references/website-copywriting.md`** for copy formulas and **`references/conversion-design-rules.md`** for layout, CTA, UX anti-pattern rules, 60-30-10 colour rule, SCAMPER differentiation, and dual decision-maker rule. Also read **`blog-writer/references/human-voice-standards.md`** for the AI vocabulary blacklist. All generated text must sound 100% human-written.
+
+**`references/interaction-design-principles.md`** — ISO 9241-110 interaction principles applied to static websites. Use as a checklist when building every page: task suitability, self-descriptiveness, conformity with expectations, learnability, controllability, error robustness, user engagement.
 
 **Persuasion & conversion references** (from `sales-copywriting` skill):
 - `sales-copywriting/references/headline-mastery.md` — Read for ALL headlines (10 formulas + 4 U's scoring)

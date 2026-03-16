@@ -2,7 +2,7 @@
 
 Layout, UX, and visual hierarchy rules that prevent common design mistakes killing conversions. These rules complement the copywriting reference and apply to every page built.
 
-Source: Gill Andrews, *Making Your Website Work: 100 Copy & Design Tweaks*.
+Sources: Gill Andrews, *Making Your Website Work: 100 Copy & Design Tweaks*; Anthony Conta, *The Art and Science of UX Design* (2024); Benjamin Franz, *Usability and User Experience Design* (2025); Zuzanna Kruger, *The Art of SXO* (2024).
 
 ---
 
@@ -301,3 +301,96 @@ Flow is the state where users are so engaged they move through the site naturall
 - [ ] No intrusive interruptions (no pop-ups before scroll, no auto-playing audio)
 - [ ] Each section leads logically to the next — no dead ends, no orphan pages
 - [ ] Users have meaningful control (filters, preferences, self-paced navigation)
+
+---
+
+## The 60-30-10 Colour Rule
+
+A colour distribution formula that creates visual hierarchy and guides the eye to interactive elements.
+
+- **60%** = dominant/background colour (e.g., white, off-white, dark surface)
+- **30%** = secondary/interactive colour (e.g., brand primary for headings, borders, section backgrounds)
+- **10%** = accent colour (e.g., CTA buttons, key highlights, active states)
+
+**Colour hierarchy for actions:**
+- **Primary action** = filled with accent colour (solid button) — one per viewport
+- **Secondary action** = outlined with brand colour (ghost button)
+- **Tertiary action** = text-only link (minimal visual weight)
+
+Text-heavy designs may swap the 30% and 10% proportions, but the principle holds: the accent colour must remain scarce to retain its power.
+
+---
+
+## Signifier-Affordance Alignment
+
+Every visual cue must correctly communicate what an element does.
+
+**Checklist:**
+- [ ] Every clickable element looks clickable (colour, cursor change, hover state)
+- [ ] Every non-clickable element looks static (no underlines, no button-like styling)
+- [ ] Interactive colour is reserved exclusively for interactive elements
+- [ ] Disabled controls are grey + cursor: not-allowed (never invisible)
+- [ ] Links use consistent styling (colour + underline or colour-only, but never alternating)
+- [ ] Form inputs look distinct from display text (border, background, or shape difference)
+
+**When signifier and affordance align, the experience feels intuitive.** When they don't, users click static text, ignore real buttons, and blame themselves for "not understanding the site."
+
+---
+
+## Cognitive Overload — 4 Causes to Check
+
+Every page must be audited for these four causes of cognitive overload. If any exists, fix it before adding more content.
+
+| Cause | Symptom | Fix |
+|-------|---------|-----|
+| **Internal inconsistency** | Different button styles, spacing rules, or typography across pages | Enforce design-tokens.md; audit every page against the design system |
+| **Unnecessary actions** | Extra clicks to reach content; redundant steps | Reduce steps; use smart defaults; direct links to key content |
+| **Too many competing elements** | Multiple CTAs, colours, animations fighting for attention | One primary CTA per viewport; 40% highlight limit; remove decorative noise |
+| **Ambiguous signifiers** | Unclear what is clickable vs static; links that don't look like links | Consistent interactive colour; hover states; standard link patterns |
+
+---
+
+## SCAMPER — Differentiation Technique
+
+When a page design feels generic, run the SCAMPER checklist to find distinctive approaches:
+
+- **S**ubstitute — Replace a standard element (e.g., replace a hero slider with a single bold statement + large photo)
+- **C**ombine — Merge two sections (e.g., testimonials embedded within service descriptions instead of separate section)
+- **A**dapt — Borrow from another industry (e.g., use a restaurant-style menu layout for a pricing page)
+- **M**odify — Amplify or reduce one element (e.g., make the hero headline 3× larger than convention)
+- **P**ut to other use — Repurpose a pattern (e.g., use a timeline component for a service process instead of company history)
+- **E**liminate — Remove what every competitor has (e.g., drop the generic "Why Choose Us" section; prove it through content instead)
+- **R**earrange — Flip the expected order (e.g., lead with social proof before explaining the service)
+
+**Rule:** Apply 1-2 SCAMPER changes per page for the 20% differentiation (per the 80/20 prototypicality rule). Don't SCAMPER everything — that creates confusion, not distinctiveness.
+
+---
+
+## Association Space Design
+
+The visual design of each page triggers associations in visitors' minds. These associations must match the brand's intended identity.
+
+**Process:**
+1. Define 3-5 target adjectives from the brand brief (e.g., "innovative," "trustworthy," "African," "premium")
+2. Select basic design elements that trigger those associations:
+   - **Colours** — Industry conventions exist: green/brown = organic, white/blue = medical, black/gold = premium
+   - **Shapes** — Rectangles = order/structure; circles = balance/softness; diagonals = energy/movement
+   - **Typography** — Serif = traditional/authoritative; sans-serif = modern; display = distinctive/bold
+   - **Imagery** — Strong images with clear subjects trigger consistent associations across viewers
+   - **Composition** — Horizontal = calm/trustworthy; vertical = bold/alert; diagonal = energy/action
+3. Verify: the triggered associations must connect to actual product/service properties. A creative agency CAN use playful design; a CRM tool should NOT use "sex sells."
+
+**Blues recede, reds advance** — use colour depth for visual layering. Background in cool blue tones, foreground CTAs in warm tones.
+
+---
+
+## Dual Decision-Maker Rule
+
+Every page must serve both logical and emotional decision-makers simultaneously.
+
+| Type | What They Need | How to Deliver |
+|------|---------------|----------------|
+| **Logical** | Facts, data, comparisons, specifics | Tables, metrics, case study results, feature lists, pricing |
+| **Emotional** | Trust, stories, visual confidence | Testimonials, team photos, brand story, quality imagery, tone of voice |
+
+**Rule:** Pair every statistic with a human story. Pair every testimonial with a concrete result. Never build a page that only appeals to one type.

@@ -634,6 +634,11 @@ Detailed guides for SEO and AI visibility:
 
 **Read these for:** Building AI visibility alongside traditional SEO rankings.
 
+### SXO — Search Experience Optimization
+- **`references/sxo-integration.md`** — Fuses SEO + UX + CRO into a unified strategy; SXO audit checklist (6 dimensions: visibility, content, performance, design, conversion, international); content by decision style (logical vs emotional); demand generation through long landing pages and TOFU blog content; multilingual SXO rules for our 3-language sites; SXO measurement metrics and content health signals
+
+**Read this for:** Ensuring every page satisfies search engines, users, AND conversion goals simultaneously.
+
 ## External Resources
 
 - [Google Search Central](https://developers.google.com/search)

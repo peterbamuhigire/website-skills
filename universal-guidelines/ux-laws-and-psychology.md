@@ -1,7 +1,7 @@
 ---
 title: UX Laws & Psychology Reference
 description: The psychological principles behind every design decision — apply these on every website build
-source: Conrad Bohnke, "From Zero to UI/UX Hero" (2024) + Nielsen Norman Group research
+source: Conrad Bohnke, "From Zero to UI/UX Hero" (2024) + Benjamin Franz, "Usability and User Experience Design" (2025) + Anthony Conta, "The Art and Science of UX Design" (2024) + Nielsen Norman Group research
 ---
 
 # UX Laws & Psychology Reference
@@ -199,3 +199,147 @@ Items placed close together are perceived as belonging together. Items placed ap
 **Applied to content sections:**
 - Related text and its illustration must be close together
 - Section heading must be closer to its section content than to the section above
+
+---
+
+## Gestalt Principles — The Complete Set
+
+Humans perceive visual elements as organised patterns, not isolated parts. These nine laws govern how visitors group, separate, and prioritise everything on a page.
+
+### Already Covered Above
+- **Law of Proximity** — close = related (see detailed section above)
+
+### Law of Similarity
+Visually similar elements are perceived as belonging together. Applies to: colour, texture, alignment, style, size, speed, and direction of motion.
+
+**Web rules:**
+- Interactive elements (buttons, links) must look distinctly different from static text
+- Form input fields must look different from display-only fields
+- Cards in a grid should have identical styling — a differently styled card implies different function
+- Icon style must be consistent throughout (all outlined OR all filled — never mixed)
+
+### Law of Closure
+The viewer fills in missing parts of an incomplete shape. Users look for structure and higher-level logic to navigate faster.
+
+**Web rules:**
+- Use borders, backgrounds, or subtle lines to visually "close" groups of related content
+- Card layouts work because the card boundary implies a complete unit
+- Partially visible content at viewport edges signals "scroll for more"
+
+### Law of Continuity
+Elements perceived as continuing previous elements are grouped together. Users follow visual paths.
+
+**Web rules:**
+- Align elements along consistent axes — interrupting an alignment breaks the perceived flow
+- Timelines and process diagrams rely on continuity to show progression
+- Navigation breadcrumbs use continuity (Home → Category → Page)
+
+### Law of Symmetry
+Balanced attributes create perceived equilibrium. Lopsided layouts feel unstable and unprofessional.
+
+**Web rules:**
+- Forms: distribute fields evenly, not all left-aligned with empty right side
+- Hero sections: balance text weight against image weight
+- Symmetrical layouts signal stability (corporate, legal); deliberate asymmetry signals dynamism (creative, startup)
+
+### Law of Figure/Ground
+Foreground elements need clear shape and boundary. Background should be amorphous and continue behind foreground elements.
+
+**Web rules:**
+- Modals and popups must blur/darken the background to establish figure priority
+- Hero text over images needs gradient overlays to separate text (figure) from photo (ground)
+- CTAs are always "figure" — they must visually sit in front of surrounding content
+
+### Law of Common Fate
+Elements that change or move simultaneously are perceived as belonging together.
+
+**Web rules:**
+- Animate related elements together (e.g., card icon + card text fade in as one unit)
+- Scroll-triggered animations: stagger timing within a group but keep the group visually linked
+- Navigation items that slide in together are perceived as one menu unit
+
+### Law of Focal Point (Point of View)
+One significantly different element draws all attention. The brain prioritises the anomaly.
+
+**Web rules:**
+- Primary CTA must be the only element using its accent colour on the viewport
+- One standout element per section — if everything stands out, nothing does
+- Use for pricing tables: highlight the recommended plan with a different colour/size
+
+### Law of Visual Hierarchy
+Size, shape, colour weight, and position determine perceived importance. Larger/bolder = more important.
+
+**Web rules:**
+- Heading hierarchy must match visual weight: H1 > H2 > H3 in both size and boldness
+- Hero headline is the largest text on the page — nothing competes
+- Apple.com pattern: product name large, price smaller, CTA button smallest but most colourful
+
+---
+
+## The Kano Model — Feature Expectation Levels
+
+Classifies features by how they affect user satisfaction. Apply when deciding what to include on each page.
+
+| Category | Definition | If Present | If Absent | Example |
+|----------|-----------|------------|-----------|---------|
+| **Threshold** | Expected but unspoken | No delight (baseline) | Frustration, abandonment | Mobile responsiveness, contact info, SSL |
+| **Performance** | Consciously compared across competitors | More = more satisfied | Less = less satisfied | Page speed, content quality, photo quality |
+| **Excitement** | Unexpected features that delight | Wow factor, sharing | No disappointment (wasn't expected) | Interactive calculators, personalised recommendations |
+| **Rejection** | Features that actively repel users | Drives users away | Relief | Auto-playing audio, intrusive popups, dark patterns |
+
+**Key insight:** Today's excitement feature becomes tomorrow's threshold expectation. Mobile-responsive was exciting in 2012; it's a baseline requirement now.
+
+**Apply to website design:** Nail all threshold features first (speed, mobile, SSL, clear navigation). Then invest in performance features (content quality, photography, copy). Only then add excitement features (animations, interactive tools, personalisation).
+
+---
+
+## Human Information Processing — The 5-Stage Model
+
+Every interaction follows: **Stimulus → Discover → Recognise → Decide → Act**. Each stage takes time; design failures at any stage break the entire chain.
+
+| Stage | What Happens | Design Implication |
+|-------|-------------|-------------------|
+| **Stimulus** | Something appears on screen | Must fit human senses, environment, AND current attention state |
+| **Discover** | User notices the element | Use colour, size, shape, contrast, motion to promote discovery. The more unusual in context, the more noticeable. |
+| **Recognise** | User understands what it is | "Having seen" ≠ "having understood." Use standard icons, plain language, and labels matching user vocabulary. |
+| **Decide** | User chooses what to do | Users decide based on what makes sense TO THEM. Limit decisions, provide info needed for correct choices, automate what adds no value. |
+| **Act** | User performs the action | Immediate feedback confirms the action registered. No feedback = user repeats or abandons. |
+
+**Memory constraints at each stage:**
+- Short-term memory: ~7 ±2 items, lasts ~30 seconds without rehearsal
+- Chunking expands effective capacity — group related items into meaningful units
+- Emotional content transfers to long-term memory more easily (limbic system as gatekeeper)
+- Procedural memory (habitual flows like login) creates strong expectations — changing these breaks muscle memory
+
+**First impression speed:**
+- 50 milliseconds for visual first impression of a web page (Lindgaard et al.)
+- 4 seconds for purchase attractiveness judgment (MIT research)
+- If your value proposition isn't clear in 5 seconds, the visual hierarchy has failed
+
+---
+
+## Hierarchy of User Needs (Walter/Maslow)
+
+A pyramid where each level must be satisfied before the next matters:
+
+1. **Functional** — the page performs its basic promised task (loads, displays content, forms work)
+2. **Reliable** — it works consistently, not just sometimes (no broken links, no intermittent errors)
+3. **Usable** — easy to learn, discover, and use; low effort to operate (clear navigation, readable text)
+4. **Pleasurable** — delightful, produces joy, people want to return (distinctive design, micro-animations, brand personality)
+
+**Rule:** A beautiful page that doesn't function or is unreliable will fail. Satisfy levels in order.
+
+---
+
+## Signifier-Affordance Alignment
+
+- **Affordance** = what an element actually does (a button submits a form)
+- **Signifier** = visual cue that communicates the affordance (the button looks clickable)
+
+**When signifier and affordance align, the experience is intuitive.** When they don't, users get confused.
+
+**Web checklist:**
+- Every clickable element must look clickable (colour, cursor, hover state)
+- Every non-clickable element must look static (no underlines, no button styling)
+- Interactive colour must be reserved exclusively for interactive elements
+- Primary action = filled/solid; secondary = outlined; tertiary = text-only link
