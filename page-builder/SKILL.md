@@ -18,6 +18,9 @@ Before writing ANY page copy, read **`references/website-copywriting.md`** for c
 - `sales-copywriting/references/fascination-bullets.md` — Read when writing bullet points that need to persuade
 - `sales-copywriting/SKILL.md` — Read FULL skill when building landing pages, sales pages, or product pages
 
+**Split-test conversion rules** (Brunson, 100+ tests):
+- `references/conversion-rules.md` — Read when building any sales page, landing page, or order form. Contains data-backed rules for headlines (red, specific numbers, present tense), CTAs (button colour, copy, placement, no-delay), forms (Mad Libs, micro-commitment, two-step, inline), social proof (Facebook-style, placement at top of order form), pricing (dollar discounts, payment plans, trial offers), layout (simplification, pop-up timing, mobile testing), and the Master Control Blueprint as a default page structure.
+
 ## Universal Guidelines Reference
 
 Before building pages, review these references:
