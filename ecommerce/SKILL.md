@@ -309,3 +309,9 @@ This skill works alongside:
 - **sales-copywriting** — product page copy, CTA wording, urgency (ethical only)
 - **photo-manager** — product photography handling
 - **i18n** — multi-language product content, currency display, locale-specific payment methods
+
+---
+
+## Reference Files
+
+- `references/ecommerce-design-ux.md` — Deep-dive reference extracted from "How to Create Selling E-Commerce Websites" (Smashing Magazine). Contains exhaustive rules for: checkout UX (12 rules), product photography (4-step process + 20 photography principles), reviews and ratings systems, search and faceted filtering design, 15 common design mistakes, CRO frameworks (AIDA, Gutenberg Rule, A/B testing methodology with real conversion data), trust and shipping cost strategy, and the Thank-You page as a conversion tool. Consult this file when designing product pages, checkout flows, search/filter UX, or planning a CRO programme.
