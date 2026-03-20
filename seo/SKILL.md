@@ -639,6 +639,11 @@ Detailed guides for SEO and AI visibility:
 
 **Read this for:** Ensuring every page satisfies search engines, users, AND conversion goals simultaneously.
 
+### Content-Driven Traffic Growth (Fishbein)
+- **`references/content-growth-tactics.md`** — Intent-based keyword targeting (4-stage framework: awareness → learning → comparative → buying); content cluster / topical authority model with example cluster structure; long-tail keyword strategy (segment by audience, geographic modifiers, buyer-intent signals); distribution channels that amplify SEO (Quora, SlideShare 50M+ visitors, YouTube 2nd largest search engine); internal linking rules for cluster-to-money-page funnels; the 20/80 create-vs-distribute rule
+
+**Read this for:** Building organic traffic through topical authority rather than individual page optimisation; using platform distribution channels as SEO multipliers.
+
 ## External Resources
 
 - [Google Search Central](https://developers.google.com/search)
