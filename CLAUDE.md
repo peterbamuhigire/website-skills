@@ -47,6 +47,8 @@ monthly-report/SKILL.md               ← AI-generated monthly client reports: 7
 brand-strategy/SKILL.md               ← Brand strategy: CBBE pyramid (Keller), brand mantra, 12 archetypes, positioning statement, 22 Laws applied, brand brief deliverable (docs/brand-brief.md)
 brand-storytelling/SKILL.md           ← Brand storytelling: Five-Act Arc (Quesenberry), Hero's Journey, Golden Circle, Creative Brief, Story Engine, 5 signature story types
 brand-style-guide/SKILL.md            ← Client deliverable: logo rules, colour palette card, typography specimen, photography style, voice/tone guide, always/never table (docs/brand-style-guide.md)
+cro-audit/SKILL.md                    ← Conversion rate audit: 7 dimensions, 89-item checklist, Brunson split-test rules, ICE hypothesis scoring → docs/cro-audit-report.md
+social-media/SKILL.md                 ← Social media strategy + agency service: 4-Ring Channel model, 5 Content Buckets, 7-platform playbook, 3-tier pricing, content calendar templates
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
@@ -101,6 +103,8 @@ Utility skills run independently of the build pipeline:
 - **brand-strategy** — use before design-system on any project; structured client discovery → brand brief deliverable (docs/brand-brief.md); covers CBBE pyramid, brand mantra, 12 archetypes, 22 Laws, Frequency-Consistency-Anchoring
 - **brand-storytelling** — use when writing About pages, case studies, or any narrative-driven content; Five-Act Dramatic Arc, Hero's Journey (customer = hero, brand = mentor), Creative Brief, Golden Circle order, 5 signature story types
 - **brand-style-guide** — use after brand-strategy and design-system; produces docs/brand-style-guide.md — a client-facing PDF-ready deliverable covering logo rules, colour palette, typography, photography, voice/tone, always/never rules
+- **cro-audit** — use post-build (pre-launch) or as standalone audit on existing sites; 7 audit dimensions, 89-item heuristic checklist, Brunson's 86 split-test rules, ICE hypothesis scoring; produces docs/cro-audit-report.md
+- **social-media** — social media strategy and management as a service; 4-Ring Channel model, 5 Content Buckets, platform playbook (7 platforms), 3-tier agency pricing ($800–$5,000/month), content calendar templates, repurposing matrix
 - **sectors/legal** — use instead of sector-strategies for any law firm client; covers client psychology, 8 practice area types, ethics/bar advertising constraints, attorney profiles, legal local SEO, intake conversion
 
 ## Required Claude Code Plugins

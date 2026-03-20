@@ -1,6 +1,6 @@
 # Next Features — Website Skills
 
-Last updated: 2026-03-05
+Last updated: 2026-03-20
 
 ## 🟠 HIGH PRIORITY
 
@@ -23,6 +23,8 @@ Last updated: 2026-03-05
 **Reference site library** — Curated collection of well-designed African business websites per sector for design-reference skill. Effort: 2-3 hours. Start: `design-reference/`.
 
 ## ✅ Recently Completed
+
+**Book extractions: ecommerce UX + growth hacking** (2026-03-20) — Read two books in full. Created `ecommerce/references/ecommerce-design-ux.md` (599 lines, 15-part extraction from Smashing Magazine ecommerce book: checkout UX, photography, CRO frameworks, A/B testing, trust signals, faceted search). Created `book-extractions/growth-hacking-content-marketing-extraction.md` (523 lines, 14-part extraction from Fishbein: content funnel, SEO, SlideShare, YouTube, podcasting, 33 traffic tactics, repurposing framework). Updated `ecommerce/SKILL.md` with Reference Files pointer.
 
 **Blog enhancement** (2026-03-05) — Rewrote blog-idea-generator with adaptive 20-method ideation system, 200-word hybrid summaries, 20 content formats. Enhanced blog-writer with Step 0 (reads idea summaries), 7 format-specific structural templates, quality gate, content calendar framework, seasonal/event mapping, cross-language topic planning. Sources: Iny, Livermore, Eddy.
 
