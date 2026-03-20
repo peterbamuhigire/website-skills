@@ -44,10 +44,19 @@ agency-positioning/SKILL.md           ← Premium agency positioning: Doctor-Pil
 they-ask-you-answer/SKILL.md          ← Content-driven lead generation: Big 5 pillars, Selling 7 videos, Assignment Selling, CarMax Effect, content as sales enablement
 agency-client-retention/SKILL.md      ← Client pricing and retention: Rule of Five Ones, Land-Deliver-Retain, monthly reports, Seed the Vision, deal structures
 monthly-report/SKILL.md               ← AI-generated monthly client reports: 7-step data interview, plain-English commentary, QA checklist, PDF-ready markdown output
+brand-strategy/SKILL.md               ← Brand strategy: CBBE pyramid (Keller), brand mantra, 12 archetypes, positioning statement, 22 Laws applied, brand brief deliverable (docs/brand-brief.md)
+brand-storytelling/SKILL.md           ← Brand storytelling: Five-Act Arc (Quesenberry), Hero's Journey, Golden Circle, Creative Brief, Story Engine, 5 signature story types
+brand-style-guide/SKILL.md            ← Client deliverable: logo rules, colour palette card, typography specimen, photography style, voice/tone guide, always/never table (docs/brand-style-guide.md)
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
 east-african-english/SKILL.md         ← Legacy English-only standard (superseded by language-standards)
+```
+
+### Sector-Specific Skills
+
+```
+sectors/legal/SKILL.md                ← Law firm websites: client psychology, practice area matrix, ethics constraints, attorney profiles, legal local SEO, intake conversion
 ```
 
 Each SKILL.md uses YAML frontmatter (`name`, `description`) followed by markdown instructions that Claude reads when the skill is invoked.
@@ -58,8 +67,9 @@ Website build skills are sequential — each depends on outputs from the previou
 
 0. **i18n** (mandatory) → reads `docs/i18n-config.md`, detects enabled languages (en, fr, sw), orchestrates all subsequent steps per language
 0.5. **design-reference** (optional) → produces `docs/design-reference.md` from up to 5 client-provided URLs
-1. **sector-strategies** (optional) → produces `docs/sector-brief.md` with industry-specific design strategy; reads 7 available sectors for distinctive, authentic sites
-2. **design-system** → produces `tailwind.config.mjs`, `src/styles/global.css`, `design-tokens.md` (shared across languages)
+0.6. **brand-strategy** (recommended) → produces `docs/brand-brief.md` (brand positioning, archetype, mantra, POPs/PODs); required input for brand-style-guide; feeds design-system, brand-alignment, page-builder
+1. **sector-strategies** or **sectors/{sector}** (optional) → produces `docs/sector-brief.md`; use `sectors/legal` for law firms, others via sector-strategies
+2. **design-system** → produces `tailwind.config.mjs`, `src/styles/global.css`, `design-tokens.md`; reads `docs/brand-brief.md` if available
 3. **photo-manager** (includes **image-compression**) → compresses photos via Sharp, then produces `src/assets/images/` (flat directory, no subdirectories), `src/assets/images/_catalog.json`, auto-detects best logo (shared across languages)
 4. **page-builder** → produces `src/layouts/`, `src/components/`, `src/pages/[lang]/` (per-language content from `docs/{lang}/`)
 5. **seo** → integrates multi-language SEO: hreflang tags, language-specific sitemaps, Open Graph locale tags
@@ -88,6 +98,10 @@ Utility skills run independently of the build pipeline:
 - **email-sender** — use when adding contact forms; self-hosted PHP + PHPMailer with 4-layer spam prevention, no external services
 - **image-compression** — runs inside photo-manager pipeline; compresses photos to under 500KB via Sharp before cataloguing
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
+- **brand-strategy** — use before design-system on any project; structured client discovery → brand brief deliverable (docs/brand-brief.md); covers CBBE pyramid, brand mantra, 12 archetypes, 22 Laws, Frequency-Consistency-Anchoring
+- **brand-storytelling** — use when writing About pages, case studies, or any narrative-driven content; Five-Act Dramatic Arc, Hero's Journey (customer = hero, brand = mentor), Creative Brief, Golden Circle order, 5 signature story types
+- **brand-style-guide** — use after brand-strategy and design-system; produces docs/brand-style-guide.md — a client-facing PDF-ready deliverable covering logo rules, colour palette, typography, photography, voice/tone, always/never rules
+- **sectors/legal** — use instead of sector-strategies for any law firm client; covers client psychology, 8 practice area types, ethics/bar advertising constraints, attorney profiles, legal local SEO, intake conversion
 
 ## Required Claude Code Plugins
 
