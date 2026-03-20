@@ -36,6 +36,10 @@ image-compression/SKILL.md            ← Build-time image compression via Sharp
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
 color-selection/SKILL.md              ← Color palette design using brand colors and color theory
 sales-copywriting/SKILL.md            ← Persuasion and conversion copywriting (hybrid: cross-cutting headlines/CTAs + on-demand PASTOR/4P's for sales pages)
+ecommerce/SKILL.md                    ← E-commerce UX, CLICK system, trust signals, product pages, cart abandonment, mobile commerce
+ecommerce-funnel/SKILL.md             ← Customer avatar, traffic temperature, funnel architecture (front-end → upsell → RIC), email sequences, lifecycle management
+ecommerce-checkout/SKILL.md           ← Brand foundation (7C framework), EVP vs UVP, checkout UX deep-dive, post-purchase sequence, DTC growth levers
+ecommerce-analytics/SKILL.md         ← RFM analysis, cohort retention, attribution modelling, CLV calculation, funnel drop-off diagnosis, RASTA reporting
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
