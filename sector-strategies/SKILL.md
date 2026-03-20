@@ -1,6 +1,6 @@
 ---
 name: sector-strategies
-description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators, nonprofit/charity/NGO) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
+description: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators, nonprofit/charity/NGO, law firms/legal) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
 ---
 
 ## Why Sector Strategy Matters
@@ -13,7 +13,7 @@ A tour company's website needs wanderlust and discovery cues (but each tour oper
 
 Same build pipeline. Same component structure. Different psychology. Different trust signals. Different components. Different content order. **DIFFERENT VISUAL IDENTITY.**
 
-This skill provides templates for nine core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
+This skill provides templates for ten core sectors to ensure sector-appropriate design psychology. But customization is REQUIRED to prevent homogeneity:
 - **Design tokens** (reference palettes — not prescriptive)
 - **Sector-brief template** (customization questionnaire — REQUIRED to answer)
 - **Component patterns** (patterns to follow, with YOUR styling)
@@ -150,6 +150,16 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 **Distinctive traits**: Authentic photography (never stock), dignity-first storytelling, impact-tied donation amounts ("$50 trains one farmer"), multiple audience paths (donors, volunteers, beneficiaries, partners, media), WCAG AA+ accessibility, mobile-first (52% nonprofit traffic), YouTube-hosted video embeds
 
 **Special note:** Nonprofit templates include 3 additional references: color-psychology.md (hue-by-hue guide with competitive differentiation), storytelling-design.md (dignity principle, trust architecture, donation conversion), sub-sector-patterns.md (6 sub-sector design systems). Stories are remembered 22x more than facts — design must channel empathy into action.
+
+### Law Firms / Legal
+
+**Trust cues**: Attorney credentials, peer review ratings (Martindale, Super Lawyers), case results with disclaimers, named client testimonials, geographic specificity, free consultation offer, clear practice area coverage, response time commitment
+**Visual identity**: Practice-type dependent (see legal-type-patterns.md: personal-injury=trust-blue+warm-amber, family=teal+sage, criminal=deep-navy+charcoal, estate=heritage-blue+gold, immigration=warm-blue+terracotta, business=slate+dark-teal). Never generic navy+gold scales-of-justice.
+**Key components**: Hero with specific problem statement + CTA, practice area cards (client language, not legal terms), attorney profiles (client-centered bios, not credential CVs), trust signals bar, named testimonials with disclaimer, contact section with phone (tap-to-call) + form + response time commitment, footer with all practice areas + disclaimer language
+**Content order**: Hero + free consultation CTA → Practice areas → Trust signals → Attorney profiles (brief) → Social proof → Contact (phone + form)
+**Distinctive traits**: Client-centered copy (not credential-first), separate page per practice area (local SEO), attorney-client disclaimer on all forms, ethics-compliant trust claims, mobile-first (most legal searches happen on mobile during crisis), no guaranteed outcome language, no "expert" claims without bar certification
+
+**Special note:** Legal templates include 4 additional references — the most ethics-sensitive sector in the library. legal-branding.md (color psychology by practice area, the Client-Centered vs. Traditional design split, Value Proposition Framework, One Great Thing differentiation, banned phrases, voice by practice area). client-trust-design.md (client psychology, above-the-fold architecture, attorney profile structure, three tiers of information, trust signals by tier, contact form design with disclaimer, local SEO checklist, conversion killers). legal-type-patterns.md (8 practice area types with distinct design systems: personal injury, family law, criminal defense, estate planning, immigration, business law, employment law, workers' comp). ethics-constraints.md (bar advertising rules, prohibited claims, required disclaimers, developer responsibilities, pre-launch review checklist). Law firm websites must balance conversion optimization with bar ethics compliance — both are mandatory.
 
 ### App Landing Pages
 
