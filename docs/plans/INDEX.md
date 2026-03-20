@@ -1,5 +1,11 @@
 # Plans Index
 
+## In Progress
+
+| Date | Plan | Status |
+|------|------|--------|
+| 2026-03-20 | [Ecommerce Skills Upgrade](2026-03-20-ecommerce-skills-upgrade.md) | Complete |
+
 ## Completed Plans
 
 | Date | Plan | Status |
