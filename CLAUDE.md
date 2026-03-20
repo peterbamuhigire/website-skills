@@ -43,6 +43,7 @@ ecommerce-analytics/SKILL.md         ← RFM analysis, cohort retention, attribu
 agency-positioning/SKILL.md           ← Premium agency positioning: Doctor-Pilot-Teacher, 9 positioning assets, solutions language, authentic storytelling, premium pricing justification
 they-ask-you-answer/SKILL.md          ← Content-driven lead generation: Big 5 pillars, Selling 7 videos, Assignment Selling, CarMax Effect, content as sales enablement
 agency-client-retention/SKILL.md      ← Client pricing and retention: Rule of Five Ones, Land-Deliver-Retain, monthly reports, Seed the Vision, deal structures
+monthly-report/SKILL.md               ← AI-generated monthly client reports: 7-step data interview, plain-English commentary, QA checklist, PDF-ready markdown output
 skill-writing/SKILL.md                ← Guide for creating and updating SKILL.md files
 skill-safety-audit/SKILL.md           ← Security audit gate for new/changed skills
 update-claude-documentation/SKILL.md  ← Systematic documentation updater
