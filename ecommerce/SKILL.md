@@ -7,6 +7,25 @@ description: E-commerce website design and consumer psychology. Use when buildin
 
 Design and build e-commerce websites that convert browsers into buyers by applying consumer psychology principles.
 
+## The 12 Core Principles (Larsson)
+
+These principles define whether an ecommerce business succeeds before any design decisions are made. Audit every client project against these:
+
+1. **Your business is not unique** — execution wins, not novelty. Stop searching for a secret and start executing better than competitors.
+2. **Your business IS marketing** — product without marketing is invisible. Marketing is the growth engine, not an afterthought.
+3. **Brand-centric, not product-centric** — products change, brands endure. Build the brand first; it lowers CAC and raises LTV permanently.
+4. **Control the order process** — own the checkout, the data, and the customer relationship. Never fully depend on third-party marketplaces.
+5. **Never compete on price** — price competition destroys margins. Compete on differentiation, expertise, experience, or community.
+6. **Niche down** — 20% of the market holds 80% of the revenue. A focused niche beats a generic store every time.
+7. **There is no free traffic** — organic, social, and referral traffic all require time or money investment. Budget accordingly.
+8. **Spending is required** — successful ecommerce requires CAC (customer acquisition cost) investment. Refusing to spend is refusing to grow.
+9. **Mobile-first is mandatory** — design for 375px first, enhance upward. Mobile is the primary purchase platform.
+10. **Highest CAC budget wins** — in any category, the business that can profitably spend the most to acquire a customer wins market share.
+11. **Multi-channel distribution** — no single channel owns the customer. Own + shared + paid channels working together.
+12. **Three growth levers only** — increase number of customers, increase average order value, increase repeat purchases. Every tactic maps to one of these.
+
+---
+
 ## The CLICK System
 
 Every e-commerce site must satisfy five psychological needs. Use this as an audit checklist for every page:
@@ -73,6 +92,66 @@ Customers want to buy from experts who know their domain.
 - Answer the question "Why should I buy from you?" prominently — not just price, but knowledge, curation, service
 - Product knowledge in descriptions: explain why this product exists, what problem it solves, how it compares to alternatives
 - Include "About Us" story that shows domain expertise (not generic corporate boilerplate)
+
+---
+
+---
+
+## Brand vs. Product (Verma)
+
+**A product is functional. A brand is emotional.**
+
+| Product | Brand |
+|---------|-------|
+| What it does | How it makes you feel |
+| Can be copied | Hard to replicate |
+| Competes on price | Commands premium |
+| Replaced by better products | Outlives individual products |
+
+**Two value propositions to define for every client:**
+- **UVP (Unique Value Proposition)** — functional: "What does it do better?" Used on product pages.
+- **EVP (Emotional Value Proposition)** — psychological: "How does it make the customer feel? Who does it help them become?" Used in brand storytelling, hero sections, and checkout.
+
+EVP is what reduces price sensitivity. A customer who connects emotionally with a brand does not shop for a cheaper alternative.
+
+---
+
+## Conversion Trinity (Harris)
+
+Humans navigate websites like animals following a scent trail — they follow information scent. If the trail goes cold, they leave.
+
+**Three forces that kill or create conversions:**
+
+1. **Information scent** — every page element must signal "you're getting closer to what you want." Headlines, images, CTAs, and navigation must form a coherent trail from ad → landing page → product → checkout.
+2. **Persuasion architecture** — structure copy and layout to move visitors through: Awareness → Interest → Desire → Action. Each stage needs different content (facts for awareness, benefits for interest, proof for desire, urgency for action).
+3. **Value proposition clarity** — answer four questions on every key page within 5 seconds:
+   - What do you offer?
+   - For whom?
+   - Why is it better than alternatives?
+   - Why should I believe you?
+
+**Harris's MOS (Marketing Optimization System):**
+- Phase 1: Strategic Evaluation — understand customer psychology and competitive landscape before building anything
+- Phase 2: Five-Step Process — Discover → Hypothesise → Execute → Review → Scale
+- Phase 3: Growth Plan — implement winners, kill losers, never stop testing
+
+---
+
+## Social Commerce Layer (Spencer)
+
+Social channels are not separate from the website — they feed it.
+
+**Three-tier social network strategy:**
+- **Tier 1** (broad reach): Facebook, Instagram, LinkedIn — product showcasing, paid ads, retargeting
+- **Tier 2** (specialised): YouTube, Pinterest — tutorials, inspiration, discovery
+- **Tier 3** (niche): Reddit, Quora — community participation, trust-building, long-tail traffic
+
+**Key integration rules:**
+- Install the Meta Pixel on every page — enables retargeting cart abandoners and building lookalike audiences
+- UGC (user-generated content) on product pages outperforms studio photography for trust — build systems to collect and display it
+- Community-first approach: participate in niche communities before promoting to them
+- White-hat only: authentic engagement, value-first content. Fake reviews, bot engagement, and manufactured social proof destroy trust permanently.
+- ROI formula: (conversion rate × average order value × customer lifetime multiplier) must exceed cost per click before scaling any channel
 
 ---
 
