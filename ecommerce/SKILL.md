@@ -296,7 +296,7 @@ Over 60% of e-commerce traffic is mobile. Mobile is not an afterthought — it's
 - **Image galleries:** Swipeable, not thumbnail-clickable
 - **Forms:** Use appropriate input types (tel, email, number) for mobile keyboards
 
----
+----
 
 ## Integration with Other Skills
 
