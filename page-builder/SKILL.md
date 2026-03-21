@@ -13,6 +13,8 @@ Before writing ANY page copy, read **`references/website-copywriting.md`** for c
 
 **`references/interaction-design-principles.md`** — ISO 9241-110 interaction principles applied to static websites. Use as a checklist when building every page: task suitability, self-descriptiveness, conformity with expectations, learnability, controllability, error robustness, user engagement.
 
+**`references/component-design-rules.md`** — Research-backed rules for every component: navbar (max 80px, 24px gaps, 8px radius), hero (max 10 words, don't fill viewport, 50-80% image overlay), cards (critical content at top, one CTA, nested border-radius formula), features, images (Rule of Thirds, emotional selection), icons (never mix styles), testimonials (quote first, name last), FAQ (first-person questions), footer (distinct background), pricing (premium tier left for anchoring), progressive disclosure (3-tier model). Also includes the Site Pattern Library for exploration, evaluation, and acquisition pages.
+
 **Persuasion & conversion references** (from `sales-copywriting` skill):
 - `sales-copywriting/references/headline-mastery.md` — Read for ALL headlines (10 formulas + 4 U's scoring)
 - `sales-copywriting/references/fascination-bullets.md` — Read when writing bullet points that need to persuade

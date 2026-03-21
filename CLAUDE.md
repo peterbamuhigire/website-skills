@@ -32,6 +32,8 @@ deploy/SKILL.md                ← Build verification, language-aware Nginx conf
 seo-audit/SKILL.md                    ← Post-build SEO audit (14 categories, scored report, action items)
 blog-idea-generator/SKILL.md          ← Guided interview → 15-25 targeted blog topic ideas with titles, angles, keywords
 email-sender/SKILL.md                 ← PHP + PHPMailer contact form handler (self-hosted, 4-layer spam prevention)
+form-ux-design/SKILL.md              ← Research-backed form UX for Astro/Tailwind: Words > Layout > Flow, satisficing defences, no-placeholder rule, vertical path, 6 field types, Astro patterns
+ux-psychology/SKILL.md               ← Cognitive psychology for premium $20k+ websites: Gestalt, Nielsen 10 heuristics, Norman 3 levels, System 1/2 with 10 biases, emotional design, dark patterns
 image-compression/SKILL.md            ← Build-time image compression via Sharp (runs inside photo-manager pipeline)
 policy-pages/SKILL.md                 ← Privacy Policies & Terms of Use design (legal + trust)
 color-selection/SKILL.md              ← Color palette design using brand colors and color theory
@@ -98,6 +100,8 @@ Utility skills run independently of the build pipeline:
 - **skill-safety-audit** — mandatory audit before accepting any new or changed skill
 - **seo-audit** — use after deploy to audit SEO across 14 categories (including voice search readiness, off-page signals, SEO measurement); produces scored report with prioritised action items
 - **email-sender** — use when adding contact forms; self-hosted PHP + PHPMailer with 4-layer spam prevention, no external services
+- **form-ux-design** — use when building any form (contact, newsletter, booking, multi-step); covers Words > Layout > Flow, satisficing, no-placeholder rule, vertical path, Astro/Tailwind patterns
+- **ux-psychology** — use for premium $20k+ websites; Gestalt principles, Nielsen's 10 heuristics, Norman's 3 levels, System 1/2 with 10 cognitive biases, emotional design, dark patterns to avoid
 - **image-compression** — runs inside photo-manager pipeline; compresses photos to under 500KB via Sharp before cataloguing
 - **update-claude-documentation** — use after significant changes to update README.md, CLAUDE.md, and related docs
 - **brand-strategy** — use before design-system on any project; structured client discovery → brand brief deliverable (docs/brand-brief.md); covers CBBE pyramid, brand mantra, 12 archetypes, 22 Laws, Frequency-Consistency-Anchoring

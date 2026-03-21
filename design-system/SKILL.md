@@ -60,6 +60,25 @@ Import in `src/styles/global.css`:
 - Heading font should feel distinctive; body font should be invisible (easy to read)
 - Limit to 2 font families max (a third readable script font is acceptable for very short phrases only)
 
+### Typography Precision Rules (from Paduraru research)
+
+**Line-height formula:** `line-height = font-size × 1.6`
+- Body text at 16px → 16 × 1.6 = 25.6 → round to **26px line-height** (Tailwind: `leading-relaxed` ≈ this)
+- Larger headings → shorter line-height; smaller text → taller line-height (inverse relationship)
+- Body text standard: **16px font / 26px line-height** is the research-backed default
+
+**Text colour — never use pure black:**
+- Pure black (#000000) on white = maximum contrast → eye strain during extended reading
+- Use **dark grey** for body text: e.g., `text-gray-900` (#111827) or `text-gray-800` (#1F2937)
+- Pure white text on pure black background = **halation effect** — letters appear to bleed/glow
+- Especially affects users with astigmatism (estimated 33% of adults)
+- Tailwind defaults: `text-gray-900` on `bg-white` is the correct pairing, not `text-black`
+
+**Type scale discipline:**
+- Maximum **3 font sizes per section** (heading / subhead / body — not more)
+- Centre-align only for short text (≤2 lines) — longer text always left-aligned
+- Sentence case everywhere; ALL CAPS only for very short labels (badges, tags); never for body text
+
 ### Minimum Body Font Size (MANDATORY)
 
 Body text must be **minimum 16px** (`text-base` in Tailwind). For audiences over 45, consider 18px. Smaller text causes eye strain and drives visitors away — readability trumps aesthetics.
@@ -211,15 +230,67 @@ gsap.registerPlugin(ScrollTrigger);
 
 Only import GSAP where actually needed (Astro island architecture handles this).
 
-### 6. Component Patterns
+### 6. Spacing System — 8pt Grid (MANDATORY)
+
+All spacing, sizing, and dimension values must be **multiples of 8** (8, 16, 24, 32, 40, 48, 64, 80, 96...):
+- Most screen resolutions are divisible by 8 → elements land on whole pixels → crisp rendering
+- Consistent rhythm across the design → faster implementation, fewer arbitrary decisions
+- Tailwind's default spacing scale (2=8px, 4=16px, 6=24px, 8=32px, 10=40px, 12=48px...) aligns perfectly
+
+**Apply the 8pt grid to:**
+- Padding and margins: `p-4` (16px), `p-6` (24px), `p-8` (32px), `gap-4`, `gap-6`, `gap-8`
+- Icon sizes: 16px, 24px, 32px, 48px (never 20px or 28px)
+- Button heights: 40px, 48px, 56px (never 42px or 50px)
+- Section padding: `py-16` (64px), `py-20` (80px), `py-24` (96px)
+- Component heights: 40px min-height for inputs/buttons (44px preferred for touch targets)
+
+**Exception:** 4px baseline grid for text line-height increments only.
+
+### 7. Shadow System — Two-Layer Technique
+
+Most designers use one shadow layer. Two layers are required for realistic, premium shadows:
+
+**Layer 1 — Core shadow** (tight, dark, close to element):
+```css
+/* Narrow, darker shadow immediately adjacent */
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), /* core shadow */
+            0 8px 24px rgba(0, 0, 0, 0.08); /* cast shadow */
+```
+
+**Layer 2 — Cast shadow** (wider, lighter, extends further):
+
+**Tailwind shadow mapping:**
+- `shadow-sm`: subtle elevation (inputs, small cards)
+- `shadow-md`: standard card elevation
+- `shadow-lg`: raised cards, dropdowns
+- `shadow-xl`: modals, floating elements
+- Hover state: step up one shadow level (e.g., `hover:shadow-lg` on a `shadow-md` card)
+
+**Shadow rules:**
+- **Never place shadow above an element** — contradicts natural light; users find it unfamiliar
+- Light direction is always from above — shadow always falls below/below-and-to-the-right
+- Larger elements cast larger shadows — proportional sizing
+- Dark mode: never use white or light shadows — use a darker shade of element colour + lighter tint of background
+- Inner shadow (`inset`) signals a recessed input field — use on form inputs to suggest "type here"
+
+### 8. Component Patterns
 
 Document these design decisions for the page-builder to follow:
 
-**Buttons:**
-- Primary: solid background, rounded-lg or rounded-full, generous padding
-- Secondary: outline or ghost style
-- Hover: scale(1.02) + shadow elevation or color shift
-- Transition: all 0.2s ease
+**Buttons — All 6 States Required (design each one):**
+1. **Default** — resting state, interactive, enabled
+2. **Hover** — cursor is over button; colour shift or scale(1.02)
+3. **Active/Pressed** — click/tap occurring; darker/depressed appearance
+4. **Focus** — keyboard navigation highlight; visible ring (`ring-2 ring-offset-2`)
+5. **Loading/Progress** — action is processing; spinner inside, button disabled
+6. **Disabled** — non-interactive; `opacity-50 cursor-not-allowed`
+
+All button tiers (primary/secondary/tertiary) must share the same `border-radius`, typography, and shadow style — only fill/colour changes between tiers.
+
+**Button placement rule (F/Z-pattern):**
+- Forward/next actions: right side
+- Back/cancel actions: left side
+- To discourage destructive actions: place Cancel in primary position, Confirm in secondary
 
 **Cards:**
 - Consistent border-radius (match button radius)
