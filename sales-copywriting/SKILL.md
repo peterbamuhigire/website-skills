@@ -120,6 +120,11 @@ Every CTA must complete the sentence: "I want to ___."
 | "Buy Now" | "Place My Order" |
 | "Download" | "Get My Free Guide" |
 
+**Direct vs. Transitional CTAs (StoryBrand):**
+- **Direct CTA** — leads to a sale: "Buy Now", "Schedule a Call", "Register Today". Use one consistent button colour throughout all pages.
+- **Transitional CTA** — builds trust with customers not yet ready: free PDF, webinar, trial, assessment. Always offer both on the same page.
+- Rule: every page should carry both. "Ready? [Buy Now]   Not sure? [Get the Free Guide]"
+
 **CTA placement rules:**
 - After every major proof point or benefit section
 - At least one CTA visible without scrolling
@@ -222,6 +227,20 @@ See `references/closing-and-guarantees.md` for the 10-part guarantee formula. Ke
 - Guilt-based CTAs
 - Fear-mongering beyond honest problem amplification
 - Claims without proof
+
+## StoryBrand Website Copy Hierarchy
+
+Five rules for website copy from Donald Miller's *Building a StoryBrand* (Ch12). Full framework: `book-extractions/storybrand-sb7-framework.md`.
+
+1. **Above-fold offer** — 10 words or fewer stating one of: aspirational identity offered, problem solved, or what you do. Never lead with company name, tagline, or product category description.
+2. **Obvious CTAs** — one direct CTA in the top-right header; repeat center-page in the hero; repeat again as readers scroll. Same button colour throughout. One consistent colour = one clear signal.
+3. **Images of success** — photos of happy customers experiencing the result, never abstract graphics or empty offices. The image should show the "after" — the transformation. Proof without words.
+4. **Bite-sized revenue streams** — one primary offer + maximum two alternatives. More than three choices reduce conversion. Lead with the offer that solves the most urgent problem.
+5. **Very few words** — websites are scanned, not read. 10 sentences or fewer above the fold. Every line must serve the BrandScript; if it doesn't, cut it.
+
+**Internal problem copy:** the phrase "We understand how it feels to [internal frustration]" belongs in the hero section, before any product description. It creates the "they get me" response that earns the right to present a solution.
+
+**Philosophical problem copy:** the injustice or unfairness behind the problem ("You shouldn't have to [pain]") elevates copy from transactional to meaningful. Use once, in the About section or Why Us page.
 
 ## Integration With Other Skills
 
