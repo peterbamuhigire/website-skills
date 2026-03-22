@@ -450,37 +450,33 @@ Optional: related action ("While you wait, read our guide to X").
 
 ### Date of Birth — Three Text Boxes (Not Dropdowns)
 
-```html
-<!-- Three narrow text boxes with hints above; never three dropdowns -->
-<fieldset>
-  <legend class="text-sm font-medium text-gray-700 mb-2">Date of birth</legend>
-  <div class="flex gap-3">
-    <div class="flex flex-col gap-1">
-      <span class="text-xs text-gray-500">DD</span>
-      <input type="text" name="dob-day" inputmode="numeric"
-             maxlength="2" aria-label="Day of birth"
-             class="w-16 min-h-[44px] px-3 py-2.5 border border-gray-300 rounded-lg
-                    text-center focus:ring-2 focus:ring-primary-500 focus:outline-none">
-    </div>
-    <div class="flex flex-col gap-1">
-      <span class="text-xs text-gray-500">MM</span>
-      <input type="text" name="dob-month" inputmode="numeric"
-             maxlength="2" aria-label="Month of birth"
-             class="w-16 min-h-[44px] px-3 py-2.5 border border-gray-300 rounded-lg
-                    text-center focus:ring-2 focus:ring-primary-500 focus:outline-none">
-    </div>
-    <div class="flex flex-col gap-1">
-      <span class="text-xs text-gray-500">YYYY</span>
-      <input type="text" name="dob-year" inputmode="numeric"
-             maxlength="4" aria-label="Year of birth"
-             class="w-24 min-h-[44px] px-3 py-2.5 border border-gray-300 rounded-lg
-                    text-center focus:ring-2 focus:ring-primary-500 focus:outline-none">
-    </div>
-  </div>
-</fieldset>
-```
+Three narrow `<input type="text" inputmode="numeric">` fields (DD / MM / YYYY) with format hints ABOVE each box. Set `maxlength="2"` for DD/MM, `maxlength="4"` for YYYY. Each gets a unique `aria-label`. Never three dropdowns — month dropdown alone requires 12 scan interactions.
 
 ---
+
+## 5. TIDWELL FORM PATTERNS
+
+From *Designing Interfaces* Ch10 (Tidwell, Brewer, Valencia). Full details: `book-extractions/tidwell-navigation-mobile-forms.md`.
+
+### Forgiving Format
+Accept multiple input formats; normalise programmatically — don't make users think about formatting.
+- Credit card: accept with/without spaces or hyphens — strip and validate the 16 digits
+- Phone: accept +256700000000, 0700 000 000, 0700-000-000 — detect country code, strip non-digits
+- Dates: accept 20/7, 7/20/2025, "July 20" — parse and echo back in standard format
+- Credit card type: detect from first digits (Visa=4, Mastercard=51–55, Amex=34/37) — never ask user to select
+
+### Good Defaults and Smart Prefills
+Pre-fill known data to minimise effort.
+- Logged-in user: pre-fill name, email, known address
+- If Zip/postcode available from previous order or IP, pre-fill city and region
+- Offer "Same as last time?" for returning customers
+- Defaults must serve the user — pre-select the cheapest/most privacy-preserving option, not the most profitable
+
+### Gatekeeper Form Design
+Forms that stand between user and their goal (checkout, contact, signup) must use Centre Stage or a Modal Panel:
+- Strip away: site navigation, sidebars, promotional banners, social proof carousels
+- Keep: logo, form title, progress indicator (multi-step), privacy reassurance, phone number
+- Never put a gatekeeper form in a cluttered page — distraction directly reduces completion rate
 
 ## Quick Reference — Do / Never
 
@@ -491,10 +487,10 @@ Optional: related action ("While you wait, read our guide to X").
 | "Send message" / "Get quote" | "Submit" |
 | Radio buttons for ≤5 options | Dropdown for ≤5 options |
 | Three text boxes for date | Three dropdowns for date |
+| Accept format variations (Forgiving Format) | Reject valid input over minor formatting |
+| Pre-fill known data (Good Defaults) | Re-ask for information you already have |
 | Validate on blur (field exit) | Validate while typing |
 | Error above the field | Error below the field |
 | 44px min touch target | Hover-only interactions |
-| Frame of reference at start | Frame of reference at end |
-| One concept per question | Double-barrel questions |
 | Show total steps ("3 of 5") | Hide total step count |
 | Confirmation screen after submit | Silent form submission |

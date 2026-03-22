@@ -291,16 +291,6 @@ Never create a standalone "Testimonials" page. Instead, place testimonials where
 
 Each testimonial should reinforce the claim made in the section above it. A testimonial about fast support belongs near the "support" section, not lumped with unrelated quotes.
 
-### Contact Form Simplicity
-
-Contact forms must be as short as possible:
-- **Required fields only:** Name, Email, Message (3 fields maximum for initial contact)
-- Phone number: optional, with explanation of why you're asking
-- No "Subject" dropdown — set it automatically based on page context
-- Placeholder text must look different from filled text (grey italic vs black regular)
-- Submit button: visually prominent, clear label ("Send Message" not "Submit")
-- Never ask for company size, budget, or detailed project info in an initial contact form
-
 ---
 
 ## Section Patterns
@@ -416,43 +406,8 @@ Content loaded from `docs/{lang}/`, not `docs/`.
 />
 ```
 
-### Screenshots / Product Previews (Lightbox Required)
-
-Screenshots and product images MUST be clickable with a fullscreen lightbox so users can view them at real size. Thumbnails alone don't communicate enough detail.
-
-**Implementation pattern:**
-
-1. **Lightbox component** (`src/components/Lightbox.astro`) — included once per page via BaseLayout. Uses Alpine.js `x-on:open-lightbox.window` to listen for custom events. Renders a fullscreen overlay with close button (X), Escape key, click-outside-to-close, caption bar, and `cursor-zoom-out`.
-
-2. **BaseLayout** includes `<Lightbox />` just before the Alpine.js script tag. This makes the lightbox available on every page automatically.
-
-3. **Screenshot thumbnails** use the `.screenshot-trigger` CSS class and dispatch Alpine events:
-
-```astro
-<div
-  x-data
-  @click="$dispatch('open-lightbox', { src: '/screenshots/FILENAME.jpg', alt: 'Description' })"
-  class="rounded-lg overflow-hidden shadow-hero screenshot-trigger"
->
-  <img src="/screenshots/FILENAME.jpg" alt="Description" class="w-full h-auto" loading="lazy" />
-  <span class="expand-hint">
-    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-    </svg>
-    Click to enlarge
-  </span>
-</div>
-```
-
-4. **CSS** (in `global.css`) for `.screenshot-trigger`: `cursor: zoom-in`, hover scale, gradient overlay, and `.expand-hint` label that fades in on hover.
-
-5. **French label:** Use "Cliquez pour agrandir" instead of "Click to enlarge". Mobile screenshots: use "Enlarge" / "Agrandir".
-
-**Rules:**
-- NEVER show screenshots as static thumbnails — always make them clickable
-- Every screenshot container needs `x-data` and `@click="$dispatch('open-lightbox', ...)"`
-- The lightbox is zero-dependency (Alpine.js only, no external library)
-- Mobile screenshots also get the lightbox treatment
+### Screenshots / Product Previews
+Screenshots MUST be clickable with a fullscreen lightbox — use Alpine.js `$dispatch('open-lightbox', { src, alt })` event and a `<Lightbox />` component in BaseLayout. Never show screenshots as static thumbnails.
 
 ### CTA Sections
 Bold, contrasting background. Clear action. One button, one message.
@@ -462,10 +417,6 @@ Bold, contrasting background. Clear action. One button, one message.
 - Simple form (Astro can handle this with form actions or static)
 - Embedded map (optional, use iframe)
 - Social links
-
-## Nested Border Radius Rule (MANDATORY)
-
-Never round inner elements the same as their parent container. Apply the formula: **outer radius = inner radius + padding**. When a card uses `rounded-2xl` (16px) with `p-4` (16px padding), inner images/buttons/elements must use a smaller radius like `rounded-lg` (8px) or `rounded-xl` (12px). Matching radii on parent and child creates bulgy, uneven corners. Always subtract the gap/padding from the parent radius.
 
 ## Image Usage Rules
 
@@ -493,39 +444,17 @@ import heroImg from '../assets/images/hero-office.jpg';
 - Check _catalog.json for available images before using ANY image
 - **Image cards MUST NEVER have white space.** Always add `img { display: block; }` in the base layer of global.css. Every image inside a card must use `w-full h-full object-cover` (or `object-contain` for product shots only). The image container must have `overflow-hidden` and a height constraint (`h-full`, `aspect-[ratio]`, or explicit height). Never leave an image at its default inline display — this causes a baseline gap that produces ugly white space at the bottom of cards.
 
-## Multi-Language Text Expansion (NEW)
+## Multi-Language Text Expansion
 
-French and Kiswahili content will be longer than English. Design with flexibility:
+French ~30% longer than English (1.2–1.4×); Kiswahili ~20% longer (1.1–1.3×). Use `min-width`/`max-width`, never fixed widths. Test all buttons, labels, CTAs, and nav items with longer text. No text in images. Verify French/Kiswahili hero headlines don't break layout.
 
-| Language | Expansion | Design Impact |
-|----------|-----------|---------------|
-| English | 1.0x (baseline) | Base design |
-| French | 1.2–1.4x | ~30% longer text |
-| Kiswahili | 1.1–1.3x | ~20% longer text |
+## Responsive Checklist (Every Page, Every Language)
 
-**Flex Design Principles:**
-- Use `min-width` and `max-width`, never fixed widths
-- Test all buttons, labels, and CTAs with longer text
-- Navigation items must wrap gracefully on smaller screens
-- Forms must accommodate longer labels without overlapping inputs
-- Avoid text in images (impossible to translate)
-
-**Testing Checklist for Multi-Language:**
-- [ ] French button labels don't overflow
-- [ ] Kiswahili form labels align properly
-- [ ] Navigation items wrap at mobile breakpoints for all languages
-- [ ] Hero headlines don't become illegible in French/Kiswahili
-
-## Responsive Design Checklist
-
-For EVERY page in EVERY language, mentally verify:
-
-- [ ] **375px (mobile):** Single column, readable text (min 16px), tappable buttons (min 44x44px), no horizontal scroll, text wraps properly
-- [ ] **768px (tablet):** 2-column grids where appropriate, comfortable spacing, French/Kiswahili text fits
-- [ ] **1280px (desktop):** Full layout, max-w-7xl container, generous whitespace, buttons/labels flex for longer text
-- [ ] **Navigation:** Hamburger on mobile, full nav on desktop, language switcher visible
-- [ ] **Images:** Responsive srcsets, never wider than viewport
-- [ ] **Typography:** Scales up on larger screens (text-4xl md:text-5xl lg:text-6xl), baseline text readable
+- 375px: single column, 16px+ text, 44×44px touch targets, no horizontal scroll
+- 768px: 2-col grids where appropriate, French/Kiswahili text fits
+- 1280px: max-w-7xl, generous whitespace, buttons flex for longer translated text
+- Navigation: hamburger mobile / full nav desktop / language switcher visible
+- Images: responsive srcsets, object-cover on all background images
 
 ## Accessibility Requirements
 
@@ -540,65 +469,23 @@ For EVERY page in EVERY language, mentally verify:
 
 ## Performance Rules
 
-- NO external scripts (no Google Fonts, no analytics CDN, no external JS)
-- Fonts self-hosted via Fontsource
-- Images optimized via Astro (auto WebP/AVIF)
-- Critical CSS inlined by Astro
-- Minimal JavaScript — only Alpine.js for interactivity + scroll observer
-- Lazy load all below-fold images
+No external scripts/fonts/analytics CDN. Self-host via Fontsource. Astro auto-optimises images (WebP/AVIF). Alpine.js only for interactivity. Lazy load all below-fold images.
 
 ## Content Best Practices
 
-**Always apply the content-writing skill** when creating any page text. That skill defines the full copywriting standard — headlines, ledes, readability, niche vocabulary, scannable formatting, and persuasive structure.
+Apply `content-writing` skill and `references/website-copywriting.md` to all copy. Read `blog-writer/references/human-voice-standards.md` for the AI vocabulary blacklist. Key rules: benefit-driven headlines, no throat-clearing ledes, Fog Index 8-10, client language mining, outcome over feature. CTAs use specific action language ("Discuss Your Project" not "Contact Us") — 1-2 per section, positioned after value prop.
 
-### Copywriting Standards (Mandatory)
+## Tidwell Navigation and Mobile Rules
 
-All visible text must follow `references/website-copywriting.md` and `blog-writer/references/human-voice-standards.md`:
-
-- **Headlines sell, body explains** — write all headlines first. If headings alone don't tell the story, fix them before writing body text.
-- **The Specificity Ladder** — climb from vague to specific. "We help businesses" → "We help East African SMEs" → "We build inventory systems for manufacturers with 50-200 staff"
-- **Client language mining** — read every `docs/{lang}/` file and extract the client's own words. The site should sound like the business owner talking.
-- **Zero AI vocabulary** — never use: delve, tapestry, landscape (metaphor), leverage, navigate (metaphor), foster, realm, harness, synergy, embark, beacon, robust, vibrant, pivotal, paramount, testament, bolster. See full blacklist in `blog-writer/references/human-voice-standards.md`.
-- **Outcome over feature** — "Get paid faster" not "Invoicing module". Apply the "So What?" filter to every sentence.
-- **Mirror technique on homepage** — reflect the visitor's reality before talking about the business.
-
-### Scannable Content Formatting
-
-### Quick Reference (from content-writing skill)
-
-- **Headlines**: Benefit-driven, specific, written AFTER content. Five times more people read the headline than the body.
-- **Lede**: First 10 words hook the reader. Opening paragraph max 11 words. No throat-clearing.
-- **Readability**: Target Fog Index 8-10. Short sentences (avg 15-20 words), short paragraphs (3-4 lines max), vary lengths.
-- **Subheads**: Every 2-3 paragraphs. Readers should understand the page by scanning subheads alone.
-- **Benefits over features**: Always translate features into reader benefits. Bullet points for features/benefits.
-- **Niche vocabulary**: Use topic-specific expert terms naturally — signals authority to readers and search engines.
-- **Visuals**: Images every 200-300 words. Captions on all images (read 2x more than body copy).
-- **Takeaways**: End blog posts and long pages with 3-5 bulleted key points.
-- Bold key terms and phrases. Adequate whitespace between sections.
-
-### Clear Calls-to-Action
-
-Tell users exactly what to do next. See `references/website-copywriting.md` for page-specific CTA formulas.
-
-- Use specific action language ("Discuss Your Project" not "Contact Us", "See How It Works" not "Learn More")
-- Make buttons visually distinct (highest contrast)
-- Position after value prop and benefits
-- Limit 1-2 primary CTAs per section
-- CTA wording must be consistent across the site
-- Never use manipulative language ("Don't miss out!", "Act now!", "Last chance!")
+Full patterns: `book-extractions/tidwell-navigation-mobile-forms.md`.
+- **Clear Entry Points:** 2-4 task-oriented "front doors" on landing pages — visually dominate over utility nav
+- **Escape Hatch:** every constrained page (wizard, modal, 404) needs a visible route back; clickable logo = escape hatch
+- **Breadcrumbs:** required >2 levels deep — Home > Category > Current Page, each item except current is a link
+- **Sitemap Footer:** task-oriented header + full-site footer = proven two-part navigation; structure: categories + legal + contact
+- **Vertical Stack Mobile:** single column; first 100px = content only — never waste with stacked logo/ad/nav ("layer cake")
+- **Mobile Touch Targets:** 44×44px minimum; full row of radio/checkbox clickable, not just the control
+- **Strip to Essentials:** remove sidebars, ads, social rows, newsletter popups on mobile; minimise taps
 
 ## Content Parsing (Multi-Language)
 
-When reading `docs/{lang}/*.md` files (NEW: language-specific):
-- YAML frontmatter (between `---`) = structured data (use as props)
-- `## Heading` = section breaks
-- `**bold text**` after heading = field values (role, summary, etc.)
-- List items = features, values, etc.
-- Parse flexibly — the user's markdown won't be perfectly structured
-
-**Important for Multi-Language:**
-- Read content from `docs/{lang}/` for THIS language only
-- Don't mix languages or read from root `docs/` directory
-- Each language has complete independent content
-- Apply language standards from language-standards skill to ensure proper tone
-- Respect text expansion when designing layouts
+Read `docs/{lang}/*.md` for THIS language only — never mix languages or read from root `docs/`. YAML frontmatter = structured data; `## Heading` = section break; `**bold**` after heading = field value. Parse flexibly. Apply language standards and text expansion awareness to all layouts.
