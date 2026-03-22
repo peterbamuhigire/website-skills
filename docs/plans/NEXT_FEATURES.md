@@ -1,6 +1,6 @@
 # Next Features — Website Skills
 
-Last updated: 2026-03-20
+Last updated: 2026-03-22
 
 ## 🟠 HIGH PRIORITY
 
@@ -23,6 +23,8 @@ Last updated: 2026-03-20
 **Reference site library** — Curated collection of well-designed African business websites per sector for design-reference skill. Effort: 2-3 hours. Start: `design-reference/`.
 
 ## ✅ Recently Completed
+
+**UI/UX + StoryBrand skill enhancement** (2026-03-22) — Read Tidwell *Designing Interfaces* (3rd Ed, 12,821-line extraction) + Miller *Building a StoryBrand* (4,969-line extraction). Phase 1: `ux-psychology` + `design-system` updated with Tidwell cognition/layout/visual patterns; reference file `tidwell-cognition-visual-patterns.md`. Phase 2: `page-builder` + `form-ux-design` updated with navigation, mobile, and form patterns; reference file `tidwell-navigation-mobile-forms.md`. Phase 3: `brand-storytelling` + `sales-copywriting` + `brand-strategy` updated with SB7 BrandScript framework; reference file `storybrand-sb7-framework.md`. 3 commits.
 
 **Book extractions: ecommerce UX + growth hacking** (2026-03-20) — Read two books in full. Created `ecommerce/references/ecommerce-design-ux.md` (599 lines, 15-part extraction from Smashing Magazine ecommerce book: checkout UX, photography, CRO frameworks, A/B testing, trust signals, faceted search). Created `book-extractions/growth-hacking-content-marketing-extraction.md` (523 lines, 14-part extraction from Fishbein: content funnel, SEO, SlideShare, YouTube, podcasting, 33 traffic tactics, repurposing framework). Updated `ecommerce/SKILL.md` with Reference Files pointer.
 
