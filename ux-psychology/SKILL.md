@@ -321,6 +321,53 @@ Clients investing $20k–$50k in a website are buying brand equity. One viral co
 
 ---
 
+## 8. TIDWELL BEHAVIORAL PATTERNS
+
+Patterns from *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 2020). Full pattern details in `book-extractions/tidwell-cognition-visual-patterns.md`.
+
+### Safe Exploration — "Let me explore without getting into trouble."
+- Every destructive action must be reversible or require confirmation.
+- Auto-save so exploration costs nothing; any wrong turn is recoverable.
+- Extra windows, pop-ups that hijack Back, or irreversible single-clicks break this pattern.
+
+### Instant Gratification — "I want to accomplish something now."
+- Predict the first thing a new user will do; make that action stunningly easy.
+- Do NOT block first action behind registration, long instructions, or slow loads.
+- Provide value before asking for something valuable (email, payment).
+- Show partial results as they load — blank screen for >200ms damages confidence.
+
+### Satisficing — "This is good enough; I'll stop here."
+- Users stop at the first plausible choice — put the right choice FIRST in every list.
+- Labels must be short and scannable; users guess rather than read every word.
+- Use calls to action ("Type here," "Tap to begin") to direct users to the most likely first step.
+- Visual layout communicates meaning faster than labels — use it to guide first-click behaviour.
+
+### Deferred Choices — "I don't want to answer that now."
+- Clearly distinguish required vs. optional fields — never make non-critical fields required.
+- Use good defaults so skipped fields don't create broken states.
+- A note like "You can change this later in Settings" reduces the anxiety of deciding now.
+
+### Habituation — "That gesture works everywhere else; why not here?"
+- Consistent placement of navigation, actions, and labels is the most critical usability rule.
+- After first use, help text becomes invisible — layout must self-explain to returning users.
+- Announce layout changes explicitly: "We've updated our navigation" prevents disorientation.
+
+### Spatial Memory — "I remember where things were on the screen."
+- NEVER move navigation items between pages — users remember locations, not labels.
+- Pin primary actions to consistent screen positions (top-right on desktop, bottom on mobile).
+- If layout must change (responsive breakpoint), animate the transition so users can follow elements.
+
+### Prospective Memory — "Remind me where I was."
+- Breadcrumbs, progress steps, and section titles remind users of their position.
+- After any page load, visible context must make the current task obvious without reading body text.
+- Email/notification reminders for deferred actions reduce abandonment.
+
+### Incremental Construction — "Let me change this. That's better."
+- Support frequent small saves; never require a complete form before any save is possible.
+- Show work-in-progress continuously; feedback during creation is essential (Csikszentmihalyi).
+
+---
+
 ## SKILL INTEGRATION NOTES
 
 - Run **alongside** universal-guidelines (no duplication — this skill covers the gaps).
@@ -328,3 +375,4 @@ Clients investing $20k–$50k in a website are buying brand equity. One viral co
 - Use the 3-level Norman audit (visceral / behavioral / reflective) as a pre-launch checklist for every page.
 - Use the dark patterns list as a client communication tool when reviewing requirements.
 - Cognitive bias awareness (Section 4) should inform copy decisions in `sales-copywriting` and `page-builder`.
+- Section 8 Tidwell patterns govern multi-step flows, navigation stability, and form behaviour — cross-reference with `form-ux-design` and `page-builder`.
