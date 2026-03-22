@@ -318,6 +318,31 @@ The output of this skill is `docs/brand-brief.md`. This file is the single sourc
 
 ---
 
+## Step 10: SB7 BrandScript Synthesis
+
+After completing Steps 1–9, synthesise the brand brief into a one-page SB7 BrandScript. The BrandScript translates brand strategy into message architecture — the 7 elements that govern all website copy, sales scripts, and marketing collateral. Full SB7 rules: `book-extractions/storybrand-sb7-framework.md`.
+
+Complete each element using information already captured in `docs/brand-brief.md`:
+
+| Element | Source in brand-brief.md | Output |
+|---------|--------------------------|--------|
+| Character (desire) | Target audience → core problems | Single-sentence desire statement |
+| Problem — External | Target audience pains (Section 2) | The surface-level problem |
+| Problem — Internal | Target audience frustrations | "They feel…" emotional statement |
+| Problem — Philosophical | Brand positioning + values | The injustice or unfairness at stake |
+| Guide — Empathy | Brand promise + voice tone | "We understand how it feels to…" opener |
+| Guide — Authority | CBBE level, testimonials | 3 authority signals (stats, logos, awards) |
+| Plan | Services / delivery process | 3 named steps, ≤10 words each |
+| Direct CTA | Primary conversion goal | Button text + action |
+| Transitional CTA | Content / lead magnet | Free resource aligned to customer problem |
+| Failure | Customer fears (loss aversion) | 2–3 consequences of inaction |
+| Success | Brand promise + aspirational identity | Before/After: Have, Feel, Day, Status |
+| Transformation | Archetype + aspirational identity | From [current identity] → To [desired identity] |
+
+Add the completed BrandScript to `docs/brand-brief.md` as **Section 11: SB7 BrandScript**. It becomes the primary input for `brand-storytelling`, `sales-copywriting`, and `page-builder`.
+
+---
+
 ## Quality Gate
 
 Before delivering `docs/brand-brief.md`, verify:

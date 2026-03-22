@@ -21,6 +21,40 @@ If any page draft positions the brand as hero, rewrite it.
 
 ---
 
+## StoryBrand SB7 BrandScript
+
+The SB7 Framework (Donald Miller — *Building a StoryBrand*) is the practical implementation of the central rule. It maps all brand messaging to a 7-element narrative structure. Full details and worksheets: `book-extractions/storybrand-sb7-framework.md`.
+
+### The 7 Elements
+
+| # | Element | Story Role | Rule |
+|---|---------|-----------|------|
+| 1 | Character | Hero | Define ONE desire the customer wants — financial, time, social, purpose, meaning, or generosity |
+| 2 | Problem | Conflict | Three layers: External (surface), Internal (frustration — the real motivator), Philosophical (injustice) |
+| 3 | Guide | Mentor | Show Empathy ("We understand…") BEFORE Authority (testimonials, stats, awards, logos) |
+| 4 | Plan | Road map | 3 named steps (Process Plan) or 3 named commitments (Agreement Plan) — never more than 3 |
+| 5 | CTA | Invitation | BOTH a Direct CTA (buy now) AND a Transitional CTA (free guide, trial) — on every page |
+| 6 | Failure | Stakes | Name 2–3 negative consequences of inaction. Loss aversion is 2–3× stronger than gain appeal. Use lightly. |
+| 7 | Success | Resolution | Show success explicitly. Three desires: Status/Position, Union/Wholeness, Self-Realization |
+| + | Transformation | Character arc | From → To aspirational identity. Affirm it after purchase. |
+
+### BrandScript Before Drafting
+
+Complete this before the Creative Brief. It informs Section 5 (Single Most Persuasive Idea):
+
+1. **Character:** What is the single thing our customer wants?
+2. **Problem:** External / Internal / Philosophical?
+3. **Guide:** How do we show Empathy? What Authority evidence do we have (3 items)?
+4. **Plan:** What are our 3 named steps?
+5. **CTA:** Direct CTA button text? Transitional CTA (free offer)?
+6. **Failure:** What 2–3 things happen if they do nothing?
+7. **Success:** What does life look like specifically after they engage us?
+8. **Transformation:** From _____ → To _____
+
+The BrandScript is appended to `docs/brand-brief.md` by the brand-strategy skill (Step 10). It is the primary input for all website hero sections.
+
+---
+
 ## Five-Act Dramatic Arc (Quesenberry & Coolsen)
 
 Freytag's Five-Act Structure maps onto every meaningful brand story. It works because it mirrors the structure of all human experience: a character faces a problem, the problem intensifies, a turning point arrives, consequences unfold, and resolution is reached.
