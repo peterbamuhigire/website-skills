@@ -313,6 +313,91 @@ All button tiers (primary/secondary/tertiary) must share the same `border-radius
 - object-cover for all background/hero images
 - Subtle hover zoom on interactive images
 
+### 9. Tidwell Layout Architecture Patterns
+
+From *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 2020). Full pattern reference: `book-extractions/tidwell-cognition-visual-patterns.md`.
+
+**Visual Framework** — shared identity across every page.
+- Every page shares: logo position, primary nav, utility nav, footer, font hierarchy, and colour use.
+- The frame is constant; the centre-stage content changes. Users notice what changes, not what stays.
+- Implement via a single layout template — separate style from content.
+
+**Center Stage** — primary task occupies the largest, most dominant area.
+- Centre stage must be at least 2× as wide/tall as any surrounding panel.
+- Headlines and high-contrast type anchor the viewer's eye at the start of primary content.
+- Toolbars, sidebars, and related content are subordinate — never let them compete visually.
+
+**Grid of Equals** — equal-weight items in a consistent grid.
+- Every item uses the same template: same dimensions, same image aspect ratio, same text hierarchy.
+- Visual inequality in a "grid of equals" implies unintended ranking — avoid unless deliberate.
+- Highlight one item (featured, larger) only when it truly is special.
+
+**Titled Sections** — every content block has a short, scannable title.
+- "What we do" beats "A comprehensive suite of end-to-end solutions."
+- Whitespace between sections (not dividers) is cleaner; boxes add noise when too numerous.
+- If you can't title a section concisely, the content grouping is probably wrong — reorganise.
+
+**Progressive Disclosure** — show only what's needed; reveal detail on demand.
+- Tier 1: essential — visible by default.
+- Tier 2: supporting detail — revealed on expand, tab, or click.
+- Tier 3: edge cases / advanced — help overlay or separate page.
+- Forcing all users to process Tier 3 information is a cognitive tax on the majority who never need it.
+
+**Module Tabs** — tabbed content within a page (not page-level navigation).
+- Maximum ~8 tabs per group; never double-row the tabs.
+- Selected tab must be unambiguously indicated (visual connection to content panel, not colour alone).
+- If tab labels won't fit in a single row at narrow widths, use a dropdown selector instead.
+
+**Accordion** — collapsible panels in a vertical stack.
+- Use when users may need multiple sections open at once (unlike tabs).
+- First section should default-open (most important/most common).
+- Section headers must be full-width clickable (44px min height) with a visible expand/collapse indicator.
+
+### 10. Tidwell Action Design Patterns
+
+**Prominent Done/Next Button** — every screen has one obvious "what do I do next" action.
+- Primary action button: most visually prominent interactive element on the page.
+- Secondary action: ≤30% visual weight of primary (less colour, less size, less padding).
+- One primary CTA per screen — two equal-weight CTAs create paralysis.
+
+**Button Groups** — group related actions; separate unrelated ones.
+- Same graphic treatment within a group (same height, border, colour, icon style).
+- Destructive actions must be visually separated from primary actions — never adjacent.
+- Place button groups to the left or right of what they act upon (proximity principle).
+
+**Preview Before Commit** — show the result before costly/irreversible action.
+- Photo/file uploads: show thumbnail preview before saving.
+- Bulk operations: show count + list before "Confirm delete" dialog.
+- Email sends, payments, and publication actions benefit from a review step.
+
+**Spinners and Loading Indicators:**
+- <300ms: no indicator needed
+- 300ms–3s: spinner or determinate progress bar
+- >3s: progress bar with estimated time + cancel option
+- Full-page loads: use skeleton screens (content placeholders), not spinners
+- Never leave blank white space where content is loading.
+
+**Cancelability** — any operation >2 seconds must be stoppable.
+- Show Cancel button adjacent to progress indicator.
+- On cancel: restore prior state fully — no partial data left behind.
+
+### 11. Tidwell Visual Style Rules
+
+**Preattentive Variables** — detected in <200ms before conscious reading: colour, size, shape, orientation, motion.
+- Use preattentive variables to guide the eye to priority content (CTA, error state, headline).
+- Desaturate design to grayscale to test whether hierarchy survives colour removal.
+- Colour alone is insufficient — 10% of men have some form of colour-blindness; always pair colour with shape + text.
+
+**Photography for Direction:**
+- Subject's gaze direction controls viewer eye movement — model facing CTA directs viewer to CTA.
+- Avoid stock clichés: happy diverse team, road winding to horizon, handshake, sunset.
+- Decorative images in functional interfaces are distracting — use sparingly.
+
+**Icon Standards:**
+- Icons must share consistent visual style: all filled OR all outline; same stroke weight.
+- Never use icon alone — pair with text label for maximum comprehension.
+- Follow established conventions: magnifying glass = search, envelope = message, house = home.
+
 ## Liquid Glass / Glassmorphism
 
 For projects where glassmorphism suits the brand (Corporate, Tourism, Portfolio, Creator sectors), consult **`liquid-glass-effects.md`** for:
