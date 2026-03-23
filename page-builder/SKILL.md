@@ -15,6 +15,14 @@ Before writing ANY page copy, read **`references/website-copywriting.md`** for c
 
 **`references/component-design-rules.md`** — Research-backed rules for every component: navbar (max 80px, 24px gaps, 8px radius), hero (max 10 words, don't fill viewport, 50-80% image overlay), cards (critical content at top, one CTA, nested border-radius formula), features, images (Rule of Thirds, emotional selection), icons (never mix styles), testimonials (quote first, name last), FAQ (first-person questions), footer (distinct background), pricing (premium tier left for anchoring), progressive disclosure (3-tier model). Also includes the Site Pattern Library for exploration, evaluation, and acquisition pages.
 
+**`references/ui-states.md`** — the 5 states of every view (ideal, loading, empty, error, partial). Skeleton screen patterns, empty state anatomy (visual + explanation + CTA), error message 3-requirement rule, toast notifications, confirmation dialogs, and state design checklist.
+
+**`references/touch-interactions.md`** — touch target sizing (44px mandatory), thumb zone mapping, hover fallback via `@media (hover: hover)`, mobile keyboard optimisation (`inputmode`, `enterkeyhint`, `autocomplete`), gesture patterns (CSS scroll-snap), and mobile form interaction rules.
+
+**`references/aria-patterns.md`** — skip links, focus management (`:focus-visible`, focus traps), ARIA live regions (`role="alert"` vs `role="status"`), accessible disclosure (`<details>`), tabs (arrow key navigation), accordions (`aria-expanded`), semantic HTML checklist, and colour-independence rules.
+
+**`references/advanced-navigation.md`** — hamburger debate (desktop: never), mobile off-canvas menu (Alpine.js + focus trap), accordion sub-menus, megamenu pattern, sticky hide-on-scroll-down nav, search integration, breadcrumbs, footer architecture (3-5 columns), and active state wayfinding.
+
 **Persuasion & conversion references** (from `sales-copywriting` skill):
 - `sales-copywriting/references/headline-mastery.md` — Read for ALL headlines (10 formulas + 4 U's scoring)
 - `sales-copywriting/references/fascination-bullets.md` — Read when writing bullet points that need to persuade
