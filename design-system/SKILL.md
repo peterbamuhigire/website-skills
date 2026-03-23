@@ -437,6 +437,23 @@ Before starting design decisions, review these references:
 - Rule of Thirds and Golden Ratio for placement
 - Subject matter and gaze direction — photography choices that direct attention to CTAs
 
+**`design-system/references/responsive-patterns.md`** — mobile-first responsive architecture:
+- Fluid typography with `clamp()` formulas (H1–body scaling across breakpoints)
+- Responsive spacing system (8pt grid tokens that scale at md/lg/xl)
+- Grid breakpoint recipes (1-col → 2-col → 3-col Tailwind patterns)
+- Responsive component transforms (nav, cards, hero, forms per breakpoint)
+- Safe area handling (notch, home indicator, viewport meta)
+- Responsive testing checklist (12-point verification)
+
+**`design-system/references/motion-design.md`** — animation timing system and micro-interactions:
+- Duration tokens (instant → emphasis) with easing functions
+- Micro-interaction patterns (button, card, link, focus, form field, toggle)
+- Scroll-triggered animation patterns with stagger rules
+- Modal/overlay animation sequences
+- Loading animations (spinner, skeleton, progress bar)
+- Performance rules (GPU-composited properties only, animation budget)
+- Complete `prefers-reduced-motion` implementation (global + selective)
+
 **`design-system/references/ux-quality-checklist.md`** — post-design validation:
 - Design Grid quality check (count alignment lines — fewer = cleaner)
 - 5-Second Test (can users identify the page purpose in 5 seconds?)
