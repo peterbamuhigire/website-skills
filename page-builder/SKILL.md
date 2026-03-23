@@ -473,7 +473,7 @@ No external scripts/fonts/analytics CDN. Self-host via Fontsource. Astro auto-op
 
 ## Content Best Practices
 
-Apply `content-writing` skill and `references/website-copywriting.md` to all copy. Read `blog-writer/references/human-voice-standards.md` for the AI vocabulary blacklist. Key rules: benefit-driven headlines, no throat-clearing ledes, Fog Index 8-10, client language mining, outcome over feature. CTAs use specific action language ("Discuss Your Project" not "Contact Us") — 1-2 per section, positioned after value prop.
+Apply `content-writing` skill and `references/website-copywriting.md` to all copy. Read `blog-writer/references/human-voice-standards.md` for the AI vocabulary blacklist. Key rules: benefit-driven headlines, no throat-clearing ledes, Fog Index 8-10, client language mining, outcome over feature. CTAs use specific action language ("Discuss Your Project" not "Contact Us") — 1-2 per section, positioned after value prop. **Krug scanning rules (mandatory):** users scan not read — use headings that stand alone as labels, ≤3-sentence paragraphs, bullet any list of 3+, bold key terms on first use; cut word count in half then cut half again; kill happy talk and instructions; apply `web-usability-krug` global skill for full reference.
 
 ## Tidwell Navigation and Mobile Rules
 

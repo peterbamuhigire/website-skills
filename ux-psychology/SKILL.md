@@ -368,11 +368,113 @@ Patterns from *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 202
 
 ---
 
+## 9. LAWS OF UX — WEBSITE APPLICATION
+
+Named laws from Yablonski (2024) *Laws of UX* (lawsofux.com). Laws already covered in earlier sections (Goal-Gradient, Hick's Law, Anchoring, IKEA Effect, Gestalt Proximity/Similarity/Closure/Continuity/Figure-Ground) are excluded here.
+
+### Peak-End Rule
+Users judge an entire experience by its most intense moment and its ending — not the average quality.
+- Confirmation and thank-you pages are the **ending** of every web experience. They are disproportionately remembered — design them with warmth, personality, and a clear next step.
+- The most intense moment is usually first load or form submission. Make it exceptional.
+- Every 404, error state, and empty state is a potential pain peak. Each needs empathy + a clear exit path. Never leave users in a dead end.
+
+### Von Restorff Effect
+The element that differs most from its surroundings is the most noticed and remembered.
+- One visually distinct primary CTA per page. When everything is bold, nothing is bold.
+- Secondary actions must be visually subdued — differentiation is the mechanism of noticeability.
+- Overuse of contrast destroys the signal. Every highlight added dilutes every other highlight on the page.
+
+### Serial Position Effect
+Users best remember the first (primacy) and last (recency) items in a sequence; middle items are least memorable.
+- Navigation: place critical links first or last. Never bury the primary action in the middle of a nav.
+- Service lists: lead with the flagship offer; close with the most memorable option.
+- Form fields: first field sets tone; last field is remembered — end with a welcoming, clear submit.
+
+### Zeigarnik Effect
+Unfinished tasks persist in memory more than completed ones; open loops create cognitive pull to return.
+- Progress bars, "Your profile is 60% complete," and multi-step indicators leverage this to re-engage.
+- Persist partial form state — a half-filled form creates pull to return and complete.
+- Onboarding checklists that remain incompletable by design keep users returning.
+
+### Doherty Threshold
+System response under 400ms keeps users engaged; above 400ms, focus breaks and users disengage.
+- Target <100ms for button/hover feedback using CSS transitions — no JavaScript delay.
+- For slower operations: optimistic UI (show success immediately, roll back on failure) or skeleton screens within 100ms.
+- LCP (Largest Contentful Paint) ≤2.5s. Every additional 100ms of load loses measurable conversions.
+
+### Tesler's Law (Law of Conservation of Complexity)
+Every system has inherent complexity that cannot be eliminated — only transferred to a different actor.
+- Simplifying the UI moves complexity to the backend, developer, or documentation. Decide consciously who bears it.
+- When a client asks to "simplify," identify *where* the complexity goes — it does not disappear.
+- Strip every element that does not serve the user's primary task; accept without apology the complexity that cannot be removed.
+
+### Selective Attention
+Users actively filter out anything outside their current goal path — it is effectively invisible to them.
+- Never rely on banners, sidebars, or inline messages placed outside the task flow.
+- Critical guidance must be placed inline, in the path of the action — not above, below, or beside it.
+- Eye-tracking consistently shows users skip decorative images, stock photography, and elements that visually resemble ads.
+
+### Postel's Law (Robustness Principle)
+Be liberal in what you accept as input; be conservative and consistent in what you output.
+- Accept phone numbers in any format — strip and normalise on submit.
+- Accept dates in regional formats; accept email regardless of case; never reject special characters in names.
+- Return clean, predictable, consistently formatted output: normalised numbers, standard date display, formatted addresses.
+
+### Law of Common Region
+Elements sharing a visible boundary are perceived as grouped — independent of their internal visual similarities.
+- Cards and bordered panels create stronger grouping signals than proximity alone.
+- Background colour blocks group page sections when whitespace alone is insufficient.
+- Cards must have visible separation from the page background (shadow, border, or colour contrast) — an invisible card is an invisible group.
+
+### Law of Uniform Connectedness
+Elements connected by a visible line or border are perceived as more strongly related than elements that merely share proximity.
+- Use connecting lines, arrows, and step-to-step connectors deliberately in multi-step flows and process diagrams.
+- Navigation underlines and active states create explicit connection between label and state.
+- Do not draw lines between elements you do not intend to imply as explicitly related.
+
+### Laws Quick Reference for Common Website Decisions
+
+| Decision | Law | Rule |
+|----------|-----|------|
+| How many nav items? | Hick's Law + Miller's | ≤7; group into ≤5 clusters |
+| CTA button size/position | Fitts's Law | Large + near; 44px min touch target |
+| Page load target | Doherty Threshold | LCP ≤2.5s; UI feedback <100ms |
+| Number of options per group | Choice Overload | One primary CTA; filter large sets |
+| List item order | Serial Position | Most important: first or last |
+| Form input formats | Postel's Law | Accept any reasonable format |
+| Feature prominence | Pareto Principle | 20% features = 80% use — make them obvious |
+| Confirmation screens | Peak-End Rule | Endings are remembered — make them great |
+| Card grouping | Law of Common Region | Visible boundary = strongest group signal |
+| Stand-out element | Von Restorff | One contrast element per zone — no more |
+| Returning user engagement | Zeigarnik Effect | Leave progress visible; persist incomplete states |
+| User instructions | Paradox of Active User | Embed guidance in the UI — no one reads manuals |
+| Chunking content | Miller's Law | ≤7 items per group; ≤5 is safer |
+
+---
+
+## SECTION 10: KRUG'S THREE FACTS OF REAL WEB USE
+
+Grounded in Krug (2014) *Don't Make Me Think*, 3rd ed. Full reference: `book-extractions/dont-make-me-think-extraction.md`.
+
+| Fact | Reality | Design Response |
+|------|---------|-----------------|
+| **We scan, not read** | Users are on a mission; they glance, find a plausible match, click. They ignore most of what's on the page. | Design billboards. Visual hierarchy, headings, bullets, bold key terms. No wall of words. |
+| **We satisfice, not optimise** | Users take the first reasonable option — not the best. The first plausible link wins. Weighing options is rare. | Put the right path first and make it unmissable. Scent of information (link text must signal destination unambiguously). |
+| **We muddle through** | Users never read instructions. They invent stories about how things work and proceed. | Make design self-explanatory. Eliminate instructions. Support successful muddling without requiring comprehension first. |
+
+**Krug's billboard metaphor:** Pages must work at a glance. Designers imagine users reading brochures; users see billboards going 60mph. Clarity of the instant glance determines whether users stay.
+
+**Clarity trumps consistency.** If making something slightly inconsistent makes it significantly clearer, choose clarity.
+
+---
+
 ## SKILL INTEGRATION NOTES
 
-- Run **alongside** universal-guidelines (no duplication — this skill covers the gaps).
+- Run **alongside** `laws-of-ux` and `web-usability-krug` (global) skills for named-law reference and full Krug principles.
 - Invoke during `page-builder` and `design-system` steps as a quality gate.
 - Use the 3-level Norman audit (visceral / behavioral / reflective) as a pre-launch checklist for every page.
 - Use the dark patterns list as a client communication tool when reviewing requirements.
 - Cognitive bias awareness (Section 4) should inform copy decisions in `sales-copywriting` and `page-builder`.
 - Section 8 Tidwell patterns govern multi-step flows, navigation stability, and form behaviour — cross-reference with `form-ux-design` and `page-builder`.
+- Section 9 Laws of UX: apply the Quick Reference table as a checklist before finalising any page layout.
+- Section 10 Krug facts: apply as a reality check before any copy or layout is marked complete.

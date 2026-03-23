@@ -446,6 +446,18 @@ From cognitive science: people remember at most 10% of what you tell them. Contr
 
 - `references/business-vocabulary.md` — Formal vs informal vocabulary pairs (22 verb pairs, 14 other word pairs); data and statistics language (15 trend phrases, percentage-to-fraction conversion table, approximate figure qualifiers); linking words and transition phrases; market potential and growth phrases for proposals; discourse markers; business phrasal verbs
 
+## Krug's Three Web Writing Rules
+
+Grounded in Krug (2014) *Don't Make Me Think*. Apply to all website copy:
+
+1. **Omit needless words.** Cut the word count in half. Then cut half of what remains. Every word that survives must earn its place by informing or persuading — not by filling space.
+2. **Happy talk must die.** Delete all introductory text that congratulates the site, welcomes the visitor, or describes what the user is about to see. If a voice in your head says "blah blah blah" while you read it, cut it.
+3. **Instructions must die.** Eliminate instructions entirely by making the design self-explanatory. When unavoidable: minimum words, placed exactly when and where the user needs them, formatted so they cannot be missed.
+
+Apply these as a final edit pass on every page: *Does this sentence earn its place? Could this paragraph be two bullets? Is this heading a useful label or just a category name?*
+
+---
+
 ## Integration with Other Skills
 
 This skill is cross-cutting — it applies alongside:
@@ -455,3 +467,4 @@ This skill is cross-cutting — it applies alongside:
 - **seo** — headlines and niche vocabulary directly support search visibility
 - **brand-alignment** — content voice must match brand identity
 - **sector-strategies** — industry-specific content angles and trust signals
+- **web-usability-krug** (global skill) — full Krug reference for scanning design and navigation copy
