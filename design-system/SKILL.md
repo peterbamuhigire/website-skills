@@ -445,6 +445,15 @@ Before starting design decisions, review these references:
 - Safe area handling (notch, home indicator, viewport meta)
 - Responsive testing checklist (12-point verification)
 
+**`design-system/references/intrinsic-layout.md`** — intrinsically responsive layout system:
+- Layout primitives (Stack, Box, Center, Cluster, Sidebar, Switcher, Cover, Grid, Frame, Reel, Container)
+- CSS Grid `repeat(auto-fit, minmax())` for zero-breakpoint responsive grids
+- Modular scale (ratio-based spacing + font sizing from one axiom)
+- Logical properties (`inline-size`, `block-start` — multilingual-ready)
+- Container queries for component-level responsiveness
+- Subgrid for cross-card alignment
+- Measure axiom (`max-inline-size: 60ch` on all text elements)
+
 **`design-system/references/motion-design.md`** — animation timing system and micro-interactions:
 - Duration tokens (instant → emphasis) with easing functions
 - Micro-interaction patterns (button, card, link, focus, form field, toggle)

@@ -1,12 +1,14 @@
 ---
 title: Responsive Design Patterns
 description: Mobile-first responsive architecture — fluid typography, spacing tokens, grid breakpoint recipes, Tailwind class patterns, and responsive component transforms for all three breakpoints (375px, 768px, 1280px+).
-sources: Adham Dannaway "Practical UI" (2022) + Adrian Kuleszo "How to Design Better UI Components 3.0" (2024) + Lisandra Maioli "Fixing Bad UX Designs" (2018) + Will Grant "101 UX Principles" (2018)
+sources: Adham Dannaway "Practical UI" (2022) + Adrian Kuleszo "How to Design Better UI Components 3.0" (2024) + Lisandra Maioli "Fixing Bad UX Designs" (2018) + Will Grant "101 UX Principles" (2018) + Heydon Pickering & Andy Bell "Every Layout" (3rd ed.) + Rachel Andrew "Get Ready for CSS Grid Layout" (2nd ed., 2019)
 ---
 
 # Responsive Design Patterns
 
 Mobile-first means **designing for 375px first**, then enhancing upward. Every CSS rule starts at mobile and adds complexity at wider breakpoints — never the reverse.
+
+**Intrinsic design principle (Every Layout):** Prefer layouts that respond to their **content and container** rather than viewport breakpoints. Use `repeat(auto-fit, minmax())` grids, `flex-wrap` sidebars, and container queries before reaching for `@media`. See `intrinsic-layout.md` for the full layout primitives system, modular scale, and composition approach.
 
 ---
 
@@ -114,6 +116,8 @@ The **further apart** two elements are, the **less related** they appear. Group 
 ---
 
 ## RESPONSIVE GRID PATTERNS
+
+**Prefer intrinsic grids** — `repeat(auto-fit, minmax(min(250px, 100%), 1fr))` creates responsive columns with zero breakpoints. See `intrinsic-layout.md` for the full pattern, plus Sidebar, Switcher, and Container Query patterns.
 
 ### Column Collapse Rules
 
