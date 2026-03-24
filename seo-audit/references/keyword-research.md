@@ -185,6 +185,73 @@ Match keywords to the buyer's journey stage and content type:
 
 ---
 
+## Low-DA Quick-Win Keywords (For New Sites)
+
+New sites (domain age < 6 months, DA < 20) cannot compete on head terms. Target these three keyword types first — they rank fast because competitors ignore them.
+
+### 1. Niche Long-Tail Keywords
+
+Ultra-specific queries with low volume (50–500/month) but high conversion intent. Most established sites don't bother targeting them.
+
+**Pattern:** [specific problem] + [specific context] + [geography]
+- "POS system for pharmacy with multiple branches Uganda"
+- "ERP implementation mistakes small business East Africa"
+- "how to choose website developer for law firm Kampala"
+
+**Why they work for new sites:** Low competition because high-DA sites target broader terms. Conversion intent is high because the searcher knows exactly what they want.
+
+### 2. Comparison Keywords
+
+"[Competitor/Product A] vs [Product B]" and "[Product] alternatives" queries. These rank fast and attract buyers in research mode.
+
+**Pattern:** [known product] + "vs" / "alternative" / "comparison"
+- "Odoo vs ERPNext for small business Africa"
+- "WordPress vs custom website for law firm"
+- "QuickBooks alternative for Uganda business"
+
+**Why they work for new sites:** Few established sites create head-to-head comparisons for niche products. The content is immediately useful, so it earns engagement signals fast.
+
+### 3. Problem-First Keywords
+
+Informational queries that build topical authority. They don't convert directly but make your site a recognised authority on the topic cluster.
+
+**Pattern:** "why" / "how to fix" / "common mistakes" + [topic]
+- "why most small business websites fail in Africa"
+- "common ERP implementation mistakes"
+- "how to reduce website bounce rate"
+
+**Why they work for new sites:** They build topical authority through internal linking. Google and AI platforms recognise sites that cover a topic comprehensively, not just transactionally.
+
+### Quick-Win Keyword Scoring
+
+Before targeting a keyword, score it:
+
+| Factor | Score 1 (Skip) | Score 3 (Good) | Score 5 (Quick Win) |
+|--------|---------------|----------------|---------------------|
+| **Competition** | Page 1 full of DA 70+ sites | Mix of DA 30-60 sites | Forums, thin content, or no exact-match results |
+| **Intent match** | Vaguely related to services | Related to services | Directly describes what client offers |
+| **Content gap** | Many comprehensive articles exist | Articles exist but are generic | No thorough article on this specific topic |
+| **AI citation potential** | No question format | Could be reformulated as Q&A | Natural FAQ/comparison format |
+
+**Target keywords scoring 12+ out of 20.** Anything below 8 is too competitive for a new site.
+
+### Topical Cluster Strategy for New Sites
+
+Don't scatter across unrelated keywords. Build **depth in one topic** before expanding.
+
+```
+Pillar: "Website Design for Small Businesses in Uganda"
+  ├── "How much does a website cost in Uganda" (informational)
+  ├── "WordPress vs custom website for small business" (comparison)
+  ├── "5 mistakes to avoid when hiring a web developer" (problem-first)
+  ├── "Website maintenance costs breakdown Uganda" (long-tail)
+  └── "Portfolio: websites we built for Uganda businesses" (commercial)
+```
+
+**Internal linking rule:** Every article in the cluster links to the pillar page AND to 2–3 siblings. This builds topical authority faster than isolated articles.
+
+---
+
 ## Keyword Research Audit Checklist
 
 - [ ] Primary keyword identified for every page
