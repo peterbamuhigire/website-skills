@@ -121,14 +121,65 @@ Before finalizing palette, reference `references/industry-color-psychology.md` f
 - **Education** — welcoming blues/greens, accessible contrast
 - **Food/Hospitality** — appetite-stimulating warm tones, welcoming accents
 
+## Modern Colour Space: OKLCH
+
+**Prefer OKLCH over HSL** for perceptually uniform colour manipulation. OKLCH ensures that colours with the same lightness value actually *look* equally light — HSL does not (HSL yellow at 50% looks much brighter than HSL blue at 50%).
+
+```css
+/* OKLCH: oklch(lightness chroma hue) */
+--color-primary: oklch(0.55 0.25 250);    /* Perceptually accurate blue */
+--color-primary-light: oklch(0.75 0.15 250); /* Same hue, lighter */
+--color-primary-dark: oklch(0.35 0.30 250);  /* Same hue, darker */
+```
+
+**When to use:** Generating shade scales, adjusting lightness for hover/active states, creating tinted neutrals, and ensuring dark mode colour consistency.
+
+**Fallback:** Pre-compute hex values from OKLCH for use in Tailwind config and CSS custom properties. OKLCH is for *design decisions*, hex is for *shipping code* (until browser support is universal).
+
+## Tinted Neutrals — Never Pure Gray
+
+**Never use pure gray** (`#808080`, `hsl(0, 0%, 50%)`). Pure grays look cold, lifeless, and disconnected from the brand. Always tint neutrals with a subtle hint of the primary brand colour.
+
+**Rule:** Add **0.005–0.01 chroma** in OKLCH (or 3–8% saturation in HSL) using the primary colour's hue angle.
+
+```css
+/* BAD: pure grays */
+--neutral-100: #f5f5f5;
+--neutral-500: #737373;
+--neutral-900: #171717;
+
+/* GOOD: warm-tinted neutrals (for a warm brand) */
+--neutral-100: oklch(0.96 0.005 60);   /* Barely warm off-white */
+--neutral-500: oklch(0.55 0.008 60);   /* Subtly warm mid-gray */
+--neutral-900: oklch(0.15 0.010 60);   /* Deep warm near-black */
+
+/* GOOD: cool-tinted neutrals (for a cool brand) */
+--neutral-100: oklch(0.96 0.005 240);  /* Barely cool off-white */
+--neutral-500: oklch(0.55 0.008 240);  /* Subtly cool mid-gray */
+--neutral-900: oklch(0.15 0.010 240);  /* Deep cool near-black */
+```
+
+**Never use pure black** (`#000000`) for text — use `oklch(0.15 0.01 hue)` or equivalent tinted near-black. Pure black on white creates harsh contrast that causes eye fatigue.
+
+## Dark Mode Colour Rules
+
+When generating dark mode palettes:
+
+- **Desaturate accent colours** — bright saturated colours on dark backgrounds cause glare; reduce chroma by 15–25%
+- **Different shadow approach** — dark mode shadows are darker (near-black with low opacity), not the same shadow lightened
+- **Surface hierarchy flips** — lighter surfaces = higher elevation (opposite of light mode)
+- **Background tints** — use very low chroma tinted darks, not pure `#000` or `#111`
+- **Test contrast in both modes** — a colour pair that passes WCAG AA in light mode may fail in dark mode
+
 ## Common Mistakes to Avoid
 
 ❌ **Too many colors** — Use no more than 7 token colors; limit primary palette to 3
 ❌ **Insufficient contrast** — Always test; low contrast fails accessibility and looks cheap
 ❌ **Color psychology mismatch** — Red for healthcare trust, blue for energy drinks, etc.
 ❌ **Saturated text** — Never use pure saturated colors for body text; use neutral grays
+❌ **Pure grays and pure black** — Always tint neutrals with brand hue (see Tinted Neutrals above)
 ❌ **Ignoring cultural context** — White = pure in West, mourning in Asia; red = luck in China, alert in US
-❌ **No dark mode consideration** — Provide both light and dark palette variants
+❌ **No dark mode consideration** — Provide both light and dark palette variants with desaturated accents
 ❌ **Trend-only selection** — Balance 2026 trends with timeless choices for primary colors
 
 ## Testing Your Palette

@@ -22,6 +22,19 @@ Every view in a website has up to **5 possible states**. Designing only the "hap
 
 ---
 
+## LOADING STATE PREFERENCE HIERARCHY
+
+When choosing how to handle loading, follow this order — prefer the first option that applies:
+
+1. **Optimistic updates** — show the result immediately, sync in background (best for form submissions, toggles, likes). If the server rejects, revert with an error toast
+2. **Skeleton screens** — show content shapes before data loads (best for lists, cards, pages). Reduces perceived wait by 30-40%
+3. **Inline spinners** — show on the specific element loading (best for button actions, single-field updates)
+4. **Full-page spinner** — last resort; only when the entire page depends on a single API call with no layout to skeleton
+
+**Never:** Show a blank white screen while loading. Always show *something* — even a progress bar.
+
+---
+
 ## 1. LOADING STATES
 
 ### When to Show What

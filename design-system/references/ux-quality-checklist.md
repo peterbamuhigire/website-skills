@@ -6,6 +6,45 @@ Sources: Benjamin Franz, "Usability and User Experience Design" (2025); Anthony 
 
 ---
 
+## 0. The Squint Test (Quick Visual Hierarchy Check)
+
+The fastest way to verify visual hierarchy works. Takes 5 seconds.
+
+**How to perform:**
+1. Pull up the page at desktop width
+2. Squint your eyes (or blur your vision) until you can't read any text
+3. Observe: what elements are still visible? What jumps out first?
+
+**What you should see:**
+- The **headline** is the most prominent element
+- The **primary CTA** is clearly visible as a distinct block of colour
+- **Sections** are visually grouped — you can tell where one ends and another begins
+- **Navigation** is visible but not competing with content
+- The **visual hierarchy** has 3–4 clear levels, not a flat wall of sameness
+
+**What means it fails:**
+- Everything looks the same weight/size — no hierarchy
+- Multiple elements compete for attention at the same level
+- The CTA blends into the surroundings
+- You can't distinguish sections from each other
+- Decorative elements are more prominent than content
+
+**Fix pattern:** Increase contrast between hierarchy levels. Make headings bolder/larger, reduce visual weight of secondary elements, ensure the CTA is the only accent-coloured element in its viewport.
+
+---
+
+## 0.5. The AI Slop Check
+
+Run the 5-point AI Slop Audit from `design-system/references/ai-slop-prevention.md`. This catches AI-generated aesthetic clichés before they ship:
+
+- [ ] **Screenshot test** — doesn't look "AI-generated" or "template-like"
+- [ ] **Palette test** — colours feel brand-specific, not generic blue-purple
+- [ ] **Layout test** — has surprising/asymmetric elements, not all centred cards
+- [ ] **Copy test** — text is client-specific, not interchangeable with other sites
+- [ ] **Personality test** — recognisable without the logo
+
+---
+
 ## 1. The Design Grid Check
 
 A structural quality test that measures visual alignment and consistency. Fewer grid lines = calmer, more professional layout.
@@ -170,3 +209,20 @@ Run in order. Each check builds on the previous.
 - [ ] Privacy policy and terms accessible from every page
 - [ ] Real company/team information (not generic stock content)
 - [ ] OG image set for every page (no fallback defaults)
+
+### Polish Quality (Final Pass)
+- [ ] **Squint test passes** — visual hierarchy clear with blurred vision at all breakpoints
+- [ ] **AI slop check passes** — 5-point audit from `ai-slop-prevention.md`
+- [ ] **Pixel alignment** — no elements off-grid at any breakpoint; deliberate breaks only
+- [ ] **Typography consistency** — same heading levels look identical across all pages
+- [ ] **Tinted neutrals** — no pure gray or pure black; all neutrals have brand hue tint
+- [ ] **Interaction states complete** — all 8 states designed for every interactive element (see `component-design-rules.md`)
+- [ ] **Microcopy quality** — error messages, empty states, buttons follow `ux-writing-patterns.md`
+- [ ] **Motion consistency** — all animations use motion tokens, not hard-coded values (see `motion-design.md`)
+- [ ] **No banned easing** — no bounce, elastic, or linear on UI transitions
+- [ ] **Edge case hardening** — text overflow, i18n expansion, image fallbacks all handled (see `design-hardening.md`)
+- [ ] **Widows/orphans** — no single words on a line at the end of headings or short paragraphs
+- [ ] **Icon consistency** — all icons same style (outline OR filled), same weight, same size per context
+- [ ] **Loading states designed** — skeleton/spinner for every data-dependent section
+- [ ] **Empty states designed** — helpful guidance for every section that could be empty
+- [ ] **Container query test** — components work in different width containers (sidebar vs full-width)

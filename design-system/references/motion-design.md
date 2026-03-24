@@ -365,3 +365,64 @@ if (!prefersReducedMotion) {
 | Loading animations > 1s without progress | Users think it's broken | Show skeleton or determinate progress |
 | Animations that block interaction | User must wait to click/type | Allow interaction during animation |
 | Spring animations on every element | Feels chaotic and toy-like | Reserve spring for 1–2 emphasis moments per page |
+| **Bounce easing** (`ease-bounce`) | Dated, tacky — a 2015 trend that screams "template" | Use `ease-out-quart` or `ease-out-expo` for emphasis |
+| **Elastic easing** (`ease-elastic`) | Toy-like, distracting — undermines professional tone | Use spring (`cubic-bezier(0.16, 1, 0.3, 1)`) for subtle overshoot |
+
+---
+
+## PERCEIVED PERFORMANCE
+
+Animation isn't just about movement — it shapes how fast the interface *feels*.
+
+### The 80ms Threshold
+- Actions that complete within **80ms feel instant** — no animation needed
+- Between 80ms–300ms: a subtle transition confirms the action happened
+- Above 300ms: the user is consciously waiting — provide visual feedback
+
+### Active vs Passive Waiting
+- **Active waiting** (user sees progress): feels 40% shorter than actual time
+- **Passive waiting** (blank screen): feels 40% longer than actual time
+- Always prefer skeleton screens over empty loading states — they make waits feel active
+
+### Easing Psychology
+- **Ease-out** (fast start, slow end): feels responsive — "the interface is eager to help"
+- **Ease-in** (slow start, fast end): feels sluggish — only use for elements leaving
+- **Linear**: feels robotic and mechanical — only for progress bars and spinners
+- **Ease-out-expo** (`cubic-bezier(0.16, 1, 0.3, 1)`): feels premium and intentional — best for emphasis
+
+### Recommended Easing Curves
+
+| Curve | CSS | Best For |
+|-------|-----|----------|
+| `ease-out-quart` | `cubic-bezier(0.25, 1, 0.5, 1)` | Standard UI transitions (enter, expand) |
+| `ease-out-quint` | `cubic-bezier(0.22, 1, 0.36, 1)` | Smooth entrances, slide-ins |
+| `ease-out-expo` | `cubic-bezier(0.16, 1, 0.3, 1)` | Emphasis, hero reveals, spring-like feel |
+| `ease-in-quart` | `cubic-bezier(0.5, 0, 0.75, 0)` | Elements leaving (close, collapse) |
+
+**Banned curves:** `bounce`, `elastic`, `back` (overshoot) on general UI. These feel dated and amateurish in 2026. The subtle overshoot of `ease-out-expo` achieves the same energy without the cartoon feel.
+
+---
+
+## MOTION TOKEN NAMING
+
+Use semantic names for motion values in your design tokens, not raw numbers:
+
+```css
+:root {
+  /* Durations */
+  --duration-instant: 0ms;
+  --duration-micro: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-emphasis: 600ms;
+
+  /* Easings */
+  --ease-default: cubic-bezier(0.25, 1, 0.5, 1);      /* ease-out-quart */
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);      /* ease-out-expo */
+  --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);        /* ease-out-quint */
+  --ease-exit: cubic-bezier(0.5, 0, 0.75, 0);          /* ease-in-quart */
+}
+```
+
+**Rule:** Reference tokens in all animations — never hard-code `300ms ease-in-out` directly. Tokens ensure consistency and make timing adjustments project-wide.

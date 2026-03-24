@@ -472,6 +472,15 @@ Before starting design decisions, review these references:
 - Expert review against ISO 9241-110 interaction principles
 - Complete pre-launch UX checklist (visual + content + interaction + performance + trust)
 
+**`design-system/references/ai-slop-prevention.md`** — AI-generated aesthetics detection gate:
+- Visual anti-patterns (cyan-on-dark, purple gradients, glassmorphism overuse, neon accents, hero metrics layout)
+- Typography anti-patterns (system font defaults, monospace laziness, overly close sizes)
+- Layout anti-patterns (card grids everywhere, nested cards, everything centred, uniform spacing)
+- Copy anti-patterns (redundant info, buzzword density, symmetrical bullets, clichéd loading text)
+- 5-point AI Slop Audit (screenshot, palette, layout, copy, personality tests)
+
+**Run the AI slop check during design-system setup AND after page-builder completes.**
+
 **Run the UX quality checklist after completing the design system and before page-builder starts.**
 
 This skill applies those universal principles to your specific sector/brand.

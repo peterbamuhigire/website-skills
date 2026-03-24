@@ -303,3 +303,96 @@ Before shipping any page, verify at all three primary breakpoints (375px, 768px,
 - [ ] **Landscape tested** — layouts work when phone is rotated
 - [ ] **`prefers-reduced-motion`** — animations disabled when user prefers
 - [ ] **Print stylesheet** — page prints cleanly (hide nav, expand columns)
+
+---
+
+## CONTAINER QUERIES
+
+Container queries enable **component-level responsiveness** — a card adapts based on its container's width, not the viewport. Use when a component appears in different layout contexts (sidebar vs main content vs full-width).
+
+### When to Use
+- **Media queries** — page-level layout changes (nav collapse, column count)
+- **Container queries** — component-level adaptation (card layout, text truncation)
+
+### Setup
+```css
+/* Define a containment context */
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+/* Respond to container width */
+@container card (min-width: 400px) {
+  .card { flex-direction: row; }
+  .card-image { width: 40%; }
+}
+
+@container card (max-width: 399px) {
+  .card { flex-direction: column; }
+  .card-image { width: 100%; }
+}
+```
+
+### Tailwind v4 Pattern
+```html
+<div class="@container">
+  <div class="flex flex-col @md:flex-row">
+    <img class="w-full @md:w-2/5" />
+    <div class="p-4"><!-- content --></div>
+  </div>
+</div>
+```
+
+**Browser support:** Safari 16+, Chrome 105+, Firefox 110+. For Safari 15 fallback, use media queries — the component will still work, just adapt at viewport level instead of container level.
+
+---
+
+## POINTER & HOVER MEDIA QUERIES
+
+Detect the user's **input method** — not their screen size. A tablet with a keyboard+mouse behaves differently from the same tablet with touch.
+
+```css
+/* Touch device — no hover capability */
+@media (hover: none) and (pointer: coarse) {
+  .tooltip-trigger:hover .tooltip { display: none; } /* Don't show on touch */
+  .card { /* No hover effects — they flash on tap */ }
+}
+
+/* Mouse/trackpad — precise pointer with hover */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-4px); }
+  .link:hover { text-decoration-color: transparent; }
+}
+```
+
+### Tailwind Pattern
+```html
+<!-- Hover effects only for devices that support hover -->
+<div class="transition-transform hover:[@media(hover:hover)]:translate-y-[-4px]">
+```
+
+**Rules:**
+- Never assume screen size = input method (iPad with Magic Keyboard has `pointer: fine`)
+- Hover effects are **enhancements**, not requirements — everything must work without hover
+- Touch targets: 44×44px minimum regardless of pointer type (see `touch-interactions.md`)
+
+---
+
+## CONTENT-DRIVEN BREAKPOINTS
+
+**Don't break at device sizes — break where the content breaks.** The standard breakpoints (640, 768, 1024, 1280px) are starting points, but your content may need custom breakpoints.
+
+**Process:**
+1. Start at 320px width
+2. Slowly widen the browser
+3. When the layout starts looking stretched, cramped, or broken — that's your breakpoint
+4. Use the standard breakpoint nearest to that width
+
+**Common content-driven breaks:**
+- Text line length exceeds 75 characters → constrain with `max-width: 65ch`
+- Sidebar content stacks awkwardly → switch from sidebar to stacked at the content's natural break
+- Card grid has too much whitespace → add a column
+- Navigation items wrap to two lines → switch to hamburger
+
+**Rule:** Intrinsic layouts (`auto-fit`, `flex-wrap`, container queries) reduce the need for explicit breakpoints. Use them first; add `@media` queries only when intrinsic methods aren't enough.
