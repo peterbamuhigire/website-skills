@@ -243,6 +243,55 @@ Based on analysis of 40,000 AI responses:
 | News and current events | High (time-sensitive) |
 | Academic/research content | High (technical) |
 
+## The AI-Citable Article Template
+
+This structure consistently earns AI citations across ChatGPT, Perplexity, Claude, and Gemini. Based on real-world testing: 387 AI citations from ~20 articles in 60 days.
+
+### Structure (Every Article)
+
+1. **H1** — exact match or close variant of target keyword
+2. **Intro** — 150 words max. State the problem, promise the answer. No throat-clearing
+3. **H2 sections** — each one answers a sub-question a human would actually ask. Use natural question phrasing ("How does X work?" not "X Overview")
+4. **Comparison table** — if applicable. AI tools love structured, extractable data (see below)
+5. **FAQ section** — minimum 5 questions with FAQPage schema. This alone drives the majority of AI citations
+6. **Conclusion** — clear CTA, but soft. Answer density matters more than selling
+
+**Article length:** 2,000–2,500 words. Google and AI platforms reward **coverage**, not length. Padding dilutes citation density.
+
+**Answer density rule:** Every H2 section should open with a **direct 1–2 sentence answer** before expanding into detail. AI platforms extract from the first paragraph under each heading.
+
+### Comparison Tables for AI Extraction
+
+AI platforms preferentially extract and cite structured comparison data. A comparison table is more likely to be cited than the same information in prose.
+
+**HTML table format** (preferred over markdown in production):
+```html
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Option A</th><th>Option B</th><th>Option C</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Price</td><td>$49/mo</td><td>$99/mo</td><td>$199/mo</td></tr>
+    <tr><td>Users</td><td>5</td><td>25</td><td>Unlimited</td></tr>
+  </tbody>
+</table>
+```
+
+**When to include comparison tables:**
+- "[X] vs [Y]" articles — always
+- "Best [category]" roundups — always
+- Feature explanations with multiple options — when 3+ items compared
+- Pricing and plan comparisons — always
+
+**Table rules for AI citability:**
+- Clear column headers describing each option
+- Rows that answer one specific dimension per row
+- Consistent data types per column (all prices, all yes/no, all numbers)
+- No merged cells or nested tables — AI parsers struggle with complexity
+- Include a summary row or "Best for" row at the bottom
+
+**Schema support:** No dedicated Table schema exists, but wrapping comparison content in an Article with `about` and `mentions` properties helps AI platforms understand context.
+
 ## Multimodal Content Optimization
 
 AI models increasingly consume content beyond text:

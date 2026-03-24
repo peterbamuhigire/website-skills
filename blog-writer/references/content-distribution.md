@@ -189,6 +189,58 @@ Every blog post has a potential YouTube companion. The two formats reinforce eac
 
 ---
 
+## High-DA Platform Syndication (Authority Borrowing)
+
+New domains have zero authority. Google and AI platforms don't trust you yet. Syndication on high-DA platforms lets you **borrow authority** while your domain matures.
+
+### Strategy: Republish with Canonical URLs
+
+For every article published on your blog, create an **adapted version** for 2–3 high-DA platforms. Each version links back to your site with a `rel="canonical"` tag, telling Google the original lives on your domain. Backlinks stack. Authority transfers.
+
+### Platform Selection by Audience
+
+| Platform | DA | Best For | Tone Adaptation |
+|----------|-----|---------|-----------------|
+| **Medium** | ~95 | Business, marketing, general audiences | Conversational, story-driven |
+| **Dev.to** | ~85 | Technical audiences, developers | Technical, code-heavy, practical |
+| **Hashnode** | ~80 | Developer community, SaaS founders | Technical blog style, personal |
+| **LinkedIn Articles** | ~98 | B2B, professional services, consulting | Professional, industry-focused |
+| **Indie Hackers** | ~70 | Founders, bootstrappers, SaaS builders | Transparent, metrics-sharing |
+| **Hacker News** | ~90 | Tech/startup community | Factual, no self-promotion |
+
+### Canonical URL Implementation
+
+When republishing on platforms that support it (Medium, Dev.to, Hashnode):
+
+1. **Set the canonical URL** to point to your original blog post
+2. Medium: Settings → Advanced → "Originally published at" field
+3. Dev.to: Front matter `canonical_url: https://yoursite.com/blog/article-slug`
+4. Hashnode: Article settings → "Are you republishing?" → paste original URL
+
+**This tells Google:** The original content lives on your domain. The syndicated version is a copy. Link equity flows to your site, not the platform.
+
+### Adaptation Rules (NOT Copy-Paste)
+
+- **Adapt the intro** to match the platform's community expectations
+- **Remove hard CTAs** — platforms penalise overt self-promotion
+- **Add platform-specific context** (e.g., "As an East African tech founder..." on Indie Hackers)
+- **Keep the core content identical** — the canonical tag handles duplicate content concerns
+- **Post 24–48 hours after your blog** — let Google index your version first
+
+### Cadence
+
+- Blog: 2 articles/week (or per your content calendar)
+- Syndication: 1 platform adaptation per day, rotating across platforms
+- Don't syndicate to every platform — pick 2–3 that match your audience
+
+### What NOT to Syndicate
+
+- Sales pages or service descriptions (platforms will reject or bury these)
+- Very short posts (under 800 words — they underperform on platforms)
+- Content that relies heavily on your site's context (navigation, internal links)
+
+---
+
 ## Guest Posting Strategy
 
 Guest posting builds both traffic and backlinks simultaneously — it is the most efficient content marketing channel for SEO and audience growth combined.

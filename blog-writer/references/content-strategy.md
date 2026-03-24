@@ -277,6 +277,41 @@ A healthy blog rotates between these types:
 
 ---
 
+## Content Freshness and AI Recency Signals
+
+AI search platforms (ChatGPT, Perplexity, Claude, Gemini) factor content freshness into citation decisions. Stale content gets replaced by newer, updated alternatives.
+
+### Update Schedule
+
+| Content Type | Update Frequency | What to Update |
+|-------------|-----------------|----------------|
+| **Pillar articles** | Quarterly | Statistics, examples, new sections, "last updated" date |
+| **Comparison articles** | Every 2 months | Pricing, features, new competitors, verdict |
+| **How-to guides** | Every 6 months | Screenshots, tool versions, process changes |
+| **Cost/pricing articles** | Quarterly | Current pricing, exchange rates, new options |
+| **Thought leadership** | Annually | Add follow-up insights, correct predictions |
+
+### Freshness Signals That Matter
+
+- **`dateModified` in schema** — update the `dateModified` field every time you make substantial edits. AI platforms check this
+- **Visible "Last updated" date** — show it prominently near the title or author byline
+- **Substantial updates** — changing a sentence doesn't count. Add new sections, update data, replace outdated examples
+- **Don't change the URL** — keep the same slug to preserve accumulated backlinks and citations
+
+### Compound Effect of Consistent Publishing
+
+SEO and AI visibility compound over time through a predictable pattern:
+
+- **Week 1–2:** Nothing. Articles indexing. Don't panic
+- **Week 3–4:** First articles appear in search. Impressions tick up
+- **Week 5–6:** Rankings start moving. Some keywords hit page 2
+- **Week 7–8:** Internal linking effect kicks in — articles boost each other
+- **Month 3+:** Compound effect visible. Newer articles rank faster because the domain has authority from older articles
+
+**Critical rule:** A steady 2 articles/week beats 10 articles in one week then silence. Google and AI platforms reward publishing consistency.
+
+---
+
 ## Reader as Customer: Touchpoint Thinking (from Webb)
 
 ### Five Touchpoints of an Article
