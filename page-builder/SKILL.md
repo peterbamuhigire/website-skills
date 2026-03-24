@@ -23,6 +23,10 @@ Before writing ANY page copy, read **`references/website-copywriting.md`** for c
 
 **`references/advanced-navigation.md`** — hamburger debate (desktop: never), mobile off-canvas menu (Alpine.js + focus trap), accordion sub-menus, megamenu pattern, sticky hide-on-scroll-down nav, search integration, breadcrumbs, footer architecture (3-5 columns), and active state wayfinding.
 
+**`references/ux-writing-patterns.md`** — microcopy patterns for every UI state: error messages (3-requirement rule applied per context), empty state copy (per feature type), loading text (verb matching), success toasts, form labels, button/CTA copy table, confirmation dialog structure, navigation labels, help text/tooltips, and voice/tone scale by user emotion.
+
+**`references/design-hardening.md`** — edge case resilience: text overflow strategies (truncate, clamp, break), i18n text expansion rules (French +30%, Kiswahili +20%), image fallbacks, empty section handling, network degradation (3G performance budget), browser compatibility matrix, form resilience, accessibility resilience (high contrast, zoom, screen reader order), and print stylesheet. Run hardening checklist before deploy.
+
 **Persuasion & conversion references** (from `sales-copywriting` skill):
 - `sales-copywriting/references/headline-mastery.md` — Read for ALL headlines (10 formulas + 4 U's scoring)
 - `sales-copywriting/references/fascination-bullets.md` — Read when writing bullet points that need to persuade

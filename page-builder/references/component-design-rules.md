@@ -10,6 +10,56 @@ Apply these rules when building each component. These are specific, measurable r
 
 ---
 
+## THE 8 INTERACTIVE STATES
+
+Every interactive element (button, link, card, form field, nav item) must design for **8 states**. Missing states signal unfinished work.
+
+| State | Visual Signal | When |
+|-------|--------------|------|
+| **Default** | Base appearance | Element at rest |
+| **Hover** | Colour shift, lift, or underline change | Mouse over (desktop only — use `@media (hover: hover)`) |
+| **Focus** | 2-3px outline via `:focus-visible` | Keyboard navigation (NOT mouse click) |
+| **Active** | Press-down effect (scale 0.98 or translateY) | During click/tap |
+| **Disabled** | 50% opacity, `cursor: not-allowed` | Element not available |
+| **Loading** | Inline spinner, disabled interaction | Action in progress |
+| **Error** | Red border + icon + message | Validation failed |
+| **Success** | Green border + checkmark | Action completed |
+
+**Rules:**
+- Not every element needs all 8 — buttons need all 8; links need 4 (default, hover, focus, active); static cards need 2 (default, hover)
+- Use `:focus-visible` (NOT `:focus`) — keyboard users get focus rings, mouse users don't
+- Focus ring: `outline: 2px solid var(--color-accent); outline-offset: 2px;` — appears **instantly** (no transition)
+- Disabled elements: never remove from DOM; use `aria-disabled="true"` + visual dimming
+- Loading state: replace button text with spinner + "Sending..." — disable the button to prevent double-submit
+
+### Native HTML Elements to Prefer
+
+**`<dialog>` for modals** — handles focus trapping, `Escape` to close, and backdrop natively:
+```html
+<dialog id="confirm-dialog">
+  <h2>Confirm action</h2>
+  <p>This cannot be undone.</p>
+  <button onclick="this.closest('dialog').close()">Cancel</button>
+  <button onclick="confirmAction()">Confirm</button>
+</dialog>
+```
+
+**`inert` attribute** — disables all interaction on background content when modal is open:
+```html
+<main inert><!-- Background content frozen --></main>
+<dialog open><!-- Active modal --></dialog>
+```
+
+**`<details>/<summary>` for accordions** — no JavaScript needed:
+```html
+<details>
+  <summary>Frequently asked question?</summary>
+  <p>The answer content, hidden until clicked.</p>
+</details>
+```
+
+---
+
 ## NAVBARS
 
 - Border-radius: minimum **8px** — sharp-edged navbars feel unwelcoming
