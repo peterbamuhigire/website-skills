@@ -95,15 +95,58 @@ This covers 75–90% of African visitors (Francophone and Anglophone Africa). No
 
 Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The `.htaccess` should skip the root and let the HTML page handle it.
 
-### Zero-Flash Redirect (MANDATORY)
+### Zero-Flash Redirect (MANDATORY — Hard Rule)
 
 The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any visible redirect artefact when landing on the root URL. The redirect must be instant and invisible:
 
-- **Never use `Astro.redirect()`** for the root page — it renders visible "Redirecting to..." text in dev mode and generates a slow meta refresh in static builds
-- The inline `<script>` above uses `window.location.replace()` which is instant — no flash
-- The `<noscript>` fallback uses `content="0"` (zero-second delay) — no flash
-- The `<body>` of the root page must be empty (or contain only the `<noscript>` tag) — nothing visible to render
-- **Test this**: visit the root URL and confirm no text, no flicker, no intermediate state is visible before the language page loads
+| ❌ Don't use | ✅ Use instead | Why |
+|---|---|---|
+| `Astro.redirect('/en/')` | `<script is:inline>` | Shows "Redirecting to /en" text; generates slow meta-refresh |
+| `<meta http-equiv="refresh">` as primary | `window.location.replace()` | Perceptible delay; visible in status bar |
+| Any body content on root page | Empty `<body>` + `<noscript>` only | Content flashes before redirect fires |
+| `window.location.href = ...` | `window.location.replace(...)` | `replace()` doesn't break the back button |
+
+- **`is:inline`** tells Astro to emit the script exactly as written — no bundling, no defer, no async; it runs before the browser paints anything
+- **`<noscript>` fallback**: the `content="0"` meta refresh fires only when JavaScript is disabled — it is never the primary mechanism
+- **Test**: open the root URL in an incognito window and confirm zero flicker, zero text, zero intermediate state before the language page loads
+
+### French Browser Detection (Required)
+
+`navigator.language` returns a BCP-47 tag. French speakers across Francophone Africa use many locale variants — `fr`, `fr-FR`, `fr-BE`, `fr-CD`, `fr-CI`, `fr-CM`, `fr-SN`, `fr-RW`, and more. Using `startsWith('fr')` catches every variant in a single check, so DRC, Côte d'Ivoire, Cameroon, Senegal, and Rwanda visitors are all served the French site automatically with no user action required.
+
+**Canonical `src/pages/index.astro` template** — copy this verbatim into any EN+FR Astro project:
+
+```astro
+---
+// src/pages/index.astro
+// Root redirect — detects browser language, sends to /fr/ or /en/
+// No body content: prevents any flash before redirect fires
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <script is:inline>
+      (function () {
+        var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        // startsWith('fr') catches fr, fr-FR, fr-BE, fr-CD, fr-CI, fr-CM, fr-SN, fr-RW …
+        var dest = lang.startsWith('fr') ? '/fr/' : '/en/';
+        window.location.replace(dest);
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=/en/" />
+    </noscript>
+  </head>
+  <body></body>
+</html>
+```
+
+Key points:
+- `<body>` is intentionally empty — nothing to render, nothing to flash
+- `noindex` prevents search engines from indexing the redirect page itself
+- The IIFE (`(function(){…})()`) runs synchronously before first paint
+- `window.location.replace()` is used (not `href =`) so the back button works correctly
 
 ## URL Structure
 - Root domain (/) → browser language detection → /en/ or /fr/
