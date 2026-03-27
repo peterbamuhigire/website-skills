@@ -328,6 +328,68 @@ const getLanguagePath = (lang: Language) => {
 - Smooth hover transitions for interactivity
 - Maintains language when navigating (e.g., /en/about → /fr/about preserves current page)
 
+### Language Switcher Linking Rules
+
+**Critical rule: language switchers must never blindly swap the language prefix.**
+
+Blindly replacing `/en/` with `/fr/` in the URL will produce a 404 whenever the page slug differs between languages (e.g. `/en/blog/east-african-websites-need-french-version/` ≠ `/fr/blog/sites-web-africains-version-anglaise/`). This is a broken experience.
+
+**The rule:**
+
+Every language switcher link must resolve to one of these — in order of preference:
+
+1. **Exact known equivalent URL** — explicitly provided by the page author via an `altUrl` prop on `BaseLayout`.
+2. **SlugMap lookup** — for pages with known different slugs (stored in a `slugMap` in `BaseLayout`/`Header`), translate the current slug to the correct alternate-language slug.
+3. **Same path, swapped prefix** — only when the page slug is identical in both languages (e.g. `/en/about/` → `/fr/about/`).
+4. **Alternate-language home** — fall back to `/{altLang}/` when none of the above resolves safely (e.g. unknown dynamic routes, external links, 404 scenarios).
+
+**Implementation pattern (BaseLayout.astro):**
+
+```astro
+interface Props {
+  lang: Lang;
+  altUrl?: string;  // Explicit cross-language URL — use for blog posts and any page with different slugs
+  // ... other props
+}
+
+const { lang, altUrl: altUrlProp } = Astro.props;
+const altLang = lang === 'en' ? 'fr' : 'en';
+const currentPath = Astro.url.pathname.replace(`/${lang}`, '');
+const slugMap: Record<string, string> = {
+  'digital-marketing-strategy': 'strategie-marketing-digital',
+  // ... add all pages with different slugs per language
+};
+const currentSlug = currentPath.replace(/^\//, '').replace(/\/$/, '');
+// Rule: explicit altUrl > slugMap > same-path swap > fallback home
+const altUrl = altUrlProp
+  ?? (slugMap[currentSlug] ? `/${altLang}/${slugMap[currentSlug]}/` : `/${altLang}${currentPath || '/'}`);
+```
+
+**Usage on pages with different slugs per language:**
+
+```astro
+// EN page
+<BaseLayout lang="en" altUrl="/fr/blog/slug-in-french/" ...>
+
+// FR page
+<BaseLayout lang="fr" altUrl="/en/blog/slug-in-english/" ...>
+```
+
+**Forward `altUrl` from BaseLayout to Header:**
+
+```astro
+// BaseLayout passes resolved altUrl to Header
+<Header lang={lang} altUrl={altUrl} />
+
+// Header.astro accepts it and uses it directly instead of recomputing
+interface Props {
+  lang: Lang;
+  altUrl: string;  // always resolved by BaseLayout — never recompute in Header
+}
+```
+
+**Every blog article MUST set `altUrl`.** Blog slugs almost always differ between languages. If the translated article has not been published yet, set `altUrl="/{altLang}/"` to point to the home page rather than a 404.
+
 ## SEO Implementation for Multi-Language
 
 ### Hreflang Tags
