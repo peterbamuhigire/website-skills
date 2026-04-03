@@ -49,7 +49,11 @@ The user provides:
 
 1. **Article title** (or topic idea)
 2. **Brief summary** (2-5 sentences describing what the article should cover)
-3. **Photos** uploaded to `photo-bank/` (at least 3: 1 featured/hero + 2 in-article)
+3. **Photos** — the user may provide 1–2 dedicated featured images per blog post in `photo-bank/` for the hero and social media sharing. If 2 are provided, either can serve either purpose (hero or OG image).
+
+### In-Article Photography Rule
+
+**Blog post bodies must use existing processed photos from `src/assets/images/`.** Do not leave blog articles without images in the body. Select relevant photos from the site's existing image pool (already compressed and catalogued in `_catalog.json`) to illustrate points within the article. The user does NOT need to provide in-article photos — use what already exists from the website photo bank. Only the featured image (hero + social sharing) may be a dedicated upload; the body images come from the existing pool.
 
 From this simple prompt, generate the complete article pipeline below.
 
