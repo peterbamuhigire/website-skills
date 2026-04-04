@@ -5,72 +5,46 @@ set -e
 # new-project.sh — Scaffold a new static website project
 # ============================================================
 # Usage:
-#   ./new-project.sh client-name
-#   ./new-project.sh client-name git@github.com:yourorg/client-name.git
+#   1. Copy this file into your project root
+#   2. cd into your project root (git must already be initialised)
+#   3. bash new-project.sh   (or: chmod +x new-project.sh && ./new-project.sh)
+#
+# Prerequisites:
+#   - Git must be initialised in the project directory (git init or git clone)
 #
 # This script:
-#   1. Creates the project directory
-#   2. Initializes git
-#   3. Adds website-skills as a submodule at .claude/skills/
-#   4. Creates multi-language directory structure (en, fr, sw)
-#   5. Copies all content templates from the skills submodule
-#   6. Creates i18n config, SEO template, and photo-bank structure
-#   7. Creates the CLAUDE.md project intelligence file
-#   8. Makes an initial commit
+#   1. Adds website-skills as a submodule at .claude/skills/
+#   2. Creates multi-language directory structure (en, fr, sw)
+#   3. Copies all content templates from the skills submodule
+#   4. Creates i18n config, SEO template, and photo-bank structure
+#   5. Creates the CLAUDE.md project intelligence file
+#   6. Makes an initial commit
 #
 # Windows users: use new-project.ps1 instead
 # ============================================================
 
 SKILLS_REPO="https://github.com/peterbamuhigire/website-skills.git"
 
-# --- Validate input ---
-if [ -z "$1" ]; then
-  echo "Usage: ./new-project.sh <project-name> [remote-repo-url]"
-  echo ""
-  echo "Examples:"
-  echo "  ./new-project.sh acme-corp"
-  echo "  ./new-project.sh acme-corp git@github.com:yourorg/acme-corp.git"
-  exit 1
-fi
-
-PROJECT_NAME="$1"
-REMOTE_URL="$2"
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-# --- Check if directory already exists ---
-if [ -d "$PROJECT_NAME" ]; then
-  echo "Error: Directory '$PROJECT_NAME' already exists."
-  exit 1
-fi
-
 echo ""
 echo "============================================"
-echo "  Creating project: $PROJECT_NAME"
+echo "  Setting up website-skills submodule"
 echo "============================================"
-echo ""
-
-# --- Create project directory ---
-mkdir -p "$PROJECT_NAME"
-cd "$PROJECT_NAME"
-
-# --- Initialize git ---
-echo "[1/8] Initializing git repository..."
-git init -q
 echo ""
 
 # --- Add website-skills as submodule ---
-echo "[2/8] Adding website-skills submodule..."
+echo "[1/7] Adding website-skills submodule..."
 git submodule add -q "$SKILLS_REPO" .claude/skills
 echo "      Submodule added at .claude/skills/"
 echo ""
 
 # --- Create directory structure ---
-echo "[3/8] Creating directory structure..."
+echo "[2/7] Creating directory structure..."
 
 # Multi-language content directories
 mkdir -p docs/en
 mkdir -p docs/fr
 mkdir -p docs/sw
+mkdir -p docs/references
 
 # Photo bank with categorised subdirectories
 mkdir -p photo-bank/branding
@@ -104,12 +78,16 @@ echo "      Created docs/, photo-bank/, src/, public/"
 echo ""
 
 # --- Create .gitignore ---
-echo "[4/8] Creating .gitignore..."
+echo "[3/7] Creating .gitignore..."
 cat > .gitignore << 'EOF'
 # Build output
 node_modules/
 dist/
 .astro/
+
+# Client confidential content — never commit
+docs/
+photo-bank/
 
 # OS files
 .DS_Store
@@ -134,7 +112,7 @@ EOF
 echo ""
 
 # --- Copy content templates to docs/en/ (source language) ---
-echo "[5/8] Copying content templates to docs/en/..."
+echo "[4/7] Copying content templates to docs/en/..."
 SKILLS_DIR=".claude/skills"
 
 # Core templates (required)
@@ -164,7 +142,7 @@ echo "      Copied 11 content templates + i18n config + SEO config"
 echo ""
 
 # --- Create placeholder files for French and Kiswahili ---
-echo "[6/8] Creating French and Kiswahili placeholders..."
+echo "[5/7] Creating French and Kiswahili placeholders..."
 
 cat > docs/fr/README.md << 'EOF'
 # Contenu en Francais
@@ -240,7 +218,7 @@ echo "      Created docs/fr/README.md and docs/sw/README.md"
 echo ""
 
 # --- Create photo-bank README ---
-echo "[7/8] Creating photo-bank guide..."
+echo "[6/7] Creating photo-bank guide..."
 cat > photo-bank/README.md << 'EOF'
 # Photo Bank
 
@@ -307,7 +285,7 @@ EOF
 echo ""
 
 # --- Create CLAUDE.md ---
-echo "[8/8] Creating CLAUDE.md project intelligence file..."
+echo "[7/7] Creating CLAUDE.md project intelligence file..."
 cat > CLAUDE.md << 'CLAUDEEOF'
 # CLAUDE.md — Static Website Project
 
@@ -505,17 +483,11 @@ CLAUDEEOF
 
 echo ""
 
-# --- Add remote if provided ---
-if [ -n "$REMOTE_URL" ]; then
-  git remote add origin "$REMOTE_URL"
-  echo "Remote added: $REMOTE_URL"
-  echo ""
-fi
-
 # --- Initial commit ---
 git add .
-git commit -q -m "Initial project setup with website-skills submodule
+git commit -q -m "Add website-skills submodule and project scaffold
 
+- website-skills submodule at .claude/skills/
 - Multi-language structure (en, fr, sw)
 - Content templates in docs/en/
 - i18n config and SEO config
@@ -524,45 +496,35 @@ git commit -q -m "Initial project setup with website-skills submodule
 
 echo ""
 echo "============================================"
-echo "  Project '$PROJECT_NAME' created!"
+echo "  Setup complete!"
 echo "============================================"
 echo ""
 echo "Directory structure:"
-echo "  $PROJECT_NAME/"
-echo "    .claude/skills/        <- Website build skills (submodule)"
-echo "    docs/"
-echo "      i18n-config.md       <- Language settings"
-echo "      seo.md               <- SEO configuration"
-echo "      en/                  <- English content (11 templates ready)"
-echo "      fr/                  <- French content (translate from en/)"
-echo "      sw/                  <- Kiswahili content (translate from en/)"
-echo "    photo-bank/"
-echo "      branding/            <- Logos and brand marks"
-echo "      hero/                <- Hero/banner images"
-echo "      team/                <- Team headshots"
-echo "      services/            <- Service images"
-echo "      gallery/             <- Portfolio images"
-echo "      about/               <- About page images"
-echo "      testimonials/        <- Client photos"
-echo "      misc/                <- Other images"
-echo "    src/                   <- Generated by Claude Code"
-echo "    public/                <- Static assets (favicon, etc.)"
-echo "    CLAUDE.md              <- Project intelligence for Claude"
+echo "  .claude/skills/        <- Website build skills (submodule)"
+echo "  docs/"
+echo "    i18n-config.md       <- Language settings"
+echo "    seo.md               <- SEO configuration"
+echo "    en/                  <- English content (11 templates ready)"
+echo "    fr/                  <- French content (translate from en/)"
+echo "    sw/                  <- Kiswahili content (translate from en/)"
+echo "  photo-bank/"
+echo "    branding/            <- Logos and brand marks"
+echo "    hero/                <- Hero/banner images"
+echo "    team/                <- Team headshots"
+echo "    services/            <- Service images"
+echo "    gallery/             <- Portfolio images"
+echo "    about/               <- About page images"
+echo "    testimonials/        <- Client photos"
+echo "    misc/                <- Other images"
+echo "  src/                   <- Generated by Claude Code"
+echo "  public/                <- Static assets (favicon, etc.)"
+echo "  CLAUDE.md              <- Project intelligence for Claude"
 echo ""
 echo "Next steps:"
-echo "  1. cd $PROJECT_NAME"
-echo "  2. Edit all files in docs/en/ with client content"
-echo "  3. Drop client photos into photo-bank/ subdirectories"
-echo "  4. Drop logos into photo-bank/branding/"
-echo "  5. Edit docs/i18n-config.md to enable/disable languages"
-echo "  6. Open Claude Code: claude"
-echo "  7. Tell Claude: \"Build this website following the website-builder skill\""
-echo ""
-if [ -n "$REMOTE_URL" ]; then
-  echo "  8. git push -u origin main"
-else
-  echo "  To add a remote later:"
-  echo "    git remote add origin git@github.com:yourorg/$PROJECT_NAME.git"
-  echo "    git push -u origin main"
-fi
+echo "  1. Drop client documents (PDF, DOCX, TXT) into docs/references/"
+echo "  2. Drop client photos into photo-bank/ subdirectories"
+echo "  3. Drop logos (PNG, transparent) into photo-bank/branding/"
+echo "  4. Open Claude Code: claude"
+echo "  5. Use the kickstart prompt: .claude/skills/prompts/new-project-kickstart.md"
+echo "     Fill in the [PROJECT CONFIGURATION] section, then paste the full prompt"
 echo ""
