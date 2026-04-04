@@ -2,29 +2,23 @@
 # new-project.ps1 — Scaffold a new static website project (Windows)
 # ============================================================
 # Usage:
-#   .\new-project.ps1 -ProjectName "client-name"
-#   .\new-project.ps1 -ProjectName "client-name" -RemoteUrl "git@github.com:yourorg/client-name.git"
+#   1. Copy this file into your project root
+#   2. cd into your project root (git must already be initialised)
+#   3. .\new-project.ps1
+#
+# Prerequisites:
+#   - Git must be initialised in the project directory (git init or git clone)
 #
 # This script:
-#   1. Creates the project directory
-#   2. Initializes git
-#   3. Adds website-skills as a submodule at .claude/skills/
-#   4. Creates multi-language directory structure (en, fr, sw)
-#   5. Copies all content templates from the skills submodule
-#   6. Creates i18n config, SEO template, and photo-bank structure
-#   7. Creates the CLAUDE.md project intelligence file
-#   8. Makes an initial commit
+#   1. Adds website-skills as a submodule at .claude/skills/
+#   2. Creates multi-language directory structure (en, fr, sw)
+#   3. Copies all content templates from the skills submodule
+#   4. Creates i18n config, SEO template, and photo-bank structure
+#   5. Creates the CLAUDE.md project intelligence file
+#   6. Makes an initial commit
 #
 # Linux/macOS users: use new-project.sh instead
 # ============================================================
-
-param(
-    [Parameter(Mandatory = $true, Position = 0, HelpMessage = "Name of the project (used as directory name)")]
-    [string]$ProjectName,
-
-    [Parameter(Mandatory = $false, Position = 1, HelpMessage = "Optional git remote URL")]
-    [string]$RemoteUrl = ""
-)
 
 $ErrorActionPreference = "Stop"
 
@@ -37,41 +31,27 @@ if (-not $gitVersion) {
     exit 1
 }
 
-# --- Check if directory already exists ---
-if (Test-Path $ProjectName) {
-    Write-Host "Error: Directory '$ProjectName' already exists." -ForegroundColor Red
-    exit 1
-}
-
 Write-Host ""
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "  Creating project: $ProjectName" -ForegroundColor Cyan
+Write-Host "  Setting up website-skills submodule" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host ""
-
-# --- Create project directory ---
-New-Item -ItemType Directory -Path $ProjectName -Force | Out-Null
-Set-Location $ProjectName
-
-# --- Initialize git ---
-Write-Host "[1/8] Initializing git repository..." -ForegroundColor Yellow
-git init -q
 Write-Host ""
 
 # --- Add website-skills as submodule ---
-Write-Host "[2/8] Adding website-skills submodule..." -ForegroundColor Yellow
+Write-Host "[1/6] Adding website-skills submodule..." -ForegroundColor Yellow
 git submodule add -q $SkillsRepo .claude/skills
 Write-Host "      Submodule added at .claude/skills/"
 Write-Host ""
 
 # --- Create directory structure ---
-Write-Host "[3/8] Creating directory structure..." -ForegroundColor Yellow
+Write-Host "[2/6] Creating directory structure..." -ForegroundColor Yellow
 
 # Multi-language content directories
 $contentDirs = @(
     "docs/en",
     "docs/fr",
-    "docs/sw"
+    "docs/sw",
+    "docs/references"
 )
 
 # Photo bank with categorised subdirectories
@@ -113,12 +93,16 @@ Write-Host "      Created docs/, photo-bank/, src/, public/"
 Write-Host ""
 
 # --- Create .gitignore ---
-Write-Host "[4/8] Creating .gitignore..." -ForegroundColor Yellow
+Write-Host "[3/6] Creating .gitignore..." -ForegroundColor Yellow
 $gitignoreContent = @"
 # Build output
 node_modules/
 dist/
 .astro/
+
+# Client confidential content — never commit
+docs/
+photo-bank/
 
 # OS files
 .DS_Store
@@ -144,7 +128,7 @@ Set-Content -Path ".gitignore" -Value $gitignoreContent -Encoding UTF8
 Write-Host ""
 
 # --- Copy content templates to docs/en/ (source language) ---
-Write-Host "[5/8] Copying content templates to docs/en/..." -ForegroundColor Yellow
+Write-Host "[4/6] Copying content templates to docs/en/..." -ForegroundColor Yellow
 $skillsDir = ".claude/skills"
 
 # Core templates (required)
@@ -174,7 +158,7 @@ Write-Host "      Copied 11 content templates + i18n config + SEO config"
 Write-Host ""
 
 # --- Create placeholder files for French and Kiswahili ---
-Write-Host "[6/8] Creating French and Kiswahili placeholders..." -ForegroundColor Yellow
+Write-Host "[5/6] Creating French and Kiswahili placeholders..." -ForegroundColor Yellow
 
 $frReadme = @"
 # Contenu en Francais
@@ -252,7 +236,7 @@ Write-Host "      Created docs/fr/README.md and docs/sw/README.md"
 Write-Host ""
 
 # --- Create photo-bank README ---
-Write-Host "[7/8] Creating photo-bank guide..." -ForegroundColor Yellow
+Write-Host "      Creating photo-bank guide..." -ForegroundColor Yellow
 
 $photoBankReadme = @"
 # Photo Bank
@@ -322,7 +306,7 @@ Set-Content -Path "photo-bank/branding/README.md" -Value $brandingReadme -Encodi
 Write-Host ""
 
 # --- Create CLAUDE.md ---
-Write-Host "[8/8] Creating CLAUDE.md project intelligence file..." -ForegroundColor Yellow
+Write-Host "[6/6] Creating CLAUDE.md project intelligence file..." -ForegroundColor Yellow
 
 $claudeMd = @"
 # CLAUDE.md - Static Website Project
@@ -522,17 +506,11 @@ Set-Content -Path "CLAUDE.md" -Value $claudeMd -Encoding UTF8
 
 Write-Host ""
 
-# --- Add remote if provided ---
-if ($RemoteUrl -ne "") {
-    git remote add origin $RemoteUrl
-    Write-Host "Remote added: $RemoteUrl" -ForegroundColor Green
-    Write-Host ""
-}
-
 # --- Initial commit ---
 git add .
-git commit -q -m "Initial project setup with website-skills submodule
+git commit -q -m "Add website-skills submodule and project scaffold
 
+- website-skills submodule at .claude/skills/
 - Multi-language structure (en, fr, sw)
 - Content templates in docs/en/
 - i18n config and SEO config
@@ -541,45 +519,35 @@ git commit -q -m "Initial project setup with website-skills submodule
 
 Write-Host ""
 Write-Host "============================================" -ForegroundColor Green
-Write-Host "  Project '$ProjectName' created!" -ForegroundColor Green
+Write-Host "  Setup complete!" -ForegroundColor Green
 Write-Host "============================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Directory structure:" -ForegroundColor Cyan
-Write-Host "  $ProjectName/"
-Write-Host "    .claude/skills/        <- Website build skills (submodule)"
-Write-Host "    docs/"
-Write-Host "      i18n-config.md       <- Language settings"
-Write-Host "      seo.md               <- SEO configuration"
-Write-Host "      en/                  <- English content (11 templates ready)"
-Write-Host "      fr/                  <- French content (translate from en/)"
-Write-Host "      sw/                  <- Kiswahili content (translate from en/)"
-Write-Host "    photo-bank/"
-Write-Host "      branding/            <- Logos and brand marks"
-Write-Host "      hero/                <- Hero/banner images"
-Write-Host "      team/                <- Team headshots"
-Write-Host "      services/            <- Service images"
-Write-Host "      gallery/             <- Portfolio images"
-Write-Host "      about/               <- About page images"
-Write-Host "      testimonials/        <- Client photos"
-Write-Host "      misc/                <- Other images"
-Write-Host "    src/                   <- Generated by Claude Code"
-Write-Host "    public/                <- Static assets (favicon, etc.)"
-Write-Host "    CLAUDE.md              <- Project intelligence for Claude"
+Write-Host "  .claude/skills/        <- Website build skills (submodule)"
+Write-Host "  docs/"
+Write-Host "    i18n-config.md       <- Language settings"
+Write-Host "    seo.md               <- SEO configuration"
+Write-Host "    en/                  <- English content (11 templates ready)"
+Write-Host "    fr/                  <- French content (translate from en/)"
+Write-Host "    sw/                  <- Kiswahili content (translate from en/)"
+Write-Host "  photo-bank/"
+Write-Host "    branding/            <- Logos and brand marks"
+Write-Host "    hero/                <- Hero/banner images"
+Write-Host "    team/                <- Team headshots"
+Write-Host "    services/            <- Service images"
+Write-Host "    gallery/             <- Portfolio images"
+Write-Host "    about/               <- About page images"
+Write-Host "    testimonials/        <- Client photos"
+Write-Host "    misc/                <- Other images"
+Write-Host "  src/                   <- Generated by Claude Code"
+Write-Host "  public/                <- Static assets (favicon, etc.)"
+Write-Host "  CLAUDE.md              <- Project intelligence for Claude"
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Yellow
-Write-Host "  1. cd $ProjectName"
-Write-Host "  2. Edit all files in docs/en/ with client content"
-Write-Host "  3. Drop client photos into photo-bank/ subdirectories"
-Write-Host "  4. Drop logos into photo-bank/branding/"
-Write-Host "  5. Edit docs/i18n-config.md to enable/disable languages"
-Write-Host "  6. Open Claude Code: claude"
-Write-Host "  7. Tell Claude: `"Build this website following the website-builder skill`""
-Write-Host ""
-if ($RemoteUrl -ne "") {
-    Write-Host "  8. git push -u origin main"
-} else {
-    Write-Host "  To add a remote later:"
-    Write-Host "    git remote add origin git@github.com:yourorg/$ProjectName.git"
-    Write-Host "    git push -u origin main"
-}
+Write-Host "  1. Drop client documents (PDF, DOCX, TXT) into docs/references/"
+Write-Host "  2. Drop client photos into photo-bank/ subdirectories"
+Write-Host "  3. Drop logos (PNG, transparent) into photo-bank/branding/"
+Write-Host "  4. Open Claude Code: claude"
+Write-Host "  5. Use the kickstart prompt: .claude/skills/prompts/new-project-kickstart.md"
+Write-Host "     Fill in the [PROJECT CONFIGURATION] section, then paste the full prompt"
 Write-Host ""
