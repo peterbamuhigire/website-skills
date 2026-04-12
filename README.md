@@ -92,7 +92,7 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 
 ### i18n (Multi-Language Infrastructure) — NEW
 
-Establishes complete multi-language support from the start. Every website automatically supports 3 languages: English (en), French (fr), and Kiswahili (sw). Implements path-based URLs (`/en/`, `/fr/`, `/sw/`), generates hreflang tags for SEO, creates language-specific sitemaps, handles text expansion (French ~30% longer, Kiswahili ~20% longer), and orchestrates per-language content builds. Root domain redirects to configured default language. Includes flag-based language switcher (🇬🇧 🇫🇷 🇪🇦) visible on all pages.
+Establishes complete multi-language support from the start. Every website automatically supports 3 languages: English (en), French (fr), and Kiswahili (sw). Implements path-based URLs (`/en/`, `/fr/`, `/sw/`), generates hreflang tags for SEO, creates language-specific sitemaps, handles text expansion (French ~30% longer, Kiswahili ~20% longer), and orchestrates per-language content builds. The root domain (`/`) is served by a lightweight Astro redirect page that detects browser language and sends visitors to the best language version, with default-language fallback when detection does not match. Includes flag-based language switcher (🇬🇧 🇫🇷 🇪🇦) visible on all pages.
 
 **Content Structure:** `docs/{lang}/` with complete independent content per language
 
@@ -146,9 +146,9 @@ Establishes the complete visual identity before any pages are built. Reads `docs
 
 ### photo-manager (Image Pipeline)
 
-Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them to organized `src/assets/images/{category}/` folders, and generates `_catalog.json` — a master registry tracking dimensions, aspect ratios, usage, and replacement notes for every image. **Auto-detects the best logo** from files containing "logo" in the filename (scores by resolution, format, dimensions) and copies it to `src/assets/images/branding/logo.png`. **Recognizes descriptive photo names** (e.g., `Logo-Light-Mode.png`, `Staff-Members.jpg`, `Government-License.jpg`) to automatically categorize and appropriately place photos throughout the site.
+Scans `photo-bank/`, measures every photo's dimensions with ImageMagick or PIL, copies them into a **single flat** `src/assets/images/` directory, and generates `_catalog.json` — the source of truth for category, role, dimensions, aspect ratios, usage, and replacement notes. **Auto-detects the best logo** from files containing "logo" in the filename (scores by resolution, format, dimensions) and copies it to `src/assets/images/logo.png`. **Recognizes descriptive photo names** (e.g., `Logo-Light-Mode.png`, `Staff-Members.jpg`, `Government-License.jpg`) to automatically categorize and appropriately place photos through catalog metadata, not folder structure.
 
-**Produces:** `src/assets/images/*/`, `src/assets/images/branding/logo.png`, `src/assets/images/_catalog.json`
+**Produces:** `src/assets/images/*`, `src/assets/images/logo.png`, `src/assets/images/_catalog.json`
 
 ### page-builder (Content → Pages)
 
@@ -166,9 +166,9 @@ Implements a 4-layer SEO architecture: (1) **Technical SEO** — multi-language 
 
 ### deploy (Build & Ship — Multi-Language)
 
-Runs `npm run build`, verifies output for all language versions, checks for broken references, and generates `deploy.sh` and language-aware `nginx.conf` with aggressive caching headers and root domain redirect. Outputs a comprehensive multi-language pre-launch checklist. Verifies hreflang tags, language-specific sitemaps, and per-language Lighthouse scores.
+Runs `npm run build`, verifies output for all language versions, checks for broken references, and generates `deploy.sh` and language-aware `nginx.conf` with aggressive caching headers and language-aware routing. The web server must serve the generated Astro root page at `/` so browser-language detection can run there. Outputs a comprehensive multi-language pre-launch checklist. Verifies hreflang tags, language-specific sitemaps, and per-language Lighthouse scores.
 
-**Produces:** `dist/{en,fr,sw}/`, `deploy.sh`, `nginx.conf` (with root redirect and language routing)
+**Produces:** `dist/{en,fr,sw}/`, `deploy.sh`, `nginx.conf` (with root-page preservation at `/` and language routing)
 
 ### blog-writer (Content Marketing — Blog Articles)
 
@@ -433,7 +433,7 @@ Use **descriptive, purpose-specific filenames** (not `IMG_001.jpg`). Claude auto
 | `*Staff*`, `*Team*` | Team page introduction |
 | `*Certificate*`, `*License*`, `*Award*` | Trust/credibility section |
 | `*Gallery*`, `*portfolio*` | Photo gallery pages |
-| `*Slide*`, `*carousel*` | Slideshow/carousel sections |
+| `*Slide*`, `*carousel*` | Manual gallery / lightbox sequence assets |
 
 **Best practices:** Use hyphens (`Logo-Dark-Mode.png`), capitalise key words, be specific (`Developer-Alice.jpg` not `team-photo.jpg`), include mode variants (`Logo-Light-Mode.png`, `Logo-Dark-Mode.png`). Photo Manager scans, catalogs, and Page Builder places automatically — no manual placement needed.
 

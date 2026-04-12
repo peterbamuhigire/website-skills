@@ -262,7 +262,7 @@ Make contacting you frictionless:
 ```
 Hero: 1920x1080 (WebP + AVIF, preload + lazy-load)
 Project cards: 600x400 (responsive srcset, lazy-load)
-Project gallery: 1200x800 (Swiper carousel, lazy-load)
+Project gallery: 1200x800 (manual gallery / lightbox, lazy-load)
 Thumbnails: 300x300 (aggressive caching)
 Blog post featured: 1200x630 (OG image size)
 ```

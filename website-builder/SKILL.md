@@ -118,7 +118,7 @@ Follow `.claude/skills/seo/SKILL.md` to:
 - Test language switcher navigates correctly
 - Verify hreflang tags present in all pages
 - Check sitemaps generated for each language
-- Create deploy.sh script with root redirect rule
+- Create deploy.sh script and server config that preserve the generated Astro root page for browser-language detection
 
 ## Critical Rules
 
@@ -157,7 +157,7 @@ After building, provide:
 - All languages tested at 375px, 768px, 1280px
 - Text expansion accommodated (French/Kiswahili longer than English)
 - Language switcher functional on all pages
-- Root domain redirect working
+- Root language-detection page working at `/`
 
 **Development:**
 - How to run locally: `npm run dev`

@@ -65,7 +65,7 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 **Trust cues**: Wanderlust, authentic experiences, booking confidence, guide expertise, cancellation flexibility, review social proof
 **Visual identity**: Tour-type dependent (see travel-type-patterns.md: luxury=navy+gold+serif, adventure=bold+geometric, eco=green+organic, cultural=terracotta+warm). Distinctive brand colors per operator — never default sky blue + generic sans.
-**Key components**: Search widget (above fold, 42% of bookings), destination cards, itinerary timelines, booking widget (sticky mobile), pricing display, review aggregate, trust badges, urgency signals, gallery carousel, guide profiles
+**Key components**: Search widget (above fold, 42% of bookings), destination cards, itinerary timelines, booking widget (sticky mobile), pricing display, review aggregate, trust badges, urgency signals, manual gallery/lightbox, guide profiles
 **Content order**: Hero + search CTA → Featured destinations → Tour highlights → Testimonials → Trust signals → Booking CTA
 **Distinctive traits**: Real photography, storytelling copy, "you could be there" language, transparent pricing, mobile-first (58%+ mobile bookings), YouTube-hosted destination videos
 
@@ -95,7 +95,7 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 **Trust cues**: Credibility, structure, student success, enrollment conversion, parent trust, accreditation
 **Visual identity**: School-type dependent (see school-type-patterns.md: private=serif+premium, public=accessible+warm, international=global+sophisticated, religious=reverent+warm). Distinctive brand colors per school — never default blue+white.
-**Key components**: Enrollment CTA hero, programme cards, faculty profiles, event calendar, trust stats banner, audience segmentation tabs, virtual campus tour, fee structure table, testimonial carousel, parent portal
+**Key components**: Enrollment CTA hero, programme cards, faculty profiles, event calendar, trust stats banner, audience segmentation tabs, virtual campus tour, fee structure table, testimonial grid or manually controlled proof gallery, parent portal
 **Content order**: Hero + enrollment CTA → Trust stats → Academics grid → Faculty profiles → Testimonials → Events → Apply
 **Distinctive traits**: Clear hierarchy, accreditation badges, student testimonials, enrollment clarity, audience segmentation (parents/students/alumni/donors), transparent fee structure, mobile-first (52%+ school traffic), YouTube-hosted campus tour videos
 
@@ -145,7 +145,7 @@ Read each sector description, then customize your sector-brief.md to reflect YOU
 
 **Trust cues**: Mission clarity, impact proof, financial transparency, beneficiary dignity, credentials, partner logos
 **Visual identity**: Sector-dependent (see sub-sector patterns: environment=green+gold, healthcare=blue+coral, humanitarian=red+navy, research=blue+gold, arts=bold+vibrant). Warm + professional, never generic "charity blue."
-**Key components**: Impact-tied donation CTA, story carousel, stat counters, trust bar (partner logos), team section, contact with multiple offices, multilingual support
+**Key components**: Impact-tied donation CTA, featured story grid or manually controlled story gallery, stat counters, trust bar (partner logos), team section, contact with multiple offices, multilingual support
 **Content order**: Hero + mission CTA → Trust bar → Impact stats → Beneficiary stories → Programs/services → How to help → News/events → Contact
 **Distinctive traits**: Authentic photography (never stock), dignity-first storytelling, impact-tied donation amounts ("$50 trains one farmer"), multiple audience paths (donors, volunteers, beneficiaries, partners, media), WCAG AA+ accessibility, mobile-first (52% nonprofit traffic), YouTube-hosted video embeds
 

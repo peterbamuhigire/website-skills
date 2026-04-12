@@ -131,7 +131,7 @@ Every high-converting app landing page must include:
 | Section | Purpose | Mobile Design |
 |---------|---------|---------------|
 | **Sticky Hero** | Grab attention immediately | Headline + hero image + sticky CTA |
-| **Swipeable Benefits** | Demonstrate value quickly | Horizontal card carousel (swipeable) |
+| **Swipeable Benefits** | Demonstrate value quickly | Horizontal card reel with explicit user controls (no auto-rotation) |
 | **Social Proof** | Build confidence | Compact testimonials, ratings |
 | **Video Demo** | Show it in action | Autoplay (muted), tap to unmute |
 | **Feature Deep-Dive** | Interested users explore | Expandable accordion sections |

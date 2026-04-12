@@ -47,7 +47,7 @@ Each healthcare facility type serves different patients with different needs and
 - **Palette:** Clean teal + white + bright accent. Clean, modern, pain-free messaging.
 - **Typography:** Modern clean sans (Plus Jakarta Sans, DM Sans). Fresh, clinical.
 - **Key elements:** Treatment menu with pricing, before/after smile gallery, technology showcase, pain-free messaging, insurance info
-- **Unique:** Smile assessment quiz, treatment cost estimator, before/after slider, fear-free messaging
+- **Unique:** Smile assessment quiz, treatment cost estimator, before/after comparison module, fear-free messaging
 
 ## Diagnostic & Imaging Centre
 

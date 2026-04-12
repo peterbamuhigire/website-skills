@@ -78,7 +78,7 @@ Website build skills are sequential — each depends on outputs from the previou
 4. **page-builder** → produces `src/layouts/`, `src/components/`, `src/pages/[lang]/` (per-language content from `docs/{lang}/`)
 5. **seo** → integrates multi-language SEO: hreflang tags, language-specific sitemaps, Open Graph locale tags
 5.5. **blog-writer** (optional) → produces SEO-ready bilingual blog articles in `docs/{lang}/blog/`, reads idea summaries from blog-idea-generator, Astro blog pages, Article JSON-LD, updates blog index
-6. **deploy** → produces `dist/`, per-language directories, `deploy.sh`, language-aware `nginx.conf` with root redirect
+6. **deploy** → produces `dist/`, per-language directories, `deploy.sh`, language-aware `nginx.conf` that preserves the generated Astro root page for browser-language detection at `/`
 7. **seo-audit** (optional, post-deploy) → audits 14 SEO categories, produces scored report with prioritised action items
 
 The `website-builder` skill orchestrates this entire sequence. It reads `docs/i18n-config.md` first, then all language-specific content from `docs/{lang}/` and `photo-bank/` photos.
