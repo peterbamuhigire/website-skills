@@ -16,7 +16,7 @@ No two consultancies should look the same. Each corporate type has distinct trus
 - **Typography:** Elegant serif headers + clean sans body. Generous letter-spacing.
 - **Photography:** Executive team, boardroom settings, strategic frameworks visualised.
 - **Tone:** Confident, strategic, concise. "Shaping enterprises for what's next."
-- **Key components:** Methodology diagram, case study carousel, leadership grid, insights hub, partnership logos
+- **Key components:** Methodology diagram, case study gallery or featured case study stack, leadership grid, insights hub, partnership logos
 - **Unique:** Proprietary framework visualisation, industry expertise matrix, client impact timeline
 
 ## Technology & Digital Consulting

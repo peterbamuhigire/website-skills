@@ -331,7 +331,7 @@ Case studies are conversion powerhouses. Structure:
 ```
 Hero: 1920x1080 (WebP + AVIF, preload + lazy-load)
 Leadership photos: 300x300 (responsive srcset)
-Case study thumbnails: 600x400 (Swiper carousel, lazy-load)
+Case study thumbnails: 600x400 (manual gallery or reel, lazy-load)
 Client logos: 200x100 (grid, cached aggressively)
 ```
 
@@ -522,7 +522,7 @@ Build authority via:
 - Awards/certifications grid
 
 **On Solution Pages:**
-- Relevant case study carousel
+- Relevant case study gallery or featured case-study grid
 - Implementation timeline (how fast to value)
 - Client testimonial video
 - ROI calculator (if applicable)

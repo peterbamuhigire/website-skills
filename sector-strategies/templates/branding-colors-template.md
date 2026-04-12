@@ -11,7 +11,7 @@ Copy this file to `docs/branding-colors.md` in your client project and fill in y
 
 ## Logo
 
-**Primary Logo Location**: `src/assets/images/branding/logo.png`
+**Primary Logo Location**: `src/assets/images/logo.png`
 
 - **Dimensions**: Auto-detected by photo-manager from photo-bank/ (all PNG files with "logo" in filename scanned)
 - **Selected File**: logo-color.png

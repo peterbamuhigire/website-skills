@@ -31,7 +31,7 @@ tour-travel-website/
 │   │   │   └── PaymentForm.astro
 │   │   ├── tours/
 │   │   │   ├── TourCard.astro (infinite scroll)
-│   │   │   ├── TourGallery.astro (Swiper carousel)
+│   │   │   ├── TourGallery.astro (manual gallery / lightbox)
 │   │   │   ├── ItineraryTimeline.astro
 │   │   │   └── InclusionsExclusions.astro
 │   │   ├── filters/
@@ -153,7 +153,7 @@ Hero Search → Search Results → Tour Details → Booking → Confirmation
 - Saved tours (wishlist)
 
 **Tour Details Page Features:**
-- High-res gallery (Swiper carousel)
+- High-res gallery (manual gallery / lightbox)
 - Itinerary breakdown (expandable days)
 - Inclusions/exclusions clearly marked
 - Location map (Leaflet)
@@ -197,7 +197,7 @@ Hero Search → Search Results → Tour Details → Booking → Confirmation
 ```
 Hero: 1920x1080 (WebP + AVIF, lazy-load after fold)
 Tour Cards: 400x300 (responsive srcset)
-Details Gallery: 1200x800 (Swiper carousel, lazy-load)
+Details Gallery: 1200x800 (manual gallery / lightbox, lazy-load)
 Thumbnails: 100x100 (cached aggressively)
 ```
 

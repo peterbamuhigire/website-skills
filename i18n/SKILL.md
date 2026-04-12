@@ -93,7 +93,7 @@ This covers 75–90% of African visitors (Francophone and Anglophone Africa). No
 </noscript>
 ```
 
-Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The `.htaccess` should skip the root and let the HTML page handle it.
+Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The web server must serve the generated Astro root page at `/` and let that page handle browser-language detection. Server routing may still handle `/en/`, `/fr/`, and `/sw/` normally.
 
 ### Zero-Flash Redirect (MANDATORY — Hard Rule)
 
@@ -119,7 +119,7 @@ The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any vi
 ```astro
 ---
 // src/pages/index.astro
-// Root redirect — detects browser language, sends to /fr/ or /en/
+// Root language-detection page — detects browser language, sends to /fr/ or /en/
 // No body content: prevents any flash before redirect fires
 ---
 <html lang="en">
@@ -508,4 +508,4 @@ Design for these expansion ranges:
 - **website-builder**: Orchestrates build for each enabled language
 - **page-builder**: Generates [lang] dynamic routes, loads language-specific content
 - **seo**: Implements hreflang, locale tags, language-specific sitemaps
-- **deploy**: Configures root redirect, language routing rules
+- **deploy**: Configures language routing rules and preserves the generated Astro root page so browser-language detection can run at `/`

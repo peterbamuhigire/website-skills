@@ -36,7 +36,7 @@ Hero-About-Page.jpg              → about page hero
 Service-Consulting.jpg           → services grid
 Feature-Dashboard.png            → features section
 
-Testimonial-Client-John.jpg      → testimonials carousel
+Testimonial-Client-John.jpg      → testimonial card / supporting proof section
 Testimonial-Company-Logo.png     → client logos section
 
 Government-License.jpg           → trust/credentials section
@@ -46,9 +46,9 @@ Industry-Award-Badge.jpg         → credentials
 Gallery-Project-01.jpg           → photo gallery pages
 Gallery-Project-02.jpg           → photo gallery pages
 Portfolio-Website-Redesign.jpg   → portfolio gallery
-Slide-Product-Demo-01.jpg        → slideshow/carousel sections
-Slide-Product-Demo-02.jpg        → slideshow/carousel sections
-Carousel-Client-Testimonials.jpg → slideshow carousel
+Slide-Product-Demo-01.jpg        → manually controlled gallery / lightbox sequence
+Slide-Product-Demo-02.jpg        → manually controlled gallery / lightbox sequence
+Carousel-Client-Testimonials.jpg → manual gallery / proof sequence (never auto-rotating)
 
 Team-Retreat-Event.jpg           → culture/behind-scenes
 Office-Culture-Photo.jpg         → about page
@@ -64,7 +64,7 @@ Product-Launch-Celebration.jpg   → timeline/history
 5. **One purpose per file** — Don't combine `Logo-And-Favicon.png` → split them
 6. **Describe role** — `Testimonial-Client-John.jpg` tells Claude the photo's purpose
 7. **Gallery collections** — Use `Gallery-*` or `Portfolio-*` for photos meant for gallery pages
-8. **Slideshow candidates** — Use `Slide-*` or `Carousel-*` for photos meant for slideshows/carousels
+8. **Gallery sequence candidates** — Use `Slide-*` or `Carousel-*` only for manually controlled galleries, lightboxes, or horizontal reels. Never imply auto-rotation.
 
 ### How Claude Uses These Names
 
@@ -73,7 +73,7 @@ Product-Launch-Celebration.jpg   → timeline/history
 3. **Places intelligently** — No manual placement needed
 4. **Updates catalog** — Records the recognized purpose in `_catalog.json`
 
-### Gallery & Slideshow Photo Recognition
+### Gallery & Manual Sequence Photo Recognition
 
 **Gallery Photos** (`Gallery-*`, `Portfolio-*`):
 - Grouped as multi-image collections for photo gallery pages
@@ -81,12 +81,12 @@ Product-Launch-Celebration.jpg   → timeline/history
 - Ideal for: Portfolio, case studies, project showcases, before/after galleries
 - Example: `Gallery-Project-01.jpg`, `Gallery-Project-02.jpg`, `Gallery-Project-03.jpg` → sorted and displayed as multi-image gallery
 
-**Slideshow Photos** (`Slide-*`, `Carousel-*`):
-- Grouped as rotating carousel/slideshow candidates
-- Displayed one at a time with navigation controls
-- Ideal for: Product features, testimonials, team introductions, event highlights
-- Example: `Slide-Product-Feature-01.jpg`, `Slide-Product-Feature-02.jpg` → rotates through slideshow
-- Example: `Carousel-Testimonials-01.jpg`, `Carousel-Testimonials-02.jpg`, `Carousel-Testimonials-03.jpg` → rotating testimonials carousel
+**Manual Sequence Photos** (`Slide-*`, `Carousel-*`):
+- Grouped as manually controlled gallery or lightbox candidates
+- Displayed one at a time with explicit user controls only
+- Ideal for: Product features, project walkthroughs, event highlights, before/after comparisons
+- Example: `Slide-Product-Feature-01.jpg`, `Slide-Product-Feature-02.jpg` → next/previous lightbox sequence
+- Example: `Carousel-Testimonials-01.jpg`, `Carousel-Testimonials-02.jpg`, `Carousel-Testimonials-03.jpg` → proof gallery with manual navigation only
 
 ### Photos Without Descriptive Names
 
@@ -192,7 +192,7 @@ Interpret filenames to determine category and usage:
 
 **Photo Collections:**
 - `gallery-*`, `portfolio-*`, `project-*` → `gallery/` (multi-image galleries)
-- `slide-*`, `carousel-*` → `gallery/` (slideshow candidates)
+- `slide-*`, `carousel-*` → `gallery/` (manual sequence candidates)
 
 **About & Culture:**
 - `about-*`, `office-*`, `culture-*`, `event-*` → `about/`
@@ -415,7 +415,7 @@ After the site is built, provide the user with a replacement checklist:
 3. **Astro handles optimization.** Don't manually resize or convert formats. Just provide the originals at sufficient resolution.
 4. **Keep the catalog updated.** Every image addition or change must be reflected in _catalog.json.
 5. **Descriptive IDs.** Use kebab-case IDs that describe the content: `team-john-doe`, `hero-about-page`, `service-consulting`.
-6. **Delete from photo-bank/ after copying.** Once a photo has been copied to `src/assets/images/`, delete the original from `photo-bank/`. This prevents clutter and avoids accidentally reusing the same image in multiple places. The `src/assets/images/` copy is now the single source of truth.
+6. **Preserve originals in `photo-bank/`.** `photo-bank/` remains the raw asset archive; `src/assets/images/` contains processed working copies for the site. Never delete originals automatically.
 
 ## OG Image Selection (Mandatory Per Page)
 

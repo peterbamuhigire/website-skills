@@ -24,7 +24,7 @@ A visitor landing on a travel website decides to stay or leave within 3 seconds.
 | Video background (muted, via YouTube) | High-quality destination footage | +86% engagement with video |
 | Search-first hero (search widget prominent) | Booking-focused, returning visitors | +42% booking start rate |
 | Split hero (image + value prop + search) | Need search + emotional sell | Balanced approach |
-| Carousel hero (3 destinations max) | Multiple hero-worthy destinations | Good for variety display |
+| Single featured hero image + optional manual gallery | Multiple hero-worthy destinations | Good for variety display without auto-rotation |
 | Statistics hero | Trust-first positioning | Best for established brands |
 
 **Image treatment:** Dark gradient overlay (40-60% from bottom). White text on overlays. Never place text on busy images without overlay.
@@ -204,10 +204,10 @@ Immersive visuals increase time-on-site by 2-3x for travel websites.
 
 | Pattern | Use Case | Implementation |
 |---------|----------|----------------|
-| **Full-width hero carousel** | Homepage, destination pages | 3-5 slides, auto-advance 5s |
+| **Featured hero image + manual gallery** | Homepage, destination pages | One strong hero image plus optional user-controlled next/previous gallery |
 | **Masonry grid** | Gallery page, destination showcase | Pinterest-style, infinite scroll |
 | **Lightbox gallery** | Tour detail page | Click-to-expand, swipe navigation |
-| **Before/after slider** | Seasonal comparison | Drag slider between two images |
+| **Before/after comparison** | Seasonal comparison | Side-by-side comparison or user-controlled comparison widget |
 | **Video + photo mixed** | Tour detail, about page | YouTube embeds alongside photos |
 
 ### Gallery Performance
@@ -240,7 +240,7 @@ Immersive visuals increase time-on-site by 2-3x for travel websites.
 
 - **Thumb-friendly buttons**: Minimum 44px touch targets, generous spacing
 - **Sticky booking bar**: Price + "Book Now" fixed at screen bottom on tour details
-- **Swipe galleries**: Touch-optimised image carousels
+- **Swipe galleries**: Touch-optimised manual galleries or horizontal reels with explicit user control
 - **Click-to-call**: Phone number as tappable link
 - **WhatsApp integration**: Direct chat link for instant queries
 - **Simplified search**: Fewer filters on mobile, expand on request

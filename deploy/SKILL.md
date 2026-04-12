@@ -1,6 +1,6 @@
 ---
 name: deploy
-description: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with root redirect and language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
+description: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
 ---
 
 # Deploy Skill
@@ -114,7 +114,7 @@ echo "Updated at $(date)"
 
 ## Step 4: Generate Nginx Config
 
-Multi-language configuration with root redirect (NEW):
+Multi-language configuration that preserves the generated Astro root page so browser-language detection can run at `/`:
 
 ```nginx
 server {
@@ -123,11 +123,12 @@ server {
     root /var/www/sitename;
     index index.html;
 
-    # ===== NEW: ROOT REDIRECT TO DEFAULT LANGUAGE =====
-    # Redirect root domain (/) to default language (/en/)
-    # Change 'en' to 'fr' or 'sw' if different default language configured
+    # ===== ROOT PAGE PRESERVED =====
+    # Do NOT redirect / at the server level.
+    # Serve Astro's generated root index.html so the i18n script can
+    # detect browser language and redirect client-side with no flash.
     location = / {
-        return 301 /en/;
+        try_files /index.html =404;
     }
 
     # Security headers
@@ -185,7 +186,7 @@ server {
 ```
 
 **Key Changes for Multi-Language:**
-1. **Root redirect:** `/` → `/en/` (change to `/fr/` or `/sw/` based on docs/i18n-config.md default)
+1. **Root page preserved:** `/` serves Astro's generated root page so browser-language detection can run there
 2. **Language routing:** Explicit location blocks for /en/, /fr/, /sw/ paths
 3. **Sitemap handling:** Caches language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml)
 4. **Crawler directive:** X-Robots-Tag allows all language versions to be indexed
@@ -254,7 +255,7 @@ Output this checklist for the user:
 - [ ] Node.js installed (v18+)
 - [ ] npm install completed
 - [ ] Nginx configured with:
-  - Root redirect to default language (/en/ or /fr/ or /sw/)
+  - Root path `/` serving Astro's generated redirect page (no nginx redirect)
   - Language-aware routing for /en/, /fr/, /sw/
   - Sitemap caching rules
 - [ ] SSL certificate installed
@@ -265,7 +266,7 @@ Output this checklist for the user:
 - [ ] Test all pages in all languages in browser
 - [ ] Test language switcher (navigate between /en/, /fr/, /sw/)
 - [ ] Test on mobile device (all languages)
-- [ ] Root domain (/) redirects correctly to default language
+- [ ] Root domain (/) serves the generated Astro redirect page and sends visitors to the correct language
 - [ ] Run Lighthouse audit for each language (aim for 95+ all categories)
 - [ ] Submit ALL sitemaps to Google Search Console:
   - sitemap-index.xml (primary)

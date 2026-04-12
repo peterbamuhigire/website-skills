@@ -227,7 +227,7 @@ No two schools should look the same — even within the same type. Each school t
 
 ### Unique Components
 - Skills/trade programme cards with duration + certification
-- Industry partnership carousel
+- Industry partnership grid or manually controlled logo reel
 - Student project portfolio gallery
 - Apprenticeship/placement finder
 - Equipment and facilities showcase

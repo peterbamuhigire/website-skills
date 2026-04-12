@@ -85,7 +85,7 @@ Study these exemplary education websites for UI/UX inspiration. Note: These use 
 ### Visual & Multimedia-Rich Designs
 - [Dakota Wesleyan University](https://www.dwu.edu) - Full-screen video hero, interactive virtual tour, student testimonials
 - [Rhode Island School of Design (RISD)](https://www.risd.edu) - Student work showcase, minimalist layout, ample whitespace
-- [Virginia Commonwealth University](https://www.vcu.edu) - Bold CTAs, image carousels, dynamic content
+- [Virginia Commonwealth University](https://www.vcu.edu) - Bold CTAs, strong imagery, dynamic content
 
 ### Content & Engagement Leaders
 - [Georgetown University](https://www.georgetown.edu) - Audience segmentation (students/parents/alumni tabs), rich background info

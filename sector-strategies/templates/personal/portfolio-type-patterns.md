@@ -37,7 +37,7 @@ Every creator type has distinct audience expectations and showcase needs.
 - **Typography:** Thin, minimal sans (Jost, DM Sans light). Never compete with images.
 - **Layout:** Full-bleed galleries, minimal UI, large images, masonry/grid layouts.
 - **Key elements:** Gallery categories (portrait, landscape, event, commercial), EXIF data option, print ordering CTA
-- **Unique:** Full-screen lightbox, image comparison slider, project story captions, client gallery access
+- **Unique:** Full-screen lightbox, image comparison module, project story captions, client gallery access
 
 ## Illustrator / Artist
 

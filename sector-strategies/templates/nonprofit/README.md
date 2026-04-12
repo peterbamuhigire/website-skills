@@ -89,7 +89,7 @@ The design-system skill reads your sector-brief.md and generates:
 - Donation tiers ($50 = supplies for 1 student, etc.)
 
 ### Impact Storytelling
-- Story carousel (auto-advance, manual navigation)
+- Story gallery or featured story stack (manual navigation only if interactive)
 - Animated impact metrics (people helped, lives changed)
 - Testimonial quotes with attribution
 - Before/after transformations
@@ -218,7 +218,7 @@ nonprofit/
 
 ✅ **No Code Required** - Fill templates, run skills, get website
 ✅ **Donation-Optimized** - Multi-step form, recurring options, matching gifts
-✅ **Impact-Focused** - Story carousels, animated metrics, testimonials
+✅ **Impact-Focused** - Story-led layouts, animated metrics, testimonials
 ✅ **Dark Mode** - 100% support, accessible, beautiful in both modes
 ✅ **Accessibility** - WCAG 2.1 AA+, screen reader ready, keyboard nav
 ✅ **Mobile-First** - Works perfectly on slow connections & small screens

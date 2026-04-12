@@ -36,7 +36,7 @@ Each creator type has distinct audience expectations and engagement patterns.
 - **Palette:** Minimal. Black/white/one accent. Let images dominate completely.
 - **Typography:** Thin, minimal sans (Outfit 300, DM Sans 300). Never competes with images.
 - **Layout:** Image-dominant, full-bleed galleries, minimal chrome, immersive viewing.
-- **Key elements:** Gallery by category/project, before/after sliders, equipment list, booking form, location availability
+- **Key elements:** Gallery by category/project, before/after comparison modules, equipment list, booking form, location availability
 - **Unique:** Fullscreen gallery mode, lazy-loaded high-res images, EXIF data display (optional), client gallery portal, booking calendar
 
 ## YouTuber / Content Creator

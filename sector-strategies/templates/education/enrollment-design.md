@@ -25,7 +25,7 @@ A parent visiting your school website decides to stay or leave within 5 seconds.
 | Video background (muted, via YouTube) | High-quality campus tour footage |
 | Statistics hero | Achievement data is the strongest story |
 | Student testimonial hero | Student voice is most compelling |
-| Carousel hero (3 slides max) | Multiple messages for different audiences |
+| Single hero image + segmented messaging below | Multiple messages for different audiences |
 
 **Image treatment:** Dark gradient overlay (40-60% opacity from bottom). Text always white/light on dark overlays. Never place text on busy images without overlay.
 
@@ -140,7 +140,7 @@ Open houses and school events drive enrollment. Calendar design:
 Schools that offer virtual tours see 30%+ higher engagement. Design considerations:
 
 - **YouTube-hosted video tours**: Embed with `youtube-nocookie.com`, `loading="lazy"`
-- **Photo-based tours**: Image carousel with scene labels and hotspot descriptions
+- **Photo-based tours**: Manual image gallery with scene labels and hotspot descriptions
 - **Mobile-optimized**: Touch-friendly navigation, swipe between scenes
 - **Call-to-action after tour**: "Ready to visit in person? Book a Tour"
 - **Poster image**: Always show a thumbnail before video loads (save bandwidth)
@@ -153,7 +153,7 @@ Real testimonials convert. Design rules:
 - **Specific outcomes**: "My daughter's math scores improved by 40%" beats "Great school!"
 - **Mix perspectives**: Parents, students, alumni, staff — 3-4 testimonials per page
 - **Video testimonials**: 60-90 seconds, hosted on YouTube, thumbnail fallback
-- **Rotating display**: Carousel or grid, fresh testimonials on each visit
+- **Display pattern**: Grid, stack, or manually controlled proof gallery
 
 ## Form Design for Enrollment
 

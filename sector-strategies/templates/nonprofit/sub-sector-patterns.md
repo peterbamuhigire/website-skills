@@ -55,7 +55,7 @@ Different nonprofit sub-sectors have distinct audiences, emotional registers, an
 
 **Photography:** Children engaged and learning (never posed). Diverse representation. Achievement moments. Inviting facilities.
 
-**Signature elements:** Larger border-radius (friendly). Illustration integration (custom, not clip art). Interactive elements. Student testimonial carousels.
+**Signature elements:** Larger border-radius (friendly). Illustration integration (custom, not clip art). Interactive elements. Student testimonial grids or manually controlled proof galleries.
 
 ## Humanitarian & Disaster Response
 
