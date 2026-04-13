@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Claude Code skills library** — a collection of SKILL.md files that teach Claude how to build static websites from markdown content and photos. It is not a standalone application. It is designed to be added as a **Git submodule** at `.claude/skills/` in every client website project. All client projects share the same skills; updating this repo propagates improvements everywhere.
 
+The repository is also maintained as a **portable skill system** that Codex can consume directly. Claude workflows remain the baseline, but skill instructions now follow a dual-compatible pattern:
+
+- `SKILL.md` is the concise execution layer
+- `references/` contains detailed material, including `legacy-guidance.md`
+- `scripts/` contains deterministic helpers where needed
+- Root [AGENTS.md](/C:/wamp64/www/website-skills/AGENTS.md) provides repository-level routing and quality rules for Codex
+
+Claude-specific consumption at `.claude/skills/` still works, but the repository should not be treated as dependent on that path.
+
 ## Repository Structure
 
 ### Website Build Skills
@@ -63,7 +72,18 @@ east-african-english/SKILL.md         ← Legacy English-only standard (supersed
 sectors/legal/SKILL.md                ← Law firm websites: client psychology, practice area matrix, ethics constraints, attorney profiles, legal local SEO, intake conversion
 ```
 
-Each SKILL.md uses YAML frontmatter (`name`, `description`) followed by markdown instructions that Claude reads when the skill is invoked.
+Each SKILL.md uses YAML frontmatter (`name`, `description`) followed by a standardized execution structure:
+
+- `Use when`
+- `Do not use when`
+- `Required inputs`
+- `Workflow`
+- `Quality standards`
+- `Anti-patterns`
+- `Outputs`
+- `References`
+
+Detailed prior instructions are preserved in `references/legacy-guidance.md` for each skill.
 
 ## Skill Execution Order
 
