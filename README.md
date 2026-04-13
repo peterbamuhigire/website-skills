@@ -1,8 +1,23 @@
 # Website Skills
 
-Claude Code skills for building beautiful, blazing-fast static websites from markdown content and photos.
+Portable website-building skills for Claude Code and Codex.
 
-This repository is designed to be used as a **Git submodule** at `.claude/skills/` in every client website project. All projects share the same skills, and updating this repo propagates improvements to every project.
+This repository is designed to work in two modes without changing the directory layout:
+
+- **Claude Code**: commonly consumed as a Git submodule at `.claude/skills/` inside client projects
+- **Codex**: consumed directly as a repository of portable skills rooted at directories that contain `SKILL.md`
+
+All projects share the same skills, and updating this repo propagates improvements to every project.
+
+## Dual Compatibility
+
+The portability contract is now:
+
+- `SKILL.md` is the concise execution layer for each skill
+- `references/` holds detailed guidance, including preserved `legacy-guidance.md` files
+- `scripts/` holds deterministic helpers when a workflow benefits from automation
+- Root [AGENTS.md](/C:/wamp64/www/website-skills/AGENTS.md) defines repository-wide routing and working rules for Codex
+- No consumer should assume the repo must live under a specific host path such as `.claude/skills/`
 
 ---
 
