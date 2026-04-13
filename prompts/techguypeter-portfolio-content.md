@@ -223,15 +223,20 @@ For each pillar, include a brief paragraph explaining the approach and value pro
 
 #### 7. `docs/en/testimonials.md`
 
-Create 5 realistic testimonial placeholders for:
+Create the file with a header and a note requesting real testimonials:
 
-- A managing director of a health products distribution company in West Africa (reflecting Dynapharm work — ERP implementation, multi-country operations)
-- A research institution director in Uganda (reflecting BIRD Center work — ICT infrastructure, systems management)
-- An ICT company director in Kampala (reflecting early career — reliable technical delivery)
-- A property management firm in the UK (reflecting Aqar software / international reach)
-- A retail business owner using Maduuka (reflecting SaaS product capability)
+```markdown
+# Testimonials
 
-Mark clearly as `[PLACEHOLDER — replace with real testimonials]` but write realistic quotes that highlight actual capabilities: multi-country experience, reliable delivery, understanding of African business context, practical solutions over theoretical ones, long-term partnership approach.
+<!-- CLIENT ACTION REQUIRED: Please provide 3-5 real customer testimonials.
+     Ideal sources: a health products distribution client (Dynapharm work),
+     a research institution (BIRD Center work), an ICT company (early career),
+     a property management firm (Aqar), a retail business (Maduuka).
+     Include: customer name, title, organisation, and their quote.
+     We will rewrite for clarity and translate into all enabled languages. -->
+```
+
+Never fabricate testimonials — even as placeholders with realistic names. The client must provide real quotes.
 
 #### 8. `docs/en/portfolio.md`
 

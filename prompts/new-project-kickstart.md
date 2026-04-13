@@ -283,9 +283,19 @@ Include:
 
 #### `docs/en/testimonials.md`
 
-If real testimonials exist in the source documents, use them verbatim (preserve the client's exact words).
+If real testimonials exist in the source documents, use them verbatim (preserve the client's exact words). You may rewrite for clarity and grammar while preserving the customer's meaning.
 
-If no real testimonials exist, create 4-5 realistic placeholders that reflect actual capabilities found in the documents. Use realistic local names (match the company's geographic market). Mark every placeholder: `[PLACEHOLDER — replace with real testimonial from actual client]`
+If no real testimonials exist, create the file with a header and a note for the client:
+
+```markdown
+# Testimonials
+
+<!-- CLIENT ACTION REQUIRED: Please provide 3-5 real customer testimonials.
+     Include: customer name, location, industry/business type, and their quote.
+     We will rewrite for clarity and translate into all enabled languages. -->
+```
+
+Never fabricate, invent, or generate fictional testimonials — even as placeholders with realistic names. Fake social proof destroys trust and may violate advertising regulations.
 
 ---
 

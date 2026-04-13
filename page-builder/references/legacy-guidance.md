@@ -395,20 +395,20 @@ Content loaded from `docs/{lang}/`, not `docs/`.
 
 **Always exactly 3 testimonials** in a `grid grid-cols-1 md:grid-cols-3` layout.
 
-**Convention — no real customers exist yet, so generate realistic fictional ones:**
-- Use realistic East African names (Ugandan, Kenyan, Tanzanian)
-- Use real Ugandan/East African town names for location
-- **Never include business names** — only: name, location, industry type
-- Each testimonial covers a different industry, sector or service the product serves
-- Quotes should reference specific product features relevant to that industry
+**Testimonials must come from the client.** Never fabricate, generate, or invent testimonials. The client provides real customer quotes in `docs/{lang}/testimonials.md`. We may:
+- Rewrite for clarity and grammar (preserving the customer's meaning)
+- Translate into enabled languages
+- Trim for length (keeping the strongest statement)
+
+**If no testimonials exist in docs:** omit the testimonials section entirely and add a `<!-- TODO: Client to provide 3 customer testimonials -->` comment. Never use placeholder or fictional quotes — fake social proof destroys trust and may violate advertising regulations.
 
 **TestimonialCard props:** `quote`, `name`, `location`, `type` (no `business` prop).
 
 ```astro
 <TestimonialCard
-  quote="The specific feature changed how I run my business..."
-  name="Nakato Grace"
-  location="Mbale, Uganda"
+  quote="Direct quote from the client's testimonials.md file..."
+  name="Real Customer Name"
+  location="Kampala, Uganda"
   type="Retail"
 />
 ```

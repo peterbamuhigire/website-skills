@@ -855,7 +855,7 @@ Visual design is NOT just making things pretty. It does three critical things:
 Three users all asked for "more case studies." But their underlying pains were different:
 - User A: "I don't know what to buy" → real pain = choice overload → better solution = recommendation engine / preset packages
 - User B: "I want to know if it's worth it" → real pain = ROI uncertainty → better solution = inline stats ("Customers saw 35% revenue increase after 6 months")
-- User C: "I don't know if this company is reputable" → real pain = social proof → better solution = client logo carousel
+- User C: "I don't know if this company is reputable" → real pain = social proof → better solution = static client logo grid (no carousel — banned by design-system)
 
 By asking WHY, three different targeted solutions emerged — each simpler than "write case studies."
 
