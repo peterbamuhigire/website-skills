@@ -782,7 +782,7 @@ Combine a radial gradient + linear gradient to create a distinctive "morph" effe
 5. Footer: social media links
 
 ### Blog Page Structure
-1. Hero: logo/brand name + navigation + category links + search + carousel (optional)
+1. Hero: logo/brand name + navigation + category links + search (**no auto-rotating carousel** — see design-system and page-builder mandatory ban; use static hero or user-controlled tabs instead)
 2. Blog post list: featured/recent posts first; clear typography hierarchy; subscribe CTA
 3. Content: include publication dates; implement pagination or infinite scroll
 4. "Other Articles" section at end of each post
@@ -801,7 +801,7 @@ Combine a radial gradient + linear gradient to create a distinctive "morph" effe
 2. Features: descriptive headings + icons/images per feature
 3. Integrations: platform logos + links for detail
 4. Pricing: side-by-side plans + CTA per plan
-5. Testimonials: slider/carousel for compact display
+5. Testimonials: static grid or user-controlled tabs (**no auto-rotating carousel** — banned by design-system and page-builder)
 6. Footer: copyright + Privacy Policy + Terms + Contact
 
 ### Sign Up Page

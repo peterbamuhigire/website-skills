@@ -82,7 +82,7 @@ Design is language-agnostic; same colors, fonts, layout for all languages.
 ### Step 3: Photo Management
 Follow `.claude/skills/photo-manager/SKILL.md` to:
 - Catalog all photos in photo-bank/
-- Copy to src/assets/images/ with proper organization
+- Copy to src/assets/images/ (single flat directory — no subdirectories)
 - Generate _catalog.json with dimensions and usage tracking
 
 Photos are shared across all language versions (no language-specific images unless required).

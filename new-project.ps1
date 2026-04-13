@@ -69,14 +69,7 @@ $photoDirs = @(
 # Source directories
 $srcDirs = @(
     "public",
-    "src/assets/images/hero",
-    "src/assets/images/team",
-    "src/assets/images/services",
-    "src/assets/images/gallery",
-    "src/assets/images/about",
-    "src/assets/images/testimonials",
-    "src/assets/images/branding",
-    "src/assets/images/misc",
+    "src/assets/images",
     "src/components",
     "src/layouts",
     "src/pages",
@@ -375,7 +368,7 @@ You have skills in ``.claude/skills/``. Read them before generating any code.
 | ``design-reference`` | When client provides reference URLs | Client URLs | docs/design-reference.md |
 | ``sector-strategies`` | Industry-specific design direction | docs/en/company-profile.md | docs/sector-brief.md |
 | ``design-system`` | Before building any pages | docs/en/style-brief.md, company-profile.md | tailwind.config.mjs, global.css, design-tokens.md |
-| ``photo-manager`` | Before building pages, after design | photo-bank/**/* | src/assets/images/*/, _catalog.json |
+| ``photo-manager`` | Before building pages, after design | photo-bank/**/* | src/assets/images/ (flat), _catalog.json |
 | ``page-builder`` | After design + photos are ready | docs/{lang}/*.md, design-tokens.md, _catalog.json | src/pages/{lang}/, components/, layouts/ |
 | ``seo`` | After pages are built | docs/seo.md, all pages | hreflang tags, sitemaps, structured data |
 | ``deploy`` | After all pages are built | src/, dist/ | deploy.sh, nginx.conf, verification report |
@@ -393,7 +386,7 @@ You have skills in ``.claude/skills/``. Read them before generating any code.
 - NEVER place a photo without first measuring its dimensions (use ``identify`` from ImageMagick or Python PIL).
 - NEVER use a small image in a large slot (no upscaling).
 - Every photo used must be tracked in ``src/assets/images/_catalog.json``.
-- Photos are copied from ``photo-bank/`` to ``src/assets/images/{category}/`` - never moved or modified.
+- Photos are copied from ``photo-bank/`` to ``src/assets/images/`` (single flat directory) — never moved or modified.
 - If no suitable photo exists for a slot, use a CSS gradient/solid color placeholder and document it in the catalog's ``placeholders_needed`` array.
 - NEVER reference external placeholder services (no unsplash, no placeholder.com, no picsum).
 

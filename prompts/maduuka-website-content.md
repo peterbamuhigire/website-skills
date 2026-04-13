@@ -118,15 +118,19 @@ Extract accurate feature details from the system documentation. Each module desc
 
 #### 7. `docs/en/testimonials.md`
 
-Create 4-5 realistic testimonial placeholders for:
+Create the file with a header and a note requesting real testimonials:
 
-- A retail shop owner in Kampala
-- A pharmacy manager
-- A restaurant owner
-- A franchise operator with multiple branches
-- A distributor/network marketer
+```markdown
+# Testimonials
 
-Mark clearly as `[PLACEHOLDER — replace with real testimonials]` but write realistic quotes that highlight actual Maduuka benefits (inventory accuracy, time saved on bookkeeping, multi-branch visibility, etc.)
+<!-- CLIENT ACTION REQUIRED: Please provide 3-5 real customer testimonials.
+     Ideal sources: a retail shop owner, a pharmacy manager, a restaurant owner,
+     a franchise operator with multiple branches, a distributor/network marketer.
+     Include: customer name, location, business type, and their quote.
+     We will rewrite for clarity and translate into all enabled languages. -->
+```
+
+Never fabricate testimonials — even as placeholders with realistic names. The client must provide real quotes.
 
 #### 8. `docs/en/portfolio.md`
 

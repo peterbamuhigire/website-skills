@@ -216,15 +216,20 @@ Each sub-service should include 3-5 bullet points of specific capabilities. Mark
 
 #### 7. `docs/en/testimonials.md`
 
-Create 4-5 realistic testimonial placeholders for:
+Create the file with a header and a note requesting real testimonials:
 
-- A retail business owner who implemented Maduuka POS — focus on ease of use, multi-branch visibility
-- A property management company using Aqar — focus on tenant management efficiency
-- An organisation that had a cybersecurity assessment done — focus on peace of mind, risk reduction
-- A company that installed CCTV and access control — focus on security and monitoring
-- A business that engaged Chwezi for ICT strategy — focus on technology roadmap clarity
+```markdown
+# Testimonials
 
-Mark clearly as `[PLACEHOLDER — replace with real testimonials]` but write realistic quotes that highlight actual Chwezi capabilities. Use realistic East African names (Ugandan, Kenyan, Tanzanian).
+<!-- CLIENT ACTION REQUIRED: Please provide 3-5 real customer testimonials.
+     Ideal sources: a Maduuka POS user, an Aqar property management client,
+     a cybersecurity assessment client, a CCTV/access control client,
+     an ICT strategy engagement client.
+     Include: customer name, location, organisation, and their quote.
+     We will rewrite for clarity and translate into all enabled languages. -->
+```
+
+Never fabricate testimonials — even as placeholders with realistic names. The client must provide real quotes.
 
 #### 8. `docs/en/portfolio.md`
 

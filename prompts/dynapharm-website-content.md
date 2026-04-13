@@ -296,19 +296,20 @@ Extract accurate ingredient and product details from the database queries. Each 
 
 #### 7. `docs/en/testimonials.md`
 
-Create exactly **4 testimonials** with realistic, culturally appropriate full names from these specific countries:
+Create the file with a header and a note requesting real testimonials:
 
-1. **Senegal** — A distributor testimonial. Use a realistic Senegalese name (e.g., Aminata Diallo, Ousmane Ndiaye, Fatou Sow). Focus on either the business opportunity or a product experience.
-2. **Uganda** — A product testimonial. Use a realistic Ugandan name (e.g., Grace Nakamya, Joseph Ssemakula, Prossy Nalubega). Focus on a specific product like Spirulina, Chlorophyll, or Ganoderma Coffee.
-3. **Mozambique** — A business opportunity testimonial. Use a realistic Mozambican name (e.g., Ana Mondlane, Carlos Machel, Esperança Nhantumbo). Focus on building a team and achieving a rank (Manager, Senior Manager, etc.).
-4. **Lesotho** — A product or agriculture testimonial. Use a realistic Basotho name (e.g., Thabo Mokhesi, Mamello Ramatla, Lerato Moshoeshoe). Could focus on D.I. Grow fertiliser or health products.
+```markdown
+# Testimonials
 
-Each testimonial should:
-- Include the person's full name and country
-- Reference specific Dynapharm products by their real names from the catalogue
-- Feel authentic and grounded — no hype
-- Be 2-4 sentences
-- Mark as `[PLACEHOLDER — replace with real testimonial]` but make them realistic enough to use as templates
+<!-- CLIENT ACTION REQUIRED: Please provide 3-5 real customer/distributor testimonials.
+     Ideal sources: distributors from Senegal, Uganda, Mozambique, and Lesotho.
+     Mix of product testimonials (Spirulina, Chlorophyll, Ganoderma Coffee, D.I. Grow)
+     and business opportunity testimonials (rank achievements, team building).
+     Include: person's full name, country, and their quote.
+     We will rewrite for clarity and translate into all enabled languages. -->
+```
+
+Never fabricate testimonials — even as placeholders with realistic names. The client must provide real quotes.
 
 #### 8. `docs/en/portfolio.md`
 
