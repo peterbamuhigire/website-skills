@@ -1,5 +1,8 @@
 # East African English — Language & Tone Skill
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `language-standards/SKILL.md` as the primary language standard for current work.
+
 All website copy, headings, calls to action, descriptions, and microcopy must follow this style guide. This is the foundational language standard applied before and during every content-writing step.
 
 ## Core Characteristics
@@ -199,4 +202,4 @@ Use this as a benchmark for tone and rhythm:
 - **Error messages and form labels** (polite, never terse)
 - **Any generated email templates or contact responses**
 
-This skill runs alongside every other skill. The design-system chooses how text looks; this skill governs what it says and how it sounds.
+This guidance can be applied alongside other skills. The design system chooses how text looks; this guide governs what it says and how it sounds when East African English is the active standard.

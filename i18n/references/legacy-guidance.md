@@ -1,6 +1,9 @@
 # Internationalization (i18n) — Multi-Language Infrastructure
 
-Multi-language support is built into every website from the start, not retrofitted. This skill defines the technical and content architecture for supporting 3 languages: English (en), French (fr), and Kiswahili (sw).
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `i18n/SKILL.md` and the current i18n references first.
+
+Multi-language support is designed into projects from the start. This skill defines the technical and content architecture for supporting English (en), French (fr), and Kiswahili (sw) when those languages are enabled.
 
 ## Supported Languages and Characteristics
 

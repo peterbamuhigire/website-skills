@@ -1,12 +1,15 @@
 # Website Builder — Master Orchestrator
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `website-builder/SKILL.md` and the current references in this directory as the primary contract.
+
 You are building a beautiful, blazing-fast static website using Astro + Tailwind CSS + Alpine.js.
 
 ## Before You Start
 
 ### Required Claude Code Plugins
 
-Install these plugins before building any website. They are essential for high-quality frontend development:
+Install these plugins before building any website if the environment supports them. They materially improve frontend work quality:
 
 ```
 /plugin marketplace add obra/superpowers-marketplace
@@ -46,7 +49,7 @@ The website supports 3 languages: English (en), French (fr), Kiswahili (sw). Bef
 
 ## Orchestration Steps
 
-### Step 0: Detect Languages (NEW)
+### Step 0: Detect Languages
 Read `docs/i18n-config.md`:
 1. Which languages are enabled? (en, fr, sw — could be all 3, or a subset)
 2. What is the default language for root domain redirect?

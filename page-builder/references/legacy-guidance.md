@@ -1,5 +1,8 @@
 # Page Builder Skill
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `page-builder/SKILL.md` and the current references in this directory first.
+
 Transform markdown content into stunning, production-grade Astro pages.
 
 ## Copywriting Reference
@@ -81,7 +84,7 @@ This skill applies these universal content and UX principles to Astro implementa
 
 ## BaseLayout.astro
 
-Must include language prop and hreflang tags (NEW for i18n):
+Must include a language prop and hreflang tags:
 
 ```astro
 ---
@@ -90,7 +93,7 @@ import type { Language } from '../utils/i18n';
 import { languages, getHrefLangPath } from '../utils/i18n';
 
 interface Props {
-  lang: Language;  // NEW: language code (en, fr, sw)
+  lang: Language;  // language code (en, fr, sw)
   title: string;
   description?: string;
   ogImage?: string;
@@ -108,7 +111,7 @@ const langToLocale = (l: Language) => {
 ---
 
 <!DOCTYPE html>
-<html lang={lang}>  {/* NEW: dynamic lang attribute */}
+<html lang={lang}>  {/* dynamic lang attribute */}
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -116,10 +119,10 @@ const langToLocale = (l: Language) => {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
-  <meta property="og:locale" content={langToLocale(lang)} />  {/* NEW: language variant */}
+  <meta property="og:locale" content={langToLocale(lang)} />  {/* language variant */}
   <title>{title} | {siteTitle}</title>
 
-  {/* NEW: Hreflang tags for all language versions */}
+  {/* Hreflang tags for all language versions */}
   {languages.map(langCode => (
     <link
       rel="alternate"
@@ -142,11 +145,11 @@ const langToLocale = (l: Language) => {
   })} />
 </head>
 <body class="font-body text-neutral-900 bg-surface antialiased">
-  <Header lang={lang} />  {/* NEW: pass lang to Header */}
+  <Header lang={lang} />  {/* pass lang to Header */}
   <main>
     <slot />
   </main>
-  <Footer lang={lang} />  {/* NEW: pass lang to Footer */}
+  <Footer lang={lang} />  {/* pass lang to Footer */}
 
   <!-- Scroll animation observer -->
   <script>
@@ -187,7 +190,7 @@ import type { Language } from '../utils/i18n';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
 interface Props {
-  lang: Language;  // NEW: current language
+  lang: Language;  // current language
 }
 
 const { lang } = Astro.props;
@@ -207,7 +210,7 @@ const currentPath = new URL(Astro.request.url).pathname.replace(/^\/[a-z]{2}/, '
       {/* More links from pages.md */}
     </div>
 
-    {/* Language Switcher (NEW) */}
+    {/* Language Switcher */}
     <div class="hidden md:block">
       <LanguageSwitcher currentLang={lang} currentPath={currentPath} />
     </div>
@@ -337,7 +340,7 @@ Every page gets a hero. Vary the style per page:
 - Max content width: `max-w-7xl mx-auto px-6`
 - Use `animate-on-scroll` on section children with stagger classes
 
-### Dynamic Routes (NEW for i18n)
+### Dynamic Routes
 
 All pages are generated under language paths:
 
