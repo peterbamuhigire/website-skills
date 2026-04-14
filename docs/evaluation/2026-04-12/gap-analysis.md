@@ -84,17 +84,19 @@ What remains unproven:
 - whether the governance rhythm will actually be maintained
 - whether repository reviews will consistently remove drift instead of only documenting it
 
-### 7. Legacy Documentation Drift Still Exists
+### 7. Legacy Documentation Drift Is Reduced, But Not Eliminated
 
-The repo now contains a stronger operational truth than the older evaluation described, but
-some repo-level docs and legacy references still carry:
+The highest-visibility repo-level drift has now been cleaned up, especially in the top-level
+documentation. The remaining gap is narrower and now sits mostly in older legacy references
+and long-tail supporting docs rather than in the primary entry points.
 
-- encoding noise
-- duplicated descriptions
-- stale claims from earlier states of the repo
-- sections that describe capabilities more aspirationally than operationally
+What still remains:
 
-This is not a fatal problem, but it does reduce coherence.
+- some older reference files still carry dated framing
+- a few supporting docs still overlap in scope or terminology
+- some capabilities are better documented than they are mechanically enforced
+
+This is no longer a top-level coherence problem, but it still warrants periodic cleanup.
 
 ## What Has Been Closed Since The Earlier Evaluation
 
