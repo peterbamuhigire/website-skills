@@ -39,6 +39,7 @@ description: Master orchestrator for building static websites from markdown cont
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/intake-questionnaire-template.md` when the project still needs structured intake or discovery capture before build orchestration.
+- Use `references/website-strategy-brief-template.md` as the canonical source-of-truth artifact before design and build work begins.
 - Use `references/project-artifact-standard.md` to confirm the minimum project artifact set before orchestrating downstream work.
 - Use `references/discovery-to-build-artifact-map.md` to hand off discovery outputs into sibling skills explicitly.
 - Use `references/project-stage-gates.md` to verify the current gate and required approvals before moving phases forward.

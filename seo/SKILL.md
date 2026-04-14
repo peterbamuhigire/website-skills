@@ -38,6 +38,7 @@ description: Comprehensive search engine optimization for multi-language static 
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/seo-topic-and-intent-map.md` to align search intent with page roles, proof burdens, and CTA posture.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
