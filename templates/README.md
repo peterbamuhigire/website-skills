@@ -54,6 +54,16 @@ These templates live in their respective skill folders and are used during the b
 | Brand Colours | `sector-strategies/templates/branding-colors-template.md` | If you have specific brand colours with hex codes |
 | Sector Brief | `sector-strategies/templates/{sector}/sector-brief-template.md` | For industry-specific design direction |
 
+### Project Log (Required for Retainer / Monthly Reports)
+
+Every client project must maintain a `project-log/` directory at the project root (alongside `docs/` and `photo-bank/`). This is the source of truth for monthly reports, retainer activity tracking, decision history, and incident records. The `monthly-report` skill reads from this directory.
+
+| Template | Location | When to Use |
+|---|---|---|
+| Project Log | [project-log-template.md](project-log-template.md) | Copy to `project-log/README.md` at project kickoff. Initialise `project-log/CHANGELOG.md` with the first kickoff entry the same day. |
+
+Structure: `project-log/CHANGELOG.md` (append-only daily entries), `project-log/monthly/YYYY-MM.md` (monthly roll-ups, source for monthly reports), `project-log/decisions/` (ADRs), `project-log/incidents/` (outages and security events).
+
 ## Photo References
 
 Across all templates, photos are referenced by filename only (e.g., `peter.jpg`, `office-front.jpg`). All photos must be placed in your project's `photo-bank/` folder. The AI automatically finds and processes them from there.

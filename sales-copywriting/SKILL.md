@@ -37,7 +37,8 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
 - Revisions, review findings, acceptance criteria, or quality guidance tied to the artifact under review.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- `references/website-messaging-framework.md` — primary reference for any website page: headline logic (4 U's, 8 types), sub-headline rules, slippery-slide, proof placement, objection-handling map, CTA ladder, service/about/FAQ structures, voice and tone, editing discipline. Grounded in Bly, Sugarman, Handley, Krzyzek.
+- `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
