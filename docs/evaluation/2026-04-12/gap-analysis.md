@@ -2,81 +2,117 @@
 
 ## Main System Gaps
 
-### 1. Contract Drift Between Skills
+### 1. Enforcement Still Lags Behind Guidance
 
-This is the biggest blocker to world-class status.
+This is now the primary limiter.
 
-Examples found:
+The repository has stronger artifacts, better stage gates, and much better operations than
+it had before, but too many standards are still enforced socially rather than mechanically.
 
-- blog content location conflicts: `docs/{lang}/blog/` vs `docs/blogs/`
-- image structure conflicts: categorized image folders vs one flat `src/assets/images/`
-- root routing conflicts: client-side language detection vs nginx root redirect
-- source-of-truth conflicts in photo handling: “never modify originals” vs “delete originals”
-- pattern conflicts: some references still encourage carousels while page-builder bans them
-- authenticity conflict: page-builder allows fictional testimonials, which undermines trust and compliance
+Examples:
 
-### 2. Weak Enforcement Layer
+- Lighthouse targets are stated, but not enforced by a hard gate
+- QA and rollback standards exist, but are not yet wired into an automated CI pipeline
+- accessibility standards are present in multiple places, but there is no dedicated accessibility gate
+- strategy and trust requirements are documented, but downstream validation is still light
 
-The repository has many excellent rules, but too few hard checks.
+### 2. Visual QA Is Still Missing
 
-Missing:
+The repo has excellent design thinking, but still lacks a first-class rendered-output review loop.
 
-- canonical artifact schemas
-- path validation
-- translation completeness checks
-- automated Lighthouse gates
-- accessibility regression checks
-- stronger build-time quality validation
+What is still missing:
 
-### 3. Accessibility Is Not A First-Class Pipeline Stage
+- screenshot comparison or screenshot review guidance as an operational gate
+- hierarchy and overflow checks on real pages
+- a structured method to catch "technically correct, visually weak" output
 
-Accessibility appears across the docs, but the system lacks:
+This matters because premium design quality is judged on the page, not in the reference notes.
 
-- a dedicated accessibility audit/build skill
-- automated contrast checking
-- keyboard and focus verification
-- stronger acceptance criteria before deploy
+### 3. Performance Is Better Framed Than Enforced
 
-### 4. Performance Is More Aspirational Than Operational
+Performance discipline is stronger than before, especially after Phase 6, but it is not yet
+machine-enforced across the system.
 
-The repo repeatedly targets `<500KB` and `95+ Lighthouse`, but lacks:
+Missing or still weak:
 
-- a standard performance command
-- route-level measurement
-- CI failure on regression
-- budget manifests for fonts, images, and JS
+- one canonical performance-gate command
+- route-level performance budget enforcement
+- CI failure on performance regression
+- bundle, image, and JS budget tracking
 
-### 5. CRO Is Stronger In Audit Than In Generation
+### 4. Accessibility Is Still Not A First-Class System Skill
 
-There is good CRO thinking, but it is not yet a full generation-time operating system. The repo needs stronger logic for page intent, CTA strategy, proof sequencing, and offer architecture before launch.
+Accessibility is respected in the repo, but it still behaves more like a distributed expectation
+than a dedicated operating layer.
 
-## Premium Design Bottlenecks
+What remains missing:
 
-### No Visual QA Loop
+- a dedicated accessibility-audit or accessibility-gate skill
+- stronger keyboard/focus verification rules in the main launch flow
+- more explicit accessibility pass/fail output tied to stage gates
 
-There is no first-class mechanism for screenshot review, hierarchy checks, consistency checks, or detecting low-quality visual output from actual pages.
+### 5. CI And Automation Are Still Partial
 
-### Too Much Burden On The Model
+The repository now has:
 
-The repo depends on the model to remember, reconcile, and prioritize a large number of instructions across many files. That increases variance and weakens repeatability.
+- QA matrices
+- pre-launch checklists
+- rollback runbooks
+- a Playwright starter
 
-### Weak Component Contracting
+That is real progress. But the engine still lacks a canonical automated CI path at the repository level.
 
-The repo explains what components should do, but less often defines structured contracts for props, fallbacks, states, and content schemas.
+Remaining gap:
 
-## SEO / Content Gaps
+- the standards exist, but the repo does not yet guarantee they run automatically and consistently
 
-- insufficient canonical content schemas
-- weak internal-linking orchestration
-- AI-search/GEO guidance discussed more than systematically encoded
+### 6. Governance Exists, But Has Not Yet Been Proven At Team Scale
+
+Phase 9 added the right governance structures:
+
+- role-based training map
+- governance policy
+- quality metrics dashboard definition
+- maintenance calendar
+- agency operations handbook index
+
+This closes the documentation gap.
+
+What remains unproven:
+
+- whether a second or third operator can run the system cleanly in practice
+- whether the governance rhythm will actually be maintained
+- whether repository reviews will consistently remove drift instead of only documenting it
+
+### 7. Legacy Documentation Drift Still Exists
+
+The repo now contains a stronger operational truth than the older evaluation described, but
+some repo-level docs and legacy references still carry:
+
+- encoding noise
+- duplicated descriptions
+- stale claims from earlier states of the repo
+- sections that describe capabilities more aspirationally than operationally
+
+This is not a fatal problem, but it does reduce coherence.
+
+## What Has Been Closed Since The Earlier Evaluation
+
+These were real weaknesses before and are materially better now:
+
+- intake and qualification are now structured
+- strategy is now a first-class artifact rather than an implied activity
+- launch and rollback are now documented system behavior
+- post-launch review exists as an operating standard
+- governance and onboarding are now explicit
+- the repo is less founder-dependent than before
 
 ## Bottom-Line Limiters
 
-The main blockers preventing world-class status are:
+The main blockers preventing a true world-class score today are:
 
-- inconsistent contracts
-- insufficient automation
-- weak performance and accessibility enforcement
-- too much reliance on interpretation
-- no strong visual QA loop
-- CRO not yet deeply embedded into generation-time logic
+- insufficient hard validation
+- missing visual QA
+- incomplete accessibility enforcement
+- incomplete CI integration
+- limited proof that the governance model works under multi-operator conditions

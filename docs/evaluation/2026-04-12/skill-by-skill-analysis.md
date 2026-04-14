@@ -2,123 +2,188 @@
 
 ## website-builder
 
-Strengths: clear entry point, sensible pipeline intent, strong high-level system vision.
+Strengths:
 
-Weaknesses: orchestration is too narrative, input/output contracts are loose, and multilingual path assumptions are inconsistent.
+- now clearly functions as the system owner for orchestration, artifact standards, stage gates,
+  strategy handoff, and governance references
+- materially stronger than in the earlier evaluation
 
-Improvements: add a pipeline manifest, stage exit criteria, and canonical artifact ownership.
+Weaknesses:
+
+- still more documentary than machine-enforced
+
+Assessment:
+
+- one of the most improved skills in the repository
 
 ## design-system
 
-Strengths: one of the strongest skills; strong typography, hierarchy, spacing, motion, and anti-generic design guidance.
+Strengths:
 
-Weaknesses: still advisory rather than validated; no screenshot-based quality gate.
+- still among the strongest craft skills in the repo
+- protects the system from generic visual output
 
-Improvements: add canonical token schema and visual QA acceptance checks.
+Weaknesses:
+
+- still lacks a rendered-output QA loop
+
+Assessment:
+
+- elite guidance, but not yet elite validation
 
 ## page-builder
 
-Strengths: strong practical UX guidance, good multilingual awareness, useful anti-pattern coverage.
+Strengths:
 
-Weaknesses: allows fictional testimonials, component contracts are still loose, and quality depends heavily on model synthesis.
+- stronger than before because Phase 3 now feeds it better strategy inputs
+- page-goal logic, trust logic, and conversion structure are more intentional
 
-Improvements: ban invented proof, define page-type templates, and add screenshot QA criteria.
+Weaknesses:
+
+- rendered-output validation and visual QA are still missing
+
+Assessment:
+
+- strong implementation skill with remaining QA blind spots
 
 ## seo
 
-Strengths: broad and commercially relevant, especially for multilingual SEO, schema, sitemaps, and content support.
+Strengths:
 
-Weaknesses: implementation claims are stronger than enforcement mechanisms, and metadata contracts need tightening.
+- commercially strong and structurally better supported by Phase 3 and Phase 6
+- stronger intent mapping and launch verification than before
 
-Improvements: add route-level validation and a canonical SEO input schema.
+Weaknesses:
 
-## blog-writer
+- still needs harder metadata and route-level validation
 
-Strengths: strong editorial ambition, strong voice guidance, good SEO integration.
+Assessment:
 
-Weaknesses: major conflict over content location, unclear multilingual slug contract, and weak structural validation.
-
-Improvements: unify source-of-truth model, add frontmatter validation, and strengthen multilingual publishing rules.
-
-## i18n
-
-Strengths: serious multilingual thinking from the start, good text-expansion awareness, good hreflang intent.
-
-Weaknesses: root-routing conflicts with deploy, and parity/fallback rules need more formalization.
-
-Improvements: pick one routing model, add parity validation, and formalize missing-translation behavior.
-
-## photo-manager
-
-Strengths: good catalog-first mindset, useful dimension awareness, useful OG-image thinking.
-
-Weaknesses: conflicts with README and itself on source-of-truth and directory structure; includes risky deletion guidance.
-
-Improvements: keep originals immutable, define one canonical storage model, and formalize `_catalog.json`.
+- strong and more operational than before
 
 ## deploy
 
-Strengths: good static hosting awareness, useful multi-language checklist mindset.
+Strengths:
 
-Weaknesses: redirect logic conflicts with i18n, and verification is too manual.
+- one of the largest improvements in the repo
+- now owns QA, pre-launch verification, deployment runbooks, rollback, observability baseline,
+  and post-launch review artifacts
 
-Improvements: create one canonical verification script and integrate performance/accessibility smoke tests.
+Weaknesses:
+
+- still needs a more canonical executable CI path
+
+Assessment:
+
+- transformed from a light final-step skill into a real launch-operations layer
+
+## design-reference
+
+Strengths:
+
+- Phase 3 made this much more strategic by adding competitor analysis and synthesis templates
+
+Weaknesses:
+
+- still depends on strong operator judgment to turn raw findings into excellent direction
+
+Assessment:
+
+- materially more valuable than before
 
 ## brand-alignment
 
-Strengths: commercially valuable, strong customer-centric framing, good voice authenticity emphasis.
+Strengths:
 
-Weaknesses: not structured enough for downstream automation.
+- trust architecture and alignment logic now have clearer structure
 
-Improvements: produce a formal brand-alignment artifact or checklist that downstream skills consume.
+Weaknesses:
+
+- remains more of a high-value review lens than an enforced validation layer
+
+Assessment:
+
+- strategically strong, automation-light
 
 ## content-writing
 
-Strengths: practical, high-signal writing guidance focused on clarity, scanning, and benefits.
+Strengths:
 
-Weaknesses: mostly prose guidance without measurable validation.
+- now better connected to strategy through the message hierarchy framework
+- remains high-signal and practical
 
-Improvements: add content QA templates and measurable copy checks.
+Weaknesses:
 
-## sector-strategies
+- still mostly guidance, not scored validation
 
-Strengths: major differentiator, strong sector-specific trust and design psychology.
+Assessment:
 
-Weaknesses: some sector guidance conflicts with global rules, and customization still relies on strong operator judgment.
+- strong cross-cutting skill with room for measurable QA
 
-Improvements: enforce global rules consistently and add sector-specific acceptance criteria.
+## they-ask-you-answer
 
-## cro-audit
+Strengths:
 
-Strengths: strong commercial layer, useful prioritization model, materially better than average.
+- Phase 3 improved it by turning buyer questions into research and strategy inputs, not only content ideas
 
-Weaknesses: audit-focused rather than generation-focused.
+Weaknesses:
 
-Improvements: pair it with a generation-time CRO skill.
+- still depends on operators actually capturing those questions well
 
-## seo-audit
+Assessment:
 
-Strengths: useful verification layer with broad checklist coverage.
+- more integrated into the system than before
 
-Weaknesses: still largely manual.
+## monthly-report
 
-Improvements: convert major checks into scripts and standardized outputs.
+Strengths:
+
+- now sits closer to a broader agency operating model than before
+
+Weaknesses:
+
+- not yet fully integrated with the Phase 9 metrics dashboard as a hard operating rhythm
+
+Assessment:
+
+- useful and promising, but not yet fully connected to the governance engine
+
+## agency-positioning
+
+Strengths:
+
+- strong commercial backbone for offer logic, proof, and premium positioning
+- substantially stronger than a generic "about the agency" skill
+
+Weaknesses:
+
+- commercial quality still depends on disciplined use, not only existence
+
+Assessment:
+
+- one of the strongest strategic business layers in the repo
 
 ## Summary
 
-Best skills today:
+Most improved skills and systems:
+
+- `website-builder`
+- `deploy`
+- `design-reference`
+- `seo`
+- `brand-alignment`
+
+Current top-tier skills:
 
 - `design-system`
 - `page-builder`
-- `content-writing`
-- `brand-alignment`
+- `agency-positioning`
 - `seo`
-- `sector-strategies`
-
-Highest strategic improvement opportunity:
-
 - `website-builder`
-- `i18n`
-- `photo-manager`
-- `deploy`
-- `blog-writer`
+
+Remaining improvement pressure:
+
+- rendered-output QA
+- accessibility enforcement
+- CI automation
+- documentation coherence

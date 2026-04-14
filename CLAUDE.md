@@ -6,6 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Claude Code skills library** — a collection of SKILL.md files that teach Claude how to build static websites from markdown content and photos. It is not a standalone application. It is designed to be added as a **Git submodule** at `.claude/skills/` in every client website project. All client projects share the same skills; updating this repo propagates improvements everywhere.
 
+The repository now also acts as a portable agency operating system with explicit layers for:
+
+- qualification and intake
+- strategy and research
+- build and SEO
+- launch and rollback operations
+- governance and operator onboarding
+
 The repository is also maintained as a **portable skill system** that Codex can consume directly. Claude workflows remain the baseline, but skill instructions now follow a dual-compatible pattern:
 
 - `SKILL.md` is the concise execution layer
@@ -26,13 +34,13 @@ content-writing/SKILL.md       ← Copywriting standards: headlines, ledes, read
 brand-alignment/SKILL.md       ← Brand coherence quality gate (cross-cutting, always active)
 design-reference/SKILL.md      ← Analyses reference URLs → docs/design-reference.md
 sector-strategies/SKILL.md     ← Industry-specific design & trust signals → docs/sector-brief.md
-website-builder/SKILL.md       ← Master orchestrator (entry point)
+website-builder/SKILL.md       ← Master orchestrator + system owner for artifact standards, governance references, and handbook index
 design-system/SKILL.md         ← Fonts, colours, visual identity, animations
 photo-manager/SKILL.md         ← Photo cataloguing, dimensions, logo detection, asset organisation
 page-builder/SKILL.md          ← Multi-language markdown content → Astro pages and components
 seo/SKILL.md                   ← Multi-language SEO, hreflang, language-specific sitemaps
 blog-writer/SKILL.md           ← Bilingual blog articles (EN + FR), East African English & West African French voice
-deploy/SKILL.md                ← Build verification, language-aware Nginx config, sitemap pinging
+deploy/SKILL.md                ← Build verification, QA, launch checks, deployment and rollback runbooks, observability baseline
 ```
 
 ### Utility Skills
@@ -141,6 +149,21 @@ Utility skills run independently of the build pipeline:
 - **cro-audit** — use post-build (pre-launch) or as standalone audit on existing sites; 7 audit dimensions, 89-item heuristic checklist, Brunson's 86 split-test rules, ICE hypothesis scoring; produces docs/cro-audit-report.md
 - **social-media** — social media strategy and management as a service; 4-Ring Channel model, 5 Content Buckets, platform playbook (7 platforms), 3-tier agency pricing ($800–$5,000/month), content calendar templates, repurposing matrix
 - **sectors/legal** — use instead of sector-strategies for any law firm client; covers client psychology, 8 practice area types, ethics/bar advertising constraints, attorney profiles, legal local SEO, intake conversion
+
+## Current Agency Engine Layers
+
+The repository should now be understood in five layers:
+
+1. Commercial layer
+   qualification, offers, proposals, proof positioning
+2. Strategy layer
+   discovery, strategy brief, trust architecture, page-goal mapping, search intent
+3. Build layer
+   design system, images, pages, SEO, blog and authority assets
+4. Launch layer
+   QA, deployment, rollback, observability, review windows
+5. Governance layer
+   role-based training, maintenance cadence, quality metrics, safety review, documentation hygiene
 
 ## Required Claude Code Plugins
 
