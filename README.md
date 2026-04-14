@@ -99,8 +99,10 @@ website-skills/              ← this repo (submoduled into .claude/skills/)
 │   └── SKILL.md
 ├── skill-safety-audit/      Scans skills for unsafe or malicious instructions (utility)
 │   └── SKILL.md
-└── update-claude-documentation/  Updates project documentation systematically (utility)
-    └── SKILL.md
+├── update-claude-documentation/  Updates project documentation systematically (utility)
+│   └── SKILL.md
+└── proposal-skills/            Git submodule — world-class proposal generation (cover letters, methodology, team composition, financials)
+    └── (separate repo: https://github.com/peterbamuhigire/proposal-skills)
 ```
 
 ## Skills
@@ -264,6 +266,16 @@ Build-time image compression for static websites. Compresses photos from `photo-
 ### update-claude-documentation (Utility — Documentation Updater)
 
 Systematically updates project documentation (README.md, CLAUDE.md, and related files) after significant changes. Ensures consistency across all docs, maps changes to affected files, and enforces the 500-line hard limit on all markdown files.
+
+### proposal-skills (Git Submodule — World-Class Proposal Generation)
+
+Added as a git submodule at `proposal-skills/` (repo: `https://github.com/peterbamuhigire/proposal-skills`). A complete proposal-writing skill set covering the ten numbered sections of a professional consulting / website proposal: cover letter, executive summary, understanding of assignment, firm profile, relevant experience, methodology, team composition, work plan, expression of interest, and financial proposal. Also bundles supporting domain skills (project management, change management, M&E, stakeholder engagement, capacity building, GESI, safeguards, data management).
+
+Use when a prospect requires a formal written proposal — especially RFPs, Expressions of Interest, multi-section submissions, or any situation where the `agency-positioning` skill's short proposal template is too light. The `agency-positioning` skill continues to own commercial logic (offer ladder, pricing, qualification, scope); `proposal-skills` owns document structure for formal, multi-section deliverables.
+
+Update to the latest version of proposal-skills alongside other skills: `git submodule update --remote proposal-skills`.
+
+**Produces:** Multi-section `.docx` / markdown proposal documents ready for submission.
 
 ---
 

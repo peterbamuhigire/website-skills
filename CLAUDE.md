@@ -66,6 +66,17 @@ update-claude-documentation/SKILL.md  ← Systematic documentation updater
 east-african-english/SKILL.md         ← Legacy English-only standard (superseded by language-standards)
 ```
 
+### Submoduled Skill Sets
+
+```
+proposal-skills/                      ← Git submodule: world-class proposal generation (https://github.com/peterbamuhigire/proposal-skills)
+                                        Ten numbered sections (cover letter → financial proposal) + supporting domain skills
+                                        (project mgmt, change mgmt, M&E, stakeholder engagement, capacity building, GESI, safeguards, data mgmt)
+                                        Use when a prospect requires a formal multi-section written proposal (RFP, EoI, institutional submissions)
+                                        agency-positioning owns commercial logic; proposal-skills owns document structure
+                                        Update via: git submodule update --remote proposal-skills
+```
+
 ### Sector-Specific Skills
 
 ```
