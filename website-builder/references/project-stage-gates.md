@@ -20,7 +20,7 @@ cause expensive rework, weak websites, and scope conflict.
 |---|---|---|---|---|
 | 1. Qualified Lead | Sales lead | Qualification notes, scorecard, routing decision | CRM note or internal review | Do not open proposal work; route to decline, referral, or paid discovery |
 | 2. Paid Discovery or Signed Proposal | Sales lead | Signed proposal or paid-discovery invoice, initial intake file | Signed document or paid invoice | Stop strategy and scheduling until commercial commitment exists |
-| 3. Strategy Approved | Strategy lead | Discovery summary, positioning summary, sitemap and page goals, offer and CTA hierarchy | Strategy review call plus written confirmation | Return to discovery; no design work starts |
+| 3. Strategy Approved | Strategy lead | Discovery summary, website strategy brief, positioning summary, sitemap and page goals, offer and CTA hierarchy | Strategy review call plus written confirmation | Return to discovery and strategy; no design work starts |
 | 4. Design System Approved | Design lead | Style brief, approved references, design direction summary | Annotated review or written sign-off | Return to design direction; no build styling starts |
 | 5. Content And Page Structure Approved | Content lead | Final page structure, content inventory, priority page copy plan, SEO brief draft | Document approval or review meeting | Return to content planning; no production page build begins |
 | 6. Build Approved For QA | Production lead | Implemented pages, component checks, technical checklist, tracked known issues | Internal QA handoff note | Return to build; no client QA or launch preparation |
@@ -49,6 +49,7 @@ Keep each gate checklist short. Focus on the few dangerous misses.
 
 - [ ] Business goals are explicit
 - [ ] Audience is defined
+- [ ] Strategy brief is complete
 - [ ] Offer hierarchy is agreed
 - [ ] Sitemap is approved
 - [ ] Major assumptions are visible

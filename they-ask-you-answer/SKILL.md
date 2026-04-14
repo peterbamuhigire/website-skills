@@ -38,6 +38,7 @@ description: Content-driven lead generation strategy for premium agencies using 
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/buyer-question-research-method.md` when turning buyer questions into strategy, SEO, trust, and content inputs.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

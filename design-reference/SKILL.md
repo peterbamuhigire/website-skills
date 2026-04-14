@@ -38,6 +38,8 @@ description: Analyses up to 5 reference websites provided by the client, visits 
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/competitor-analysis-worksheet.md` to analyse competitors as positioning and trust inputs, not just design inspiration.
+- Use `references/research-synthesis-template.md` to turn reference and sector analysis into differentiated design direction.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

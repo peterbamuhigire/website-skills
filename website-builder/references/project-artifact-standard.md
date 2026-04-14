@@ -13,6 +13,7 @@ client-project/
     operations/
       qualification-notes.md
       discovery-summary.md
+      website-strategy-brief.md
       positioning-summary.md
       sitemap-and-page-goals.md
       offer-and-cta-hierarchy.md
@@ -52,7 +53,27 @@ Required fields:
 - major risks
 - open questions
 
-### 2. Positioning Summary
+### 2. Website Strategy Brief
+
+Purpose:
+
+- create the canonical source of truth before design begins
+- unify business logic, audience logic, trust logic, page logic, and SEO intent
+
+Required fields:
+
+- business objective
+- primary audience segments
+- decision criteria and objections
+- trust requirements
+- offer ladder
+- CTA hierarchy
+- positioning statement
+- page architecture
+- SEO topic and intent map
+- visual direction constraints
+
+### 3. Positioning Summary
 
 Purpose:
 
@@ -66,7 +87,7 @@ Required fields:
 - differentiators
 - trust signals
 
-### 3. Sitemap And Page Goals
+### 4. Sitemap And Page Goals
 
 Purpose:
 
@@ -80,7 +101,7 @@ Required fields:
 - CTA
 - proof needed
 
-### 4. Offer And CTA Hierarchy
+### 5. Offer And CTA Hierarchy
 
 Purpose:
 
@@ -94,7 +115,7 @@ Required fields:
 - primary CTA
 - secondary CTA
 
-### 5. Style Brief
+### 6. Style Brief
 
 Purpose:
 
@@ -108,7 +129,7 @@ Required fields:
 - references
 - do-not-do list
 
-### 6. Content Inventory
+### 7. Content Inventory
 
 Purpose:
 
@@ -122,7 +143,7 @@ Required fields:
 - missing content
 - owner for each missing item
 
-### 7. SEO Brief
+### 8. SEO Brief
 
 Purpose:
 
@@ -135,7 +156,7 @@ Required fields:
 - schema assumptions
 - measurement requirements
 
-### 8. Launch Checklist
+### 9. Launch Checklist
 
 Purpose:
 

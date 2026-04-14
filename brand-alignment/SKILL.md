@@ -38,6 +38,7 @@ description: Ensures every website element — layout, messaging, navigation, im
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/trust-architecture-checklist.md` when validating proof, legitimacy, and credibility requirements across a site's strategy or pages.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

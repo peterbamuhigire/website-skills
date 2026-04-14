@@ -12,6 +12,7 @@ Every downstream skill should consume an approved artifact, not a vague conversa
 
 | Discovery artifact | What it contains | Produced in Phase 2 | Consumed by | Why it matters |
 |---|---|---|---|---|
+| Website strategy brief | Business objective, audiences, decision logic, trust requirements, offer ladder, page architecture, SEO intent, visual constraints | Phase 3 | `design-reference`, `brand-alignment`, `content-writing`, `page-builder`, `seo`, `design-system` | Becomes the source of truth for the project |
 | Discovery summary | Business model, audience, goals, constraints, risks, unknowns | Yes | `brand-alignment`, `design-reference`, `sector-strategies`, `content-writing`, `page-builder`, `seo` | Establishes the factual baseline |
 | Positioning summary | Audience, value proposition, differentiation, trust stance | Yes or Phase 1 handoff | `brand-alignment`, `content-writing`, `page-builder` | Prevents generic messaging |
 | Sitemap and page goals | Page list, page purpose, primary CTA by page | Yes | `page-builder`, `seo`, `content-writing` | Keeps structure tied to conversions |
@@ -43,6 +44,20 @@ Must include:
 - major risks
 - technical and compliance constraints
 - open questions
+
+### Website Strategy Brief
+
+Must include:
+
+- business objective
+- priority audiences
+- positioning statement
+- trust requirements
+- offer ladder
+- CTA hierarchy
+- page architecture
+- SEO topic and intent map
+- visual direction constraints
 
 ### Positioning Summary
 
@@ -110,6 +125,7 @@ Must include:
 No skill work should begin until the corresponding artifact has cleared the right gate:
 
 - `brand-alignment` after Strategy Approved
+- `design-reference` after the strategy brief exists and the relevant market inputs are reviewed
 - `design-reference` and `design-system` after Design System Approved
 - `content-writing` and `page-builder` after Content and Page Structure Approved
 - `seo` begins once sitemap and page goals are approved, then finalises during build
