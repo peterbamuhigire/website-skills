@@ -2,149 +2,113 @@
 
 ## Priority Order
 
-1. fix cross-skill contradictions
-2. add hard validation and QA gates
-3. strengthen orchestration contracts
-4. operationalize accessibility and performance
-5. deepen CRO and premium design review
+1. add hard validation layers for performance, accessibility, and rendered output
+2. integrate the Phase 6 QA and E2E standards into a canonical CI path
+3. prove the Phase 9 governance model in real multi-operator use
+4. continue reducing documentation drift and legacy contradiction
+5. complete the missing roadmap areas that still limit the engine's ceiling
 
-## Improve Existing Skills
+## Highest-Leverage Next Steps
+
+### 1. Create A Real Performance Gate
+
+Add a first-class acceptance gate that can fail a project or a repository change when:
+
+- Lighthouse drops below the accepted threshold
+- JS budget exceeds the limit
+- image or asset budgets regress materially
+
+The repo already states performance standards. It now needs enforcement.
+
+### 2. Create A Real Accessibility Gate
+
+Accessibility is too important to remain only a shared principle.
+
+Add:
+
+- keyboard and focus checks
+- structured accessibility acceptance criteria
+- automated checks plus manual QA requirements
+
+### 3. Add A Visual QA Layer
+
+This is the most important missing premium-quality mechanism.
+
+Add a visual QA layer that checks:
+
+- hierarchy
+- spacing consistency
+- overflow
+- empty or weak sections
+- mobile visual integrity
+- generic or low-intent output
+
+### 4. Wire Phase 6 Into CI
+
+The Playwright starter and QA matrix are valuable, but they should become the beginning of a
+canonical CI flow rather than a manual option.
+
+Recommended direction:
+
+- build
+- smoke and navigation E2E
+- form E2E where possible
+- metadata and crawl checks
+- launch artifact verification
+
+### 5. Validate The Governance Model In Practice
+
+Run the Phase 9 framework against real operator onboarding:
+
+- strategist
+- implementer
+- SEO/content operator
+- QA/launch operator
+
+Success should be measured, not assumed.
+
+### 6. Continue Documentation Consolidation
+
+Use the new governance policy actively.
+
+Specifically:
+
+- remove stale or duplicated claims
+- clean up repo-level documentation
+- keep `SKILL.md` concise and put operational depth in owning references
+- update evaluation docs whenever the system changes materially
+
+## Targeted Skill Recommendations
 
 ### website-builder
 
-- add a canonical pipeline manifest
-- define required and optional artifacts
-- define stage pass/fail criteria
-- refuse ambiguous states rather than improvising
-
-### i18n
-
-- choose one canonical root-routing model
-- add multilingual slug-map standards
-- validate translation completeness and metadata parity
-- define fallback behavior for missing translations
-
-### photo-manager
-
-- resolve flat vs categorized directory structure permanently
-- remove instructions to delete originals
-- formalize `_catalog.json` schema
-- remove carousel assumptions unless globally allowed
-
-### page-builder
-
-- ban fictional testimonials and invented proof
-- define page-type templates with required/optional sections
-- add stronger component contracts
-- add screenshot-based review criteria
-
-### seo
-
-- add canonical metadata schema
-- validate metadata completeness route by route
-- formalize schema selection by page type
-- strengthen internal-linking rules
-
-### blog-writer
-
-- unify markdown source-of-truth model
-- add frontmatter schema validation
-- add multilingual slug relationship rules
-- strengthen citation and internal-linking standards
+- keep using it as the system owner for cross-skill orchestration, governance, and handbook indexing
+- add a clearer machine-readable build contract over time
 
 ### deploy
 
-- create one canonical verification script
-- integrate performance and accessibility smoke tests
-- resolve redirect logic with i18n
+- turn the new runbooks and checklists into a more executable path
+- add a canonical CI example that teams can copy directly into client projects
 
-## New Skills To Create
+### design-system and page-builder
 
-### accessibility-audit
+- add visual QA acceptance criteria
+- keep narrowing the gap between design ambition and rendered-output review
 
-Purpose:
+### seo
 
-- make accessibility a mandatory pre-deploy gate
+- move from strong guidance to stronger route-level validation
+- connect the topic/intent system more tightly to metadata completeness checks
 
-### lighthouse-performance-gate
+### monthly-report and retention layers
 
-Purpose:
-
-- turn performance promises into measurable acceptance criteria
-
-### visual-qa
-
-Purpose:
-
-- review actual screenshots for hierarchy, consistency, overflow, and AI slop
-
-### cro-engine
-
-Purpose:
-
-- apply CRO logic during generation, not only during audit
-
-### content-schema-validator
-
-Purpose:
-
-- validate markdown/frontmatter/contracts before generation
-
-### analytics-and-measurement
-
-Purpose:
-
-- standardize event tracking, conversions, and KPI readiness
-
-### premium-art-direction
-
-Purpose:
-
-- raise visual outputs from “good” to agency-grade through stronger art-direction patterns and review loops
-
-## System-Level Improvements
-
-### Create A Canonical Build Contract
-
-Define one repository-wide specification for:
-
-- input locations
-- output locations
-- artifact schemas
-- skill ownership
-
-### Introduce Stage Gates
-
-Recommended gates:
-
-- content
-- design
-- build
-- performance
-- accessibility
-- SEO
-- CRO
-- deploy
-
-### Reduce Narrative Duplication
-
-Keep high-level docs high-level. Keep operational truth in one place.
-
-### Add Golden Projects
-
-Create 2-3 reference projects that serve as quality baselines and regression examples.
-
-### Add A Hard “Never Fabricate” Rule
-
-The system should never invent:
-
-- testimonials
-- clients
-- metrics
-- awards
-- certifications
-- locations
+- connect the Phase 9 quality metrics dashboard to actual recurring review artifacts
+- make the scorecard and repository evolution rhythm observable, not only defined
 
 ## Expected Outcome
 
-If the repo fixes contract drift and adds strong QA automation, it can realistically move from **7.1/10** into the **8.3–8.8/10** range. A true 9+ rating requires performance, accessibility, CRO, and visual QA to become enforced system behavior.
+If the repository adds hard performance and accessibility gates, a visual QA layer, and a
+canonical CI path, it can reasonably move from **8.5/10** into the **9.0-9.3/10** range.
+
+That would be enough to describe it as a genuinely world-class agency engine rather than an
+advanced but still partially operator-dependent system.

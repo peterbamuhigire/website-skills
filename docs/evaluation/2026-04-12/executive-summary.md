@@ -2,37 +2,73 @@
 
 ## Overall Assessment
 
-Website Skills is a strong strategic skill library, but it is not yet a world-class website generation engine.
+Website Skills is no longer just a strong website skill library. It is now a serious
+agency operating system with meaningful commercial, strategic, delivery, launch, and
+governance infrastructure.
 
-Its biggest strength is the depth of embedded thinking around design, SEO, multilingual structure, UX, and conversion. Its biggest weakness is that too much of that quality exists as guidance rather than as enforceable system behavior.
+The earlier assessment was correct for the repository at that time. It is no longer an
+accurate description of the current system.
 
-## Strengths
+## Current Position
 
-- Strong vision for premium, non-generic websites
-- Good modular architecture across pipeline, cross-cutting, utility, and sector skills
-- Excellent design and copy guidance in `design-system`, `page-builder`, `content-writing`, and `brand-alignment`
-- Serious multilingual ambition with EN/FR/SW from the start
-- Strong SEO and content marketing stack
-- Clear premium-agency orientation rather than commodity brochure-site thinking
+The repository now has:
 
-## Weaknesses
+- premium offer and qualification logic
+- repeatable intake and discovery operations
+- a canonical strategy brief and research handoff layer
+- stronger conversion, proof, and authority assets
+- launch, rollback, QA, and post-launch operations
+- governance, role-based onboarding, maintenance cadence, and quality metrics definitions
 
-- Internal contradictions reduce reliability
-- Performance claims are weakly enforced
-- Accessibility is respected in prose but not yet operationalized as a first-class gate
-- CRO is stronger as an audit layer than as a generation engine
-- Too much depends on the model reconciling long instructions across many files
+This is a material step change from "good craft guidance" to "agency engine."
 
-## Overall Score
+## What Changed Since The Earlier Evaluation
 
-**7.1 / 10**
+The previous evaluation identified five primary blockers:
+
+- contract drift
+- weak enforcement
+- weak launch discipline
+- too much founder/operator dependence
+- insufficient governance
+
+This repository has now addressed a meaningful portion of those problems.
+
+Most importantly:
+
+- the system has a clearer artifact chain
+- stage gates now govern more of the lifecycle
+- launch and rollback are no longer implied or ad hoc
+- governance and onboarding are now documented explicitly
+- the repo has moved closer to a machine that another operator can learn and run
+
+## New Overall Score
+
+**8.5 / 10**
 
 ## Readiness Level
 
-**Strong foundation, not elite production engine yet**
+**Advanced agency engine, nearing elite**
 
-Today, the system can help produce strong static marketing websites. It cannot yet reliably guarantee agency-grade consistency, 95+ Lighthouse discipline, or premium conversion performance across projects without substantial operator judgment.
+The repository can now support a premium website agency model with much more discipline
+than before. It is strong enough to train operators, run strategy, build with intent,
+launch with control, and review the health of the system itself.
+
+## Why It Is Not Yet Fully World-Class
+
+The remaining gap is no longer mostly about missing business process. It is now more about
+enforcement and validation.
+
+The biggest remaining constraints are:
+
+- no first-class accessibility gate
+- no true performance gate with hard failure thresholds
+- no visual QA layer for screenshots and rendered output
+- no fully integrated CI path that runs the new QA and E2E standards automatically
+- some legacy guidance and documentation still carry drift, duplication, or formatting noise
 
 ## Bottom Line
 
-This repository is much closer to a high-potential operating system for elite website generation than to a finished elite engine. To reach world-class status, it needs tighter contracts, stronger orchestration, real validation gates, and less dependence on interpretation.
+This repository is now much closer to a world-class website agency engine than to a prompt
+library. It has crossed into real systems territory. What separates it from elite status is
+not the absence of thought; it is the absence of a few final enforcement layers.

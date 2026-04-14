@@ -1,81 +1,76 @@
 # Suggested Reading
 
-## Books
+## Purpose
 
-### Steve Krug — *Don't Make Me Think*
+This list is no longer a generic "what the repo should probably read" list.
+It is a targeted reading list for the remaining gaps that still separate the current
+system from a true world-class benchmark.
 
-Relevant because it sharpens navigation, scanability, and clarity. It directly improves page-builder and content-writing quality.
+## Highest-Priority Remaining Topics
 
-### Don Norman — *The Design of Everyday Things*
+### Accessibility Engineering
 
-Relevant because it strengthens affordance thinking, usability discipline, and interaction clarity.
+Needed because:
 
-### Susan Weinschenk — *100 Things Every Designer Needs to Know About People*
+- accessibility is respected but not yet enforced as a first-class gate
 
-Relevant because it gives applied cognitive principles for hierarchy, memory, attention, and motivation.
+Reading direction:
 
-### Robert Cialdini — *Influence*
+- practical web accessibility implementation
+- keyboard and focus management
+- audit methods that combine automation and manual testing
 
-Relevant because it strengthens ethical persuasion systems for trust, proof, CTA strategy, and offer framing.
+### Performance Engineering
 
-### Donald Miller — *Building a StoryBrand*
+Needed because:
 
-Relevant because it improves customer-as-hero messaging and homepage clarity.
+- performance standards exist, but enforcement is still weak
 
-### April Dunford — *Obviously Awesome*
+Reading direction:
 
-Relevant because it sharpens positioning and prevents generic value propositions.
+- performance budgeting
+- CI performance regression testing
+- route-level measurement and thresholding
 
-### Lara Callender Hogan — *Designing for Performance*
+### Visual QA And Design Review Systems
 
-Relevant because it ties visual and frontend decisions directly to real performance outcomes.
+Needed because:
 
-## Standards And Official Sources
+- the repo still lacks a first-class rendered-output review loop
 
-### Google Web Vitals / web.dev
+Reading direction:
 
-Use this to operationalize performance budgets, Core Web Vitals targets, and route-level quality gates.
+- screenshot review systems
+- design QA for responsive layouts
+- premium design review heuristics
 
-### WCAG 2.1 / WAI Quick Reference
+### Experimentation And CRO Operations
 
-Use this to turn accessibility prose into auditable requirements and a first-class pipeline gate.
+Needed because:
 
-### Schema.org + Google Search Central
+- the repository now has stronger strategy and launch systems, but still lacks a full
+  generation-time experimentation and optimization layer
 
-Use this to ground structured data implementation in canonical standards.
+Reading direction:
 
-### MDN Web Docs
+- structured A/B testing programs
+- evidence-based CRO systems
+- post-launch experimentation cadence
 
-Use this to tighten semantic HTML, browser-safe CSS, accessibility patterns, and frontend reliability.
+### Team Enablement At Scale
 
-## Frontend / Design System Sources
+Needed because:
 
-### Every Layout — Heydon Pickering & Andy Bell
+- Phase 9 creates the governance and training model, but the repo still needs proof that
+  it works under repeated multi-operator use
 
-Useful for intrinsically responsive layout, multilingual resilience, and component-level flexibility.
+Reading direction:
 
-### Refactoring UI — Adam Wathan & Steve Schoger
+- operator onboarding systems
+- management cadence
+- decision-quality systems for growing teams
 
-Useful for spacing, hierarchy, typography, and component polish.
+## Reading Rule
 
-### Designing Interfaces — Jenifer Tidwell
-
-Useful for reusable UI patterns and interaction consistency. The repo already benefits from this source and should continue building on it.
-
-## CRO / Marketing Sources
-
-### MECLABS / Flint McGlaughlin frameworks
-
-Useful for value proposition clarity, friction analysis, and deeper conversion architecture.
-
-### Copyhackers / Joanna Wiebe
-
-Useful for conversion copy systems, research methods, and testing logic.
-
-### CXL Institute materials
-
-Useful for experimentation, research, and evidence-led CRO systems.
-
-## Why These Matter
-
-These sources would help the repository move from strong heuristics to stronger systems, especially in performance rigor, accessibility enforcement, premium visual execution, positioning quality, and evidence-led CRO.
+Any future reading should be selected to solve a known enforcement or scaling gap.
+The repository already has enough theory. The next reading should improve system behavior.

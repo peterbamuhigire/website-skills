@@ -1,6 +1,6 @@
 # Website Skills
 
-Portable website-building skills for Claude Code and Codex.
+Portable website-building and agency-operating skills for Claude Code and Codex.
 
 This repository is designed to work in two modes without changing the directory layout:
 
@@ -8,6 +8,15 @@ This repository is designed to work in two modes without changing the directory 
 - **Codex**: consumed directly as a repository of portable skills rooted at directories that contain `SKILL.md`
 
 All projects share the same skills, and updating this repo propagates improvements to every project.
+
+The repository now also functions as a portable website agency engine. It contains not only
+build skills, but also:
+
+- qualification and intake operations
+- strategy and research artifacts
+- proof and authority systems
+- launch and rollback operations
+- governance, onboarding, and maintenance standards
 
 ## Dual Compatibility
 
@@ -153,6 +162,16 @@ Guides users to choose a sector (9+ available: tour & travel, corporate & consul
 
 The entry point. When Claude is told to "build this website", this skill reads `docs/i18n-config.md` to detect enabled languages, then reads language-specific content from `docs/{lang}/`, scans photos in `photo-bank/`, and coordinates the other skills in order: design-system → photo-manager → page-builder → seo → deploy. Automatically builds all enabled language versions.
 
+It now also owns the cross-skill operating references for:
+
+- strategy brief and artifact standards
+- stage gates and handoff rules
+- role-based training
+- governance policy
+- quality metrics dashboard definition
+- maintenance cadence
+- agency operations handbook index
+
 **Trigger phrases:** "Build this website", "Create a site", "Rebuild the site"
 
 ### design-system (Visual Foundation)
@@ -184,6 +203,17 @@ Implements a 4-layer SEO architecture: (1) **Technical SEO** — multi-language 
 ### deploy (Build & Ship — Multi-Language)
 
 Runs `npm run build`, verifies output for all language versions, checks for broken references, and generates `deploy.sh` and language-aware `nginx.conf` with aggressive caching headers and language-aware routing. The web server must serve the generated Astro root page at `/` so browser-language detection can run there. Outputs a comprehensive multi-language pre-launch checklist. Verifies hreflang tags, language-specific sitemaps, and per-language Lighthouse scores.
+
+Phase 6 expanded this into a real launch-operations layer with:
+
+- QA matrix
+- pre-launch verification checklist
+- deployment runbook
+- rollback runbook
+- observability baseline
+- post-launch review checklist
+- launch communication templates
+- Playwright E2E starter
 
 **Produces:** `dist/{en,fr,sw}/`, `deploy.sh`, `nginx.conf` (with root-page preservation at `/` and language routing)
 
@@ -312,6 +342,21 @@ Utility skills (not part of the build pipeline):
   skill-safety-audit         ← mandatory audit before accepting new/changed skills
   update-claude-documentation← use after significant changes to update all docs
 ```
+
+## Agency Engine Layers
+
+The repository now operates across five layers:
+
+1. Commercial layer
+   qualification, offers, proposals, proof positioning
+2. Strategy layer
+   discovery, strategy brief, trust architecture, page goals, search intent
+3. Build layer
+   design system, photos, pages, SEO, blog and authority assets
+4. Launch layer
+   QA, deployment, rollback, observability, review windows
+5. Governance layer
+   role-based enablement, maintenance cadence, quality metrics, safety review, documentation hygiene
 
 ---
 
@@ -511,6 +556,10 @@ Track significant skill improvements here.
 | 2026-03-02 | seo, page-builder, blog-writer, brand-alignment | Premium content: copywriting formulas (H.O.B.O., PAPA, Uncle B.E.N.), R.E.S.U.L.T.S. framework, StoryBrand, SEO content writing rules |
 | 2026-03-05 | sales-copywriting | New hybrid skill: 5 reference files, PASTOR/4P's, fascination bullets, guarantees, anti-resistance; enhanced storytelling.md, writing-craft.md, website-copywriting.md |
 | 2026-03-05 | blog-idea-generator, blog-writer | Adaptive 20-method ideation, 200-word summaries, 20 content formats; blog-writer Step 0, 7 format templates, quality gate, calendar/seasonal/cross-language planning |
+| 2026-04-14 | agency engine | Phase 2 added intake, qualification, proposal, kickoff, artifact standards, and stage-gate operations |
+| 2026-04-14 | agency engine | Phase 3 added website strategy briefs, competitor synthesis, trust architecture, page-goal mapping, and intent mapping |
+| 2026-04-14 | agency engine | Phase 6 added QA matrix, launch verification, deployment and rollback runbooks, observability baseline, and Playwright starter |
+| 2026-04-14 | agency engine | Phase 9 added role-based training, governance policy, maintenance cadence, quality metrics dashboard, and handbook index |
 
 ---
 

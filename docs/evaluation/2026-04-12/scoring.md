@@ -4,47 +4,64 @@
 
 | Dimension | Score | Rating |
 |---|---:|---|
-| Coverage | 8/10 | Strong |
-| Instruction Quality | 8/10 | Strong |
-| System Architecture | 7/10 | Strong but inconsistent |
-| Performance Engineering | 6/10 | Functional but weakly enforced |
-| UX / Design Quality | 8/10 | Strong |
-| SEO & Content System | 8/10 | Strong |
-| Modularity & Reusability | 8/10 | Strong |
-| Output Quality Potential | 7/10 | Strong ceiling, uneven reliability |
+| Coverage | 9/10 | Very strong |
+| Instruction Quality | 8.5/10 | Strong |
+| System Architecture | 8.6/10 | Strong and maturing |
+| Strategy And Commercial System | 8.8/10 | Strong |
+| Delivery And Launch Operations | 8.6/10 | Strong |
+| Governance And Scalability | 8.4/10 | Strong but newly installed |
+| Performance And Accessibility Enforcement | 7.3/10 | Improved but incomplete |
+| Output Quality Potential | 8.4/10 | High ceiling, improved repeatability |
 
-**Overall:** **7.1 / 10**
+**Overall:** **8.5 / 10**
 
 ## Justification
 
-### Coverage — 8/10
+### Coverage - 9/10
 
-The repo covers most of the important layers: i18n, design, page generation, images, SEO, deployment, content, audit, and sector specialization. It misses stronger first-class handling for accessibility automation, performance gating, experimentation, and schema validation.
+The repository now covers much more than website generation. It includes commercial logic,
+discovery, strategy, content, design, SEO, launch operations, proof systems, reporting hooks,
+and governance. The remaining coverage gaps are now concentrated in enforcement layers rather
+than missing whole parts of the business.
 
-### Instruction Quality — 8/10
+### Instruction Quality - 8.5/10
 
-Many skills are concrete and materially useful, especially `design-system`, `page-builder`, `content-writing`, `brand-alignment`, and `seo`. The main issue is not shallow guidance; it is conflicting guidance and uneven enforceability.
+The repo has many concrete, usable references that can drive real work. The best parts are no
+longer isolated guidance files; they increasingly connect to artifacts, gates, and workflows.
+The score is held back by remaining legacy duplication and some repo-level documentation drift.
 
-### System Architecture — 7/10
+### System Architecture - 8.6/10
 
-The architecture is conceptually good, with clear pipeline and cross-cutting layers. The score drops because of contract drift between skills: multiple paths, multiple truths, and contradictory instructions for routing, blogs, and image outputs.
+Architecture is materially stronger than before. The artifact chain, stage gates, deployment
+logic, and handbook-style cross-linking all improve coherence. The system is still not fully
+machine-enforced, but it is now much more legible and governable.
 
-### Performance Engineering — 6/10
+### Strategy And Commercial System - 8.8/10
 
-The stack choice is strong, and performance targets are stated clearly. But the repo does not yet include hard automated gates for Lighthouse, bundle budgets, image budgets, or JS regressions. Performance is a value, not yet a guarantee.
+This is now one of the strongest areas. Qualification, discovery, positioning, trust design,
+page-goal mapping, proof logic, and strategy handoff are all materially better than they were
+in the earlier state of the repo. The strategy layer is now a real system.
 
-### UX / Design Quality — 8/10
+### Delivery And Launch Operations - 8.6/10
 
-This is one of the strongest areas. The repo has real taste, useful visual rules, and anti-generic instincts. It still lacks a screenshot-based QA loop and stronger output validation, so premium quality remains operator-dependent.
+Phase 6 changed this category significantly. The repository now has QA matrices, pre-launch
+verification, deployment and rollback runbooks, observability baselines, post-launch review,
+and a Playwright starter. The remaining gap is automation, not conceptual weakness.
 
-### SEO & Content System — 8/10
+### Governance And Scalability - 8.4/10
 
-The SEO and content stack is commercially strong: multilingual SEO, schema thinking, blog ideation, blog production, SEO audit, and copy quality systems. It needs stronger contract consistency and metadata validation to reach world-class.
+Phase 9 adds the right structures: role-based onboarding, governance policy, quality metrics,
+maintenance cadence, and a handbook index. That is a major improvement. The score is slightly
+held back because the model is newly documented and not yet proven through repeated team-scale use.
 
-### Modularity & Reusability — 8/10
+### Performance And Accessibility Enforcement - 7.3/10
 
-The library structure is reusable and thoughtfully separated into pipeline, utility, sector, and cross-cutting skills. Reusability is reduced by overlapping ownership and inconsistent artifact definitions.
+This is still the weakest dimension relative to the repo's ambition. The standards exist and
+the launch layer is stronger, but there is still no first-class accessibility gate, no full
+performance gate, and no canonical CI enforcement path.
 
-### Output Quality Potential — 7/10
+### Output Quality Potential - 8.4/10
 
-The ceiling is high. In a best-case run, this repo can support premium static websites. But world-class engines are judged on repeatability, not best-case output. Too much still depends on human interpretation and conflict resolution.
+The ceiling is now higher and the variance is lower than before. A strong operator can use this
+repo to run a premium agency system with much more consistency. The final jump to elite status
+depends on the remaining enforcement and visual QA layers.

@@ -1,151 +1,125 @@
-# What A World-Class Website Engine Looks Like
+# What A World-Class Website Agency Engine Looks Like
 
 ## Definition
 
-A world-class website engine is a repeatable production system that converts structured inputs into visually distinctive, fast, accessible, SEO-complete, conversion-focused, maintainable websites with low quality variance between projects.
+A world-class website agency engine is a repeatable system that can take a qualified lead,
+turn it into a strategy, convert that strategy into differentiated pages and assets, launch
+the site safely, review outcomes, and train another operator to repeat the process without
+quality collapse.
 
-The key test is repeatability. A great prompt library can produce good work sometimes. A world-class engine produces excellent work reliably.
+The key test is not whether the repository contains excellent ideas.
+The key test is whether those ideas survive scale, handoff, launch pressure, and team growth.
 
-## Core Components
+## Core Characteristics
 
-### Multi-Language Infrastructure
+### 1. Commercial Clarity
 
-- canonical language configuration
-- route and slug mapping
-- translated metadata
-- hreflang and canonical logic
-- translation completeness validation
-- language-aware navigation
+It should support:
 
-### Design System Engine
+- selective qualification
+- premium offer logic
+- explicit scope and exclusion handling
+- trustworthy proposals
 
-- typography, color, spacing, and motion tokens
-- reusable component patterns
-- accessibility-safe defaults
-- sector-aware differentiation
-- responsive layout primitives
+### 2. Strategy Before Design
 
-### Content Transformation Engine
+It should require:
 
-- clear markdown/content schema
-- deterministic page composition
-- reusable sections and components
-- language-aware layout behavior
+- a canonical strategy brief
+- audience and objection logic
+- trust architecture
+- page-goal mapping
+- search-intent mapping
 
-### Image Pipeline
+### 3. Design With Intent
 
-- asset discovery and classification
-- compression and responsive variants
-- role assignment
-- OG image handling
-- alt-text and dimension governance
+It should produce:
 
-### SEO System
-
-- technical SEO defaults
-- structured data generation
-- metadata governance
-- sitemap generation
-- internal linking strategy
-- post-build verification
-
-### Deployment Pipeline
-
-- reproducible builds
-- deployment-ready output
-- cache-safe asset strategy
-- preflight and post-deploy verification
-
-## Advanced Components
-
-### CRO / Conversion Optimization
-
-- intent-aware page architecture
-- CTA hierarchy rules
-- trust placement rules
-- form friction management
-- objection handling
-- testing hypothesis generation
-
-### UX Psychology
-
-- scanning behavior
-- cognitive load control
-- information scent
-- emotional design
-- decision-stage matching
-
-### Brand Alignment
-
-- differentiated positioning
-- voice consistency
-- narrative coherence
-- audience-specific messaging
-
-### Content Marketing
-
-- blog infrastructure
-- editorial planning
-- topical authority strategy
-- author and expertise signals
-
-### Automation And Orchestration
-
-- canonical pipeline contracts
-- validation between stages
-- CI quality gates
-- machine-checkable rules
-- fallback behavior for incomplete input
-
-## Quality Expectations
-
-### Performance
-
-- 95+ Lighthouse on representative pages
-- low JS by default
-- measurable Core Web Vitals discipline
-- automated regression checks
-
-### Design Quality
-
-- visually distinctive output
+- differentiated visual direction
 - strong hierarchy and typography
-- no generic AI-template feel
-- sector fit without sameness
+- sector fit without category sameness
+- trust-supporting interface decisions
 
-### Code Quality
+### 4. Build Reliability
 
-- maintainable component architecture
-- clear content contracts
-- predictable output structure
+It should include:
 
-### SEO Completeness
+- clear artifact contracts
+- reusable component logic
+- responsive behavior standards
+- accessibility-aware implementation
 
-- no major metadata gaps
-- correct schema
-- correct multilingual canonicalization
-- sitemap integrity
+### 5. Launch Discipline
 
-### Conversion Effectiveness
+It should require:
 
-- clear value proposition
-- obvious next action
-- trust at decision points
-- low-friction forms and flows
+- QA matrix
+- pre-launch verification
+- deployment runbook
+- rollback readiness
+- post-launch review
 
-### Multi-Language Consistency
+### 6. Measurement And Feedback
 
-- equivalent quality across EN/FR/SW
-- no broken switching
-- no untranslated metadata leaks
-- layouts resilient to text expansion
+It should make visible:
+
+- launch quality
+- conversion behavior
+- SEO and traffic outcomes
+- client satisfaction
+- defects and incident patterns
+
+### 7. Governance And Trainability
+
+It should support:
+
+- role-based onboarding
+- explicit ownership
+- maintenance cadence
+- deprecation discipline
+- quality and commercial scorecards
+
+## World-Class Quality Expectations
+
+### Craft
+
+- pages look intentional and premium
+- messaging is clear and memorable
+- trust is designed deliberately
+
+### Reliability
+
+- launches are controlled
+- rollback is ready
+- monitoring exists
+- critical failures are caught early
+
+### Repeatability
+
+- a second operator can use the system well
+- the output does not collapse when the founder is absent
+- quality variance is low across projects
+
+### Governance
+
+- stale guidance is identified
+- contradictions are removed
+- documentation reflects operating truth
+- repository evolution follows explicit rules
 
 ## Practical Benchmark
 
-To count as world-class, the engine should repeatedly produce websites that:
+To count as world-class, the engine should repeatedly prove:
 
-- stand beside strong agency work
-- hold up under performance and SEO scrutiny
-- feel custom, not templated
-- convert credibly for real businesses
-- survive handoff and maintenance cleanly
+- consistent premium positioning
+- repeatable project profitability
+- high-quality launches
+- measurable client outcomes
+- strong retention or expansion behavior
+- onboarding measured in weeks rather than months
+
+## Current Benchmark Position
+
+The repository is now substantially closer to this definition than it was in the earlier
+evaluation. The main remaining gap is not a lack of thought. It is the absence of a few final
+enforcement and rendered-output review layers.
