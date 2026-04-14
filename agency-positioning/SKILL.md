@@ -1,48 +1,132 @@
 ---
 name: agency-positioning
-description: Premium positioning for a world-class website design and SEO agency. Use when defining the agency's own brand, differentiating from competitors, writing agency copy, onboarding team on positioning, or preparing for a sales conversation. Covers the Doctor-Pilot-Teacher framework, 9 Positioning Assets, solutions language transformation, authentic founder storytelling, personal brand authority, and the Selling the Shovel principle. Designed for agencies targeting $10,000–$25,000+ website projects.
+description: Premium positioning, offer architecture, pricing logic, qualification, scope control, and proposal structure for a website agency selling $12,000+ engagements. Use when defining the agency category, building or pricing the offer, qualifying a prospect, writing or presenting a proposal, defending fees, controlling scope, firing a misfit client, onboarding staff on positioning, writing agency copy, or preparing for a sales conversation. Covers the agency narrative, the three-tier offer ladder (Foundation / Growth / Authority), value-based pricing with a calculator, the Win-Without-Pitching expert posture, the four-conversation sales sequence, the Doctor-Pilot-Teacher framework, the 9 Positioning Assets, solutions language, founder storytelling, personal brand authority, and the Selling the Shovel principle.
 ---
 
 # Agency Positioning
 
 ## Use when
-- The task matches this domain: Premium positioning for a world-class website design and SEO agency. Use when defining the agency's own brand, differentiating from competitors, writing agency copy, onboarding team on positioning, or preparing for a sales conversation. Covers the Doctor-Pilot-Teacher framework, 9 Positioning Assets, solutions language transformation, authentic founder storytelling, personal brand authority, and the Selling the Shovel principle. Designed for agencies targeting $10,000–$25,000+ website projects.
-- The user needs domain-specific strategy, writing, or planning in this area.
+
+- Defining or revising the agency category, narrative, or one-sentence positioning.
+- Designing the offer ladder, fee floors, or productized service architecture.
+- Pricing a specific engagement (use the value-based calculator).
+- Qualifying or disqualifying a prospect at the first call or before a proposal.
+- Writing, presenting, or defending a proposal for a $12,000+ project.
+- Holding scope discipline during delivery.
+- Onboarding a new team member on how the agency positions, sells, and delivers.
+- Writing agency-side copy: home page, services page, case studies, sales pages.
+- Preparing for a sales conversation, value conversation, or closing conversation.
 
 ## Do not use when
-- Another skill is clearly narrower and better matched to the request.
-- The task is unrelated to this domain or needs direct implementation instead.
+
+- The task is client-side messaging or brand work (use `brand-strategy`,
+  `content-writing`, `sales-copywriting`).
+- The task is delivery execution rather than commercial structure (use the build skills:
+  `design-system`, `page-builder`, `seo`, `deploy`).
+- A narrower skill is clearly the better match (e.g. `agency-client-retention` for
+  retainer pricing and client retention, `they-ask-you-answer` for content-led lead
+  generation, `cro-audit` for conversion audits).
+- The work is for a non-premium offer (sub-$10k engagements). This skill assumes a
+  $12,000 minimum and a productized model.
 
 ## Required inputs
-- Business context, target audience, and the artifact or decision being developed.
-- Any existing materials, constraints, or supporting references already available.
+
+- The current artefact or decision being developed (proposal, sales page, pricing
+  question, qualification call, scope dispute, etc.).
+- Business context: the prospect or client's sector, scale, decision makers, and the
+  commercial pressure driving the project.
+- Any existing positioning, fee data, or prior engagements that constrain the answer.
 
 ## Workflow
-1. Read the current business context and the concrete task to solve.
-2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
+
+1. Identify which file in `references/` matches the task. Do not load the whole
+   directory — load only what is needed.
+2. Anchor the work in the agency narrative (`references/agency-narrative.md`). Every
+   downstream artefact should be able to point back to a specific line in that file.
+3. Apply the relevant detailed guidance:
+   - Offer-ladder and tier definitions → `references/premium-website-offer-playbook.md`
+   - Pricing, fee defence, modifiers, payment terms, retainers →
+     `references/pricing-rules.md`
+   - Scope, exclusions, change orders, revision discipline →
+     `references/scope-matrix.md`
+   - Qualification, fit signals, red flags, disqualification scripts →
+     `references/qualification-guide.md` (narrative) and
+     `references/lead-qualification-scorecard.md` (scoring rubric)
+   - Proposals, the closing conversation, objection handling →
+     `references/proposal-positioning.md` (principles) and
+     `references/premium-proposal-template.md` (document template)
+   - Positioning language, founder story, personal brand →
+     `references/positioning-language.md`, `references/founder-story-templates.md`
+   - Prior detailed instructions preserved from the previous skill version →
+     `references/legacy-guidance.md`
+4. Produce the artefact with concrete inputs (real numbers, real names, real client
+   words). Do not generalise.
+5. Verify the artefact against the agency narrative's commitments
+   (`agency-narrative.md` section 8) before shipping.
 
 ## Quality standards
-- Outputs must be specific, usable, and grounded in the available evidence.
-- Recommendations should support follow-on execution instead of staying abstract.
-- The result should remain consistent with the broader repository system.
+
+- **Specific, not generic.** Real fees, real tier names, real prospect language, real
+  sectors. Generic "agency-speak" is a red flag.
+- **Expert posture.** Outputs are written from the doctor/expert stance — diagnosis,
+  recommendation, single direction. Never order-taker, never pair-of-hands.
+- **Commercial logic visible.** Every price, scope item, and qualification rule should
+  be explainable in commercial terms — not aesthetic, not "industry standard."
+- **Floor enforced.** No artefact assumes or implies sub-$12,000 work. The floor is the
+  positioning.
+- **Recommend one.** Where options are presented, one is recommended. The agency does
+  not present three options and ask the client to choose.
 
 ## Anti-patterns
-- Do not produce generic framework dumps with no decision made.
-- Do not invent facts to complete the output.
-- Do not ignore the actual audience, offer, or business constraints.
+
+- Generic framework dumps with no decision made.
+- Hourly or day-rate quotes anywhere in the output.
+- Pages-only or "starter" packages that violate the floor.
+- Bundling hosting, maintenance, or content production into the project fee.
+- "We can do anything" language that dilutes the niche.
+- Client-pleasing copy that softens the commitments in `agency-narrative.md` section 8.
+- Pay-for-performance, equity, or revenue-share fee structures.
+- Inventing facts to fill out the artefact.
 
 ## Outputs
-- Strategy notes, writing deliverables, framework outputs, or implementation-facing recommendations.
+
+- Sales pages, proposals, scope definitions, pricing answers, qualification scripts,
+  fee-defence responses, onboarding documents, sector-specific positioning notes.
+- Each output should be ready to use directly — not a draft for someone else to finish.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Use `references/lead-qualification-scorecard.md` for lead fit, routing, and minimum bars before deep proposal work.
-- Use `references/premium-proposal-template.md` when structuring premium website proposals after discovery.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
+
+- `references/agency-narrative.md` — the canonical paragraph, category definition, and
+  commitments. Anchor file for everything else.
+- `references/premium-website-offer-playbook.md` — the three-tier offer ladder
+  (Foundation / Growth / Authority), tier inclusions, the commercial logic behind the
+  $12,000 floor, the sales-to-delivery handshake.
+- `references/pricing-rules.md` — value-based pricing principles, the pricing calculator
+  with modifier score sheet, fee floors by tier, the four-zone fee-defence playbook,
+  payment terms, retainer rules.
+- `references/scope-matrix.md` — tier-by-tier scope matrix, hard exclusions, handoff
+  boundaries, revision discipline, scope-creep defence playbook.
+- `references/qualification-guide.md` — who we serve, who we don't, fit signals, red
+  flags, the qualification conversation question map, disqualification scripts, firing
+  misfits.
+- `references/lead-qualification-scorecard.md` — numeric scoring rubric for fast
+  qualification decisions before deep discovery.
+- `references/proposal-positioning.md` — the four conversations that precede a proposal,
+  the nine-section proposal skeleton, the closing-conversation choreography, common
+  objection responses, post-close reassurance sequence.
+- `references/premium-proposal-template.md` — the document template to adapt for
+  specific engagements.
+- `references/positioning-language.md` — agency-side copy patterns, naming, and
+  language conventions.
+- `references/founder-story-templates.md` — founder narrative templates and authentic
+  storytelling patterns.
+- `references/legacy-guidance.md` — preserved detailed instructions from the previous
+  skill version (Doctor-Pilot-Teacher, 9 Positioning Assets, Selling the Shovel).
+
+This skill has no bundled scripts. The workflow is documentary, not executable.
 
 ## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
+
+- This skill is a portable execution layer for both Claude Code and Codex.
+- Do not modify the agency narrative or the floor without an explicit decision recorded
+  in writing — small drift becomes generic positioning.
