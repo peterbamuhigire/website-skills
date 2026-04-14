@@ -37,8 +37,10 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Use `references/page-goal-matrix.md` to convert strategy into page-specific audience, goal, proof, CTA, and SEO decisions.
+- `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
+- `references/authority-content-matrix.md` — content architecture by page type, cornerstone pages, pillar + cluster system, editorial ops. Use when planning the content system for Growth / Authority tiers.
+- `references/page-goal-matrix.md` — convert strategy into page-specific audience, goal, proof, CTA, SEO decisions.
+- `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

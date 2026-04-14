@@ -18,10 +18,18 @@ description: Generate a complete professional monthly client report from raw dat
 - Any existing materials, constraints, or supporting references already available.
 
 ## Workflow
-1. Read the current business context and the concrete task to solve.
-2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
+1. Confirm the target month with the user (default: calendar month just ended).
+2. Read `project-log/CHANGELOG.md` and filter entries to the target month. If the log
+   does not exist or the month has no entries, stop and follow the recovery rules in
+   `references/project-log-integration.md` — never fabricate activity.
+3. Read every file in `project-log/decisions/` and `project-log/incidents/` dated inside
+   the target month. Read the prior month's `project-log/monthly/YYYY-MM.md` if present.
+4. Generate the monthly roll-up at `project-log/monthly/YYYY-MM.md` using the format in
+   `templates/project-log-template.md`. This is the raw material for the report.
+5. Generate the client-facing report from the roll-up using `commentary-formulas.md` for
+   plain-English translation of metrics. Apply `report-qa-checklist.md` before delivery.
+6. Output as markdown ready for PDF export or email. Confirm every metric in the report
+   traces back to a log snapshot dated inside the target month.
 
 ## Quality standards
 - Outputs must be specific, usable, and grounded in the available evidence.
@@ -37,9 +45,12 @@ description: Generate a complete professional monthly client report from raw dat
 - Strategy notes, writing deliverables, framework outputs, or implementation-facing recommendations.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
+- `references/project-log-integration.md` — the contract between this skill and the client project's `project-log/` directory. Start here.
+- `references/commentary-formulas.md` — plain-English translation patterns for metrics.
+- `references/report-qa-checklist.md` — pre-delivery quality gate.
+- `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
+- `templates/project-log-template.md` (repo root) — the log format this skill reads from.
+- This skill has no bundled scripts. Execution is documentary.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
