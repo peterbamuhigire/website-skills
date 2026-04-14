@@ -1,5 +1,8 @@
 # Deploy Skill
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `deploy/SKILL.md` and the current deploy references first.
+
 Build, verify, and prepare for deployment.
 
 ## Universal Guidelines Reference
@@ -24,7 +27,7 @@ Check exit code. If errors, fix them before proceeding.
 
 ## Step 2: Verify Output
 
-### Multi-Language Build Verification (NEW)
+### Multi-Language Build Verification
 
 ```bash
 # Check language-specific directories exist
@@ -223,7 +226,7 @@ Output this checklist for the user:
 
 ### Before Going Live
 
-#### Multi-Language Verification (NEW)
+#### Multi-Language Verification
 - [ ] All languages enabled and complete (check docs/i18n-config.md)
 - [ ] All content translated: docs/en/, docs/fr/, docs/sw/
 - [ ] In-country reviewers approved French and Kiswahili content

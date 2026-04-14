@@ -2,6 +2,9 @@
 
 Generate detailed, rich, educating, and captivating blog articles with authentic human voice, professional photography, and full SEO optimisation. Each article is a marketing asset — a demonstration of expertise that builds trust and attracts clients through organic search.
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `blog-writer/SKILL.md` and the current article-writing references first.
+
 **Use the `frontend-design` plugin** throughout article page creation for distinctive, high-quality design.
 
 ## Before Writing

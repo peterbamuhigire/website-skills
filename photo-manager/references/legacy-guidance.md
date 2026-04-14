@@ -2,13 +2,16 @@
 
 Handle all image assets — catalog, organize, and track for easy replacement.
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `photo-manager/SKILL.md` and the current photo-management references first.
+
 ## Core Principle
 
 **NEVER use a photo without first checking its dimensions.** Every image placement must be dimension-aware.
 
 ## Photo Naming Convention (Critical for Automation)
 
-Encourage clients to use **descriptive, purpose-specific photo names** instead of generic names like `IMG_001.jpg`. Claude uses these names to automatically identify photo purpose and appropriate placement.
+Encourage clients to use **descriptive, purpose-specific photo names** instead of generic names like `IMG_001.jpg`. The workflow uses those names to infer likely photo purpose and placement.
 
 ### Recommended Naming Patterns
 
@@ -201,7 +204,7 @@ Interpret filenames to determine category and usage:
 
 ## Logo Auto-Detection & Selection
 
-**NEW FEATURE**: System automatically scans for all PNG files with "logo" in the filename and selects the best one based on:
+The system scans PNG files with "logo" in the filename and selects the best candidate based on:
 1. **Size preference**: Larger files (higher resolution) ranked higher
 2. **Format preference**: PNG with transparency (RGBA) > PNG (RGB) > other formats
 3. **Dimensions**: Wide logos (width > height) preferred for headers; square (1:1) for favicons

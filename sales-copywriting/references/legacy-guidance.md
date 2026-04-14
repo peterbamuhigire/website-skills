@@ -1,8 +1,11 @@
 # Sales Copywriting
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `sales-copywriting/SKILL.md` and the current references in this directory first.
+
 ## When This Skill Applies
 
-**Cross-cutting (always active during page-builder and blog-writer):**
+**Cross-cutting (used during page-builder and blog-writer where persuasive copy is being written):**
 - Writing any headline or subheadline
 - Writing any CTA or button text
 - Writing bullet points that need to persuade

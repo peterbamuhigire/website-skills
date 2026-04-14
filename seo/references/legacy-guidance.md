@@ -1,5 +1,8 @@
 # SEO Skill — Static Website Factory
 
+Historical detailed guidance preserved from the pre-standardized version of the skill.
+Use `seo/SKILL.md` and the current SEO references first.
+
 Implement comprehensive, production-grade search engine optimization across the entire site.
 
 ## Why This Matters
@@ -110,7 +113,7 @@ Server-level crawler directives for fine-grained control (archive old posts, blo
 
 ### Files Created During Build
 
-#### Multi-Language Sitemaps (NEW)
+#### Multi-Language Sitemaps
 1. **sitemap-index.xml** — Master index pointing to all language sitemaps
 2. **sitemap-en.xml** — All /en/ pages (English)
 3. **sitemap-fr.xml** — All /fr/ pages (French)
