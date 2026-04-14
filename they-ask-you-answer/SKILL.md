@@ -39,6 +39,11 @@ description: Content-driven lead generation strategy for premium agencies using 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/buyer-question-research-method.md` when turning buyer questions into strategy, SEO, trust, and content inputs.
+- Use `references/big-5-article-templates.md` and `references/assignment-selling-templates.md` for Sheridan's Big 5 article structures and the Assignment Selling sales-cycle templates.
+- Use `references/content-inc-audience-model.md` (Pulizzi) when building the agency's own audience-first publishing strategy: sweet spot, content tilt, the base, MVA, the 18-month runway, monetisation paths, the 7-step Content Inc. model.
+- Use `references/show-your-work-practices.md` (Kleon) for the daily-dispatch discipline, "work behind the work" sharing, three-act story shape, teaching-as-marketing — applied to a B2B agency register.
+- Use `references/agency-content-plan.md` when designing the agency's own website and authority library: 6 site layers, cornerstone + cluster architecture, where each Selling 7 video lives, the 18-month build order.
+- Use `references/editorial-calendar-and-rhythm.md` when installing the recurring weekly/monthly/quarterly/annual cadence: Dream 100 ritual, sales follow-up cycle, case-study collection, referral asks, pipeline review, 30/60/90-day proof of life.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
