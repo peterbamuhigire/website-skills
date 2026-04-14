@@ -44,6 +44,11 @@ description: Master orchestrator for building static websites from markdown cont
 - Use `references/discovery-to-build-artifact-map.md` to hand off discovery outputs into sibling skills explicitly.
 - Use `references/project-stage-gates.md` to verify the current gate and required approvals before moving phases forward.
 - Use `references/kickoff-template.md` when converting sold scope into delivery facts for production.
+- Use `references/role-based-training-map.md` when onboarding operators or assigning ownership by role.
+- Use `references/governance-policy.md` for repository change rules, safety-review expectations, and deprecation discipline.
+- Use `references/quality-metrics-dashboard-definition.md` when connecting repository evolution to commercial and delivery metrics.
+- Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
+- Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
