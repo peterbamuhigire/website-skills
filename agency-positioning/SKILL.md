@@ -120,6 +120,22 @@ description: Premium positioning, offer architecture, pricing logic, qualificati
   language conventions.
 - `references/founder-story-templates.md` — founder narrative templates and authentic
   storytelling patterns.
+- `references/case-study-template.md` — standardised 7-part case study format,
+  per-tier formats, production process, quality gate. Use whenever capturing or
+  publishing a client engagement as a sales asset.
+- `references/proof-library.md` — the reusable bank of proof components (case
+  excerpts, testimonials, metrics, diagrams, checklists, process snapshots). Defines
+  folder structure, taxonomy, retrieval rules, and maintenance rhythm. Every proposal
+  and sales page assembles from this library.
+- `references/premium-audit-offers.md` — the four paid audit offers (Website
+  Authority $2,500; Trust & Conversion $1,800; SEO Foundation $1,500; Messaging
+  Clarity $1,200). Use when designing audit landing pages, audit deliverables,
+  conversion-to-engagement pathways.
+- `references/expert-authority-framework.md` — the structural frameworks from
+  Brunson's *Expert Secrets*, filtered for our buyer (no hype, no theatre). The
+  Attractive Character, the Epiphany Bridge, New Opportunity vs Improvement, the
+  Big Domino, the Three Secrets, the Stack, false-belief patterns, the signature
+  talk skeleton, Dream 100, hook-story-offer.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous
   skill version (Doctor-Pilot-Teacher, 9 Positioning Assets, Selling the Shovel).
 
