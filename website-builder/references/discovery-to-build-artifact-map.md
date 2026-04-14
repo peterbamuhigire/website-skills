@@ -21,6 +21,11 @@ Every downstream skill should consume an approved artifact, not a vague conversa
 | Content inventory | Existing copy, proof assets, gaps, missing owners | Yes | `content-writing`, `page-builder` | Exposes content risk before build |
 | SEO brief | Keywords, page intent, local signals, technical SEO constraints | Yes | `seo`, `content-writing`, `page-builder` | Integrates SEO before launch |
 | Launch checklist input | Domain, analytics ownership, redirects, legal pages, sign-off needs | Seeded in Phase 2 | `deploy`, later launch operations | Prevents late-stage launch chaos |
+| QA matrix | Release verification across layout, content, links, performance, accessibility, SEO, analytics, forms, and browsers | Phase 6 | `deploy`, `page-builder`, `seo` | Defines the minimum launch quality bar |
+| Pre-launch verification | Final release-readiness checks before production | Phase 6 | `deploy` | Stops uncontrolled launches |
+| Deployment runbook | Hosting model, promotion path, env handling, DNS/SSL, validation | Phase 6 | `deploy` | Makes deployment repeatable |
+| Rollback runbook | Known-good restoration steps and verification | Phase 6 | `deploy` | Prevents blind recovery during incidents |
+| Post-launch review | Launch-day, 7-day, and 30-day checks | Phase 6 | `deploy`, `seo`, account operations | Keeps production stability visible |
 
 ## Required Handoff Sequence
 
@@ -120,6 +125,26 @@ Must include:
 - metadata constraints
 - analytics and tracking dependencies
 
+### QA Matrix
+
+Must include:
+
+- responsive checks
+- link integrity
+- accessibility checks
+- forms verification
+- analytics verification
+- browser coverage
+
+### Deployment Runbook
+
+Must include:
+
+- target environment
+- release steps
+- post-deploy verification
+- rollback readiness
+
 ## Stage-Gate Dependency
 
 No skill work should begin until the corresponding artifact has cleared the right gate:
@@ -128,6 +153,7 @@ No skill work should begin until the corresponding artifact has cleared the righ
 - `design-reference` after the strategy brief exists and the relevant market inputs are reviewed
 - `design-reference` and `design-system` after Design System Approved
 - `content-writing` and `page-builder` after Content and Page Structure Approved
+- `deploy` after QA matrix, pre-launch verification, deployment runbook, and rollback runbook exist
 - `seo` begins once sitemap and page goals are approved, then finalises during build
 
 ## Notes For Future Phases

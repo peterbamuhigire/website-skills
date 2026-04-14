@@ -23,6 +23,11 @@ client-project/
       kickoff-notes.md
       approvals-log.md
       launch-checklist.md
+      qa-matrix.md
+      pre-launch-verification.md
+      deployment-runbook.md
+      rollback-runbook.md
+      post-launch-review.md
     references/
       raw-client-documents/
       competitor-notes/
@@ -169,6 +174,79 @@ Required fields:
 - redirects
 - legal pages
 - backup and rollback steps
+
+### 10. QA Matrix
+
+Purpose:
+
+- define the minimum release-quality standard
+
+Required fields:
+
+- responsive checks
+- content checks
+- links
+- performance
+- accessibility
+- SEO
+- analytics
+- forms
+- browser coverage
+
+### 11. Pre-Launch Verification
+
+Purpose:
+
+- confirm release readiness immediately before production
+
+Required fields:
+
+- build integrity
+- approvals
+- QA completion
+- infrastructure readiness
+- launch owner
+
+### 12. Deployment Runbook
+
+Purpose:
+
+- make releases repeatable across supported hosting models
+
+Required fields:
+
+- target environment
+- deployment method
+- environment variables
+- DNS/SSL steps
+- verification sequence
+
+### 13. Rollback Runbook
+
+Purpose:
+
+- restore a known-good state quickly if launch fails
+
+Required fields:
+
+- last known-good release
+- rollback owner
+- restoration steps
+- post-rollback verification
+
+### 14. Post-Launch Review
+
+Purpose:
+
+- check production stability and business-critical behavior after launch
+
+Required fields:
+
+- launch-day checks
+- 7-day checks
+- 30-day checks
+- findings
+- follow-up actions
 
 ## Artifact Standards
 

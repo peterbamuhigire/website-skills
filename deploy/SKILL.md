@@ -38,8 +38,15 @@ description: Builds multi-language Astro site, verifies output for all language 
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/qa-matrix.md` for the minimum launch QA standard across responsive behavior, content, links, performance, accessibility, SEO, analytics, forms, and browsers.
+- Use `references/pre-launch-verification-checklist.md` immediately before production release.
+- Use `references/deployment-runbook.md` for supported hosting patterns, env management, DNS/SSL, and promotion flow.
+- Use `references/rollback-runbook.md` to prepare and execute rollback safely.
+- Use `references/observability-baseline.md` for uptime, form delivery, analytics, and issue-detection expectations.
+- Use `references/post-launch-review-checklist.md` for launch-day, 7-day, and 30-day review windows.
+- Use `references/launch-communication-template.md` to standardize live-site notifications and internal launch comms.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
+- Use `templates/playwright-starter/` when a project needs a minimal E2E baseline for smoke, navigation, and form coverage.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
