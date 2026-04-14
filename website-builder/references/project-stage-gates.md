@@ -23,9 +23,9 @@ cause expensive rework, weak websites, and scope conflict.
 | 3. Strategy Approved | Strategy lead | Discovery summary, website strategy brief, positioning summary, sitemap and page goals, offer and CTA hierarchy | Strategy review call plus written confirmation | Return to discovery and strategy; no design work starts |
 | 4. Design System Approved | Design lead | Style brief, approved references, design direction summary | Annotated review or written sign-off | Return to design direction; no build styling starts |
 | 5. Content And Page Structure Approved | Content lead | Final page structure, content inventory, priority page copy plan, SEO brief draft | Document approval or review meeting | Return to content planning; no production page build begins |
-| 6. Build Approved For QA | Production lead | Implemented pages, component checks, technical checklist, tracked known issues | Internal QA handoff note | Return to build; no client QA or launch preparation |
-| 7. Launch Approved | Project lead | QA completion, launch checklist, redirect plan, analytics verification, rollback plan | Launch sign-off in writing | No deployment |
-| 8. Post-Launch Measurement Active | Growth / account lead | Analytics access confirmed, Search Console confirmed, KPI dashboard or reporting baseline | Internal verification note | Project remains operationally incomplete until measurement is live |
+| 6. Build Approved For QA | Production lead | Implemented pages, component checks, technical checklist, tracked known issues, QA matrix draft | Internal QA handoff note | Return to build; no client QA or launch preparation |
+| 7. Launch Approved | Project lead | QA completion, pre-launch verification, launch checklist, deployment runbook, redirect plan, analytics verification, rollback runbook | Launch sign-off in writing | No deployment |
+| 8. Post-Launch Measurement Active | Growth / account lead | Analytics access confirmed, Search Console confirmed, KPI dashboard or reporting baseline, post-launch review plan | Internal verification note | Project remains operationally incomplete until measurement is live |
 
 ## Gate Checklists
 
@@ -74,6 +74,7 @@ Keep each gate checklist short. Focus on the few dangerous misses.
 - [ ] Responsive checks passed
 - [ ] Known defects are logged
 - [ ] Internal review completed
+- [ ] QA matrix is ready for execution
 
 ### Gate 7 - Launch Approved
 
@@ -82,6 +83,8 @@ Keep each gate checklist short. Focus on the few dangerous misses.
 - [ ] Redirects prepared
 - [ ] Legal/compliance pages present
 - [ ] Backup and rollback path recorded
+- [ ] Pre-launch verification completed
+- [ ] Deployment and rollback runbooks are ready
 
 ### Gate 8 - Post-Launch Measurement Active
 
@@ -89,6 +92,7 @@ Keep each gate checklist short. Focus on the few dangerous misses.
 - [ ] Search Console ownership confirmed
 - [ ] Reporting owner assigned
 - [ ] First review date scheduled
+- [ ] Post-launch review plan exists
 
 ## Approval Recording Template
 
