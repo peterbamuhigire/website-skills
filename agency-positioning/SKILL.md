@@ -146,3 +146,26 @@ This skill has no bundled scripts. The workflow is documentary, not executable.
 - This skill is a portable execution layer for both Claude Code and Codex.
 - Do not modify the agency narrative or the floor without an explicit decision recorded
   in writing — small drift becomes generic positioning.
+
+## Premium-positioning proof assets
+
+Premium fees require demonstrable proof. Positioning references these
+assets rather than re-arguing them:
+
+- **Certification programme** — `certification/syllabus.md`,
+  `certification/exam.md`, and the current cohort record. Premium
+  positioning names the certification when it exists; a prospect can
+  verify it.
+- **Public scorecard** — `dashboards/public-scorecard.md` (Phase 12),
+  aggregate live quality data. Proposals link to the live scorecard,
+  not screenshots.
+- **Benchmark sites** — the Phase 12 benchmark library, indexed and
+  auditable, is the "look at our published standards" asset. Reference
+  them when the prospect asks "how do we know you can do this?"
+- **Case-study corpus** — the Phase 12 corpus of measurable outcomes.
+  Every case study cites the engine's gates the project met.
+- **Design-quality rubric** — `design-quality-score/references/rubric.md`
+  is quotable in proposals; the score is a concrete, defensible number.
+
+A proposal or sales page that names "premium" without naming at least
+two of the above is drift toward marketing adjective.

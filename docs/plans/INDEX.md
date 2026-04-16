@@ -5,15 +5,17 @@ repository. Canonical location: `docs/plans/`.
 
 ## Active
 
-| Plan | Status | Next |
-|---|---|---|
-| [Phase 11 — World-Class Operating Discipline](./website-agency-engine/phase-11-world-class-operating-discipline.md) | pending | batch into W1–W6 |
-| [Phase 12 — African Authority Engine](./website-agency-engine/phase-12-african-authority-engine.md) | pending | follows Phase 11 |
+_No active plans. Phase 12 completes the roadmap as written. Operational
+outcomes (benchmarks, case studies, certification cohort, conference
+talks, upstream OSS contributions) continue per the public roadmap at
+`docs/roadmap-public.md`._
 
 ## Completed
 
 | Plan | Completion Date | Report |
 |---|---|---|
+| Phase 12 — African Authority Engine | 2026-04-16 | [2026-04-16-phase-11-and-12-completion.md](./2026-04-16-phase-11-and-12-completion.md) |
+| Phase 11 — World-Class Operating Discipline | 2026-04-16 | [2026-04-16-phase-11-and-12-completion.md](./2026-04-16-phase-11-and-12-completion.md) |
 | Phase 10 — Hard Enforcement and Visual QA Gates | 2026-04-16 | [2026-04-16-phase-10-enforcement-gates-completion.md](./2026-04-16-phase-10-enforcement-gates-completion.md) |
 | Phases 1–9 — Agency engine foundations through governance | 2026-04-14 | tracked in [executive-summary.md](./website-agency-engine/executive-summary.md) |
 

@@ -66,6 +66,45 @@ Output:
 - deprecations
 - roadmap updates
 
+### Quarterly Documentation Audit
+
+Run `scripts/drift-check.sh` in strict mode (`DRIFT_STRICT=1`) and file a
+written audit report in `project-log/decisions/YYYY-MM-DD-docs-audit-Qn.md`.
+The audit covers:
+
+- dead internal links
+- deprecated-entity references outside compatibility window
+- dated framing
+- banned terms
+- SKILL.md 500-line rule
+- duplicated guidance across reference files
+
+Output:
+
+- audit report (never "no findings" without evidence)
+- skill updates triggered by findings
+
+### Quarterly Experimentation Review
+
+Review all experiments run in the quarter across retainer clients.
+
+Per-client: each client's `project-log/experiments/review-<YYYY-Qn>.md`
+(template in `experimentation/references/quarterly-review-template.md`).
+
+Cross-client: `dashboards/experimentation-learning-<YYYY-Qn>.md`.
+
+Output:
+
+- wins shipped across clients
+- patterns that moved and patterns that stayed local
+- skill updates proposed
+
+### Quarterly Public Scorecard Regeneration
+
+Regenerate `dashboards/public-scorecard.md` (Phase 12) from live
+telemetry and aggregate it without operator narration. Broken
+generation is an incident.
+
 ## Semiannual Rhythm
 
 ### Playbook And Training Review
@@ -83,6 +122,15 @@ Output:
 - handbook index refresh
 
 ## Annual Rhythm
+
+### Certification Recertification Cycle
+
+Every certified operator renews certification 12 months after their
+initial pass. Output:
+
+- refreshed exam reflecting any phase or skill changes since last pass
+- structured engine feedback from each recertifying operator
+- updates to the cohort records under `certification/cohort-*.md`
 
 ### World-Class Benchmark Review
 
