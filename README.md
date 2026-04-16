@@ -45,14 +45,22 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- i18n/                    Language infrastructure
 |-- sector-strategies/       Sector design and trust-pattern guidance
 |-- sectors/                 Sector-specific specializations
-|-- accessibility-audit/     WCAG 2.2 AA enforcement gate
-|-- visual-qa/               Screenshot diff, structural assertions, AI-slop scan
-|-- security-gate/           Dep audit, headers, SRI, secrets, supply chain, compliance
-|-- scripts/                 Canonical runners for every gate (perf, a11y, visual, security)
+|-- accessibility-audit/     WCAG 2.2 AA enforcement gate (Phase 10)
+|-- visual-qa/               Screenshot diff, structural assertions, AI-slop scan (Phase 10)
+|-- security-gate/           Dep audit, headers, SRI, secrets, supply chain, compliance (Phase 10)
+|-- observability/           RUM + error tracking + analytics + alerting contract (Phase 11)
+|-- experimentation/         Hypothesis template, A/B infra, stat primer, quarterly review (Phase 11)
+|-- design-quality-score/    7-category rubric, slop-scan, pre-launch scoring gate (Phase 11)
+|-- africa-excellence/       Low-bandwidth, mobile-money, USSD, language, trust, cultural patterns (Phase 12)
+|-- certification/           Syllabus, exam bank, cohort records (Phase 11)
+|-- dashboards/              Internal and public quality scorecards (Phase 11 + 12)
+|-- glossary.md              Canonical-name authority (Phase 11)
+|-- scripts/                 Canonical runners for every gate (13+ scripts incl. drift-check, slop-scan, design-quality-score)
 |-- tests/visual/            Baseline directory contract for visual QA
-|-- reports/                 Per-build output directory (bundle, lighthouse, a11y, visual, security)
-|-- templates/ci/            Canonical CI pipeline inherited by client projects
+|-- reports/                 Per-build output directory (bundle, lighthouse, a11y, visual, security, drift, design-quality)
+|-- templates/ci/            Canonical CI pipeline inherited by client projects (15 blocking steps)
 |-- project-log/decisions/   Decision log for non-obvious trade-offs
+|-- LICENSE                  MIT + CC BY + CC BY-SA + CC BY-NC + proprietary (see docs/licensing-matrix.md)
 |-- blog-writer/             Blog production
 |-- blog-idea-generator/     Blog ideation
 |-- policy-pages/            Privacy and terms guidance
@@ -74,24 +82,55 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 - `seo`: metadata, schema, sitemap, and crawler-facing configuration
 - `deploy`: verification, release readiness, rollout, rollback, and post-launch checks
 
-## Enforcement Gates (Phase 10)
+## Enforcement Gates (Phases 10–11)
 
-Every project shipped on the engine must pass the canonical CI pipeline
-at `templates/ci/website.yml`. These skills own the individual gates:
+Every project shipped on the engine must pass the 15-step canonical CI
+pipeline at `templates/ci/website.yml`. These skills own the blocking gates:
 
-- `accessibility-audit`: WCAG 2.2 AA gate — axe-core + manual + screen reader
-- `visual-qa`: screenshot diff, hierarchy/overflow/empty-section assertions, AI-slop scan
-- `security-gate`: dependency audit, security headers, SRI, secrets, supply chain, Africa + GDPR compliance
+- `accessibility-audit` (Phase 10): WCAG 2.2 AA — axe-core + manual + screen reader
+- `visual-qa` (Phase 10): screenshot diff + hierarchy/overflow/empty-section + AI-slop scan
+- `security-gate` (Phase 10): dependency audit, headers, SRI, secrets, supply chain, compliance
+- `drift-check` (Phase 11): dead links, deprecated references, dated framing, banned terms, 500-line rule
+- `design-quality-score` (Phase 11): 7-category rubric + slop-scan, advisory on PR, blocking on main
 
 Canonical commands (runnable from any client project with the skills submodule):
 
 ```bash
-bash .claude/skills/scripts/perf-gate.sh      # Lighthouse + weight budgets on 3G
-bash .claude/skills/scripts/a11y-gate.sh      # axe-core against every route
-bash .claude/skills/scripts/visual-qa.sh      # Playwright diff + structure + slop
-bash .claude/skills/scripts/security-gate.sh  # dep audit + headers + SRI + secrets + supply-chain
+bash .claude/skills/scripts/perf-gate.sh              # Lighthouse + weight budgets on 3G
+bash .claude/skills/scripts/a11y-gate.sh              # axe-core against every route
+bash .claude/skills/scripts/visual-qa.sh              # Playwright diff + structure + slop
+bash .claude/skills/scripts/security-gate.sh          # dep audit + headers + SRI + secrets + supply-chain
+bash .claude/skills/scripts/drift-check.sh            # documentation coherence gate
+bash .claude/skills/scripts/slop-scan.sh              # banned-pattern static scan
+bash .claude/skills/scripts/design-quality-score.sh   # aggregate rubric score
 bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootstrap
 ```
+
+## Operating Discipline (Phase 11)
+
+- `observability/`: RUM, error tracking, analytics, alert thresholds. Every
+  shipped site has live telemetry on day one.
+- `experimentation/`: hypothesis template, statistical-significance primer,
+  A/B infrastructure (GrowthBook default), quarterly review.
+- `design-quality-score/`: 7-category rubric (typography, colour, spacing,
+  hierarchy, copy, trust, originality); rendered output must score ≥ 8/10
+  per category to ship.
+- `certification/`: operator syllabus, 60-question exam bank across 4 tracks,
+  cohort records.
+- `glossary.md`, `docs/doc-style-guide.md`, `docs/deprecation-policy.md`:
+  canonical names, writing standards, rename/retirement rules.
+
+## African Authority Layer (Phase 12)
+
+- `africa-excellence/`: low-bandwidth patterns, mobile-money UX, USSD-aware
+  design, African language pack (10 first-class languages), country trust
+  signals, cultural patterns. Replaces generic global defaults for African-
+  market projects.
+- `LICENSE` + `docs/licensing-matrix.md`: explicit per-path licensing (MIT
+  for code, CC BY for skills/references, CC BY-SA for plans, CC BY-NC for
+  certification, proprietary for agency-positioning).
+- `dashboards/public-scorecard.md`: quarterly public quality record.
+- `docs/roadmap-public.md`: curated public view of the roadmap.
 
 ## Cross-Cutting Skills
 
@@ -101,6 +140,10 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 - `sales-copywriting`: conversion-focused messaging
 - `form-ux-design`: user-input flow design
 - `ux-psychology`: behavioral and heuristic UX review
+- `observability`: live telemetry contract for every shipped site
+- `experimentation`: structured learning loop on retainer engagements
+- `design-quality-score`: rendered-output quality gate and rubric
+- `africa-excellence`: Africa-realistic pattern layer
 
 ## Support Skills
 
@@ -134,6 +177,8 @@ Recent agency-engine expansion work added the following reference layers:
 - `2026-04-14`: Phase 6 added QA matrix, launch verification, deployment and rollback runbooks, observability baseline, and a Playwright starter
 - `2026-04-14`: Phase 9 added role-based training, governance policy, maintenance cadence, quality metrics dashboard, and the handbook index
 - `2026-04-16`: Phase 10 added hard enforcement gates — `accessibility-audit`, `visual-qa`, and `security-gate` skills; canonical CI pipeline at `templates/ci/website.yml`; 13 canonical scripts; `lighthouserc.json` and `performance-budgets.json`; Africa 3G calibration; deploy + website-builder skill updates. See [Phase 10 completion](./docs/plans/2026-04-16-phase-10-enforcement-gates-completion.md).
+- `2026-04-16`: Phase 11 added world-class operating discipline — `observability`, `experimentation`, and `design-quality-score` skills; `drift-check.sh`, `slop-scan.sh`, and `design-quality-score.sh` scripts (CI steps 11 + 12); `glossary.md`, `docs/doc-style-guide.md`, `docs/deprecation-policy.md`; certification programme with 60-question exam bank; onboarding validation template; quality-scorecard contract. See [Phase 11 + 12 completion](./docs/plans/2026-04-16-phase-11-and-12-completion.md).
+- `2026-04-16`: Phase 12 added the African authority engine — `africa-excellence` skill with six references (low-bandwidth, mobile-money UX, USSD-aware, language pack, trust signals, cultural patterns); public scorecard; `LICENSE` + `docs/licensing-matrix.md`; `docs/roadmap-public.md`; they-ask-you-answer continental publishing rhythm.
 
 ## Working Model
 
