@@ -52,6 +52,25 @@ rollback-ready hook). Any failure blocks deploy.
 
 Troubleshooting: `references/ci-troubleshooting.md`.
 
+## Launch Decision Record
+
+Every launch records an explicit decision on:
+
+1. **Observability** — per `observability/SKILL.md`, RUM, error tracking,
+   analytics, and alerts are live; the project runbook at
+   `project-log/runbook.md` names the on-call operator.
+2. **Experimentation infrastructure** — a decision under
+   `project-log/decisions/` captures whether experimentation is enabled
+   for this client, which platform is provisioned, and the quarterly
+   cadence commitment. An answer of "no experiments yet" is acceptable
+   and must still be recorded; silence is drift.
+3. **Design quality score** — every primary template has a filed report
+   under `reports/design-quality/` and the aggregate is ≥ 8/10.
+4. **Runbook review** — the runbook has been reviewed in the last 90
+   days and lists the current on-call operator and escalation path.
+
+A launch without these four recorded is not permitted to ship.
+
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/qa-matrix.md` for the minimum launch QA standard across responsive behavior, content, links, performance, accessibility, SEO, analytics, forms, and browsers.

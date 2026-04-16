@@ -50,3 +50,29 @@ description: Content-driven lead generation strategy for premium agencies using 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+
+## Continental publishing rhythm (Phase 12 integration)
+
+The editorial calendar integrates with Phase 12's continental-presence
+workstream:
+
+- **Quarterly cornerstone authority piece.** Africa-specific topic
+  (low-bandwidth performance, mobile-money UX, multilingual design at
+  scale, African trust patterns). Published on the agency site and
+  offered to one African design/developer media outlet (TechCabal,
+  TechPoint Africa, WeeTracker, Disrupt Africa, Smashing Magazine
+  African contributors).
+- **Quarterly open data or benchmark release.** Tied to the public
+  scorecard regeneration; each release names a concrete metric,
+  pattern, or finding.
+- **Quarterly community guest contribution.** One piece from an
+  invited African contributor per quarter; reciprocates the
+  authority-sharing posture.
+- **Conference talk or hosted workshop.** At least one per year at
+  DevFest Africa, DroidConKE, PyCon Africa, ForLoop Africa, Africa
+  Tech Summit, or a sector conference.
+- **Media relationships.** Relationships maintained with at least
+  three African design or developer media outlets.
+
+Publishing cadence feeds and is fed by the quarterly public scorecard
+regeneration and the cross-client experimentation review.
