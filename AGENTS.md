@@ -33,7 +33,10 @@ Use these skills as the default router:
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
 - `seo`: Implementation of metadata, schema, sitemaps, and crawler-facing configuration.
-- `deploy`: Build verification, deployment artifacts, and release readiness.
+- `deploy`: Build verification, deployment artifacts, and release readiness. Owns the canonical CI pipeline at `templates/ci/website.yml` and its troubleshooting reference.
+- `accessibility-audit`: WCAG 2.2 AA enforcement gate — axe-core, manual checklist, screen-reader smoke scripts. Runs in the canonical CI pipeline as a hard gate.
+- `visual-qa`: Rendered-output review loop — Playwright screenshot diff, heading/overflow/empty-section assertions, AI-slop scan. Runs in the canonical CI pipeline as a hard gate.
+- `security-gate`: Dependency audit, security headers, SRI, secrets scan, supply-chain, and Africa + GDPR compliance matrix. Runs in the canonical CI pipeline as a hard gate.
 
 Use these cross-cutting skills whenever their lens materially improves the output:
 
@@ -56,6 +59,22 @@ Use these support skills on demand:
 - `they-ask-you-answer`, `social-media`
 - `seo-audit`, `cro-audit`
 - `skill-writing`, `skill-safety-audit`, `update-claude-documentation`
+
+## Enforcement and Quality Gates (Phase 10)
+
+Every project shipped on the engine inherits the canonical CI pipeline at
+`templates/ci/website.yml` via `scripts/install-canonical-ci.sh`. The
+pipeline is the single source of enforcement. Adjustments to thresholds or
+suppressions require a decision entry under `project-log/decisions/`.
+
+- Canonical commands: `perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`,
+  `security-gate.sh`.
+- Canonical configs: `lighthouserc.json`, `performance-budgets.json`.
+- Reports directory contract: `reports/bundle/`, `reports/lighthouse/`,
+  `reports/a11y/`, `reports/visual/`, `reports/security/`.
+- Visual baseline contract: `tests/visual/baseline/`.
+- Africa calibration: `deploy/references/africa-calibration.md` (3G profile,
+  350 KB weight budget, Save-Data handling).
 
 ## Working Model
 

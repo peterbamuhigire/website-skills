@@ -66,7 +66,7 @@ system cannot reach world-class without:
 | 7 | Proof, Authority, and Lead Generation | Case studies, audits, expert frameworks | Complete |
 | 8 | Retainers, Automation, and Revenue Expansion | Retainer offers, monthly reporting | Complete |
 | 9 | Scale, Team Enablement, and Governance | Role tracks, governance policy, scorecard | Complete (untested) |
-| **10** | **Hard Enforcement and Visual QA Gates** | **Perf, a11y, visual, security, CI gates** | **Pending** |
+| **10** | **Hard Enforcement and Visual QA Gates** | **Perf, a11y, visual, security, CI gates** | **Complete (repo deliverables 2026-04-16; external validation pending)** |
 | **11** | **World-Class Operating Discipline** | **Multi-op proof, drift, telemetry, CRO** | **Pending** |
 | **12** | **African Authority Engine** | **Africa excellence, public benchmarks, certification** | **Pending** |
 

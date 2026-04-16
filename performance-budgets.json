@@ -1,0 +1,65 @@
+{
+  "_comment": "Canonical route-level performance budgets. Loaded by scripts/perf-gate.sh and referenced by lighthouserc.json. Budgets are set for simulated 3G on mobile (African market reality). See deploy/references/performance-gate.md for rationale and deploy/references/africa-calibration.md for why these thresholds matter.",
+  "global": {
+    "lcp_ms": 2000,
+    "inp_ms": 200,
+    "cls": 0.1,
+    "ttfb_ms": 600,
+    "total_weight_kb": 350,
+    "js_kb_gzip": 80,
+    "css_kb_gzip": 30,
+    "image_above_fold_kb": 200,
+    "font_kb_total": 80,
+    "third_party_js_kb": 0
+  },
+  "routes": {
+    "/": {
+      "role": "homepage",
+      "lcp_ms": 1800,
+      "total_weight_kb": 320,
+      "js_kb_gzip": 60,
+      "above_fold_image_kb": 150
+    },
+    "/services/": {
+      "role": "service-index",
+      "total_weight_kb": 330
+    },
+    "/services/[slug]/": {
+      "role": "service-detail",
+      "total_weight_kb": 350
+    },
+    "/about/": {
+      "role": "about",
+      "total_weight_kb": 340
+    },
+    "/contact/": {
+      "role": "contact",
+      "js_kb_gzip": 90,
+      "_comment": "Forms add modest JS; budget relaxed 10KB not 40KB. No third-party form widgets."
+    },
+    "/blog/": {
+      "role": "blog-index",
+      "total_weight_kb": 330
+    },
+    "/blog/[slug]/": {
+      "role": "blog-post",
+      "total_weight_kb": 400,
+      "above_fold_image_kb": 200,
+      "_comment": "Longer copy + hero image; still capped under 400KB first-load on 3G."
+    }
+  },
+  "network_profile": {
+    "name": "Africa-3G-baseline",
+    "downlink_kbps": 1638,
+    "uplink_kbps": 750,
+    "rtt_ms": 300,
+    "cpu_slowdown": 4,
+    "_comment": "Simulated representative-African-mobile. See docs/plans/website-agency-engine/phase-10 Workstream 6."
+  },
+  "fail_policy": {
+    "on_regression": "block_deploy",
+    "tolerance_percent": 0,
+    "warn_threshold_percent": 5,
+    "_comment": "No tolerance on primary metrics. A 5% warn allows local cache noise without failing CI."
+  }
+}
