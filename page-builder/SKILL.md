@@ -32,6 +32,7 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
 - Do not generate generic output that ignores the actual project context.
+- **Never write a generic author bio on blog or article pages.** The author bio must be specific to the article's topic — describing the author's (or organisation's) credentials and experience *relevant to what the article covers*. See `blog-writer/references/article-design.md` → Author Bio Standard for the full rule, examples, and bilingual requirements.
 
 ## Outputs
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
