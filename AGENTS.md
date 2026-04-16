@@ -37,6 +37,10 @@ Use these skills as the default router:
 - `accessibility-audit`: WCAG 2.2 AA enforcement gate — axe-core, manual checklist, screen-reader smoke scripts. Runs in the canonical CI pipeline as a hard gate.
 - `visual-qa`: Rendered-output review loop — Playwright screenshot diff, heading/overflow/empty-section assertions, AI-slop scan. Runs in the canonical CI pipeline as a hard gate.
 - `security-gate`: Dependency audit, security headers, SRI, secrets scan, supply-chain, and Africa + GDPR compliance matrix. Runs in the canonical CI pipeline as a hard gate.
+- `observability`: RUM, error tracking, analytics, and alerting contract for every shipped site. Feeds `dashboards/quality-scorecard.md`.
+- `experimentation`: Hypothesis template, statistical-significance primer, A/B infrastructure (GrowthBook default), quarterly review.
+- `design-quality-score`: 7-category rubric and slop-scan. Runs as canonical CI step 12 (advisory on PR, blocking on main).
+- `africa-excellence`: Africa-realistic pattern layer (low-bandwidth, mobile-money UX, USSD-aware, language pack, trust signals, cultural patterns).
 
 Use these cross-cutting skills whenever their lens materially improves the output:
 
@@ -59,22 +63,41 @@ Use these support skills on demand:
 - `they-ask-you-answer`, `social-media`
 - `seo-audit`, `cro-audit`
 - `skill-writing`, `skill-safety-audit`, `update-claude-documentation`
+- `observability`, `experimentation`, `design-quality-score`, `africa-excellence`
 
-## Enforcement and Quality Gates (Phase 10)
+## Enforcement and Quality Gates (Phases 10 + 11)
 
-Every project shipped on the engine inherits the canonical CI pipeline at
+Every project shipped on the engine inherits the 15-step canonical CI pipeline at
 `templates/ci/website.yml` via `scripts/install-canonical-ci.sh`. The
 pipeline is the single source of enforcement. Adjustments to thresholds or
 suppressions require a decision entry under `project-log/decisions/`.
 
 - Canonical commands: `perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`,
-  `security-gate.sh`.
+  `security-gate.sh`, `drift-check.sh`, `slop-scan.sh`,
+  `design-quality-score.sh`.
 - Canonical configs: `lighthouserc.json`, `performance-budgets.json`.
 - Reports directory contract: `reports/bundle/`, `reports/lighthouse/`,
-  `reports/a11y/`, `reports/visual/`, `reports/security/`.
+  `reports/a11y/`, `reports/visual/`, `reports/security/`, `reports/drift/`,
+  `reports/design-quality/`.
 - Visual baseline contract: `tests/visual/baseline/`.
 - Africa calibration: `deploy/references/africa-calibration.md` (3G profile,
-  350 KB weight budget, Save-Data handling).
+  350 KB weight budget, Save-Data handling) + `africa-excellence/` skill for
+  pattern-level standards.
+
+## Governance (Phase 11)
+
+- `glossary.md` — canonical-name authority; `drift-check.sh` enforces.
+- `docs/doc-style-guide.md` — writing standards for every file.
+- `docs/deprecation-policy.md` — rename and retirement rules.
+- `certification/` — operator programme (syllabus, exam bank, cohort records).
+- `docs/onboarding-validation/2026/report.md` — multi-operator validation.
+- `dashboards/quality-scorecard.md` — internal generated scorecard contract.
+
+## Public Authority (Phase 12)
+
+- `LICENSE` + `docs/licensing-matrix.md` — explicit per-path licensing.
+- `docs/roadmap-public.md` — public view of the roadmap.
+- `dashboards/public-scorecard.md` — quarterly public quality record.
 
 ## Working Model
 

@@ -118,3 +118,82 @@ The main blockers preventing a true world-class score today are:
 - incomplete accessibility enforcement
 - incomplete CI integration
 - limited proof that the governance model works under multi-operator conditions
+
+---
+
+## Addendum — Post-Phase 12 (2026-04-16)
+
+Phases 10, 11, and 12 shipped on 2026-04-16. Every gap named above is now
+addressed at the repository-infrastructure layer. The table below maps each
+historical gap to its closure, and then lists the residual gaps that remain
+genuinely open.
+
+### Closed gaps
+
+| 2026-04-12 gap | How it was closed |
+|---|---|
+| #1 Enforcement still lags behind guidance | Phase 10 wired perf-gate, a11y-gate, visual-qa, security-gate into the 15-step canonical CI at `templates/ci/website.yml`. Phase 11 added drift-check and design-quality-score. Every standard named in the repo now has a blocking CI counterpart. |
+| #2 Visual QA is still missing | `visual-qa/` skill + `scripts/visual-qa.sh` (screenshot diff + structural assertions + AI-slop scan) ship in Phase 10. Phase 11's `design-quality-score/` rubric adds the absolute-quality layer. |
+| #3 Performance is better framed than enforced | `scripts/perf-gate.sh` + `lighthouserc.json` + `performance-budgets.json`, calibrated for African 3G (1638 Kbps, 300 ms RTT, 350 KB budget). Blocking CI step 7. |
+| #4 Accessibility is still not a first-class system skill | `accessibility-audit/` skill + `scripts/a11y-gate.sh` (axe-core + manual checklist + NVDA/VoiceOver smoke). Blocking CI step 8. |
+| #5 CI and automation are still partial | `templates/ci/website.yml` 15 ordered blocking steps; `scripts/install-canonical-ci.sh` inherits it into client projects. Any client not running the canonical pipeline is not considered shipped on the engine. |
+| #6 Governance exists but has not been proven at team scale | Infrastructure shipped: `certification/syllabus.md`, `certification/exam.md` (60-question bank across shared + 4 tracks), `docs/onboarding-validation/2026/report.md`. **Team-scale proof remains pending** — see residual gaps below. |
+| #7 Legacy documentation drift reduced but not eliminated | `scripts/drift-check.sh` (blocking CI step 11) now fails the build on dead links, deprecated-entity references, dated framing, banned terms, 500-line overruns, duplicated guidance, and forbidden constructions. Quarterly audit added to maintenance calendar. Pre-existing drift instances are the first quarterly audit's workload. |
+
+### Residual gaps
+
+These are no longer repository-infrastructure gaps; they are operational.
+Repository authorship cannot close them — running the engine closes them.
+
+#### A. Multi-operator demonstration (operational)
+
+The certification programme is ready to run; the first cohort is not yet
+enrolled. Until at least three non-founder operators have shipped complete
+projects end-to-end using only the published skills, the governance model
+remains unproven in practice.
+
+#### B. Live telemetry generation (operational)
+
+`observability/SKILL.md` defines the RUM + error-tracking + analytics + alerts
+contract. `dashboards/quality-scorecard.md` and `dashboards/public-scorecard.md`
+define the generated-artefact contract. The generation script runs against the
+first retainer client with instrumentation live — which has not happened yet.
+
+#### C. Experimentation execution (operational)
+
+`experimentation/SKILL.md` plus the hypothesis template, stat primer, A/B
+infrastructure reference, logbook template, and quarterly review template are
+shipped. Zero experiments have been decided yet. The Phase 11 target of 30% of
+retainer clients running an active experiment needs retainer clients.
+
+#### D. Public authority assets (operational)
+
+Benchmark library, case-study corpus, upstream OSS contribution, conference
+presence, and research note — all are commitments on
+`docs/roadmap-public.md`. Repository infrastructure (licensing matrix, public
+scorecard template, africa-excellence skill) is in place; the assets
+themselves are built outside the repository.
+
+#### E. Rubric inter-operator calibration (quick close)
+
+The design-quality-score rubric and worked examples are shipped. Two-operator
+blind-scoring of the Example 4 calibration exercise has not yet happened. This
+is a single 60-minute exercise away from closing.
+
+#### F. Pre-existing drift cleanup (quick close)
+
+`drift-check.sh` surfaces pre-existing legacy drift: banned-term instances in
+`sales-copywriting/references/`, absolute-path links in `CLAUDE.md` and
+`README.md`, dated framing in `sector-strategies/templates/`. None were
+introduced by Phase 11/12. The first quarterly documentation audit closes them.
+
+### Revised bottom-line limiters
+
+Not blockers to world-class *claim* — the infrastructure is world-class. The
+residuals are blockers to world-class *demonstration*:
+
+- first certification cohort shipping its first real projects
+- first client running with live telemetry feeding the scorecard
+- first benchmark site published and indexed under CC BY-SA
+
+All three are measurable, timed, and tracked on the public roadmap.

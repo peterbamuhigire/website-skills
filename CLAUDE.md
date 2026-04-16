@@ -53,11 +53,36 @@ visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-secti
 security-gate/SKILL.md       <- Dep audit + headers + SRI + secrets + supply chain + compliance
 ```
 
+### Operating Discipline Skills (Phase 11 — added 2026-04-16)
+
+```text
+observability/SKILL.md        <- RUM + error tracking + analytics + alert thresholds
+experimentation/SKILL.md      <- Hypothesis template + stat primer + A/B infra + quarterly review
+design-quality-score/SKILL.md <- 7-category rubric + slop-scan (CI step 12)
+```
+
+Phase 11 also adds: `glossary.md` (canonical names), `docs/doc-style-guide.md`
+(writing standards), `docs/deprecation-policy.md` (rename/retirement rules),
+`certification/` (syllabus + 60-question exam + cohort records), and
+`dashboards/quality-scorecard.md` (generated-artefact contract).
+
+### Authority Skills (Phase 12 — added 2026-04-16)
+
+```text
+africa-excellence/SKILL.md    <- Low-bandwidth, mobile-money UX, USSD-aware,
+                                 language pack, trust signals, cultural patterns
+```
+
+Phase 12 also adds: `LICENSE` (MIT + CC BY + CC BY-SA + CC BY-NC + proprietary),
+`docs/licensing-matrix.md`, `docs/roadmap-public.md`, and
+`dashboards/public-scorecard.md` (quarterly public quality record).
+
 Canonical scripts under `scripts/`: `perf-gate.sh`, `a11y-gate.sh`,
-`visual-qa.sh`, `security-gate.sh`, `install-canonical-ci.sh`,
-`metadata-audit.sh`, `post-deploy-smoke.sh`, `rollback.sh`, and gate-specific
-helpers. Canonical configs at repo root: `lighthouserc.json`,
-`performance-budgets.json`. Canonical CI pipeline at `templates/ci/website.yml`.
+`visual-qa.sh`, `security-gate.sh`, `drift-check.sh`, `slop-scan.sh`,
+`design-quality-score.sh`, `install-canonical-ci.sh`, `metadata-audit.sh`,
+`post-deploy-smoke.sh`, `rollback.sh`, and gate-specific helpers.
+Canonical configs at repo root: `lighthouserc.json`, `performance-budgets.json`.
+Canonical CI pipeline at `templates/ci/website.yml`.
 
 ### Support And Audit Skills
 
@@ -156,6 +181,8 @@ Full reference: `deploy/references/ci-troubleshooting.md`,
 - Treat privacy and terms pages as standard trust infrastructure
 - Run `skill-safety-audit` when a skill changes materially
 - Update top-level docs when the operating model changes materially
+- Every skill uses the canonical SKILL.md structure in `docs/doc-style-guide.md`
+- Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine
 - Thresholds in `lighthouserc.json` and `performance-budgets.json` are
