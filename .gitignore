@@ -1,0 +1,21 @@
+# Per-build output — committed only as directory contracts (README.md)
+reports/**
+!reports/
+!reports/bundle/
+!reports/bundle/README.md
+
+# CI install-canonical-ci.sh backups
+.engine-backup-*
+
+# Lighthouse CI cache
+.lighthouseci/
+
+# Node
+node_modules/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

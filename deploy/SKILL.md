@@ -36,6 +36,22 @@ description: Builds multi-language Astro site, verifies output for all language 
 ## Outputs
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
 
+## Canonical CI Pipeline
+
+Every project launched through this skill must run the canonical CI pipeline
+at `templates/ci/website.yml`. Install it with:
+
+```bash
+bash .claude/skills/scripts/install-canonical-ci.sh <project-path>
+```
+
+The pipeline runs 15 ordered steps (install → lint → unit → build → e2e
+smoke → metadata audit → perf gate → a11y gate → visual QA → security gate
+→ drift check → design quality score → deploy → post-deploy smoke →
+rollback-ready hook). Any failure blocks deploy.
+
+Troubleshooting: `references/ci-troubleshooting.md`.
+
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/qa-matrix.md` for the minimum launch QA standard across responsive behavior, content, links, performance, accessibility, SEO, analytics, forms, and browsers.
@@ -45,8 +61,12 @@ description: Builds multi-language Astro site, verifies output for all language 
 - Use `references/observability-baseline.md` for uptime, form delivery, analytics, and issue-detection expectations.
 - Use `references/post-launch-review-checklist.md` for launch-day, 7-day, and 30-day review windows.
 - Use `references/launch-communication-template.md` to standardize live-site notifications and internal launch comms.
+- Use `references/performance-gate.md` for the canonical performance enforcement layer and its thresholds.
+- Use `references/ci-troubleshooting.md` for the step-by-step triage of the 15-step canonical pipeline.
+- Use `references/africa-calibration.md` for the 3G network profile, weight budget, and data-cost rules the gates apply.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - Use `templates/playwright-starter/` when a project needs a minimal E2E baseline for smoke, navigation, and form coverage.
+- Use `templates/ci/website.yml` (via install-canonical-ci.sh) as the inherited CI pipeline; edit the canonical file, never the downstream copy.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.

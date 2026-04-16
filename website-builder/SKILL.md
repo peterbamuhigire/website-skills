@@ -27,11 +27,38 @@ description: Master orchestrator for building static websites from markdown cont
 - Preserve the intended build order and artifact handoffs.
 - Stay portable across Claude Code and Codex installs.
 - Report clearly what was built, skipped, or blocked.
+- Every project ships through the canonical CI pipeline at
+  `templates/ci/website.yml`. A build that does not pass every gate is not
+  considered shipped on the world-class engine.
+
+## Build Contract
+
+Every project built under this orchestrator must satisfy:
+
+1. **Performance gate** — `perf-gate.sh` passes Lighthouse and route weight
+   budgets at 3G simulation (`deploy/references/performance-gate.md`).
+2. **Accessibility gate** — `a11y-gate.sh` passes WCAG 2.2 AA with zero
+   serious or critical axe violations (`accessibility-audit/SKILL.md`).
+3. **Visual QA** — `visual-qa.sh` passes screenshot diff, structural
+   assertions, and AI-slop scan (`visual-qa/SKILL.md`).
+4. **Security gate** — `security-gate.sh` passes dependency audit, security
+   headers, SRI, secrets scan, and supply-chain check
+   (`security-gate/SKILL.md`).
+5. **Design quality score** — the rendered-output rubric score is recorded
+   and meets the world-class floor (`design-quality-score/SKILL.md`).
+6. **Africa calibration** — performance, trust, and UX patterns align with
+   `africa-excellence/SKILL.md` and `deploy/references/africa-calibration.md`.
+7. **Live telemetry** — RUM, error tracking, and analytics are wired per
+   `observability/SKILL.md`.
+
+Any gate failure blocks deploy.
 
 ## Anti-patterns
 - Do not assume the skills live only under `.claude/skills`.
 - Do not start generation before reading the project inputs.
 - Do not skip downstream verification.
+- Do not claim a project is shipped on the engine without the canonical CI
+  pipeline installed and green.
 
 ## Outputs
 - Build plan, orchestrated execution notes, generated artifacts, or a blocker report.
@@ -51,6 +78,11 @@ description: Master orchestrator for building static websites from markdown cont
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
+- After intake is complete and before build starts, install the canonical CI
+  pipeline: `bash .claude/skills/scripts/install-canonical-ci.sh <project-path>`.
+- The sibling gate skills the orchestrator is responsible for invoking:
+  `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
+  `design-quality-score`, and `africa-excellence`.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.

@@ -42,8 +42,22 @@ photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisa
 page-builder/SKILL.md       <- Content to pages and components
 seo/SKILL.md                <- Search-facing implementation
 blog-writer/SKILL.md        <- Blog production
-deploy/SKILL.md             <- QA, launch checks, deployment, rollback, observability baseline
+deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
 ```
+
+### Enforcement Skills (Phase 10 — added 2026-04-16)
+
+```text
+accessibility-audit/SKILL.md <- WCAG 2.2 AA gate: axe-core + manual + screen reader
+visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-section + AI-slop
+security-gate/SKILL.md       <- Dep audit + headers + SRI + secrets + supply chain + compliance
+```
+
+Canonical scripts under `scripts/`: `perf-gate.sh`, `a11y-gate.sh`,
+`visual-qa.sh`, `security-gate.sh`, `install-canonical-ci.sh`,
+`metadata-audit.sh`, `post-deploy-smoke.sh`, `rollback.sh`, and gate-specific
+helpers. Canonical configs at repo root: `lighthouserc.json`,
+`performance-budgets.json`. Canonical CI pipeline at `templates/ci/website.yml`.
 
 ### Support And Audit Skills
 
@@ -116,6 +130,22 @@ Recommended before website development work:
 
 Use plugins where they materially improve design, implementation, debugging, or QA output.
 
+## Canonical CI Pipeline (Phase 10)
+
+Every client project built on the engine inherits the 15-step pipeline at
+`templates/ci/website.yml` via `scripts/install-canonical-ci.sh <project>`.
+Pipeline order is fixed: install → lint → unit → build → e2e-smoke →
+metadata-audit → perf-gate → a11y-gate → visual-qa → security-gate →
+drift-check → design-quality-score → deploy → post-deploy-smoke →
+rollback-ready.
+
+Any gate failure blocks deploy. Thresholds live in `lighthouserc.json` and
+`performance-budgets.json` and are non-negotiable; adjustments require a
+decision entry under `project-log/decisions/`.
+
+Full reference: `deploy/references/ci-troubleshooting.md`,
+`deploy/references/performance-gate.md`, `deploy/references/africa-calibration.md`.
+
 ## Hard Repository Expectations
 
 - Prefer zero unnecessary JS
@@ -126,3 +156,8 @@ Use plugins where they materially improve design, implementation, debugging, or 
 - Treat privacy and terms pages as standard trust infrastructure
 - Run `skill-safety-audit` when a skill changes materially
 - Update top-level docs when the operating model changes materially
+- Every project ships through the canonical CI pipeline; if the pipeline
+  is not installed and green, the project is not shipped on the engine
+- Thresholds in `lighthouserc.json` and `performance-budgets.json` are
+  calibrated for African 3G mobile reality (1.6 Mbps, 300ms RTT, 4x CPU
+  slowdown); see `deploy/references/africa-calibration.md`

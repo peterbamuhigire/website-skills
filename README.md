@@ -45,6 +45,14 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- i18n/                    Language infrastructure
 |-- sector-strategies/       Sector design and trust-pattern guidance
 |-- sectors/                 Sector-specific specializations
+|-- accessibility-audit/     WCAG 2.2 AA enforcement gate
+|-- visual-qa/               Screenshot diff, structural assertions, AI-slop scan
+|-- security-gate/           Dep audit, headers, SRI, secrets, supply chain, compliance
+|-- scripts/                 Canonical runners for every gate (perf, a11y, visual, security)
+|-- tests/visual/            Baseline directory contract for visual QA
+|-- reports/                 Per-build output directory (bundle, lighthouse, a11y, visual, security)
+|-- templates/ci/            Canonical CI pipeline inherited by client projects
+|-- project-log/decisions/   Decision log for non-obvious trade-offs
 |-- blog-writer/             Blog production
 |-- blog-idea-generator/     Blog ideation
 |-- policy-pages/            Privacy and terms guidance
@@ -65,6 +73,25 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 - `page-builder`: converts content and design decisions into pages and reusable UI
 - `seo`: metadata, schema, sitemap, and crawler-facing configuration
 - `deploy`: verification, release readiness, rollout, rollback, and post-launch checks
+
+## Enforcement Gates (Phase 10)
+
+Every project shipped on the engine must pass the canonical CI pipeline
+at `templates/ci/website.yml`. These skills own the individual gates:
+
+- `accessibility-audit`: WCAG 2.2 AA gate — axe-core + manual + screen reader
+- `visual-qa`: screenshot diff, hierarchy/overflow/empty-section assertions, AI-slop scan
+- `security-gate`: dependency audit, security headers, SRI, secrets, supply chain, Africa + GDPR compliance
+
+Canonical commands (runnable from any client project with the skills submodule):
+
+```bash
+bash .claude/skills/scripts/perf-gate.sh      # Lighthouse + weight budgets on 3G
+bash .claude/skills/scripts/a11y-gate.sh      # axe-core against every route
+bash .claude/skills/scripts/visual-qa.sh      # Playwright diff + structure + slop
+bash .claude/skills/scripts/security-gate.sh  # dep audit + headers + SRI + secrets + supply-chain
+bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootstrap
+```
 
 ## Cross-Cutting Skills
 
@@ -106,6 +133,7 @@ Recent agency-engine expansion work added the following reference layers:
 - `2026-04-14`: Phase 3 added website strategy briefs, competitor synthesis, trust architecture, page-goal mapping, and intent mapping
 - `2026-04-14`: Phase 6 added QA matrix, launch verification, deployment and rollback runbooks, observability baseline, and a Playwright starter
 - `2026-04-14`: Phase 9 added role-based training, governance policy, maintenance cadence, quality metrics dashboard, and the handbook index
+- `2026-04-16`: Phase 10 added hard enforcement gates — `accessibility-audit`, `visual-qa`, and `security-gate` skills; canonical CI pipeline at `templates/ci/website.yml`; 13 canonical scripts; `lighthouserc.json` and `performance-budgets.json`; Africa 3G calibration; deploy + website-builder skill updates. See [Phase 10 completion](./docs/plans/2026-04-16-phase-10-enforcement-gates-completion.md).
 
 ## Working Model
 
@@ -128,7 +156,9 @@ When a task is ambiguous, follow this order:
 
 ## Related Docs
 
-- [AGENTS.md](/C:/wamp64/www/website-skills/AGENTS.md)
-- [CLAUDE.md](/C:/wamp64/www/website-skills/CLAUDE.md)
-- [docs/evaluation/2026-04-12](/C:/wamp64/www/website-skills/docs/evaluation/2026-04-12)
-- [plans/website-agency-engine](/C:/wamp64/www/website-skills/plans/website-agency-engine)
+- [AGENTS.md](./AGENTS.md) — repository routing and quality rules
+- [CLAUDE.md](./CLAUDE.md) — Claude-specific repo guidance
+- [docs/plans/INDEX.md](./docs/plans/INDEX.md) — plans index and status
+- [docs/plans/NEXT_FEATURES.md](./docs/plans/NEXT_FEATURES.md) — priority roadmap
+- [docs/plans/website-agency-engine](./docs/plans/website-agency-engine) — 12-phase master roadmap
+- [docs/evaluation/2026-04-12](./docs/evaluation/2026-04-12) — evaluation driving Phase 10–12
