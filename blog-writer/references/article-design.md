@@ -109,10 +109,55 @@ While body text stays consistent (the website's body font), vary:
 
 1. **Article Hero** — featured image + title + category + read time + author + date
 2. **Article Body** — the content with h2/h3 headings, paragraphs, lists, blockquotes, images
-3. **Author Bio** — brief about-the-author section at the end (pulls from company-profile.md)
+3. **Author Bio** — contextual about-the-author section at the end. **Never generic.** See Author Bio Standard below.
 4. **Related Articles** — links to other articles if they exist (skip if this is the first article)
 5. **CTA Section** — the standard CTASection component matching the rest of the website
 6. **Share Links** — optional social sharing links (LinkedIn, Twitter/X)
+
+---
+
+### Author Bio Standard — Contextual, Never Generic
+
+**Rule:** Every author bio on a blog post or article must be written specifically for that article. A generic "Jane Smith is the founder of Acme Ltd" bio is not acceptable. The bio must make the reader think: *this author is exactly the right person to be writing this.*
+
+**Why this matters:** A topic-specific bio builds E-E-A-T (Experience, Expertise, Authority, Trust) signals that both readers and AI search systems use to evaluate the credibility of the content. A generic bio wastes the trust opportunity and makes the author look like a content farm.
+
+**What to include:**
+- The author's specific credentials *relevant to this article's topic* (not their full job description)
+- A concrete signal of hands-on experience with this subject (tools built, clients served, research done, problems solved)
+- A forward pointer: what else the author writes about or where readers can learn more (link to author profile page if it exists)
+
+**What to avoid:**
+- Generic title + company name with no topic context
+- Copying the same bio across multiple articles
+- Starting with "John is a..." (use a stronger opening)
+- Vague phrases like "passionate about technology" or "experienced professional"
+
+**Bio structure (2–3 sentences):**
+1. Sentence 1 — specific credential or experience tied directly to this article's topic
+2. Sentence 2 — a concrete example or detail that proves hands-on knowledge (product they built, research they did, clients they served)
+3. Sentence 3 (optional) — what else they cover / where to read more
+
+**Examples:**
+
+| Article Topic | Bad bio | Good bio |
+|---|---|---|
+| Agentic AI for SMEs | "Peter is the Founder and CTO of Chwezi Core Systems." | "Peter builds AI-integrated business software for East African SMEs. He designed the automation layer in Maduuka that handles order processing and payment follow-ups for clients across Uganda — the same workflow patterns he writes about here. He also writes on infrastructure, mobile development, and digital transformation." |
+| Offline mobile apps | "Peter is a software developer at Chwezi." | "Peter specialises in offline-first mobile architecture for low-connectivity environments across East Africa. He led the field-ready mobile builds for Maduuka and Aqar, both designed to queue data without internet and sync cleanly when reconnected. His writing focuses on mobile, AI, and enterprise software for African businesses." |
+| Website cost in Uganda | "Peter is a web developer based in Kampala." | "Peter leads website design and development at Chwezi Core Systems in Kampala, where he has priced, scoped, and delivered custom websites for Ugandan and regional clients. He writes candidly about technology investment, local market pricing, and why the cheapest option often costs the most in the long run." |
+| Data security | "Peter is interested in cybersecurity." | "Peter oversees software engineering and security architecture at Chwezi Core Systems, where protecting client data across mobile and web systems is part of every build. His work spans application security, infrastructure management, and compliance with Uganda's Data Protection and Privacy Act — the practical background behind this article." |
+
+**When the author is an organisation (not a named person):**
+The same rule applies — the bio must reflect the organisation's specific credentials and experience *relative to the article's topic*, not a generic company description. Describe what the organisation has built, solved, or studied in this area. Name relevant products, clients served, or research conducted if they reinforce credibility.
+
+| Article Topic | Bad org bio | Good org bio |
+|---|---|---|
+| Security services | "Chwezi Core Systems is an ICT consultancy based in Kampala." | "Chwezi Core Systems provides cybersecurity assessments and digital defence services to businesses across East Africa. The team has conducted risk assessments for SMEs in Uganda, Kenya, and the DRC, and builds security into every software product it ships — including Maduuka, Aqar, and Medic8." |
+| Business planning | "Chwezi is a business consultancy." | "Chwezi Core Systems has developed business plans, grant proposals, and ICT strategies for organisations across East and Central Africa. The firm's consulting team works directly with founders, NGOs, and growing enterprises — not via templates, but through structured engagement with the business reality of each client." |
+
+**Bilingual note:** In French, the bio must be formally written (vouvoiement style for external narration, i.e. third person formal). The content must be fully translated and adapted — not literally translated word for word. The same specificity standard applies in both languages.
+
+---
 
 ### Reading Experience Enhancements
 
