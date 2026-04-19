@@ -188,3 +188,28 @@ Full reference: `deploy/references/ci-troubleshooting.md`,
 - Thresholds in `lighthouserc.json` and `performance-budgets.json` are
   calibrated for African 3G mobile reality (1.6 Mbps, 300ms RTT, 4x CPU
   slowdown); see `deploy/references/africa-calibration.md`
+
+## Direct-Response Copy for Sales Pages
+
+When building landing pages, sales pages, VSL scripts, webinar funnels,
+book funnels, order pages, upsell/OTO pages, or application pages, use
+the `long-form-sales-copy` skill, which applies:
+
+- Kennedy's 28-step Ultimate Sales Letter system (headline, Johnson Box,
+  Damaging Admission, Hidden Benefit, value stack, Beat the Price,
+  Creative P.S., Power of a Sequence)
+- Brunson's funnel scripts (Star-Story-Solution 35-beat long-form,
+  Perfect Webinar close, OTO Bump, Soap Opera + Seinfeld email
+  sequences, 7 phases of a lead, 100-Visitor Test)
+- Kennedy's 5 Propositions stack (USP + UVP + Irresistible Offer +
+  Unique Safety Proposition + Unique Experience Proposition)
+
+Full primary-source extractions live in `book-extractions/`:
+`kennedy-ultimate-sales-letter-extraction.md`,
+`brunson-dotcomsecrets-ignite-extraction.md`,
+`kennedy-no-bs-sales-success-extraction.md`,
+`kennedy-no-bs-price-strategy-extraction.md`.
+
+For brand-level messaging, use `book-extractions/storybrand-sb7-framework.md`
+(customer = hero, brand = guide) as the upstream foundation; Kennedy and
+Brunson then drive the actual sales-page copy.

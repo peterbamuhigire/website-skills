@@ -319,3 +319,49 @@ Unlike client sectors (which need multiple pages, navigation, content systems), 
 **Skills Added:** policy-pages, color-selection
 **Sectors Added:** app-landing-pages
 **Enhancements:** Photo naming conventions, gallery/slideshow recognition, comprehensive color theory framework, app landing page conversion optimization
+
+---
+
+## Session: Kennedy + Brunson Direct-Response Frameworks (2026-04-19)
+
+### Book Extractions Added
+
+Four new files in `book-extractions/`:
+- `kennedy-no-bs-price-strategy-extraction.md` — 9 price failures, 5 Propositions, Triangle of Preeminence, Hawaiian Fisherman, niche pricing, discount discipline, competing with free, association principle, 5 price-setting methods
+- `kennedy-no-bs-sales-success-extraction.md` — 23 Strategies, Positioning-Not-Prospecting, 6-Step Sales Process, Takeaway Selling, Proof hierarchy, Welcome Guest Process, Morning After protocol
+- `kennedy-ultimate-sales-letter-extraction.md` — 28-step long-form system, Power of a Sequence, Hidden Benefit (Ted Nicholas), Damaging Admission, Creative P.S., Johnson Box, Beat the Price Bugaboo
+- `brunson-dotcomsecrets-ignite-extraction.md` — Secret Formula, Value Ladder, 3 traffic types, 7 phases of a lead, 100-Visitor Test, 9 Core Funnels, Inception awareness levels, Star-Story-Solution 35-beat script, OTO Bump 14-step, Perfect Webinar close, Soap Opera + Seinfeld emails
+
+### New Skill: long-form-sales-copy
+
+Applies Kennedy's 28-step Ultimate Sales Letter system and Brunson's funnel scripts (Star-Story-Solution, Perfect Webinar, OTO Bump) to all long-form web assets: landing pages, sales pages, VSL scripts, order pages, upsell pages, webinar funnels, book funnels, application pages.
+
+**Key Pattern:** Long-form works in EA despite agency conventional wisdom. Buyers making real purchase decisions (school fees, health, equipment, land, high-ticket B2B) read long-form if it addresses their real concerns and hidden benefits.
+
+**Integration:**
+- `content-writing`, `brand-alignment`, `east-african-english` — voice compliance
+- `cro-audit` — measurement and optimisation layer
+- `design-system`, `design-quality-score` — visual integrity
+- `ux-forms`, `ux-writing` — order form microcopy
+- `ecommerce` — product / cart / checkout
+- `book-extractions/storybrand-sb7-framework` — StoryBrand for brand-level messaging; Kennedy/Brunson for the sales page itself
+
+**Core Skeleton (Kennedy):**
+Headline → Sub-headline → Hero visual → CTA → Johnson Box → Opening Hook → Problem/Agitate → Damaging Admission → Promise → Proof → Offer Stack → Beat Price → Guarantee → Deadline → Multi-channel CTA → Signature → P.S. block → FAQ → Order form
+
+**Awareness-Level Matching (Brunson/Schwartz):** Most Aware → Product Aware → Solution Aware → Problem Aware → Unaware. Copy lead changes per level.
+
+**Traffic Temperature Matching:** Hot / Warm / Cold — different pre-frame depth per source.
+
+**Uganda/EA Application:**
+- WhatsApp integration button non-negotiable (+20–40% conversion)
+- Mobile money (MTN, Airtel Money) at checkout (+50% conversion)
+- "Reassuringly expensive" — very low UGX prices suppress response
+- Hidden benefit in EA is often status / legacy / avoiding shame / "better start for children"
+- 3–5 message sequences outperform single-send 2–5×
+
+---
+
+**Last Updated (Kennedy+Brunson session):** 2026-04-19
+**Skills Added:** long-form-sales-copy
+**Extractions Added:** 4 Kennedy/Brunson primary-source extractions

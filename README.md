@@ -137,7 +137,8 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 - `language-standards`: regional language and tone quality
 - `content-writing`: website copy structure and clarity
 - `brand-alignment`: audience and brand coherence
-- `sales-copywriting`: conversion-focused messaging
+- `sales-copywriting`: conversion-focused messaging (cross-cutting quality lens — PASTOR, 4 P's)
+- `long-form-sales-copy`: direct-response long-form execution (Kennedy 28-step + Brunson Star-Story-Solution, Perfect Webinar, OTO Bump) for landing pages, VSLs, webinar funnels, book funnels, order pages, application pages
 - `form-ux-design`: user-input flow design
 - `ux-psychology`: behavioral and heuristic UX review
 - `observability`: live telemetry contract for every shipped site
