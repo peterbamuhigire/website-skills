@@ -38,6 +38,7 @@ description: Generate 15-25 targeted blog post ideas with 200-word summaries for
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `references/idea-sources-and-series.md` when the user needs a repeatable editorial pipeline, cluster planning, or stronger source-bucket logic behind the blog ideas.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

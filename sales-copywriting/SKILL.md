@@ -38,6 +38,8 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
 
 ## References
 - `references/website-messaging-framework.md` — primary reference for any website page: headline logic (4 U's, 8 types), sub-headline rules, slippery-slide, proof placement, objection-handling map, CTA ladder, service/about/FAQ structures, voice and tone, editing discipline. Grounded in Bly, Sugarman, Handley, Krzyzek.
+- `references/message-mining-and-proof.md` — use when the task needs voice-of-customer mining, message banks, objection extraction, or proof gathering before rewriting the page.
+- `references/value-proposition-and-cta-lab.md` — use when improving home heroes, value propositions, buttons, CTA reassurance, or testable copy variants.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.

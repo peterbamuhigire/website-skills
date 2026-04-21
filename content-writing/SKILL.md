@@ -39,6 +39,7 @@ description: Copywriting and content creation standards for website pages, blog 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/message-hierarchy-framework.md` when turning strategy into page-level messaging, proof order, and CTA structure.
+- Use `references/reader-empathy-and-voc.md` when the quality problem is generic language, weak customer understanding, poor objection coverage, or flat headlines and CTAs.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

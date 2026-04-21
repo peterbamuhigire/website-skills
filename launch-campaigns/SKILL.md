@@ -1,85 +1,51 @@
 ---
 name: launch-campaigns
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Plan and write website-anchored launch campaigns for offers, services, waitlists, webinars, enrolment windows, announcements, and timed promotions. Use when Codex needs prelaunch, launch-day, and follow-up messaging across pages, email, WhatsApp, blog, and CTA pathways.
 ---
 
 # Launch Campaigns
 
-## Overview
+## Use when
+- The brief includes a launch window, deadline, waitlist, event, cohort, enrolment period, announcement, relaunch, or offer push.
+- The website needs coordinated prelaunch, launch, and follow-up assets instead of a single isolated page.
+- The task needs campaign sequencing tied to website pages, blog content, email, WhatsApp, or CTA routing.
 
-[TODO: 1-2 sentences explaining what this skill enables]
+## Do not use when
+- The work is only evergreen page copy with no campaign timing.
+- Another narrower skill already owns the task and no sequencing is required.
+- The offer has no defined audience, offer, proof, or next step yet.
 
-## Structuring This Skill
+## Required inputs
+- Offer summary, audience, timeline, and commercial goal.
+- Existing pages, proof, objections, and brand constraints.
+- Channel reality: website only, or website plus email, WhatsApp, ads, webinar, or blog.
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+## Workflow
+1. Clarify the campaign goal, audience segment, and fixed dates before drafting.
+2. Define the campaign sequence: prelaunch, launch, follow-up, and close.
+3. Map each stage to the right asset and CTA.
+4. Write only the assets required for the current stage and channel mix.
+5. Check tone, proof, and urgency against the sector's trust requirements.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+## Quality standards
+- Sequence must feel coherent across channels and pages.
+- Urgency must be real, evidenced, and proportionate.
+- Launch copy must teach, qualify, and persuade without sounding theatrical or manipulative.
+- Every asset must point to one clear next step.
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+## Anti-patterns
+- Do not copy infoproduct hype into trust-sensitive sectors.
+- Do not rely on fake scarcity or vague countdown language.
+- Do not ask for high commitment before the campaign has earned trust.
+- Do not treat launch email, launch page, blog article, and WhatsApp message as separate uncoordinated drafts.
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+## Outputs
+- Campaign plan, message map, launch sequence, asset checklist, or drafted launch assets.
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+## References
+- `references/website-launch-sequence-framework.md` — primary framework for campaign stages, asset mapping, CTA posture, proof use, and Africa-adapted launch guidance.
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+## Notes
+- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
+- Route to `sales-copywriting` for deep page persuasion work, `blog-writer` for launch-supporting articles, and `website-builder` when the launch work changes the actual site build.
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
-
-## [TODO: Replace with the first main section based on chosen structure]
-
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
-
-## Resources (optional)
-
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
-
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
-
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
-
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
-
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**

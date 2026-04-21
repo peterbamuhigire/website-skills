@@ -1,6 +1,6 @@
 ---
 name: seo
-description: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers both traditional SEO and Generative Engine Optimization (GEO) for AI platforms. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml) and SEO audit report. Run after page-builder, before deploy.
+description: "Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers both traditional SEO and Generative Engine Optimization (GEO) for AI platforms. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml) and SEO audit report. Run after page-builder, before deploy."
 ---
 
 # Seo
@@ -40,6 +40,7 @@ description: Comprehensive search engine optimization for multi-language static 
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
 - `references/analytics-event-map.md` — minimum instrumentation for every site: event taxonomy, conversion goals, UTM convention, attribution model, consent, pre-launch checklist.
 - `references/seo-topic-and-intent-map.md` — align search intent with page roles, proof burdens, CTA posture.
+- `references/conversion-intent-and-launch-seo.md` — use when SEO work must support content clusters, launch windows, conversion-aware metadata, or state changes between prelaunch, open, and closed offers.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.

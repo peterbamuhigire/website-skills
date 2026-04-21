@@ -41,6 +41,7 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 - `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
 - `references/authority-content-matrix.md` — content architecture by page type, cornerstone pages, pillar + cluster system, editorial ops. Use when planning the content system for Growth / Authority tiers.
 - `references/page-goal-matrix.md` — convert strategy into page-specific audience, goal, proof, CTA, SEO decisions.
+- `references/conversion-sequence-implementation.md` — use when the build must preserve value-proposition clarity, CTA ladders, cluster linking, or launch-stage page states.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
@@ -48,3 +49,5 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+- Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.
+- Route upstream to `sales-copywriting` when the implementation needs revised value propositions, button labels, or objection handling.
