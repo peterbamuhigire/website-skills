@@ -76,6 +76,7 @@ Any gate failure blocks deploy.
 - Use `references/quality-metrics-dashboard-definition.md` when connecting repository evolution to commercial and delivery metrics.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
+- Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 - After intake is complete and before build starts, install the canonical CI
