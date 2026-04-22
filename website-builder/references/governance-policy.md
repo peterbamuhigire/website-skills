@@ -70,6 +70,23 @@ Requirements:
 - state the owner and usage point clearly
 - confirm the template still fits the current stage-gate model
 
+### 4. Design System Changes
+
+Examples:
+
+- token restructures
+- component additions or deprecations
+- new states, variants, or accessibility contracts
+- design-system documentation or source-of-truth changes
+
+Requirements:
+
+- audit existing variants before adding anything new
+- prefer extending an existing component over creating a parallel one
+- update both implementation guidance and documentation of usage/state rules
+- confirm the source of truth remains explicit and current
+- record downstream adoption risk for page-builder and related skills
+
 ## Mandatory Review Rules
 
 Every material change must answer:
@@ -79,12 +96,15 @@ Every material change must answer:
 3. What upstream artifact does it require?
 4. What downstream behavior does it affect?
 5. Does it create any contradiction with existing rules?
+6. Could this be solved by reuse instead of a new pattern?
+7. Where is the source of truth after this change?
 
 ## Safety And Documentation Rules
 
 - Run `skill-safety-audit` when a skill changes materially
 - Update repo documentation when behavior, structure, or execution order changes materially
 - Do not accept hidden side effects, external installers, or shadow dependencies
+- Design-system changes must include state, accessibility, and usage guidance, not only visual description
 
 ## Deprecation Policy
 
@@ -129,6 +149,23 @@ Borrowing from explicit-principles management:
 - specialist skills own their domain references
 - repo-level docs must reflect the current operating truth
 
+## Design System As Product
+
+Treat the design system as a maintained product with:
+
+- a clear source of truth
+- a contribution path
+- named owners
+- adoption and drift checks
+- regular cleanup of dead, duplicated, or unofficial variants
+
+Useful team models:
+
+- centralized ownership for speed and consistency
+- federated contribution for coverage across product areas
+
+Either can work. What fails is implicit ownership.
+
 ## Governance Approval Questions
 
 Before merging or accepting a change:
@@ -139,3 +176,5 @@ Before merging or accepting a change:
 - [ ] Was a safety review performed where needed?
 - [ ] Was documentation updated where needed?
 - [ ] Does this improve the machine instead of only adding more text?
+- [ ] Does this reduce design debt rather than rename it?
+- [ ] Is the source of truth still obvious to the next contributor?
