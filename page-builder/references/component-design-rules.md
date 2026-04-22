@@ -10,6 +10,46 @@ Apply these rules when building each component. These are specific, measurable r
 
 ---
 
+## BEFORE CREATING A NEW COMPONENT
+
+Do not start by drawing.
+Start by checking whether the problem is already solved elsewhere in the system.
+
+Before adding a new component:
+
+1. audit adjacent screens for an existing component or near-duplicate
+2. check whether the need can be solved by a new variant, state, or slot on an existing component
+3. document why a new component is justified if reuse fails
+
+Every unnecessary one-off component increases design debt, code debt, and review overhead.
+
+## TOKEN ARCHITECTURE
+
+Component styling should resolve through three layers:
+
+- primitive tokens: raw palette, spacing, radius, type scale, shadow values
+- semantic tokens: purpose-based names such as `color-action-primary` or `space-section-lg`
+- component tokens: scoped values such as `button-primary-bg` or `card-border-muted`
+
+Avoid raw hex codes, arbitrary spacing values, and one-off shadows in component code when a token should own the decision.
+
+## COMPONENT DOCUMENTATION CONTRACT
+
+Every shared component should be documentable with:
+
+- purpose
+- anatomy
+- variants
+- states
+- content rules
+- accessibility behavior
+- responsive behavior
+- when to use and when not to use
+
+If the team cannot describe those clearly, the component is not mature enough to standardize.
+
+---
+
 ## THE 8 INTERACTIVE STATES
 
 Every interactive element (button, link, card, form field, nav item) must design for **8 states**. Missing states signal unfinished work.

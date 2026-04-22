@@ -217,9 +217,12 @@ Run in order. Each check builds on the previous.
 - [ ] **Squint test passes** — visual hierarchy clear with blurred vision at all breakpoints
 - [ ] **AI slop check passes** — 5-point audit from `ai-slop-prevention.md`
 - [ ] **Pixel alignment** — no elements off-grid at any breakpoint; deliberate breaks only
+- [ ] **Source-of-truth parity** — the documented tokens and components match the shipped UI; no “real product” branch-off styling
 - [ ] **Typography consistency** — same heading levels look identical across all pages
 - [ ] **Tinted neutrals** — no pure gray or pure black; all neutrals have brand hue tint
 - [ ] **Interaction states complete** — all 8 states designed for every interactive element (see `component-design-rules.md`)
+- [ ] **Token discipline** — no one-off hex values, random radii, or page-specific spacing values where tokens should exist
+- [ ] **Component reuse** — repeated UI problems resolve through shared components, not slightly different duplicates
 - [ ] **Microcopy quality** — error messages, empty states, buttons follow `ux-writing-patterns.md`
 - [ ] **Button labels are specific** — no "Submit", "OK", or unlabeled icon controls
 - [ ] **Loading buttons preserve context** — spinner plus verb, not spinner alone
@@ -232,3 +235,9 @@ Run in order. Each check builds on the previous.
 - [ ] **Loading states designed** — skeleton/spinner for every data-dependent section
 - [ ] **Empty states designed** — helpful guidance for every section that could be empty
 - [ ] **Container query test** — components work in different width containers (sidebar vs full-width)
+
+### System Governance
+- [ ] **UI audit completed** — pre-existing variants and duplicated components were inventoried before redesigning
+- [ ] **Contribution rule exists** — new components have an explicit reason they cannot be solved by extending an existing one
+- [ ] **Ownership is clear** — someone owns design-system updates, documentation updates, and downstream page adoption
+- [ ] **System is treated as ongoing** — maintenance, adoption, and drift checks exist instead of assuming “finished forever”

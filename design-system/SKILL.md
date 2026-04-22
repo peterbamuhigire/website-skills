@@ -19,14 +19,18 @@ description: Establishes the visual foundation for a website — fonts, colors, 
 
 ## Workflow
 1. Read only the relevant project inputs and preserved guidance before acting.
-2. Choose the smallest set of references needed for the current job.
-3. Produce the implementation, configuration, or guidance this skill owns.
-4. Validate that the result stays compatible with the rest of the repository workflow.
+2. Audit the existing interface first when a site or product already exists: identify duplicated components, token drift, inconsistent states, and bespoke one-off styling before inventing anything new.
+3. Choose the smallest set of references needed for the current job.
+4. Define the system in layers: primitives, semantic tokens, then component-level tokens and rules.
+5. Produce the implementation, configuration, or guidance this skill owns.
+6. Validate that the result stays compatible with the rest of the repository workflow.
 
 ## Quality standards
 - Outputs must be implementation-ready and internally consistent.
 - Preserve existing behavior unless the task explicitly requires a change.
 - Avoid host-specific path assumptions so the skill remains portable.
+- The design system must act as a living product, not a one-time style dump: include usage rules, states, and a clear source of truth.
+- Prefer reusable components and documented patterns over page-specific bespoke styling.
 
 ## Anti-patterns
 - Do not hardcode `.claude/skills` or another single install path.
@@ -40,7 +44,13 @@ description: Establishes the visual foundation for a website — fonts, colors, 
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
+- Prioritize `references/ux-quality-checklist.md` when validating whether the system is coherent enough to ship.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+- Minimum system outputs for substantial work:
+  1. token structure
+  2. component inventory or change list
+  3. states and accessibility expectations
+  4. source-of-truth location for future contributors
