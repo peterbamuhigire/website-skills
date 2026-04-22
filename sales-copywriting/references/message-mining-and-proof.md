@@ -41,6 +41,30 @@ Sort findings into:
 
 Each final page should use material from all four.
 
+## Market-message-offer extraction
+
+Before drafting, answer these three questions explicitly:
+
+1. market: who is the right-fit buyer for this page right now?
+2. message: what pain, desire, or differentiated promise will matter most to them?
+3. offer: what exact next step are we asking them to take?
+
+Do not rewrite a page until those three are stable.
+Most weak pages are not sentence problems. They are misalignment problems.
+
+## Interview and survey discipline
+
+When possible, prefer one-to-one interviews before broad surveys.
+
+- let the buyer do most of the talking
+- ask about the moment they started looking
+- ask what they tried before
+- ask what nearly stopped them from choosing this option
+- ask what result mattered most after buying
+- ask what exact words they used when describing the problem internally
+
+Use surveys to validate frequency and prioritise phrasing, not to replace deep interviews.
+
 ## The 20-35 per cent rule
 
 Do not try to persuade everyone.
@@ -87,6 +111,14 @@ Maintain a running objection list for each offer:
 
 Handle the objection where it naturally appears on the page.
 
+Use this prevention order:
+
+1. prevent avoidable objections by clarifying the offer earlier
+2. pre-empt predictable objections near the claim or CTA
+3. answer remaining objections in FAQs, process sections, and follow-up content
+
+If the same objection appears in calls, DMs, reviews, and surveys, it belongs in the main page copy.
+
 ## Make proof local to the claim
 
 Do not quarantine proof at the bottom of the page.
@@ -99,6 +131,24 @@ For each important claim, place one proof element in the same section or immedia
 - a comparison
 - a risk-reversal line
 
+## Sticky phrase shortlist
+
+Create a shortlist of repeated, high-energy phrases from buyers:
+
+- exact problem wording
+- desired future wording
+- trust language
+- phrases that reveal stakes, urgency, or embarrassment
+- phrases that compare you to rejected alternatives
+
+Use repeated phrases in:
+
+- hero copy
+- section heads
+- CTA microcopy
+- FAQ headings
+- testimonial pull quotes
+
 ## Output standard
 
 Every major page should leave behind:
@@ -107,4 +157,3 @@ Every major page should leave behind:
 - a proof bank
 - an objection bank
 - a shortlist of phrases worth testing in headlines, subheads, and CTAs
-

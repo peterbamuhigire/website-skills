@@ -35,6 +35,17 @@ Before writing a single word, read every file in `docs/{lang}/`. Extract:
 
 The website should sound like the business owner talking, not like a writer describing the business from outside. When the owner reads the site, they should think "that's exactly how I would say it."
 
+For conversion pages, go beyond client documents when possible. Also mine:
+
+- sales calls
+- WhatsApp and support threads
+- testimonials and review text
+- consultation notes
+- competitor reviews
+- social comments where prospects describe the problem in their own words
+
+The best-performing phrase on the page often starts as a customer sentence, not a writer sentence.
+
 ### One Message Per Section
 
 Every section on every page has one job. If a section tries to communicate two things, split it or cut one. Visitors scroll fast. They absorb one idea per pause.
@@ -81,6 +92,17 @@ Fear creates uncertainty, and uncertainty kills conversions. Every service/produ
 3. **Not sure how it works** → Explain your process. What happens after they contact you?
 4. **Not sure you'll do a good job** → Use testimonials. State what happens if the client is unsatisfied.
 5. **Not sure if you'll get along** → Include photos, let personality shine through copy. A short video is even better.
+
+### Market, Message, Offer
+
+Before structuring any page, define:
+
+1. **Market** — the right-fit visitor for this page
+2. **Message** — the primary pain, desire, or differentiated promise
+3. **Offer** — the exact next step or conversion action
+
+If a page tries to speak to multiple markets, multiple core messages, and multiple offers at once, it usually becomes vague and weak.
+Reduce scope before rewriting sentences.
 
 ### The BS Test for Vague Copy
 
@@ -145,6 +167,9 @@ The hero headline speaks to the visitor's problem or aspiration — never to the
 | "We are a team of passionate developers" | "Build your business on software that grows with you" |
 
 **Hero structure:** Headline (problem/aspiration) → Subheadline (who you serve, specifically) → Single CTA button → Optional social proof strip (3 numbers, client logos, or trust badges)
+
+The hero headline is usually the value proposition, not a slogan.
+It should say what this is, who it helps, and why it is worth attention now.
 
 ### The Mirror Technique
 
@@ -226,6 +251,18 @@ For each service block:
 4. **Proof** (1 sentence) — a result, a client reference, or a number
 5. **Specific CTA** — "Discuss your inventory needs" not "Contact Us"
 
+Choose the service CTA by readiness:
+
+- early-stage interest: `See how it works`
+- evaluation stage: `See plans and pricing` or `Check fit`
+- high intent: `Book your consultation` or `Start your project`
+
+Add a reassurance line when risk or effort is unclear:
+
+- `We reply within 1 business day.`
+- `Best for teams with 10+ staff.`
+- `No obligation consultation.`
+
 ### Specificity Over Comprehensiveness
 
 Three services described with enough detail to build trust beat twelve services listed as bullet points. If you have many services, show 3-4 on the main page and link to a detail page for each.
@@ -238,6 +275,15 @@ If you don't show prices, address the elephant in the room:
 - What the first step costs ("Initial consultation is free / costs X")
 
 Leaving price completely unaddressed makes visitors assume the worst.
+
+If the page uses a lead magnet or free consultation instead of direct pricing, sell that offer clearly:
+
+- what they get
+- who it is for
+- how long it takes
+- what happens after opting in
+
+Do not make visitors decode the value of the free step.
 
 ### Service Page Completeness Checklist
 
@@ -264,6 +310,14 @@ The contact page has one job: make it easy to reach out. Every word should reduc
 - **Explain what happens next:** "We'll respond within 24 hours with a brief call to understand your needs"
 - **Set expectations:** "No obligations. Just a conversation."
 - **Keep the form short:** Name, email, brief message. Every extra field loses leads.
+
+Treat the contact page as a conversion page, not an admin page.
+Spell out:
+
+- what kind of enquiries are welcome
+- the expected response time
+- what information to include
+- whether they will book a call, get a quote, or receive a reply first
 
 ### Warm Invitation
 

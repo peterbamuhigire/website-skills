@@ -21,6 +21,7 @@ blog-post, legal (privacy, terms). Any custom template adds a row.
 - [ ] Tab order follows visual order, top to bottom, left to right (RTL reversed).
 - [ ] Every interactive element is reachable by Tab alone — no mouse-only action.
 - [ ] Enter activates links; Enter and Space both activate buttons.
+- [ ] Buttons are real `<button>` elements for actions; links with `href` are used for navigation.
 - [ ] Focus is always visible. Test on light and dark modes.
 - [ ] No element traps focus. Tab eventually returns to the browser chrome.
 - [ ] Modal dialogs: focus moves to the dialog on open, is trapped while open,
@@ -50,6 +51,7 @@ See `screen-reader-scripts.md` for the per-template NVDA and VoiceOver scripts.
 - [ ] Focus is never removed with `outline: none` without a replacement.
 - [ ] Focus on dark buttons is still visible (rule often fails on black buttons).
 - [ ] Focus on sticky navigation does not get clipped by a sticky header.
+- [ ] Sticky CTA bars, cookie banners, and chat widgets never obscure the focused control.
 
 ## 4. Zoom and Reflow (home, services, contact)
 
@@ -89,6 +91,7 @@ See `screen-reader-scripts.md` for the per-template NVDA and VoiceOver scripts.
 - [ ] Error summary appears at the top of the form and links to the first
       invalid field.
 - [ ] Submit button is never disabled until the user interacts.
+- [ ] Loading buttons keep the action label context ("Sending...", "Saving...")
 - [ ] Honeypot field is visually hidden from sighted users but labelled for
       screen readers with instructions to leave blank.
 - [ ] `autocomplete` is set on every relevant field (name, email, tel, etc.).
@@ -100,6 +103,7 @@ See `screen-reader-scripts.md` for the per-template NVDA and VoiceOver scripts.
 - [ ] No drag-only interaction. Every drag action has a button alternative.
 - [ ] Pinch zoom is not disabled (no `user-scalable=no`).
 - [ ] Swipe carousels offer a keyboard and button alternative.
+- [ ] Sticky bottom CTAs do not cover field errors, helper text, or focused inputs.
 
 ## 9. Language (every template)
 

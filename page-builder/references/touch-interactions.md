@@ -29,6 +29,7 @@ Over 60% of web traffic is mobile. Touch interaction is fundamentally different 
 - The visual size can be smaller than 44px — but the **tap target** must extend to 44px minimum using padding
 - Space between adjacent touch targets: **minimum 8px** to prevent accidental taps
 - Make the whole button clickable, not just the text (Grant, Ch 9)
+- Generous padding is usability, not decoration. Tight hit areas create hesitation and mis-taps.
 
 ```html
 <!-- Icon button with sufficient tap area -->
@@ -66,6 +67,8 @@ Most users hold their phone in one hand and navigate with their thumb. Design pr
 - **Destructive actions** — place in the hard-to-reach zone (top) to prevent accidental taps
 - **Sticky bottom CTAs** — effective for conversion actions (Add to Cart, Contact Us, Submit)
 - **Bottom navigation** — preferred over top hamburger for frequently-used actions
+- Sticky CTAs must never cover validation errors, helper text, consent banners, or the currently focused field
+- When the keyboard opens, move, hide, or resize the sticky CTA so it does not obscure the task
 
 ### Sticky Bottom CTA Pattern
 ```html
@@ -84,6 +87,7 @@ Most users hold their phone in one hand and navigate with their thumb. Design pr
 - Account for home indicator: `env(safe-area-inset-bottom)`
 - Use `backdrop-blur` for a polished floating effect
 - Add `border-t` to separate from content
+- Leave enough bottom padding in page content so the sticky bar does not hide the final form field or message
 
 ---
 

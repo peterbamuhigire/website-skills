@@ -183,11 +183,14 @@ Every error message answers three questions:
 ## BUTTON AND CTA TEXT
 
 ### Rules
+- Match the label to the element type: buttons name an action, links name a destination.
 - **Action verb + object** — "Send message" not "Submit" / "Download brochure" not "Download"
 - Use **specific verbs** — "Book appointment" beats "Continue" beats "Submit" beats "OK"
 - Maximum **3–4 words** on a button
 - Primary CTA: action verb. Secondary CTA: softer language ("Learn more," "See examples")
 - Destructive buttons: use the specific destructive verb in red ("Delete account" not "Confirm")
+- Label the outcome, not the mechanism. "Save changes" tells the user what will happen next; "Submit" does not.
+- If the action is risky, name the risk directly: "Delete project", "Remove all members", "Cancel subscription".
 
 ### Button Copy Table
 
@@ -207,6 +210,7 @@ Every error message answers three questions:
 - "Submit" — bureaucratic; always use a specific verb
 - "OK" / "Yes" / "No" — ambiguous; use specific actions
 - "Learn more" as the ONLY CTA — it's a secondary action, not a conversion
+- "Continue" / "Next" / "Proceed" without the object when a more specific outcome is available
 
 ---
 
