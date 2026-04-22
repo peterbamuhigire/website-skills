@@ -9,6 +9,7 @@ description: Premium positioning, offer architecture, pricing logic, qualificati
 
 - Defining or revising the agency category, narrative, or one-sentence positioning.
 - Designing the offer ladder, fee floors, or productized service architecture.
+- Packaging agency expertise into paid audits, workshops, frameworks, newsletters, or other authority assets.
 - Pricing a specific engagement (use the value-based calculator).
 - Qualifying or disqualifying a prospect at the first call or before a proposal.
 - Writing, presenting, or defending a proposal for a $12,000+ project.
@@ -47,6 +48,8 @@ description: Premium positioning, offer architecture, pricing logic, qualificati
    - Offer-ladder and tier definitions → `references/premium-website-offer-playbook.md`
    - Pricing, fee defence, modifiers, payment terms, retainers →
      `references/pricing-rules.md`
+   - Authority products, paid diagnostics, and expertise packaging →
+     `references/information-marketing-assets.md`
    - Scope, exclusions, change orders, revision discipline →
      `references/scope-matrix.md`
    - Qualification, fit signals, red flags, disqualification scripts →
@@ -131,6 +134,7 @@ description: Premium positioning, offer architecture, pricing logic, qualificati
   Authority $2,500; Trust & Conversion $1,800; SEO Foundation $1,500; Messaging
   Clarity $1,200). Use when designing audit landing pages, audit deliverables,
   conversion-to-engagement pathways.
+- `references/information-marketing-assets.md` — how to turn agency expertise into authority assets, lead magnets, paid diagnostics, newsletters, workshops, and ascension offers without drifting into hype.
 - `references/expert-authority-framework.md` — the structural frameworks from
   Brunson's *Expert Secrets*, filtered for our buyer (no hype, no theatre). The
   Attractive Character, the Epiphany Bridge, New Opportunity vs Improvement, the
