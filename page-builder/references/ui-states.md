@@ -94,6 +94,23 @@ Use when a **single element** is loading within an otherwise loaded page (e.g., 
 </button>
 ```
 
+### Button State Requirements
+
+Every important button must have these six states designed and implemented:
+
+1. **Enabled** — clearly interactive and readable
+2. **Hover** — immediate mouse feedback
+3. **Focus** — visible keyboard focus ring with 3:1 contrast
+4. **Pressed** — instant confirmation that the click/tap registered
+5. **Disabled** — visually unavailable, paired with an explanation when not obvious
+6. **Loading** — preserves the action label context, e.g. "Sending..." not spinner-only
+
+**Rules:**
+- Hover and focus are different states and must not share the exact same treatment.
+- Loading states keep the original action recognizable; do not replace context with a bare spinner.
+- Disabled is not a substitute for explanation. If users cannot infer why an action is unavailable, tell them.
+- Focus must not be obscured by sticky headers, bottom CTA bars, cookie banners, or chat widgets.
+
 **Rules (Grant):**
 - **Never use animated looping progress bars** — they give no information about progress (Ch 57)
 - Use a **spinner** for indeterminate waits (Ch 56) — the user knows "something is happening"
@@ -305,6 +322,7 @@ For **destructive or irreversible** actions only (delete, cancel subscription, l
 - Prefer **undo** over confirmation when possible (Grant, Ch 15) — "Item deleted. [Undo]" is less disruptive than "Are you sure?"
 - Confirmation buttons: dangerous action on the **right**, safe action (Cancel) on the **left**
 - Never use "Yes" / "No" — use specific verbs: "Delete" / "Cancel", "Discard" / "Keep editing"
+- Destructive actions deserve their own variant, not a muted secondary style that hides the risk
 
 ---
 

@@ -27,6 +27,8 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
 - Recommendations must be concrete enough to apply immediately.
 - Changes should improve consistency, usability, or credibility without flattening the brand.
 - The standard should support downstream implementation rather than slow it down.
+- Treat copy as a market-message-offer system: identify the audience, sharpen the promise, and match the CTA to the right next step.
+- For any meaningful rewrite, prefer customer language, objections, and proof over internal brand phrasing.
 
 ## Anti-patterns
 - Do not apply every rule mechanically when only a subset is relevant.
@@ -47,3 +49,8 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+- Default sequence for high-stakes conversion work:
+  1. mine voice-of-customer and objection language
+  2. define the value proposition and offer type
+  3. choose the right page goal and CTA commitment level
+  4. place proof and risk-reversal close to the claim or ask

@@ -192,6 +192,9 @@ Run in order. Each check builds on the previous.
 - [ ] All seven interaction principles satisfied (expert review)
 - [ ] Every clickable element has visible hover/focus/active states
 - [ ] Primary CTA is the only element using accent colour per viewport
+- [ ] Buttons trigger actions; links handle navigation
+- [ ] One primary button per decision point; secondary and tertiary actions are clearly subordinate
+- [ ] Destructive actions use a distinct danger treatment and explicit label
 - [ ] No auto-moving elements (carousels, tickers, auto-play)
 - [ ] Forms validate inline with helpful error messages
 - [ ] 404 page includes search + navigation + homepage link
@@ -218,6 +221,9 @@ Run in order. Each check builds on the previous.
 - [ ] **Tinted neutrals** — no pure gray or pure black; all neutrals have brand hue tint
 - [ ] **Interaction states complete** — all 8 states designed for every interactive element (see `component-design-rules.md`)
 - [ ] **Microcopy quality** — error messages, empty states, buttons follow `ux-writing-patterns.md`
+- [ ] **Button labels are specific** — no "Submit", "OK", or unlabeled icon controls
+- [ ] **Loading buttons preserve context** — spinner plus verb, not spinner alone
+- [ ] **Touch targets pass** — all buttons and icon buttons meet the 44x44 minimum in rendered context
 - [ ] **Motion consistency** — all animations use motion tokens, not hard-coded values (see `motion-design.md`)
 - [ ] **No banned easing** — no bounce, elastic, or linear on UI transitions
 - [ ] **Edge case hardening** — text overflow, i18n expansion, image fallbacks all handled (see `design-hardening.md`)
