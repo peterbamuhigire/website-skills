@@ -245,12 +245,12 @@ Every school has a unique personality within its type. Rate these 6 traits on a 
 | **Tradition** | Modern ←→ Heritage | Serif vs sans-serif, colour warmth, imagery style |
 | **Exclusivity** | Community ←→ Exclusive | Tone of voice, photography style, CTA language |
 | **Energy** | Calm ←→ Dynamic | Animation, colour vibrancy, layout density |
-| **Innovation** | Traditional ←→ Cutting-edge | Tech showcase, modern UI patterns, interactivity |
+| **Innovation** | Traditional ←→ Forward-looking | Tech showcase, modern UI patterns, interactivity |
 | **Warmth** | Professional ←→ Nurturing | Colour temperature, photography intimacy, copy tone |
 
 **Example mapping:**
 - A traditional private school: Formal + Heritage + Exclusive + Calm + Traditional + Professional
-- A progressive charter school: Casual + Modern + Community + Dynamic + Cutting-edge + Nurturing
+- A progressive charter school: Casual + Modern + Community + Dynamic + Forward-looking + Nurturing
 - These two schools should look COMPLETELY DIFFERENT even though they're both "education"
 
 ## Multi-Language Considerations

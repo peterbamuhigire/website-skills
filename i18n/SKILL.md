@@ -4,6 +4,7 @@ description: Internationalization infrastructure for multi-language websites. De
 ---
 
 # I18N
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Internationalization infrastructure for multi-language websites. Defines 3 supported languages (English, French, Kiswahili) with path-based routing, hreflang tags, and language-specific sitemaps. Orchestrates content organization and SEO across all language versions.
@@ -44,3 +45,4 @@ description: Internationalization infrastructure for multi-language websites. De
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

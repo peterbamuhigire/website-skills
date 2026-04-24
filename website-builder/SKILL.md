@@ -4,6 +4,7 @@ description: Master orchestrator for building static websites from markdown cont
 ---
 
 # Website Builder
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The user wants a full website build, rebuild, or end-to-end orchestration.
@@ -88,3 +89,4 @@ Any gate failure blocks deploy.
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

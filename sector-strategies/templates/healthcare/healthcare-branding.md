@@ -16,7 +16,7 @@ Healthcare websites must prioritise clarity and trust above all else. Patients a
 | **Soft Green** (#16A34A) | Healing, growth, wellness | Wellness centres, physiotherapy, paediatrics | Surgical/emergency services |
 | **Deep Navy** (#1E3A5F) | Authority, expertise, stability | Cardiology, neurology, research hospitals | Community/friendly clinics |
 | **Warm Coral** (#F97316) | Warmth, caring, energy | Paediatrics, maternal health, community | Surgical, emergency, specialist |
-| **Lavender** (#8B5CF6) | Calm, gentle, modern | Mental health, holistic, fertility | Emergency, surgical, orthopaedics |
+| **Lavender** (#8B5CF6) | Calm, gentle, modern | Mental health, whole-person care, fertility | Emergency, surgical, orthopaedics |
 | **Burgundy** (#9F1239) | Heritage, prestige, strength | Established teaching hospitals | Start-up clinics, wellness |
 | **Clean White + Gray** | Sterile, precise, professional | Diagnostics, labs, imaging centres | Community warmth needed |
 
@@ -72,7 +72,7 @@ Test all palettes with Deuteranopia, Protanopia, and Tritanopia simulators.
 |---------------|-------------|-----------|----------|
 | **Hospital/General** | Clean sans (DM Sans, Source Sans Pro) | Accessible sans (Atkinson Hyperlegible) | Maximum readability |
 | **Specialist Clinic** | Modern sans (Outfit, Plus Jakarta Sans) | Clean sans (Inter, DM Sans) | Professional clarity |
-| **Wellness/Holistic** | Soft serif (Lora, Cormorant Garamond) | Rounded sans (Nunito) | Warm, approachable |
+| **Wellness/Whole-Person Care** | Soft serif (Lora, Cormorant Garamond) | Rounded sans (Nunito) | Warm, approachable |
 | **Paediatrics** | Rounded friendly (Nunito, Quicksand) | Readable sans (DM Sans) | Child-friendly, parent-reassuring |
 | **Mental Health** | Calm sans (Jost, Outfit) | Readable sans (Source Sans Pro) | Non-threatening, calm |
 | **Dental** | Modern sans (Plus Jakarta Sans) | Clean sans (DM Sans) | Clean, professional |

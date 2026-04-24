@@ -4,6 +4,7 @@ description: Canonical Africa-realistic excellence layer. Owns the low-bandwidth
 ---
 
 # Africa Excellence
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Any project for an African client, regardless of which African market.
@@ -149,3 +150,4 @@ by this skill:
   skill defines pattern practice.
 - The benchmark library (Phase 12) will include at least one site per
   major African sub-region against this skill.
+

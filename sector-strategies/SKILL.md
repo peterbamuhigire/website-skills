@@ -4,6 +4,7 @@ description: Industry-specific website design strategies and templates. Use when
 ---
 
 # Sector Strategies
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Industry-specific website design strategies and templates. Use when building websites for different business sectors (tour & travel, corporate & consulting, personal & portfolio, education, healthcare, e-commerce, professional services, hobbyist creators, nonprofit/charity/NGO, law firms/legal) to ensure the site reflects sector-specific design psychology, trust cues, and visual identity. Choose your sector → customize template → get industry-authentic design that doesn't look AI-generated.
@@ -44,3 +45,4 @@ description: Industry-specific website design strategies and templates. Use when
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

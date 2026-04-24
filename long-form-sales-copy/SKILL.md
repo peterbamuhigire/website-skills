@@ -4,6 +4,7 @@ description: Write long-form sales pages, landing pages, VSL scripts, and order-
 ---
 
 # Long-Form Sales Copy Skill (Kennedy + Brunson)
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Overview
 
@@ -198,3 +199,4 @@ A 3-step header that wins with warm traffic will intimidate cold traffic. Always
 - **"Reassuringly expensive"** — in EA where counterfeit and fraud risk is real, very-low prices suppress response. Test upward.
 - **Hidden benefit in EA** is often status, legacy, avoiding shame, "giving children a better start than I had." Surface these explicitly.
 - **Sequences over single-send** — 3-letter / 5-day / 7-touch sequences outperform single sends 2–5× across WhatsApp, email, SMS.
+

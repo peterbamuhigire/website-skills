@@ -4,6 +4,7 @@ description: Generate a complete professional monthly client report from raw dat
 ---
 
 # Monthly Report
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Generate a complete professional monthly client report from raw data. Use when producing monthly reports for website design and SEO clients. Claude gathers data through a structured interview, writes plain-English commentary on every metric, drafts the Executive Summary, What We Did, and Next Month Plan sections, then outputs a formatted markdown report ready to copy into a PDF or email. Integrates with agency-client-retention (template and rhythm), ecommerce-analytics (metrics framework), and seo-audit (SEO commentary).
@@ -75,3 +76,4 @@ description: Generate a complete professional monthly client report from raw dat
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

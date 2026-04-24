@@ -156,12 +156,12 @@ Extract text with pdfplumber:
 
 ## Advanced features
 
-- **Form filling**: See [FORMS.md](FORMS.md) for complete guide
-- **API reference**: See [REFERENCE.md](REFERENCE.md) for all methods
-- **Examples**: See [EXAMPLES.md](EXAMPLES.md) for common patterns
+- **Form filling**: Read `FORMS.md` when the host skill ships a form guide
+- **API reference**: Read `REFERENCE.md` when the host skill ships an API reference
+- **Examples**: Read `EXAMPLES.md` when the host skill ships example patterns
 ```
 
-Claude loads FORMS.md, REFERENCE.md, or EXAMPLES.md only when needed.
+Claude loads `FORMS.md`, `REFERENCE.md`, or `EXAMPLES.md` only when the host skill provides them.
 
 **Pattern 2: Domain-specific organization**
 
@@ -201,17 +201,17 @@ Show basic content, link to advanced content:
 
 ## Creating documents
 
-Use docx-js for new documents. See [DOCX-JS.md](DOCX-JS.md).
+Use docx-js for new documents. Read `DOCX-JS.md` when that companion file exists.
 
 ## Editing documents
 
 For simple edits, modify the XML directly.
 
-**For tracked changes**: See [REDLINING.md](REDLINING.md)
-**For OOXML details**: See [OOXML.md](OOXML.md)
+**For tracked changes**: Read `REDLINING.md` when the skill includes it
+**For OOXML details**: Read `OOXML.md` when the skill includes it
 ```
 
-Claude reads REDLINING.md or OOXML.md only when the user needs those features.
+Claude reads `REDLINING.md` or `OOXML.md` only when the user needs those features and the files exist.
 
 **Important guidelines:**
 
@@ -469,7 +469,7 @@ Standardized mPDF configuration and print queue handling across all SaaS platfor
 
 - scripts/pdf_generator.php: Base PDFGenerator class
 - scripts/print_handler.php: Print queue management
-- references/mpdf_config.md: Exact configuration parameters
+- `references/mpdf_config.md`: exact configuration parameters when the skill includes that file
 - references/templates.md: Standard templates
 
 ### Project Context

@@ -4,6 +4,7 @@ description: Copywriting and content creation standards for website pages, blog 
 ---
 
 # Content Writing
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Copywriting and content creation standards for website pages, blog posts, and all written copy. Covers headlines, ledes, readability, niche vocabulary, scannable formatting, and persuasive structure. Cross-cutting skill — apply whenever generating or editing any website text.
@@ -46,3 +47,4 @@ description: Copywriting and content creation standards for website pages, blog 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

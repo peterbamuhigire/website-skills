@@ -4,6 +4,7 @@ description: Premium positioning, offer architecture, pricing logic, qualificati
 ---
 
 # Agency Positioning
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 
@@ -173,3 +174,4 @@ assets rather than re-arguing them:
 
 A proposal or sales page that names "premium" without naming at least
 two of the above is drift toward marketing adjective.
+

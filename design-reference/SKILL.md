@@ -4,6 +4,7 @@ description: Analyses up to 5 reference websites provided by the client, visits 
 ---
 
 # Design Reference
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Analyses up to 5 reference websites provided by the client, visits each one, and generates a structured design guide (docs/design-reference.md) that captures the patterns, features, and qualities the client admires. Use when the client provides URLs of websites they like. Run before design-system.
@@ -46,3 +47,4 @@ description: Analyses up to 5 reference websites provided by the client, visits 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

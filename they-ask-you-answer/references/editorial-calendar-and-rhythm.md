@@ -223,7 +223,7 @@ For each sector page:
 - Have the case studies on the page been refreshed?
 - Are there any new sector trends to write about?
 
-Identify the 6 to 10 article briefs that will fill gaps in the next quarter
+Identify the 6 to 10 article briefs that will fill gaps in the following quarter
 and add them to the editorial calendar.
 
 ---

@@ -4,6 +4,7 @@ description: Legal sector website design for law firms. Use instead of generic s
 ---
 
 # Sectors/Legal
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Legal sector website design for law firms. Use instead of generic sector-strategies when building websites for lawyers, law firms, solicitors, barristers, or legal consultants. Covers practice-area-specific design direction, client psychology for legal services, ethical advertising constraints (bar association rules), attorney profile pages, trust signals for legal, local SEO for law firms, and conversion for legal intake. Works alongside all standard build pipeline skills.
@@ -44,3 +45,4 @@ description: Legal sector website design for law firms. Use instead of generic s
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

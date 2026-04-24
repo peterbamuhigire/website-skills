@@ -4,6 +4,7 @@ description: CI-time security and compliance gate. Owns dependency audit, securi
 ---
 
 # Security Gate
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Every build of a client site, as a CI-time gate before deploy.
@@ -116,3 +117,4 @@ The command:
 - `policy-pages/SKILL.md` produces the public-facing privacy and terms pages;
   this gate audits that they exist and that the compliance matrix they
   describe is correctly enforced.
+

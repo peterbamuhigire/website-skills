@@ -4,6 +4,7 @@ description: Guide for creating effective skills. This skill should be used when
 ---
 
 # Skill Creator
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
@@ -44,3 +45,4 @@ description: Guide for creating effective skills. This skill should be used when
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

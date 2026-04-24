@@ -4,6 +4,7 @@ description: Research-backed form UX for static websites — contact forms, news
 ---
 
 # Form Ux Design
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Research-backed form UX for static websites — contact forms, newsletter, booking, multi-step. Three dimensions: Words > Layout > Flow. Covers field types, label placement, validation, error messages, and conversion stats. Use when building any form on a website.
@@ -44,3 +45,4 @@ description: Research-backed form UX for static websites — contact forms, news
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

@@ -31,7 +31,7 @@ improves — not that everything is always green.
 4. Everything outside the markers is human-authored framing.
 
 Failed generation is an incident: the file carries a `STALE` marker
-and the next quarter's roll-forward explains why.
+and the following quarter's roll-forward explains why.
 
 ## Methodology
 

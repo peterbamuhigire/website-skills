@@ -4,6 +4,7 @@ description: Cognitive psychology for premium web design. Gestalt principles, Ni
 ---
 
 # Ux Psychology
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Cognitive psychology for premium web design. Gestalt principles, Nielsen's 10 heuristics, Norman's 3 design levels, System 1/2 thinking with cognitive biases, emotional design, dark patterns to avoid, and affordance principles. Use for premium $20k+ websites to justify quality and prevent common psychological UX mistakes.
@@ -44,3 +45,4 @@ description: Cognitive psychology for premium web design. Gestalt principles, Ni
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

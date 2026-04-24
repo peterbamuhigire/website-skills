@@ -190,7 +190,7 @@ East African internet speeds vary. Optimize for:
 6. **No mobile optimization** — 52%+ of school traffic is mobile
 7. **Auto-playing video with sound** — never. Muted autoplay only, or click-to-play
 8. **Missing confirmation after form submission** — parents need reassurance
-9. **Jargon-heavy copy** — "Holistic pedagogy" means nothing to most parents
+9. **Jargon-heavy copy** — "Whole-child pedagogy" means nothing to most parents
 10. **No social proof** — outcomes and testimonials are your strongest conversion tool
 
 ---

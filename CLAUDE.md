@@ -19,9 +19,10 @@ The repository now operates as a portable agency system with explicit layers for
 ## Repo Model
 
 - `SKILL.md` is the concise execution layer
+- Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, never in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` contains detailed material, including `legacy-guidance.md`
 - `scripts/` contains deterministic helpers where needed
-- [AGENTS.md](/C:/wamp64/www/website-skills/AGENTS.md) provides repository-level routing and quality rules for Codex
+- [AGENTS.md](./AGENTS.md) provides repository-level routing and quality rules for Codex
 
 Claude-specific consumption at `.claude/skills/` still works, but the repository should not be treated as dependent on that path.
 
@@ -182,6 +183,7 @@ Full reference: `deploy/references/ci-troubleshooting.md`,
 - Run `skill-safety-audit` when a skill changes materially
 - Update top-level docs when the operating model changes materially
 - Every skill uses the canonical SKILL.md structure in `docs/doc-style-guide.md`
+- Every skill keeps the required acknowledgement line directly under the first `# ...` heading without duplicating it
 - Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine

@@ -4,6 +4,7 @@ description: "Update project documentation files (README.md, PROJECT_BRIEF.md, T
 ---
 
 # Update Claude Documentation
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: "Update project documentation files (README.md, PROJECT_BRIEF.md, TECH_STACK.md, ARCHITECTURE.md, docs/API.md, docs/DATABASE.md, CLAUDE.md) when significant changes occur. Use for feature additions, architecture changes, dependency updates, API/database modifications. Ensures consistency across all docs."
@@ -44,3 +45,4 @@ description: "Update project documentation files (README.md, PROJECT_BRIEF.md, T
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

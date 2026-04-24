@@ -4,6 +4,7 @@ description: Ecommerce analytics, measurement, and data-driven optimisation. Use
 ---
 
 # Ecommerce Analytics
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Ecommerce analytics, measurement, and data-driven optimisation. Use when setting up analytics tracking, building KPI dashboards, analysing customer behaviour, or measuring funnel performance. Covers Phillips' value chain approach, RFM analysis, cohort retention, attribution modelling, CLV calculation, and conversion funnel drop-off diagnosis. Companion to the ecommerce and ecommerce-funnel skills.
@@ -44,3 +45,4 @@ description: Ecommerce analytics, measurement, and data-driven optimisation. Use
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

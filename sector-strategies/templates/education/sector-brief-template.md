@@ -43,7 +43,7 @@ Rate each trait on the spectrum (mark where your school falls):
 - **Tradition**: Modern ←——→ Heritage
 - **Exclusivity**: Community ←——→ Exclusive
 - **Energy**: Calm ←——→ Dynamic
-- **Innovation**: Traditional ←——→ Cutting-edge
+- **Innovation**: Traditional ←——→ Forward-looking
 - **Warmth**: Professional ←——→ Nurturing
 
 ## 4. Visual Identity

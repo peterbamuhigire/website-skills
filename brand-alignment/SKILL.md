@@ -4,6 +4,7 @@ description: Ensures every website element — layout, messaging, navigation, im
 ---
 
 # Brand Alignment
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Ensures every website element — layout, messaging, navigation, imagery, CTAs — reflects the client's brand identity and speaks clearly to their ideal customer. Use before and during page building to validate that the site feels intentional, cohesive, and trustworthy.
@@ -45,3 +46,4 @@ description: Ensures every website element — layout, messaging, navigation, im
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

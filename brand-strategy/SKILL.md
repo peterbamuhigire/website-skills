@@ -4,6 +4,7 @@ description: Brand strategy development for client projects. Use before design-s
 ---
 
 # Brand Strategy
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Brand strategy development for client projects. Use before design-system, page-builder, or any content work. Covers brand discovery, positioning (CBBE pyramid), brand mantra, brand architecture, archetypes, competitive differentiation, and the brand brief deliverable. The output of this skill is docs/brand-brief.md.
@@ -44,3 +45,4 @@ description: Brand strategy development for client projects. Use before design-s
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

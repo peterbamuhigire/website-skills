@@ -4,6 +4,7 @@ description: Builds multi-language Astro site, verifies output for all language 
 ---
 
 # Deploy
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
@@ -90,3 +91,4 @@ A launch without these four recorded is not permitted to ship.
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

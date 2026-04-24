@@ -241,11 +241,11 @@ with pdfplumber.open("file.pdf") as pdf:
 
 ## Advanced features
 
-**Form filling**: See [FORMS.md](FORMS.md) for complete guide
-**API reference**: See [REFERENCE.md](REFERENCE.md) for all methods
-**Examples**: See [EXAMPLES.md](EXAMPLES.md) for common patterns
+**Form filling**: Read `FORMS.md` when the host skill ships a form guide
+**API reference**: Read `REFERENCE.md` when the host skill ships an API reference
+**Examples**: Read `EXAMPLES.md` when the host skill ships example patterns
 
-Claude loads FORMS.md, REFERENCE.md, or EXAMPLES.md only when needed.
+Claude loads `FORMS.md`, `REFERENCE.md`, or `EXAMPLES.md` only when the host skill provides them.
 
 ### Pattern 2: Domain-specific organization
 

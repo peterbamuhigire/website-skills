@@ -4,6 +4,7 @@ description: Generate 15-25 targeted blog post ideas with 200-word summaries for
 ---
 
 # Blog Idea Generator
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Generate 15-25 targeted blog post ideas with 200-word summaries for any client website. Reads website content, assesses available information, adaptively selects from 20 ideation methods, and conducts a guided interview. Each idea includes a narrative brief + structured specs. Use when the user says "generate blog ideas", "what should I blog about", "blog topic ideas", "content ideas", or wants to populate docs/en/blog/topics.md.
@@ -45,3 +46,4 @@ description: Generate 15-25 targeted blog post ideas with 200-word summaries for
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

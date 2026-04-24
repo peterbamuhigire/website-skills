@@ -4,6 +4,7 @@ description: Language and tone standard for all written content. Enforces authen
 ---
 
 # East African English
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Language and tone standard for all written content. Enforces authentic East African English as used in Uganda, Kenya, and Tanzania — formal, clear, respectful, British-influenced, and professionally courteous. Apply to every piece of text generated for the website.
@@ -44,3 +45,4 @@ description: Language and tone standard for all written content. Enforces authen
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

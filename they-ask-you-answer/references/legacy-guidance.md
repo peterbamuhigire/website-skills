@@ -83,7 +83,7 @@ Clients want to aspire. They want to see examples of excellent work in their ind
 - "The best hotel websites in East Africa (and what they do right)"
 - "What the best law firm websites have in common — and why most fail"
 - "7 characteristics of a website that actually generates leads (with examples)"
-- "The anatomy of a homepage that converts: best-in-class breakdown"
+- "The anatomy of a homepage that converts: benchmark breakdown"
 
 **Rules:** Be generous. Feature competitors if their work is genuinely excellent. This feels counterintuitive but signals extreme confidence and earns massive trust. Clients remember the agency brave enough to praise a rival.
 

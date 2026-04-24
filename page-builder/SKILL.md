@@ -4,6 +4,7 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 ---
 
 # Page Builder
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Transforms markdown content from docs/{lang}/ into beautiful Astro pages and components. Supports multi-language builds (en, fr, sw). Creates dynamic [lang] routes, language-aware content loading, and language switcher component. Use after design-system and photo-manager have run.
@@ -51,3 +52,4 @@ description: Transforms markdown content from docs/{lang}/ into beautiful Astro 
 - Preserve existing project behavior unless the current task explicitly requires a change.
 - Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.
 - Route upstream to `sales-copywriting` when the implementation needs revised value propositions, button labels, or objection handling.
+

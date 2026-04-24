@@ -110,7 +110,7 @@ still client-specific.
 - No review skipped. A quarter with no tests produces a 1-page
   review explaining the traffic or priority constraint.
 - Reviews are read by the programme lead before the first client
-  engagement of the next quarter begins.
+  engagement of the following quarter begins.
 - Any cross-client pattern that has been observed three quarters in a
   row without a skill update is drift; the next update cycle must
   promote or discard it.

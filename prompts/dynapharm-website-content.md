@@ -264,7 +264,7 @@ Reframe as "What We Offer" — Dynapharm's value propositions:
 1. **Natural Health Products** — 90+ scientifically formulated products using natural ingredients like Spirulina, Ganoderma, Tongkat Ali, Bee Pollen, Noni, and Chlorophyll. Manufactured to international quality standards. Available across Africa.
 2. **Business Opportunity** — Start your own wellness business with low initial investment (Distributor Registration Kit). Earn through personal sales and team building. No experience required — full training provided.
 3. **Training & Development** — Comprehensive training for new distributors: product knowledge, sales techniques, network building, leadership development. Both online and in-person at DPCs.
-4. **Wellness Solutions** — Products mapped to 11 health categories. Personalised wellness recommendations through trained distributors. Holistic approach: nutrition, energy, immunity, beauty.
+4. **Wellness Solutions** — Products mapped to 11 health categories. Personalised wellness recommendations through trained distributors. Whole-person approach: nutrition, energy, immunity, beauty.
 5. **Community & Support** — Join a network of 6,000+ distributors. Mentorship from upline leaders. Regular events, conferences, and recognition ceremonies. A culture of mutual support and celebration.
 6. **Global Reach, Local Presence** — Operating in 40+ countries with local Distribution Point Centres (DPCs). Products available in your market, supported in your language.
 
