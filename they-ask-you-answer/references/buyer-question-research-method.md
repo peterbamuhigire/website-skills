@@ -32,7 +32,7 @@ Always surface questions in these categories:
 - problems and drawbacks
 - comparisons and alternatives
 - reviews
-- best-in-class / best-fit questions
+- benchmark / best-fit questions
 
 ## Research Table
 

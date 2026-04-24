@@ -4,6 +4,7 @@ description: Ecommerce funnel strategy and customer lifecycle management. Use wh
 ---
 
 # Ecommerce Funnel
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Ecommerce funnel strategy and customer lifecycle management. Use when building the customer journey beyond the product catalog — from cold stranger to loyal repeat buyer. Covers customer avatar creation, traffic temperature segmentation, funnel architecture (front-end → upsell → recurring), email campaign types, customer lifecycle stages, and the three growth levers. Companion to the ecommerce skill.
@@ -44,3 +45,4 @@ description: Ecommerce funnel strategy and customer lifecycle management. Use wh
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

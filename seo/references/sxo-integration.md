@@ -8,7 +8,7 @@ Source: Zuzanna Kruger, "The Art of SXO" (2024).
 
 ## What Is SXO?
 
-**SXO = SEO + CRO + UX Design** — a holistic approach treating the entire user journey from search query through conversion and loyalty.
+**SXO = SEO + CRO + UX Design** — an end-to-end approach treating the entire user journey from search query through conversion and loyalty.
 
 | Discipline | Focus | Without It |
 |-----------|-------|------------|

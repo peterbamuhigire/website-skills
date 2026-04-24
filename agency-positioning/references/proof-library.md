@@ -304,7 +304,7 @@ Quarterly:
 - Retire stale components. If a case study's technology, sector framing, or
   pricing no longer reflect the agency, archive it.
 - Rebalance sector coverage. If we have 8 case excerpts for legal and 1 for health,
-  and the next quarter's pipeline is 40% health, prioritise health case
+  and the following quarter's pipeline is 40% health, prioritise health case
   collection.
 - Update the standard diagram set if process has evolved.
 

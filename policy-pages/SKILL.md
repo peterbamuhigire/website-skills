@@ -4,6 +4,7 @@ description: Design Privacy Policies and Terms of Use that are legally compliant
 ---
 
 # Policy Pages
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Design Privacy Policies and Terms of Use that are legally compliant, user-friendly, accessible, and trustworthy. Use when building any website to ensure proper legal protection, regulatory compliance (GDPR, CCPA, COPPA, PIPEDA, LGPD), and user trust through clear, plain-language documents. Covers design patterns, placement strategies, implementation examples, and jurisdiction-specific requirements. Every website needs both documents.
@@ -44,3 +45,4 @@ description: Design Privacy Policies and Terms of Use that are legally compliant
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

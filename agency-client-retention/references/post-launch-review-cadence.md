@@ -252,13 +252,13 @@ Every 90 days after the 90-day review. Anchor to a fixed date (e.g. the
    - Did the included quantities (hours, articles, experiments) get used?
    - What outcome did the retainer produce?
    - Is the retainer earning its fee?
-3. **Strategic theme for the next quarter (20 min).** One stated theme that
-   organises the next quarter's work (e.g. "convert the blog readers we
+3. **Strategic theme for the following quarter (20 min).** One stated theme that
+   organises the following quarter's work (e.g. "convert the blog readers we
    built up last quarter into qualified leads"). One theme, not five.
 4. **Resource and capacity confirmation (10 min).** Does the existing
    retainer set support the theme, or do we need to flex (expand, swap,
    or re-scope)?
-5. **Action items and next quarter's monthly cadence (10 min).**
+5. **Action items and the following quarter's monthly cadence (10 min).**
 6. **Open conversation (10 min).** Anything the client has not yet
    surfaced — competitive moves, internal changes, leadership shifts.
 

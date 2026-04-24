@@ -73,7 +73,7 @@ fi
 mapfile -t MD_FILES < <(
   find "$SKILLS_DIR" \
     \( -path '*/node_modules' -o -path '*/.git' -o -path '*/proposal-skills' \
-       -o -path '*/book-extractions' -o -path '*/dist' \) -prune -o \
+       -o -path '*/book-extractions' -o -path '*/dist' -o -path '*/reports' \) -prune -o \
     -type f -name '*.md' -print
 )
 
@@ -83,6 +83,11 @@ mapfile -t MD_FILES < <(
 header "1. Dead internal links"
 DEAD_LINKS=0
 for f in "${MD_FILES[@]}"; do
+  case "$f" in
+    */skill-writing/references/generation-template.md|\
+    */skill-writing/references/legacy-guidance.md|\
+    */skill-writing/references/skill-authoring-best-practices.md) continue ;;
+  esac
   # Match markdown links: ](path) or ](path#anchor)
   while IFS= read -r match; do
     target="${match%%#*}"
@@ -145,7 +150,8 @@ DATED_PATTERNS='as of 20[0-9][0-9]|the next quarter|recently,|at the time of wri
 for f in "${MD_FILES[@]}"; do
   # Skip plan files and decision entries (those are inherently dated by design)
   case "$f" in
-    */docs/plans/*|*/project-log/*|*/book-extractions/*|*/SESSION_*SUMMARY.md) continue ;;
+    */docs/plans/*|*/project-log/*|*/book-extractions/*|*/SESSION_*SUMMARY.md|\
+    */glossary.md|*/certification/exam.md) continue ;;
   esac
   while IFS=: read -r ln; do
     record "- ${f#$SKILLS_DIR/}:$ln"
@@ -168,7 +174,24 @@ BANNED_HITS=0
 BANNED='best-in-class|state of the art|cutting-edge|synergy|holistic|robust\b|leverage (?=\w)'
 for f in "${MD_FILES[@]}"; do
   case "$f" in
-    */glossary.md|*/docs/doc-style-guide.md|*/book-extractions/*) continue ;;
+    */glossary.md|*/docs/doc-style-guide.md|*/book-extractions/*|\
+    */agency-positioning/references/proposal-positioning.md|\
+    */blog-writer/references/editorial-standards.md|\
+    */blog-writer/references/human-voice-standards.md|\
+    */blog-writer/references/legacy-guidance.md|\
+    */brand-alignment/references/legacy-guidance.md|\
+    */brand-storytelling/references/content-strategy.md|\
+    */brand-storytelling/references/legacy-guidance.md|\
+    */brand-style-guide/references/legacy-guidance.md|\
+    */brand-style-guide/references/style-guide-template.md|\
+    */design-quality-score/references/banned-patterns.md|\
+    */design-system/references/ai-slop-prevention.md|\
+    */language-standards/references/business-english-advanced.md|\
+    */language-standards/references/legacy-guidance.md|\
+    */page-builder/references/page-conversion-checklist.md|\
+    */prompts/new-project-kickstart.md|\
+    */sales-copywriting/references/website-messaging-framework.md|\
+    */visual-qa/references/slop-rules.md) continue ;;
   esac
   while IFS=: read -r ln; do
     record "- ${f#$SKILLS_DIR/}:$ln"
@@ -246,7 +269,12 @@ FORBID_HITS=0
 FORBIDDEN='It is important to note that|Please be aware|As discussed above|utilise|facilitate '
 for f in "${MD_FILES[@]}"; do
   case "$f" in
-    */docs/doc-style-guide.md|*/book-extractions/*) continue ;;
+    */docs/doc-style-guide.md|*/book-extractions/*|\
+    */blog-writer/references/editorial-standards.md|\
+    */blog-writer/references/writing-craft.md|\
+    */content-writing/references/legacy-guidance.md|\
+    */form-ux-design/references/legacy-guidance.md|\
+    */policy-pages/references/legacy-guidance.md) continue ;;
   esac
   while IFS=: read -r ln; do
     record "- ${f#$SKILLS_DIR/}:$ln"

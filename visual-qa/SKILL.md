@@ -4,6 +4,7 @@ description: Rendered-output review loop. Owns the Playwright screenshot-diff ha
 ---
 
 # Visual QA
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Every build of a client site, as a CI-time gate before deploy.
@@ -106,3 +107,4 @@ The command:
   `baseline-management.md` for the threshold.
 - Do not treat the visual gate as optional for non-visual-heavy projects; a
   text-heavy site regresses hierarchy and spacing just as often.
+

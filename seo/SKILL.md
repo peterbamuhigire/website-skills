@@ -4,6 +4,7 @@ description: "Comprehensive search engine optimization for multi-language static
 ---
 
 # Seo
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers both traditional SEO and Generative Engine Optimization (GEO) for AI platforms. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml) and SEO audit report. Run after page-builder, before deploy.
@@ -48,3 +49,4 @@ description: "Comprehensive search engine optimization for multi-language static
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

@@ -13,7 +13,7 @@ Copy this template to `docs/sector-brief.md` in your client project and answer e
 - Unique positioning vs competitors?
 
 ## Visual Identity
-- Brand personality: Prestigious? Approachable? Cutting-edge?
+- Brand personality: Prestigious? Approachable? Forward-looking?
 - Color palette: (suggest: sophisticated navy/charcoal + one accent)
 - Typography: Traditional or modern?
 

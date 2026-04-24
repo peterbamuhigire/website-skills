@@ -4,6 +4,7 @@ description: Comprehensive SEO audit for static websites. Analyses 14 categories
 ---
 
 # Seo Audit
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Comprehensive SEO audit for static websites. Analyses 14 categories — technical SEO, on-page, content quality, structured data, pagespeed & performance, mobile usability, local SEO, internal linking, security & trust, accessibility, competitive positioning, voice search readiness, off-page signals, and SEO measurement. Produces a scored audit report with prioritised action items. Works with any Astro static site. Run after deploy or on demand to identify SEO gaps and improvement opportunities.
@@ -44,3 +45,4 @@ description: Comprehensive SEO audit for static websites. Analyses 14 categories
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

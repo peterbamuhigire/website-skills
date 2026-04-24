@@ -4,6 +4,7 @@ description: Scan new or updated skills for unsafe or malicious instructions (un
 ---
 
 # Skill Safety Audit
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Scan new or updated skills for unsafe or malicious instructions (unknown tools, external installers, credential harvesting) before accepting them into the repository.
@@ -44,3 +45,4 @@ description: Scan new or updated skills for unsafe or malicious instructions (un
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

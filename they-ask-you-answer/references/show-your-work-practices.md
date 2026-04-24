@@ -416,7 +416,7 @@ Every quarter, audit against these 10 questions:
 - [ ] Are we still publishing in month 18, 24, 36?
 
 A quarter where fewer than 7 of these are "yes" is a quarter where the
-authority engine stalled. Diagnose the gap before the next quarter begins.
+authority engine stalled. Diagnose the gap before the following quarter begins.
 
 ---
 

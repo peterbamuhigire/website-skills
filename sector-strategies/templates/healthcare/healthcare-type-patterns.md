@@ -21,9 +21,9 @@ Each healthcare facility type serves different patients with different needs and
 - **Key elements:** Condition-specific landing pages, specialist credentials, treatment options comparison, before/after (where appropriate), FAQ per condition
 - **Unique:** Symptom checker, treatment comparison tool, specialist matching quiz
 
-## Wellness & Holistic Centre
+## Wellness & Whole-Person Care Centre
 
-- **Palette:** Sage green + warm cream + blush accent. Natural, calming, holistic.
+- **Palette:** Sage green + warm cream + blush accent. Natural, calming, whole-person.
 - **Typography:** Soft serif or rounded sans (Nunito, Quicksand). Warm, approachable.
 - **Key elements:** Service menu with descriptions, practitioner profiles, wellness blog, package pricing, booking calendar
 - **Unique:** Wellness quiz ("What treatment is right for you?"), package comparison, practitioner booking

@@ -4,6 +4,7 @@ description: Ecommerce brand building and checkout experience optimisation. Use 
 ---
 
 # Ecommerce Checkout
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Ecommerce brand building and checkout experience optimisation. Use when establishing the brand foundation before site build, designing the checkout flow, or planning the post-purchase experience. Covers Verma's 7C brand framework, EVP vs UVP, checkout UX deep-dive, customer journey mapping, and DTC growth levers. Companion to the ecommerce skill.
@@ -44,3 +45,4 @@ description: Ecommerce brand building and checkout experience optimisation. Use 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

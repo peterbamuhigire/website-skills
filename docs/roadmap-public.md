@@ -86,7 +86,7 @@ Quarterly reviews update this list.
   …".
 - Operators or partners: file a PR against this file with a brief
   rationale.
-- Proposals are reviewed at the next quarterly governance review.
+- Proposals are reviewed at the following quarterly governance review.
 
 ## What this roadmap will not include
 
@@ -98,9 +98,9 @@ Quarterly reviews update this list.
 
 ## Read also
 
-- `docs/plans/website-agency-engine/README.md` — full internal plan.
-- `docs/plans/website-agency-engine/executive-summary.md` — one-page
-  framing.
+- `project-log/decisions/2026-04-16-phase-10-hard-enforcement-gates.md` — Phase 10 decision record.
+- `project-log/decisions/2026-04-16-phase-11-world-class-operating-discipline.md` — Phase 11 decision record.
+- `project-log/decisions/2026-04-16-phase-12-african-authority-engine.md` — Phase 12 decision record.
 - `docs/licensing-matrix.md` — what is open and what is closed.
 - `dashboards/public-scorecard.md` — the evidence for each shipped
   commitment.

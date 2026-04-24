@@ -4,6 +4,7 @@ description: Produces a client-facing brand style guide deliverable (docs/brand-
 ---
 
 # Brand Style Guide
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Produces a client-facing brand style guide deliverable (docs/brand-style-guide.md). Use after brand-strategy and design-system are complete. Covers logo usage rules, colour palette card (hex/RGB/CMYK), typography specimen, spacing system, photography style, voice and tone guide, and component usage examples. This document is delivered to the client as a premium project deliverable.
@@ -44,3 +45,4 @@ description: Produces a client-facing brand style guide deliverable (docs/brand-
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

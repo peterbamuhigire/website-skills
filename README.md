@@ -20,9 +20,10 @@ The repository now also functions as a portable website agency engine. It contai
 ## Portability Contract
 
 - `SKILL.md` is the concise execution layer for each skill
+- Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, not in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` holds detailed guidance, including preserved `legacy-guidance.md` files
 - `scripts/` holds deterministic helpers where a workflow benefits from automation
-- [AGENTS.md](/C:/wamp64/www/website-skills/AGENTS.md) defines repository-wide routing and working rules for Codex
+- [AGENTS.md](./AGENTS.md) defines repository-wide routing and working rules for Codex
 - Consumers should not assume the repo must live under a host-specific path such as `.claude/skills/`
 
 ## Architecture
@@ -177,8 +178,8 @@ Recent agency-engine expansion work added the following reference layers:
 - `2026-04-14`: Phase 3 added website strategy briefs, competitor synthesis, trust architecture, page-goal mapping, and intent mapping
 - `2026-04-14`: Phase 6 added QA matrix, launch verification, deployment and rollback runbooks, observability baseline, and a Playwright starter
 - `2026-04-14`: Phase 9 added role-based training, governance policy, maintenance cadence, quality metrics dashboard, and the handbook index
-- `2026-04-16`: Phase 10 added hard enforcement gates — `accessibility-audit`, `visual-qa`, and `security-gate` skills; canonical CI pipeline at `templates/ci/website.yml`; 13 canonical scripts; `lighthouserc.json` and `performance-budgets.json`; Africa 3G calibration; deploy + website-builder skill updates. See [Phase 10 completion](./docs/plans/2026-04-16-phase-10-enforcement-gates-completion.md).
-- `2026-04-16`: Phase 11 added world-class operating discipline — `observability`, `experimentation`, and `design-quality-score` skills; `drift-check.sh`, `slop-scan.sh`, and `design-quality-score.sh` scripts (CI steps 11 + 12); `glossary.md`, `docs/doc-style-guide.md`, `docs/deprecation-policy.md`; certification programme with 60-question exam bank; onboarding validation template; quality-scorecard contract. See [Phase 11 + 12 completion](./docs/plans/2026-04-16-phase-11-and-12-completion.md).
+- `2026-04-16`: Phase 10 added hard enforcement gates — `accessibility-audit`, `visual-qa`, and `security-gate` skills; canonical CI pipeline at `templates/ci/website.yml`; 13 canonical scripts; `lighthouserc.json` and `performance-budgets.json`; Africa 3G calibration; deploy + website-builder skill updates. See [Phase 10 decision](./project-log/decisions/2026-04-16-phase-10-hard-enforcement-gates.md).
+- `2026-04-16`: Phase 11 added world-class operating discipline — `observability`, `experimentation`, and `design-quality-score` skills; `drift-check.sh`, `slop-scan.sh`, and `design-quality-score.sh` scripts (CI steps 11 + 12); `glossary.md`, `docs/doc-style-guide.md`, `docs/deprecation-policy.md`; certification programme with 60-question exam bank; onboarding validation template; quality-scorecard contract. See [Phase 11 decision](./project-log/decisions/2026-04-16-phase-11-world-class-operating-discipline.md).
 - `2026-04-16`: Phase 12 added the African authority engine — `africa-excellence` skill with six references (low-bandwidth, mobile-money UX, USSD-aware, language pack, trust signals, cultural patterns); public scorecard; `LICENSE` + `docs/licensing-matrix.md`; `docs/roadmap-public.md`; they-ask-you-answer continental publishing rhythm.
 
 ## Working Model

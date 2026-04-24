@@ -365,7 +365,7 @@ For client retainer reports and reviews:
 
 The agency runs **two measurement systems**: client-facing KPI dashboards
 that prove every retainer earns its fee, and internal quarterly OKRs that
-focus the team on the next quarter's change targets. The two never mix.
+focus the team on the following quarter's change targets. The two never mix.
 KPIs are reported monthly to clients in plain English, with deltas, with
 attribution methods named, with recommendations. OKRs are quarterly,
 public to the team, capped at 3 to 5 Objectives, mixed committed and

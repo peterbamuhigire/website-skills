@@ -4,6 +4,7 @@ description: Canonical rendered-output design-quality scoring layer. Defines the
 ---
 
 # Design Quality Score
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Before any site launches — each primary template is scored.
@@ -111,3 +112,4 @@ The scoring is:
   tokens are correct; violating tokens is a separate drift issue).
 - In the canonical CI, this skill runs advisory on PRs and blocking
   on main.
+

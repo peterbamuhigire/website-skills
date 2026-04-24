@@ -4,6 +4,7 @@ description: Authority-product and lead-capture offer design for agencies and ex
 ---
 
 # Authority Offers
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The business needs an authority-building entry offer, lead magnet, low-friction paid diagnostic, webinar, workshop, email course, or mini-product.
@@ -49,3 +50,4 @@ description: Authority-product and lead-capture offer design for agencies and ex
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Keep authority offers measurable and evidence-backed; this skill is direct response without cheapening the brand.
+

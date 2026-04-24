@@ -4,6 +4,7 @@ description: Canonical accessibility enforcement layer. Owns the WCAG 2.2 AA bas
 ---
 
 # Accessibility Audit
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Every build of a client site, as a CI-time gate before deploy.
@@ -96,3 +97,4 @@ The command:
   primary template is added, and whenever a third-party script is authorised.
 - This skill is part of the canonical CI pipeline (`templates/ci/website.yml`).
   Do not duplicate its logic per project.
+

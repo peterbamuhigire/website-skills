@@ -4,6 +4,7 @@ description: "Build-time image compression for static websites. Compresses photo
 ---
 
 # Image Compression
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: "Build-time image compression for static websites. Compresses photos from photo-bank/ to under 500KB while retaining quality before copying to src/assets/images/. Uses Sharp (Node.js) as primary tool. Runs as part of photo-manager pipeline."
@@ -44,3 +45,4 @@ description: "Build-time image compression for static websites. Compresses photo
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

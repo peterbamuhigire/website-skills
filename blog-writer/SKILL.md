@@ -4,6 +4,7 @@ description: Generate SEO-optimised, bilingual blog articles with featured image
 ---
 
 # Blog Writer
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Generate SEO-optimised, bilingual blog articles with featured images, in-article photography, and distinctive per-article design. Articles are drafted and edited as markdown in docs/{lang}/blog/{slug}.md. On instruction, builds Astro blog pages from those markdown files. Works for any client website and any topic. Use when the user says "write a blog article", "create a blog post", "publish a blog", "write about [topic]", or wants to add content to the blog section.
@@ -45,3 +46,4 @@ description: Generate SEO-optimised, bilingual blog articles with featured image
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

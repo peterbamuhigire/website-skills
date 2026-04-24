@@ -71,7 +71,7 @@ When a prospect raises one of these objections after the discovery call, send th
 | "We had a bad experience before" | "Warning signs of a bad agency" article + references from 2 clients |
 | "We need to think about it" | Customer journey video most relevant to their industry |
 | "Can AI just do this now?" | The 80% Video + "Doctor-Pilot-Teacher" explainer if written |
-| "Can you show me more examples?" | 3 case studies in their sector + best-in-class article for their industry |
+| "Can you show me more examples?" | 3 case studies in their sector + a benchmark article for their industry |
 | "We're getting other quotes" | Comparison article + pricing breakdown + "questions to ask every agency" |
 
 ---

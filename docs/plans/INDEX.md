@@ -14,19 +14,19 @@ talks, upstream OSS contributions) continue per the public roadmap at
 
 | Plan | Completion Date | Report |
 |---|---|---|
-| Phase 12 — African Authority Engine | 2026-04-16 | [2026-04-16-phase-11-and-12-completion.md](./2026-04-16-phase-11-and-12-completion.md) |
-| Phase 11 — World-Class Operating Discipline | 2026-04-16 | [2026-04-16-phase-11-and-12-completion.md](./2026-04-16-phase-11-and-12-completion.md) |
-| Phase 10 — Hard Enforcement and Visual QA Gates | 2026-04-16 | [2026-04-16-phase-10-enforcement-gates-completion.md](./2026-04-16-phase-10-enforcement-gates-completion.md) |
-| Phases 1–9 — Agency engine foundations through governance | 2026-04-14 | tracked in [executive-summary.md](./website-agency-engine/executive-summary.md) |
+| Phase 12 - African Authority Engine | 2026-04-16 | [2026-04-16-phase-12-african-authority-engine.md](../../project-log/decisions/2026-04-16-phase-12-african-authority-engine.md) |
+| Phase 11 - World-Class Operating Discipline | 2026-04-16 | [2026-04-16-phase-11-world-class-operating-discipline.md](../../project-log/decisions/2026-04-16-phase-11-world-class-operating-discipline.md) |
+| Phase 10 - Hard Enforcement and Visual QA Gates | 2026-04-16 | [2026-04-16-phase-10-hard-enforcement-gates.md](../../project-log/decisions/2026-04-16-phase-10-hard-enforcement-gates.md) |
+| Phases 1-9 - Agency engine foundations through governance | 2026-04-14 | tracked in [docs/roadmap-public.md](../roadmap-public.md) |
 
 ## Roadmap
 
-See the master roadmap: [website-agency-engine](./website-agency-engine/README.md).
+See the master roadmap: [docs/roadmap-public.md](../roadmap-public.md).
 
 ## Conventions
 
 - One completion report per phase, named `YYYY-MM-DD-<phase>-completion.md`.
 - Decision entries for non-obvious trade-offs live under
   `project-log/decisions/` and are linked from the completion report.
-- When a phase ships, update `executive-summary.md` status table and add
+- When a phase ships, update the public roadmap and add
   a row to the "Completed" table above.

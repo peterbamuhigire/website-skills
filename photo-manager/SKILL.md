@@ -4,6 +4,7 @@ description: Catalogs photos from photo-bank/, records dimensions, copies to a s
 ---
 
 # Photo Manager
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Catalogs photos from photo-bank/, records dimensions, copies to a single flat src/assets/images/ directory, and generates _catalog.json with category metadata. Use whenever photos need to be processed, cataloged, or placed in the website.
@@ -44,3 +45,4 @@ description: Catalogs photos from photo-bank/, records dimensions, copies to a s
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

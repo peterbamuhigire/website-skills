@@ -112,7 +112,7 @@ in the same section.
   function test (pattern memorisation, object identification) unless an
   alternative exists.
 
-## Robust
+## Compatible
 
 ### 4.1 Compatible
 - HTML validates (no duplicate IDs, no mismatched tags).

@@ -4,6 +4,7 @@ description: Establishes the visual foundation for a website — fonts, colors, 
 ---
 
 # Design System
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Establishes the visual foundation for a website — fonts, colors, spacing, animations, and aesthetic direction. Use before building any pages. Reads docs/style-brief.md for brand direction.
@@ -54,3 +55,4 @@ description: Establishes the visual foundation for a website — fonts, colors, 
   2. component inventory or change list
   3. states and accessibility expectations
   4. source-of-truth location for future contributors
+

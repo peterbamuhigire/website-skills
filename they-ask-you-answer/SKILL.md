@@ -4,6 +4,7 @@ description: Content-driven lead generation strategy for premium agencies using 
 ---
 
 # They Ask You Answer
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Content-driven lead generation strategy for premium agencies using radical transparency. Use when building the agency's content marketing strategy, planning blog articles, creating video content, or designing the lead generation funnel. Covers the Big 5 content pillars, The Selling 7 video framework, Assignment Selling, the CarMax Effect, and content as sales enablement. Designed to attract $10,000–$25,000+ website clients through educational content that answers the questions they're already asking.
@@ -76,3 +77,4 @@ workstream:
 
 Publishing cadence feeds and is fed by the quarterly public scorecard
 regeneration and the cross-client experimentation review.
+

@@ -29,7 +29,7 @@ He classifies the ecosystem into 6 firm types:
 |------|------|-----------|
 | **Disruptors** | Tech-savvy, integrated, versatile talent, value-based pricing | Dominant |
 | **Traditionalists** | Strong legacy brand, top-heavy staffing, struggle to integrate digital | Declining |
-| **Softservers** | Software companies with service arms (HubSpot, etc.) | Rising, structural leverage |
+| **Softservers** | Software companies with service arms (HubSpot, etc.) | Rising, structural advantage |
 | **Specialists** | Niche (SEO-only, PR-only, video-only) | Project-based, acquisition targets |
 | **Connectors** | Networkers/thinkers with distributed subcontractor networks | Lifestyle |
 | **Soloists** | Freelancers | Capacity-limited |
@@ -441,7 +441,7 @@ All clients are NOT equal. Ranking factors:
   of trouble. "You have to be willing to walk away."
 - **Realistic expectations.**
 - **Leadership support** — engaged client decision-maker.
-- **Synergy/shared values.**
+- **Shared values and working fit.**
 - **Commitment length and budget history.**
 - **Growth opportunities.**
 - **Profile and platform** — credibility halo.

@@ -4,6 +4,7 @@ description: Plan and write website-anchored launch campaigns for offers, servic
 ---
 
 # Launch Campaigns
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The brief includes a launch window, deadline, waitlist, event, cohort, enrolment period, announcement, relaunch, or offer push.
@@ -48,4 +49,5 @@ description: Plan and write website-anchored launch campaigns for offers, servic
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Route to `sales-copywriting` for deep page persuasion work, `blog-writer` for launch-supporting articles, and `website-builder` when the launch work changes the actual site build.
+
 

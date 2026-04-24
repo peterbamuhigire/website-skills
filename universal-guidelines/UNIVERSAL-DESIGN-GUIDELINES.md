@@ -391,7 +391,7 @@ Design for all users, regardless of ability. WCAG AA is the standard; AAA is ide
 - Help users avoid and correct mistakes
 - Clear language, simple sentences
 
-**Robust:**
+**Compatible:**
 - Valid HTML code
 - Compatible with assistive technologies
 - Proper semantic markup

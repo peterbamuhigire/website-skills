@@ -136,7 +136,7 @@ Chwezi develops and sells software products. Only two are fully commercial — a
 
 These should be woven throughout the site, not listed as bullet points:
 
-1. **Integrated expertise** — Technology + Business + Security under one roof. Most consultancies specialise in one; Chwezi covers all three, which means holistic solutions.
+1. **Integrated expertise** — Technology + Business + Security under one roof. Most consultancies specialise in one; Chwezi covers all three, which means joined-up solutions.
 2. **Practical, regional understanding** — Deep knowledge of the East African business environment, regulatory landscape, and infrastructure realities.
 3. **Own software products** — Not just advisors — Chwezi builds and sells production software (Maduuka, Aqar), proving technical capability.
 4. **Full-cycle delivery** — From planning and strategy through implementation to ongoing support. Long-term partnership, not hit-and-run consulting.

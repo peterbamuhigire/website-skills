@@ -4,6 +4,7 @@ description: Secure email sending from static websites using PHP + PHPMailer on 
 ---
 
 # Email Sender
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Secure email sending from static websites using PHP + PHPMailer on Apache/WAMP. Self-hosted contact form handler with 4-layer spam prevention (honeypot, timing, content scan, rate limiting), stateless CSRF, beautiful branded HTML emails, and bilingual support. No external services required.
@@ -45,3 +46,4 @@ description: Secure email sending from static websites using PHP + PHPMailer on 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

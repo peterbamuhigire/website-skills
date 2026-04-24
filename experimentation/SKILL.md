@@ -4,6 +4,7 @@ description: Canonical experimentation and CRO layer. Defines the hypothesis tem
 ---
 
 # Experimentation
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - A retainer client has a conversion, engagement, or retention question
@@ -127,3 +128,4 @@ numbers attached.
   for open-source posture, cost, and African-bandwidth friendliness.
 - The `monthly-report` skill surfaces the experiment's decision and
   evidence line to the client; it does not re-run the analysis.
+

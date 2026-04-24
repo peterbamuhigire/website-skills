@@ -4,6 +4,7 @@ description: Client retention, retainer architecture, recurring-revenue operatio
 ---
 
 # Agency Client Retention
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Client pricing, delivery structure, and retention systems for a premium website design and SEO agency. Use when packaging services, setting pricing, onboarding new clients, planning monthly communication, or designing the quarterly strategy review. Covers the Rule of Five Ones pricing architecture, Land-Deliver-Retain model, monthly communication rhythm, Seed the Vision quarterly framework, and performance-based deal structures. Designed for agencies targeting $10,000–$25,000+ website projects with 24-month+ client relationships.
@@ -56,3 +57,4 @@ Phase 8 references (retainer, automation, and revenue expansion):
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

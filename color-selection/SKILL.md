@@ -4,6 +4,7 @@ description: Select optimal color palettes for websites using brand colors and c
 ---
 
 # Color Selection
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Select optimal color palettes for websites using brand colors and color theory. Use when users need to define their website's color scheme, generate complementary palettes, ensure accessibility compliance, or refine existing colors for better visual impact and industry alignment.
@@ -44,3 +45,4 @@ description: Select optimal color palettes for websites using brand colors and c
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

@@ -4,6 +4,7 @@ description: Social media strategy and management tied to measurable business ou
 ---
 
 # Social Media
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Social media strategy and management tied to measurable business outcomes. Use when a client needs social media built alongside their website, or as a standalone social media audit or campaign strategy. Covers platform selection, content strategy, offer-led social campaigns, retargeting posture, list-building, analytics, and agency pricing structures for social media retainers.
@@ -49,3 +50,4 @@ description: Social media strategy and management tied to measurable business ou
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

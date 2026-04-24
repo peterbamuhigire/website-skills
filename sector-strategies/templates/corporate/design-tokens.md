@@ -25,7 +25,7 @@ Corporate and consulting sites must balance **authority with approachability and
 
 Different corporate markets need different colors:
 - **Financial firms**: Often use navy + gold (heritage + prestige), not blue
-- **Tech consultants**: Often use black + vibrant accent (cutting-edge), not neutral navy
+- **Tech consultants**: Often use black + vibrant accent (forward-looking), not neutral navy
 - **Boutique firms**: Often use warm earth tones (human-focused), not cool navy
 - **Established institutions**: Often use charcoal + subtle accent (sophisticated restraint)
 
@@ -74,7 +74,7 @@ All colors verified for WCAG AAA standard (7:1 contrast) in both light and dark 
 ### Why You Need Different Fonts
 
 The design-system skill explicitly forbids Inter, Roboto, and Arial to prevent generic designs. This reference also shows common fonts, but your brand should choose UNIQUE fonts that:
-- Reflect your market position (traditional vs. cutting-edge)
+- Reflect your market position (traditional vs. forward-looking)
 - Differentiate from competitors
 - Work across all device sizes
 - Maintain accessibility (WCAG AA+)

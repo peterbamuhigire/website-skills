@@ -4,6 +4,7 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
 ---
 
 # Sales Copywriting
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Persuasion and conversion copywriting frameworks. Cross-cutting core (headlines, CTAs, anti-resistance, proof) applies to all pages. Sales frameworks (PASTOR, 4 P's, guarantees) activate for landing/sales/product pages. Level 2 persuasion — confident and professional, never pushy.
@@ -54,3 +55,4 @@ description: Persuasion and conversion copywriting frameworks. Cross-cutting cor
   2. define the value proposition and offer type
   3. choose the right page goal and CTA commitment level
   4. place proof and risk-reversal close to the claim or ask
+

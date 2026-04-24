@@ -4,6 +4,7 @@ description: Canonical telemetry layer. Owns the RUM, error-tracking, analytics,
 ---
 
 # Observability
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Shipping a new client site — observability must be live on day one.
@@ -118,3 +119,4 @@ operator narration and is not permitted.
   source is unreachable at render time.
 - The Phase 10 performance gate tests synthetic performance. RUM is the
   real-user counterpart; both must be green.
+

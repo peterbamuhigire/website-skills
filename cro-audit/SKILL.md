@@ -4,6 +4,7 @@ description: Conversion Rate Optimisation audit for any website. Use after a web
 ---
 
 # Cro Audit
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Conversion Rate Optimisation audit for any website. Use after a website is built (or to audit an existing client site) to identify and prioritise conversion improvements. Covers heuristic evaluation, split-test-proven rules (Brunson), attention flow, CTA scoring, form audit, trust signal gap analysis, mobile usability, and hypothesis generation for A/B tests. Outputs docs/cro-audit-report.md.
@@ -44,3 +45,4 @@ description: Conversion Rate Optimisation audit for any website. Use after a web
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

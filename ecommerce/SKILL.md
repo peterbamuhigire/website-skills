@@ -4,6 +4,7 @@ description: E-commerce website design, business model selection, and conversion
 ---
 
 # Ecommerce
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: E-commerce website design, business model selection, and conversion strategy. Use when building online shops, product catalogues, checkout flows, or acquisition paths for any site where visitors buy products or services online. Covers the CLICK system (Convenient, Likeable, Informative, Customized, Knowledgeable), trust signals, product-page design, checkout risk reduction, pricing psychology, and traffic-to-retargeting mechanics.
@@ -49,3 +50,4 @@ description: E-commerce website design, business model selection, and conversion
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+

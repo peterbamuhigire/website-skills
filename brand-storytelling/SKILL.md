@@ -4,6 +4,7 @@ description: Brand storytelling frameworks for website content. Use when writing
 ---
 
 # Brand Storytelling
+Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - The task matches this domain: Brand storytelling frameworks for website content. Use when writing About pages, case studies, hero sections, and any page where narrative drives connection. Covers the Five-Act Dramatic Arc, Hero's Journey (customer as hero), the Golden Circle, Creative Brief, Story Engine style guide, and the Content Narrative framework. Requires docs/brand-brief.md from brand-strategy skill.
@@ -44,3 +45,4 @@ description: Brand storytelling frameworks for website content. Use when writing
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+
