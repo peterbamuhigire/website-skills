@@ -32,13 +32,13 @@ on references that contradict it.
   accessibility, visual-QA, security, drift-check, and design-quality-score
   are the named gates.
 - **Rubric** — the design-quality-score rubric at
-  `design-quality-score/references/rubric.md`.
+  `skills/design-quality-score/references/rubric.md`.
 - **Scorecard** — the rolling quality record. Internal version at
   `dashboards/quality-scorecard.md`; public version at
   `dashboards/public-scorecard.md`.
 - **Africa calibration** — the Africa-realistic performance and pattern layer
-  defined in `deploy/references/africa-calibration.md` (performance) and
-  `africa-excellence/` (patterns, Phase 12).
+  defined in `skills/deploy/references/africa-calibration.md` (performance) and
+  `skills/africa-excellence/` (patterns, Phase 12).
 
 ## Skills (canonical names)
 

@@ -35,7 +35,7 @@ Public evidence: `observability/`, `experimentation/`,
 The Africa-realistic excellence layer and the commitments to run the
 engine in public.
 
-Public evidence: `africa-excellence/` skill + 6 references;
+Public evidence: `skills/africa-excellence/` skill + 6 references;
 `docs/licensing-matrix.md`; `LICENSE`; this roadmap;
 `dashboards/public-scorecard.md`.
 
@@ -77,7 +77,7 @@ Quarterly reviews update this list.
 3. Publish the first open-source benchmark site.
 4. Onboard the first non-founder operator into a real project.
 5. Calibration pass: two operators blind-score the four worked
-   examples in `design-quality-score/references/scored-examples.md`
+   examples in `skills/design-quality-score/references/scored-examples.md`
    and file a calibration note.
 
 ## How to suggest a roadmap change

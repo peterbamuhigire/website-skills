@@ -5,7 +5,7 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 This repository works in two modes without changing the directory layout:
 
 - `Claude Code`: commonly consumed as a Git submodule at `.claude/skills/` inside client projects
-- `Codex`: consumed directly as a repository of portable skills rooted at directories that contain `SKILL.md`
+- `Codex`: consumed directly as a repository of portable skills under `skills/<skill-name>/SKILL.md`
 
 Projects can share the same skills, and updates propagate when downstream projects pull the latest repo state.
 
@@ -20,11 +20,13 @@ The repository now also functions as a portable website agency engine. It contai
 ## Portability Contract
 
 - `SKILL.md` is the concise execution layer for each skill
+- Skills live under `skills/<skill-name>/SKILL.md`.
 - Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, not in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` holds detailed guidance, including preserved `legacy-guidance.md` files
 - `scripts/` holds deterministic helpers where a workflow benefits from automation
 - [AGENTS.md](./AGENTS.md) defines repository-wide routing and working rules for Codex
 - Consumers should not assume the repo must live under a host-specific path such as `.claude/skills/`
+- The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant. Operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` stay at root when they serve the repository rather than a single skill.
 
 ## Architecture
 
@@ -37,22 +39,22 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- prompts/                 Project-specific generation prompts
 |-- plans/                   Phase plans and system expansion work
 |-- docs/                    Evaluation and system documentation
-|-- website-builder/         Master orchestrator for build and operating references
-|-- design-system/           Visual system decisions
-|-- page-builder/            Page and component production
-|-- photo-manager/           Asset cataloging and image selection
-|-- seo/                     Search-facing implementation
-|-- deploy/                  QA, launch, rollback, and deployment operations
-|-- i18n/                    Language infrastructure
-|-- sector-strategies/       Sector design and trust-pattern guidance
-|-- sectors/                 Sector-specific specializations
-|-- accessibility-audit/     WCAG 2.2 AA enforcement gate (Phase 10)
-|-- visual-qa/               Screenshot diff, structural assertions, AI-slop scan (Phase 10)
-|-- security-gate/           Dep audit, headers, SRI, secrets, supply chain, compliance (Phase 10)
-|-- observability/           RUM + error tracking + analytics + alerting contract (Phase 11)
-|-- experimentation/         Hypothesis template, A/B infra, stat primer, quarterly review (Phase 11)
-|-- design-quality-score/    7-category rubric, slop-scan, pre-launch scoring gate (Phase 11)
-|-- africa-excellence/       Low-bandwidth, mobile-money, USSD, language, trust, cultural patterns (Phase 12)
+|-- skills/                  Portable skills; each skill owns skills/<skill-name>/SKILL.md
+|   |-- website-builder/     Master orchestrator for build and operating references
+|   |-- design-system/       Visual system decisions
+|   |-- page-builder/        Page and component production
+|   |-- photo-manager/       Asset cataloging and image selection
+|   |-- seo/                 Search-facing implementation
+|   |-- deploy/              QA, launch, rollback, and deployment operations
+|   |-- i18n/                Language infrastructure
+|   |-- sector-strategies/   Sector design and trust-pattern guidance
+|   |-- accessibility-audit/ WCAG 2.2 AA enforcement gate (Phase 10)
+|   |-- visual-qa/           Screenshot diff, structural assertions, AI-slop scan (Phase 10)
+|   |-- security-gate/       Dep audit, headers, SRI, secrets, supply chain, compliance (Phase 10)
+|   |-- observability/       RUM + error tracking + analytics + alerting contract (Phase 11)
+|   |-- experimentation/     Hypothesis template, A/B infra, stat primer, quarterly review (Phase 11)
+|   |-- design-quality-score/ 7-category rubric, slop-scan, pre-launch scoring gate (Phase 11)
+|   `-- africa-excellence/   Low-bandwidth, mobile-money, USSD, language, trust, cultural patterns (Phase 12)
 |-- certification/           Syllabus, exam bank, cohort records (Phase 11)
 |-- dashboards/              Internal and public quality scorecards (Phase 11 + 12)
 |-- glossary.md              Canonical-name authority (Phase 11)
@@ -62,12 +64,6 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- templates/ci/            Canonical CI pipeline inherited by client projects (15 blocking steps)
 |-- project-log/decisions/   Decision log for non-obvious trade-offs
 |-- LICENSE                  MIT + CC BY + CC BY-SA + CC BY-NC + proprietary (see docs/licensing-matrix.md)
-|-- blog-writer/             Blog production
-|-- blog-idea-generator/     Blog ideation
-|-- policy-pages/            Privacy and terms guidance
-|-- seo-audit/               Search audit workflow
-|-- skill-writing/           Skill authoring guidance
-|-- skill-safety-audit/      Skill safety review
 `-- proposal-skills/         Separate proposal-generation submodule
 ```
 
@@ -76,7 +72,7 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 - `website-builder`: orchestrates the website workflow and owns cross-skill operating references
 - `i18n`: language routing, multilingual structure, and shared versus locale-specific rules
 - `design-reference`: extracts design decisions from reference websites
-- `sector-strategies` and `sectors/legal`: industry-specific trust patterns and content priorities
+- `sector-strategies`: industry-specific trust patterns and content priorities
 - `design-system`: typography, palette, motion, spacing, and visual-system decisions
 - `photo-manager`: image cataloging, naming, dimensions, and logo selection
 - `page-builder`: converts content and design decisions into pages and reusable UI
@@ -123,7 +119,7 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 
 ## African Authority Layer (Phase 12)
 
-- `africa-excellence/`: low-bandwidth patterns, mobile-money UX, USSD-aware
+- `skills/africa-excellence/`: low-bandwidth patterns, mobile-money UX, USSD-aware
   design, African language pack (10 first-class languages), country trust
   signals, cultural patterns. Replaces generic global defaults for African-
   market projects.

@@ -116,9 +116,9 @@ Each photo now includes `recognized_purpose` field based on filename pattern rec
 - `/policy-pages/` - Privacy Policies + Terms of Use
 
 **Common File Paths:**
-- Skills always at `/{skill-name}/SKILL.md`
-- Reference files at `/{skill-name}/references/{topic}.md`
-- Asset templates at `/{skill-name}/templates/`
+- Skills always at `skills/{skill-name}/SKILL.md`
+- Reference files at `skills/{skill-name}/references/{topic}.md`
+- Asset templates at `skills/{skill-name}/templates/`
 - Generated client files at `docs/`, `photo-bank/`, `src/`
 
 ## Maintenance Checklist
@@ -326,7 +326,7 @@ Unlike client sectors (which need multiple pages, navigation, content systems), 
 
 ### Book Extractions Added
 
-Four new files in `book-extractions/`:
+Four new files in `skills/book-extractions/`:
 - `kennedy-no-bs-price-strategy-extraction.md` — 9 price failures, 5 Propositions, Triangle of Preeminence, Hawaiian Fisherman, niche pricing, discount discipline, competing with free, association principle, 5 price-setting methods
 - `kennedy-no-bs-sales-success-extraction.md` — 23 Strategies, Positioning-Not-Prospecting, 6-Step Sales Process, Takeaway Selling, Proof hierarchy, Welcome Guest Process, Morning After protocol
 - `kennedy-ultimate-sales-letter-extraction.md` — 28-step long-form system, Power of a Sequence, Hidden Benefit (Ted Nicholas), Damaging Admission, Creative P.S., Johnson Box, Beat the Price Bugaboo
@@ -344,7 +344,7 @@ Applies Kennedy's 28-step Ultimate Sales Letter system and Brunson's funnel scri
 - `design-system`, `design-quality-score` — visual integrity
 - `ux-forms`, `ux-writing` — order form microcopy
 - `ecommerce` — product / cart / checkout
-- `book-extractions/storybrand-sb7-framework` — StoryBrand for brand-level messaging; Kennedy/Brunson for the sales page itself
+- `skills/book-extractions/storybrand-sb7-framework` — StoryBrand for brand-level messaging; Kennedy/Brunson for the sales page itself
 
 **Core Skeleton (Kennedy):**
 Headline → Sub-headline → Hero visual → CTA → Johnson Box → Opening Hook → Problem/Agitate → Damaging Admission → Promise → Proof → Offer Stack → Beat Price → Guarantee → Deadline → Multi-channel CTA → Signature → P.S. block → FAQ → Order form
@@ -387,7 +387,7 @@ Studied six design/innovation books and seeded them into both skill engines (par
 
 ### Book extractions (this repo)
 
-`book-extractions/` gained six new docs in house format:
+`skills/book-extractions/` gained six new docs in house format:
 - every-layout-extraction.md
 - flux-color-extraction.md
 - design-by-nature-extraction.md
@@ -400,5 +400,5 @@ Each extraction includes "Use this for", "High-signal insights" (10 each), and a
 ### Key patterns reinforced
 
 1. **Two skill engines, one studio.** Parent `~/.claude/skills` holds general-purpose + app design skills. This `website-skills` repo holds website-delivery-specific skills. Cross-reference is explicit.
-2. **House style for book intake.** Extract → save raw notes in `_book_extracts/_notes/` → bind notes as skill `references/*.md` → write house-format extraction doc to `book-extractions/` → append pointer section to relevant SKILL.md.
+2. **House style for book intake.** Extract → save raw notes in `_book_extracts/_notes/` → bind notes as skill `references/*.md` → write house-format extraction doc to `skills/book-extractions/` → append pointer section to relevant SKILL.md.
 3. **Subagent permission gotcha.** Spawned subagents can hit Write/Bash permission denials when targeting `C:\Users\Peter\.claude\` paths even when the directory exists. Workaround: pre-create directories, and have agents return content inline if writes fail.
