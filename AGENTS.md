@@ -5,12 +5,12 @@
 This repository is a portable skill library for building websites and related marketing assets.
 
 - In Claude Code, the repository is typically consumed as a skill library inside a client project.
-- In Codex, the same directories should be treated as portable skills rooted at each folder that contains `SKILL.md`.
+- In Codex, portable skills live under `skills/<skill-name>/SKILL.md`.
 - `SKILL.md` is the portable execution unit.
 - Detailed domain material belongs in `references/`.
 - Deterministic helpers belong in `scripts/`.
 
-Do not assume this repository must live under `.claude/skills/`. Resolve skills by repository-relative paths such as `website-builder/SKILL.md`, `design-system/SKILL.md`, or `sectors/legal/SKILL.md`.
+Do not assume this repository must live under `.claude/skills/`. Resolve skills by repository-relative paths such as `skills/website-builder/SKILL.md`, `skills/design-system/SKILL.md`, or `skills/sector-strategies/SKILL.md`. The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant; root-level operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` are not skills unless they contain their own `SKILL.md`.
 
 ## Baseline Rules
 
@@ -81,8 +81,8 @@ suppressions require a decision entry under `project-log/decisions/`.
   `reports/a11y/`, `reports/visual/`, `reports/security/`, `reports/drift/`,
   `reports/design-quality/`.
 - Visual baseline contract: `tests/visual/baseline/`.
-- Africa calibration: `deploy/references/africa-calibration.md` (3G profile,
-  350 KB weight budget, Save-Data handling) + `africa-excellence/` skill for
+- Africa calibration: `skills/deploy/references/africa-calibration.md` (3G profile,
+  350 KB weight budget, Save-Data handling) + `skills/africa-excellence/` skill for
   pattern-level standards.
 
 ## Governance (Phase 11)
