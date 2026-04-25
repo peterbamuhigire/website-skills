@@ -365,3 +365,40 @@ Headline → Sub-headline → Hero visual → CTA → Johnson Box → Opening Ho
 **Last Updated (Kennedy+Brunson session):** 2026-04-19
 **Skills Added:** long-form-sales-copy
 **Extractions Added:** 4 Kennedy/Brunson primary-source extractions
+
+## Session: Six-Book Skill Engine Upgrade (2026-04-25)
+
+### What
+
+Studied six design/innovation books and seeded them into both skill engines (parent `C:\Users\Peter\.claude\skills` and this `website-skills` repo).
+
+### New skills (parent repo)
+
+- **every-layout** — 12 algorithmic CSS layout primitives (Stack, Box, Center, Cluster, Sidebar, Switcher, Cover, Grid, Frame, Reel, Imposter, Icon) from Pickering & Bell. Container-aware, intrinsic, no breakpoints for the same component.
+- **color-theory** — Flux Academy process, six harmonies, OKLCH scale generation, WCAG contrast tactics. Broader than the existing `color-selection` (this repo).
+- **design-by-nature** — Macnab's universal forms (branch/meander/spiral/helix/packing/radial), five archetypal shapes (circle/line/triangle/square/spiral), three symmetries, golden ratio. Match form to message.
+
+### Skills upgraded (with reference files)
+
+- **data-visualization** — added Peter Cook SVG/CSS/JS implementation reference + D3 supplement. Augments Knaflic story-first content.
+- **enterprise-ux-process** + **product-discovery** — added ARRIVE framework reference. Strategic Suitability as a fourth dimension to DVF; the two-R front end; the artefact chain (Persona Needs Matrix → Reframed Project Vision → Concept Board → Lean Canvas → Business Case Dashboard).
+- **product-strategy-vision** — added Verganti *Overcrowded* reference. Innovation of meaning vs solutions; the envisioning sentence; five-stage inside-out process.
+- **color-selection** (this repo) — added Flux process reference and pointer section.
+
+### Book extractions (this repo)
+
+`book-extractions/` gained six new docs in house format:
+- every-layout-extraction.md
+- flux-color-extraction.md
+- design-by-nature-extraction.md
+- fundamentals-dataviz-extraction.md
+- arrive-extraction.md
+- overcrowded-verganti-extraction.md
+
+Each extraction includes "Use this for", "High-signal insights" (10 each), and a cross-reference to the corresponding skill in the parent repo.
+
+### Key patterns reinforced
+
+1. **Two skill engines, one studio.** Parent `~/.claude/skills` holds general-purpose + app design skills. This `website-skills` repo holds website-delivery-specific skills. Cross-reference is explicit.
+2. **House style for book intake.** Extract → save raw notes in `_book_extracts/_notes/` → bind notes as skill `references/*.md` → write house-format extraction doc to `book-extractions/` → append pointer section to relevant SKILL.md.
+3. **Subagent permission gotcha.** Spawned subagents can hit Write/Bash permission denials when targeting `C:\Users\Peter\.claude\` paths even when the directory exists. Workaround: pre-create directories, and have agents return content inline if writes fail.
