@@ -28,11 +28,14 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Outputs must be implementation-ready and internally consistent.
 - Preserve existing behavior unless the task explicitly requires a change.
 - Avoid host-specific path assumptions so the skill remains portable.
+- Every enabled language must have SEO slugs written in that language, based on that language's search intent and keyword vocabulary. English slugs are not acceptable defaults for French, Kiswahili, or any other non-English version.
+- Canonical URLs, internal links, hreflang tags, Open Graph URLs, and sitemap alternates must all use the same localized route map so search engines see clean equivalent URLs per language.
 
 ## Anti-patterns
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
 - Do not generate generic output that ignores the actual project context.
+- Do not publish translated pages at English slug paths for convenience. Localize the slug, then wire language switching and sitemap alternates to the correct equivalent URL.
 
 ## Outputs
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.

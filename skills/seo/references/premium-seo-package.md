@@ -267,6 +267,7 @@ Search is fragmenting across Google, Bing, LLM-based answer engines (Perplexity,
 - Robots.txt valid and up to date.
 - XML sitemap submitted to Search Console and Bing.
 - Canonical signals consistent across internal links, sitemap, and tag.
+- Multilingual slugs localized per enabled language, with sitemap alternates, hreflang, language switcher links, and internal links generated from the same route-equivalence map.
 - No duplicate content issues (cross-canonical where needed).
 
 ### Crawl budget awareness

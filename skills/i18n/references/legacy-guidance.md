@@ -1,4 +1,4 @@
-# Internationalization (i18n) — Multi-Language Infrastructure
+# Internationalization (i18n) â€” Multi-Language Infrastructure
 
 Historical detailed guidance preserved from the pre-standardized version of the skill.
 Use `i18n/SKILL.md` and the current i18n references first.
@@ -17,16 +17,16 @@ Multi-language support is designed into projects from the start. This skill defi
 ### French (fr)
 - **URL path**: `/fr/`
 - **Standard**: Formal francophone African (via language-standards skill)
-- **Primary markets**: Francophone Africa, Côte d'Ivoire, DRC, Cameroon, Senegal
-- **Character expansion**: 1.2–1.4x (French typically 20–40% longer than English)
+- **Primary markets**: Francophone Africa, CÃ´te d'Ivoire, DRC, Cameroon, Senegal
+- **Character expansion**: 1.2â€“1.4x (French typically 20â€“40% longer than English)
 - **Text-overflow handling**: Design buttons and forms to accommodate longer text
-- **Regional variants**: Use standard French (not Québécois or Belgian variants) unless explicitly requested
+- **Regional variants**: Use standard French (not QuÃ©bÃ©cois or Belgian variants) unless explicitly requested
 
 ### Kiswahili (sw)
 - **URL path**: `/sw/`
 - **Standard**: Standard Kiswahili with formal/respectful register (via language-standards skill)
 - **Primary markets**: East Africa, Kenya, Tanzania, Uganda
-- **Character expansion**: 1.1–1.3x (Kiswahili typically 10–30% longer than English)
+- **Character expansion**: 1.1â€“1.3x (Kiswahili typically 10â€“30% longer than English)
 - **Text-overflow handling**: Design containers to flex for expansion
 - **Writing system**: Latin script (no special scripts), UTF-8 encoding
 
@@ -36,22 +36,22 @@ Multi-language support is designed into projects from the start. This skill defi
 
 ```
 docs/
-├── i18n-config.md              ← Language configuration
-├── en/
-│   ├── company-profile.md
-│   ├── services.md
-│   ├── pages.md
-│   └── ... (all other content)
-├── fr/
-│   ├── company-profile.md
-│   ├── services.md
-│   ├── pages.md
-│   └── ... (all other content)
-└── sw/
-    ├── company-profile.md
-    ├── services.md
-    ├── pages.md
-    └── ... (all other content)
+â”œâ”€â”€ i18n-config.md              â† Language configuration
+â”œâ”€â”€ en/
+â”‚   â”œâ”€â”€ company-profile.md
+â”‚   â”œâ”€â”€ services.md
+â”‚   â”œâ”€â”€ pages.md
+â”‚   â””â”€â”€ ... (all other content)
+â”œâ”€â”€ fr/
+â”‚   â”œâ”€â”€ company-profile.md
+â”‚   â”œâ”€â”€ services.md
+â”‚   â”œâ”€â”€ pages.md
+â”‚   â””â”€â”€ ... (all other content)
+â””â”€â”€ sw/
+    â”œâ”€â”€ company-profile.md
+    â”œâ”€â”€ services.md
+    â”œâ”€â”€ pages.md
+    â””â”€â”€ ... (all other content)
 ```
 
 ### Required File: docs/i18n-config.md
@@ -72,10 +72,10 @@ en (fallback), but root `/` auto-detects browser language.
 ## Browser Language Detection (Required)
 
 The root page (`src/pages/index.astro`) must detect the visitor's browser language and redirect:
-- **French** (`navigator.language` starts with `fr`) → `/fr/`
-- **Everything else** → `/en/`
+- **French** (`navigator.language` starts with `fr`) â†’ `/fr/`
+- **Everything else** â†’ `/en/`
 
-This covers 75–90% of African visitors (Francophone and Anglophone Africa). No server-side detection needed — a small inline `<script>` in the root index page handles it. The `<noscript>` fallback redirects to `/en/`.
+This covers 75â€“90% of African visitors (Francophone and Anglophone Africa). No server-side detection needed â€” a small inline `<script>` in the root index page handles it. The `<noscript>` fallback redirects to `/en/`.
 
 **Root page pattern:**
 ```html
@@ -91,33 +91,33 @@ This covers 75–90% of African visitors (Francophone and Anglophone Africa). No
 </noscript>
 ```
 
-Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root — it bypasses detection. The web server must serve the generated Astro root page at `/` and let that page handle browser-language detection. Server routing may still handle `/en/`, `/fr/`, and `/sw/` normally.
+Do NOT use a server-side redirect (`.htaccess` or Nginx rewrite) for the root â€” it bypasses detection. The web server must serve the generated Astro root page at `/` and let that page handle browser-language detection. Server routing may still handle `/en/`, `/fr/`, and `/sw/` normally.
 
-### Zero-Flash Redirect (MANDATORY — Hard Rule)
+### Zero-Flash Redirect (MANDATORY â€” Hard Rule)
 
 The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any visible redirect artefact when landing on the root URL. The redirect must be instant and invisible:
 
-| ❌ Don't use | ✅ Use instead | Why |
+| âŒ Don't use | âœ… Use instead | Why |
 |---|---|---|
 | `Astro.redirect('/en/')` | `<script is:inline>` | Shows "Redirecting to /en" text; generates slow meta-refresh |
 | `<meta http-equiv="refresh">` as primary | `window.location.replace()` | Perceptible delay; visible in status bar |
 | Any body content on root page | Empty `<body>` + `<noscript>` only | Content flashes before redirect fires |
 | `window.location.href = ...` | `window.location.replace(...)` | `replace()` doesn't break the back button |
 
-- **`is:inline`** tells Astro to emit the script exactly as written — no bundling, no defer, no async; it runs before the browser paints anything
-- **`<noscript>` fallback**: the `content="0"` meta refresh fires only when JavaScript is disabled — it is never the primary mechanism
+- **`is:inline`** tells Astro to emit the script exactly as written â€” no bundling, no defer, no async; it runs before the browser paints anything
+- **`<noscript>` fallback**: the `content="0"` meta refresh fires only when JavaScript is disabled â€” it is never the primary mechanism
 - **Test**: open the root URL in an incognito window and confirm zero flicker, zero text, zero intermediate state before the language page loads
 
 ### French Browser Detection (Required)
 
-`navigator.language` returns a BCP-47 tag. French speakers across Francophone Africa use many locale variants — `fr`, `fr-FR`, `fr-BE`, `fr-CD`, `fr-CI`, `fr-CM`, `fr-SN`, `fr-RW`, and more. Using `startsWith('fr')` catches every variant in a single check, so DRC, Côte d'Ivoire, Cameroon, Senegal, and Rwanda visitors are all served the French site automatically with no user action required.
+`navigator.language` returns a BCP-47 tag. French speakers across Francophone Africa use many locale variants â€” `fr`, `fr-FR`, `fr-BE`, `fr-CD`, `fr-CI`, `fr-CM`, `fr-SN`, `fr-RW`, and more. Using `startsWith('fr')` catches every variant in a single check, so DRC, CÃ´te d'Ivoire, Cameroon, Senegal, and Rwanda visitors are all served the French site automatically with no user action required.
 
-**Canonical `src/pages/index.astro` template** — copy this verbatim into any EN+FR Astro project:
+**Canonical `src/pages/index.astro` template** â€” copy this verbatim into any EN+FR Astro project:
 
 ```astro
 ---
 // src/pages/index.astro
-// Root language-detection page — detects browser language, sends to /fr/ or /en/
+// Root language-detection page â€” detects browser language, sends to /fr/ or /en/
 // No body content: prevents any flash before redirect fires
 ---
 <html lang="en">
@@ -127,7 +127,7 @@ The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any vi
     <script is:inline>
       (function () {
         var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-        // startsWith('fr') catches fr, fr-FR, fr-BE, fr-CD, fr-CI, fr-CM, fr-SN, fr-RW …
+        // startsWith('fr') catches fr, fr-FR, fr-BE, fr-CD, fr-CI, fr-CM, fr-SN, fr-RW â€¦
         var dest = lang.startsWith('fr') ? '/fr/' : '/en/';
         window.location.replace(dest);
       })();
@@ -141,22 +141,22 @@ The visitor must NEVER see a "Redirecting to /en" flash, a blank page, or any vi
 ```
 
 Key points:
-- `<body>` is intentionally empty — nothing to render, nothing to flash
+- `<body>` is intentionally empty â€” nothing to render, nothing to flash
 - `noindex` prevents search engines from indexing the redirect page itself
-- The IIFE (`(function(){…})()`) runs synchronously before first paint
+- The IIFE (`(function(){â€¦})()`) runs synchronously before first paint
 - `window.location.replace()` is used (not `href =`) so the back button works correctly
 
 ## URL Structure
-- Root domain (/) → browser language detection → /en/ or /fr/
+- Root domain (/) â†’ browser language detection â†’ /en/ or /fr/
 - All pages served under language path: /en/, /fr/, /sw/
 - Language switcher appears on all pages
 
 ## Translation Status
 | File | en | fr | sw |
 |------|----|----|-----|
-| company-profile.md | ✓ | ✓ | ✓ |
-| services.md | ✓ | ✓ | ✓ |
-| pages.md | ✓ | ✓ | ✓ |
+| company-profile.md | âœ“ | âœ“ | âœ“ |
+| services.md | âœ“ | âœ“ | âœ“ |
+| pages.md | âœ“ | âœ“ | âœ“ |
 
 ## Language-Specific Notes
 - French content reviewed by francophone reviewer
@@ -166,7 +166,7 @@ Key points:
 ## URL Routing
 
 ### Path-Based Structure
-- **Root domain**: `https://example.com/` → redirects to `https://example.com/en/` (or configured default)
+- **Root domain**: `https://example.com/` â†’ redirects to `https://example.com/en/` (or configured default)
 - **English**: `https://example.com/en/`
 - **French**: `https://example.com/fr/`
 - **Kiswahili**: `https://example.com/sw/`
@@ -175,10 +175,10 @@ Key points:
 
 ```
 src/pages/[lang]/
-├── index.astro
-├── about.astro
-├── services.astro
-└── [slug].astro
+â”œâ”€â”€ index.astro
+â”œâ”€â”€ about.astro
+â”œâ”€â”€ services.astro
+â””â”€â”€ [slug].astro
 ```
 
 Each page receives `lang` parameter from URL:
@@ -221,7 +221,7 @@ export function getHrefLangPath(lang: Language, currentPath: string): string {
 
 export const languageLabels: Record<Language, string> = {
   en: 'English',
-  fr: 'Français',
+  fr: 'FranÃ§ais',
   sw: 'Kiswahili',
 };
 ```
@@ -244,9 +244,9 @@ interface Props {
 const { currentLang, currentPath } = Astro.props;
 
 const languages = [
-  { code: 'en' as Language, label: 'English', flag: '🇬🇧' },  // British flag
-  { code: 'fr' as Language, label: 'Français', flag: '🇫🇷' },  // French flag
-  { code: 'sw' as Language, label: 'Kiswahili', flag: '🇪🇦' },  // East Africa flag
+  { code: 'en' as Language, label: 'English', flag: 'ðŸ‡¬ðŸ‡§' },  // British flag
+  { code: 'fr' as Language, label: 'FranÃ§ais', flag: 'ðŸ‡«ðŸ‡·' },  // French flag
+  { code: 'sw' as Language, label: 'Kiswahili', flag: 'ðŸ‡ªðŸ‡¦' },  // East Africa flag
 ];
 
 const getLanguagePath = (lang: Language) => {
@@ -320,33 +320,37 @@ const getLanguagePath = (lang: Language) => {
 ```
 
 **Design Notes:**
-- Uses flag emojis: 🇬🇧 (British), 🇫🇷 (French), 🇪🇦 (East Africa)
+- Uses flag emojis: ðŸ‡¬ðŸ‡§ (British), ðŸ‡«ðŸ‡· (French), ðŸ‡ªðŸ‡¦ (East Africa)
 - Label text hidden on mobile (<640px), only flags shown
 - Active language highlighted with primary color and bold text
 - Smooth hover transitions for interactivity
-- Maintains language when navigating (e.g., /en/about → /fr/about preserves current page)
+- Maintains language when navigating (e.g., /en/about â†’ /fr/about preserves current page)
 
 ### Language Switcher Linking Rules
 
 **Critical rule: language switchers must never blindly swap the language prefix.**
 
-Blindly replacing `/en/` with `/fr/` in the URL will produce a 404 whenever the page slug differs between languages (e.g. `/en/blog/east-african-websites-need-french-version/` ≠ `/fr/blog/sites-web-africains-version-anglaise/`). This is a broken experience.
+**SEO slug rule:** this applies to every language the website supports, not only French. Each translated page or article must use a slug written for that language and its search intent. English slugs are not acceptable defaults for non-English routes unless the phrase is a proper noun, brand, acronym, or established local search term.
+
+Blindly replacing `/en/` with `/fr/` in the URL will produce a 404 whenever the page slug differs between languages (e.g. `/en/blog/east-african-websites-need-french-version/` â‰  `/fr/blog/sites-web-africains-version-anglaise/`). This is a broken experience.
 
 **The rule:**
 
-Every language switcher link must resolve to one of these — in order of preference:
+Every language switcher link must resolve to one of these â€” in order of preference:
 
-1. **Exact known equivalent URL** — explicitly provided by the page author via an `altUrl` prop on `BaseLayout`.
-2. **SlugMap lookup** — for pages with known different slugs (stored in a `slugMap` in `BaseLayout`/`Header`), translate the current slug to the correct alternate-language slug.
-3. **Same path, swapped prefix** — only when the page slug is identical in both languages (e.g. `/en/about/` → `/fr/about/`).
-4. **Alternate-language home** — fall back to `/{altLang}/` when none of the above resolves safely (e.g. unknown dynamic routes, external links, 404 scenarios).
+1. **Exact known equivalent URL** â€” explicitly provided by the page author via an `altUrl` prop on `BaseLayout`.
+2. **SlugMap lookup** â€” for pages with known different slugs (stored in a `slugMap` in `BaseLayout`/`Header`), translate the current slug to the correct alternate-language slug.
+3. **Same path, swapped prefix** â€” only when the page slug is identical in both languages (e.g. `/en/about/` â†’ `/fr/about/`).
+4. **Alternate-language home** â€” fall back to `/{altLang}/` when none of the above resolves safely (e.g. unknown dynamic routes, external links, 404 scenarios).
+
+For new implementations, prefer a single route-equivalence map keyed by logical page ID, with one localized slug per enabled language. Use that same map for the language switcher, canonical URL generation, hreflang links, sitemap alternate links, and internal link helpers.
 
 **Implementation pattern (BaseLayout.astro):**
 
 ```astro
 interface Props {
   lang: Lang;
-  altUrl?: string;  // Explicit cross-language URL — use for blog posts and any page with different slugs
+  altUrl?: string;  // Explicit cross-language URL â€” use for blog posts and any page with different slugs
   // ... other props
 }
 
@@ -382,7 +386,7 @@ const altUrl = altUrlProp
 // Header.astro accepts it and uses it directly instead of recomputing
 interface Props {
   lang: Lang;
-  altUrl: string;  // always resolved by BaseLayout — never recompute in Header
+  altUrl: string;  // always resolved by BaseLayout â€” never recompute in Header
 }
 ```
 
@@ -429,10 +433,10 @@ const { lang, title, currentPath } = Astro.props;
 ### Language-Specific Sitemaps
 
 Three sitemaps generated during build:
-- `sitemap-en.xml` — all /en/ pages
-- `sitemap-fr.xml` — all /fr/ pages
-- `sitemap-sw.xml` — all /sw/ pages
-- `sitemap-index.xml` — references all three (submitted to Google Search Console)
+- `sitemap-en.xml` â€” all /en/ pages
+- `sitemap-fr.xml` â€” all /fr/ pages
+- `sitemap-sw.xml` â€” all /sw/ pages
+- `sitemap-index.xml` â€” references all three (submitted to Google Search Console)
 
 ### Open Graph Locale Tags
 
@@ -446,9 +450,9 @@ Add to meta tags in `BaseLayout.astro`:
 ```
 
 Where locale mapping is:
-- `en` → `en_US` or `en_GB` (client preference)
-- `fr` → `fr_FR` (francophone standard)
-- `sw` → `sw_KE` or `sw_TZ` (East African standard)
+- `en` â†’ `en_US` or `en_GB` (client preference)
+- `fr` â†’ `fr_FR` (francophone standard)
+- `sw` â†’ `sw_KE` or `sw_TZ` (East African standard)
 
 ## Text Expansion and Design Flexibility
 
@@ -459,8 +463,8 @@ Design for these expansion ranges:
 | Language | Typical Range | Practical Design Factor |
 |----------|---------------|------------------------|
 | English | 1.0x (baseline) | 1.0x |
-| French | 1.2–1.4x | Design for 1.3x |
-| Kiswahili | 1.1–1.3x | Design for 1.2x |
+| French | 1.2â€“1.4x | Design for 1.3x |
+| Kiswahili | 1.1â€“1.3x | Design for 1.2x |
 
 **Implementation:**
 - Use flexible containers (min-width, max-width, not fixed widths)
@@ -472,12 +476,12 @@ Design for these expansion ranges:
 ### Design Testing Checklist
 
 ```
-□ Navigation items fit on one line (or wrap gracefully)
-□ Button labels don't truncate
-□ Form labels don't overlap input fields
-□ Hero headlines don't overflow or become illegible
-□ Card content doesn't break layout
-□ Footer text aligns properly
+â–¡ Navigation items fit on one line (or wrap gracefully)
+â–¡ Button labels don't truncate
+â–¡ Form labels don't overlap input fields
+â–¡ Hero headlines don't overflow or become illegible
+â–¡ Card content doesn't break layout
+â–¡ Footer text aligns properly
 ```
 
 ## Right-to-Left (RTL) Support

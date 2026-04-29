@@ -119,7 +119,7 @@ For every page and blog article:
 - [ ] At least 1 internal link to another page/article
 - [ ] At least 1 external link to a credible source (per 500 words for articles)
 - [ ] All images have descriptive alt text with keywords where natural
-- [ ] URL slug includes primary keyword (short, hyphenated)
+- [ ] URL slug includes primary keyword (short, hyphenated) and is localized for the page language
 - [ ] Content matches the search intent of the target keyword
 - [ ] Headings follow a logical hierarchy (H1 → H2 → H3)
 - [ ] Page loads fast (no unnecessary scripts, optimised images)

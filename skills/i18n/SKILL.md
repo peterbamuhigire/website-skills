@@ -28,11 +28,14 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Outputs must be implementation-ready and internally consistent.
 - Preserve existing behavior unless the task explicitly requires a change.
 - Avoid host-specific path assumptions so the skill remains portable.
+- For multilingual websites, slugs must be localized for every supported language. Do not keep English slugs on non-English pages unless the term is a proper noun, brand, acronym, or established search term in that language.
+- Language switching, canonical URLs, hreflang tags, and sitemaps must resolve through the same route-equivalence map so users changing languages land on the matching page with the correct localized URL.
 
 ## Anti-patterns
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
 - Do not generate generic output that ignores the actual project context.
+- Do not blindly swap only the language prefix in URLs. `/en/accounting-software/` should become the researched equivalent for the target language, not `/fr/accounting-software/`, unless that slug is intentionally native to the target language.
 
 ## Outputs
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.

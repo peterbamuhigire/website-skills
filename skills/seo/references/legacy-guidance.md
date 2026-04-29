@@ -307,10 +307,12 @@ Add meta tags (title, description, canonical, OG), Google Search Console verific
 **Hreflang Example (auto-generated in BaseLayout):**
 ```html
 <link rel="alternate" hreflang="en" href="https://example.com/en/services" />
-<link rel="alternate" hreflang="fr" href="https://example.com/fr/services" />
-<link rel="alternate" hreflang="sw" href="https://example.com/sw/services" />
+<link rel="alternate" hreflang="fr" href="https://example.com/fr/services-ou-equivalent-localise" />
+<link rel="alternate" hreflang="sw" href="https://example.com/sw/huduma-au-slug-iliyotafsiriwa" />
 <link rel="alternate" hreflang="x-default" href="https://example.com/en/services" />
 ```
+
+If localized slugs differ, generate these links from the route-equivalence map rather than from a language-prefix swap.
 
 **Open Graph Language Tags (auto-generated):**
 ```html
@@ -497,7 +499,7 @@ Generated: [Date]
 3. **One H1 per page.** H1 must contain primary keyword and closely match the `<title>` tag.
 4. **Heading hierarchy:** No skipped levels (no H1 → H3). H2/H3 should contain secondary/related keywords naturally.
 5. **First 20 words:** Primary keyword must appear within the first sentence or first 20 words of body copy.
-6. **URL slugs:** Short, keyword-included, hyphens only, no stop words, lowercase. Match the page title.
+6. **URL slugs:** Short, keyword-included, hyphens only, no stop words, lowercase. Match the page title. On multilingual sites, every enabled language must get its own localized slug based on that language's search terms; do not reuse English slugs by default.
 7. **Internal links:** Every page reachable within 2 clicks from homepage. 2-5 internal links per page body with keyword-rich anchor text (never "click here").
 8. **Outbound links:** 1-2 links to authoritative external sources per page where relevant.
 9. **Alt text:** Every image has meaningful alt text (not empty unless decorative). Primary keyword in at least one image ALT per page.
