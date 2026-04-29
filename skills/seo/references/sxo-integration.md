@@ -68,6 +68,8 @@ Evaluate every website across these six dimensions:
 - [ ] Native-quality translations (not machine translation alone)
 - [ ] Content-Language meta tag on every page
 - [ ] Country-specific keyword research (terms differ: "shoes" US vs "trainers" UK)
+- [ ] URL slugs localized for every enabled language, not copied from English by default
+- [ ] Language switcher preserves the equivalent page through a route map, even when slugs differ
 - [ ] Cultural adaptation: colour symbolism, imagery, date/currency formats
 - [ ] Design accommodates text expansion (French ~30% longer)
 
@@ -165,9 +167,11 @@ Our websites serve 3 languages (en, fr, sw). SXO integration points:
 
 ### Per-Language Requirements
 - Keyword research per language (don't just translate English keywords)
+- URL slug research per language; each translated page and article needs the target language's natural search phrase in the slug
 - Content intent may differ by language market (French-speaking Africa has different search patterns)
 - Each language version needs its own sitemap
 - hreflang implementation must be bidirectional and complete
+- Sitemap alternates, canonical URLs, language switcher links, and internal links must all use the same route-equivalence map
 - Local hosting or CDN with regional edge nodes for speed
 
 ### Cultural SXO Considerations

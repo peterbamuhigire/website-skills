@@ -42,11 +42,15 @@ https://example.com/
     → redirects to https://example.com/en/ (default language)
 
 https://example.com/en/about
-https://example.com/fr/about
-https://example.com/sw/about
+https://example.com/fr/a-propos
+https://example.com/sw/kuhusu
 ```
 
-A language switcher appears on every page, allowing visitors to change languages.
+A language switcher appears on every page, allowing visitors to change languages while staying on the equivalent page.
+
+### Localized Slug Rule
+
+Every supported language gets SEO slugs in that language. Do not reuse English slugs for translated pages unless the phrase is a proper noun, brand, acronym, or established local search term. Maintain a route-equivalence map that connects each logical page across languages, and use it for canonical URLs, language switcher links, hreflang tags, sitemap alternates, and internal links.
 
 ## Content Organization
 
@@ -178,8 +182,8 @@ All 3 languages use left-to-right (LTR) layout. If RTL languages added in future
 Automatically generated for all pages in all languages. Example:
 ```html
 <link rel="alternate" hreflang="en" href="https://example.com/en/about" />
-<link rel="alternate" hreflang="fr" href="https://example.com/fr/about" />
-<link rel="alternate" hreflang="sw" href="https://example.com/sw/about" />
+<link rel="alternate" hreflang="fr" href="https://example.com/fr/a-propos" />
+<link rel="alternate" hreflang="sw" href="https://example.com/sw/kuhusu" />
 <link rel="alternate" hreflang="x-default" href="https://example.com/en/about" />
 ```
 

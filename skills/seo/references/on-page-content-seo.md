@@ -9,18 +9,23 @@ Actionable on-page SEO rules for every page built by the page-builder skill. The
 Every page URL must be SEO-friendly:
 
 1. **Include the target keyword** in the URL slug. `/en/banana-tissue-culture` not `/en/page-3`.
-2. **Keep it short** — under 60 characters for the slug portion. Cut words that add no meaning.
-3. **Use hyphens** to separate words. Never underscores, spaces, or special characters.
-4. **Remove stop words** if they add no clarity. `/en/banana-storage-methods` not `/en/the-best-banana-storage-methods`.
-5. **Match the page title** — URL and title should clearly relate. A mismatch confuses both users and crawlers.
-6. **No dynamic parameters** in static site URLs. Astro handles this by default.
-7. **Lowercase only.** Never mixed case.
+2. **Localize every translated slug.** For each enabled language, write the slug in that language using its own keyword research and natural search terms. Do not reuse English slugs on French, Kiswahili, or other non-English pages unless the phrase is a proper noun, brand, acronym, or the dominant local search term.
+3. **Keep it short** — under 60 characters for the slug portion. Cut words that add no meaning.
+4. **Use hyphens** to separate words. Never underscores, spaces, or special characters.
+5. **Remove stop words** if they add no clarity. `/en/banana-storage-methods` not `/en/the-best-banana-storage-methods`.
+6. **Match the page title** — URL and title should clearly relate. A mismatch confuses both users and crawlers.
+7. **No dynamic parameters** in static site URLs. Astro handles this by default.
+8. **Lowercase only.** Never mixed case.
+9. **Map language equivalents explicitly.** Language switchers, canonical tags, hreflang tags, internal links, and sitemap alternates must use a shared route map so `/en/inventory-management-system/` can correctly pair with a localized URL such as `/fr/logiciel-gestion-stock/` or the equivalent in any other supported language.
 
 **Example:**
 ```
 Good: /en/banana-fusarium-wilt-prevention
+Good: /fr/prevention-fusariose-banane
+Good: /sw/kuzuia-mnyauko-wa-ndizi
 Bad:  /en/article?id=47
 Bad:  /en/About_Our_Research_Into_The_Prevention_Of_Fusarium_Wilt
+Bad:  /fr/banana-fusarium-wilt-prevention
 ```
 
 ---
@@ -166,6 +171,7 @@ Run this checklist for every page before publishing:
 - [ ] Title tag: 50-60 chars, primary keyword at start, unique per page
 - [ ] Meta description: 150-155 chars, two-part structure, includes CTA
 - [ ] URL slug: short, keyword-included, hyphens, no stop words
+- [ ] Multilingual slugs localized for every enabled language, with equivalent routes mapped for switcher, canonical, hreflang, sitemap, and internal links
 
 ### Content
 - [ ] Primary keyword in first 20 words of body
