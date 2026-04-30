@@ -39,6 +39,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use sibling reference `../ecommerce/references/premium-ecommerce-growth-system.md`
+  when checkout recommendations must connect to product-page clarity, cart trust,
+  abandoned-cart recovery, retention, or ecommerce measurement.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
