@@ -44,6 +44,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `references/page-goal-matrix.md` — convert strategy into page-specific audience, goal, proof, CTA, SEO decisions.
 - `references/conversion-sequence-implementation.md` — use when the build must preserve value-proposition clarity, CTA ladders, cluster linking, or launch-stage page states.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
+- `../design-system/references/math-for-web-design.md` — use when implementing pages with fluid type, bounded spacing, intrinsic grids, aspect-ratio media, full-bleed sections, calculated CTA placement, or JS-driven sizing/motion.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

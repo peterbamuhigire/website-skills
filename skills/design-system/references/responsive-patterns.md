@@ -10,6 +10,8 @@ Mobile-first means **designing for 375px first**, then enhancing upward. Every C
 
 **Intrinsic design principle (Every Layout):** Prefer layouts that respond to their **content and container** rather than viewport breakpoints. Use `repeat(auto-fit, minmax())` grids, `flex-wrap` sidebars, and container queries before reaching for `@media`. See `intrinsic-layout.md` for the full layout primitives system, modular scale, and composition approach.
 
+**Math-for-web-design companion:** Use `math-for-web-design.md` when responsive decisions depend on ratios, bounded fluid values, aspect-ratio, rounding, HSL/OKLCH color steps, or JavaScript precision.
+
 ---
 
 ## BREAKPOINT ARCHITECTURE
