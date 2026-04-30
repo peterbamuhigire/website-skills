@@ -23,6 +23,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 2. Route work through sibling skills in the right order using directory-relative names, not a hardcoded install path.
 3. Track outputs from each stage so downstream steps consume the correct artifacts.
 4. Verify the full pipeline before reporting completion or blockers.
+5. For premium, ecommerce, or revenue-critical builds, apply the premium website
+   engine so strategy, acquisition, conversion, measurement, and handoff artifacts are
+   planned before page production starts.
 
 ## Quality standards
 - Preserve the intended build order and artifact handoffs.
@@ -75,6 +78,9 @@ Any gate failure blocks deploy.
 - Use `references/role-based-training-map.md` when onboarding operators or assigning ownership by role.
 - Use `references/governance-policy.md` for repository change rules, safety-review expectations, and deprecation discipline.
 - Use `references/quality-metrics-dashboard-definition.md` when connecting repository evolution to commercial and delivery metrics.
+- Use `references/premium-website-engine-playbook.md` when the project is for a
+  premium client, ecommerce client, high-ticket service business, lead-generation site,
+  or any engagement where the website must operate as a measurable business asset.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.

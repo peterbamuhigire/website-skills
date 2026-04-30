@@ -59,6 +59,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    - Proposals, the closing conversation, objection handling →
      `references/proposal-positioning.md` (principles) and
      `references/premium-proposal-template.md` (document template)
+   - Website-as-business-asset framing, due diligence, asset risks, and premium fee
+     justification → `references/website-asset-value-due-diligence.md`
    - Positioning language, founder story, personal brand →
      `references/positioning-language.md`, `references/founder-story-templates.md`
    - Prior detailed instructions preserved from the previous skill version →
@@ -135,6 +137,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   Authority $2,500; Trust & Conversion $1,800; SEO Foundation $1,500; Messaging
   Clarity $1,200). Use when designing audit landing pages, audit deliverables,
   conversion-to-engagement pathways.
+- `references/website-asset-value-due-diligence.md` — the asset-value and due-diligence
+  lens for explaining premium websites as measurable, transferable commercial systems
+  rather than page builds.
 - `references/information-marketing-assets.md` — how to turn agency expertise into authority assets, lead magnets, paid diagnostics, newsletters, workshops, and ascension offers without drifting into hype.
 - `references/expert-authority-framework.md` — the structural frameworks from
   Brunson's *Expert Secrets*, filtered for our buyer (no hype, no theatre). The

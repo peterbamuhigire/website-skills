@@ -21,9 +21,11 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read the current business context and the concrete task to solve.
 2. Identify the business model and channel reality before recommending page or funnel patterns.
-3. Use only the relevant detailed guidance and references for the request at hand.
-4. Produce the strategy, writing, or framework output this skill is responsible for.
-5. Check the result for clarity, realism, and handoff readiness.
+3. Treat the store as a traffic, product-decision, checkout, retention, and measurement
+   system before recommending isolated page changes.
+4. Use only the relevant detailed guidance and references for the request at hand.
+5. Produce the strategy, writing, or framework output this skill is responsible for.
+6. Check the result for clarity, realism, and handoff readiness.
 
 ## Quality standards
 - Outputs must be specific, usable, and grounded in the available evidence.
@@ -44,6 +46,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/business-model-selection.md` when the task depends on marketplace vs owned-store tradeoffs, fulfilment posture, or retention model.
 - Use `references/acquisition-and-retargeting.md` when traffic, retargeting, or remarketing paths materially affect the recommendation.
+- Use `references/premium-ecommerce-growth-system.md` when designing, auditing, or
+  improving ecommerce product pages, category pages, cart, checkout, retention, or
+  revenue measurement for a premium client.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
