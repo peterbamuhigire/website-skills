@@ -26,6 +26,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 5. For premium, ecommerce, or revenue-critical builds, apply the premium website
    engine so strategy, acquisition, conversion, measurement, and handoff artifacts are
    planned before page production starts.
+6. Before `design-system` and page production on premium or revenue-critical work,
+   load `premium-ui-ux-design` so visual voice, conversion hierarchy, color,
+   imagery, dashboard/proof presentation, and production polish are explicit.
 
 ## Quality standards
 - Preserve the intended build order and artifact handoffs.
@@ -50,9 +53,12 @@ Every project built under this orchestrator must satisfy:
    (`security-gate/SKILL.md`).
 5. **Design quality score** — the rendered-output rubric score is recorded
    and meets the world-class floor (`design-quality-score/SKILL.md`).
-6. **Africa calibration** — performance, trust, and UX patterns align with
+6. **Premium UI/UX gate** — premium, ecommerce, lead-generation, and
+   high-ticket projects pass `premium-ui-ux-design/SKILL.md` before build sign-off
+   and again after visual QA.
+7. **Africa calibration** — performance, trust, and UX patterns align with
    `africa-excellence/SKILL.md` and `deploy/references/africa-calibration.md`.
-7. **Live telemetry** — RUM, error tracking, and analytics are wired per
+8. **Live telemetry** — RUM, error tracking, and analytics are wired per
    `observability/SKILL.md`.
 
 Any gate failure blocks deploy.
@@ -81,6 +87,9 @@ Any gate failure blocks deploy.
 - Use `references/premium-website-engine-playbook.md` when the project is for a
   premium client, ecommerce client, high-ticket service business, lead-generation site,
   or any engagement where the website must operate as a measurable business asset.
+- Use sibling skill `premium-ui-ux-design` for premium visual direction, conversion
+  hierarchy, color/imagery/data presentation, production polish, and the premium
+  website gate.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
@@ -90,7 +99,7 @@ Any gate failure blocks deploy.
   pipeline: `bash .claude/skills/scripts/install-canonical-ci.sh <project-path>`.
 - The sibling gate skills the orchestrator is responsible for invoking:
   `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
-  `design-quality-score`, and `africa-excellence`.
+  `design-quality-score`, `premium-ui-ux-design`, and `africa-excellence`.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.

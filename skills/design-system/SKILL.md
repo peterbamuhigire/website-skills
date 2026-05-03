@@ -21,10 +21,11 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read only the relevant project inputs and preserved guidance before acting.
 2. Audit the existing interface first when a site or product already exists: identify duplicated components, token drift, inconsistent states, and bespoke one-off styling before inventing anything new.
-3. Choose the smallest set of references needed for the current job.
-4. Define the system in layers: primitives, semantic tokens, then component-level tokens and rules.
-5. Produce the implementation, configuration, or guidance this skill owns.
-6. Validate that the result stays compatible with the rest of the repository workflow.
+3. For premium or revenue-critical sites, load `premium-ui-ux-design` before choosing color, type, spacing, imagery, or motion direction.
+4. Choose the smallest set of references needed for the current job.
+5. Define the system in layers: primitives, semantic tokens, then component-level tokens and rules.
+6. Produce the implementation, configuration, or guidance this skill owns.
+7. Validate that the result stays compatible with the rest of the repository workflow.
 
 ## Quality standards
 - Outputs must be implementation-ready and internally consistent.
@@ -32,6 +33,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Avoid host-specific path assumptions so the skill remains portable.
 - The design system must act as a living product, not a one-time style dump: include usage rules, states, and a clear source of truth.
 - Prefer reusable components and documented patterns over page-specific bespoke styling.
+- Premium design systems must define visual voice, dominant/subordinate/accent color logic, typography roles, imagery rules, data/proof presentation, component states, and responsive production rules.
 
 ## Anti-patterns
 - Do not hardcode `.claude/skills` or another single install path.
@@ -44,6 +46,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/math-for-web-design.md` when sizing, spacing, typography, grids, media ratios, color ramps, or motion timing should be derived from proportion, `clamp()`, `calc()`, `minmax()`, aspect-ratio, or rounding logic.
+- Use sibling skill `premium-ui-ux-design` when perceived quality, beauty, conversion, or high-ticket trust is part of the job.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 - Prioritize `references/ux-quality-checklist.md` when validating whether the system is coherent enough to ship.

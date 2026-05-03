@@ -50,8 +50,10 @@ The scoring is:
 5. Run `scripts/design-quality-score.sh` which aggregates the operator
    scores from `reports/design-quality/<template>.md` and produces the
    overall pass/fail for the pipeline.
-6. File the per-template reports. Total score goes in the scorecard.
-7. If any category scores below 8, the template does not ship; remediate
+6. For premium, ecommerce, lead-generation, or high-ticket templates, run the
+   sibling `premium-ui-ux-design` gate and attach the premium score table.
+7. File the per-template reports. Total score goes in the scorecard.
+8. If any category scores below 8, the template does not ship; remediate
    and re-score.
 
 ## Required inputs
@@ -103,6 +105,8 @@ The scoring is:
 - `references/score-calibration.md` — how two operators calibrate
   scoring to stay within one point per category.
 - `references/report-template.md` — the per-template report format.
+- `../premium-ui-ux-design/SKILL.md` — premium website gate for perceived
+  value, conversion clarity, visual polish, and production fit.
 
 ## Notes
 

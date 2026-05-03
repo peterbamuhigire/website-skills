@@ -73,6 +73,8 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 - `i18n`: language routing, multilingual structure, and shared versus locale-specific rules
 - `design-reference`: extracts design decisions from reference websites
 - `sector-strategies`: industry-specific trust patterns and content priorities
+- `premium-ui-ux-design`: premium visual direction, conversion hierarchy, color,
+  imagery, data/proof presentation, production polish, and premium website gate
 - `design-system`: typography, palette, motion, spacing, and visual-system decisions
 - `photo-manager`: image cataloging, naming, dimensions, and logo selection
 - `page-builder`: converts content and design decisions into pages and reusable UI
@@ -89,6 +91,9 @@ pipeline at `templates/ci/website.yml`. These skills own the blocking gates:
 - `security-gate` (Phase 10): dependency audit, headers, SRI, secrets, supply chain, compliance
 - `drift-check` (Phase 11): dead links, deprecated references, dated framing, banned terms, 500-line rule
 - `design-quality-score` (Phase 11): 7-category rubric + slop-scan, advisory on PR, blocking on main
+- `premium-ui-ux-design`: premium, ecommerce, lead-generation, and high-ticket
+  websites must pass the premium UI/UX gate before build sign-off and after
+  visual QA
 
 Canonical commands (runnable from any client project with the skills submodule):
 
@@ -141,6 +146,8 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 - `observability`: live telemetry contract for every shipped site
 - `experimentation`: structured learning loop on retainer engagements
 - `design-quality-score`: rendered-output quality gate and rubric
+- `premium-ui-ux-design`: premium website quality gate and book-derived visual
+  design playbook
 - `africa-excellence`: Africa-realistic pattern layer
 
 ## Support Skills
