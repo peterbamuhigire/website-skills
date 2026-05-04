@@ -343,3 +343,43 @@ A pyramid where each level must be satisfied before the next matters:
 - Every non-clickable element must look static (no underlines, no button styling)
 - Interactive colour must be reserved exclusively for interactive elements
 - Primary action = filled/solid; secondary = outlined; tertiary = text-only link
+
+---
+
+## Working-memory laws (added 2026-05-04 from Branson)
+
+Source: `book-extractions/branson-ux-ui-design-extraction.md` Section 5.
+
+### Miller's 7 ± 2 (1956)
+Working memory holds about 7 chunks (often less), for ~30 seconds. Practice can extend; interruption shrinks fast.
+
+**Web implications:**
+- Primary navigation: ≤ 7 items
+- Visible form fields per step: ≤ 7
+- Phone-number-style strings chunked at 3-3-4 or 4-3
+
+### Sweller's cognitive load theory (1988, 1994)
+The load on working memory at a moment in time. Cascading menus and long flows risk overload.
+
+**Design rule:** plot working-memory load over time. Whenever it reaches zero = task closure. Organize tasks to drive frequent closure. Break complex tasks into smaller activities, never one giant stacked structure.
+
+### Stacking
+When a task interrupts another, current context goes on a memory "stack." Stacks are small, short, and defective. After enough interruption the user forgets what they were doing.
+
+**Design rule:** make every step independently completable. Save state automatically. Surface a clear "back to where you were" affordance after any interruption.
+
+---
+
+## Three Paradigms of HCI design (added 2026-05-04 from Branson)
+
+Source: `book-extractions/branson-ux-ui-design-extraction.md` Section 1 (originally Harrison, Tatar, Sengers 2007).
+
+When stakeholders disagree about "good design," they're often working in different paradigms.
+
+1. **Engineering / Building** — productivity, eliminate errors, summative metrics. Dominates in back-office tools.
+2. **Human Information Processing (HIP)** — fit machine to cognitive task; Miller's 7 ± 2 lives here. Dominates in information density.
+3. **Design Thinking / Phenomenological** — emotional, social, situated experience. Dominates in landing/brand/hero work.
+
+**Cockpit-voice example (one paragraph):** the same problem of pilot-warning voices analyzed three ways: (1) "use a female voice to cut through male-dominated comms" — engineering; (2) "female voices effectively differentiate signal from noise; familiar voices improve performance further" — HIP; (3) "the chosen voice's sultry tone reinforced cockpit-as-male, became inappropriate as women became pilots" — design thinking.
+
+**Rule:** all three paradigms are complementary. A premium website typically requires all three applied to different surfaces.
