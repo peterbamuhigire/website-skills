@@ -166,3 +166,45 @@ agreement is the calibration event; document it in
 A score of 8 in every category is the minimum to ship. There is no
 "average of 8 across categories" — the overall is the minimum score.
 This prevents one strong category from masking one weak one.
+
+---
+
+## Category 8: UX Maturity (Process — added 2026-05-04 from Synechron Enterprise UX)
+
+**Important:** This category is *additive*. It does not retroactively fail templates scored under the original 7-category rubric. Apply going forward.
+
+### Definition
+Scores the process maturity behind the deliverable, not the rendered output. A pretty page produced without research, personas, or stakeholder discovery may pass the visual rubric but fail the maturity gate — and therefore cannot ship under premium-pricing claims.
+
+### Reference
+See `references/enterprise-ux-maturity-checklist.md` for the full 5-level model and activity-by-level matrix.
+
+### Scoring criteria
+
+| Score | Maturity level reached | Premium-launch eligibility |
+|---|---|---|
+| 1–3 | Level 0–1 (No design / Styling only) | **Disqualified** — premium claims rejected |
+| 4–6 | Level 2 (Style & Color / Problem Solving) | Conditional — only for non-premium tiers |
+| 7 | Level 3 partial — some required activities missing | Eligible only after closing gaps |
+| 8–9 | **Level 3 (UX Design) — all required activities documented** | **Premium-eligible** |
+| 10 | Level 4 (Experience Design) — innovation evidence | Top-tier eligible |
+
+### Pass-fail gate
+A premium-priced project (≥ $20k) must score **≥ 8** on this category. No score on the visual rubric can compensate for failure here.
+
+### Evidence required for ≥ 8
+
+Documented presence of all of:
+- Problem definition + business objective
+- Stakeholder discussions (interview notes)
+- Success criteria (signed)
+- User research (qualitative + quantitative)
+- Competitor analysis (matrix per `levy-competitive-matrix.md`)
+- Personas (named, with goals + pain points)
+- User journeys (per primary persona)
+- Information architecture (sitemap + navigation flow)
+- Wireframes (low-fi + high-fi)
+- Clickable prototype (per crucial user scenarios)
+- Heuristic evaluation report
+- Visual design mockups
+- ADA / Section 508 compliance verification
