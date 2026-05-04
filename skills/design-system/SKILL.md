@@ -60,3 +60,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   3. states and accessibility expectations
   4. source-of-truth location for future contributors
 
+
+## Dashboard and data-viz coverage
+
+For projects that include dashboards (executive, operational, public-facing), additional rules apply. See `references/enterprise-data-viz-rules.md` — covers chart-type selection, pre-attentive visual attributes, and the no-3D / no-shadow rules. Premium-priced dashboards must comply.

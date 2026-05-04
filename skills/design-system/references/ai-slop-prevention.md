@@ -110,3 +110,43 @@ This reference is a quality gate. Check it:
 - During `page-builder` — when assembling sections and writing copy
 - During `cro-audit` — as part of the visual quality assessment
 - Before `deploy` — as a final pre-launch check in `ux-quality-checklist.md`
+
+---
+
+## Enterprise anti-patterns (added 2026-05-04 from Synechron Enterprise UX)
+
+Source: `enterprise-ux-financial-insurance-extraction.md` Part I (diagnosis of why most enterprise apps fail).
+
+These five patterns appear most often in B2B / SaaS / dashboard work. Detect early and fail loudly.
+
+### 1. Feature overload
+**Symptom:** every page is a wall of buttons, fields, tabs, dropdowns. The user can't tell what the primary task is.
+**Detection cue:** > 7 primary actions visible above the fold on the main task page.
+**Fix:** Identify the top 3 user goals. Surface those. Demote everything else to secondary navigation or settings.
+
+### 2. Uninformed design
+**Symptom:** the design was made by product owners + developers with zero user research.
+**Detection cue:** no personas, no user interviews, no journey maps in project artifacts.
+**Fix:** stop. Run discovery (see `enterprise-ux-maturity-checklist.md` Level 3 activities).
+
+### 3. Inconsistent
+**Symptom:** different fonts, different colors, different button styles across screens. No shared component vocabulary.
+**Detection cue:** ≥ 3 button styles for "primary" action across the product.
+**Fix:** establish design tokens; build a component library; refactor screens to use it.
+
+### 4. Old-fashioned look
+**Symptom:** decisions driven by the technology stack ("our framework only does X"), not by modern design language.
+**Detection cue:** flat 1990s tables, no whitespace, default-OS controls only, no responsive design.
+**Fix:** adopt a modern token system (typography, spacing, color) and a responsive layout grid.
+
+### 5. Cluttered information
+**Symptom:** content & info screens with no hierarchy strategy. Walls of text, dense tables, no scannable structure.
+**Detection cue:** average page word count > 800 with no headings, lists, or visual breaks.
+**Fix:** apply content hierarchy — H2 every 200–300 words, lists for ≥ 3 parallel items, callout boxes for the "one thing to remember."
+
+### Audit checklist
+- [ ] No page has > 7 primary actions above the fold
+- [ ] Every project has personas + at least one user interview transcript on file
+- [ ] Component library defines exactly 1 primary, 1 secondary, 1 tertiary button
+- [ ] Layout is responsive on the 3 most-trafficked breakpoints
+- [ ] Average paragraph ≤ 4 lines; hierarchy headings every 200–300 words

@@ -241,3 +241,46 @@ Run in order. Each check builds on the previous.
 - [ ] **Contribution rule exists** — new components have an explicit reason they cannot be solved by extending an existing one
 - [ ] **Ownership is clear** — someone owns design-system updates, documentation updates, and downstream page adoption
 - [ ] **System is treated as ongoing** — maintenance, adoption, and drift checks exist instead of assuming “finished forever”
+
+---
+
+## First-impression and orientation (added 2026-05-04 from Deacon + Fekeshazi)
+
+Sources: `deacon-ux-ui-strategy-extraction.md` Section 4 (UI Design Considerations); `fekeshazi-pm-ux-guide-extraction.md` Section 1.2 (5-10 minute rule).
+
+### The 5–10 minute rule (Fekeshazi)
+At first use, you have a maximum of 5–10 minutes to give users answers about how the app works and how they benefit. **Tutorials are futile.** The interface itself must explain.
+
+**Audit:** can a first-time user accomplish the primary goal within 5 minutes without watching a tutorial or reading a help page?
+
+### Consistency (Deacon)
+- Colors, borders, font size, style, background images, effects — match across pages
+- Doing similar tasks in similar/familiar ways
+- Logo always returns to home
+- Header, footer, body structure consistent across all pages
+
+### Responsiveness (Deacon)
+- Confirm submissions explicitly ("Saved", not silent success)
+- Loading indicators for any operation > 1 second
+- Never leave the user with a blank page or no path back
+- Loading state messages: progress percentage if known, indeterminate spinner if not
+
+### Familiar words (Deacon)
+- Use sign-up, register, login — not invented vocabulary
+- "Submit" or "Send" — not "Initiate transmission"
+- Industry-standard terms reduce cognitive load on first visit
+
+### Streaming (Deacon)
+- Every page contains a link to contact information
+- Throw away unwanted content; clutter doesn't improve the interface
+- Sticky/scroll-aware footer with key links
+
+### Pre-launch checklist
+- [ ] First-time user can reach primary goal in ≤ 5 minutes without coaching
+- [ ] No tutorials required (no overlay tour, no "5 things to know" modal)
+- [ ] Color/font/spacing consistent across all primary templates
+- [ ] Logo links home from every page
+- [ ] Every form submission has explicit success/failure feedback
+- [ ] Loading states present for all > 1s operations
+- [ ] Standard vocabulary used throughout (sign-up / login / submit, not invented terms)
+- [ ] Contact info reachable from every page
