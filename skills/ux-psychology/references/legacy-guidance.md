@@ -473,3 +473,75 @@ Grounded in Krug (2014) *Don't Make Me Think*, 3rd ed. Full reference: `book-ext
 - Section 8 Tidwell patterns govern multi-step flows, navigation stability, and form behaviour — cross-reference with `form-ux-design` and `page-builder`.
 - Section 9 Laws of UX: apply the Quick Reference table as a checklist before finalising any page layout.
 - Section 10 Krug facts: apply as a reality check before any copy or layout is marked complete.
+
+---
+
+## Working memory and cognitive load (added 2026-05-04 from Branson)
+
+Source: `branson-ux-ui-design-extraction.md` Section 5 (Human Memory Limitations).
+
+### Capacity rule (Miller, 1956)
+- Working memory: **7 ± 2 chunks**, often less
+- Span: ~30 seconds, extendable by repetition; intervening activities ("proactive interference") shrink it fast
+- A "chunk" is one gestalt — a word, not a phoneme; a phrase, not a letter
+
+### Web design implications
+- Primary navigation: ≤ 7 items (chunk further if more needed)
+- Form fields visible at once: ≤ 7 (split long forms into steps)
+- Numeric strings (phone, account): chunk at 3-3-4 or 4-3 patterns
+- Avoid stacking: don't ask the user to remember earlier-page values mid-flow
+
+### The chunking trick
+- `001010110111000` (15 digits) → ungroupable, fails capacity
+- `001 010 110 111 000` (5 chunks of 3) → fits
+- `NTHEDOGSAWTHECATRU` → move N to end → `THE DOG SAW THE CAT RUN` (1 sentence chunk)
+
+### Stacking and cognitive load
+**Stacking:** when a new task interrupts the current task, the user puts the current context on a memory "stack." Stacks are small, short, and defective — sufficient interruption → user forgets what they were doing.
+
+**Cognitive load (Sweller):** the load on working memory at a moment in time. Cascading menus and long Web flows put users at risk of overload.
+
+**Design rule:** break large complex tasks into a series of smaller activities. Plot working-memory load over time; whenever load reaches zero = task closure. Organize tasks to drive frequent closure.
+
+### Recognition over recall
+Computers are better at memory; humans at pattern recognition. Let the user **choose from a list** rather than **recall from memory**. Best for initial / infrequent use. For experienced users who memorize commands, GUI selection becomes slower than typing — provide keyboard shortcuts (Ctrl-S etc.) as physical-affordance bypasses.
+
+---
+
+## Four-stage cognitive affordance discipline (added 2026-05-04 from Branson)
+
+Source: `branson-ux-ui-design-extraction.md` Section 6 (Cognitive Affordance).
+
+For every important interactive element, walk through these four stages. Failure at any stage breaks the chain.
+
+### Stage 1: Presence
+Does the affordance exist at all?
+- Show which UI object to manipulate
+- Show how to manipulate it
+- Indicate active defaults, system state, modes
+- Remind about steps the user might forget
+- Avoid "clueless consent" (user proceeds without understanding consequences)
+
+### Stage 2: Visibility / Perceivability
+Can it be seen at all?
+- Is it actually rendered?
+- Is it occluded by another item?
+- Is it small or peripheral or lost in clutter?
+
+**Anti-pattern (must fail design review):** "Where the hell is the sign in?" — small, indistinct sign-in box mixed with other items in the far top-right corner.
+
+### Stage 3: Recognizability
+Once visible, can it be detected/identified without searching?
+- Location within central focus of attention
+- Contrast, size, layout complexity
+- Separation from background and other UI clutter
+
+**Anti-pattern:** status lines / message lines at the very top or very bottom — notoriously unnoticed. Pop-ups near the cursor are far more recognizable.
+
+### Stage 4: Intelligibility
+Once recognized, is the *content* understandable?
+- Legibility (font, size, weight, color, contrast) — *being readable*, not whether words are meaningful
+- Meaning — does the user understand once they read?
+
+### Use as a design-review heuristic
+Walk every primary CTA on a template through Presence → Visibility → Recognizability → Intelligibility. Any missing stage = redesign required before launch.
