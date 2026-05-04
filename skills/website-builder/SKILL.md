@@ -23,10 +23,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 2. Route work through sibling skills in the right order using directory-relative names, not a hardcoded install path.
 3. Track outputs from each stage so downstream steps consume the correct artifacts.
 4. Verify the full pipeline before reporting completion or blockers.
-5. For premium, ecommerce, or revenue-critical builds, apply the premium website
+5. For every commercial build, apply `premium-website-product` before page production
+   so the site is treated as a premium market asset: strategy, content, SEO, UX,
+   conversion, technical quality, launch, measurement, and handoff are planned together.
+6. For premium, ecommerce, or revenue-critical builds, apply the premium website
    engine so strategy, acquisition, conversion, measurement, and handoff artifacts are
    planned before page production starts.
-6. Before `design-system` and page production on premium or revenue-critical work,
+7. Before `design-system` and page production on premium or revenue-critical work,
    load `premium-ui-ux-design` so visual voice, conversion hierarchy, color,
    imagery, dashboard/proof presentation, and production polish are explicit.
 
@@ -56,9 +59,12 @@ Every project built under this orchestrator must satisfy:
 6. **Premium UI/UX gate** — premium, ecommerce, lead-generation, and
    high-ticket projects pass `premium-ui-ux-design/SKILL.md` before build sign-off
    and again after visual QA.
-7. **Africa calibration** — performance, trust, and UX patterns align with
+7. **Premium website product gate** - commercial websites pass
+   `premium-website-product/SKILL.md` so content, SEO, conversion, launch,
+   handover, stack philosophy, and agency proof are not bolted on after design.
+8. **Africa calibration** — performance, trust, and UX patterns align with
    `africa-excellence/SKILL.md` and `deploy/references/africa-calibration.md`.
-8. **Live telemetry** — RUM, error tracking, and analytics are wired per
+9. **Live telemetry** — RUM, error tracking, and analytics are wired per
    `observability/SKILL.md`.
 
 Any gate failure blocks deploy.
@@ -90,6 +96,9 @@ Any gate failure blocks deploy.
 - Use sibling skill `premium-ui-ux-design` for premium visual direction, conversion
   hierarchy, color/imagery/data presentation, production polish, and the premium
   website gate.
+- Use sibling skill `premium-website-product` for premium website service packaging,
+  owner-facing content/SEO strategy, stack philosophy, launch campaign discipline,
+  handover, measurement, and agency proof.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
@@ -99,7 +108,8 @@ Any gate failure blocks deploy.
   pipeline: `bash .claude/skills/scripts/install-canonical-ci.sh <project-path>`.
 - The sibling gate skills the orchestrator is responsible for invoking:
   `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
-  `design-quality-score`, `premium-ui-ux-design`, and `africa-excellence`.
+  `design-quality-score`, `premium-website-product`, `premium-ui-ux-design`, and
+  `africa-excellence`.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.

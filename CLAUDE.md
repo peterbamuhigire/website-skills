@@ -16,6 +16,8 @@ The repository now operates as a portable agency system with explicit layers for
 - launch and rollback operations
 - governance and operator onboarding
 
+Premium is the default commercial standard for this repository. Website work must be framed and delivered as a credible business asset: strategy, world-class content, SEO/GEO, premium UX, conversion architecture, technical quality, measurement, handover, and post-launch improvement. If a brief cannot support that standard, the correct response is paid discovery, a smaller premium scope, or no-bid/no-build.
+
 ## Repo Model
 
 - `SKILL.md` is the concise execution layer
@@ -47,6 +49,8 @@ skills/page-builder/SKILL.md       <- Content to pages and components
 skills/seo/SKILL.md                <- Search-facing implementation
 skills/blog-writer/SKILL.md        <- Blog production
 skills/deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
+skills/premium-website-product/    <- Premium website-as-product strategy, content, SEO, stack, launch, and agency proof gate
+skills/premium-ui-ux-design/       <- Premium website UI/UX and visual quality gate
 ```
 
 ### Enforcement Skills (Phase 10 — added 2026-04-16)

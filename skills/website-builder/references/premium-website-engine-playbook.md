@@ -9,6 +9,7 @@ must be treated as a commercial operating system, not a set of pages.
 A premium website system combines:
 
 - Strategy: audience, offer, positioning, proof, and commercial goal.
+- Content: search intent, buyer questions, proof, CTA logic, language, and authority assets.
 - Acquisition: the traffic sources and content assets that bring qualified visitors.
 - Conversion: the page journeys that turn attention into leads, sales, bookings, or list
   growth.
@@ -31,11 +32,17 @@ Before build:
   partnership opportunities ranked by fit.
 - Conversion journey map: first visit, exploration, proof, action, post-action follow-up,
   and recovery path.
+- Content and SEO map: page role, search intent, buyer question, proof burden, CTA,
+  internal links, schema, and analytics event for every money page.
+- Stack philosophy note: why the selected stack fits the client's content workflow,
+  performance needs, security risk, integrations, maintenance capacity, and ownership.
 
 During build:
 
 - Evidence-backed messaging: copy tied to interviews, support questions, search intent,
   reviews, sales objections, or prior analytics.
+- World-class content: pages written to rank, persuade, reassure, and convert, not only
+  to fill a layout.
 - Proof architecture: testimonials, logos, case studies, reviews, guarantees, policy
   clarity, credentials, and named outcomes placed where doubt appears.
 - Analytics event map: page views, CTA clicks, forms, checkout steps, downloads, video,
@@ -51,6 +58,8 @@ After launch:
   and search accounts; admin documentation; rollback and maintenance notes.
 - Retainer recommendation: optimization, analytics review, content growth, campaign
   support, conversion testing, or maintenance based on the business model.
+- Agency proof pack: performance/accessibility/SEO/security evidence, screenshots,
+  launch report, testimonial request, and case-study notes where client permission allows it.
 
 ## Strategy Questions
 
@@ -94,6 +103,45 @@ Each major page must:
 For ecommerce, the conversion system must include product discovery, product detail,
 cart, checkout, confirmation, abandoned-cart recovery, and post-purchase follow-up.
 
+## Content As Market Asset
+
+Premium website content must do three jobs at once:
+
+- Help the owner's ideal buyer understand, trust, compare, and act.
+- Help search engines and AI answer systems associate the owner with the right category,
+  topics, locations, expertise, products, and proof.
+- Help the developer's reputation by making the work visibly strategic, polished,
+  measured, and hard to compare with a cheap page build.
+
+Every primary page should define:
+
+- primary search intent and secondary questions
+- buyer hesitation and required proof
+- primary CTA and lower-commitment fallback
+- schema type and internal-link targets
+- conversion event and post-action follow-up
+- owner-facing business metric the page should influence
+
+Do not accept placeholder content on a premium build. If content is missing, create a
+content-production scope, paid discovery, or a launch-safe minimum with a documented
+post-launch content backlog.
+
+## Stack Philosophy
+
+The technology stack is part of the premium product. Explain it in client-value terms:
+
+- speed and Core Web Vitals
+- SEO crawlability and structured data
+- security and reduced attack surface
+- maintainability and content workflow
+- ownership, portability, backups, and rollback
+- integration needs: forms, CRM, payments, bookings, email, analytics, ERP, POS, or
+  inventory where relevant
+
+Static-first or hybrid builds are preferred for marketing sites where they improve speed,
+security, and maintenance. CMS, server-rendered, WordPress, ecommerce, or custom app
+architectures are chosen only when the client's operating model requires them.
+
 ## Website Asset Value
 
 Premium clients pay more when the work improves a business asset. Build for transferability:
@@ -113,6 +161,8 @@ Treat these as blockers or paid-discovery findings:
 - No analytics, no conversion data, and no willingness to install measurement.
 - Traffic plan depends on vague virality or "we will do SEO later."
 - Product or service pages omit price logic, delivery terms, proof, or risk reversal.
+- Content is generic, thin, duplicated, unsearchable, or disconnected from the sales
+  process.
 - Checkout has surprise costs, account-forcing, unclear returns, or mobile friction.
 - The client does not own core accounts.
 - The project has no post-launch optimization window.

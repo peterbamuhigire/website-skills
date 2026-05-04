@@ -9,6 +9,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Use when
 - The task matches this domain: Copywriting and content creation standards for website pages, blog posts, and all written copy. Covers headlines, ledes, readability, niche vocabulary, scannable formatting, and persuasive structure. Cross-cutting skill — apply whenever generating or editing any website text.
 - The work needs a quality gate or standard applied across other outputs.
+- Website content must act as a premium marketing tool: it should help the owner rank, persuade, reassure, and convert while making the developer's work look commercially strategic.
 
 ## Do not use when
 - The task is unrelated to this standard or quality lens.
@@ -21,13 +22,15 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read the artifact and the decision context before applying rules.
 2. Use only the parts of the preserved guidance that matter to the current task.
-3. Review or revise the work using this skill as a focused quality lens.
-4. Return actionable changes or acceptance criteria instead of abstract theory.
+3. For premium website work, align with `premium-website-product` so content covers search intent, buyer questions, proof, CTA, conversion path, and owner/developer credibility.
+4. Review or revise the work using this skill as a focused quality lens.
+5. Return actionable changes or acceptance criteria instead of abstract theory.
 
 ## Quality standards
 - Recommendations must be concrete enough to apply immediately.
 - Changes should improve consistency, usability, or credibility without flattening the brand.
 - The standard should support downstream implementation rather than slow it down.
+- Each page should have a job: rank, educate, compare, prove, convert, reassure, onboard, or retain. If the job is unclear, do not polish the copy; fix the page strategy.
 
 ## Anti-patterns
 - Do not apply every rule mechanically when only a subset is relevant.
@@ -41,6 +44,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use `references/message-hierarchy-framework.md` when turning strategy into page-level messaging, proof order, and CTA structure.
 - Use `references/reader-empathy-and-voc.md` when the quality problem is generic language, weak customer understanding, poor objection coverage, or flat headlines and CTAs.
+- Use `../premium-website-product/references/premium-website-market-asset-gate.md` when content must support premium positioning, SEO, conversion, proof, launch, and agency reputation.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

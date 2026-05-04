@@ -21,8 +21,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read only the relevant project inputs and preserved guidance before acting.
 2. Choose the smallest set of references needed for the current job.
-3. Produce the implementation, configuration, or guidance this skill owns.
-4. Validate that the result stays compatible with the rest of the repository workflow.
+3. On commercial websites, preserve the `premium-website-product` brief: page goal, search intent, proof, CTA, schema, analytics event, and developer-quality evidence must survive implementation.
+4. Produce the implementation, configuration, or guidance this skill owns.
+5. Validate that the result stays compatible with the rest of the repository workflow.
 
 ## Quality standards
 - Outputs must be implementation-ready and internally consistent.
@@ -46,6 +47,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `../website-builder/references/premium-website-engine-playbook.md` — use when page
   production must preserve the premium strategy, acquisition, conversion, measurement,
   and handoff artifacts for high-value clients.
+- `../premium-website-product/references/premium-website-market-asset-gate.md` - use when page production must preserve premium content, SEO, UX, stack, launch, and agency proof requirements.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - `../design-system/references/math-for-web-design.md` — use when implementing pages with fluid type, bounded spacing, intrinsic grids, aspect-ratio media, full-bleed sections, calculated CTA placement, or JS-driven sizing/motion.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.

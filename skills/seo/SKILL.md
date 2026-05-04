@@ -9,6 +9,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Use when
 - The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers both traditional SEO and Generative Engine Optimization (GEO) for AI platforms. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps (sitemap-en.xml, sitemap-fr.xml, sitemap-sw.xml) and SEO audit report. Run after page-builder, before deploy.
 - The user needs an implementation-facing skill rather than a general discussion.
+- The website content must work as a world-class marketing asset for the owner and as proof of premium website-development quality for the builder.
 
 ## Do not use when
 - The prerequisite upstream context is missing and the task is not yet execution-ready.
@@ -22,7 +23,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 1. Read only the relevant project inputs and preserved guidance before acting.
 2. Choose the smallest set of references needed for the current job.
 3. Produce the implementation, configuration, or guidance this skill owns.
-4. Validate that the result stays compatible with the rest of the repository workflow.
+4. For premium or revenue-critical websites, align with `premium-website-product` so SEO is connected to buyer intent, authority content, conversion, launch distribution, and measurement.
+5. Validate that the result stays compatible with the rest of the repository workflow.
 
 ## Quality standards
 - Outputs must be implementation-ready and internally consistent.
@@ -30,6 +32,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Avoid host-specific path assumptions so the skill remains portable.
 - Every enabled language must have SEO slugs written in that language, based on that language's search intent and keyword vocabulary. English slugs are not acceptable defaults for French, Kiswahili, or any other non-English version.
 - Canonical URLs, internal links, hreflang tags, Open Graph URLs, and sitemap alternates must all use the same localized route map so search engines see clean equivalent URLs per language.
+- Every money page must have a search intent, proof burden, CTA, internal-link target, schema requirement, and analytics event; metadata alone is not acceptable SEO.
 
 ## Anti-patterns
 - Do not hardcode `.claude/skills` or another single install path.
@@ -81,6 +84,7 @@ The `llms.txt` and `llms-full.txt` files must be regenerated on every content ch
 
 ## References
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
+- `../premium-website-product/references/premium-website-market-asset-gate.md` - use when SEO must support premium website positioning, content authority, launch distribution, and agency proof.
 - `references/analytics-event-map.md` — minimum instrumentation for every site: event taxonomy, conversion goals, UTM convention, attribution model, consent, pre-launch checklist.
 - `references/seo-topic-and-intent-map.md` — align search intent with page roles, proof burdens, CTA posture.
 - `references/conversion-intent-and-launch-seo.md` — use when SEO work must support content clusters, launch windows, conversion-aware metadata, or state changes between prelaunch, open, and closed offers.

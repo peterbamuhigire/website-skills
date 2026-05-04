@@ -4,6 +4,7 @@
 
 - A premium website earns trust before it asks for action.
 - Beauty is not decoration; it should improve comprehension, confidence, desire, and conversion.
+- Simplicity is not emptiness. Premium simplicity removes effort while preserving the proof a serious buyer needs.
 - The first viewport must make the brand or offer impossible to miss while leaving a hint of the next section visible.
 - The page should answer the buyer's next question in order: what is this, why should I care, can I trust it, what do I do next?
 - The visual voice must fit the economics of the offer. A legal, healthcare, or enterprise site should feel controlled and credible; a hospitality, product, or portfolio site can carry more sensory richness.
@@ -50,6 +51,31 @@
 - Pricing and packages must be scannable and honest.
 - Testimonials and case studies should include enough context to be credible.
 - Trust signals belong near decisions, not in a disconnected logo strip only.
+
+## Website Packaging And Value Perception
+
+The website's packaging is the sum of what a visitor experiences before they decide
+whether the business is worth their time: first viewport, copy precision, visual rhythm,
+image quality, proof placement, interaction polish, page speed, and the confidence of the
+next step.
+
+- Use the first viewport as the product label: category, promise, proof, and action.
+- Use service/product pages as the packaging back panel: inclusions, process, outcomes,
+  limitations, comparison, pricing logic, and risk reduction.
+- Use case studies, reviews, diagnostics, and reports as proof seals.
+- Use performance, accessibility, schema, and security as hidden quality signals that
+  protect premium perception when buyers inspect deeper.
+- Avoid discount-heavy, generic, or visually noisy pages when the goal is premium trust.
+
+## Usability As Premium Quality
+
+- Remove choices that do not help the next decision.
+- Put advanced detail behind progressive disclosure, tabs, accordions, comparison tables,
+  downloads, or support pages when it would slow the main path.
+- Write labels in the user's language, not internal team language.
+- Keep repeated patterns consistent so the site feels learned after one page.
+- Treat mobile thumb reach, tap target size, loading feedback, form errors, and success
+  messages as premium moments.
 
 ## Data, Proof, And Dashboards
 

@@ -11,6 +11,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - A website must look premium enough to justify high-ticket pricing, trust, or serious commercial attention.
 - Building lead-generation, ecommerce, product, portfolio, SaaS marketing, hospitality, education, healthcare, nonprofit, or enterprise websites.
 - The site risks looking generic, templated, over-decorated, slow, hard to scan, or visually cheap.
+- The website must make the owner's offer feel more valuable while also acting as proof of the developer's premium craft.
 
 ## Required inputs
 
@@ -21,10 +22,11 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 1. Define the website's business job: trust, conversion, sales support, application, booking, donation, product education, or authority.
 2. Pick the visual voice that fits the buyer and offer: operational, editorial, luxury minimal, consumer polished, institutional, or local-premium.
-3. Build hierarchy from the conversion path before styling sections.
-4. Create the design system using the premium playbook: visual principles, color, type, spacing, imagery, motion, charts/tables, and production polish.
-5. Apply the premium website gate before page production and again after visual QA.
-6. Record evidence in the project scorecard and design-quality report.
+3. Load `premium-website-product` when the brief needs premium positioning, content, SEO, stack, or agency proof before styling begins.
+4. Build hierarchy from the conversion path before styling sections.
+5. Create the design system using the premium playbook: visual principles, color, type, spacing, imagery, motion, charts/tables, and production polish.
+6. Apply the premium website gate before page production and again after visual QA.
+7. Record evidence in the project scorecard and design-quality report.
 
 ## Quality standards
 
@@ -34,6 +36,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Color, typography, spacing, and motion are tokenized and commercially appropriate.
 - Forms, pricing, service pages, product pages, and contact flows reduce anxiety and make the next step obvious.
 - Data, testimonials, case studies, stats, and comparisons are presented with accurate and readable visual hierarchy.
+- Simplicity is treated as premium: navigation, forms, copy blocks, state changes, and mobile flows remove buyer effort without hiding necessary proof.
 - Every primary template scores at least 8/10 on the premium UI/UX gate and design-quality-score rubric.
 
 ## Anti-patterns
@@ -51,4 +54,5 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 - `references/premium-website-ui-ux-playbook.md` - book-derived website design rules.
 - `references/premium-website-gate.md` - scoring and blocking defects.
+- `../premium-website-product/references/premium-website-market-asset-gate.md` - website-as-premium-product, content, SEO, launch, stack, and agency proof gate.
 - `references/source-register.md` - local EPUB sources used to build this skill.
