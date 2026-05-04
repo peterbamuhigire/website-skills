@@ -798,6 +798,30 @@ Measure → Analyze → Hypothesize → Test → Implement → Repeat
 - [ ] Uptime monitoring configured
 - [ ] Backup system in place and tested
 
+
+## World-class UX foundations (book-derived, added 2026-05-04)
+
+Five UX/UI book extractions are now the upstream source for design decisions on premium projects. Canonical location: `book-extractions/`.
+
+### The four cross-cutting rules
+
+1. **Validated user research is non-negotiable** (Levy). No "Field of Dreams" launches — confront target customers with an MVP/landing page before scaling. Source: `book-extractions/levy-ux-strategy-extraction.md`.
+
+2. **All 5 outcomes must hit, not 4 of 5** (Synechron Enterprise UX). Useful + Easy + Efficient + Pleasing + Accessible. One No = no premium launch. Source: `book-extractions/enterprise-ux-financial-insurance-extraction.md`.
+
+3. **Recognition over recall + 4-stage cognitive affordance** (Branson). Show, don't make users remember. Every interactive element must pass Presence → Visibility → Recognizability → Intelligibility. Source: `book-extractions/branson-ux-ui-design-extraction.md`.
+
+4. **Design is ongoing, not a project** (Fekeshazi). Plan for continuous design alongside continuous dev. A dev team without a design team is a few bricks short of a load. Source: `book-extractions/fekeshazi-pm-ux-guide-extraction.md`.
+
+### Pointer to the engine's skills
+
+The skills that operationalize these rules:
+- `skills/premium-ui-ux-design/` — Levy 4 tenets, 5 outcomes, PM rules
+- `skills/ux-psychology/` — Three Paradigms, working memory, 4-stage affordance, 3 levels of UX scope
+- `skills/design-quality-score/` — UX Maturity 5-level checklist as 8th rubric category
+- `skills/design-reference/` — Levy 19-column competitive matrix
+- `skills/design-system/` — enterprise data-viz rules, first-impression checklist, enterprise anti-patterns
+
 ---
 
 This document serves as a reference for all website projects. Reference these guidelines when making design decisions, optimizing for performance, ensuring accessibility, or planning content strategy.
