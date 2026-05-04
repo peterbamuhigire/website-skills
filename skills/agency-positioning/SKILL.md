@@ -18,6 +18,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Onboarding a new team member on how the agency positions, sells, and delivers.
 - Writing agency-side copy: home page, services page, case studies, sales pages.
 - Preparing for a sales conversation, value conversation, or closing conversation.
+- Explaining why website design is sold as a premium product: strategy, content, SEO, UX, stack, QA, launch, analytics, and post-launch improvement rather than pages alone.
 
 ## Do not use when
 
@@ -61,6 +62,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
      `references/premium-proposal-template.md` (document template)
    - Website-as-business-asset framing, due diligence, asset risks, and premium fee
      justification → `references/website-asset-value-due-diligence.md`
+   - Website-as-premium-product, content/SEO strategy, launch discipline, technical
+     philosophy, and agency proof → `../premium-website-product/SKILL.md`
    - Positioning language, founder story, personal brand →
      `references/positioning-language.md`, `references/founder-story-templates.md`
    - Prior detailed instructions preserved from the previous skill version →
@@ -80,6 +83,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   be explainable in commercial terms — not aesthetic, not "industry standard."
 - **Floor enforced.** No artefact assumes or implies sub-$12,000 work. The floor is the
   positioning.
+- **Website as product.** Agency copy and proposals must explain the premium website as
+  a packaged commercial asset with strategy, content, UX, SEO, measurement, QA, and
+  handover; never as "number of pages plus design".
 - **Recommend one.** Where options are presented, one is recommended. The agency does
   not present three options and ask the client to choose.
 
@@ -140,6 +146,10 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `references/website-asset-value-due-diligence.md` — the asset-value and due-diligence
   lens for explaining premium websites as measurable, transferable commercial systems
   rather than page builds.
+- `../premium-website-product/SKILL.md` and
+  `../premium-website-product/references/premium-website-market-asset-gate.md` — use
+  when agency positioning must explain the website service itself as a premium product
+  and proof of world-class developer quality.
 - `references/information-marketing-assets.md` — how to turn agency expertise into authority assets, lead magnets, paid diagnostics, newsletters, workshops, and ascension offers without drifting into hype.
 - `references/expert-authority-framework.md` — the structural frameworks from
   Brunson's *Expert Secrets*, filtered for our buyer (no hype, no theatre). The
