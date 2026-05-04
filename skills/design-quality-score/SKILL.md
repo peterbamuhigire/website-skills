@@ -1,6 +1,6 @@
 ---
 name: design-quality-score
-description: Canonical rendered-output design-quality scoring layer. Defines the 7-category rubric, the slop-scan static check, and the pre-launch scoring gate that prevent premium claims from drifting into generic AI-aesthetic output. Scored per primary template; a project ships only when every primary template scores ≥ 8/10.
+description: Canonical rendered-output design-quality scoring layer. Defines the 7-category visual rubric + 8th UX-maturity (process) category, the slop-scan static check, and the pre-launch scoring gate that prevent premium claims from drifting into generic AI-aesthetic output. Scored per primary template; a project ships only when every primary template scores ≥ 8/10.
 ---
 
 # Design Quality Score

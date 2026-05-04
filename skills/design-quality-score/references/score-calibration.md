@@ -82,3 +82,28 @@ Without calibration, the rubric becomes a ceremonial artefact. The
 engine's authority claim rests on the rubric producing consistent
 scores — consistency is what turns "we think it's good" into "it meets
 our standard."
+
+---
+
+## Resolving scorer disagreements (added 2026-05-04 from Fekeshazi)
+
+Source: `fekeshazi-pm-ux-guide-extraction.md` Section 3.4 (User Research as Decision-Arbiter).
+
+### The principle
+> "Have you had a meeting when there was an important question and all participants had different opinions? How did you decide? Or even worse: who decided? Why don't you let the users answer these questions?"
+
+When two scorers disagree on a category by ≥ 2 points (e.g., one says 6, another says 8), the tiebreaker is **not** the senior scorer's opinion. The tiebreaker is **fresh user-test data** addressing the disputed dimension.
+
+### Procedure
+1. Document the disagreement with specifics: which category, which template, which scorers, which scores.
+2. Define the testable question (e.g., "Can users find the primary CTA within 5 seconds?").
+3. Run a short test (5-second test, guerrilla test, or 3–5 person remote test).
+4. The score that aligns with the test data wins.
+5. Record the resolution in the project log for future calibration.
+
+### Why this works
+Subjective scoring drifts toward whoever is most senior or most opinionated. Anchoring on user-observed reality keeps the rubric honest and gives clients a defensible explanation for the score.
+
+### When to skip
+- Disagreements within 1 point — accept either; record both as a calibration note
+- Categories that are objectively measurable (load time, accessibility-audit pass) — those don't need user-test arbitration; re-run the measurement
