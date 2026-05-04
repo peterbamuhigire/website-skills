@@ -56,3 +56,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `references/premium-website-gate.md` - scoring and blocking defects.
 - `../premium-website-product/references/premium-website-market-asset-gate.md` - website-as-premium-product, content, SEO, launch, stack, and agency proof gate.
 - `references/source-register.md` - local EPUB sources used to build this skill.
+
+## World-class UX foundations (book-derived)
+
+Required reading before kicking off a premium engagement:
+
+- `references/levy-four-tenets.md` — Four-tenet framework (Business Strategy + Value Innovation + Validated User Research + Killer UX Design); Top-10 anti-patterns to reject in client briefs.
+- `references/enterprise-five-outcomes.md` — Five mandatory outcomes (Useful / Easy / Efficient / Pleasing / Accessible) as a pre-launch gate. One No = no launch.
+- `references/pm-collaboration-rules.md` — Fekeshazi 5+1 (5-10 min to explain, design as ongoing process, etc.) and the "don't hide important functions in menus" rule.
+
+If a brief fails Levy's Top-10 check or omits any of the 5 outcomes, push back before scoping.
