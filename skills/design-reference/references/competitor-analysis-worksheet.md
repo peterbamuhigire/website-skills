@@ -89,3 +89,24 @@ End with a business implication:
 - `We should reject this`
 - `We should invert this`
 - `We should prove what they merely claim`
+
+---
+
+## Canonical worksheet format (added 2026-05-04 — Levy matrix alignment)
+
+The canonical worksheet for any premium engagement now uses the 19-column matrix in `levy-competitive-matrix.md`. Follow that structure for new engagements.
+
+### Migration of existing local additions
+
+Any sector-specific columns previously used in this worksheet are preserved as a "Local additions" subsection appended to each row. Examples:
+- **Africa-excellence engagements:** mobile-data-cost adaptation column, USSD/feature-phone fallback column
+- **Hospitality engagements:** offline-booking partner column, multi-currency column
+- **Education engagements:** accreditation-status column
+
+### Pass criteria
+
+A competitive analysis is complete when:
+- ≥ 5 direct + 3 indirect competitors filled
+- All 19 columns populated for at least the 5 direct competitors
+- Heuristic A–F grade assigned to each
+- A 1-page distilled brief produced naming top 3 table-stakes features, 1–2 blue-ocean gaps, and 3 features to poach

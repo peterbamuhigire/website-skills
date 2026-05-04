@@ -48,3 +48,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
 
+
+## Canonical worksheet format
+
+For premium engagements ($20k+), use Levy's 19-column competitive matrix as the canonical format. See `references/levy-competitive-matrix.md`. Local sector adaptations live in the "Local additions" subsection of `references/competitor-analysis-worksheet.md`.
+
+Minimum data set: 5 direct + 3 indirect competitors fully filled, with A–F heuristic grades and a 1-page distilled brief.
