@@ -1,6 +1,6 @@
 ---
 name: ux-psychology
-description: Cognitive psychology for premium web design. Gestalt principles, Nielsen's 10 heuristics, Norman's 3 design levels, System 1/2 thinking with cognitive biases, emotional design, dark patterns to avoid, and affordance principles. Use for premium $20k+ websites to justify quality and prevent common psychological UX mistakes.
+description: Cognitive psychology for premium web design. Gestalt principles, Nielsen's 10 heuristics, Norman's 3 design levels, System 1/2 thinking with cognitive biases, Branson's three HCI paradigms (Building/HIP/Design Thinking), working-memory rules (Miller 7±2, chunking, stacking, cognitive load), four-stage cognitive affordance discipline (Presence/Visibility/Recognizability/Intelligibility), and Deacon's three levels of UX scope. Use for premium $20k+ websites to justify quality and prevent common psychological UX mistakes.
 ---
 
 # Ux Psychology
@@ -45,4 +45,10 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
+
+## References
+
+- `references/legacy-guidance.md` — Gestalt, Nielsen, Norman, Krug; **+ working-memory rules + four-stage cognitive affordance** (added 2026-05-04)
+- `references/three-paradigms-of-hci.md` — Building / HIP / Design Thinking; cockpit-voice example for stakeholder alignment
+- `references/three-levels-of-ux-scope.md` — Single Interaction / Journey / Relationship — declare in every proposal
 
