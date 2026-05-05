@@ -69,6 +69,31 @@ Use these support skills on demand:
 - `skill-writing`, `skill-safety-audit`, `update-claude-documentation`
 - `observability`, `experimentation`, `design-quality-score`, `africa-excellence`
 
+Premium agency operating-system skills (added 2026-05-05):
+
+- `website-experience-mapping`: outside-in alignment diagrams, journey maps,
+  experience maps, ecosystem maps, mental-model diagrams. Run before
+  page-builder on every premium build that must change behaviour.
+- `service-blueprint-website-delivery`: frontstage / backstage blueprint for
+  the agency's own delivery operations, SLAs, and recovery. Use during
+  proposal scoping, kickoff, and every retainer review.
+- `premium-sales-conversation`: structured premium discovery and objection
+  handling. Use before any quote, proposal, or scoping document.
+- `customer-service-website-ops`: post-launch service language, triage,
+  escalation, recovery, retention. Use to design SOPs, train support, and
+  recover trust after incidents.
+- `marketing-measurement-system`: KPI tree, customer insight loop, loyalty
+  layer, and quarterly business review that drives budget reallocation.
+
+## Cross-Engine Handoffs
+
+- Proposal to website delivery: consume approved proposal scope, discovery assumptions, content/SEO promises, timeline, commercial exclusions, support package, and acceptance criteria before build planning.
+- Proposal to SRS: route portal, ecommerce, SaaS, AI, integration, data, governance, or regulated workflow scope to the SRS engine before committing to page-builder or implementation detail.
+- SRS to website delivery: use signed requirements, UX/content/form specifications, acceptance criteria, analytics events, and launch readiness conditions as build inputs.
+- Website delivery to implementation: route custom backend, API, SaaS, AI, infrastructure, security, observability, and reliability work to the master engineering engine with clear artefacts and constraints.
+- Website launch to observability, experimentation, retention: after launch, route evidence to `observability`, `experimentation`, `marketing-measurement-system`, `agency-client-retention`, `monthly-report`, and `customer-service-website-ops`.
+- Website maintenance/support to proposal engine: when support scope, SLA, retainer, or change-request language must be sold or renewed, route commercial wording back to the proposal engine.
+
 ## Enforcement and Quality Gates (Phases 10 + 11)
 
 Every project shipped on the engine inherits the 15-step canonical CI pipeline at

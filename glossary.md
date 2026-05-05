@@ -66,6 +66,20 @@ Support and audit skills:
   `ecommerce`, `ecommerce-funnel`, `ecommerce-checkout`,
   `ecommerce-analytics`.
 
+Premium agency operating-system skills (added 2026-05-05):
+- `website-experience-mapping` — alignment diagrams, customer journey maps,
+  experience maps, ecosystem maps, and mental-model diagrams that drive
+  sitemap and content architecture.
+- `service-blueprint-website-delivery` — frontstage / backstage service
+  blueprint for the agency's own delivery operations and SLAs.
+- `premium-sales-conversation` — qualification, premium framing, objection
+  handling, and the close for premium website agency sales.
+- `customer-service-website-ops` — post-launch service language, triage,
+  escalation, recovery, and retention.
+- `marketing-measurement-system` — KPI tree, customer insight loop, loyalty
+  and retention plan, and the quarterly business review that drives budget
+  reallocation.
+
 Legacy (superseded):
 - `east-african-english` — superseded by `language-standards` as of 2026-03-21.
 
