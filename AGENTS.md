@@ -49,6 +49,7 @@ Use these skills as the default router:
 Use these cross-cutting skills whenever their lens materially improves the output:
 
 - `language-standards`: Regional language and tone quality.
+- `premium-commercial-writing`: Premium-fee-worthy commercial writing across website copy, landing pages, blogs, SEO/GEO pages, documents, and offer pages.
 - `content-writing`: Website copy structure and clarity.
 - `brand-alignment`: Audience and brand coherence.
 - `sales-copywriting`: Conversion-focused messaging.
