@@ -84,6 +84,8 @@ The `llms.txt` and `llms-full.txt` files must be regenerated on every content ch
 
 ## References
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
+- `../premium-commercial-writing/references/seo-ai-search-writing.md` — use when SEO/GEO work needs stronger content structure, answer blocks, entity clarity, E-E-A-T notes, and AI-citable facts before implementation.
+- `../premium-commercial-writing/references/blog-and-authority-writing.md` — use when SEO depends on articles, pillar pages, clusters, or sales-enablement content rather than metadata alone.
 - `../premium-website-product/references/premium-website-market-asset-gate.md` - use when SEO must support premium website positioning, content authority, launch distribution, and agency proof.
 - `references/analytics-event-map.md` — minimum instrumentation for every site: event taxonomy, conversion goals, UTM convention, attribution model, consent, pre-launch checklist.
 - `references/seo-topic-and-intent-map.md` — align search intent with page roles, proof burdens, CTA posture.

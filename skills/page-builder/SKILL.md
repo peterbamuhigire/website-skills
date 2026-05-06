@@ -43,6 +43,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
 - `references/authority-content-matrix.md` — content architecture by page type, cornerstone pages, pillar + cluster system, editorial ops. Use when planning the content system for Growth / Authority tiers.
 - `references/page-goal-matrix.md` — convert strategy into page-specific audience, goal, proof, CTA, SEO decisions.
+- `../premium-commercial-writing/references/website-page-writing-patterns.md` — use when implementation must preserve premium page copy structure for home, service, pricing, about, case-study, contact, or FAQ pages.
+- `../premium-commercial-writing/references/professional-writing-quality-gate.md` — use before implementation when supplied copy needs final proof, claim, tone, CTA, and scannability checks.
 - `references/conversion-sequence-implementation.md` — use when the build must preserve value-proposition clarity, CTA ladders, cluster linking, or launch-stage page states.
 - `../website-builder/references/premium-website-engine-playbook.md` — use when page
   production must preserve the premium strategy, acquisition, conversion, measurement,
@@ -58,4 +60,5 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Preserve existing project behavior unless the current task explicitly requires a change.
 - Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.
 - Route upstream to `sales-copywriting` when the implementation needs revised value propositions, button labels, or objection handling.
+- Route upstream to `premium-commercial-writing` when the page copy, SEO/GEO content, document download, blog excerpt, or offer section must meet the premium commercial writing gate before build.
 

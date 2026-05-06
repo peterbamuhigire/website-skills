@@ -21,8 +21,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read the current business context and the concrete task to solve.
 2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
+3. Use `premium-commercial-writing` when buyer-question content must become premium website copy, SEO/GEO pages, articles, sales documents, or offer-page sections.
+4. Produce the strategy, writing, or framework output this skill is responsible for.
+5. Check the result for clarity, realism, and handoff readiness.
 
 ## Quality standards
 - Outputs must be specific, usable, and grounded in the available evidence.
@@ -44,6 +45,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Use `references/content-inc-audience-model.md` (Pulizzi) when building the agency's own audience-first publishing strategy: sweet spot, content tilt, the base, MVA, the 18-month runway, monetisation paths, the 7-step Content Inc. model.
 - Use `references/show-your-work-practices.md` (Kleon) for the daily-dispatch discipline, "work behind the work" sharing, three-act story shape, teaching-as-marketing — applied to a B2B agency register.
 - Use `references/agency-content-plan.md` when designing the agency's own website and authority library: 6 site layers, cornerstone + cluster architecture, where each Selling 7 video lives, the 18-month build order.
+- Use `../premium-commercial-writing/references/blog-and-authority-writing.md` when buyer questions become authority articles, pillar pages, sales-enablement posts, or content clusters.
+- Use `../premium-commercial-writing/references/document-and-sales-enablement-writing.md` when buyer-question content becomes pre-call assignments, sales guides, proposal inserts, lead magnets, or one-pagers.
 - Use `references/editorial-calendar-and-rhythm.md` when installing the recurring weekly/monthly/quarterly/annual cadence: Dream 100 ritual, sales follow-up cycle, case-study collection, referral asks, pipeline review, 30/60/90-day proof of life.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.

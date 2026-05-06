@@ -21,8 +21,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Read the current business context and the concrete task to solve.
 2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
+3. Use `premium-commercial-writing` when the story must also carry proof, premium positioning, buyer objections, SEO/GEO usefulness, or an offer-page next step.
+4. Produce the strategy, writing, or framework output this skill is responsible for.
+5. Check the result for clarity, realism, and handoff readiness.
 
 ## Quality standards
 - Outputs must be specific, usable, and grounded in the available evidence.
@@ -39,6 +40,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- Use `../premium-commercial-writing/references/website-page-writing-patterns.md` when narrative appears on home, about, case-study, service, or offer pages and must remain commercially useful.
+- Use `../premium-commercial-writing/references/professional-writing-quality-gate.md` when a story needs final proof, claim, tone, and buyer-relevance checks.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

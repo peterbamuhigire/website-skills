@@ -30,7 +30,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 2. Package the website as a product: named outcome, included strategy, UX, content, SEO, analytics, QA, training, and post-launch improvement window.
 3. Design the content system before page styling: search intent, buyer questions, proof burden, page goal, CTA ladder, internal links, schema, and follow-up path.
 4. Apply the premium website market-asset gate to strategy, content, UI/UX, SEO, stack, launch, handover, and agency proof.
-5. Route downstream: `agency-positioning` for offer/pricing, `premium-ui-ux-design` for visual/product feel, `content-writing` and `sales-copywriting` for copy, `seo` for search/GEO, `page-builder` for implementation, and `deploy` for hard gates.
+5. Route downstream: `agency-positioning` for offer/pricing, `premium-ui-ux-design` for visual/product feel, `premium-commercial-writing` for premium copy quality across pages/articles/documents/offers, `content-writing` and `sales-copywriting` for narrower copy tasks, `seo` for search/GEO, `page-builder` for implementation, and `deploy` for hard gates.
 6. Reject or re-scope work that cannot support premium quality, measurable value, or credible proof.
 
 ## Quality standards
@@ -65,3 +65,4 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `../website-builder/references/premium-website-engine-playbook.md` - orchestration, acquisition, conversion, measurement, and asset-value system.
 - `../agency-positioning/references/premium-website-offer-playbook.md` - agency offer ladder, fee floors, scope, and premium positioning.
 - `../premium-ui-ux-design/references/premium-website-ui-ux-playbook.md` - premium visual and UX execution.
+- `../premium-commercial-writing/SKILL.md` - use when the website's copy, blogs, SEO/GEO content, sales documents, or offer pages must justify premium fees.

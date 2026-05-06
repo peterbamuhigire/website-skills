@@ -132,6 +132,7 @@ A 3-step header that wins with warm traffic will intimidate cold traffic. Always
 | Skill | Integration |
 |---|---|
 | `content-writing` | Brand voice and tone rules apply within the direct-response structure |
+| `premium-commercial-writing` | Keeps long-form persuasion credible, proof-led, premium in tone, and suitable for serious service, ecommerce, and high-ticket buyers |
 | `brand-alignment` | Attractive Character respects brand guidelines |
 | `cro-audit` | This skill produces the copy; CRO audit measures and optimises it |
 | `design-system` | Headlines, buttons, visuals follow the design system |
@@ -187,6 +188,7 @@ A 3-step header that wins with warm traffic will intimidate cold traffic. Always
 - **Kennedy sales success**: See `../book-extractions/kennedy-no-bs-sales-success-extraction.md` — 5 Propositions, Takeaway Selling, Proof hierarchy (testimonials → pictures → stats → demo → guarantee), Morning After protocol.
 - **Kennedy price strategy**: See `../book-extractions/kennedy-no-bs-price-strategy-extraction.md` — price positioning, discount discipline, association principle, competing with free, "reassuringly expensive."
 - **StoryBrand complement**: See `../book-extractions/storybrand-sb7-framework.md` — use StoryBrand for brand-level messaging; Kennedy/Brunson for the sales page itself.
+- **Premium commercial writing layer**: See `../premium-commercial-writing/references/offer-and-landing-page-writing.md` and `../premium-commercial-writing/references/professional-writing-quality-gate.md` when a long-form page must justify premium fees without hype, fake urgency, or unsupported claims.
 - **Related skills**: `content-writing`, `brand-alignment`, `cro-audit`, `design-system`, `ux-forms`, `ux-writing`, `ecommerce`.
 
 ## Uganda / East Africa Notes

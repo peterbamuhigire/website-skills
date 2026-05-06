@@ -30,6 +30,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The standard should support downstream implementation rather than slow it down.
 - Treat copy as a market-message-offer system: identify the audience, sharpen the promise, and match the CTA to the right next step.
 - For any meaningful rewrite, prefer customer language, objections, and proof over internal brand phrasing.
+- For premium commercial work, use `premium-commercial-writing` to keep persuasion credible, proof-led, AI/search-ready, and premium-fee worthy across the full artifact.
 
 ## Anti-patterns
 - Do not apply every rule mechanically when only a subset is relevant.
@@ -43,6 +44,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - `references/website-messaging-framework.md` — primary reference for any website page: headline logic (4 U's, 8 types), sub-headline rules, slippery-slide, proof placement, objection-handling map, CTA ladder, service/about/FAQ structures, voice and tone, editing discipline. Grounded in Bly, Sugarman, Handley, Krzyzek.
 - `references/message-mining-and-proof.md` — use when the task needs voice-of-customer mining, message banks, objection extraction, or proof gathering before rewriting the page.
 - `references/value-proposition-and-cta-lab.md` — use when improving home heroes, value propositions, buttons, CTA reassurance, or testable copy variants.
+- `../premium-commercial-writing/references/offer-and-landing-page-writing.md` — use when conversion copy must fit a premium offer page, campaign page, lead magnet, consultation page, or high-ticket service page.
+- `../premium-commercial-writing/references/professional-writing-quality-gate.md` — use for final proof, claim, tone, and CTA quality checks on premium sales copy.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
