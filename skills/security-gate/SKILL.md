@@ -24,13 +24,17 @@ Every primary build passes:
 2. Security header validation against the baseline in
    `references/csp-baseline.md` (HSTS, X-Frame-Options, X-Content-Type-Options,
    Referrer-Policy, Permissions-Policy, CSP).
-3. Subresource Integrity (SRI) hash on every third-party asset that survived
+3. Public vulnerability disclosure route:
+   `/.well-known/security.txt` exists, is RFC 9116-compatible, has no
+   placeholders, includes at least one `Contact`, exactly one future `Expires`,
+   a canonical HTTPS URL, and a `Policy` link to the human disclosure page.
+4. Subresource Integrity (SRI) hash on every third-party asset that survived
    design review.
-4. Secrets scan with zero findings; any API key, token, private key, or
+5. Secrets scan with zero findings; any API key, token, private key, or
    credential in the repository blocks the build.
-5. Supply-chain scan: lockfile integrity, package-name typosquat check,
+6. Supply-chain scan: lockfile integrity, package-name typosquat check,
    install-script review.
-6. Compliance matrix up to date for every jurisdiction the client operates in.
+7. Compliance matrix up to date for every jurisdiction the client operates in.
 
 Any "high" or "critical" finding blocks deploy.
 
@@ -43,12 +47,13 @@ bash .claude/skills/scripts/security-gate.sh
 The command:
 1. Runs `npm audit --audit-level=high --json`.
 2. Runs `scripts/check-security-headers.sh dist` against the CSP baseline.
-3. Runs `scripts/check-sri.sh dist .third-party-allowed`.
-4. Runs `scripts/scan-secrets.sh` against the committed tree.
-5. Runs `scripts/supply-chain-check.sh` against `package-lock.json`.
-6. Writes machine-readable results under `reports/security/` and a summary
+3. Runs `scripts/check-security-txt.sh dist`.
+4. Runs `scripts/check-sri.sh dist .third-party-allowed`.
+5. Runs `scripts/scan-secrets.sh` against the committed tree.
+6. Runs `scripts/supply-chain-check.sh` against `package-lock.json`.
+7. Writes machine-readable results under `reports/security/` and a summary
    at `reports/security/summary.md`.
-7. Exits non-zero on any "high" or "critical" finding.
+8. Exits non-zero on any "high" or "critical" finding.
 
 ## Workflow
 
@@ -65,6 +70,8 @@ The command:
 ## Required inputs
 - `package.json` and `package-lock.json` at repo root.
 - A built static output at `./dist/`.
+- A generated `./dist/.well-known/security.txt` file and a public disclosure
+  policy page linked from its `Policy` field.
 - A live edge-config declaration (Nginx vhost, Cloudflare Worker, equivalent)
   for header validation. If headers are served from a framework middleware,
   the middleware output goes to `dist/` and is audited from there.
@@ -76,6 +83,8 @@ The command:
   non-applicable path (e.g. the vulnerable function is never called). Every
   suppression has a review date within 12 months.
 - Headers are verified on the deployed site, not only in configuration.
+- `security.txt` is treated as stale when `Expires` is in the past and must be
+  reviewed at least annually.
 - SRI hashes are regenerated on every build; stale hashes break by design.
 - Compliance matrix entries are specific to the client, not copied generically.
 
@@ -87,10 +96,13 @@ The command:
 - Assuming GDPR coverage is sufficient in Africa; each jurisdiction has its
   own data-protection act with different requirements.
 - Forgetting to rotate a leaked secret because "the repo is private".
+- Shipping a security-first site without a public security contact and
+  disclosure policy.
 
 ## Outputs
 - `reports/security/audit.json` — dependency audit output.
 - `reports/security/headers.txt` — per-route header validation.
+- `reports/security/security-txt.txt` — vulnerability disclosure route check.
 - `reports/security/sri.txt` — SRI check result.
 - `reports/security/secrets.txt` — secrets scan findings (empty on success).
 - `reports/security/supply-chain.txt` — supply-chain posture.
@@ -107,6 +119,10 @@ The command:
 - `references/secrets-response.md` — rotation, revocation, and history-rewrite
   playbook.
 - `references/supply-chain.md` — typosquat detection and install-script review.
+- `../../templates/security.txt` — project starter for the required
+  `/.well-known/security.txt` artifact.
+- `../../templates/security-policy.md` — human-readable disclosure policy
+  starter linked from `Policy`.
 
 ## Notes
 - This gate does not replace a specialist penetration test for authenticated

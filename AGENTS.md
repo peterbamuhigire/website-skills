@@ -36,10 +36,13 @@ Use these skills as the default router:
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
 - `seo`: Implementation of metadata, schema, sitemaps, and crawler-facing configuration.
+- `google-ai-search`: Official Google Search guidance for AI Overviews, AI Mode,
+  AEO/GEO mythbusting, Search Console measurement, local/ecommerce readiness,
+  and agentic-experience preparation.
 - `deploy`: Build verification, deployment artifacts, and release readiness. Owns the canonical CI pipeline at `templates/ci/website.yml` and its troubleshooting reference.
 - `accessibility-audit`: WCAG 2.2 AA enforcement gate — axe-core, manual checklist, screen-reader smoke scripts. Runs in the canonical CI pipeline as a hard gate.
 - `visual-qa`: Rendered-output review loop — Playwright screenshot diff, heading/overflow/empty-section assertions, AI-slop scan. Runs in the canonical CI pipeline as a hard gate.
-- `security-gate`: Dependency audit, security headers, SRI, secrets scan, supply-chain, and Africa + GDPR compliance matrix. Runs in the canonical CI pipeline as a hard gate.
+- `security-gate`: Dependency audit, security headers, `security.txt`, SRI, secrets scan, supply-chain, and Africa + GDPR compliance matrix. Runs in the canonical CI pipeline as a hard gate.
 - `observability`: RUM, error tracking, analytics, and alerting contract for every shipped site. Feeds `dashboards/quality-scorecard.md`.
 - `experimentation`: Hypothesis template, statistical-significance primer, A/B infrastructure (GrowthBook default), quarterly review.
 - `design-quality-score`: 7-category rubric and slop-scan. Runs as canonical CI step 12 (advisory on PR, blocking on main).
@@ -91,6 +94,10 @@ Premium agency operating-system skills (added 2026-05-05):
 - Proposal to website delivery: consume approved proposal scope, discovery assumptions, content/SEO promises, timeline, commercial exclusions, support package, and acceptance criteria before build planning.
 - Proposal to SRS: route portal, ecommerce, SaaS, AI, integration, data, governance, or regulated workflow scope to the SRS engine before committing to page-builder or implementation detail.
 - SRS to website delivery: use signed requirements, UX/content/form specifications, acceptance criteria, analytics events, and launch readiness conditions as build inputs.
+- Website delivery to Google AI Search: when a brief promises Google AI
+  visibility, AI Overviews, AI Mode, AEO/GEO, Search Console AI performance, or
+  agentic readiness, route through `google-ai-search` before `seo` and
+  `page-builder`.
 - Website delivery to implementation: route custom backend, API, SaaS, AI, infrastructure, security, observability, and reliability work to the master engineering engine with clear artefacts and constraints.
 - Website launch to observability, experimentation, retention: after launch, route evidence to `observability`, `experimentation`, `marketing-measurement-system`, `agency-client-retention`, `monthly-report`, and `customer-service-website-ops`.
 - Website maintenance/support to proposal engine: when support scope, SLA, retainer, or change-request language must be sold or renewed, route commercial wording back to the proposal engine.

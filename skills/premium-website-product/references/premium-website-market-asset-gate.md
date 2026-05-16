@@ -36,7 +36,11 @@ Use this gate when a website must be a premium product, a marketing asset for th
 - SEO starts with business strategy and search intent, not plugins.
 - Build a topic and intent map before page production: commercial, transactional, local, comparison, informational, brand, and support intent.
 - Map each target topic to one page, one primary CTA, one internal-link cluster, one proof burden, and one measurement event.
-- Implement technical SEO as a floor: crawlable routes, metadata, schema, sitemaps, canonicals, hreflang where needed, image alt, OG assets, `llms.txt`, and fast pages.
+- Implement technical SEO as a floor: crawlable routes, metadata, schema,
+  sitemaps, canonicals, hreflang where needed, image alt, OG assets, fast
+  pages, and `llms.txt` where broader LLM handover is in scope. For Google AI
+  Overviews or AI Mode, route through `google-ai-search`; do not treat
+  `llms.txt` as a Google AI requirement.
 - Create authority assets worth citing or sharing: original guide, diagnostic, calculator, checklist, benchmark, case study, pricing explainer, or buyer's guide.
 - Plan digital PR and distribution where relevant: partner outreach, industry publications, founder posts, email launch, social proof posts, and referral landing pages.
 - Track quality metrics: organic sessions, non-brand queries, ranking pages, qualified enquiries, conversion rate, lead quality, content-assisted opportunities, and revenue where available.

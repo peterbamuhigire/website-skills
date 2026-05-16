@@ -127,7 +127,7 @@ All candidates must:
 ### Track T4: QA + Launch (weeks 3–5)
 - T4.1 Accessibility gate (axe + keyboard + screen reader + manual)
 - T4.2 Visual QA, drift, and design-quality-score pre-launch gate
-- T4.3 Security gate (dep audit, headers, SRI, secrets, supply chain)
+- T4.3 Security gate (dep audit, headers, security.txt, SRI, secrets, supply chain)
 - T4.4 Launch, post-deploy smoke, and rollback drill
 - **Practical**: run a supervised launch and execute a rollback drill.
 

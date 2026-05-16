@@ -75,7 +75,17 @@ if [ ! -f "$PROJECT/.third-party-allowed" ]; then
 EOF
 fi
 
-# 6. package.json scripts — if jq is present, merge; otherwise print instructions.
+# 6. security.txt starter (required by security-gate; replace placeholders)
+mkdir -p "$PROJECT/public/.well-known"
+if [ ! -f "$PROJECT/public/.well-known/security.txt" ]; then
+    cp "$SKILLS/templates/security.txt" "$PROJECT/public/.well-known/security.txt"
+fi
+if [ ! -f "$PROJECT/docs/security-policy.md" ]; then
+    mkdir -p "$PROJECT/docs"
+    cp "$SKILLS/templates/security-policy.md" "$PROJECT/docs/security-policy.md"
+fi
+
+# 7. package.json scripts — if jq is present, merge; otherwise print instructions.
 if command -v jq >/dev/null 2>&1 && [ -f "$PROJECT/package.json" ]; then
     TMP=$(mktemp)
     jq '.scripts += {
@@ -101,7 +111,7 @@ else
     echo '  "engine-gates": "npm run perf-gate && npm run a11y-gate && npm run visual-qa && npm run security-gate"' >&2
 fi
 
-# 7. .gitignore additions
+# 8. .gitignore additions
 if [ -f "$PROJECT/.gitignore" ]; then
     for entry in 'reports/' '.engine-backup-*' '.lighthouseci/'; do
         grep -qxF "$entry" "$PROJECT/.gitignore" || echo "$entry" >> "$PROJECT/.gitignore"
@@ -116,11 +126,13 @@ Next steps in this project:
   1. npm i -D @lhci/cli @axe-core/cli @playwright/test serve jq
   2. Capture initial visual baselines once the first template is designed:
      npx playwright test --update-snapshots tests/visual/capture.spec.ts
-  3. Commit .github/workflows/website.yml, lighthouserc.json, performance-budgets.json,
-     .third-party-allowed, and any backup folder after reviewing.
-  4. Configure GitHub secrets: DEPLOY_HOST, DEPLOY_USER, DEPLOY_KEY.
-  5. Configure GitHub variables: DEPLOY_PATH, PRODUCTION_URL.
-  6. Trigger the workflow and verify every gate runs.
+  3. Replace placeholders in public/.well-known/security.txt and docs/security-policy.md.
+  4. Commit .github/workflows/website.yml, lighthouserc.json, performance-budgets.json,
+     .third-party-allowed, public/.well-known/security.txt, docs/security-policy.md,
+     and any backup folder after reviewing.
+  5. Configure GitHub secrets: DEPLOY_HOST, DEPLOY_USER, DEPLOY_KEY.
+  6. Configure GitHub variables: DEPLOY_PATH, PRODUCTION_URL.
+  7. Trigger the workflow and verify every gate runs.
 
 See .claude/skills/deploy/references/ci-troubleshooting.md for common issues.
 EOF

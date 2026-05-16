@@ -228,9 +228,19 @@ For firms with a physical presence serving a geographic market.
 
 ---
 
-## 8. AI visibility and answer engines (GEO)
+## 8. AI visibility and answer engines
 
-Search is fragmenting across Google, Bing, LLM-based answer engines (Perplexity, ChatGPT, Claude), and AI Overviews. Product-Led SEO (2021) predates this; the practices below extend its principles for a 2026 landscape.
+Search is fragmenting across Google, Bing, LLM-based answer engines
+(Perplexity, ChatGPT, Claude), and Google AI features such as AI Overviews and
+AI Mode. Product-Led SEO (2021) predates this; the practices below extend its
+principles for a 2026 landscape.
+
+For Google AI Overviews and AI Mode, use `google-ai-search/SKILL.md` first.
+Google's official position is that optimizing for generative AI features in
+Google Search is still SEO: useful content, crawlability, indexability,
+snippets eligibility, page experience, and current local/ecommerce data. Do not
+sell `llms.txt`, chunking, special schema, or AEO/GEO page factories as Google
+AI requirements.
 
 ### Principles
 
@@ -246,7 +256,9 @@ Search is fragmenting across Google, Bing, LLM-based answer engines (Perplexity,
 - **Use stable heading structures.** H2 questions, H3 specific answers. LLMs parse this pattern reliably.
 - **Publish original research.** A single piece of primary data (survey, benchmark, case-study aggregation) outperforms 50 derivative pieces.
 - **Build an entity footprint.** Wikipedia-adjacent citations, Crunchbase, LinkedIn, industry associations — all feed entity recognition.
-- **Use FAQ schema for anticipated questions.** Makes content eligible for AI Overview and PAA surfacing.
+- **Use FAQ schema only when the visible page genuinely contains FAQ content.**
+  It supports rich-result eligibility where Google supports that feature; it is
+  not special AI Overview markup.
 - **Use `Article` schema with author `Person` markup.** Attribution is entity-rich.
 - **Run periodic LLM citation audits.** Query the top answer engines for your target questions; see whether the firm is cited, and where.
 
@@ -254,7 +266,9 @@ Search is fragmenting across Google, Bing, LLM-based answer engines (Perplexity,
 
 - Default: allow reputable AI crawlers (GPTBot, Google-Extended, ClaudeBot, PerplexityBot). Disallow scrapers with no citation practice.
 - Robots.txt documented with reasoning. Reviewed quarterly.
-- `llms.txt` published where the firm is willing to signal permitted AI use.
+- `llms.txt` published where the firm is willing to support broader LLM
+  discovery and handover. This is not required for Google AI Overviews or AI
+  Mode.
 
 ---
 

@@ -47,6 +47,7 @@ skills/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
 skills/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
 skills/page-builder/SKILL.md       <- Content to pages and components
 skills/seo/SKILL.md                <- Search-facing implementation
+skills/google-ai-search/SKILL.md   <- Google AI Overviews / AI Mode readiness
 skills/blog-writer/SKILL.md        <- Blog production
 skills/deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
 skills/premium-website-product/    <- Premium website-as-product strategy, content, SEO, stack, launch, and agency proof gate
@@ -58,7 +59,7 @@ skills/premium-ui-ux-design/       <- Premium website UI/UX and visual quality g
 ```text
 skills/accessibility-audit/SKILL.md <- WCAG 2.2 AA gate: axe-core + manual + screen reader
 skills/visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-section + AI-slop
-skills/security-gate/SKILL.md       <- Dep audit + headers + SRI + secrets + supply chain + compliance
+skills/security-gate/SKILL.md       <- Dep audit + headers + security.txt + SRI + secrets + supply chain + compliance
 ```
 
 ### Operating Discipline Skills (Phase 11 — added 2026-04-16)

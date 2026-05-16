@@ -2,6 +2,13 @@
 
 This reference defines the exact files every site must ship to be discoverable, citable and accurately summarised by AI search engines (ChatGPT, Claude, Gemini, Perplexity, Bing AI). These are mandatory deliverables in the SEO skill.
 
+Google Search caveat: Google's official guidance for AI Overviews and AI Mode
+says `llms.txt`, AI text files, Markdown mirrors, and special markup are not
+required for inclusion in generative AI features on Google Search. In this
+engine, `llms.txt` and `llms-full.txt` are retained for broader LLM handover,
+non-Google AI surfaces, and client-owned plain-text knowledge packaging. Do not
+present them as Google AI Search ranking levers.
+
 ---
 
 ## Why these files exist
@@ -11,7 +18,11 @@ LLM-powered search engines do two things:
 1. **Real-time retrieval** — they hit your site at inference time and need a fast, JS-free, prose-first source of truth.
 2. **Grounding for citations** — they want a structured page of *what your business is, what it sells, where it operates, what it costs* that they can lift facts from with confidence.
 
-The HTML site, however well-built, is often too JS-heavy, too marketing-styled, or too fragmented for a crawler to parse cheaply. `llms.txt` and `llms-full.txt` solve that.
+The HTML site, however well-built, is often too JS-heavy, too marketing-styled,
+or too fragmented for some non-Google AI tools and downstream handover
+workflows to parse cheaply. `llms.txt` and `llms-full.txt` help with those
+contexts, but they do not replace crawlable, indexable HTML and they are not a
+special Google AI Search requirement.
 
 ---
 
