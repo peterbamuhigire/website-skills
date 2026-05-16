@@ -99,7 +99,9 @@ Order is fixed in `templates/ci/website.yml`. Do not reorder.
 7. **perf-gate** — Lighthouse CI perf budgets.
 8. **a11y-gate** — axe-core blocking scan.
 9. **visual-qa** — Playwright screenshot + structural + AI-slop.
-10. **security-gate** — dep audit, headers, SRI, secrets, supply-chain.
+10. **security-gate** — dep audit, headers, security.txt, SRI, secrets, supply-chain.
+11. **google-ai-search** — Google AI Overviews / AI Mode readiness based on
+    official Search guidance; treats AEO/GEO as SEO for Google.
 11. **drift-check** — documentation drift CI.
 12. **design-quality-score** — advisory on PR, blocking on main.
 13. **deploy** — main only, all gates green.

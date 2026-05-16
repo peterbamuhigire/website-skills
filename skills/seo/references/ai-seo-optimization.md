@@ -1,5 +1,10 @@
 # AI Search Engine Optimization (GEO) — 2026 Edition
 
+Scope note: this reference covers broad AI-search visibility across multiple
+platforms. For Google's generative AI features in Search, use
+`../../google-ai-search/SKILL.md`; Google explicitly frames AI Overviews and AI
+Mode optimization as foundational SEO, not a separate AEO/GEO hack layer.
+
 ## Understanding AI-Powered Search Architecture
 
 Modern AI search operates on a dual architecture:
@@ -31,20 +36,31 @@ AI systems perform live searches at inference time to stay relevant and accurate
 
 ## Major AI Search Platforms
 
-### Google Gemini / AI Overviews
+### Google AI Overviews / AI Mode
+
+Use `../../google-ai-search/SKILL.md` for Google-specific AI Search work.
+Google's official guidance treats visibility in AI Overviews and AI Mode as an
+extension of core Search, not a separate GEO channel with separate technical
+requirements.
 
 | Feature | Description |
 |---------|-------------|
 | **Search Provider** | Google Search (native) |
-| **Citation Style** | Small citations, "about this result" links |
-| **Content Preference** | Balanced synthesis of authoritative sources + community input |
-| **Coverage** | Appears in 74% of problem-solving queries |
-| **Screen Space** | 42% on desktop, 48% on mobile |
+| **Underlying systems** | Core Search ranking and quality systems |
+| **Retrieval pattern** | RAG over Google's Search index; query fan-out may run related searches |
+| **Eligibility floor** | Indexed and eligible to appear in Google Search with a snippet |
+| **Guarantee** | No guarantee of crawling, indexing, serving, or AI-feature inclusion |
 
 **Optimization Focus:**
-- Google's existing ranking systems + quality evaluations apply
-- Balanced synthesis means diverse source representation helps
-- Focus on authoritative + accessible content
+- Keep foundational SEO strong: crawlability, indexability, internal links,
+  canonical clarity, page experience, and text availability.
+- Create unique, non-commodity, people-first content with first-hand
+  experience, original proof, useful structure, and high-quality media.
+- Keep Google Business Profile and Merchant Center data current where relevant.
+- Use structured data for rich-result eligibility and clarity only when it
+  matches visible content.
+- Do not rely on `llms.txt`, chunking, special AI markup, artificial long-tail
+  pages, or inauthentic mentions for Google AI Search.
 
 ### OpenAI ChatGPT with Bing Search
 
@@ -413,7 +429,7 @@ Source: gemini.google.com
 - [ ] Create question-driven content titles
 - [ ] Use inverted pyramid structure (direct answer first)
 - [ ] Build topic clusters with pillar pages
-- [ ] Implement FAQ schema on Q&A content
+- [ ] Implement FAQ schema only where the visible page genuinely contains FAQ content
 - [ ] Add HowTo schema for instructional content
 - [ ] Optimize video transcripts and alt text
 - [ ] Ensure freshness indicators (last updated dates)

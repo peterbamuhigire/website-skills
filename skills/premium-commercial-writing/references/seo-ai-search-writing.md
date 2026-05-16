@@ -78,9 +78,11 @@ For each page, provide:
 - internal links
 - schema candidates
 - OG image idea
-- AI-crawler inclusion note for `llms.txt` or `llms-full.txt`
+- AI-crawler inclusion note for `llms.txt` or `llms-full.txt` when broader LLM
+  handover is in scope. Do not present these files as Google AI Overviews or
+  AI Mode requirements; route Google-specific claims to `google-ai-search`.
 
-## SEO/GEO QA
+## SEO / AI-Search QA
 
 - [ ] The page has one primary search intent.
 - [ ] The copy answers the main query early.

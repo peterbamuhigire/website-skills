@@ -45,12 +45,13 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |   |-- page-builder/        Page and component production
 |   |-- photo-manager/       Asset cataloging and image selection
 |   |-- seo/                 Search-facing implementation
+|   |-- google-ai-search/    Google AI Overviews / AI Mode readiness and mythbusting
 |   |-- deploy/              QA, launch, rollback, and deployment operations
 |   |-- i18n/                Language infrastructure
 |   |-- sector-strategies/   Sector design and trust-pattern guidance
 |   |-- accessibility-audit/ WCAG 2.2 AA enforcement gate (Phase 10)
 |   |-- visual-qa/           Screenshot diff, structural assertions, AI-slop scan (Phase 10)
-|   |-- security-gate/       Dep audit, headers, SRI, secrets, supply chain, compliance (Phase 10)
+|   |-- security-gate/       Dep audit, headers, security.txt, SRI, secrets, supply chain, compliance (Phase 10)
 |   |-- observability/       RUM + error tracking + analytics + alerting contract (Phase 11)
 |   |-- experimentation/     Hypothesis template, A/B infra, stat primer, quarterly review (Phase 11)
 |   |-- design-quality-score/ 7-category rubric, slop-scan, pre-launch scoring gate (Phase 11)
@@ -79,6 +80,9 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 - `photo-manager`: image cataloging, naming, dimensions, and logo selection
 - `page-builder`: converts content and design decisions into pages and reusable UI
 - `seo`: metadata, schema, sitemap, and crawler-facing configuration
+- `google-ai-search`: applies official Google Search guidance for AI Overviews,
+  AI Mode, AEO/GEO mythbusting, local/ecommerce readiness, Search Console
+  measurement, and agentic-readiness planning
 - `deploy`: verification, release readiness, rollout, rollback, and post-launch checks
 
 ## Enforcement Gates (Phases 10–11)
@@ -88,7 +92,7 @@ pipeline at `templates/ci/website.yml`. These skills own the blocking gates:
 
 - `accessibility-audit` (Phase 10): WCAG 2.2 AA — axe-core + manual + screen reader
 - `visual-qa` (Phase 10): screenshot diff + hierarchy/overflow/empty-section + AI-slop scan
-- `security-gate` (Phase 10): dependency audit, headers, SRI, secrets, supply chain, compliance
+- `security-gate` (Phase 10): dependency audit, headers, security.txt, SRI, secrets, supply chain, compliance
 - `drift-check` (Phase 11): dead links, deprecated references, dated framing, banned terms, 500-line rule
 - `design-quality-score` (Phase 11): 7-category rubric + slop-scan, advisory on PR, blocking on main
 - `premium-ui-ux-design`: premium, ecommerce, lead-generation, and high-ticket
@@ -101,7 +105,7 @@ Canonical commands (runnable from any client project with the skills submodule):
 bash .claude/skills/scripts/perf-gate.sh              # Lighthouse + weight budgets on 3G
 bash .claude/skills/scripts/a11y-gate.sh              # axe-core against every route
 bash .claude/skills/scripts/visual-qa.sh              # Playwright diff + structure + slop
-bash .claude/skills/scripts/security-gate.sh          # dep audit + headers + SRI + secrets + supply-chain
+bash .claude/skills/scripts/security-gate.sh          # dep audit + headers + security.txt + SRI + secrets + supply-chain
 bash .claude/skills/scripts/drift-check.sh            # documentation coherence gate
 bash .claude/skills/scripts/slop-scan.sh              # banned-pattern static scan
 bash .claude/skills/scripts/design-quality-score.sh   # aggregate rubric score
@@ -184,6 +188,10 @@ Recent agency-engine expansion work added the following reference layers:
 - `2026-04-16`: Phase 10 added hard enforcement gates — `accessibility-audit`, `visual-qa`, and `security-gate` skills; canonical CI pipeline at `templates/ci/website.yml`; 13 canonical scripts; `lighthouserc.json` and `performance-budgets.json`; Africa 3G calibration; deploy + website-builder skill updates. See [Phase 10 decision](./project-log/decisions/2026-04-16-phase-10-hard-enforcement-gates.md).
 - `2026-04-16`: Phase 11 added world-class operating discipline — `observability`, `experimentation`, and `design-quality-score` skills; `drift-check.sh`, `slop-scan.sh`, and `design-quality-score.sh` scripts (CI steps 11 + 12); `glossary.md`, `docs/doc-style-guide.md`, `docs/deprecation-policy.md`; certification programme with 60-question exam bank; onboarding validation template; quality-scorecard contract. See [Phase 11 decision](./project-log/decisions/2026-04-16-phase-11-world-class-operating-discipline.md).
 - `2026-04-16`: Phase 12 added the African authority engine — `africa-excellence` skill with six references (low-bandwidth, mobile-money UX, USSD-aware, language pack, trust signals, cultural patterns); public scorecard; `LICENSE` + `docs/licensing-matrix.md`; `docs/roadmap-public.md`; they-ask-you-answer continental publishing rhythm.
+- `2026-05-16`: Added `google-ai-search` as the official Google Search AI layer
+  for AI Overviews, AI Mode, AEO/GEO mythbusting, Search Console measurement,
+  local/ecommerce readiness, and agentic-experience preparation. See
+  [Google AI Search decision](./project-log/decisions/2026-05-16-google-ai-search-skill.md).
 
 ## Working Model
 

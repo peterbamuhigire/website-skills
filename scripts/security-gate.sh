@@ -1,24 +1,26 @@
 #!/usr/bin/env bash
-# security-gate.sh — canonical security + compliance gate.
+# security-gate.sh - canonical security + compliance gate.
 #
 # Orchestrates:
 #   1. npm audit (dependency vulnerabilities)
 #   2. check-security-headers.sh (HSTS, CSP, etc.)
-#   3. check-sri.sh (third-party asset integrity)
-#   4. scan-secrets.sh (leaked credentials)
-#   5. supply-chain-check.sh (lockfile, install scripts, typosquats)
+#   3. check-security-txt.sh (public vulnerability disclosure route)
+#   4. check-sri.sh (third-party asset integrity)
+#   5. scan-secrets.sh (leaked credentials)
+#   6. supply-chain-check.sh (lockfile, install scripts, typosquats)
 #
 # Usage:
 #   bash .claude/skills/scripts/security-gate.sh
 #
 # Exit codes:
-#   0 — all checks pass
-#   1 — npm audit high/critical
-#   2 — security header missing or misconfigured
-#   3 — SRI failure
-#   4 — secret detected
-#   5 — supply-chain failure
-#   6 — prerequisite missing
+#   0 - all checks pass
+#   1 - npm audit high/critical
+#   2 - security header missing or misconfigured
+#   3 - security.txt failure
+#   4 - SRI failure
+#   5 - secret detected
+#   6 - prerequisite missing
+#   7 - supply-chain failure
 
 set -euo pipefail
 
@@ -49,7 +51,7 @@ if [ -f "$SUPPRESSIONS_FILE" ]; then
     HIGH=$(( HIGH - IGNORED > 0 ? HIGH - IGNORED : 0 ))
 fi
 if [ "$HIGH" -gt 0 ] || [ "$CRIT" -gt 0 ]; then
-    echo "security-gate: FAIL — $CRIT critical, $HIGH high vulnerabilities" >&2
+    echo "security-gate: FAIL - $CRIT critical, $HIGH high vulnerabilities" >&2
     exit 1
 fi
 
@@ -60,19 +62,25 @@ if [ -f "$SKILLS_DIR/scripts/check-security-headers.sh" ]; then
     bash "$SKILLS_DIR/scripts/check-security-headers.sh" "$DIST_DIR" || exit 2
 fi
 
-# 3. SRI
-echo "security-gate: SRI"
-if [ -f "$SKILLS_DIR/scripts/check-sri.sh" ]; then
-    bash "$SKILLS_DIR/scripts/check-sri.sh" "$DIST_DIR" "$ROOT/.third-party-allowed" || exit 3
+# 3. security.txt
+echo "security-gate: security.txt"
+if [ -f "$SKILLS_DIR/scripts/check-security-txt.sh" ]; then
+    bash "$SKILLS_DIR/scripts/check-security-txt.sh" "$DIST_DIR" || exit 3
 fi
 
-# 4. Secrets
-echo "security-gate: secrets"
-bash "$SKILLS_DIR/scripts/scan-secrets.sh" || exit 4
+# 4. SRI
+echo "security-gate: SRI"
+if [ -f "$SKILLS_DIR/scripts/check-sri.sh" ]; then
+    bash "$SKILLS_DIR/scripts/check-sri.sh" "$DIST_DIR" "$ROOT/.third-party-allowed" || exit 4
+fi
 
-# 5. Supply chain
+# 5. Secrets
+echo "security-gate: secrets"
+bash "$SKILLS_DIR/scripts/scan-secrets.sh" || exit 5
+
+# 6. Supply chain
 echo "security-gate: supply chain"
-bash "$SKILLS_DIR/scripts/supply-chain-check.sh" || exit 5
+bash "$SKILLS_DIR/scripts/supply-chain-check.sh" || exit 7
 
 {
     echo "# Security Gate Summary"
@@ -81,6 +89,7 @@ bash "$SKILLS_DIR/scripts/supply-chain-check.sh" || exit 5
     echo ""
     echo "- npm audit: PASS (high=$HIGH critical=$CRIT)"
     echo "- Security headers: PASS"
+    echo "- security.txt: PASS"
     echo "- SRI: PASS"
     echo "- Secrets scan: PASS"
     echo "- Supply chain: PASS"

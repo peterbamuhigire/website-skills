@@ -8,6 +8,7 @@
 #   - response time under 3 seconds (uncached path)
 #   - robots.txt reachable
 #   - sitemap.xml reachable
+#   - .well-known/security.txt reachable
 #
 # Usage:
 #   bash .claude/skills/scripts/post-deploy-smoke.sh https://example.com
@@ -62,6 +63,9 @@ check_get "/robots.txt" || FAIL=1
 
 # 3. sitemap.xml
 check_get "/sitemap.xml" || FAIL=1
+
+# 4. security.txt
+check_get "/.well-known/security.txt" || FAIL=1
 
 if [ "$FAIL" -ne 0 ]; then
     echo "post-deploy-smoke: FAIL" >&2

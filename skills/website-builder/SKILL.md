@@ -32,6 +32,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 7. Before `design-system` and page production on premium or revenue-critical work,
    load `premium-ui-ux-design` so visual voice, conversion hierarchy, color,
    imagery, dashboard/proof presentation, and production polish are explicit.
+8. When the brief promises Google AI visibility, AI Overviews, AI Mode, AEO/GEO,
+   or agentic readiness, apply `google-ai-search` before `seo` and page
+   production so Google-specific work is grounded in official Search guidance.
 
 ## Quality standards
 - Preserve the intended build order and artifact handoffs.
@@ -52,7 +55,7 @@ Every project built under this orchestrator must satisfy:
 3. **Visual QA** — `visual-qa.sh` passes screenshot diff, structural
    assertions, and AI-slop scan (`visual-qa/SKILL.md`).
 4. **Security gate** — `security-gate.sh` passes dependency audit, security
-   headers, SRI, secrets scan, and supply-chain check
+   headers, `/.well-known/security.txt`, SRI, secrets scan, and supply-chain check
    (`security-gate/SKILL.md`).
 5. **Design quality score** — the rendered-output rubric score is recorded
    and meets the world-class floor (`design-quality-score/SKILL.md`).
@@ -66,6 +69,9 @@ Every project built under this orchestrator must satisfy:
    `africa-excellence/SKILL.md` and `deploy/references/africa-calibration.md`.
 9. **Live telemetry** — RUM, error tracking, and analytics are wired per
    `observability/SKILL.md`.
+10. **Google AI Search readiness** — projects that mention AI Overviews,
+   AI Mode, AEO/GEO, or Google agentic experiences pass
+   `google-ai-search/SKILL.md` before SEO implementation.
 
 Any gate failure blocks deploy.
 
@@ -99,6 +105,9 @@ Any gate failure blocks deploy.
 - Use sibling skill `premium-website-product` for premium website service packaging,
   owner-facing content/SEO strategy, stack philosophy, launch campaign discipline,
   handover, measurement, and agency proof.
+- Use sibling skill `google-ai-search` when Google AI Overviews, AI Mode,
+  Search Console AI performance, AEO/GEO mythbusting, or agentic readiness is
+  in scope.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
@@ -108,8 +117,8 @@ Any gate failure blocks deploy.
   pipeline: `bash .claude/skills/scripts/install-canonical-ci.sh <project-path>`.
 - The sibling gate skills the orchestrator is responsible for invoking:
   `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
-  `design-quality-score`, `premium-website-product`, `premium-ui-ux-design`, and
-  `africa-excellence`.
+  `design-quality-score`, `premium-website-product`, `premium-ui-ux-design`,
+  `google-ai-search`, and `africa-excellence`.
 
 ## Notes
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.

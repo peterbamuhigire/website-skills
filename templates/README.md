@@ -43,6 +43,7 @@ These add richness. If you don't provide them, the AI will either generate sensi
 | [faq.md](faq.md) | Frequently asked questions and answers | `docs/faq.md` |
 | [about-story.md](about-story.md) | Origin story, mission, vision, values, milestones | `docs/about-story.md` |
 | [gallery.md](gallery.md) | Photo gallery with captions and categories | `docs/gallery.md` |
+| [security-policy.md](security-policy.md) | Public vulnerability disclosure policy linked from `/.well-known/security.txt` | `docs/security-policy.md` |
 
 ### Other Templates (In Skill Directories)
 
@@ -63,6 +64,13 @@ Every client project must maintain a `project-log/` directory at the project roo
 | Project Log | [project-log-template.md](project-log-template.md) | Copy to `project-log/README.md` at project kickoff. Initialise `project-log/CHANGELOG.md` with the first kickoff entry the same day. |
 
 Structure: `project-log/CHANGELOG.md` (append-only daily entries), `project-log/monthly/YYYY-MM.md` (monthly roll-ups, source for monthly reports), `project-log/decisions/` (ADRs), `project-log/incidents/` (outages and security events).
+
+### Security Disclosure (Required at Launch)
+
+Every site must publish `/.well-known/security.txt` and a human-readable
+security disclosure policy page. Start from [security.txt](security.txt) and
+[security-policy.md](security-policy.md), then replace placeholders with the
+client's security contact, canonical domain, expiry date, and disclosure scope.
 
 ## Photo References
 

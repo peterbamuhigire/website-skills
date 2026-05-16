@@ -1,0 +1,10 @@
+# Replace every placeholder before launch. This file must publish at:
+# https://{domain}/.well-known/security.txt
+#
+# RFC 9116 requires Contact and Expires. This engine also requires Policy.
+
+Contact: mailto:security@{domain}
+Expires: {YYYY-MM-DDTHH:MM:SSZ}
+Preferred-Languages: en
+Canonical: https://{domain}/.well-known/security.txt
+Policy: https://{domain}/security-policy/

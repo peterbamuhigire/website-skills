@@ -15,7 +15,7 @@ here before opening the reports or rerunning.
 7. perf-gate — Lighthouse + budgets
 8. a11y-gate — axe-core
 9. visual-qa — screenshot diff + structure + slop
-10. security-gate — dep audit, headers, SRI, secrets, supply-chain
+10. security-gate — dep audit, headers, security.txt, SRI, secrets, supply-chain
 11. drift-check — documentation drift
 12. design-quality-score — rubric (advisory on PR, blocking on main)
 13. deploy — main only, all gates green
