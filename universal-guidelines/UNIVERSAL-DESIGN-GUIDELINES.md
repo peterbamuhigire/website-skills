@@ -816,11 +816,11 @@ Five UX/UI book extractions are now the upstream source for design decisions on 
 ### Pointer to the engine's skills
 
 The skills that operationalize these rules:
-- `skills/premium-ui-ux-design/` — Levy 4 tenets, 5 outcomes, PM rules
-- `skills/ux-psychology/` — Three Paradigms, working memory, 4-stage affordance, 3 levels of UX scope
-- `skills/design-quality-score/` — UX Maturity 5-level checklist as 8th rubric category
-- `skills/design-reference/` — Levy 19-column competitive matrix
-- `skills/design-system/` — enterprise data-viz rules, first-impression checklist, enterprise anti-patterns
+- `skills/orchestration/premium-ui-ux-design/` — Levy 4 tenets, 5 outcomes, PM rules
+- `skills/ux-conversion/ux-psychology/` — Three Paradigms, working memory, 4-stage affordance, 3 levels of UX scope
+- `skills/quality-gates/design-quality-score/` — UX Maturity 5-level checklist as 8th rubric category
+- `skills/build/design-reference/` — Levy 19-column competitive matrix
+- `skills/build/design-system/` — enterprise data-viz rules, first-impression checklist, enterprise anti-patterns
 
 ---
 

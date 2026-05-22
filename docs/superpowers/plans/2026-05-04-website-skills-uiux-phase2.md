@@ -157,10 +157,10 @@ If the client's brief matches any of these, push back before scoping.
 
 - [ ] **Step 2: Verify file exists and has expected size**
 
-Run: `wc -l "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/references/levy-four-tenets.md"`
+Run: `wc -l "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/references/levy-four-tenets.md"`
 Expected: ≥ 60 lines.
 
-Run: `grep -c "^## " "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/references/levy-four-tenets.md"`
+Run: `grep -c "^## " "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/references/levy-four-tenets.md"`
 Expected: ≥ 5 (multiple `##` section headers).
 
 ---
@@ -214,7 +214,7 @@ Most enterprise apps fail on outcomes 2 and 3 — they're full of features but s
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^- \[ \]" "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/references/enterprise-five-outcomes.md"`
+Run: `grep -c "^- \[ \]" "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/references/enterprise-five-outcomes.md"`
 Expected: 5 (the checklist items).
 
 ---
@@ -281,7 +281,7 @@ User tests, fieldwork, A/B tests, interviews, remote tests, guerrilla tests, 5-s
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^### " "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/references/pm-collaboration-rules.md"`
+Run: `grep -c "^### " "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/references/pm-collaboration-rules.md"`
 Expected: ≥ 6 (the 5+1 rules).
 
 ---
@@ -293,7 +293,7 @@ Expected: ≥ 6 (the 5+1 rules).
 
 - [ ] **Step 1: Read the current file end**
 
-Run: `tail -15 "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/SKILL.md"`
+Run: `tail -15 "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/SKILL.md"`
 Note the last line for safe append placement.
 
 - [ ] **Step 2: Append the new subsection**
@@ -315,10 +315,10 @@ If a brief fails Levy's Top-10 check or omits any of the 5 outcomes, push back b
 
 - [ ] **Step 3: Verify**
 
-Run: `grep -c "World-class UX foundations" "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/SKILL.md"`
+Run: `grep -c "World-class UX foundations" "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/SKILL.md"`
 Expected: 1.
 
-Run: `grep -c "levy-four-tenets\|enterprise-five-outcomes\|pm-collaboration-rules" "C:/wamp64/www/website-skills/skills/premium-ui-ux-design/SKILL.md"`
+Run: `grep -c "levy-four-tenets\|enterprise-five-outcomes\|pm-collaboration-rules" "C:/wamp64/www/website-skills/skills/orchestration/premium-ui-ux-design/SKILL.md"`
 Expected: 3.
 
 ---
@@ -329,7 +329,7 @@ Expected: 3.
 
 ```bash
 cd "C:/wamp64/www/website-skills"
-git add skills/premium-ui-ux-design/
+git add skills/orchestration/premium-ui-ux-design/
 git commit -m "premium-ui-ux-design: add Levy 4 tenets + enterprise 5 outcomes + Fekeshazi PM rules
 
 Phase 2 UX upgrade per spec 2026-05-04-website-skills-uiux-phase2-design.md.
@@ -415,7 +415,7 @@ A premium website typically requires all three paradigms applied to different su
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^### Paradigm" "C:/wamp64/www/website-skills/skills/ux-psychology/references/three-paradigms-of-hci.md"`
+Run: `grep -c "^### Paradigm" "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/references/three-paradigms-of-hci.md"`
 Expected: 3.
 
 ---
@@ -482,7 +482,7 @@ The **overall experience** with the organization. Aka customer experience level.
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^### Level " "C:/wamp64/www/website-skills/skills/ux-psychology/references/three-levels-of-ux-scope.md"`
+Run: `grep -c "^### Level " "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/references/three-levels-of-ux-scope.md"`
 Expected: 3.
 
 ---
@@ -573,10 +573,10 @@ Walk every primary CTA on a template through Presence → Visibility → Recogni
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "added 2026-05-04 from Branson" "C:/wamp64/www/website-skills/skills/ux-psychology/references/legacy-guidance.md"`
+Run: `grep -c "added 2026-05-04 from Branson" "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/references/legacy-guidance.md"`
 Expected: 2.
 
-Run: `grep -c "Recognition over recall\|Stage 4: Intelligibility" "C:/wamp64/www/website-skills/skills/ux-psychology/references/legacy-guidance.md"`
+Run: `grep -c "Recognition over recall\|Stage 4: Intelligibility" "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/references/legacy-guidance.md"`
 Expected: 2.
 
 ---
@@ -588,7 +588,7 @@ Expected: 2.
 
 - [ ] **Step 1: Read current frontmatter**
 
-Run: `head -8 "C:/wamp64/www/website-skills/skills/ux-psychology/SKILL.md"`
+Run: `head -8 "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/SKILL.md"`
 
 Note the existing `description:` line for replacement.
 
@@ -615,7 +615,7 @@ Append:
 
 - [ ] **Step 4: Verify**
 
-Run: `grep -c "three-paradigms-of-hci\|three-levels-of-ux-scope\|four-stage cognitive affordance" "C:/wamp64/www/website-skills/skills/ux-psychology/SKILL.md"`
+Run: `grep -c "three-paradigms-of-hci\|three-levels-of-ux-scope\|four-stage cognitive affordance" "C:/wamp64/www/website-skills/skills/ux-conversion/ux-psychology/SKILL.md"`
 Expected: ≥ 3.
 
 ---
@@ -626,7 +626,7 @@ Expected: ≥ 3.
 
 ```bash
 cd "C:/wamp64/www/website-skills"
-git add skills/ux-psychology/
+git add skills/ux-conversion/ux-psychology/
 git commit -m "ux-psychology: add Branson 3 paradigms + memory rules + 4-stage affordance, Deacon UX scope levels
 
 Phase 2 UX upgrade per spec 2026-05-04-website-skills-uiux-phase2-design.md.
@@ -750,7 +750,7 @@ For each activity required at the project's claimed maturity level: was it actua
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^### Level " "C:/wamp64/www/website-skills/skills/design-quality-score/references/enterprise-ux-maturity-checklist.md"`
+Run: `grep -c "^### Level " "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/references/enterprise-ux-maturity-checklist.md"`
 Expected: 5.
 
 ---
@@ -762,7 +762,7 @@ Expected: 5.
 
 - [ ] **Step 1: Inspect existing structure**
 
-Run: `grep "^## " "C:/wamp64/www/website-skills/skills/design-quality-score/references/rubric.md" | head -20`
+Run: `grep "^## " "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/references/rubric.md" | head -20`
 Identify how the existing 7 categories are formatted.
 
 - [ ] **Step 2: Append the 8th category**
@@ -816,10 +816,10 @@ Documented presence of all of:
 
 - [ ] **Step 3: Verify**
 
-Run: `grep -c "Category 8: UX Maturity" "C:/wamp64/www/website-skills/skills/design-quality-score/references/rubric.md"`
+Run: `grep -c "Category 8: UX Maturity" "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/references/rubric.md"`
 Expected: 1.
 
-Run: `grep -c "additive" "C:/wamp64/www/website-skills/skills/design-quality-score/references/rubric.md"`
+Run: `grep -c "additive" "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/references/rubric.md"`
 Expected: ≥ 1.
 
 ---
@@ -863,7 +863,7 @@ Subjective scoring drifts toward whoever is most senior or most opinionated. Anc
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "Resolving scorer disagreements" "C:/wamp64/www/website-skills/skills/design-quality-score/references/score-calibration.md"`
+Run: `grep -c "Resolving scorer disagreements" "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/references/score-calibration.md"`
 Expected: 1.
 
 ---
@@ -875,7 +875,7 @@ Expected: 1.
 
 - [ ] **Step 1: Find current rubric mention**
 
-Run: `grep -n "rubric\|7-category\|category" "C:/wamp64/www/website-skills/skills/design-quality-score/SKILL.md" | head -5`
+Run: `grep -n "rubric\|7-category\|category" "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/SKILL.md" | head -5`
 
 - [ ] **Step 2: Update the rubric overview**
 
@@ -891,7 +891,7 @@ If the description does not mention `7-category` literally, instead append this 
 
 - [ ] **Step 3: Verify**
 
-Run: `grep -c "UX Maturity\|enterprise-ux-maturity-checklist\|Category 8" "C:/wamp64/www/website-skills/skills/design-quality-score/SKILL.md"`
+Run: `grep -c "UX Maturity\|enterprise-ux-maturity-checklist\|Category 8" "C:/wamp64/www/website-skills/skills/quality-gates/design-quality-score/SKILL.md"`
 Expected: ≥ 1.
 
 ---
@@ -902,7 +902,7 @@ Expected: ≥ 1.
 
 ```bash
 cd "C:/wamp64/www/website-skills"
-git add skills/design-quality-score/
+git add skills/quality-gates/design-quality-score/
 git commit -m "design-quality-score: add UX Maturity 8th category + scorer-disagreement protocol
 
 Phase 2 UX upgrade per spec 2026-05-04-website-skills-uiux-phase2-design.md.
@@ -1013,7 +1013,7 @@ After filling the matrix, distill into a brief that:
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^| [0-9]" "C:/wamp64/www/website-skills/skills/design-reference/references/levy-competitive-matrix.md"`
+Run: `grep -c "^| [0-9]" "C:/wamp64/www/website-skills/skills/build/design-reference/references/levy-competitive-matrix.md"`
 Expected: 19 (the matrix rows).
 
 ---
@@ -1025,7 +1025,7 @@ Expected: 19 (the matrix rows).
 
 - [ ] **Step 1: Read existing content**
 
-Run: `cat "C:/wamp64/www/website-skills/skills/design-reference/references/competitor-analysis-worksheet.md"`
+Run: `cat "C:/wamp64/www/website-skills/skills/build/design-reference/references/competitor-analysis-worksheet.md"`
 
 Note any sector-specific or local additions that must be preserved.
 
@@ -1059,7 +1059,7 @@ A competitive analysis is complete when:
 
 - [ ] **Step 3: Verify**
 
-Run: `grep -c "Canonical worksheet format\|Levy matrix" "C:/wamp64/www/website-skills/skills/design-reference/references/competitor-analysis-worksheet.md"`
+Run: `grep -c "Canonical worksheet format\|Levy matrix" "C:/wamp64/www/website-skills/skills/build/design-reference/references/competitor-analysis-worksheet.md"`
 Expected: ≥ 2.
 
 ---
@@ -1084,7 +1084,7 @@ Minimum data set: 5 direct + 3 indirect competitors fully filled, with A–F heu
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "levy-competitive-matrix\|19-column" "C:/wamp64/www/website-skills/skills/design-reference/SKILL.md"`
+Run: `grep -c "levy-competitive-matrix\|19-column" "C:/wamp64/www/website-skills/skills/build/design-reference/SKILL.md"`
 Expected: ≥ 1.
 
 ---
@@ -1095,7 +1095,7 @@ Expected: ≥ 1.
 
 ```bash
 cd "C:/wamp64/www/website-skills"
-git add skills/design-reference/
+git add skills/build/design-reference/
 git commit -m "design-reference: adopt Levy 19-column competitive matrix as canonical worksheet
 
 Phase 2 UX upgrade per spec 2026-05-04-website-skills-uiux-phase2-design.md.
@@ -1189,7 +1189,7 @@ The brain processes these *before* conscious attention. Use them to direct the u
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "^- \*\*No " "C:/wamp64/www/website-skills/skills/design-system/references/enterprise-data-viz-rules.md"`
+Run: `grep -c "^- \*\*No " "C:/wamp64/www/website-skills/skills/build/design-system/references/enterprise-data-viz-rules.md"`
 Expected: ≥ 2.
 
 ---
@@ -1251,7 +1251,7 @@ At first use, you have a maximum of 5–10 minutes to give users answers about h
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "First-impression and orientation\|5–10 minute rule" "C:/wamp64/www/website-skills/skills/design-system/references/ux-quality-checklist.md"`
+Run: `grep -c "First-impression and orientation\|5–10 minute rule" "C:/wamp64/www/website-skills/skills/build/design-system/references/ux-quality-checklist.md"`
 Expected: ≥ 1.
 
 ---
@@ -1310,7 +1310,7 @@ These five patterns appear most often in B2B / SaaS / dashboard work. Detect ear
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "Enterprise anti-patterns\|Feature overload\|Uninformed design" "C:/wamp64/www/website-skills/skills/design-system/references/ai-slop-prevention.md"`
+Run: `grep -c "Enterprise anti-patterns\|Feature overload\|Uninformed design" "C:/wamp64/www/website-skills/skills/build/design-system/references/ai-slop-prevention.md"`
 Expected: ≥ 3.
 
 ---
@@ -1333,7 +1333,7 @@ For projects that include dashboards (executive, operational, public-facing), ad
 
 - [ ] **Step 2: Verify**
 
-Run: `grep -c "enterprise-data-viz-rules\|Dashboard and data-viz" "C:/wamp64/www/website-skills/skills/design-system/SKILL.md"`
+Run: `grep -c "enterprise-data-viz-rules\|Dashboard and data-viz" "C:/wamp64/www/website-skills/skills/build/design-system/SKILL.md"`
 Expected: ≥ 1.
 
 ---
@@ -1344,7 +1344,7 @@ Expected: ≥ 1.
 
 ```bash
 cd "C:/wamp64/www/website-skills"
-git add skills/design-system/
+git add skills/build/design-system/
 git commit -m "design-system: add data-viz rules + first-impression checklist + enterprise anti-patterns
 
 Phase 2 UX upgrade per spec 2026-05-04-website-skills-uiux-phase2-design.md.
@@ -1398,11 +1398,11 @@ Five UX/UI book extractions are now the upstream source for design decisions on 
 ### Pointer to the engine's skills
 
 The skills that operationalize these rules:
-- `skills/premium-ui-ux-design/` — Levy 4 tenets, 5 outcomes, PM rules
-- `skills/ux-psychology/` — Three Paradigms, working memory, 4-stage affordance, 3 levels of UX scope
-- `skills/design-quality-score/` — UX Maturity 5-level checklist as 8th rubric category
-- `skills/design-reference/` — Levy 19-column competitive matrix
-- `skills/design-system/` — enterprise data-viz rules, first-impression checklist, enterprise anti-patterns
+- `skills/orchestration/premium-ui-ux-design/` — Levy 4 tenets, 5 outcomes, PM rules
+- `skills/ux-conversion/ux-psychology/` — Three Paradigms, working memory, 4-stage affordance, 3 levels of UX scope
+- `skills/quality-gates/design-quality-score/` — UX Maturity 5-level checklist as 8th rubric category
+- `skills/build/design-reference/` — Levy 19-column competitive matrix
+- `skills/build/design-system/` — enterprise data-viz rules, first-impression checklist, enterprise anti-patterns
 
 ```
 
@@ -1509,14 +1509,14 @@ Run:
 ```bash
 cd "C:/wamp64/www/website-skills"
 for f in \
-  skills/premium-ui-ux-design/references/levy-four-tenets.md \
-  skills/premium-ui-ux-design/references/enterprise-five-outcomes.md \
-  skills/premium-ui-ux-design/references/pm-collaboration-rules.md \
-  skills/ux-psychology/references/three-paradigms-of-hci.md \
-  skills/ux-psychology/references/three-levels-of-ux-scope.md \
-  skills/design-quality-score/references/enterprise-ux-maturity-checklist.md \
-  skills/design-reference/references/levy-competitive-matrix.md \
-  skills/design-system/references/enterprise-data-viz-rules.md \
+  skills/orchestration/premium-ui-ux-design/references/levy-four-tenets.md \
+  skills/orchestration/premium-ui-ux-design/references/enterprise-five-outcomes.md \
+  skills/orchestration/premium-ui-ux-design/references/pm-collaboration-rules.md \
+  skills/ux-conversion/ux-psychology/references/three-paradigms-of-hci.md \
+  skills/ux-conversion/ux-psychology/references/three-levels-of-ux-scope.md \
+  skills/quality-gates/design-quality-score/references/enterprise-ux-maturity-checklist.md \
+  skills/build/design-reference/references/levy-competitive-matrix.md \
+  skills/build/design-system/references/enterprise-data-viz-rules.md \
 ; do test -f "$f" && echo "OK: $f" || echo "MISSING: $f"; done
 ```
 
@@ -1529,12 +1529,12 @@ Run:
 ```bash
 cd "C:/wamp64/www/website-skills"
 grep -l "added 2026-05-04" \
-  skills/ux-psychology/references/legacy-guidance.md \
-  skills/design-quality-score/references/rubric.md \
-  skills/design-quality-score/references/score-calibration.md \
-  skills/design-reference/references/competitor-analysis-worksheet.md \
-  skills/design-system/references/ux-quality-checklist.md \
-  skills/design-system/references/ai-slop-prevention.md \
+  skills/ux-conversion/ux-psychology/references/legacy-guidance.md \
+  skills/quality-gates/design-quality-score/references/rubric.md \
+  skills/quality-gates/design-quality-score/references/score-calibration.md \
+  skills/build/design-reference/references/competitor-analysis-worksheet.md \
+  skills/build/design-system/references/ux-quality-checklist.md \
+  skills/build/design-system/references/ai-slop-prevention.md \
   universal-guidelines/UNIVERSAL-DESIGN-GUIDELINES.md \
   universal-guidelines/ux-laws-and-psychology.md
 ```
@@ -1548,11 +1548,11 @@ Run:
 ```bash
 cd "C:/wamp64/www/website-skills"
 for f in \
-  skills/premium-ui-ux-design/SKILL.md \
-  skills/ux-psychology/SKILL.md \
-  skills/design-quality-score/SKILL.md \
-  skills/design-reference/SKILL.md \
-  skills/design-system/SKILL.md \
+  skills/orchestration/premium-ui-ux-design/SKILL.md \
+  skills/ux-conversion/ux-psychology/SKILL.md \
+  skills/quality-gates/design-quality-score/SKILL.md \
+  skills/build/design-reference/SKILL.md \
+  skills/build/design-system/SKILL.md \
 ; do echo "=== $f ==="; grep -c "levy\|enterprise\|three-paradigms\|three-levels\|World-class\|Category 8\|UX Maturity\|Dashboard\|2026-05-04" "$f"; done
 ```
 

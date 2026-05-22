@@ -13,42 +13,42 @@ The website engine now ties strategy, UX, content, conversion, technical quality
 
 New skills (5):
 
-- `skills/website-experience-mapping/SKILL.md`
-- `skills/website-experience-mapping/references/mapping-method-selector.md`
-- `skills/website-experience-mapping/references/discovery-interview-guide.md`
-- `skills/website-experience-mapping/references/map-to-sitemap-conversion.md`
-- `skills/website-experience-mapping/references/alignment-workshop-runbook.md`
-- `skills/service-blueprint-website-delivery/SKILL.md`
-- `skills/service-blueprint-website-delivery/references/agency-delivery-blueprint.md`
-- `skills/service-blueprint-website-delivery/references/promise-to-operations-traceability.md`
-- `skills/service-blueprint-website-delivery/references/fail-point-recovery-playbook.md`
-- `skills/service-blueprint-website-delivery/references/retainer-and-support-design.md`
-- `skills/premium-sales-conversation/SKILL.md`
-- `skills/premium-sales-conversation/references/qualification-and-discovery-questions.md`
-- `skills/premium-sales-conversation/references/premium-objection-handling.md`
-- `skills/premium-sales-conversation/references/premium-pricing-defence.md`
-- `skills/premium-sales-conversation/references/no-fit-and-referral-scripts.md`
-- `skills/customer-service-website-ops/SKILL.md`
-- `skills/customer-service-website-ops/references/service-language-patterns.md`
-- `skills/customer-service-website-ops/references/triage-and-escalation-matrix.md`
-- `skills/customer-service-website-ops/references/recovery-and-retention-gestures.md`
-- `skills/customer-service-website-ops/references/post-launch-support-runbook.md`
-- `skills/marketing-measurement-system/SKILL.md`
-- `skills/marketing-measurement-system/references/kpi-tree-and-definitions.md`
-- `skills/marketing-measurement-system/references/customer-insight-loop.md`
-- `skills/marketing-measurement-system/references/loyalty-and-retention-plan.md`
-- `skills/marketing-measurement-system/references/quarterly-business-review.md`
+- `skills/orchestration/website-experience-mapping/SKILL.md`
+- `skills/orchestration/website-experience-mapping/references/mapping-method-selector.md`
+- `skills/orchestration/website-experience-mapping/references/discovery-interview-guide.md`
+- `skills/orchestration/website-experience-mapping/references/map-to-sitemap-conversion.md`
+- `skills/orchestration/website-experience-mapping/references/alignment-workshop-runbook.md`
+- `skills/agency-ops/service-blueprint-website-delivery/SKILL.md`
+- `skills/agency-ops/service-blueprint-website-delivery/references/agency-delivery-blueprint.md`
+- `skills/agency-ops/service-blueprint-website-delivery/references/promise-to-operations-traceability.md`
+- `skills/agency-ops/service-blueprint-website-delivery/references/fail-point-recovery-playbook.md`
+- `skills/agency-ops/service-blueprint-website-delivery/references/retainer-and-support-design.md`
+- `skills/agency-ops/premium-sales-conversation/SKILL.md`
+- `skills/agency-ops/premium-sales-conversation/references/qualification-and-discovery-questions.md`
+- `skills/agency-ops/premium-sales-conversation/references/premium-objection-handling.md`
+- `skills/agency-ops/premium-sales-conversation/references/premium-pricing-defence.md`
+- `skills/agency-ops/premium-sales-conversation/references/no-fit-and-referral-scripts.md`
+- `skills/agency-ops/customer-service-website-ops/SKILL.md`
+- `skills/agency-ops/customer-service-website-ops/references/service-language-patterns.md`
+- `skills/agency-ops/customer-service-website-ops/references/triage-and-escalation-matrix.md`
+- `skills/agency-ops/customer-service-website-ops/references/recovery-and-retention-gestures.md`
+- `skills/agency-ops/customer-service-website-ops/references/post-launch-support-runbook.md`
+- `skills/launch-ops/marketing-measurement-system/SKILL.md`
+- `skills/launch-ops/marketing-measurement-system/references/kpi-tree-and-definitions.md`
+- `skills/launch-ops/marketing-measurement-system/references/customer-insight-loop.md`
+- `skills/launch-ops/marketing-measurement-system/references/loyalty-and-retention-plan.md`
+- `skills/launch-ops/marketing-measurement-system/references/quarterly-business-review.md`
 
 References added to existing skills (8):
 
-- `skills/form-ux-design/references/lead-form-quality-gate.md`
-- `skills/ecommerce-checkout/references/checkout-form-quality-gate.md`
-- `skills/content-writing/references/ux-writing-pattern-library.md`
-- `skills/brand-storytelling/references/narrative-spine-and-emotional-arc.md`
-- `skills/cro-audit/references/ethical-persuasion-gate.md`
-- `skills/premium-ui-ux-design/references/client-design-decision-presentation.md`
-- `skills/premium-website-product/references/premium-discovery-protocol.md`
-- `skills/agency-client-retention/references/post-launch-retention-playbook.md`
+- `skills/ux-conversion/form-ux-design/references/lead-form-quality-gate.md`
+- `skills/commerce/ecommerce-checkout/references/checkout-form-quality-gate.md`
+- `skills/content-copy/content-writing/references/ux-writing-pattern-library.md`
+- `skills/brand/brand-storytelling/references/narrative-spine-and-emotional-arc.md`
+- `skills/ux-conversion/cro-audit/references/ethical-persuasion-gate.md`
+- `skills/orchestration/premium-ui-ux-design/references/client-design-decision-presentation.md`
+- `skills/orchestration/premium-website-product/references/premium-discovery-protocol.md`
+- `skills/agency-ops/agency-client-retention/references/post-launch-retention-playbook.md`
 
 Routing and governance updates (2):
 
@@ -118,11 +118,11 @@ Upgraded skills (8 reference files, no SKILL.md rewrites):
 
 ## Validation commands and results
 
-- `python -X utf8 skills/skill-writing/scripts/quick_validate.py skills/website-experience-mapping` → Skill is valid.
-- `python -X utf8 skills/skill-writing/scripts/quick_validate.py skills/service-blueprint-website-delivery` → Skill is valid.
-- `python -X utf8 skills/skill-writing/scripts/quick_validate.py skills/premium-sales-conversation` → Skill is valid.
-- `python -X utf8 skills/skill-writing/scripts/quick_validate.py skills/customer-service-website-ops` → Skill is valid.
-- `python -X utf8 skills/skill-writing/scripts/quick_validate.py skills/marketing-measurement-system` → Skill is valid.
+- `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py skills/orchestration/website-experience-mapping` → Skill is valid.
+- `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py skills/agency-ops/service-blueprint-website-delivery` → Skill is valid.
+- `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py skills/agency-ops/premium-sales-conversation` → Skill is valid.
+- `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py skills/agency-ops/customer-service-website-ops` → Skill is valid.
+- `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py skills/launch-ops/marketing-measurement-system` → Skill is valid.
 - `bash scripts/slop-scan.sh skills/<each new skill>` → PASS (no banned headlines, fillers, gradient signals, generic trust rows, or banned transitions).
 - `bash scripts/drift-check.sh` → exit 0 after fixing two minor flags during this session (replaced "next quarter's" with "upcoming quarter's"; removed inline quoting of banned superlatives so the lint heuristic does not match the very anti-pattern guidance).
 

@@ -4,7 +4,7 @@ Date: 2026-05-16
 
 ## Decision
 
-Add `skills/google-ai-search/` as the engine's official Google Search AI layer
+Add `skills/seo-search/google-ai-search/` as the engine's official Google Search AI layer
 for AI Overviews, AI Mode, AEO/GEO mythbusting, Search Console measurement,
 local/ecommerce readiness, and agentic-experience preparation.
 

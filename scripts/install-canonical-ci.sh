@@ -134,5 +134,5 @@ Next steps in this project:
   6. Configure GitHub variables: DEPLOY_PATH, PRODUCTION_URL.
   7. Trigger the workflow and verify every gate runs.
 
-See .claude/skills/deploy/references/ci-troubleshooting.md for common issues.
+See .claude/skills/launch-ops/deploy/references/ci-troubleshooting.md for common issues.
 EOF

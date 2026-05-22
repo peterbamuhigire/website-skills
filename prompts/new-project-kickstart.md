@@ -401,7 +401,7 @@ Include:
 
 Now build the complete website by invoking the skills in `.claude/skills/` in the correct sequence.
 
-**Read the `website-builder` skill first:** `.claude/skills/website-builder/SKILL.md`
+**Read the `website-builder` skill first:** `.claude/skills/orchestration/website-builder/SKILL.md`
 
 Follow the website-builder skill exactly. It will orchestrate the remaining skills in the correct order:
 
