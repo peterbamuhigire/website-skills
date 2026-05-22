@@ -55,7 +55,7 @@ website-agency-engine plan against repository state.
 ## LOW PRIORITY
 
 **Post-Phase-12 continuous work**
-- Annual calibration refresh (`skills/deploy/references/africa-calibration.md`).
+- Annual calibration refresh (`skills/launch-ops/deploy/references/africa-calibration.md`).
 - Quarterly drift-check audit (Phase 11 W2 output).
 - Quarterly case-study publishing rhythm (Phase 12 W3).
 - Annual upstream open-source contribution (Phase 12 W5).

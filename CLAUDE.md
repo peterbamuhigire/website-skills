@@ -21,7 +21,7 @@ Premium is the default commercial standard for this repository. Website work mus
 ## Repo Model
 
 - `SKILL.md` is the concise execution layer
-- Skills live under `skills/<skill-name>/SKILL.md`.
+- Skills live under `skills/<category>/<skill-name>/SKILL.md` across 11 thematic categories (see "Skill Categories" below).
 - Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, never in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` contains detailed material, including `legacy-guidance.md`
 - `scripts/` contains deterministic helpers where needed
@@ -33,41 +33,59 @@ The repository root should contain project documentation plus `docs/`, `skills/`
 
 ## Repository Structure
 
+### Skill Categories
+
+Skills are organised under `skills/<category>/<skill>/` in 11 thematic categories:
+
+- **`agency-ops/`** (11) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, email-sender, launch-campaigns, monthly-report, policy-pages, premium-sales-conversation, service-blueprint-website-delivery, social-media
+- **`brand/`** (4) — brand-alignment, brand-storytelling, brand-strategy, brand-style-guide
+- **`build/`** (8) — color-selection, design-reference, design-system, i18n, image-compression, page-builder, photo-manager, sector-strategies
+- **`commerce/`** (4) — ecommerce, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
+- **`content-copy/`** (8) — blog-idea-generator, blog-writer, content-writing, east-african-english, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting
+- **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
+- **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
+- **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
+- **`quality-gates/`** (4) — accessibility-audit, design-quality-score, security-gate, visual-qa
+- **`seo-search/`** (3) — google-ai-search, seo, seo-audit
+- **`ux-conversion/`** (4) — cro-audit, form-ux-design, they-ask-you-answer, ux-psychology
+
+Always reference skills by their full categorised path: `skills/<category>/<skill>/SKILL.md`.
+
 ### Core Build Skills
 
 ```text
-skills/i18n/SKILL.md               <- Multi-language infrastructure
-skills/language-standards/SKILL.md <- Language and tone standards
-skills/content-writing/SKILL.md    <- Copywriting standards
-skills/brand-alignment/SKILL.md    <- Brand coherence quality gate
-skills/design-reference/SKILL.md   <- Reference-site analysis
-skills/sector-strategies/SKILL.md  <- Industry-specific design and trust signals
-skills/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
-skills/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
-skills/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
-skills/page-builder/SKILL.md       <- Content to pages and components
-skills/seo/SKILL.md                <- Search-facing implementation
-skills/google-ai-search/SKILL.md   <- Google AI Overviews / AI Mode readiness
-skills/blog-writer/SKILL.md        <- Blog production
-skills/deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
-skills/premium-website-product/    <- Premium website-as-product strategy, content, SEO, stack, launch, and agency proof gate
-skills/premium-ui-ux-design/       <- Premium website UI/UX and visual quality gate
+skills/build/i18n/SKILL.md               <- Multi-language infrastructure
+skills/content-copy/language-standards/SKILL.md <- Language and tone standards
+skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
+skills/brand/brand-alignment/SKILL.md    <- Brand coherence quality gate
+skills/build/design-reference/SKILL.md   <- Reference-site analysis
+skills/build/sector-strategies/SKILL.md  <- Industry-specific design and trust signals
+skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
+skills/build/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
+skills/build/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
+skills/build/page-builder/SKILL.md       <- Content to pages and components
+skills/seo-search/seo/SKILL.md                <- Search-facing implementation
+skills/seo-search/google-ai-search/SKILL.md   <- Google AI Overviews / AI Mode readiness
+skills/content-copy/blog-writer/SKILL.md        <- Blog production
+skills/launch-ops/deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
+skills/orchestration/premium-website-product/    <- Premium website-as-product strategy, content, SEO, stack, launch, and agency proof gate
+skills/orchestration/premium-ui-ux-design/       <- Premium website UI/UX and visual quality gate
 ```
 
 ### Enforcement Skills (Phase 10 — added 2026-04-16)
 
 ```text
-skills/accessibility-audit/SKILL.md <- WCAG 2.2 AA gate: axe-core + manual + screen reader
-skills/visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-section + AI-slop
-skills/security-gate/SKILL.md       <- Dep audit + headers + security.txt + SRI + secrets + supply chain + compliance
+skills/quality-gates/accessibility-audit/SKILL.md <- WCAG 2.2 AA gate: axe-core + manual + screen reader
+skills/quality-gates/visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-section + AI-slop
+skills/quality-gates/security-gate/SKILL.md       <- Dep audit + headers + security.txt + SRI + secrets + supply chain + compliance
 ```
 
 ### Operating Discipline Skills (Phase 11 — added 2026-04-16)
 
 ```text
-skills/observability/SKILL.md        <- RUM + error tracking + analytics + alert thresholds
-skills/experimentation/SKILL.md      <- Hypothesis template + stat primer + A/B infra + quarterly review
-skills/design-quality-score/SKILL.md <- 7-category rubric + slop-scan (CI step 12)
+skills/launch-ops/observability/SKILL.md        <- RUM + error tracking + analytics + alert thresholds
+skills/launch-ops/experimentation/SKILL.md      <- Hypothesis template + stat primer + A/B infra + quarterly review
+skills/quality-gates/design-quality-score/SKILL.md <- 7-category rubric + slop-scan (CI step 12)
 ```
 
 Phase 11 also adds: `glossary.md` (canonical names), `docs/doc-style-guide.md`
@@ -78,7 +96,7 @@ Phase 11 also adds: `glossary.md` (canonical names), `docs/doc-style-guide.md`
 ### Authority Skills (Phase 12 — added 2026-04-16)
 
 ```text
-skills/africa-excellence/SKILL.md    <- Low-bandwidth, mobile-money UX, USSD-aware,
+skills/orchestration/africa-excellence/SKILL.md    <- Low-bandwidth, mobile-money UX, USSD-aware,
                                  language pack, trust signals, cultural patterns
 ```
 
@@ -96,24 +114,24 @@ Canonical CI pipeline at `templates/ci/website.yml`.
 ### Support And Audit Skills
 
 ```text
-skills/seo-audit/SKILL.md               <- Post-build SEO audit
-skills/blog-idea-generator/SKILL.md     <- Blog ideation
-skills/email-sender/SKILL.md            <- Self-hosted contact-form handler
-skills/form-ux-design/SKILL.md          <- Form UX guidance
-skills/ux-psychology/SKILL.md           <- Behavioral UX review lens
-skills/image-compression/SKILL.md       <- Build-time image compression
-skills/policy-pages/SKILL.md            <- Privacy and terms guidance
-skills/color-selection/SKILL.md         <- Color palette design
-skills/sales-copywriting/SKILL.md       <- Persuasion and conversion copywriting
-skills/brand-strategy/SKILL.md          <- Brand brief development
-skills/brand-storytelling/SKILL.md      <- Narrative and story structure
-skills/brand-style-guide/SKILL.md       <- Client-facing style guide
-skills/cro-audit/SKILL.md               <- Conversion audit
-skills/social-media/SKILL.md            <- Social strategy and service layer
-skills/skill-writing/SKILL.md           <- Skill authoring
-skills/skill-safety-audit/SKILL.md      <- Skill safety review
-skills/update-claude-documentation/     <- Top-level documentation maintenance
-skills/east-african-english/SKILL.md    <- Legacy English-only standard
+skills/seo-search/seo-audit/SKILL.md               <- Post-build SEO audit
+skills/content-copy/blog-idea-generator/SKILL.md     <- Blog ideation
+skills/agency-ops/email-sender/SKILL.md            <- Self-hosted contact-form handler
+skills/ux-conversion/form-ux-design/SKILL.md          <- Form UX guidance
+skills/ux-conversion/ux-psychology/SKILL.md           <- Behavioral UX review lens
+skills/build/image-compression/SKILL.md       <- Build-time image compression
+skills/agency-ops/policy-pages/SKILL.md            <- Privacy and terms guidance
+skills/build/color-selection/SKILL.md         <- Color palette design
+skills/content-copy/sales-copywriting/SKILL.md       <- Persuasion and conversion copywriting
+skills/brand/brand-strategy/SKILL.md          <- Brand brief development
+skills/brand/brand-storytelling/SKILL.md      <- Narrative and story structure
+skills/brand/brand-style-guide/SKILL.md       <- Client-facing style guide
+skills/ux-conversion/cro-audit/SKILL.md               <- Conversion audit
+skills/agency-ops/social-media/SKILL.md            <- Social strategy and service layer
+skills/meta/skill-writing/SKILL.md           <- Skill authoring
+skills/meta/skill-safety-audit/SKILL.md      <- Skill safety review
+skills/meta/update-claude-documentation/     <- Top-level documentation maintenance
+skills/content-copy/east-african-english/SKILL.md    <- Legacy English-only standard
 ```
 
 ### External Skill Set
@@ -177,8 +195,8 @@ Any gate failure blocks deploy. Thresholds live in `lighthouserc.json` and
 `performance-budgets.json` and are non-negotiable; adjustments require a
 decision entry under `project-log/decisions/`.
 
-Full reference: `skills/deploy/references/ci-troubleshooting.md`,
-`skills/deploy/references/performance-gate.md`, `skills/deploy/references/africa-calibration.md`.
+Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
+`skills/launch-ops/deploy/references/performance-gate.md`, `skills/launch-ops/deploy/references/africa-calibration.md`.
 
 ## Hard Repository Expectations
 
@@ -197,7 +215,7 @@ Full reference: `skills/deploy/references/ci-troubleshooting.md`,
   is not installed and green, the project is not shipped on the engine
 - Thresholds in `lighthouserc.json` and `performance-budgets.json` are
   calibrated for African 3G mobile reality (1.6 Mbps, 300ms RTT, 4x CPU
-  slowdown); see `skills/deploy/references/africa-calibration.md`
+  slowdown); see `skills/launch-ops/deploy/references/africa-calibration.md`
 
 ## Direct-Response Copy for Sales Pages
 

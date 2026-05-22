@@ -8,15 +8,15 @@ The supplied book and EPUB-derived materials were used only as high-level inspir
 
 ## Existing Repository Inputs Reviewed
 
-- `skills/content-writing/SKILL.md`
-- `skills/sales-copywriting/SKILL.md`
-- `skills/long-form-sales-copy/SKILL.md`
-- `skills/page-builder/SKILL.md`
-- `skills/seo/SKILL.md`
-- `skills/blog-writer/SKILL.md`
-- `skills/brand-storytelling/SKILL.md`
-- `skills/they-ask-you-answer/SKILL.md`
-- `skills/premium-website-product/SKILL.md`
+- `skills/content-copy/content-writing/SKILL.md`
+- `skills/content-copy/sales-copywriting/SKILL.md`
+- `skills/content-copy/long-form-sales-copy/SKILL.md`
+- `skills/build/page-builder/SKILL.md`
+- `skills/seo-search/seo/SKILL.md`
+- `skills/content-copy/blog-writer/SKILL.md`
+- `skills/brand/brand-storytelling/SKILL.md`
+- `skills/ux-conversion/they-ask-you-answer/SKILL.md`
+- `skills/orchestration/premium-website-product/SKILL.md`
 - selected references under `content-writing`, `sales-copywriting`, `blog-writer`, and `seo`
 
 ## Book-Extraction Inputs Reviewed

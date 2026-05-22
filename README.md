@@ -5,7 +5,7 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 This repository works in two modes without changing the directory layout:
 
 - `Claude Code`: commonly consumed as a Git submodule at `.claude/skills/` inside client projects
-- `Codex`: consumed directly as a repository of portable skills under `skills/<skill-name>/SKILL.md`
+- `Codex`: consumed directly as a repository of portable skills under `skills/<category>/<skill-name>/SKILL.md`
 
 Projects can share the same skills, and updates propagate when downstream projects pull the latest repo state.
 
@@ -20,7 +20,7 @@ The repository now also functions as a portable website agency engine. It contai
 ## Portability Contract
 
 - `SKILL.md` is the concise execution layer for each skill
-- Skills live under `skills/<skill-name>/SKILL.md`.
+- Skills live under `skills/<category>/<skill-name>/SKILL.md` across 11 categories (see Skill Categories below).
 - Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, not in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` holds detailed guidance, including preserved `legacy-guidance.md` files
 - `scripts/` holds deterministic helpers where a workflow benefits from automation
@@ -39,23 +39,18 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- prompts/                 Project-specific generation prompts
 |-- plans/                   Phase plans and system expansion work
 |-- docs/                    Evaluation and system documentation
-|-- skills/                  Portable skills; each skill owns skills/<skill-name>/SKILL.md
-|   |-- website-builder/     Master orchestrator for build and operating references
-|   |-- design-system/       Visual system decisions
-|   |-- page-builder/        Page and component production
-|   |-- photo-manager/       Asset cataloging and image selection
-|   |-- seo/                 Search-facing implementation
-|   |-- google-ai-search/    Google AI Overviews / AI Mode readiness and mythbusting
-|   |-- deploy/              QA, launch, rollback, and deployment operations
-|   |-- i18n/                Language infrastructure
-|   |-- sector-strategies/   Sector design and trust-pattern guidance
-|   |-- accessibility-audit/ WCAG 2.2 AA enforcement gate (Phase 10)
-|   |-- visual-qa/           Screenshot diff, structural assertions, AI-slop scan (Phase 10)
-|   |-- security-gate/       Dep audit, headers, security.txt, SRI, secrets, supply chain, compliance (Phase 10)
-|   |-- observability/       RUM + error tracking + analytics + alerting contract (Phase 11)
-|   |-- experimentation/     Hypothesis template, A/B infra, stat primer, quarterly review (Phase 11)
-|   |-- design-quality-score/ 7-category rubric, slop-scan, pre-launch scoring gate (Phase 11)
-|   `-- africa-excellence/   Low-bandwidth, mobile-money, USSD, language, trust, cultural patterns (Phase 12)
+|-- skills/                  Portable skills, organised under skills/<category>/<skill>/SKILL.md
+|   |-- agency-ops/          Agency positioning, retention, sales, delivery, comms (11 skills)
+|   |-- brand/               Brand strategy, alignment, storytelling, style guides (4 skills)
+|   |-- build/               Design system, page builder, photo, color, i18n, sectors (8 skills)
+|   |-- commerce/            E-commerce strategy, funnel, checkout, analytics (4 skills)
+|   |-- content-copy/        Blog, sales copy, language standards, premium writing (8 skills)
+|   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
+|   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
+|   |-- orchestration/       Top-level orchestrators incl. website-builder, premium product, africa-excellence (5 skills)
+|   |-- quality-gates/       Accessibility, visual QA, security, design-quality-score (4 skills)
+|   |-- seo-search/          SEO, SEO audit, Google AI Search (3 skills)
+|   `-- ux-conversion/       CRO audit, form UX, UX psychology, they-ask-you-answer (4 skills)
 |-- certification/           Syllabus, exam bank, cohort records (Phase 11)
 |-- dashboards/              Internal and public quality scorecards (Phase 11 + 12)
 |-- glossary.md              Canonical-name authority (Phase 11)
@@ -128,7 +123,7 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 
 ## African Authority Layer (Phase 12)
 
-- `skills/africa-excellence/`: low-bandwidth patterns, mobile-money UX, USSD-aware
+- `skills/orchestration/africa-excellence/`: low-bandwidth patterns, mobile-money UX, USSD-aware
   design, African language pack (10 first-class languages), country trust
   signals, cultural patterns. Replaces generic global defaults for African-
   market projects.

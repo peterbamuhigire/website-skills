@@ -69,7 +69,7 @@ longer actively maintained. Legacy status is stricter than deprecated:
 
 | Entity | Kind | Deprecated on | Removal on | Successor | Reason | Decision |
 |---|---|---|---|---|---|---|
-| `skills/east-african-english/SKILL.md` | skill | 2026-03-21 | 2026-09-21 | `skills/language-standards` | Subsumed by broader 3-language voice system | (pre-Phase 11 note; file a retroactive entry if required) |
+| `skills/content-copy/east-african-english/SKILL.md` | skill | 2026-03-21 | 2026-09-21 | `skills/content-copy/language-standards` | Subsumed by broader 3-language voice system | (pre-Phase 11 note; file a retroactive entry if required) |
 
 *Remove this table row only when the entity is removed and a decision entry
 records the removal.*
