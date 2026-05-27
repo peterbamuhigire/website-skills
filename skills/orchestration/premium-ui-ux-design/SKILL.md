@@ -54,6 +54,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 - `references/premium-website-ui-ux-playbook.md` - book-derived website design rules.
 - `references/enterprise-website-ux-playbook.md` - enterprise website stakeholder, proof, navigation, trust, and Africa-calibrated UX rules.
+- `references/mobile-dashboard-website-patterns.md` - mobile navigation, first-visit guidance, dashboard/proof presentation, and mobile quality checks.
 - `references/premium-website-gate.md` - scoring and blocking defects.
 - `../premium-website-product/references/premium-website-market-asset-gate.md` - website-as-premium-product, content, SEO, launch, stack, and agency proof gate.
 - `references/source-register.md` - local EPUB sources used to build this skill.
