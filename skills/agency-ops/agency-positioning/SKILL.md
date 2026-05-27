@@ -1,6 +1,6 @@
 ---
 name: agency-positioning
-description: Premium positioning, offer architecture, pricing logic, qualification, scope control, and proposal structure for a website agency selling $12,000+ engagements. Use when defining the agency category, building or pricing the offer, qualifying a prospect, writing or presenting a proposal, defending fees, controlling scope, firing a misfit client, onboarding staff on positioning, writing agency copy, or preparing for a sales conversation. Covers the agency narrative, the three-tier offer ladder (Foundation / Growth / Authority), value-based pricing with a calculator, the Win-Without-Pitching expert posture, the four-conversation sales sequence, the Doctor-Pilot-Teacher framework, the 9 Positioning Assets, solutions language, founder storytelling, personal brand authority, and the Selling the Shovel principle.
+description: Premium positioning, offer architecture, market-calibrated pricing logic, qualification, scope control, and proposal structure for a website agency selling premium work in Uganda, East Africa, and international markets. Use when defining the agency category, building or pricing the offer, qualifying a prospect, writing or presenting a proposal, defending fees, controlling scope, firing a misfit client, onboarding staff on positioning, writing agency copy, or preparing for a sales conversation. Covers the agency narrative, the three-tier offer ladder (Foundation / Growth / Authority), value-based pricing with a calculator, Uganda market calibration, the Win-Without-Pitching expert posture, the four-conversation sales sequence, the Doctor-Pilot-Teacher framework, the 9 Positioning Assets, solutions language, founder storytelling, personal brand authority, and the Selling the Shovel principle.
 ---
 
 # Agency Positioning
@@ -13,7 +13,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Packaging agency expertise into paid audits, workshops, frameworks, newsletters, or other authority assets.
 - Pricing a specific engagement (use the value-based calculator).
 - Qualifying or disqualifying a prospect at the first call or before a proposal.
-- Writing, presenting, or defending a proposal for a $12,000+ project.
+- Writing, presenting, or defending a premium proposal, including Uganda-calibrated local pricing and international premium pricing.
 - Holding scope discipline during delivery.
 - Onboarding a new team member on how the agency positions, sells, and delivers.
 - Writing agency-side copy: home page, services page, case studies, sales pages.
@@ -29,8 +29,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - A narrower skill is clearly the better match (e.g. `agency-client-retention` for
   retainer pricing and client retention, `they-ask-you-answer` for content-led lead
   generation, `cro-audit` for conversion audits).
-- The work is for a non-premium offer (sub-$10k engagements). This skill assumes a
-  $12,000 minimum and a productized model.
+- The work is for commodity, template-only, or low-trust engagements that cannot support
+  strategy, UX, SEO, QA, analytics, and handoff quality. Local Ugandan pricing may be
+  below international floors, but the offer must remain productized and premium for its market.
 
 ## Required inputs
 
@@ -48,8 +49,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    downstream artefact should be able to point back to a specific line in that file.
 3. Apply the relevant detailed guidance:
    - Offer-ladder and tier definitions → `references/premium-website-offer-playbook.md`
-   - Pricing, fee defence, modifiers, payment terms, retainers →
-     `references/pricing-rules.md`
+   - Pricing, fee defence, modifiers, payment terms, retainers, and market calibration →
+     `references/pricing-rules.md` and `references/uganda-market-pricing-calibration.md`
    - Authority products, paid diagnostics, and expertise packaging →
      `references/information-marketing-assets.md`
    - Scope, exclusions, change orders, revision discipline →
@@ -81,8 +82,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   recommendation, single direction. Never order-taker, never pair-of-hands.
 - **Commercial logic visible.** Every price, scope item, and qualification rule should
   be explainable in commercial terms — not aesthetic, not "industry standard."
-- **Floor enforced.** No artefact assumes or implies sub-$12,000 work. The floor is the
-  positioning.
+- **Floor enforced by market.** No artefact assumes commodity work. Use the Uganda
+  calibration when selling locally; use the international floor for export, funded, or
+  global buyers.
 - **Website as product.** Agency copy and proposals must explain the premium website as
   a packaged commercial asset with strategy, content, UX, SEO, measurement, QA, and
   handover; never as "number of pages plus design".
@@ -93,7 +95,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 - Generic framework dumps with no decision made.
 - Hourly or day-rate quotes anywhere in the output.
-- Pages-only or "starter" packages that violate the floor.
+- Pages-only or "starter" packages that violate the relevant market floor.
 - Bundling hosting, maintenance, or content production into the project fee.
 - "We can do anything" language that dilutes the niche.
 - Client-pleasing copy that softens the commitments in `agency-narrative.md` section 8.
@@ -112,10 +114,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   commitments. Anchor file for everything else.
 - `references/premium-website-offer-playbook.md` — the three-tier offer ladder
   (Foundation / Growth / Authority), tier inclusions, the commercial logic behind the
-  $12,000 floor, the sales-to-delivery handshake.
+  relevant market floor, the sales-to-delivery handshake.
 - `references/pricing-rules.md` — value-based pricing principles, the pricing calculator
   with modifier score sheet, fee floors by tier, the four-zone fee-defence playbook,
   payment terms, retainer rules.
+- `references/uganda-market-pricing-calibration.md` - Uganda and East Africa pricing
+  bands, payment structures, scope-control rules, and no-go signals.
 - `references/scope-matrix.md` — tier-by-tier scope matrix, hard exclusions, handoff
   boundaries, revision discipline, scope-creep defence playbook.
 - `references/qualification-guide.md` — who we serve, who we don't, fit signals, red
@@ -164,8 +168,8 @@ This skill has no bundled scripts. The workflow is documentary, not executable.
 ## Notes
 
 - This skill is a portable execution layer for both Claude Code and Codex.
-- Do not modify the agency narrative or the floor without an explicit decision recorded
-  in writing — small drift becomes generic positioning.
+- Do not modify the agency narrative or market floors without an explicit decision
+  recorded in writing - small drift becomes generic positioning.
 
 ## Premium-positioning proof assets
 

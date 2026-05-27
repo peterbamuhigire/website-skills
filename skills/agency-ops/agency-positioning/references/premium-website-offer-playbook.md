@@ -1,8 +1,11 @@
 # Premium Website Offer Playbook
 
-The commercial logic for selling websites at $10,000 or more as a repeatable, productized
-offer. Grounded in Warrillow (*Built to Sell*), Enns (*Win Without Pitching*, *The Four
-Conversations*), Weiss (*Value-Based Fees*), and Robinson (*Secrets of Business Value*).
+The commercial logic for selling websites as repeatable, productized premium offers.
+International buyers may support $10,000+ floors; Ugandan and East African buyers need
+the market-calibrated bands in `pricing-rules.md` and
+`uganda-market-pricing-calibration.md`. Grounded in Warrillow (*Built to Sell*), Enns
+(*Win Without Pitching*, *The Four Conversations*), Weiss (*Value-Based Fees*), and
+Robinson (*Secrets of Business Value*).
 
 Use when: defining what the agency sells, writing sales pages, onboarding new staff,
 structuring a proposal, deciding whether to accept a project.
@@ -110,11 +113,13 @@ owned by the client.
 - Applications or integrations beyond a standard contact form + CRM webhook
 - Ongoing management
 
-**Fee floor.** No project below $12,000. This is the minimum level of engagement (Enns's
-MLE principle) — stated in every first conversation, waived only as the last concession in
-a close, and waived less than once per quarter.
+**Fee floor.** International floor: $12,000. Uganda/local floor: use the Foundation band
+in `uganda-market-pricing-calibration.md`. The MLE principle still applies: state the
+relevant minimum in the first conversation and reduce scope rather than discounting the
+same scope.
 
-**Typical price range.** $12,000–$18,000.
+**Typical price range.** International: $12,000-$18,000. Uganda/local: see
+`uganda-market-pricing-calibration.md`.
 
 **What makes this tier premium.** It is not cheaper-than-custom — it is custom-enough, in
 a system, delivered at a price that forces client commitment. The Foundation tier is the
@@ -157,9 +162,11 @@ against a business outcome, designed to compound over 24–36 months without a r
 - Long-term content production on retainer (that is Phase 8 territory)
 - SEO outranking guarantees or traffic quotas
 
-**Fee floor.** $22,000.
+**Fee floor.** International: $22,000. Uganda/local: use the Growth band in
+`uganda-market-pricing-calibration.md`.
 
-**Typical price range.** $22,000–$40,000.
+**Typical price range.** International: $22,000-$40,000. Uganda/local: see
+`uganda-market-pricing-calibration.md`.
 
 **What makes this tier premium.** The discovery is deep enough to change the client's
 understanding of their own buyers. The site is built to carry revenue, not to look good.
@@ -203,9 +210,11 @@ becomes an intangible asset on the balance sheet.
 advertising, PR, or long-term content creation under this tier — those sit on separate
 retainer agreements.
 
-**Fee floor.** $45,000.
+**Fee floor.** International: $45,000. Uganda/local: use the Authority band in
+`uganda-market-pricing-calibration.md`.
 
-**Typical price range.** $45,000–$85,000.
+**Typical price range.** International: $45,000-$85,000. Uganda/local: see
+`uganda-market-pricing-calibration.md`.
 
 **What makes this tier premium.** The deliverable is not a website. It is the firm's
 positioning made operational through a website. The documentation means the system
@@ -224,7 +233,7 @@ raises the overall fee distribution; the smaller option exists so "no" is not th
 response from a constrained buyer. More than three options dilutes the choice and invites
 feature comparison.
 
-### Why the minimum is $12,000
+### Why the minimum is market-specific
 
 Four converging reasons:
 
@@ -237,7 +246,7 @@ Four converging reasons:
 3. **Substitution barrier.** Below $10k, the buyer's mental substitute is a freelancer or
    template shop. Above $12k, the comparison moves to other strategic-tier firms.
 4. **Positioning integrity.** Enns: "if we are not losing business on price occasionally,
-   we are not charging enough." A floor below $12k invites the wrong clients, who then
+   we are not charging enough." A floor below the relevant market minimum invites the wrong clients, who then
    expect the wrong behaviour in delivery.
 
 ### Why each tier is a system, not a bigger site
@@ -299,8 +308,8 @@ specifically, stay inside these speech patterns:
 - **Do not** name a tier until after value has been stipulated. The tier is the answer to
   the value conversation, not the opening.
 - **Do** introduce the minimum level of engagement early: *"Our engagements start at
-  $12,000 — is that in the range you were prepared to invest?"* This disqualifies on cost
-  before time is wasted on fit.
+  [relevant market floor] - is that in the range you were prepared to invest?"* This
+  disqualifies on cost before time is wasted on fit.
 - **Do** present tiers as three options, anchored high. Authority first, Growth second,
   Foundation third. The anchor sets the ceiling even when the client picks the middle.
 - **Do** say the price out loud before the proposal is read. Silence follows. Do not fill it.
