@@ -37,8 +37,10 @@ These are the rules. They are not situational.
    rate." Every fee is a fixed project fee or a retainer fee.
 7. **We lose projects on price sometimes. That is the signal the floor is correct.** If
    the win rate sits above 85% at full fee, the ladder is too cheap. Raise it.
-8. **The minimum level of engagement is stated in every first conversation.** "Our
-   engagements start at $12,000" is said, not implied. Waiving the minimum is always a
+8. **The minimum level of engagement is stated in every first conversation.** For
+   international buyers, the default anchor remains "our engagements start at $12,000."
+   For Ugandan and East African buyers, use the market-calibrated floors in
+   `uganda-market-pricing-calibration.md`. Waiving the relevant minimum is always a
    closing-stage concession, never an opener.
 
 ---
@@ -70,9 +72,11 @@ buyer is in the room or the opportunity is not real. Both are disqualification s
 
 ---
 
-## 3. Fee floors by tier
+## 3. Fee Floors By Tier
 
-The floor is absolute. Below it, we do not work.
+The floor is market-specific. Below the relevant floor, we do not work.
+
+### International / Export Buyer Floors
 
 | Tier       | Minimum | Typical band   | Anchor option in proposal |
 |------------|---------|----------------|---------------------------|
@@ -81,6 +85,23 @@ The floor is absolute. Below it, we do not work.
 | Authority  | $45,000 | $45,000–85,000 | 1.6–1.8× the mid          |
 
 Fee floors are reviewed annually and adjusted for inflation and win-rate data.
+
+### Uganda / East Africa Local Buyer Floors
+
+Use these when the buyer is a Ugandan or regional company paying from local operating
+cashflow. See `uganda-market-pricing-calibration.md` for scope and payment terms.
+
+| Tier | Minimum | Typical band | Anchor option in proposal |
+|---|---:|---:|---|
+| Paid diagnosis / audit | $300 | $300-$1,500 | Creditable toward build when appropriate |
+| Foundation | $1,500 | $1,500-$6,000 | Growth-lite scope, not reduced quality |
+| Growth | $6,000 | $6,000-$18,000 | 1.4-1.6x the mid |
+| Authority | $18,000 | $18,000-$45,000 | 1.5-1.8x the mid |
+| Regional / international authority | $35,000 | $35,000-$85,000+ | Use international value logic |
+
+Convert to UGX at proposal time using the current Bank of Uganda or bank selling rate
+and state the rate/date used. Public May 2026 USD/UGX sources cluster around UGX
+3,700-3,800 per USD, so do not hard-code an old conversion in reusable templates.
 
 ---
 
@@ -91,8 +112,8 @@ will carry three options drawn from the range.
 
 ### Step 1 — Base fee by tier
 
-Start with the tier floor. If the tier is ambiguous, price to the higher tier and let the
-value conversation move it if needed.
+Start with the relevant market's tier floor. If the tier is ambiguous, price to the
+higher tier and let the value conversation move it if needed.
 
 ### Step 2 — Apply the value multiplier
 
@@ -222,10 +243,10 @@ Tactical responses to premature fee questions:
 
 - *"It would be unfair to put a number on the table before we understand what you
   need — give me two more questions before I do."*
-- *"Our engagements start at $12,000 and range upward based on the scope. Is that in the
-  range you expected?"*
-- *"The mid-tier projects we run sit around $30,000–$45,000. The work we just described
-  sounds closer to the top of that band. Would that be workable?"*
+- *"Our engagements start at [relevant market floor] and range upward based on the scope.
+  Is that in the range you expected?"*
+- *"The mid-tier projects we run sit around [relevant Growth band]. The work we just
+  described sounds closer to the top of that band. Would that be workable?"*
 
 Tactical responses to discount requests:
 
