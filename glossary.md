@@ -80,6 +80,15 @@ Premium agency operating-system skills (added 2026-05-05):
   and retention plan, and the quarterly business review that drives budget
   reallocation.
 
+Native-copy skills (added 2026-05-31):
+- `french-native-copy` — native-quality French copywriting execution layer:
+  register (tu/vous), grammar pitfalls, idiom and flow, anglicisms, French
+  typography, and a revision checklist. Sits under `language-standards`.
+- `swahili-native-copy` — native-quality Kiswahili copywriting execution
+  layer: noun-class concord, verb system and politeness, register and
+  greetings, idiom and culture, loanwords, numbers/time/dates, and a
+  revision checklist. Sits under `language-standards`.
+
 Legacy (superseded):
 - `east-african-english` — superseded by `language-standards` as of 2026-03-21.
 
