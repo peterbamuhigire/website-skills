@@ -51,7 +51,9 @@ Use these skills as the default router:
 
 Use these cross-cutting skills whenever their lens materially improves the output:
 
-- `language-standards`: Regional language and tone quality.
+- `language-standards`: Regional language and tone quality; owns the cross-language consistency policy and routes French and Kiswahili to their native-copy skills.
+- `french-native-copy`: Native-quality French copywriting execution. Mandatory for any French page, microcopy, email, or metadata; never produce French by raw translation.
+- `swahili-native-copy`: Native-quality Kiswahili copywriting execution. Mandatory for any Kiswahili page, microcopy, email, or metadata; never produce Kiswahili by raw translation.
 - `premium-commercial-writing`: Premium-fee-worthy commercial writing across website copy, landing pages, blogs, SEO/GEO pages, documents, and offer pages.
 - `content-writing`: Website copy structure and clarity.
 - `brand-alignment`: Audience and brand coherence.

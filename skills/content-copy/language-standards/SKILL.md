@@ -39,10 +39,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## References
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+- `references/multilingual.md` — three-language consistency rules and per-language routing into the native-copy execution skills.
+- `references/business-english-advanced.md` — advanced professional English standard.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
 ## Notes
+- This skill owns the cross-language tone policy. For native-quality execution in a specific language, route to the dedicated execution skill: `french-native-copy` for French, `swahili-native-copy` for Kiswahili, and `east-african-english`/`content-writing` for English. Do not produce French or Kiswahili copy by raw translation; the native-copy skills are mandatory for those languages.
 - Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
 - Preserve existing project behavior unless the current task explicitly requires a change.
 

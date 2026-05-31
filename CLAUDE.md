@@ -41,7 +41,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`brand/`** (4) — brand-alignment, brand-storytelling, brand-strategy, brand-style-guide
 - **`build/`** (8) — color-selection, design-reference, design-system, i18n, image-compression, page-builder, photo-manager, sector-strategies
 - **`commerce/`** (4) — ecommerce, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
-- **`content-copy/`** (8) — blog-idea-generator, blog-writer, content-writing, east-african-english, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting
+- **`content-copy/`** (10) — blog-idea-generator, blog-writer, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
 - **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
@@ -56,6 +56,8 @@ Always reference skills by their full categorised path: `skills/<category>/<skil
 ```text
 skills/build/i18n/SKILL.md               <- Multi-language infrastructure
 skills/content-copy/language-standards/SKILL.md <- Language and tone standards
+skills/content-copy/french-native-copy/SKILL.md <- Native-quality French copy execution
+skills/content-copy/swahili-native-copy/SKILL.md <- Native-quality Kiswahili copy execution
 skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
 skills/brand/brand-alignment/SKILL.md    <- Brand coherence quality gate
 skills/build/design-reference/SKILL.md   <- Reference-site analysis

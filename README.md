@@ -44,7 +44,7 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |   |-- brand/               Brand strategy, alignment, storytelling, style guides (4 skills)
 |   |-- build/               Design system, page builder, photo, color, i18n, sectors (8 skills)
 |   |-- commerce/            E-commerce strategy, funnel, checkout, analytics (4 skills)
-|   |-- content-copy/        Blog, sales copy, language standards, premium writing (8 skills)
+|   |-- content-copy/        Blog, sales copy, language standards, native French/Kiswahili copy, premium writing (10 skills)
 |   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
 |   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
 |   |-- orchestration/       Top-level orchestrators incl. website-builder, premium product, africa-excellence (5 skills)
@@ -135,7 +135,9 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 
 ## Cross-Cutting Skills
 
-- `language-standards`: regional language and tone quality
+- `language-standards`: regional language and tone quality; owns cross-language consistency and routes French/Kiswahili to their native-copy skills
+- `french-native-copy`: native-quality French copywriting execution (mandatory for French copy; never raw-translate)
+- `swahili-native-copy`: native-quality Kiswahili copywriting execution (mandatory for Kiswahili copy; never raw-translate)
 - `content-writing`: website copy structure and clarity
 - `brand-alignment`: audience and brand coherence
 - `sales-copywriting`: conversion-focused messaging (cross-cutting quality lens — PASTOR, 4 P's)
@@ -187,6 +189,14 @@ Recent agency-engine expansion work added the following reference layers:
   for AI Overviews, AI Mode, AEO/GEO mythbusting, Search Console measurement,
   local/ecommerce readiness, and agentic-experience preparation. See
   [Google AI Search decision](./project-log/decisions/2026-05-16-google-ai-search-skill.md).
+- `2026-05-31`: Added `french-native-copy` and `swahili-native-copy` as the
+  native-language copy execution layers under `language-standards`, with deep
+  references (French: register, grammar pitfalls, idiom, anglicisms,
+  typography, revision checklist; Kiswahili: noun-class concord, verb system,
+  register/greetings, idiom/culture, loanwords, numbers/time/dates, revision
+  checklist) so French and Kiswahili copy is written natively rather than
+  machine-translated. content-copy skill count is now 10. See
+  [native-copy decision](./project-log/decisions/2026-05-31-french-swahili-native-copy-skills.md).
 
 ## Working Model
 
