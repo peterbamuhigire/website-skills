@@ -75,6 +75,22 @@ Standard Swahili spelling differences that translation and casual writers miss:
 - Kenya: more comfortable English code-switching; some accepted loans appear more readily, but standard copy should still resolve to Swahili terms. Keep `Sheng` out of standard copy.
 - When the audience is "East Africa / regional", default to full `Kiswahili sanifu` with accepted loans — it is understood everywhere.
 
+### Term-level differences (choose by market)
+
+| English | Kenya tends to | Tanzania tends to |
+|---|---|---|
+| toilet / restroom | `choo` | `msalani` |
+| school | `skuli` | `shule` |
+| ticket | `tikiti` | `tiketi` |
+| tip / gratuity | `tipu` | `bahashishi` |
+| brochure | `brosha` | `kabrasha` |
+| old town | `mji wa kale` | `mji mkongwe` |
+| beer | `biya` | `bia` |
+
+Keep standard spellings in copy (`ghali`, `thamani`, `dhamana`, `rangi`); avoid the regional sound-shifts (`l↔r`, `gh→g`, `dh→z`, `th→s`) and the Tanzanian mainland `-ga` verb ending (`kupikaga`) in written sanifu.
+
+Native-form variants also seen and acceptable: `online` → `mkondoni` (alongside `mtandaoni`); `password` → `neno la siri` (alongside `nenosiri`); `mobile phone` → `simu ya mkono` (alongside `simu ya mkononi`). Pick one form and use it consistently across a page.
+
 ## Source
 
-Loanword integration, orthography, and calque patterns distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and standard `Kiswahili sanifu` usage in *Swahili Grammar (Sarufi ya Kiswahili)* (Almasi, Fallon et al.).
+Loanword integration, orthography, and calque patterns distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and standard `Kiswahili sanifu` usage in *Swahili Grammar (Sarufi ya Kiswahili)* (Almasi, Fallon et al.). Tanzania/Kenya term differences and native-form variants added in 2026 from the *Rough Guide Phrasebook — Swahili* (Lexus). See `book-extractions/swahili-language-books-extraction-2026.md`.

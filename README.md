@@ -197,6 +197,16 @@ Recent agency-engine expansion work added the following reference layers:
   checklist) so French and Kiswahili copy is written natively rather than
   machine-translated. content-copy skill count is now 10. See
   [native-copy decision](./project-log/decisions/2026-05-31-french-swahili-native-copy-skills.md).
+- `2026-06-03`: Enhanced `french-native-copy` and `swahili-native-copy` from a
+  new set of reference books (OCR'd where the source was a scanned PDF). French:
+  expanded `grammar-pitfalls` (multiple-pronoun order, advanced subjunctive,
+  country prepositions, tense/mood for CTAs, past-participle agreement,
+  articulateurs logiques, mise en relief, gérondif/passive, concordance des
+  temps), new `vocabulary-by-theme`, and richer `idiom-and-flow`/`anglicisms`.
+  Kiswahili: value-word lexicon, vetted proverbs + cautions, kanga-style lines,
+  prestige/variety guidance, colonial-pidgin and tourist-Swahili cautions,
+  telling-time fractions, ordinals concord, and Tanzania/Kenya term tables.
+  Sources distilled in `book-extractions/{french,swahili}-language-books-extraction-2026.md`.
 
 ## Working Model
 

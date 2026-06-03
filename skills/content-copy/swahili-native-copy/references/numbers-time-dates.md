@@ -61,6 +61,22 @@ Months: `Januari, Februari, Machi, Aprili, Mei, Juni, Julai, Agosti, Septemba, O
 - Numeric: `05/06/2026` (day/month/year), matching East African English order.
 - Relative time: `leo` (today), `jana` (yesterday), `kesho` (tomorrow), `kesho kutwa` (day after tomorrow), `wiki ijayo` (next week), `mwezi ujao` (next month), `mwaka jana` (last year), `mwaka huu` (this year).
 
+## Telling time in detail (fractions and minutes)
+
+- `…na robo` = quarter past (`saa saba na robo` = quarter past 1:00 Western).
+- `…u nusu` / `…na nusu` = half past (`saa kumi na moja u nusu` = 5:30 p.m.).
+- `…kasoro robo` = quarter to (`saa nane kasoro robo` = quarter to 2:00 Western, i.e. 7:45 a.m.).
+- `…na dakika tano` = five past; `…kasoro dakika ishirini` = twenty to.
+- "What time is it?" → `Ni saa ngapi?` / `Saa ngapi sasa?` "What time do you open/close?" → `Unafungua / Inafungwa saa ngapi?`
+
+## Ordinals (carry the `-a` of association, which agrees with the noun class)
+
+`-a kwanza` (first), `-a pili` (second), `-a tatu` (third), `-a nne` (fourth)… The concord prefix matches the noun: `ghorofa **ya** tatu` (third floor), `daraja **la** pili` (second class), `mara **ya** kwanza` (the first time), `mteja **wa** kwanza` (the first customer). See `references/noun-classes-and-concord.md`.
+
+## Price and money vocabulary
+
+`bei` (price; `Ni bei gani?` / `Ni kiasi gani?` = how much?), `ghali` (expensive) / `rahisi` (cheap), `chenji` (change), `risiti` (receipt), `bili` (bill), `jumla` (total), `bure` / `bila malipo` (free), `kipunguzo cha bei` / `upungufu wa bei` (discount), `kadi ya malipo` (payment card), `akaunti ya benki` (bank account), `kubadilisha fedha` (to change money), `asilimia` (per cent). Price line: `Bei: shilingi elfu hamsini` or `TSh 50,000`.
+
 ## Source
 
-Number agreement, the Swahili clock, days, months, and date conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, *Swahili (Spoken World)* (Living Language), and *Swahili Grammar (Sarufi ya Kiswahili)* (Almasi, Fallon et al.); currency conventions per Tanzanian and Kenyan usage.
+Number agreement, the Swahili clock, days, months, and date conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, *Swahili (Spoken World)* (Living Language), and *Swahili Grammar (Sarufi ya Kiswahili)* (Almasi, Fallon et al.); currency conventions per Tanzanian and Kenyan usage. Telling-time fractions, ordinals concord, and price/money vocabulary added in 2026 from the *Rough Guide Phrasebook — Swahili* (Lexus) and Peter M. Wilson, *Simplified Swahili*. See `book-extractions/swahili-language-books-extraction-2026.md`.

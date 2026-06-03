@@ -82,6 +82,26 @@ The verb carries a subject prefix (and optionally an object infix) for the noun'
 
 For every noun you write, ask: which class? Then make the adjective, possessive, demonstrative, number, and verb all carry that class's marker. Run this as a dedicated pass — see the concord audit in `references/revision-checklist.md`.
 
+## Quantifiers and qualifiers that take concord
+
+- **`-enye` = "having / with"** (class-marked: mwenye, wenye, lenye, chenye, yenye, zenye…): `kampuni yenye uzoefu` (a company with experience), `chai yenye sukari` (tea with sugar). Its opposite is `bila` (without).
+- **`-enyewe` = "-self / itself"**, and as a noun **`mwenyewe`** = "owner": `bidhaa zenyewe` (the goods themselves), `mwenyewe wa duka` (the shop's owner).
+- **`-ote` = "all / whole"** (wote, yote, vyote, zote…; comes last): `bidhaa zote` (all the goods), `mji wote` (the whole town). Irregular: `sisi sote` (all of us), `ninyi nyote` (all of you).
+- **`-o -ote` = "any … at all"** (wo wote, cho chote, yo yote…): `wakati wo wote` (any time at all), `kitu cho chote` (anything at all).
+- **`-ingine` = "other / another"** (nyingine, wengine, vingine…; comes last): `bidhaa nyingine` (other products). Trap: for "give me some bread" (indefinite article), do **not** use `-ingine` — just `nipe mkate`.
+
+## Word order inside the noun phrase
+
+The order is the reverse of English: **noun → possessive → adjective(s) → number/quantity → demonstrative**. `Kitabu changu kizuri kimoja hiki` = "this one good book of mine." Quantity words (`-chache`, `-ingi`, `-ingine`, numbers, `-ote`) come last among the qualifiers; the demonstrative follows them. The exception is **`kila`** ("every"), which **precedes** the noun and takes the singular: `kila mteja` (every customer).
+
+## The demonstrative of reference (cohesion)
+
+To refer back to something already mentioned, use the `-o`-reference demonstrative (`huyo, hilo, hicho, hizo, huko…` — built on the relative vowel, and it **precedes** the noun). Native copy chains it: `…duka jipya. Hilo duka lauza…` (…a new shop. This shop sells…). This reads more native than repeating `huyu/hili`.
+
+## Comparatives and superlatives
+
+No inflection — use a surpass-word after the statement: **`kuliko`** (most common), `kupita`, `kushinda` (+ the compared item): `Huduma yetu ni bora kuliko zao.` (Our service is better than theirs.) Bare "more/-er" = **`zaidi`**: `bei nafuu zaidi` (cheaper); `zaidi ya` = "more than". **Superlative** = surpass-word + **`-ote`** (always plural): `Bei yetu ni nafuu kushinda zote.` (Our price is the lowest of all.) `kama` = "like / as / about": `kama bei hii` (like this price), `kama watu kumi` (about ten people).
+
 ## Source
 
-Noun-class and concord rules distilled from Oswald Almasi, Michael David Fallon et al., *Swahili Grammar for Introductory and Intermediate Levels (Sarufi ya Kiswahili)*, and Joan Russell, *Swahili (Teach Yourself)*.
+Noun-class and concord rules distilled from Oswald Almasi, Michael David Fallon et al., *Swahili Grammar for Introductory and Intermediate Levels (Sarufi ya Kiswahili)*, and Joan Russell, *Swahili (Teach Yourself)*. Quantifiers (`-enye`, `-enyewe`, `-ote`, `-o -ote`, `-ingine`), noun-phrase word order, the reference demonstrative, and comparatives added in 2026 from Peter M. Wilson, *Simplified Swahili*. See `book-extractions/swahili-language-books-extraction-2026.md`.

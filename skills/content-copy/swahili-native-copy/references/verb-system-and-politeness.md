@@ -82,6 +82,52 @@ Swahili extends verb roots with suffixes that change meaning — use the right o
 
 These let you say things the native way: `Tunakurahisishia maisha.` (We make life easier for you.) carries applicative + causative naturally, where a calque would be clumsy.
 
+## Relative clauses ("the service that helps you")
+
+The relative particle agrees with the noun's class: M-/WA- `-ye-`/`-o-`; M-/MI- `-o-`/`-yo-`; KI-/VI- `-cho-`/`-vyo-`; N- `-yo-`/`-zo-`; JI-/MA- `-lo-`/`-yo-`; U- `-o-`/`-zo-`; place `-po-`/`-ko-`/`-mo-`. Three constructions, all "who/which/that":
+
+1. **`amba-` relative** (works in any tense; never starts a sentence): `Huduma ambayo inakusaidia` (the service that helps you); `Bidhaa ambazo uliziagiza` (the products that you ordered — note the object infix `-zi-`).
+2. **Tensed relative infix** (only with `-na-`, `-li-`, `-ta-`), placed between tense and stem: `Bidhaa zinazouzwa hapa` (products that are sold here); `Wateja waliofika jana` (customers who arrived yesterday). **`-ta-` requires an extra `-ka-`**: `Wateja watakaofika kesho` (customers who will arrive tomorrow) — omitting `-ka-` is a classic error.
+3. **General relative** (relative as a suffix on the stem, no tense marker) = timeless/habitual: `Wateja wanunuao bidhaa zetu` (customers who buy our products). This gives the idiomatic "next": `mwezi ujao` (next month), `wiki ijayo` (next week), `mwaka ujao` (next year).
+
+- **Negative relative** `-si-` (with the affirmative subject prefix): `bidhaa zisizopatikana` (products that are not available); `Mtu asiyelipa…` (anyone who does not pay…).
+- **Manner** `-vyo-` = "as / the way that": `Fanya kama tunavyofanya` (do as we do). **Time** `-po-` = "when": `Mteja atakapofika…` (when the customer arrives…); with `kila` = "whenever".
+
+## The -ka- narrative tense ("…and then…")
+
+After an opening past clause, `-ka-` carries a built-in "and" for sequences — perfect for story-driven copy: `Tulifika dukani, tukaona bidhaa nzuri, tukanunua, tukarudi nyumbani.` (We arrived, saw fine goods, bought some, and went home.) Do not add `na`.
+
+## Conditionals: real vs hypothetical vs counterfactual
+
+- **`-ki-` = real/open "if/when"** (+ future or imperative): `Ukiagiza leo, utapata punguzo.` (If you order today, you'll get a discount.) Negative **`-sipo-`** (affirmative subject prefix): `Usipolipa, huduma itasimama.` (Unless you pay, the service stops.)
+- **`-nge-` = present hypothetical** ("would"): `Ungejaribu, ungeweza.` (If you tried, you could.)
+- **`-ngali-` = past counterfactual** ("would have"): `Ungalifika jana, ungalimuona.` (Had you come yesterday, you'd have seen him.)
+- Negatives **`-singe-` / `-singali-`** also take **affirmative** subject prefixes — a common trap.
+
+## "Already" and "finish doing"
+
+- **`-mekwisha` / `kwisha` + bare stem** = "already": `Tumekwisha kamilisha mradi` (we have already completed the project); modern short form `Tumesha…`.
+- **`kumaliza ku-`** = "finish doing": `Amemaliza kusoma ripoti` (he has finished reading the report). Don't confuse the two.
+
+## "To be" and "to have"
+
+- **Present "to be"** = invariable `ni` (affirmative) / `si` (negative) for all persons: `Bidhaa zetu ni bora.` / `…si ghali.` Other tenses use full `kuwa`.
+- **Locative "to be at"** = subject prefix + `-po` (definite) / `-ko` (general/indefinite) / `-mo` (inside); 3rd-sing. human is `yu-` (yupo/yuko/yumo). `Duka lipo mjini.` Questions use `-ko`: `Bidhaa ziko wapi?` Don't mix P and K in one phrase.
+- **"There is/are"** = `pana` (definite) / `kuna` (general) / `mna` (inside); negatives `hapana` / `hakuna` / `hamna`: `Kuna ofa nzuri kwetu.` / `Hakuna gharama za ziada.`
+- **"To have"** = `kuwa na`. Present merges to subject prefix + `na`: `Tuna huduma bora.`; negative `hatuna`, `sina`, `hana`… **All other tenses keep `na` separate**: `Tutakuwa na ofa.` (we will have an offer). Never leave `na` dangling — it must be followed by a noun (or the relative particle: `Umekuja nacho?` = did you bring it?).
+
+## Object infix — required vs optional
+
+- **Optional with things**, adding definiteness/emphasis: `Niliinunua` + `bidhaa` → "I bought **the** product".
+- **Strongly preferred with definite humans/animals**: `Nilimwona mganga` (I saw **the** doctor) vs `Niliona mganga` (a doctor).
+- **Obligatory** with `ku-ambia` (tell), `ku-ita` (call), `ku-pa` (give to): `Nipe…` (give me), `Mwambie…` (tell him). Only one object infix per verb; the human object wins.
+
+## Three present tenses, the negative infinitive, and emphatic ndi-
+
+- `-na-` (now — the safe default, ~75% of use), `-a-` (habitual/general: `Ng'ombe wala majani`), `hu-` (habitual, no subject prefix — common in slogans/proverbs: `Barua hufika kila siku`).
+- **Negative infinitive** `ku-to-`: `Ni bora kutochelewa.` (It's better not to be late.)
+- **Emphatic `ndi-`** ("it is indeed / the very") for branding: `Hii ndiyo bidhaa unayoitaka.` (This is the very product you want.)
+
 ## Source
 
-Verb structure, tense, negation, imperative, and subjunctive rules distilled from Oswald Almasi, Michael David Fallon et al., *Swahili Grammar for Introductory and Intermediate Levels (Sarufi ya Kiswahili)*, Joan Russell, *Swahili (Teach Yourself)*, and Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*.
+Verb structure, tense, negation, imperative, and subjunctive rules distilled from Oswald Almasi, Michael David Fallon et al., *Swahili Grammar for Introductory and Intermediate Levels (Sarufi ya Kiswahili)*, Joan Russell, *Swahili (Teach Yourself)*, and Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*. Relatives, the `-ka-` narrative, hypothetical/counterfactual conditionals, copulas (`ni/si`, `-po/-ko/-mo`, `kuna/pana/mna`, `kuwa na`), object-infix rules, the negative infinitive, and emphatic `ndi-` added in 2026 from Peter M. Wilson, *Simplified Swahili*. See `book-extractions/swahili-language-books-extraction-2026.md`.

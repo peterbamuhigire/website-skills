@@ -50,6 +50,14 @@ A natural page opener: `Karibu! Tunafurahi kukuona hapa.` (Welcome! We are glad 
 - Friendly: `Tukutane tena` (let's meet again), `Karibu tena`.
 - Blessing closings (`Mungu akubariki` — God bless you) are warm and broadly accepted in East Africa; use where the brand tone welcomes them, and keep them optional for secular or multi-faith audiences.
 
+## Service and warmth phrases (copy-ready)
+
+`Safari njema!` (have a good trip — warm sign-off) · `Hakuna matata` / `Hakuna tatizo` / `Bila ya wasiwasi` (no problem / no worries — reassuring) · `Hongera!` (congratulations / well done) · `Asante kwa ukarimu wako` (thank you for your hospitality) · `Ni furaha yangu` (my pleasure) · `Nakutakia mema` / `Nakutakia siku njema` (best wishes / have a good day) · `Tuko tayari kukusaidia` (we are ready to help you). Note: `Hakuna matata` is fine as a reassurance phrase in service copy, but never as your headline "Swahili flavour" aimed at locals — see the tourist-Swahili caution in `references/idiom-and-cultural.md`.
+
+## Relationship before the transaction
+
+In East African commerce the `duka` (shop) is a social space; jumping straight to a hard sell reads as cold. Lead with the welcome and acknowledgment, then the offer — the proverb `Mgeni njoo mwenyeji apone` ("guest, come, so the host may prosper") frames the customer as a blessing who benefits the host. Inclusive `tu-` framing (`Tujenge pamoja` — let's build together) resonates more than commands.
+
 ## Tone summary for copy
 
 1. Open with `Karibu` or a `Habari`-family greeting where a greeting fits.
@@ -60,4 +68,4 @@ A natural page opener: `Karibu! Tunafurahi kukuona hapa.` (Welcome! We are glad 
 
 ## Source
 
-Register, greeting, and address conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and *Swahili (Spoken World)* (Living Language).
+Register, greeting, and address conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and *Swahili (Spoken World)* (Living Language). Service/warmth phrases and the relationship-first principle added in 2026 from the *Rough Guide Phrasebook — Swahili* (Lexus) and John M. Mugane, *The Story of Swahili*. See `book-extractions/swahili-language-books-extraction-2026.md`.
