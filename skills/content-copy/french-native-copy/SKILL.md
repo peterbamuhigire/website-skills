@@ -54,8 +54,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## References
 - `references/register-and-address.md` — tu vs vous, politeness, conditional softening, formal commercial register.
-- `references/grammar-pitfalls.md` — partitive articles, gender and agreement, negation, pronouns, relative pronouns, verb-preposition collocations.
-- `references/idiom-and-flow.md` — connectors, collocations, CTA verbs, sensory and premium language, sentence rhythm.
+- `references/grammar-pitfalls.md` — partitive articles, gender and agreement, negation, pronouns, relative pronouns, verb-preposition collocations, multiple-pronoun order, subjunctive triggers, country prepositions, tense/mood for CTAs, past-participle agreement, and the MT smell-test.
+- `references/vocabulary-by-theme.md` — native business, finance, tech, hospitality, retail, and health vocabulary with gender, and sector calque traps.
+- `references/idiom-and-flow.md` — connectors, collocations, CTA verbs, sensory and premium language, sentence rhythm, native craft tells, and warm story-driven phrasing.
 - `references/anglicisms-to-avoid.md` — calques and anglicisms with native French alternatives.
 - `references/typography-and-formatting.md` — spacing, guillemets, numbers, currency, dates, capitalisation.
 - `references/revision-checklist.md` — native-speaker QA checklist, concord audit, and back-translation test.
@@ -63,4 +64,4 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Notes
 - This skill is the French execution layer under `language-standards`, which owns the cross-language tone policy. Read `language-standards` for the three-language consistency rules, then apply this skill for French.
 - Pair with `i18n` for routing and localized slugs, and with `seo`/`google-ai-search` for French keyword research.
-- Source material distilled from: Sylvie Poisson-Quinton, *French Grammar in 44 Lessons* (Level A1); *2000 French Phrases* and *50 Most Used French Verbs* (French Hacking); *Conversational French Dialogues* (Touri Language Learning); and *Read & Think French, Premium* (Think French magazine).
+- Source material distilled from: Sylvie Poisson-Quinton, *French Grammar in 44 Lessons* (Level A1); *2000 French Phrases* and *50 Most Used French Verbs* (French Hacking); *Conversational French Dialogues* (Touri Language Learning); and *Read & Think French, Premium* (Think French magazine). Upgraded in 2026 with: Annie Heminway, *Practice Makes Perfect — Complete French Grammar*; Boulares & Frérot, *Grammaire progressive du français — Niveau avancé*; *Learn French II — Parallel Text*; and the *French–English Bilingual Visual Dictionary* (DK). See `book-extractions/french-language-books-extraction-2026.md`.

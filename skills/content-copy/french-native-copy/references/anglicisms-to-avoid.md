@@ -55,10 +55,31 @@ A calque is a phrase translated word-for-word that is grammatically possible but
 - English possessive `'s` → French `de`: "the client's project" → `le projet du client`.
 - Over-capitalisation of common nouns (English Title Case) → French lowercases; see `references/typography-and-formatting.md`.
 
+## Vocabulary-level calques (sector terms)
+
+These are single-term traps where the reach-for word is wrong. Full themed vocabulary with genders is in `references/vocabulary-by-theme.md`.
+
+| English reach-for | Calque to avoid | Native French |
+|---|---|---|
+| customer service | service de client | **le service après-vente (SAV) / le service client** |
+| deposit money | déposer de l'argent | **verser / effectuer un versement** |
+| bank transfer | transfert bancaire | **le virement (bancaire)** |
+| direct debit | débit direct | **le prélèvement automatique** |
+| log in | loguer | **se connecter** |
+| upload | uploader | **mettre en ligne / téléverser** (download = télécharger) |
+| dry cleaner (shop) | nettoyage à sec | **le pressing** |
+| room service | service de chambre | **le service d'étage** |
+| check out (hotel) | check-out | **quitter / libérer la chambre** |
+| do the shopping | faire le shopping | **faire les courses** |
+| HR | humains ressources | **les ressources humaines (RH)** |
+| text me | texte-moi | **envoie-moi un SMS / un texto** |
+| starter (menu) | (entrée used for main) | **l'entrée** = starter; main = **le plat principal** |
+| library | librairie | **la bibliothèque** (librairie = bookstore) |
+
 ## The test
 
 Read the French aloud. If a French friend would pause and say "on ne dit pas ça comme ça" (we don't say it like that), it is a calque. Rewrite from the meaning.
 
 ## Source
 
-False friends, calque patterns, and borrowing conventions distilled from *2000 French Phrases* (French Hacking) and *Read & Think French, Premium* (Think French magazine), cross-checked against standard francophone usage including Québec norms.
+False friends, calque patterns, and borrowing conventions distilled from *2000 French Phrases* (French Hacking) and *Read & Think French, Premium* (Think French magazine), cross-checked against standard francophone usage including Québec norms; the sector calque table from the *French–English Bilingual Visual Dictionary* (DK). See `book-extractions/french-language-books-extraction-2026.md`.

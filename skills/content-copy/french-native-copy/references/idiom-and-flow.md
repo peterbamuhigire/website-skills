@@ -59,6 +59,26 @@ When the brief calls for premium positioning, French rewards precise, slightly e
 - Translated: `Nous offrons des solutions. Elles sont faciles à utiliser. Elles sont abordables.`
 - Native: `Nous concevons des solutions simples à prendre en main, à un tarif accessible — sans compromis sur la qualité.`
 
+## Native craft tells (the small things that signal a native writer)
+
+These appear constantly in native prose and almost never in translated copy:
+
+- **Neutral `le` after verbs of knowing/saying**: `Comme vous le savez`, `je le crois`, `comme vous le savez peut-être`. Translators drop the `le`.
+- **Infinitive as subject**: `Travailler avec vous est un plaisir.`, `Lui parler me semblait si naturel.` — cleaner than `Le fait de…`.
+- **`de plus en plus (de)`** for "more and more / -er and -er": `de plus en plus de clients nous font confiance`, `les délais deviennent de plus en plus courts`. The single highest-frequency native intensifier.
+- **`aller jusqu'à` + infinitive** for "to go so far as to": `Nous allons jusqu'à reprendre le travail s'il ne vous convient pas.`
+- **`il s'agit de…`** instead of `c'est…` for definitions and reveals: `Il s'agit d'un accompagnement sur mesure.`
+- **Negative-interrogative to pull the reader in**: `Vous ne me croyez pas ?`, `Est-ce que ce n'est pas plus simple ainsi ?`
+- **Recast nouns as verb clauses** the way French prefers: "first time abroad" → `pour la première fois loin de chez vous`; "at a frenetic pace" → `à un rythme frénétique`.
+
+## More connectors and discourse markers (from narrative usage)
+
+Beyond the list above, these read as warm and natural in story-driven copy: `Alors un jour…` and `Tout a commencé…` (anecdote openers), `C'est ainsi que…` / `C'est là que…` (pivot to the turning point), `Entre-temps` / `Pendant ce temps` (meanwhile), `Peu après` (shortly after), `À côté de cela` (besides), `Malgré cela / Malgré tout` (despite that), `Pour être honnête` (authenticity signal), `Quoi qu'il en soit` (in any case), `Enfin, bref` (conversational reset), `par-dessus tout` (above all). Vary `Tout d'un coup` / `Soudainement` rather than repeating one.
+
+## Warm, story-driven phrasing (use where the brief invites a human voice)
+
+`Je vais vous raconter comment…` (origin-story opener) · `aussi loin que je m'en souvienne` (note the subjunctive) · `tirer le meilleur de…` (make the most of — CTA) · `vivre une expérience` (not `expérimenter`) · `venez jeter un œil` (soft invitation) · `en valoir la peine` (be worth it) · `avoir hâte de…` (anticipation) · `à mille lieues de` (a far cry from) · `l'embarras du choix` (spoilt for choice) · `percer dans le secteur` (break into the field) · standalone caption lines: `Incroyable.` / `C'était surréaliste.`
+
 ## Source
 
-Connectors, collocations, CTA conventions, and idiom distilled from *2000 French Phrases* (French Hacking), *Conversational French Dialogues* (Touri Language Learning), and *Read & Think French, Premium* (Think French magazine).
+Connectors, collocations, CTA conventions, and idiom distilled from *2000 French Phrases* (French Hacking), *Conversational French Dialogues* (Touri Language Learning), and *Read & Think French, Premium* (Think French magazine); the native craft tells, extra connectors, and story-driven phrasing from *Learn French II — Parallel Text* (Polyglot Planet). See `book-extractions/french-language-books-extraction-2026.md`.

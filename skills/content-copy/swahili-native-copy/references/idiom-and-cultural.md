@@ -35,6 +35,35 @@ A single apt proverb lifts copy and proves cultural literacy. Use one where it g
 
 Translate the proverb's intent into the surrounding copy so non-Swahili stakeholders understand the choice, but never gloss it inside the live copy for native readers.
 
+More vetted proverbs by use-case: `Pole pole ndio mwendo` (slowly is the way — patience, "at your pace", reliability); `Haraka haraka haina baraka` (careless haste earns no blessing — quality, don't cut corners); `Mkono mmoja haupigi kofi` (one hand can't clap — partnership); `Usipoziba ufa utajenga ukuta` (seal the crack or rebuild the wall — insurance, maintenance, prevention); `Akiba haiozi` (savings never rot — banking/savings); `Subira huvuta heri` (patience draws blessings — long-term goals).
+
+**Cautions on proverbs.** Many `methali` are warnings or cynical, not warm — vet the full meaning before use (`Asante ya punda ni mateke`, a donkey's thanks is a kick = ingratitude; `Pesa fitina ya binadamu` = money breeds discord). And **reduplication usually signals carelessness, not emphasis** (`haraka haraka` = careless haste, `ovyo ovyo` = shoddy) — never assume a doubled word means "very". A misquoted proverb flags an outsider; quote it exactly.
+
+## Load-bearing value words — anchor brand values authentically
+
+These carry heavy positive cultural charge. Used sincerely (not stacked), they make copy resonate.
+
+| Term | Sense | Where it fits |
+|---|---|---|
+| `heshima` | respect, dignity | premium, finance, service: `Tunakuhudumia kwa heshima.` |
+| `utu` | humanity, decency | values, health, community, CSR |
+| `undugu` | kinship, solidarity | community, fintech, cooperatives, insurance |
+| `ujamaa` | familyhood, communalism | cooperatives, savings groups, collectives |
+| `umoja` | unity (`umoja ni nguvu`) | teams, membership, togetherness |
+| `harambee` | all pull together (Kenya's motto) | fundraising, group effort (strongly Kenyan) |
+| `ukarimu` | hospitality | the warm welcome — tourism, F&B, retail |
+| `pole` / `pole pole` | sympathy / gently | service recovery; patience, reassurance |
+| `subira` / `saburi` | patience | savings, long-term goals, perseverance |
+| `baraka` / `riziki` | blessing / provision | gratitude, prosperity, daily-bread warmth |
+| `hekima` | wisdom | advisory, financial, educational |
+| `amani` / `uhuru` / `maendeleo` | peace / freedom / progress | stability / empowerment (with gravity) / growth |
+
+Faith register, used lightly and inclusively: `Mungu` (God — the Bantu word, kept; do not substitute `Allah` for general copy), `Mola ndiye mpaji` (God is the provider), `Mungu akubariki` (God bless you). Sincere and warm in pan-regional copy; never sectarian.
+
+## Kanga-style one-liners — the model for short Swahili taglines
+
+The `kanga` (printed cloth) carries a one-line message (`jina`) and is the people's medium for love, faith, and advice — essentially indigenous taglines. Aim for that: a short, rhythmic, values-laden line. Adaptable positives: `Palipo na upendo Mungu yupo` (where there is love, God is there); `Hisani haiozi` (kindness never rots); `Tenda wema nenda zako` (do good and move on); `Kuuliza si ujinga` (asking is not stupidity — great for support/FAQ); `Tuishi kwa wema tupate neema` (live kindly to be blessed).
+
 ## Cultural conventions for East African copy
 
 - Greetings and courtesy are expected, not optional. Skipping straight to a hard sell reads as cold. Lead with warmth (`Karibu`, `Habari`), then the offer.
@@ -43,6 +72,25 @@ Translate the proverb's intent into the surrounding copy so non-Swahili stakehol
 - Religion is part of everyday speech for many (Christian and Muslim). Blessing phrases (`Mungu akubariki`, `Mungu akujalie`) are warm and common, but keep them optional and inclusive for mixed audiences. Avoid assuming one faith.
 - Mobile-money and phone-first behaviour shape commerce; pair with `africa-excellence` for the UX patterns, and write copy that assumes a phone screen and a data-conscious reader.
 - Time and patience: relationship-building precedes transaction. Reassurance and availability (`tuko tayari kukusaidia` — we are ready to help you) matter.
+
+## Variety and prestige — which Swahili to write
+
+Write **Kiswahili sanifu** (standard, based on Zanzibar Kiunguja) — the prestige register of media, government, and education across Tanzania and Kenya (speakers also call the standard `kiswahili bora` / the Dar es Salaam standard). Calibrate by market: in **Tanzania**, Swahili carries all official life — go rich and eloquent, minimise English. In **Kenya**, English outranks Swahili for upmarket/corporate audiences — polished bilingual or English-led copy with Swahili warmth touches is normal; pure deep Swahili can read as schoolteacherly. Reserve **Sheng** (Nairobi street code) for Kenyan youth/lifestyle/telecom/entertainment briefs only — it reads as unprofessional for finance, health, government, or pan-regional copy and is opaque to Tanzanians.
+
+## Cautions — what reads as foreign or disrespectful
+
+- **Do not use tourist/Hollywood Swahili to locals**: `Jambo` / `Jambo bwana` / `Hakuna matata` / `Simba` / `Rafiki` signal an outsider marketing *to tourists*. Use real greetings: `Habari?`, `Hujambo?` / `Hamjambo?`, `Mambo?` (casual), and the respect exchange `Shikamoo` → `Marahaba`.
+- **Never bark commands or drop tense markers.** Bare uninflected imperatives (`lete`, `tia`, `fania`) and the frozen `mi ana-… / wei ana-…` form are the fingerprint of colonial command-pidgin and carry a master–servant stain. Always use full, properly inflected verbs with full noun-class concord and inclusive `tu-` forms (`Tujenge pamoja`, `Karibu ujionee`).
+- **Avoid slur and hierarchy words**: `mtumwa` (slave), `mjakazi` (female servant), `shenzi` / `mshenzi` / `ushenzi` (uncultured/savage — offensive, the opposite of prized `uungwana`, civility), colonial `boi`.
+- **Don't fake a coastal dialect** to sound "deep"; it reads as pretension or error. Stick to sanifu unless you genuinely command the dialect.
+
+## Narrative connectors for flowing copy
+
+`Hapo zamani za kale kulikuwa na…` (once upon a time — story opener), `Siku moja…` (one day), `Wakati huo huo…` (meanwhile), `Kuanzia wakati huo…` (from that moment on), `Hatimaye…` (finally), `Kwa bahati nzuri / mbaya…` (luckily / unfortunately), `Punde si punde…` (before long), `Kwa upande mwingine…` (on the other hand), `Kwa hivyo…` (so/therefore), `badala yake…` (instead), `huku aki-…` (while …-ing — fluid simultaneous action), `Usijali / Usiogope` (don't worry / don't be afraid), `Nimefurahi sana kwamba…` (I'm so glad that…).
+
+## Sector vocabulary
+
+For hospitality, F&B, and agriculture clients, draw on the East African food and welcome lexicon (e.g. `karibu(ni)`, `nyama choma`, `pilau`, `chapati`, `kachumbari`, `chai ya viungo`, and the "always something ready to share" ethos). See `book-extractions/swahili-language-books-extraction-2026.md` §7 for the full glossary.
 
 ## Sentence shape and rhythm
 
@@ -57,4 +105,4 @@ Translate the proverb's intent into the surrounding copy so non-Swahili stakehol
 
 ## Source
 
-Idiom, collocations, proverbs, and cultural conventions distilled from Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, *Swahili (Spoken World)* (Living Language), and Joan Russell, *Swahili (Teach Yourself)*.
+Idiom, collocations, proverbs, and cultural conventions distilled from Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, *Swahili (Spoken World)* (Living Language), and Joan Russell, *Swahili (Teach Yourself)*. Value-word lexicon, proverb cautions, kanga-style lines, prestige/variety guidance, and the colonial-pidgin and tourist-Swahili cautions added in 2026 from John M. Mugane, *The Story of Swahili*; Derek Nurse & Thomas Spear, *The Swahili*; Johannes Fabian, *Language and Colonial Power*; the *Trilingual Story Book* (Aames); and *Authentic East African Swahili Cuisine* (Malaquias). See `book-extractions/swahili-language-books-extraction-2026.md`.
