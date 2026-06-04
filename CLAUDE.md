@@ -29,6 +29,14 @@ Premium is the default commercial standard for this repository. Website work mus
 
 Claude-specific consumption at `.claude/skills/` still works, but the repository should not be treated as dependent on that path.
 
+## Blog & Article Research — Always Use the Digital Research Engine
+
+**Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting** (applies to `content-copy/blog-writer`, `content-copy/blog-idea-generator`, and any page carrying editorial/blog content). Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
+
+- **Engine location:** `digital-research-engine` (on this machine: `C:\Users\Peter\Documents\Claude Projects\digital-research-engine\skills\`). The repo is cloned on every device Peter works on; if the path differs, locate the `digital-research-engine` repo locally rather than skipping research.
+- **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region, each briefed per the engine's standard agent-brief structure. The orchestrator does the synthesis; research agents return raw, sourced findings only.
+- **Attribution is mandatory.** Cite real, locatable sources with URLs; name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything unverifiable as UNVERIFIED — confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation. Close each piece with a short "Sources & the researchers worth crediting" block.
+
 The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant. Root-level operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` stay at root when they serve the repository rather than a single skill.
 
 ## Repository Structure
