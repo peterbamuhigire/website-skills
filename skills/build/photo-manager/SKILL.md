@@ -24,6 +24,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 3. Produce the implementation, configuration, or guidance this skill owns.
 4. Validate that the result stays compatible with the rest of the repository workflow.
 
+## photo-bank cleanup rule (required)
+- After a photo-bank file is copied into `src/assets/images/` AND its entry is recorded in `_catalog.json`, DELETE the original from `photo-bank/`. The asset copy is the canonical version; the photo-bank is a staging area, not an archive.
+- Delete ONLY files you have actually copied and cataloged in this run. Never delete a photo-bank file that was not copied to assets — unused photos stay in `photo-bank/` for future articles.
+- Verify the asset copy exists at its destination path before deleting the source. Do not delete on a failed or partial copy.
+- This keeps `photo-bank/` showing only un-placed photos, so it doubles as the "still needs a slot" queue.
+
 ## Quality standards
 - Outputs must be implementation-ready and internally consistent.
 - Preserve existing behavior unless the task explicitly requires a change.

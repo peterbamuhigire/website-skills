@@ -129,8 +129,9 @@ while IFS= read -r f; do
   if grep -iE 'Trusted by|As featured in' "$f" > /dev/null 2>&1; then
     # Count <img> and <a> in the surrounding block — crude heuristic
     block=$(awk '/Trusted by|As featured in/{flag=1; count=0} flag && /<\/section>|<\/div>/{flag=0} flag' "$f" 2>/dev/null || true)
-    img_count=$(echo "$block" | grep -oE '<img' | wc -l | tr -d ' ')
-    a_count=$(echo "$block" | grep -oE '<a ' | wc -l | tr -d ' ')
+    # `grep || true` guards set -o pipefail: zero matches must not abort the scan
+    img_count=$(echo "$block" | { grep -oE '<img' || true; } | wc -l | tr -d ' ')
+    a_count=$(echo "$block" | { grep -oE '<a ' || true; } | wc -l | tr -d ' ')
     if (( img_count >= 3 )) && (( a_count < img_count / 2 )); then
       echo "- ${f#$DIST_DIR/} — trust row with $img_count logos and $a_count links" >> "$REPORT"
       TRUST_HITS=$((TRUST_HITS+1))
