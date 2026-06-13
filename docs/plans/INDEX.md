@@ -14,6 +14,7 @@ talks, upstream OSS contributions) continue per the public roadmap at
 
 | Plan | Completion Date | Report |
 |---|---|---|
+| Go-to-market skills (local acquisition, referrals, niche, delivery automation) | 2026-06-13 | [2026-06-13-reddit-webdesign-gtm-research-report.md](2026-06-13-reddit-webdesign-gtm-research-report.md) · [decision](../../project-log/decisions/2026-06-13-go-to-market-skills-from-reddit-post.md) |
 | Phase 12 - African Authority Engine | 2026-04-16 | [2026-04-16-phase-12-african-authority-engine.md](../../project-log/decisions/2026-04-16-phase-12-african-authority-engine.md) |
 | Phase 11 - World-Class Operating Discipline | 2026-04-16 | [2026-04-16-phase-11-world-class-operating-discipline.md](../../project-log/decisions/2026-04-16-phase-11-world-class-operating-discipline.md) |
 | Phase 10 - Hard Enforcement and Visual QA Gates | 2026-04-16 | [2026-04-16-phase-10-hard-enforcement-gates.md](../../project-log/decisions/2026-04-16-phase-10-hard-enforcement-gates.md) |

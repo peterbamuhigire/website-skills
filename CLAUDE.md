@@ -45,7 +45,7 @@ The repository root should contain project documentation plus `docs/`, `skills/`
 
 Skills are organised under `skills/<category>/<skill>/` in 11 thematic categories:
 
-- **`agency-ops/`** (11) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, email-sender, launch-campaigns, monthly-report, policy-pages, premium-sales-conversation, service-blueprint-website-delivery, social-media
+- **`agency-ops/`** (14) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, delivery-automation, email-sender, launch-campaigns, local-in-person-acquisition, monthly-report, policy-pages, premium-sales-conversation, referral-program, service-blueprint-website-delivery, social-media
 - **`brand/`** (4) — brand-alignment, brand-storytelling, brand-strategy, brand-style-guide
 - **`build/`** (8) — color-selection, design-reference, design-system, i18n, image-compression, page-builder, photo-manager, sector-strategies
 - **`commerce/`** (4) — ecommerce, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel

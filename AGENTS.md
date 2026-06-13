@@ -90,6 +90,16 @@ Premium agency operating-system skills (added 2026-05-05):
   recover trust after incidents.
 - `marketing-measurement-system`: KPI tree, customer insight loop, loyalty
   layer, and quarterly business review that drives budget reallocation.
+- `local-in-person-acquisition`: in-person, door-to-door client acquisition for a
+  niche studio — territory and cadence, the free-audit door-opener, walk-in pitch
+  and objection scripts, follow-up sequence, pipeline KPIs. Use to run the
+  "go in person" channel after the niche is chosen in `agency-positioning`.
+- `referral-program`: generous, systematic client referrals — reward structures,
+  ask scripts and timing, cross-niche/partner routing, formal tracking and the
+  ethics check. Use once clients reach the Advocate phase.
+- `delivery-automation`: the agency's own tooling, reusable assets, and workflow
+  automation for faster/cheaper delivery — build-vs-buy, the automation-opportunity
+  audit, the honest AI-assisted-delivery reality, productized-delivery SOPs.
 
 ## Cross-Engine Handoffs
 

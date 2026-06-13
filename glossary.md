@@ -89,6 +89,20 @@ Native-copy skills (added 2026-05-31):
   greetings, idiom and culture, loanwords, numbers/time/dates, and a
   revision checklist. Sits under `language-standards`.
 
+Go-to-market skills (added 2026-06-13):
+- `local-in-person-acquisition` — in-person, door-to-door local client
+  acquisition for a niche studio: territory and cadence, the audit-as-door-opener,
+  walk-in pitch and objection scripts, follow-up sequence, and pipeline KPIs.
+- `referral-program` — generous, systematic client referral program: reward
+  structures, the ask scripts and timing, cross-niche/partner routing, and formal
+  tracking with the ethics check.
+- `delivery-automation` — building the agency's own tooling, reusable assets, and
+  workflow automation for faster/cheaper delivery; build-vs-buy, the
+  automation-opportunity audit, the honest AI-assisted-delivery reality, and
+  productized-delivery SOPs.
+- `agency-positioning` also carries the niche-down positioning rubric
+  (`references/niche-selection-rubric.md`) as of this date.
+
 Legacy (superseded):
 - `east-african-english` — superseded by `language-standards` as of 2026-03-21.
 
