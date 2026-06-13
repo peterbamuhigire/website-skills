@@ -9,6 +9,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Use when
 
 - Defining or revising the agency category, narrative, or one-sentence positioning.
+- Choosing or sanity-checking a single-vertical niche ("web design for X"), or deciding when to add a second niche (use the niche-selection rubric).
 - Designing the offer ladder, fee floors, or productized service architecture.
 - Packaging agency expertise into paid audits, workshops, frameworks, newsletters, or other authority assets.
 - Pricing a specific engagement (use the value-based calculator).
@@ -47,7 +48,10 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    directory — load only what is needed.
 2. Anchor the work in the agency narrative (`references/agency-narrative.md`). Every
    downstream artefact should be able to point back to a specific line in that file.
-3. Apply the relevant detailed guidance:
+3. If the task is choosing, validating, or expanding the niche, run
+   `references/niche-selection-rubric.md` before the offer ladder — the niche
+   decision constrains every fee, proof asset, and proposal downstream.
+4. Apply the relevant detailed guidance:
    - Offer-ladder and tier definitions → `references/premium-website-offer-playbook.md`
    - Pricing, fee defence, modifiers, payment terms, retainers, and market calibration →
      `references/pricing-rules.md` and `references/uganda-market-pricing-calibration.md`
@@ -69,9 +73,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
      `references/positioning-language.md`, `references/founder-story-templates.md`
    - Prior detailed instructions preserved from the previous skill version →
      `references/legacy-guidance.md`
-4. Produce the artefact with concrete inputs (real numbers, real names, real client
+5. Produce the artefact with concrete inputs (real numbers, real names, real client
    words). Do not generalise.
-5. Verify the artefact against the agency narrative's commitments
+6. Verify the artefact against the agency narrative's commitments
    (`agency-narrative.md` section 8) before shipping.
 
 ## Quality standards
@@ -112,6 +116,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 - `references/agency-narrative.md` — the canonical paragraph, category definition, and
   commitments. Anchor file for everything else.
+- `references/niche-selection-rubric.md` — how to choose, validate, and expand a
+  single-vertical niche: the five specialisation types, the 1,000–10,000 prospect /
+  10–100 competitor guardrail, niche scoring, the positioning-statement formula,
+  concentration risk, and staged adjacent-niche expansion. Pairs with the design-side
+  `../../build/sector-strategies/SKILL.md`.
+- `references/niche-positioning-sources.md` — attributed sources for the niche rubric
+  (Enns, Morgan, Baker, Dunford, Godin) with UNVERIFIED flags.
 - `references/premium-website-offer-playbook.md` — the three-tier offer ladder
   (Foundation / Growth / Authority), tier inclusions, the commercial logic behind the
   relevant market floor, the sales-to-delivery handshake.
