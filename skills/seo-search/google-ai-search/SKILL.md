@@ -1,6 +1,6 @@
 ---
 name: google-ai-search
-description: Use when optimizing, auditing, or planning a website for Google's generative AI features in Search, including AI Overviews and AI Mode. Applies official Google Search guidance, separates durable SEO work from AEO/GEO myths, and routes technical, content, local, ecommerce, measurement, and agentic-readiness work into the website engine.
+description: Use when optimizing, auditing, or planning a website for Google's generative AI features in Search, including AI Overviews and AI Mode, or when reconciling AI-search/GEO claims with official evidence. Applies official Google Search guidance, separates durable SEO work from AEO/GEO myths, handles llms.txt mythbusting, Bing AI citation-share measurement, source-integrity/UGC poisoning risk, market-fragmented assistant visibility, and routes technical, content, local, ecommerce, measurement, and agentic-readiness work into the website engine.
 ---
 
 # Google AI Search
@@ -12,7 +12,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The work mentions Google AI search, AI Overviews, AI Mode, AEO, GEO, query
   fan-out, RAG, Search Console AI traffic, or Google agentic experiences.
 - A client asks whether `llms.txt`, chunking, special schema, AI-specific pages,
-  or off-site mention campaigns are needed for Google Search.
+  off-site mention campaigns, Reddit/UGC placement, or "AI citation hacks" are
+  needed for Search or AI assistants.
+- The work needs AI-search measurement beyond Google, including Bing Webmaster
+  Tools AI Performance, Citation Share, Intents, Topics, or period comparison.
+- The work involves brand-safety risk from user-generated content, poisoned
+  snippets, weak sources, fabricated citations, or volatile ranking updates.
 - Existing SEO/GEO recommendations need to be reconciled with official Google
   Search guidance.
 
@@ -43,8 +48,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    view, useful organization, high-quality media, and satisfaction for real
    visitors.
 4. Reject manipulative AI-search tactics: query fan-out page factories,
-   chunking for AI, special Google AI markup, inauthentic mentions, and
-   structured-data overuse.
+   chunking for AI, special Google AI markup, inauthentic mentions, UGC spam,
+   poisoned snippets, and structured-data overuse.
 5. Audit technical readiness: crawlability, indexability, snippets eligibility,
    internal links, textual availability of important content, JavaScript SEO,
    page experience, and duplicate-content reduction.
@@ -55,21 +60,33 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    crawling, `nosnippet`/`data-nosnippet`/`max-snippet`/`noindex` for preview
    control, and Google-Extended only for non-Search AI training/grounding
    controls.
-8. Measure through Search Console's Web performance reporting plus analytics
-   outcomes such as conversions, engaged time, subscriptions, leads, or sales.
-9. When browser agents or commerce agents matter, load
+8. Measure Google Search through Search Console's Web performance reporting
+   plus analytics outcomes such as conversions, engaged time, subscriptions,
+   leads, or sales.
+9. When Bing/Copilot or multi-assistant visibility matters, add Bing Webmaster
+   Tools AI Performance reporting: Citation Share, Intents, Topics, and Compare.
+   Treat citation share as an observational KPI, not traffic share or a ranking
+   score.
+10. For editorial, FAQ, review, forum, or community-heavy work, run a
+   source-integrity pass before publishing: primary sources first, named experts
+   where possible, no anonymous UGC as sole proof for money or safety claims,
+   and no copied claims from unverified AI summaries.
+11. When browser agents or commerce agents matter, load
    `references/agentic-readiness.md` and produce an agent-readiness backlog.
 
 ## Quality standards
 - Never present AEO/GEO hacks as Google requirements.
-- Treat `llms.txt` as a broader engine/LLM artifact, not a Google AI Search
-  requirement or ranking lever.
+- Treat `llms.txt` as an optional broader engine/LLM handover artifact, not a
+  Google AI Search requirement, ranking lever, or default client priority.
 - Structured data must match visible page content and exist for rich-result
   eligibility, not as special AI Overview markup.
 - Content recommendations must improve human usefulness first; AI visibility
   is a consequence of useful, crawlable, indexable content.
 - AI-assisted content must meet Search Essentials, spam policies, and the
   same accuracy, quality, relevance, and disclosure bar as human-written work.
+- AI-citation strategy must be source-quality strategy: cite authoritative,
+  durable, original sources; monitor UGC surfaces for poisoning and brand-safety
+  risk; do not attempt to manipulate assistants with planted comments.
 
 ## Anti-patterns
 - Creating many near-duplicate pages to capture every fan-out query variant.
@@ -83,8 +100,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Google AI Search readiness audit.
 - Content and technical implementation backlog.
 - Mythbusting note for stakeholders.
-- Search Console and analytics measurement plan.
+- Search Console, Bing AI Performance, and analytics measurement plan.
 - Local/ecommerce readiness checklist.
+- Source-integrity and UGC-risk notes when the content may be cited by AI tools.
 - Agentic-readiness backlog when relevant.
 
 ## References

@@ -1,7 +1,8 @@
 # Google Generative AI Search Playbook
 
 Self-contained operating guidance prepared from official Google Search Central
-documentation verified on 2026-05-16. Primary sources:
+documentation. Verified on 2026-06-19 against official Google Search Central
+guidance and current AI-search measurement/security reporting. Primary sources:
 
 - Google's Guide to Optimizing for Generative AI Features on Google Search:
   https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -9,6 +10,10 @@ documentation verified on 2026-05-16. Primary sources:
   https://developers.google.com/search/docs/appearance/ai-features
 - Guidance on using generative AI content:
   https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
+- Bing Webmaster Tools AI Performance reporting:
+  https://blogs.bing.com/webmaster
+- Cornell/arXiv research on deep-research agent poisoning:
+  https://arxiv.org/
 
 ## Core position
 
@@ -124,6 +129,92 @@ For Google Search, do not recommend these as requirements:
 Structured data still matters for rich-result eligibility and machine-readable
 clarity, but it must match visible content and should not be sold as an AI
 Overview hack.
+
+### llms.txt operating rule
+
+Google Search ignores `llms.txt` and similar machine-readable AI/Markdown files
+for Search visibility and ranking. Treat those files as optional handover
+artifacts for developer documentation, agentic coding workflows, internal
+knowledge packaging, or a client-specific non-Google crawler requirement.
+
+Do not spend strategy budget on `llms.txt` before the durable work is handled:
+
+- crawlable, indexable HTML
+- original, useful content with specific proof
+- accurate schema that matches visible content
+- strong internal links and page intent
+- complete Google Search Console and Bing Webmaster Tools measurement
+- local, product, author, and organization facts that remain current
+
+If a CMS generates `llms.txt` automatically, keep it accurate and harmless. Do
+not sell it as an AI-citation lever.
+
+## Bing/Copilot AI measurement
+
+Bing Webmaster Tools has begun exposing AI Performance dimensions that are more
+specific than traditional search reports. When Bing/Copilot visibility matters,
+track:
+
+- **Citation Share**: the share of citations attributed to the site among all
+  citations shown for the same grounding query. Use it as an observational
+  trend KPI, not a ranking score, traffic-share metric, or competitor spy tool.
+- **Intents**: the purpose or need behind AI answer queries.
+- **Topics**: grouped subject areas where the site is being used or ignored.
+- **Compare**: period-over-period shifts in AI citation activity.
+
+Operational rule: pair Bing AI Performance with Search Console, analytics, CRM,
+and conversion data. A rising citation share is useful only when the cited pages
+also support trust, conversion, retention, or qualified demand.
+
+## Source-integrity and UGC poisoning guardrail
+
+AI assistants and deep-research agents can over-trust user-generated content
+when it is lexically close to the query. Treat Reddit, Quora, Wikipedia-style
+comments, forum posts, review snippets, and community Q&A as high-variance
+sources: useful for language and objections, unsafe as sole evidence for
+recommendations, finance, health, legal, safety, or procurement claims.
+
+Before publishing AI-search-oriented content:
+
+- prefer primary sources, regulator pages, official documentation, named
+  researchers, original data, and signed expert commentary
+- separate "what users say" from "what is true"
+- do not cite anonymous UGC as proof unless independently verified
+- monitor high-value brand and category queries for misleading snippets,
+  impersonation, spam recommendations, and poisoned comments
+- keep correction paths ready: update own content, publish clarifications,
+  request platform moderation where appropriate, and preserve evidence
+- never plant comments or manufacture UGC to influence AI assistants
+
+## Multi-assistant visibility
+
+AI-search visibility is not one engine. Google, Bing/Copilot, ChatGPT, Gemini,
+Claude, Perplexity, and vertical assistants can retrieve, cite, or summarize
+different sources. Build the common foundation first, then measure by engine:
+
+- Google: Search Console Web reporting, page/query classes, conversions
+- Bing/Copilot: Bing Webmaster Tools AI Performance and Citation Share
+- ChatGPT/Perplexity/Claude-style retrieval: server logs, bot requests,
+  referral patterns where available, and third-party AI-visibility tracking
+- Brand monitoring: cited pages, source quality, answer accuracy, and unsafe
+  recommendations
+
+Do not infer global AI visibility from one assistant.
+
+## Volatility discipline
+
+During confirmed or suspected ranking volatility, avoid reactive rewrites. First
+separate:
+
+- tracking noise and seasonality
+- known core updates or unconfirmed volatility windows
+- indexation/crawl problems
+- site releases, redirects, content changes, or technical regressions
+- query-class movement versus whole-site movement
+
+Use a 7- to 14-day watch window for non-critical drops unless there is clear
+technical breakage, legal risk, or business-critical conversion loss. Record the
+hypothesis and evidence before changing pages.
 
 ## AI-assisted content rule
 

@@ -27,7 +27,8 @@ Companion files: `premium-seo-package.md` (this directory), `page-conversion-che
 - **Google Analytics 4** — primary analytics
 - **Google Search Console** — organic search truth
 - **Google Tag Manager** — event orchestration
-- **Bing Webmaster Tools** — Bing coverage
+- **Bing Webmaster Tools** — Bing coverage plus AI Performance / Citation
+  Share where available
 
 ### Growth-tier additions
 
@@ -50,6 +51,22 @@ Where GA4 is politically or legally unworkable (EU-strict clients, privacy-focus
 - **Simple Analytics** — lightweight, no cookies
 
 The schema below is platform-agnostic. Event names are suggestions that match GA4 conventions but survive translation.
+
+### AI-search visibility layer
+
+AI-search visibility is measured outside normal web analytics in many cases.
+Track it as a reporting layer, not as a replacement for conversion analytics:
+
+- Google Search Console: Web performance by page/query class
+- Bing Webmaster Tools: AI Performance, Citation Share, Intents, Topics,
+  Compare
+- Server logs: known AI retrieval/crawler requests where available
+- Third-party AI visibility tools: cited pages, answer accuracy, share of
+  citations, and unsafe recommendations
+- CRM/GA4: whether cited or answer-ready pages support qualified demand
+
+Do not report `llms.txt` generation as an AI-visibility KPI. Report whether the
+site's authoritative pages are being crawled, cited, and converted.
 
 ---
 

@@ -73,6 +73,8 @@ Run these passes in order:
 5. Voice pass: does it sound like a specific expert or brand, not a generic assistant?
 6. Search pass: does it answer the real query and support entity clarity without keyword stuffing?
 7. Implementation pass: are headings, CTAs, metadata notes, schema notes, and internal links ready for the next skill?
+8. Anti-slop pass: does any sentence sound plausible but add no evidence,
+   judgment, specificity, or useful decision support?
 
 ## Acceptance Checklist
 
@@ -86,6 +88,12 @@ Run these passes in order:
 - [ ] The page has a clear internal-link or next-step path.
 - [ ] The prose varies sentence and paragraph length naturally.
 - [ ] The draft includes content gaps instead of hiding missing evidence.
+- [ ] At least three details are specific to this business, audience, sector,
+      geography, offer, process, proof, or source set.
+- [ ] Source notes exist for factual, time-sensitive, regulated, financial,
+      health, legal, safety, or reputation-sensitive claims.
+- [ ] No generic AI-slop openings, empty empathy, invented examples, or
+      unsupported superlatives remain.
 
 ## Red Flags
 
@@ -97,3 +105,7 @@ Run these passes in order:
 - The copy talks about "solutions" but never names the actual offer.
 - The article answers a keyword but not a buyer question.
 - The CTA says only `Submit`, `Learn more`, `Continue`, or `Get started`.
+- The draft is grammatically clean but could be used by any competitor.
+- The prose relies on "today's fast-paced world", "seamless solutions",
+  "unlock your potential", or similar filler instead of concrete details.
+- The copy cites anonymous UGC, AI summaries, or unverifiable claims as proof.

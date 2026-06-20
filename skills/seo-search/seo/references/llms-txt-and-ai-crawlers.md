@@ -1,19 +1,24 @@
 # llms.txt, llms-full.txt and AI Crawler Rules
 
-This reference defines the exact files every site must ship to be discoverable, citable and accurately summarised by AI search engines (ChatGPT, Claude, Gemini, Perplexity, Bing AI). These are mandatory deliverables in the SEO skill.
+This reference defines optional plain-text handover files and required crawler
+policy rules. `llms.txt` and `llms-full.txt` can help documentation workflows,
+agentic coding tools, internal knowledge packaging, and client handover, but
+they are not AI-search ranking levers and are not mandatory deliverables.
 
 Google Search caveat: Google's official guidance for AI Overviews and AI Mode
 says `llms.txt`, AI text files, Markdown mirrors, and special markup are not
-required for inclusion in generative AI features on Google Search. In this
-engine, `llms.txt` and `llms-full.txt` are retained for broader LLM handover,
-non-Google AI surfaces, and client-owned plain-text knowledge packaging. Do not
-present them as Google AI Search ranking levers.
+required for inclusion in generative AI features on Google Search; Google Search
+ignores them for visibility and rankings. In this engine, `llms.txt` and
+`llms-full.txt` are retained only for broader LLM handover, documentation,
+non-Google client requirements, and client-owned plain-text knowledge packaging.
+Do not present them as Google, Bing, ChatGPT, Claude, Gemini, Perplexity, or
+other AI-search ranking levers.
 
 ---
 
-## Why these files exist
+## Why these files may exist
 
-LLM-powered search engines do two things:
+Some LLM-powered tools and downstream agents may do two things:
 
 1. **Real-time retrieval** — they hit your site at inference time and need a fast, JS-free, prose-first source of truth.
 2. **Grounding for citations** — they want a structured page of *what your business is, what it sells, where it operates, what it costs* that they can lift facts from with confidence.
@@ -22,11 +27,21 @@ The HTML site, however well-built, is often too JS-heavy, too marketing-styled,
 or too fragmented for some non-Google AI tools and downstream handover
 workflows to parse cheaply. `llms.txt` and `llms-full.txt` help with those
 contexts, but they do not replace crawlable, indexable HTML and they are not a
-special Google AI Search requirement.
+Search ranking or citation requirement.
+
+Generate these files only when at least one of these is true:
+
+- the client explicitly wants a plain-text knowledge package
+- developer documentation or API docs benefit from agentic coding-tool parsing
+- the CMS generates them automatically and they can be kept accurate
+- a non-Google crawler or downstream workflow has a documented need
+
+Skip them when the project lacks the budget to keep them synchronized with the
+site. Stale machine-readable files are worse than no file.
 
 ---
 
-## `/llms.txt` — required
+## `/llms.txt` - optional
 
 **Location:** site root (`/llms.txt`).
 **Format:** Markdown, UTF-8, ~2–4 KB.
@@ -84,7 +99,7 @@ target audience, the geography. Plain prose. No marketing fluff. No banned words
 
 ---
 
-## `/llms-full.txt` — required
+## `/llms-full.txt` - optional
 
 **Location:** site root (`/llms-full.txt`).
 **Format:** Plain text or Markdown, UTF-8, ~20–60 KB.

@@ -78,9 +78,10 @@ For each page, provide:
 - internal links
 - schema candidates
 - OG image idea
-- AI-crawler inclusion note for `llms.txt` or `llms-full.txt` when broader LLM
-  handover is in scope. Do not present these files as Google AI Overviews or
-  AI Mode requirements; route Google-specific claims to `google-ai-search`.
+- Optional plain-text handover note for `llms.txt` or `llms-full.txt` only when
+  broader LLM handover is explicitly in scope. Do not present these files as
+  Google, Bing, ChatGPT, Claude, Gemini, Perplexity, or AI-citation
+  requirements; route AI-search claims to `google-ai-search`.
 
 ## SEO / AI-Search QA
 
@@ -91,3 +92,7 @@ For each page, provide:
 - [ ] The content includes useful facts answer engines can cite.
 - [ ] Schema notes are truthful and implementable.
 - [ ] Internal links connect this page to a topic cluster or conversion path.
+- [ ] Source notes exist for factual, changing, regulated, or high-stakes
+      claims.
+- [ ] The copy avoids generic AI-slop patterns and includes business-specific
+      proof, examples, constraints, or judgment.
