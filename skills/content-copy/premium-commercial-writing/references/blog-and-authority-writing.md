@@ -30,6 +30,9 @@ Define:
 - next action
 - author/expert basis
 - update schedule if the topic changes often
+- source set: primary sources, named experts, official documents, original
+  client proof, and any sources that must not be used
+- evidence gaps: claims the article cannot safely make yet
 
 ## Article Types
 
@@ -57,6 +60,8 @@ Strong articles:
 - include expert or author context relevant to the topic
 - link to next-step resources or services naturally
 - make one clear point per section
+- include enough specificity that the article could not be swapped onto a
+  competitor's website without edits
 
 ## Authority Signals
 
@@ -68,6 +73,8 @@ Include what is true and useful:
 - sources for factual claims
 - clear limits of advice
 - links to related service pages and cluster articles
+- separation between verified fact, expert opinion, customer sentiment, and
+  user-generated anecdotes
 
 Do not invent credentials or imply professional advice where the client cannot provide it.
 
@@ -95,8 +102,13 @@ For topics likely to be summarized by answer engines:
 - make factual claims easy to attribute
 - include author and organization context
 - avoid burying the answer under brand storytelling
+- avoid planted-comment, forum-spam, or anonymous-UGC strategies for AI
+  citation. UGC may reveal buyer language, but it is not proof for high-stakes
+  claims unless independently verified.
 
-Coordinate with `seo/references/llms-txt-and-ai-crawlers.md` for site-level crawler files.
+Coordinate with `seo/references/llms-txt-and-ai-crawlers.md` only when optional
+plain-text handover files are in scope. Do not frame `llms.txt` as an
+AI-ranking or citation lever.
 
 ## Blog QA
 
@@ -107,3 +119,8 @@ Coordinate with `seo/references/llms-txt-and-ai-crawlers.md` for site-level craw
 - [ ] Internal links support a cluster or sales path.
 - [ ] The final CTA matches reader readiness.
 - [ ] The article can be excerpted into an email, social post, or sales follow-up.
+- [ ] Important claims have source notes or are clearly framed as opinion.
+- [ ] The draft avoids generic AI-slop openings, filler transitions, invented
+      examples, unsupported superlatives, and padded FAQs.
+- [ ] The article includes tradeoffs, limits, or "not fit" guidance where a
+      serious reader would expect them.

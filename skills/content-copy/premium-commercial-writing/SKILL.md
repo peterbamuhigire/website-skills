@@ -1,6 +1,6 @@
 ---
 name: premium-commercial-writing
-description: Cross-cutting premium commercial writing layer for website copy, landing pages, blogs, SEO/GEO pages, sales documents, offer pages, and conversion content. Use when writing must justify premium fees through sharper market-message-offer fit, voice-of-customer clarity, proof, authority, AI-search visibility, professional tone, and a polished editorial standard.
+description: Cross-cutting premium commercial writing layer for website copy, landing pages, blogs, SEO/GEO pages, sales documents, offer pages, and conversion content. Use when writing must justify premium fees through sharper market-message-offer fit, voice-of-customer clarity, proof, authority, AI-search visibility, professional tone, genuine human texture, and anti-AI-slop editorial standards.
 ---
 
 # Premium Commercial Writing
@@ -8,7 +8,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
 - Writing or revising website copy, service pages, landing pages, blogs, SEO pages, lead magnets, sales documents, proposals, case studies, offer pages, or campaign content that must support premium fees.
-- Existing copy sounds generic, under-researched, over-polished, hype-led, AI-like, or disconnected from buyer objections.
+- Existing copy sounds generic, under-researched, over-polished, hype-led,
+  AI-like, synthetic, filler-heavy, or disconnected from buyer objections.
 - A page must rank, be cited by AI/search systems, persuade a serious buyer, and still sound credible to a human evaluator.
 
 ## Do not use when
@@ -24,10 +25,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 1. Define the commercial job: rank, educate, compare, reassure, qualify, convert, retain, or support sales.
 2. Build the market-message-offer brief before drafting. Identify buyer segment, buyer problem, desired result, distinct mechanism, proof burden, risk, CTA, and follow-up path.
 3. Mine buyer language where evidence exists. If evidence is thin, mark the copy as inference-led and lower confidence.
-4. Draft around the buyer's decision sequence: orientation, problem, promise, proof, offer, risk reduction, next step.
-5. Edit for premium quality: specificity, rhythm, clarity, authority, restraint, scannability, proof proximity, and credible claims.
-6. Add search and AI-answer readiness where relevant: intent match, answerable sections, entities, author/expert signals, schema handoff notes, citations to allowed sources, and update cues.
-7. Return the finished copy plus acceptance criteria, unresolved evidence gaps, and implementation notes for the owning skill.
+4. Load `references/genuine-writing-and-ai-slop-gate.md` before drafting any
+   public-facing page, blog, article, or authority content unless the task is a
+   tiny microcopy edit.
+5. Draft around the buyer's decision sequence: orientation, problem, promise, proof, offer, risk reduction, next step.
+6. Edit for premium quality: specificity, rhythm, clarity, authority, restraint, scannability, proof proximity, credible claims, and human texture.
+7. Add search and AI-answer readiness where relevant: intent match, answerable sections, entities, author/expert signals, schema handoff notes, citations to allowed sources, and update cues.
+8. Return the finished copy plus acceptance criteria, unresolved evidence gaps, source notes, and implementation notes for the owning skill.
 
 ## Quality standards
 - The first screen or opening section makes the right reader feel oriented, understood, and able to act.
@@ -36,6 +40,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Writing sounds like a skilled professional with judgment, not a template, slogan sheet, or synthetic article.
 - Premium tone is confident, specific, useful, and commercially serious. It does not rely on luxury adjectives, fake scarcity, empty superlatives, or pressure tactics.
 - AI-search readiness supports human usefulness first. Do not stuff entities, FAQs, or schema ideas into weak content.
+- The draft must contain specific details from the business, buyer, sector,
+  geography, proof, process, or source material. If it could fit any competitor,
+  it fails.
 
 ## Anti-patterns
 - Polishing copy before the page strategy is clear.
@@ -43,12 +50,15 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Borrowing prestige from frameworks while ignoring the actual offer, buyer, proof, or sector risk.
 - Copying source-book language, long paraphrases, examples, or quotes into project files.
 - Writing for everyone because the client is afraid to qualify the right-fit buyer.
+- Publishing AI-sounding content because it is grammatically clean. Clean prose
+  still fails if it lacks evidence, judgment, specificity, and source integrity.
 
 ## Outputs
 - Premium copy drafts, page rewrites, blog/article drafts, SEO/GEO content notes, offer-page copy, document language, editorial QA findings, or acceptance criteria.
-- Message bank, proof bank, objection bank, CTA ladder, and content gaps when the project needs reusable writing assets.
+- Message bank, proof bank, objection bank, CTA ladder, source notes, and content gaps when the project needs reusable writing assets.
 
 ## References
+- `references/genuine-writing-and-ai-slop-gate.md` - mandatory for public-facing page copy, blog posts, authority content, SEO pages, and any draft that risks sounding generic, synthetic, or under-researched.
 - `references/professional-writing-quality-gate.md` - use for editorial QA, premium tone, claim discipline, proof standards, and final acceptance checks.
 - `references/website-page-writing-patterns.md` - use for home, about, service, pricing, FAQ, case-study, contact, and support-reduction pages.
 - `references/offer-and-landing-page-writing.md` - use for offer pages, campaign pages, waitlists, webinars, lead magnets, consultation pages, productized services, and direct-response flows.

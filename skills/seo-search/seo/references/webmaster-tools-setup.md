@@ -416,7 +416,9 @@ Replace `G-XXXXXXXXXX` with your Measurement ID.
 
 **Purpose:** Submit website to Bing search engine, monitor Bing search performance, debug issues.
 
-**Why Required:** Bing powers most AI search platforms (ChatGPT, Perplexity, Claude); essential for AI visibility.
+**Why Required:** Bing is a major AI-search and Copilot surface. Bing Webmaster
+Tools also exposes AI Performance reporting, including Citation Share where
+available.
 
 ### Step-by-Step Setup
 
@@ -474,6 +476,17 @@ Replace `G-XXXXXXXXXX` with your Measurement ID.
 - Review "Keywords" report
 - Check "Pages" for top performing pages
 - Monitor "Inlinks" for link profile changes
+- Review AI Performance if available:
+  - **Intents**: what user needs Bing associates with the site's citations
+  - **Topics**: subject groups where the site is appearing or missing
+  - **Citation Share**: share of citations attributed to the site across the
+    same grounding query; treat as an observational trend KPI, not traffic share
+    or a ranking score
+  - **Compare**: period-over-period movement in citation activity
+
+Pair AI Performance with analytics and CRM outcomes. A higher citation share is
+not enough if cited pages do not attract qualified visits, leads, sales, or
+trust-building engagement.
 
 ---
 
@@ -693,6 +706,7 @@ Same information as Google Business Profile:
 - [ ] Request more Google reviews (email customers)
 - [ ] Update Google Business Profile with posts (2-4 posts)
 - [ ] Monitor Bing Webmaster Tools for performance
+- [ ] Review Bing AI Performance / Citation Share if the report is available
 
 ### Ongoing (Monthly)
 
@@ -714,6 +728,7 @@ Same information as Google Business Profile:
 | Business Profile won't verify | Wait for phone call; keep phone monitored; try SMS verification |
 | IndexNow verification fails | Check key file is in public root; accessible via https://example.com/[key].txt |
 | Bing not indexing | Submit through IndexNow; wait 24 hours; resubmit sitemap |
+| Bing AI Citation Share drops | Check whether cited pages changed, source facts became stale, competitors published stronger evidence, or the topic moved during a volatile update window |
 
 ---
 
@@ -751,6 +766,8 @@ Same information as Google Business Profile:
 | GSC | Search impressions | +10% month/month |
 | GSC | Clicks from organic search | +15% month/month |
 | GSC | Average position | Improve top keywords |
+| Bing WMT | AI Citation Share | Stable or improving on priority topics |
+| Bing WMT | AI Intents/Topics | Aligned with target buyer questions |
 | GA4 | Organic traffic | +20% month/month |
 | GA4 | Conversion rate | +5% month/month |
 | GBP | Profile views | +50% month/month |

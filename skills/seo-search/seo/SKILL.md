@@ -1,13 +1,13 @@
 ---
 name: seo
-description: "Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use google-ai-search first for Google AI Overviews, AI Mode, and AEO/GEO mythbusting. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy."
+description: "Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, Bing Webmaster Tools, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use google-ai-search first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, Bing AI Performance, and llms.txt claims. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy."
 ---
 
 # Seo
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Use when
-- The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use `google-ai-search` first for Google AI Overviews, AI Mode, and AEO/GEO mythbusting. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy.
+- The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, Bing Webmaster Tools, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use `google-ai-search` first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, Bing AI Performance, and `llms.txt` claims. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy.
 - The user needs an implementation-facing skill rather than a general discussion.
 - The website content must work as a world-class marketing asset for the owner and as proof of premium website-development quality for the builder.
 
@@ -24,9 +24,10 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 2. Choose the smallest set of references needed for the current job.
 3. Produce the implementation, configuration, or guidance this skill owns.
 4. For premium or revenue-critical websites, align with `premium-website-product` so SEO is connected to buyer intent, authority content, conversion, launch distribution, and measurement.
-5. When the task mentions Google AI Overviews, AI Mode, AEO/GEO, or agentic
-   readiness, run `google-ai-search` first and treat its output as an upstream
-   input to SEO implementation.
+5. When the task mentions Google AI Overviews, AI Mode, AEO/GEO, Bing AI
+   Performance, Citation Share, `llms.txt`, UGC poisoning, or agentic readiness,
+   run `google-ai-search` first and treat its output as an upstream input to SEO
+   implementation.
 6. Validate that the result stays compatible with the rest of the repository workflow.
 
 ## Quality standards
@@ -66,24 +67,26 @@ Always emit on every relevant page (in addition to the foundational Organization
 
 Validate the resulting JSON-LD with the Schema.org validator and Google's Rich Results Test before sign-off.
 
-### AI / LLM crawler entry files — engine-required, not Google AI requirements
+### AI / LLM crawler entry files - optional handover artifacts, not AI-ranking requirements
 
-These files are part of this engine's broader LLM visibility and handover
-contract. Google's official guidance says `llms.txt`, AI text files, Markdown
-mirrors, and special markup are not required to appear in AI Overviews or AI
-Mode. Do not sell these files as Google AI Search ranking levers; use
-`google-ai-search` for Google-specific guidance.
+These files are optional, client-specific handover artifacts. Google's official
+guidance says `llms.txt`, AI text files, Markdown mirrors, and special markup are
+not required to appear in AI Overviews or AI Mode, and current field data shows
+very low AI-search crawler demand for `llms.txt`. Do not sell these files as
+Google, Bing, ChatGPT, Claude, Perplexity, or Gemini ranking levers.
 
-Generate at the site root:
+Generate them only when the client, CMS, documentation workflow, or project
+handover contract explicitly benefits from a plain-text knowledge artifact:
 
-1. **`/llms.txt`** — Markdown file (~2–4 KB) following the [llmstxt.org](https://llmstxt.org) spec: H1 site name, blockquote summary, then linked sections (Docs, Products, Services, Policies, Contact). Optimised for LLMs to ground answers without crawling JS.
-2. **`/llms-full.txt`** — Concatenated full-text of the most important pages (home, about, services/features, pricing, FAQ, contact, key blog cornerstones), 20–60 KB. Plain prose, no nav chrome, includes structured fact blocks (NAP, hours, prices, supported regions).
-3. **`/robots.txt`** — Allow GPTBot, ChatGPT-User, Google-Extended, ClaudeBot, anthropic-ai, PerplexityBot, CCBot, Bingbot, Googlebot. Reference all language sitemaps and the index sitemap. Do NOT block AI crawlers unless the client has explicitly opted out in writing.
+1. **`/llms.txt`** - Markdown file (~2-4 KB) following the [llmstxt.org](https://llmstxt.org) spec: H1 site name, blockquote summary, then linked sections (Docs, Products, Services, Policies, Contact). Treat as a convenience file, not an SEO lever.
+2. **`/llms-full.txt`** - Concatenated full-text of the most important pages (home, about, services/features, pricing, FAQ, contact, key blog cornerstones), 20-60 KB. Plain prose, no nav chrome, includes structured fact blocks (NAP, hours, prices, supported regions).
+3. **`/robots.txt`** - Always required. State the search crawler policy clearly, reference all language sitemaps and the index sitemap, and do not block AI crawlers unless the client has explicitly opted out in writing.
 4. **`/.well-known/security.txt`** on every site. RFC 9116 requires `Contact`
    and `Expires`; this engine also requires `Canonical` and `Policy` so
    vulnerability reports have a clear owner and disclosure route.
 
-The `llms.txt` and `llms-full.txt` files must be regenerated on every content change — wire them into the build, not produced once by hand.
+If `llms.txt` or `llms-full.txt` are generated, regenerate them on every content
+change so they cannot become stale or contradict the HTML site.
 
 ### Other required artifacts
 
@@ -92,6 +95,8 @@ The `llms.txt` and `llms-full.txt` files must be regenerated on every content ch
 - OpenGraph + Twitter card metadata, language-localised, with a real OG image (not a placeholder).
 - Favicons: 16, 32, 180 (apple-touch), 192, 512.
 - Per-page metadata authored in the project language, never machine-translated from English.
+- Google Search Console and Bing Webmaster Tools verification, with Bing AI
+  Performance/Citation Share reviewed when the property exposes it.
 
 ## References
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
@@ -105,7 +110,7 @@ The `llms.txt` and `llms-full.txt` files must be regenerated on every content ch
 - `references/seo-topic-and-intent-map.md` — align search intent with page roles, proof burdens, CTA posture.
 - `references/conversion-intent-and-launch-seo.md` — use when SEO work must support content clusters, launch windows, conversion-aware metadata, or state changes between prelaunch, open, and closed offers.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
-- `references/llms-txt-and-ai-crawlers.md` — exact format and templates for `llms.txt`, `llms-full.txt`, AI-crawler robots rules, and per-page AI-citability hooks.
+- `references/llms-txt-and-ai-crawlers.md` — optional format and templates for `llms.txt`, `llms-full.txt`, AI-crawler robots rules, and per-page AI-citability hooks.
 - `references/required-schema-catalog.md` — concrete JSON-LD templates for every mandatory schema above (LocalBusiness/MedicalBusiness, Product, Service, FAQPage, SoftwareApplication, Article, Person), with multi-language examples.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
