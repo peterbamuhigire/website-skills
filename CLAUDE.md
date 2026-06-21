@@ -268,3 +268,12 @@ engine; presentation comes from design-system-skills. Hard rule: never use a ban
 (Inter, Geist, Roboto, Arial, Open Sans, Lato, Space Grotesk, bare system stacks) as primary
 type — state the chosen typeface and reason before producing any artifact.
 <!-- /design-system-skills:trigger -->
+<!-- design-system-skills:relocated v1 -->
+**Relocated design skills.** These skills were moved OUT of website-skills into the
+`design-system-skills` engine (resolve its path from your global routing table). Any reference
+to them by name resolves there, NOT in this repo:
+`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`,
+`sector-strategies`, `legal` (now `legal-sector-ui-ux`), `data-visualization`,
+`premium-ui-ux-design` (the general design version; website keeps its build-coupled orchestration entry).
+Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`, `website-builder`.
+<!-- /design-system-skills:relocated -->
