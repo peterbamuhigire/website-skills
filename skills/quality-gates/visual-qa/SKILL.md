@@ -70,8 +70,10 @@ The command:
 - Diffs live in PR comments with before/after thumbnails.
 - Hierarchy, overflow, and empty-section are absolute assertions; no
   thresholds.
-- AI-slop is evaluated per `design-system/references/ai-slop-prevention.md`
-  plus the additions in `references/slop-rules.md`.
+- AI-slop is evaluated per the **`design-system-skills`** engine's
+  `doctrine/references/ai-slop-taxonomy.md` and `ai-slop-banned-fonts.md`
+  (resolve its path from your global engine-routing table), plus the additions
+  in `references/slop-rules.md`.
 - The structured checklist is a human review of the gate's findings, not a
   replacement.
 
@@ -96,8 +98,9 @@ The command:
 - `references/baseline-management.md` — how baselines are captured, versioned,
   and updated.
 - `references/hierarchy-overflow-checks.md` — the structural assertions.
-- `references/slop-rules.md` — banned patterns (extension of
-  `design-system/references/ai-slop-prevention.md`).
+- `references/slop-rules.md` — banned patterns (extension of the
+  `design-system-skills` engine's `doctrine/references/ai-slop-taxonomy.md`;
+  resolve its path via your global engine-routing table).
 - `references/review-checklist.md` — the structured human review sheet.
 
 ## Notes
