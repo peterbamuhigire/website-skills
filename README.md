@@ -2,6 +2,17 @@
 
 Portable website-building and agency-operating skills for Claude Code and Codex.
 
+## Architecture & cross-cutting engines (updated 2026-06-21)
+
+- **No engine is natively discovered anymore.** All skill engines on this machine — including this one — are consulted via the global routing table by globbing `SKILL.md` directly. Do not rely on native skill discovery; read the matching `SKILL.md` files in place.
+- **design-system-skills** (`C:\wamp64\www\design-system-skills`) is the new cross-cutting engine — the single home for ALL design / typography / UI / UX / visual-formatting skills plus the anti-AI-slop doctrine. It is **referenced, not mirrored**: resolve its path per-device from the global routing table and consult it **in addition** to this engine on any design/visual work.
+- **chwezi-accounting-doctrine** (the finance engine) is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
+- **7 portable design skills were migrated OUT** of this repo to design-system-skills: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in design-system-skills (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
+- **Build-coupled design skills are KEPT here and now consult the design doctrine** before making visual choices: `design-system`, `page-builder`, `visual-qa`, `website-builder`, and the orchestration `premium-ui-ux-design`. (`design-system` and `visual-qa` were explicitly wired to load the design doctrine first.)
+- **Current skill count: 57** `SKILL.md` files under `skills/` (recompute by globbing `skills/**/SKILL.md`).
+
+Note: some category and skill listings further down in this README predate the 2026-06-21 migration and may still name relocated skills; the bullet list above is authoritative for the relocated/kept split.
+
 This repository works in two modes without changing the directory layout:
 
 - `Claude Code`: commonly consumed as a Git submodule at `.claude/skills/` inside client projects
