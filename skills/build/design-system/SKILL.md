@@ -19,6 +19,16 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Upstream artifacts produced by earlier skills when this skill is part of a pipeline.
 
 ## Workflow
+
+**Step 0 — Consult the design doctrine first (cross-cutting).** Before choosing fonts, colour,
+spacing, imagery, or motion, consult the **`design-system-skills`** engine: resolve its location
+on this device from your global engine-routing table (`~/.claude/CLAUDE.md`, or `AGENTS.md` for
+Codex) — never assume an absolute path — then read `doctrine/design-doctrine.md` and
+`doctrine/references/` (banned AI-slop fonts incl. Inter/Geist, type scale, colour system,
+pairing, the ai-slop taxonomy). State your typeface and colour intent with a one-line reason in
+`docs/style-brief.md` before implementing (doctrine non-negotiable #1). Never use a banned
+AI-slop font as primary type.
+
 1. Read only the relevant project inputs and preserved guidance before acting.
 2. Audit the existing interface first when a site or product already exists: identify duplicated components, token drift, inconsistent states, and bespoke one-off styling before inventing anything new.
 3. For premium or revenue-critical sites, load `premium-ui-ux-design` before choosing color, type, spacing, imagery, or motion direction.
