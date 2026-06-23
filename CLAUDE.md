@@ -53,7 +53,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
 - **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
-- **`quality-gates/`** (4) — accessibility-audit, design-quality-score, security-gate, visual-qa
+- **`quality-gates/`** (5) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, security-gate, visual-qa
 - **`seo-search/`** (3) — google-ai-search, seo, seo-audit
 - **`ux-conversion/`** (4) — cro-audit, form-ux-design, they-ask-you-answer, ux-psychology
 
