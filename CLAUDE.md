@@ -48,7 +48,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`agency-ops/`** (14) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, delivery-automation, email-sender, launch-campaigns, local-in-person-acquisition, monthly-report, policy-pages, premium-sales-conversation, referral-program, service-blueprint-website-delivery, social-media
 - **`brand/`** (4) — brand-alignment, brand-storytelling, brand-strategy, brand-style-guide
 - **`build/`** (8) — color-selection, design-reference, design-system, i18n, image-compression, page-builder, photo-manager, sector-strategies
-- **`commerce/`** (4) — ecommerce, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
+- **`commerce/`** (5) — ecommerce, retail-commerce-operating-system, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
 - **`content-copy/`** (10) — blog-idea-generator, blog-writer, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation

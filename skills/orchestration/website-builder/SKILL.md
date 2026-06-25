@@ -29,10 +29,13 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 6. For premium, ecommerce, or revenue-critical builds, apply the premium website
    engine so strategy, acquisition, conversion, measurement, and handoff artifacts are
    planned before page production starts.
-7. Before `design-system` and page production on premium or revenue-critical work,
+7. For retail commerce builds, load `skills/commerce/retail-commerce-operating-system/SKILL.md`
+   before page production so product data, search/navigation, PDP, checkout, fulfilment,
+   returns, loyalty/CRM, analytics, POS/inventory, and finance/control handoffs are scoped.
+8. Before `design-system` and page production on premium or revenue-critical work,
    load `premium-ui-ux-design` so visual voice, conversion hierarchy, color,
    imagery, dashboard/proof presentation, and production polish are explicit.
-8. When the brief promises Google AI visibility, AI Overviews, AI Mode, AEO/GEO,
+9. When the brief promises Google AI visibility, AI Overviews, AI Mode, AEO/GEO,
    or agentic readiness, apply `google-ai-search` before `seo` and page
    production so Google-specific work is grounded in official Search guidance.
 
@@ -102,6 +105,9 @@ Any gate failure blocks deploy.
 - Use sibling skill `premium-ui-ux-design` for premium visual direction, conversion
   hierarchy, color/imagery/data presentation, production polish, and the premium
   website gate.
+- Use sibling skill `skills/commerce/retail-commerce-operating-system/SKILL.md`
+  when ecommerce depends on retail operating systems, inventory, fulfilment,
+  returns, loyalty, POS, ERP, or dashboards.
 - Use sibling skill `premium-website-product` for premium website service packaging,
   owner-facing content/SEO strategy, stack philosophy, launch campaign discipline,
   handover, measurement, and agency proof.
