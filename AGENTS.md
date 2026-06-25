@@ -68,7 +68,7 @@ Use these support skills on demand:
 - `color-selection`
 - `policy-pages`
 - `email-sender`
-- `ecommerce`, `ecommerce-funnel`, `ecommerce-checkout`, `ecommerce-analytics`
+- `ecommerce`, `retail-commerce-operating-system`, `ecommerce-funnel`, `ecommerce-checkout`, `ecommerce-analytics`
 - `agency-positioning`, `agency-client-retention`, `monthly-report`
 - `they-ask-you-answer`, `social-media`
 - `seo-audit`, `cro-audit`

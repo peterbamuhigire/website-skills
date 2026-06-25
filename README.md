@@ -54,7 +54,7 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |   |-- agency-ops/          Agency positioning, retention, sales, delivery, comms (11 skills)
 |   |-- brand/               Brand strategy, alignment, storytelling, style guides (4 skills)
 |   |-- build/               Design system, page builder, photo, color, i18n, sectors (8 skills)
-|   |-- commerce/            E-commerce strategy, funnel, checkout, analytics (4 skills)
+|   |-- commerce/            E-commerce strategy, retail commerce operating systems, funnel, checkout, analytics (5 skills)
 |   |-- content-copy/        Blog, sales copy, language standards, native French/Kiswahili copy, premium writing (10 skills)
 |   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
 |   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
@@ -169,7 +169,7 @@ bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootst
 - `color-selection`
 - `policy-pages`
 - `email-sender`
-- `ecommerce`, `ecommerce-funnel`, `ecommerce-checkout`, `ecommerce-analytics`
+- `ecommerce`, `retail-commerce-operating-system`, `ecommerce-funnel`, `ecommerce-checkout`, `ecommerce-analytics`
 - `agency-positioning`, `agency-client-retention`, `monthly-report`
 - `they-ask-you-answer`, `social-media`
 - `seo-audit`, `cro-audit`

@@ -49,6 +49,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Use `references/premium-ecommerce-growth-system.md` when designing, auditing, or
   improving ecommerce product pages, category pages, cart, checkout, retention, or
   revenue measurement for a premium client.
+- Use sibling skill `../retail-commerce-operating-system/SKILL.md` when the site must integrate product data, inventory, POS, fulfilment, returns, loyalty/CRM, promotions, markdowns, store pickup, retail dashboards, or finance/control handoffs.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
