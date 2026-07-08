@@ -35,7 +35,7 @@ contributing.
 | Certification syllabus and exam bank | `certification/syllabus.md`, `certification/exam.md` | CC BY-NC 4.0 | Non-commercial use allowed; commercial reuse (running a competing certification) requires a licence from the agency. |
 | Agency positioning references | `skills/agency-ops/agency-positioning/**` | **Closed — proprietary** | Not open; internal-only. |
 | Agency narrative and pricing | `skills/agency-ops/agency-positioning/references/agency-narrative.md`, `skills/agency-ops/agency-positioning/references/pricing-rules.md` | **Closed — proprietary** | Not open. |
-| Proposal templates | `proposal-skills/**` | **Closed — per submodule licence** | Separate submodule; see that repo's LICENSE. |
+| Proposal templates | external `proposal-skills` engine | **Closed — per referenced-engine licence** | Separate engine resolved from the global routing table; see that repo's LICENSE. |
 | Client project logs | `project-log/**` (in client projects) | **Client-owned** | Engine does not claim rights over client data. |
 | Book extractions | `skills/book-extractions/**` | **Fair use / internal only** | Not redistributed; references only. |
 | Reports from CI | `reports/**` (in client projects) | **Client-owned** | Engine does not claim rights. |

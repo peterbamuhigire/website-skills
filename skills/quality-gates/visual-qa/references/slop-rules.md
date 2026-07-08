@@ -148,7 +148,7 @@ The page fails when:
 ## Invocation
 
 ```bash
-bash .claude/skills/scripts/slop-scan.sh dist
+bash "$WEBSITE_SKILLS/scripts/slop-scan.sh" dist
 ```
 
 Output is both a human summary and a machine JSON under

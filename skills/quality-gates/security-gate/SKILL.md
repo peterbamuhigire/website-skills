@@ -41,7 +41,7 @@ Any "high" or "critical" finding blocks deploy.
 ## Canonical Command
 
 ```bash
-bash .claude/skills/scripts/security-gate.sh
+bash "$WEBSITE_SKILLS/scripts/security-gate.sh"
 ```
 
 The command:

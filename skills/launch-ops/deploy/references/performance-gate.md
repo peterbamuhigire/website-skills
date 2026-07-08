@@ -7,8 +7,8 @@ machine-enforceable answer to the question "is this site fast enough to ship?"
 ## Canonical Command
 
 ```bash
-# From a client project root with .claude/skills/ submodule
-bash .claude/skills/scripts/perf-gate.sh
+# From a client project root after resolving this engine as WEBSITE_SKILLS
+bash "$WEBSITE_SKILLS/scripts/perf-gate.sh"
 ```
 
 The script:
@@ -55,7 +55,7 @@ pull request.
 ## Third-Party JS Audit
 
 ```bash
-bash .claude/skills/scripts/audit-third-party-js.sh dist .third-party-allowed
+bash "$WEBSITE_SKILLS/scripts/audit-third-party-js.sh" dist .third-party-allowed
 ```
 
 Default allowlist is empty. Any host that genuinely needs runtime third-party
@@ -65,7 +65,7 @@ one-line reason on the same line. Unreviewed additions are blocked.
 ## Font Performance
 
 ```bash
-bash .claude/skills/scripts/check-font-performance.sh dist
+bash "$WEBSITE_SKILLS/scripts/check-font-performance.sh" dist
 ```
 
 Enforces:

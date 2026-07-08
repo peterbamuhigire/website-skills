@@ -82,7 +82,8 @@ build).
 What to automate:
 
 - Create new project workspace from template (Notion/ClickUp).
-- Create new git repo from `.claude/skills/` submodule template.
+- Create new git repo from the website project template and reference the
+  required engines through the global routing table.
 - Provision dev/staging environments.
 - Create client folder structure for assets, contracts, invoices.
 - Generate kickoff email to client with onboarding pack.

@@ -35,8 +35,8 @@ A failed diff requires explicit reviewer approval and a baseline update PR.
 ## Canonical Command
 
 ```bash
-# From a client project root with .claude/skills/ submodule
-bash .claude/skills/scripts/visual-qa.sh
+# From a client project root after resolving this engine as WEBSITE_SKILLS
+bash "$WEBSITE_SKILLS/scripts/visual-qa.sh"
 ```
 
 The command:
