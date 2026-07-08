@@ -87,7 +87,7 @@ Repo-Cleaner for engine projects without a review.
 #!/usr/bin/env bash
 # .git/hooks/pre-commit
 set -e
-bash .claude/skills/scripts/scan-secrets.sh --staged
+bash "$WEBSITE_SKILLS/scripts/scan-secrets.sh" --staged
 ```
 
 Commit the hook installer to the repo so all operators share the same

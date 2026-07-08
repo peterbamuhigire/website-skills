@@ -43,7 +43,7 @@ Every project launched through this skill must run the canonical CI pipeline
 at `templates/ci/website.yml`. Install it with:
 
 ```bash
-bash .claude/skills/scripts/install-canonical-ci.sh <project-path>
+bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project-path>
 ```
 
 The pipeline runs 15 ordered steps (install → lint → unit → build → e2e

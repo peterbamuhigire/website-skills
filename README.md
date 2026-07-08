@@ -13,12 +13,12 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 
 Note: some category and skill listings further down in this README predate the 2026-06-21 migration and may still name relocated skills; the bullet list above is authoritative for the relocated/kept split.
 
-This repository works in two modes without changing the directory layout:
+This repository is consumed by reference from the global engine-routing table.
+Claude Code and Codex should resolve the local `website-skills` checkout, then
+read portable skills under `skills/<category>/<skill-name>/SKILL.md` directly.
 
-- `Claude Code`: commonly consumed as a Git submodule at `.claude/skills/` inside client projects
-- `Codex`: consumed directly as a repository of portable skills under `skills/<category>/<skill-name>/SKILL.md`
-
-Projects can share the same skills, and updates propagate when downstream projects pull the latest repo state.
+Projects share the same skills by referencing the local engine path; they no
+longer need a nested skills submodule.
 
 The repository now also functions as a portable website agency engine. It contains build skills plus:
 
@@ -42,7 +42,7 @@ The repository now also functions as a portable website agency engine. It contai
 ## Architecture
 
 ```text
-website-skills/              <- this repo (often submoduled into .claude/skills/)
+website-skills/              <- this repo, referenced from the global engine-routing table
 |-- AGENTS.md                Repo-wide routing and quality rules
 |-- README.md                Overview and operating model
 |-- CLAUDE.md                Claude-specific repo guidance
@@ -70,8 +70,7 @@ website-skills/              <- this repo (often submoduled into .claude/skills/
 |-- reports/                 Per-build output directory (bundle, lighthouse, a11y, visual, security, drift, design-quality)
 |-- templates/ci/            Canonical CI pipeline inherited by client projects (15 blocking steps)
 |-- project-log/decisions/   Decision log for non-obvious trade-offs
-|-- LICENSE                  MIT + CC BY + CC BY-SA + CC BY-NC + proprietary (see docs/licensing-matrix.md)
-`-- proposal-skills/         Separate proposal-generation submodule
+`-- LICENSE                  MIT + CC BY + CC BY-SA + CC BY-NC + proprietary (see docs/licensing-matrix.md)
 ```
 
 ## Core Build Skills
@@ -105,17 +104,18 @@ pipeline at `templates/ci/website.yml`. These skills own the blocking gates:
   websites must pass the premium UI/UX gate before build sign-off and after
   visual QA
 
-Canonical commands (runnable from any client project with the skills submodule):
+Canonical commands (runnable from any client project after resolving this
+engine path as `WEBSITE_SKILLS`):
 
 ```bash
-bash .claude/skills/scripts/perf-gate.sh              # Lighthouse + weight budgets on 3G
-bash .claude/skills/scripts/a11y-gate.sh              # axe-core against every route
-bash .claude/skills/scripts/visual-qa.sh              # Playwright diff + structure + slop
-bash .claude/skills/scripts/security-gate.sh          # dep audit + headers + security.txt + SRI + secrets + supply-chain
-bash .claude/skills/scripts/drift-check.sh            # documentation coherence gate
-bash .claude/skills/scripts/slop-scan.sh              # banned-pattern static scan
-bash .claude/skills/scripts/design-quality-score.sh   # aggregate rubric score
-bash .claude/skills/scripts/install-canonical-ci.sh <project>  # one-time bootstrap
+bash "$WEBSITE_SKILLS/scripts/perf-gate.sh"              # Lighthouse + weight budgets on 3G
+bash "$WEBSITE_SKILLS/scripts/a11y-gate.sh"              # axe-core against every route
+bash "$WEBSITE_SKILLS/scripts/visual-qa.sh"              # Playwright diff + structure + slop
+bash "$WEBSITE_SKILLS/scripts/security-gate.sh"          # dep audit + headers + security.txt + SRI + secrets + supply-chain
+bash "$WEBSITE_SKILLS/scripts/drift-check.sh"            # documentation coherence gate
+bash "$WEBSITE_SKILLS/scripts/slop-scan.sh"              # banned-pattern static scan
+bash "$WEBSITE_SKILLS/scripts/design-quality-score.sh"   # aggregate rubric score
+bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project>  # one-time bootstrap
 ```
 
 ## Operating Discipline (Phase 11)

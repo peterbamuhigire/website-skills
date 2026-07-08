@@ -22,7 +22,8 @@ written down — it is not a formal RFP response.
 
 When the prospect is an institutional buyer — government, NGO, foundation, enterprise
 procurement, multi-stakeholder tender, formal Expression of Interest — reach for the
-submoduled **`proposal-skills/`** repository instead (at
+referenced **`proposal-skills`** engine instead (resolved from the global routing
+table; canonical repo:
 `https://github.com/peterbamuhigire/proposal-skills`). That skill set covers the ten
 numbered sections expected in formal proposals (cover letter, executive summary,
 understanding of assignment, firm profile, relevant experience, methodology, team
@@ -32,9 +33,9 @@ domain skills those proposals draw on.
 Rule of thumb:
 
 - Direct principal buyer, private firm, value conversation has happened → this file.
-- RFP, tender, institutional buyer, multi-section submission mandated → `proposal-skills/`.
+- RFP, tender, institutional buyer, multi-section submission mandated → `proposal-skills`.
 - Hybrid (institutional buyer asking for a short proposal) → this file for the
-  commercial logic + pricing; `proposal-skills/` for the formal sections they require.
+  commercial logic + pricing; `proposal-skills` for the formal sections they require.
 
 The commercial logic — offer ladder, pricing, qualification, scope — stays in
 `agency-positioning/` regardless of which proposal format is used.

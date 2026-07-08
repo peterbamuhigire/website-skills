@@ -28,7 +28,7 @@ here before opening the reports or rerunning.
 |---|---|---|
 | `npm ci` fails on peer deps | lockfile drift | `rm package-lock.json && npm install`, commit the new lockfile |
 | `npm ci` slow | cache miss | check cache key includes `package-lock.json`; Lighthouse CI and Playwright caches are distinct from npm |
-| submodule not populated | `submodules: recursive` missing | confirm workflow `checkout@v4` uses `submodules: recursive` |
+| engine path not resolved | `WEBSITE_SKILLS` missing or wrong | resolve `website-skills` from the global routing table before running repository scripts |
 | LFS content missing | `lfs: true` missing from checkout | add `lfs: true` to the relevant jobs (build, visual-qa) |
 
 ## Step 2 — Lint / Type-check

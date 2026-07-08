@@ -22,7 +22,7 @@ respond to each finding.
 ## Implementation
 
 ```bash
-bash .claude/skills/scripts/supply-chain-check.sh
+bash "$WEBSITE_SKILLS/scripts/supply-chain-check.sh"
 ```
 
 Output: `reports/security/supply-chain.txt` and

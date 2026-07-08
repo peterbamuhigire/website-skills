@@ -6,7 +6,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 This is a Claude Code skills library built from `SKILL.md` files that teach Claude how to build static websites from markdown content and assets. It is not a standalone application.
 
-It is commonly added as a Git submodule at `.claude/skills/` in client website projects, but the repository is also maintained as a portable skill system that Codex can consume directly.
+It is referenced from the global engine-routing table in client website projects. Claude Code and Codex should resolve the local checkout and consume `skills/<category>/<skill-name>/SKILL.md` directly.
 
 The repository now operates as a portable agency system with explicit layers for:
 
@@ -27,7 +27,7 @@ Premium is the default commercial standard for this repository. Website work mus
 - `scripts/` contains deterministic helpers where needed
 - [AGENTS.md](./AGENTS.md) provides repository-level routing and quality rules for Codex
 
-Claude-specific consumption at `.claude/skills/` still works, but the repository should not be treated as dependent on that path.
+Claude-specific projects may still point at this repository from their own configuration, but the repository should not be treated as dependent on `.claude/skills/` or any nested submodule path.
 
 ## Blog & Article Research — Always Use the Digital Research Engine
 
@@ -147,7 +147,7 @@ skills/content-copy/east-african-english/SKILL.md    <- Legacy English-only stan
 ### External Skill Set
 
 ```text
-proposal-skills/ <- Separate Git submodule for proposal generation
+proposal-skills <- Separate proposal-generation engine resolved from the global routing table
 ```
 
 ## Skill Execution Order

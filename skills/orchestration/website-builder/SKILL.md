@@ -119,8 +119,9 @@ Any gate failure blocks deploy.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
-- After intake is complete and before build starts, install the canonical CI
-  pipeline: `bash .claude/skills/scripts/install-canonical-ci.sh <project-path>`.
+- After intake is complete and before build starts, resolve this engine path
+  from the global routing table and install the canonical CI pipeline:
+  `bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project-path>`.
 - The sibling gate skills the orchestrator is responsible for invoking:
   `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
   `design-quality-score`, `premium-website-product`, `premium-ui-ux-design`,

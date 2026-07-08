@@ -73,7 +73,8 @@ Also create i18n utilities (shared across all languages):
 - `src/components/LanguageSwitcher.astro` — language selector
 
 ### Step 2: Design System
-Follow `.claude/skills/design-system/SKILL.md` to establish:
+Follow `skills/build/design-system/SKILL.md` from the resolved website-skills
+engine to establish:
 - Font selections (self-hosted via Fontsource)
 - Color palette in tailwind.config.mjs (shared across all languages)
 - Global styles in src/styles/global.css
@@ -83,7 +84,8 @@ Follow `.claude/skills/design-system/SKILL.md` to establish:
 Design is language-agnostic; same colors, fonts, layout for all languages.
 
 ### Step 3: Photo Management
-Follow `.claude/skills/photo-manager/SKILL.md` to:
+Follow `skills/build/photo-manager/SKILL.md` from the resolved website-skills
+engine to:
 - Catalog all photos in photo-bank/
 - Copy to src/assets/images/ (single flat directory — no subdirectories)
 - Generate _catalog.json with dimensions and usage tracking
@@ -93,7 +95,8 @@ Photos are shared across all language versions (no language-specific images unle
 ### Step 4: Build Pages
 For EACH enabled language:
 
-Follow `.claude/skills/page-builder/SKILL.md` to:
+Follow `skills/build/page-builder/SKILL.md` from the resolved website-skills
+engine to:
 - Create language-specific BaseLayout.astro variant (accepts lang prop)
 - Create reusable components shared across languages (Header, Footer, Hero, etc.)
 - Build each page from `docs/{lang}/` content
@@ -103,7 +106,8 @@ Follow `.claude/skills/page-builder/SKILL.md` to:
 Content differs per language; components and layout are shared.
 
 ### Step 5: SEO Integration
-Follow `.claude/skills/seo/SKILL.md` to:
+Follow `skills/seo-search/seo/SKILL.md` from the resolved website-skills
+engine to:
 - Generate hreflang tags for each language version
 - Create language-specific sitemaps
 - Add Open Graph locale tags

@@ -347,8 +347,8 @@ Leads without all four are "suspects" — noise. Pairs with our existing
 
 ### The 6-Part Proposal Template
 
-Roetzer's structure (also reflected in our existing `proposal-skills`
-submodule):
+Roetzer's structure (also reflected in the referenced `proposal-skills`
+engine):
 
 1. **Snapshot** — executive summary, "where accounts are won," 1–2
    pages, narrative not jargon.
@@ -694,7 +694,7 @@ Failure modes to avoid:
 | RER per account | This file + `okrs-and-client-reporting.md` |
 | Documented playbook | This entire skill repository |
 | Monthly scorecard | `monthly-report-template.md` |
-| 6-part proposal template | `proposal-skills/` submodule |
+| 6-part proposal template | Referenced `proposal-skills` engine |
 | Client-in-Residence | Founder role until > 12 staff |
 | MAD-R qualification | `agency-positioning/references/lead-qualification-scorecard.md` |
 | 17 A-player traits | This file (new) |
