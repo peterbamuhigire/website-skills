@@ -185,7 +185,7 @@ For each of the top 3 service verticals:
 - Services: `Service` + `Offer` (optional)
 - Case study: `Article` + `Review` (client testimonial)
 - Blog: `Article` with author, datePublished, dateModified
-- FAQ page or section: `FAQPage` with proper `mainEntity` nesting
+- FAQ page or section: visible, useful answers; `FAQPage` only for a documented non-Google consumer because Google retired the rich result in May 2026
 - Testimonials section: `Review` nested in `Organization` or `Service`
 - Location / contact (LocalBusiness-eligible firms): `LocalBusiness` with geo coordinates, opening hours, postal address
 - Events: `Event`

@@ -10,7 +10,7 @@ This repository is a portable skill library for building websites and related ma
 - Detailed domain material belongs in `references/`.
 - Deterministic helpers belong in `scripts/`.
 
-Do not assume this repository must live under `.claude/skills/`. Resolve skills by repository-relative paths such as `skills/orchestration/website-builder/SKILL.md`, `skills/build/design-system/SKILL.md`, or `skills/build/sector-strategies/SKILL.md`. The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant; root-level operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` are not skills unless they contain their own `SKILL.md`.
+Do not assume this repository must live under `.claude/skills/`. Resolve local skills by repository-relative paths such as `skills/orchestration/website-builder/SKILL.md` or `skills/build/design-system/SKILL.md`; resolve relocated design skills such as `sector-strategies` through `skills/manifest.yml` and the global engine-routing table. The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant; root-level operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` are not skills unless they contain their own `SKILL.md`.
 
 ## Baseline Rules
 

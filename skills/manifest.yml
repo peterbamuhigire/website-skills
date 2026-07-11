@@ -1,0 +1,970 @@
+{
+  "schema_version": 1,
+  "generated": "2026-07-11",
+  "canonical_count": 59,
+  "external_engines": {
+    "design-system-skills": {
+      "locator": "global-routing-table",
+      "required_for": "visual-design"
+    },
+    "digital-research-skills": {
+      "locator": "global-routing-table",
+      "required_for": "live-research"
+    }
+  },
+  "relocations": {
+    "brand-alignment": "design-system-skills:brand-alignment",
+    "brand-style-guide": "design-system-skills:brand-style-guide",
+    "color-selection": "design-system-skills:color-selection",
+    "form-ux-design": "design-system-skills:form-ux-design",
+    "legal": "design-system-skills:legal-sector-ui-ux",
+    "sector-strategies": "design-system-skills:sector-strategies",
+    "ux-psychology": "design-system-skills:ux-psychology"
+  },
+  "skills": [
+    {
+      "id": "agency-client-retention",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/agency-client-retention/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "agency-client-retention-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "agency-positioning",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/agency-positioning/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "agency-positioning-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "authority-offers",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/authority-offers/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "authority-offers-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "customer-service-website-ops",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/customer-service-website-ops/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "customer-service-website-ops-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "delivery-automation",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/delivery-automation/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "delivery-automation-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "email-sender",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/email-sender/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "email-sender-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "launch-campaigns",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/launch-campaigns/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "launch-campaigns-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "local-in-person-acquisition",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/local-in-person-acquisition/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "local-in-person-acquisition-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "monthly-report",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/monthly-report/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "monthly-report-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "policy-pages",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/policy-pages/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "policy-pages-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "premium-sales-conversation",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/premium-sales-conversation/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "premium-sales-conversation-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "referral-program",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/referral-program/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "referral-program-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "service-blueprint-website-delivery",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/service-blueprint-website-delivery/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "service-blueprint-website-delivery-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "social-media",
+      "category": "agency-ops",
+      "path": "skills/agency-ops/social-media/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "social-media-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "brand-storytelling",
+      "category": "brand",
+      "path": "skills/brand/brand-storytelling/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "brand-storytelling-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "brand-strategy",
+      "category": "brand",
+      "path": "skills/brand/brand-strategy/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "brand-strategy-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "design-reference",
+      "category": "build",
+      "path": "skills/build/design-reference/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "design-reference-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "design-system",
+      "category": "build",
+      "path": "skills/build/design-system/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "design-system-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "i18n",
+      "category": "build",
+      "path": "skills/build/i18n/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "i18n-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "image-compression",
+      "category": "build",
+      "path": "skills/build/image-compression/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "image-compression-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "page-builder",
+      "category": "build",
+      "path": "skills/build/page-builder/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "page-builder-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "photo-manager",
+      "category": "build",
+      "path": "skills/build/photo-manager/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "photo-manager-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "ecommerce",
+      "category": "commerce",
+      "path": "skills/commerce/ecommerce/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "ecommerce-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "ecommerce-analytics",
+      "category": "commerce",
+      "path": "skills/commerce/ecommerce-analytics/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "ecommerce-analytics-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "ecommerce-checkout",
+      "category": "commerce",
+      "path": "skills/commerce/ecommerce-checkout/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "ecommerce-checkout-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "ecommerce-funnel",
+      "category": "commerce",
+      "path": "skills/commerce/ecommerce-funnel/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "ecommerce-funnel-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "retail-commerce-operating-system",
+      "category": "commerce",
+      "path": "skills/commerce/retail-commerce-operating-system/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "retail-commerce-operating-system-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "blog-idea-generator",
+      "category": "content-copy",
+      "path": "skills/content-copy/blog-idea-generator/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "blog-idea-generator-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "blog-writer",
+      "category": "content-copy",
+      "path": "skills/content-copy/blog-writer/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "blog-writer-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "content-writing",
+      "category": "content-copy",
+      "path": "skills/content-copy/content-writing/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "content-writing-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "east-african-english",
+      "category": "content-copy",
+      "path": "skills/content-copy/east-african-english/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "east-african-english-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "french-native-copy",
+      "category": "content-copy",
+      "path": "skills/content-copy/french-native-copy/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "french-native-copy-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "language-standards",
+      "category": "content-copy",
+      "path": "skills/content-copy/language-standards/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "language-standards-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "long-form-sales-copy",
+      "category": "content-copy",
+      "path": "skills/content-copy/long-form-sales-copy/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "long-form-sales-copy-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "premium-commercial-writing",
+      "category": "content-copy",
+      "path": "skills/content-copy/premium-commercial-writing/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "premium-commercial-writing-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "sales-copywriting",
+      "category": "content-copy",
+      "path": "skills/content-copy/sales-copywriting/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "sales-copywriting-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "swahili-native-copy",
+      "category": "content-copy",
+      "path": "skills/content-copy/swahili-native-copy/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "swahili-native-copy-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "deploy",
+      "category": "launch-ops",
+      "path": "skills/launch-ops/deploy/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "deploy-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "experimentation",
+      "category": "launch-ops",
+      "path": "skills/launch-ops/experimentation/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "experimentation-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "marketing-measurement-system",
+      "category": "launch-ops",
+      "path": "skills/launch-ops/marketing-measurement-system/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "marketing-measurement-system-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "observability",
+      "category": "launch-ops",
+      "path": "skills/launch-ops/observability/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "observability-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "skill-safety-audit",
+      "category": "meta",
+      "path": "skills/meta/skill-safety-audit/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "skill-safety-audit-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "skill-creator",
+      "category": "meta",
+      "path": "skills/meta/skill-writing/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "skill-creator-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "update-claude-documentation",
+      "category": "meta",
+      "path": "skills/meta/update-claude-documentation/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "update-claude-documentation-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "africa-excellence",
+      "category": "orchestration",
+      "path": "skills/orchestration/africa-excellence/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "africa-excellence-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "premium-ui-ux-design",
+      "category": "orchestration",
+      "path": "skills/orchestration/premium-ui-ux-design/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "premium-ui-ux-design-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "premium-website-product",
+      "category": "orchestration",
+      "path": "skills/orchestration/premium-website-product/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "premium-website-product-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "website-builder",
+      "category": "orchestration",
+      "path": "skills/orchestration/website-builder/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "website-builder-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "website-experience-mapping",
+      "category": "orchestration",
+      "path": "skills/orchestration/website-experience-mapping/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "website-experience-mapping-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "accessibility-audit",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/accessibility-audit/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "accessibility-audit-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "cross-page-design-consistency-audit",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/cross-page-design-consistency-audit/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "cross-page-design-consistency-audit-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "design-quality-score",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/design-quality-score/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "design-quality-score-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "security-gate",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/security-gate/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "security-gate-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "visual-qa",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/visual-qa/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "visual-qa-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "google-ai-search",
+      "category": "seo-search",
+      "path": "skills/seo-search/google-ai-search/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "google-ai-search-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "seo",
+      "category": "seo-search",
+      "path": "skills/seo-search/seo/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "seo-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "seo-audit",
+      "category": "seo-search",
+      "path": "skills/seo-search/seo-audit/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "seo-audit-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "cro-audit",
+      "category": "ux-conversion",
+      "path": "skills/ux-conversion/cro-audit/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "cro-audit-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    },
+    {
+      "id": "they-ask-you-answer",
+      "category": "ux-conversion",
+      "path": "skills/ux-conversion/they-ask-you-answer/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "they-ask-you-answer-output@1"
+      ],
+      "last_verified": "2026-07-11"
+    }
+  ]
+}

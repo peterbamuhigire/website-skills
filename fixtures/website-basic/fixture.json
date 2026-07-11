@@ -1,0 +1,1 @@
+{"id":"website-basic","expected":"pass","contracts":["strategy-brief@1","content-inventory@1","route-map@1","design-tokens@1","measurement-plan@1","release-evidence@1"],"gates":["metadata","performance","accessibility","visual","security","drift","design-quality"]}

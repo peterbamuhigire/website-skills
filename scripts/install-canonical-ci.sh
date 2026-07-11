@@ -2,11 +2,11 @@
 # install-canonical-ci.sh — bootstrap the canonical CI pipeline into a client project.
 #
 # Copies the canonical workflow and the canonical npm scripts into a project
-# that has .claude/skills/ mounted. Running this is the one-time setup step
+# using an explicitly resolved engine checkout. Running this is the one-time setup step
 # that signs the project up for the engine's enforcement gates.
 #
 # Usage:
-#   bash .claude/skills/scripts/install-canonical-ci.sh <project-path>
+#   bash /path/to/website-skills/scripts/install-canonical-ci.sh <project-path> [engine-path]
 #
 # Idempotent. Re-running is safe; existing files are backed up to
 # .engine-backup-<timestamp>/ before being overwritten.
@@ -14,21 +14,22 @@
 # Exit codes:
 #   0 — install complete
 #   1 — project path invalid
-#   2 — no skills submodule at <project-path>/.claude/skills/
+#   2 — engine path is invalid
 #   3 — user declined to overwrite existing workflow
 
 set -euo pipefail
 
 PROJECT="${1:-}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEFAULT_ENGINE="$(cd "$SCRIPT_DIR/.." && pwd)"
+SKILLS="${2:-$DEFAULT_ENGINE}"
 if [ -z "$PROJECT" ] || [ ! -d "$PROJECT" ]; then
     echo "usage: install-canonical-ci.sh <project-path>" >&2
     exit 1
 fi
 
-SKILLS="$PROJECT/.claude/skills"
-if [ ! -d "$SKILLS" ]; then
-    echo "install-canonical-ci: $SKILLS missing. Add the skills submodule first:" >&2
-    echo "  git submodule add https://github.com/<org>/website-skills $SKILLS" >&2
+if [ ! -f "$SKILLS/skills/manifest.yml" ] || [ ! -f "$SKILLS/templates/ci/website.yml" ]; then
+    echo "install-canonical-ci: invalid engine path: $SKILLS" >&2
     exit 2
 fi
 
@@ -48,6 +49,7 @@ backup_if_present() {
 mkdir -p "$PROJECT/.github/workflows"
 backup_if_present "$PROJECT/.github/workflows/website.yml"
 cp "$SKILLS/templates/ci/website.yml" "$PROJECT/.github/workflows/website.yml"
+python "$SKILLS/scripts/validate-skill-registry.py"
 echo "install-canonical-ci: workflow installed at .github/workflows/website.yml"
 
 # 2. Lighthouse config
@@ -89,12 +91,12 @@ fi
 if command -v jq >/dev/null 2>&1 && [ -f "$PROJECT/package.json" ]; then
     TMP=$(mktemp)
     jq '.scripts += {
-        "perf-gate": "bash .claude/skills/scripts/perf-gate.sh",
-        "a11y-gate": "bash .claude/skills/scripts/a11y-gate.sh",
-        "visual-qa": "bash .claude/skills/scripts/visual-qa.sh",
-        "security-gate": "bash .claude/skills/scripts/security-gate.sh",
-        "drift-check": "bash .claude/skills/scripts/drift-check.sh",
-        "design-score": "bash .claude/skills/scripts/design-quality-score.sh",
+        "perf-gate": "bash ${WEBSITE_SKILLS_DIR}/scripts/perf-gate.sh",
+        "a11y-gate": "bash ${WEBSITE_SKILLS_DIR}/scripts/a11y-gate.sh",
+        "visual-qa": "bash ${WEBSITE_SKILLS_DIR}/scripts/visual-qa.sh",
+        "security-gate": "bash ${WEBSITE_SKILLS_DIR}/scripts/security-gate.sh",
+        "drift-check": "bash ${WEBSITE_SKILLS_DIR}/scripts/drift-check.sh",
+        "design-score": "bash ${WEBSITE_SKILLS_DIR}/scripts/design-quality-score.sh",
         "engine-gates": "npm run perf-gate && npm run a11y-gate && npm run visual-qa && npm run security-gate"
     }' "$PROJECT/package.json" > "$TMP"
     backup_if_present "$PROJECT/package.json"
@@ -102,12 +104,7 @@ if command -v jq >/dev/null 2>&1 && [ -f "$PROJECT/package.json" ]; then
     echo "install-canonical-ci: package.json scripts merged"
 else
     echo "install-canonical-ci: jq not found or no package.json — add these scripts manually:" >&2
-    echo '  "perf-gate": "bash .claude/skills/scripts/perf-gate.sh",' >&2
-    echo '  "a11y-gate": "bash .claude/skills/scripts/a11y-gate.sh",' >&2
-    echo '  "visual-qa": "bash .claude/skills/scripts/visual-qa.sh",' >&2
-    echo '  "security-gate": "bash .claude/skills/scripts/security-gate.sh",' >&2
-    echo '  "drift-check": "bash .claude/skills/scripts/drift-check.sh",' >&2
-    echo '  "design-score": "bash .claude/skills/scripts/design-quality-score.sh",' >&2
+    echo '  Set WEBSITE_SKILLS_DIR and call $WEBSITE_SKILLS_DIR/scripts/<gate>.sh.' >&2
     echo '  "engine-gates": "npm run perf-gate && npm run a11y-gate && npm run visual-qa && npm run security-gate"' >&2
 fi
 
@@ -134,5 +131,6 @@ Next steps in this project:
   6. Configure GitHub variables: DEPLOY_PATH, PRODUCTION_URL.
   7. Trigger the workflow and verify every gate runs.
 
-See .claude/skills/launch-ops/deploy/references/ci-troubleshooting.md for common issues.
+Set the GitHub variable WEBSITE_SKILLS_DIR to the repository-relative engine checkout.
+See skills/launch-ops/deploy/references/ci-troubleshooting.md for common issues.
 EOF

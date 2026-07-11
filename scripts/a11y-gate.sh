@@ -7,7 +7,7 @@
 # from any operator's local machine.
 #
 # Usage from a client project:
-#   bash .claude/skills/scripts/a11y-gate.sh
+#   SKILLS_DIR=/path/to/website-skills bash /path/to/website-skills/scripts/a11y-gate.sh
 #
 # Exit codes:
 #   0 — no serious or critical violations
@@ -18,7 +18,8 @@
 set -euo pipefail
 
 ROOT="$(pwd)"
-SKILLS_DIR="${SKILLS_DIR:-$ROOT/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 DIST_DIR="${DIST_DIR:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/a11y"
 PORT="${A11Y_PORT:-4321}"

@@ -58,7 +58,7 @@ Always emit on every relevant page (in addition to the foundational Organization
 1. **LocalBusiness** (or the most specific subtype: `MedicalBusiness`, `MedicalOrganization`, `Hospital`, `Dentist`, `Restaurant`, `Store`, `LegalService`, etc.) — with `address`, `geo`, `areaServed`, `telephone`, `openingHoursSpecification`, `sameAs` profiles, and `aggregateRating` when authentic reviews exist.
 2. **Product** — for every distinct sellable offering (SaaS plan, package, physical good). Pair with **`Offer`** (price, priceCurrency, availability, url) and **`AggregateOffer`** when multiple price points exist.
 3. **Service** — for every service line. Include `serviceType`, `provider`, `areaServed`, `hasOfferCatalog` enumerating the sub-services with their `Offer`s.
-4. **FAQPage** — on the FAQ page AND inline on every service/feature/pricing page that legitimately answers questions. Minimum 5 Q&A entries per FAQ block.
+4. **FAQ content** — publish useful, visible answers when buyers need them. Do not require `FAQPage` for Google: Google ended the FAQ rich-result feature on 7 May 2026 and removed its documentation in June 2026. Use `FAQPage` only for a documented non-Google consumer and keep markup aligned with visible content.
 5. **SoftwareApplication / MobileApplication / WebApplication** — for any software product, with `applicationCategory`, `operatingSystem`, `offers`, `featureList`.
 6. **Article / NewsArticle / BlogPosting** — on every editorial page, with `author` (Person with `sameAs`), `publisher` (Organization with `logo`), `datePublished`, `dateModified`, `image`.
 7. **Person** — for every named author/founder/expert, with `jobTitle`, `worksFor`, `sameAs` (LinkedIn, scholar, professional registries), `knowsAbout`, `alumniOf` where appropriate.
@@ -111,7 +111,7 @@ change so they cannot become stale or contradict the HTML site.
 - `references/conversion-intent-and-launch-seo.md` — use when SEO work must support content clusters, launch windows, conversion-aware metadata, or state changes between prelaunch, open, and closed offers.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - `references/llms-txt-and-ai-crawlers.md` — optional format and templates for `llms.txt`, `llms-full.txt`, AI-crawler robots rules, and per-page AI-citability hooks.
-- `references/required-schema-catalog.md` — concrete JSON-LD templates for every mandatory schema above (LocalBusiness/MedicalBusiness, Product, Service, FAQPage, SoftwareApplication, Article, Person), with multi-language examples.
+- `references/required-schema-catalog.md` — concrete JSON-LD templates for active schema types and the retired Google FAQ rich-result note, with multi-language examples.
 - Read only the specific files under `references/` that match the current task instead of loading the whole directory.
 - This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 

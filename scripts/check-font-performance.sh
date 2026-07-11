@@ -16,7 +16,8 @@
 set -euo pipefail
 
 DIST_DIR="${1:-dist}"
-SKILLS_DIR="${SKILLS_DIR:-$(pwd)/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 BUDGETS_FILE="${BUDGETS_FILE:-$SKILLS_DIR/performance-budgets.json}"
 REPORT="${REPORT:-reports/font-audit.txt}"
 

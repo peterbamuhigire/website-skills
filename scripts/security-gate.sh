@@ -10,7 +10,7 @@
 #   6. supply-chain-check.sh (lockfile, install scripts, typosquats)
 #
 # Usage:
-#   bash .claude/skills/scripts/security-gate.sh
+#   SKILLS_DIR=/path/to/website-skills bash /path/to/website-skills/scripts/security-gate.sh
 #
 # Exit codes:
 #   0 - all checks pass
@@ -25,7 +25,8 @@
 set -euo pipefail
 
 ROOT="$(pwd)"
-SKILLS_DIR="${SKILLS_DIR:-$ROOT/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 DIST_DIR="${DIST_DIR:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/security"
 mkdir -p "$REPORTS_DIR"

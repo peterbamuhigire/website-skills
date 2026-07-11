@@ -291,7 +291,7 @@ Beyond the root files, every important page should be AI-citable on its own. App
 1. **Direct-answer first paragraph** — open the body with a 1–2 sentence direct answer to the question the page is named after. AI engines extract the first paragraph under the H1 disproportionately.
 2. **One H2 per sub-question** — phrase H2s as natural questions ("How does Medic8 work offline?") not topic labels ("Offline mode").
 3. **A comparison or specs table** wherever there is structured data (pricing, plan features, integration list, supported regions). AI engines lift tables verbatim.
-4. **An inline FAQ block of 5+ Q&A** at the bottom of the page, with `FAQPage` schema.
+4. **A visible FAQ block when research shows unresolved buyer questions.** `FAQPage` markup is not a Google AI or rich-result requirement.
 5. **`dateModified`** in `Article` schema, kept fresh on every content edit. Recency is a strong AI ranking signal.
 6. **Plain `Person` schema for any named author** with `sameAs` links to professional profiles.
 
@@ -306,7 +306,7 @@ Before sign-off:
 - [ ] `/robots.txt` allows GPTBot, ChatGPT-User, Google-Extended, ClaudeBot, anthropic-ai, PerplexityBot, CCBot, Bingbot, Googlebot.
 - [ ] `/robots.txt` references all language sitemaps + sitemap-index.
 - [ ] Every cornerstone page opens with a direct-answer paragraph.
-- [ ] Every service/feature/pricing page has an inline FAQ block with FAQPage schema.
+- [ ] Pages answer evidenced buyer questions; no unnecessary FAQ block or retired rich-result promise is present.
 - [ ] `Person` schema with `sameAs` exists for every named author.
 - [ ] `dateModified` is current on every Article schema.
 - [ ] OG image renders correctly when pasted into ChatGPT and Slack.

@@ -125,7 +125,7 @@ Source: *The SEO Book* (Tobias Ebner & Levin Granitza), *Content and Copywriting
 | BreadcrumbList | Inner pages | itemListElement with position, name, item URL |
 | Service | Service pages | name, description, provider, areaServed, serviceType |
 | Person | Team pages | name, jobTitle, image, description, sameAs |
-| FAQPage | FAQ sections | mainEntity with Question + acceptedAnswer |
+| FAQPage | Optional; not eligible for Google FAQ rich results since May 2026 | Use only for a documented non-Google consumer; keep visible-content parity |
 | HowTo | Instructional content | name, step with HowToStep elements |
 
 ### Rich Snippet Readiness

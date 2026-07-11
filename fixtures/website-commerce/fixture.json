@@ -1,0 +1,1 @@
+{"id":"website-commerce","expected":"pass","flows":["catalogue","cart","checkout-mock"],"checks":["product-schema","consent-events","security","performance"],"live_payments":false}

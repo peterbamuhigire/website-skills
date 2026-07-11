@@ -83,7 +83,7 @@ For each HTML page in `dist/`:
 - [ ] Organization/ProfessionalService schema on homepage
 - [ ] Service schemas on service pages
 - [ ] BreadcrumbList schema on all pages
-- [ ] FAQPage schema on FAQ sections
+- [ ] Historical note: FAQPage was formerly checked; Google retired FAQ rich results in May 2026, so current audits do not require it
 - [ ] HowTo schema on instructional content (if applicable)
 - [ ] All schemas validate (no missing required fields)
 - [ ] areaServed and serviceType populated

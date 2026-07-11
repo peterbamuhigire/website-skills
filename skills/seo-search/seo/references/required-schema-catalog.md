@@ -2,7 +2,7 @@
 
 Concrete templates for every JSON-LD block this skill mandates. Copy, adapt, ship.
 
-Every site uses at least: **Organization**, **WebSite**, **BreadcrumbList**, plus the most specific **LocalBusiness** subtype, **Product** + **Offer**, **Service**, **FAQPage**, **Person** for every named author, and **Article** on every editorial page. Software products add **SoftwareApplication**.
+Use schema only where the visible page supports it. Common types include **Organization**, **WebSite**, **BreadcrumbList**, the most specific applicable **LocalBusiness** subtype, **Product** + **Offer**, **Service**, **Person** for named authors, and **Article** on editorial pages. Software products add **SoftwareApplication**. No type is mandatory merely because it exists in this catalogue.
 
 All `@id` URLs must be stable, absolute and unique per entity. Cross-reference entities with `@id`, never duplicate them.
 
@@ -217,7 +217,9 @@ Pick the narrowest subtype:
 
 ---
 
-## FAQPage (every FAQ block)
+## FAQPage (not a Google rich-result requirement)
+
+Google ended FAQ rich results on 7 May 2026 and removed the feature documentation in June 2026. Do not add this markup to promise visibility or require a minimum question count. Retain it only when a documented non-Google consumer needs it and the questions and answers are visible on the page.
 
 ```json
 {
@@ -237,7 +239,7 @@ Pick the narrowest subtype:
 }
 ```
 
-Minimum 5 Q&A entries per FAQPage. Inline FAQPage blocks on service/feature/pricing pages count.
+There is no engine minimum. Content quality and visible-content alignment govern use.
 
 ---
 
