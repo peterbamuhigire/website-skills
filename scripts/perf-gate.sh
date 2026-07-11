@@ -5,8 +5,7 @@
 # asserts the thresholds in lighthouserc.json, checks route-level weight
 # budgets in performance-budgets.json, and emits reports under reports/.
 #
-# Usage from a client project that has this repo mounted at .claude/skills/:
-#   bash .claude/skills/scripts/perf-gate.sh
+# Usage: SKILLS_DIR=/path/to/website-skills bash /path/to/website-skills/scripts/perf-gate.sh
 #
 # Exit codes:
 #   0  — all gates passed
@@ -21,7 +20,8 @@
 set -euo pipefail
 
 ROOT="$(pwd)"
-SKILLS_DIR="${SKILLS_DIR:-$ROOT/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 LHCI_CONFIG="${LHCI_CONFIG:-$SKILLS_DIR/lighthouserc.json}"
 BUDGETS_FILE="${BUDGETS_FILE:-$SKILLS_DIR/performance-budgets.json}"
 DIST_DIR="${DIST_DIR:-$ROOT/dist}"

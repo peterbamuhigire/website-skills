@@ -269,7 +269,7 @@ This structure consistently earns AI citations across ChatGPT, Perplexity, Claud
 2. **Intro** — 150 words max. State the problem, promise the answer. No throat-clearing
 3. **H2 sections** — each one answers a sub-question a human would actually ask. Use natural question phrasing ("How does X work?" not "X Overview")
 4. **Comparison table** — if applicable. AI tools love structured, extractable data (see below)
-5. **FAQ section** — minimum 5 questions with FAQPage schema. This alone drives the majority of AI citations
+5. **FAQ section when users need it** — answer real buyer questions in visible content. Do not claim that `FAQPage` markup drives AI citations; Google ended its FAQ rich-result feature in May 2026.
 6. **Conclusion** — clear CTA, but soft. Answer density matters more than selling
 
 **Article length:** 2,000–2,500 words. Google and AI platforms reward **coverage**, not length. Padding dilutes citation density.

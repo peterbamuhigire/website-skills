@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://techguypeter.com/schemas/website-skills-manifest-v1.json",
+  "type": "object",
+  "required": ["schema_version", "canonical_count", "skills", "relocations"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "canonical_count": {"type": "integer", "minimum": 1},
+    "skills": {"type": "array", "items": {"type": "object", "required": ["id", "category", "path", "owner", "status", "inputs", "outputs", "last_verified"]}},
+    "relocations": {"type": "object", "additionalProperties": {"type": "string"}}
+  }
+}

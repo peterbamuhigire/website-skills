@@ -8,7 +8,7 @@
 #   3. AI-slop scan on rendered HTML and CSS via scripts/slop-scan.sh
 #
 # Usage:
-#   bash .claude/skills/scripts/visual-qa.sh
+#   SKILLS_DIR=/path/to/website-skills bash /path/to/website-skills/scripts/visual-qa.sh
 #
 # Exit codes:
 #   0 — all visual gates passed (diffs within threshold, no structural
@@ -22,7 +22,8 @@
 set -euo pipefail
 
 ROOT="$(pwd)"
-SKILLS_DIR="${SKILLS_DIR:-$ROOT/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 DIST_DIR="${DIST_DIR:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/visual"
 VISUAL_DIR="${VISUAL_DIR:-$ROOT/tests/visual}"

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://techguypeter.com/schemas/website-core-artifacts-v1.json",
+  "$defs": {
+    "header": {"type": "object", "required": ["artifact", "version", "project", "owner", "status", "updated"], "properties": {"version": {"const": 1}, "status": {"enum": ["draft", "approved", "superseded"]}}},
+    "waiver": {"type": "object", "required": ["gate", "reason", "approver", "expires", "decision_record"]}
+  }
+}

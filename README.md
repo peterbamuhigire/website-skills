@@ -9,9 +9,13 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 - **chwezi-accounting-doctrine** (the finance engine) is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
 - **7 portable design skills were migrated OUT** of this repo to design-system-skills: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in design-system-skills (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
 - **Build-coupled design skills are KEPT here and now consult the design doctrine** before making visual choices: `design-system`, `page-builder`, `visual-qa`, `website-builder`, and the orchestration `premium-ui-ux-design`. (`design-system` and `visual-qa` were explicitly wired to load the design doctrine first.)
-- **Current skill count: 57** `SKILL.md` files under `skills/` (recompute by globbing `skills/**/SKILL.md`).
+- **Current skill count: 59**, generated and validated from `skills/manifest.yml`.
 
-Note: some category and skill listings further down in this README predate the 2026-06-21 migration and may still name relocated skills; the bullet list above is authoritative for the relocated/kept split.
+The machine-readable relocation authority is `skills/manifest.yml`; the human-readable map is `docs/relocation-map.md`.
+
+## Engine integrity
+
+Run `python scripts/validate-skill-registry.py` on Windows or Linux. It verifies the 59-skill registry, paths, IDs, acknowledgements, and skill-local links. The canonical CI installer accepts the engine checkout as an explicit second argument and no longer depends on `.claude/skills`.
 
 This repository is consumed by reference from the global engine-routing table.
 Claude Code and Codex should resolve the local `website-skills` checkout, then

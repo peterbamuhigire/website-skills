@@ -1,0 +1,1 @@
+{"id":"website-multilingual","expected":"pass","locales":["en","fr","sw"],"native_review_required":["fr","sw"],"checks":["hreflang","localized-slugs","locale-links","screenshots"]}

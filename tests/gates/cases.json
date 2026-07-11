@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {"gate":"metadata","pass":"pass/metadata.html","fail":"fail/missing-metadata.html"},
+    {"gate":"performance","pass":"pass/performance.json","fail":"fail/performance.json"},
+    {"gate":"accessibility","pass":"pass/accessibility.json","fail":"fail/accessibility.json"},
+    {"gate":"visual","pass":"pass/visual.json","fail":"fail/visual.json"},
+    {"gate":"security","pass":"pass/security.json","fail":"fail/security.json"},
+    {"gate":"drift","pass":"pass/drift.json","fail":"fail/drift.json"},
+    {"gate":"design-quality","pass":"pass/design-quality.json","fail":"fail/design-quality.json"}
+  ]
+}

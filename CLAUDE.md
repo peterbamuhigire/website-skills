@@ -33,7 +33,7 @@ Claude-specific projects may still point at this repository from their own confi
 
 **Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting** (applies to `content-copy/blog-writer`, `content-copy/blog-idea-generator`, and any page carrying editorial/blog content). Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
 
-- **Engine location:** `digital-research-engine` (on this machine: `C:\Users\Peter\Documents\Claude Projects\digital-research-engine\skills\`). The repo is cloned on every device Peter works on; if the path differs, locate the `digital-research-engine` repo locally rather than skipping research.
+- **Engine location:** resolve `digital-research-skills` from the device's global engine-routing table. Never hard-code a checkout path.
 - **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region, each briefed per the engine's standard agent-brief structure. The orchestrator does the synthesis; research agents return raw, sourced findings only.
 - **Attribution is mandatory.** Cite real, locatable sources with URLs; name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything unverifiable as UNVERIFIED — confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation. Close each piece with a short "Sources & the researchers worth crediting" block.
 
@@ -46,8 +46,8 @@ The repository root should contain project documentation plus `docs/`, `skills/`
 Skills are organised under `skills/<category>/<skill>/` in 11 thematic categories:
 
 - **`agency-ops/`** (14) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, delivery-automation, email-sender, launch-campaigns, local-in-person-acquisition, monthly-report, policy-pages, premium-sales-conversation, referral-program, service-blueprint-website-delivery, social-media
-- **`brand/`** (4) — brand-alignment, brand-storytelling, brand-strategy, brand-style-guide
-- **`build/`** (8) — color-selection, design-reference, design-system, i18n, image-compression, page-builder, photo-manager, sector-strategies
+- **`brand/`** (2) — brand-storytelling, brand-strategy
+- **`build/`** (6) — design-reference, design-system, i18n, image-compression, page-builder, photo-manager
 - **`commerce/`** (5) — ecommerce, retail-commerce-operating-system, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
 - **`content-copy/`** (10) — blog-idea-generator, blog-writer, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
@@ -55,7 +55,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
 - **`quality-gates/`** (5) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, security-gate, visual-qa
 - **`seo-search/`** (3) — google-ai-search, seo, seo-audit
-- **`ux-conversion/`** (4) — cro-audit, form-ux-design, they-ask-you-answer, ux-psychology
+- **`ux-conversion/`** (2) — cro-audit, they-ask-you-answer
 
 Always reference skills by their full categorised path: `skills/<category>/<skill>/SKILL.md`.
 
@@ -67,9 +67,9 @@ skills/content-copy/language-standards/SKILL.md <- Language and tone standards
 skills/content-copy/french-native-copy/SKILL.md <- Native-quality French copy execution
 skills/content-copy/swahili-native-copy/SKILL.md <- Native-quality Kiswahili copy execution
 skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
-skills/brand/brand-alignment/SKILL.md    <- Brand coherence quality gate
+design-system-skills:brand-alignment    <- External brand coherence quality gate
 skills/build/design-reference/SKILL.md   <- Reference-site analysis
-skills/build/sector-strategies/SKILL.md  <- Industry-specific design and trust signals
+design-system-skills:sector-strategies  <- External industry design and trust signals
 skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
 skills/build/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
 skills/build/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
@@ -127,15 +127,15 @@ Canonical CI pipeline at `templates/ci/website.yml`.
 skills/seo-search/seo-audit/SKILL.md               <- Post-build SEO audit
 skills/content-copy/blog-idea-generator/SKILL.md     <- Blog ideation
 skills/agency-ops/email-sender/SKILL.md            <- Self-hosted contact-form handler
-skills/ux-conversion/form-ux-design/SKILL.md          <- Form UX guidance
-skills/ux-conversion/ux-psychology/SKILL.md           <- Behavioral UX review lens
+design-system-skills:form-ux-design                    <- External form UX guidance
+design-system-skills:ux-psychology                     <- External behavioural UX review lens
 skills/build/image-compression/SKILL.md       <- Build-time image compression
 skills/agency-ops/policy-pages/SKILL.md            <- Privacy and terms guidance
-skills/build/color-selection/SKILL.md         <- Color palette design
+design-system-skills:color-selection                  <- External colour palette design
 skills/content-copy/sales-copywriting/SKILL.md       <- Persuasion and conversion copywriting
 skills/brand/brand-strategy/SKILL.md          <- Brand brief development
 skills/brand/brand-storytelling/SKILL.md      <- Narrative and story structure
-skills/brand/brand-style-guide/SKILL.md       <- Client-facing style guide
+design-system-skills:brand-style-guide                <- External client-facing style guide
 skills/ux-conversion/cro-audit/SKILL.md               <- Conversion audit
 skills/agency-ops/social-media/SKILL.md            <- Social strategy and service layer
 skills/meta/skill-writing/SKILL.md           <- Skill authoring
@@ -195,7 +195,7 @@ Use plugins where they materially improve design, implementation, debugging, or 
 ## Canonical CI Pipeline (Phase 10)
 
 Every client project built on the engine inherits the 15-step pipeline at
-`templates/ci/website.yml` via `scripts/install-canonical-ci.sh <project>`.
+`templates/ci/website.yml` via `scripts/install-canonical-ci.sh <project> [engine-path]`.
 Pipeline order is fixed: install → lint → unit → build → e2e-smoke →
 metadata-audit → perf-gate → a11y-gate → visual-qa → security-gate →
 drift-check → design-quality-score → deploy → post-deploy-smoke →

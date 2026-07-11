@@ -29,7 +29,8 @@ set -euo pipefail
 ROOT="$(pwd)"
 DIST_DIR="${1:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/design-quality"
-SKILLS_DIR="${SKILLS_DIR:-$ROOT/.claude/skills}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_DIR="${SKILLS_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 
 if [[ ! -d "$DIST_DIR" ]]; then
   echo "FAIL: dist directory not found at $DIST_DIR"
