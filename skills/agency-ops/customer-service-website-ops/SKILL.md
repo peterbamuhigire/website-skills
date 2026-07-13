@@ -1,12 +1,16 @@
 ---
 name: customer-service-website-ops
-description: Post-launch customer service operations for premium website agencies — language, escalation, recovery, retention, and the operating discipline that protects premium reputation when something goes wrong. Use to design service SOPs, train support staff, write customer-facing recovery messages, and convert incidents into trust.
+description: Use when designing post-launch website support triage, escalation, recovery language, and retention operations. Use `service-blueprint-website-delivery` for end-to-end delivery design and `agency-client-retention` for commercial renewal strategy.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Customer Service Website Ops
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+<!-- dual-compat-start -->
+## Use When
 
 - Designing or upgrading the support layer attached to a premium website or retainer.
 - Writing customer-facing language for triage, recovery, refunds, escalations, or churn risk.
@@ -14,19 +18,25 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Converting recurring complaints into structural fixes via the service blueprint.
 - Re-engaging a client after a missed SLA, a bug, an outage, or a public mistake.
 
-## Do not use when
+## Do Not Use When
 
 - The interaction is a sales conversation, not a service one. Use `premium-sales-conversation`.
 - The work belongs to the client's existing customer service team and they have a stronger SOP.
 - The complaint is legal in nature and must be routed to counsel before any agency response.
 
-## Required inputs
+## Inputs
 
 - The service blueprint and SLA matrix for the engagement.
 - The recent ticket and complaint history, if any.
 - The client's brand voice and service tone.
 - The retainer scope and exclusion list.
 - The internal escalation matrix and on-call rota.
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Service scope, SLA, and exclusions | Signed agreement and blueprint | yes | Acknowledge receipt only; stop promises or remedies. |
+| Incident or request evidence | Ticket, logs, monitoring, customer report | yes | State what is known and begin evidence collection. |
+| Escalation owners and brand tone | Operations and brand owners | yes | Use neutral holding copy and escalate ownership gap. |
 
 ## Workflow
 
@@ -38,8 +48,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 6. Log the interaction with the structural cause. Patterns route to the service blueprint for permanent fix.
 7. Run a recovery gesture only when the breach was real and customer trust is at risk; never as a default discount.
 8. Feed retention data to `agency-client-retention` and `monthly-report`.
+9. Stop before refund, public statement, contractual admission, or scope expansion without the authorised owner; recover with a timed holding update.
 
-## Quality standards
+## Quality Standards
 
 - Every customer-facing message identifies a person, a next step, and a time.
 - Apologies are specific and one-time. They do not repeat in the same thread.
@@ -49,14 +60,14 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Internal handoffs are written, not verbal. The customer must not have to re-explain the issue at each step.
 - Recurring complaints become structural changes within one quarter or are escalated to leadership.
 
-## Anti-patterns
+## Anti-Patterns
 
 - "We are sorry for any inconvenience this may have caused" — generic, passive, low-trust.
-- Apology spirals where the customer is asked to forgive without any concrete action.
-- Letting one "loud" customer dictate scope changes that violate the contract.
-- Treating support tickets as a queue to clear instead of signal to act on.
-- Hiding bad news behind delay. Premium agencies surface issues before the customer reports them.
-- Punishing whistle-blowing customers by treating them as a problem instead of as a service-recovery opportunity.
+- Apology spirals with no concrete action. Fix: apologise once, then give the recovery step and time.
+- Letting one loud customer dictate scope changes. Fix: separate recovery from an authorised change request.
+- Treating tickets as a queue to clear. Fix: log structural cause and route recurring defects to the blueprint.
+- Hiding bad news behind delay. Fix: send a factual holding update before the customer has to chase.
+- Treating a reporting customer as the problem. Fix: protect respectful escalation and investigate the signal.
 
 ## Outputs
 
@@ -66,6 +77,41 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Monthly service report covering volume, SLA compliance, structural fixes shipped, and trust signals.
 - Updated service blueprint cells where structural fixes were made.
 - Recovery and retention gestures tracked with cost and outcome.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Triage and response record | Customer and support owner | Names severity, evidence, owner, next action, and next update time. |
+| Recovery decision | Account and finance owners | Links verified breach, proportional remedy, authority, cost, and follow-up. |
+| Structural improvement entry | Blueprint and retention teams | Recurring cause has an owner, due date, and verification condition. |
+
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| SLA timeline | Timestamped event log | Separates observed facts, customer statements, and pending checks. |
+| Closure evidence | Resolution test and customer update | No unresolved check is called closed. |
+
+## Capability Contract
+
+Default to read-only triage. Ticket edits and drafted messages require service authority. Sending messages, issuing refunds or credits, admitting liability, changing production, or making public statements requires explicit approval.
+
+## Degraded Mode
+
+Without logs, account history, or an authorised owner, draft a timed holding update. Mark root cause and SLA compliance `not assessed`; never invent a resolution.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Safety, privacy, security, or legal impact | Escalate immediately and limit disclosure | Harmful informal resolution |
+| Verified service breach with trust loss | Correct, explain, and consider proportional recovery | Empty apology or automatic discount |
+| Request is outside scope | Explain boundary and offer a change path | Silent scope expansion |
+
+## Worked Example
+
+After a contact-form outage, acknowledge the verified submission window, name the engineer and next update time, restore and test the path, then notify affected customers where records permit. Do not promise compensation until the account owner confirms impact and authority.
+
+<!-- dual-compat-end -->
 
 ## References
 

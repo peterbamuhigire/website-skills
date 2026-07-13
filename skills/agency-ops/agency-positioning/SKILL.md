@@ -1,12 +1,16 @@
 ---
 name: agency-positioning
-description: Premium positioning, offer architecture, market-calibrated pricing logic, qualification, scope control, and proposal structure for a website agency selling premium work in Uganda, East Africa, and international markets. Use when defining the agency category, building or pricing the offer, qualifying a prospect, writing or presenting a proposal, defending fees, controlling scope, firing a misfit client, onboarding staff on positioning, writing agency copy, or preparing for a sales conversation. Covers the agency narrative, the three-tier offer ladder (Foundation / Growth / Authority), value-based pricing with a calculator, Uganda market calibration, the Win-Without-Pitching expert posture, the four-conversation sales sequence, the Doctor-Pilot-Teacher framework, the 9 Positioning Assets, solutions language, founder storytelling, personal brand authority, and the Selling the Shovel principle.
+description: Use when defining a premium website agency's niche, offer ladder, qualification, fee posture, scope boundaries, proof, and proposal positioning. Use `premium-sales-conversation` for a live opportunity and `brand-strategy` for a client's market identity.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Agency Positioning
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+<!-- dual-compat-start -->
+## Use When
 
 - Defining or revising the agency category, narrative, or one-sentence positioning.
 - Choosing or sanity-checking a single-vertical niche ("web design for X"), or deciding when to add a second niche (use the niche-selection rubric).
@@ -21,7 +25,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Preparing for a sales conversation, value conversation, or closing conversation.
 - Explaining why website design is sold as a premium product: strategy, content, SEO, UX, stack, QA, launch, analytics, and post-launch improvement rather than pages alone.
 
-## Do not use when
+## Do Not Use When
 
 - The task is client-side messaging or brand work (use `brand-strategy`,
   `content-writing`, `sales-copywriting`).
@@ -34,13 +38,19 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   strategy, UX, SEO, QA, analytics, and handoff quality. Local Ugandan pricing may be
   below international floors, but the offer must remain productized and premium for its market.
 
-## Required inputs
+## Inputs
 
 - The current artefact or decision being developed (proposal, sales page, pricing
   question, qualification call, scope dispute, etc.).
 - Business context: the prospect or client's sector, scale, decision makers, and the
   commercial pressure driving the project.
 - Any existing positioning, fee data, or prior engagements that constrain the answer.
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Agency economics, capacity, proof, and ambitions | Leadership and delivery records | yes | Stop fee or category claims and reconcile evidence. |
+| Target-client and market evidence | Research, CRM, interviews, win/loss notes | yes | Treat niche and price as hypotheses. |
+| Existing offer, scope, and proposal assets | Commercial operations | conditional | Build a current-state inventory first. |
 
 ## Workflow
 
@@ -78,7 +88,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 6. Verify the artefact against the agency narrative's commitments
    (`agency-narrative.md` section 8) before shipping.
 
-## Quality standards
+5. Stop when evidence or authority is missing; recover with a provisional brief and named validation task.
+
+## Quality Standards
 
 - **Specific, not generic.** Real fees, real tier names, real prospect language, real
   sectors. Generic "agency-speak" is a red flag.
@@ -95,22 +107,52 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - **Recommend one.** Where options are presented, one is recommended. The agency does
   not present three options and ask the client to choose.
 
-## Anti-patterns
+## Anti-Patterns
 
-- Generic framework dumps with no decision made.
-- Hourly or day-rate quotes anywhere in the output.
-- Pages-only or "starter" packages that violate the relevant market floor.
-- Bundling hosting, maintenance, or content production into the project fee.
-- "We can do anything" language that dilutes the niche.
-- Client-pleasing copy that softens the commitments in `agency-narrative.md` section 8.
-- Pay-for-performance, equity, or revenue-share fee structures.
-- Inventing facts to fill out the artefact.
+- Generic framework dumps with no decision made. Fix: select a niche, promise, offer path, and fee boundary.
+- Hourly or day-rate quotes anywhere in the output. Fix: price the defined outcome and scope with a recorded rationale.
+- Pages-only or "starter" packages below the market floor. Fix: retain the strategy, content, SEO, QA, and handoff floor.
+- Bundling recurring work into the project fee. Fix: price it separately with exclusions.
+- "We can do anything" language. Fix: name the primary buyer, problem, and no-fit work.
+- Softening approved commitments. Fix: preserve the commercial boundary in `agency-narrative.md`.
+- Pay-for-performance, equity, or revenue-share structures. Fix: use authorised fixed project and retainer terms.
+- Inventing facts. Fix: label the hypothesis and assign verification.
 
 ## Outputs
 
 - Sales pages, proposals, scope definitions, pricing answers, qualification scripts,
   fee-defence responses, onboarding documents, sector-specific positioning notes.
 - Each output should be ready to use directly — not a draft for someone else to finish.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Agency positioning brief | Leadership, marketing, and sales | Defines niche, category, buyer, promise, proof, exclusions, and competitive frame. |
+| Offer and scope architecture | Sales and delivery | Names tiers, exclusions, price logic, capacity, change path, and acceptance. |
+| Qualification and proposal rules | Sales and proposal teams | Gives observable fit, no-fit, discovery, proof, and fee-floor decisions. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Positioning evidence register | Claim, source, status, limitation | No market or proof claim rests on invention. |
+| Commercial decision log | Choice, rejected option, rationale, owner | Fee and scope decisions are traceable. |
+
+## Capability Contract
+Default to read-only commercial analysis. Editing assets requires authority. Publishing claims, quoting, changing fee floors, signing scope, or terminating a client requires explicit leadership authority.
+
+## Degraded Mode
+Fallback if evidence or capabilities are unavailable: return a provisional brief with hypotheses and validation tasks. Never claim demand, price acceptance, proof, or approval without evidence.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Niche has painful demand, reachable buyers, proof, and delivery fit | Commit and build proof density | Generic agency positioning |
+| Value is clear but scope uncertainty is material | Sell paid discovery | Free solution design and price guessing |
+| Prospect conflicts with fee, authority, or operating rules | Decline or refer | Misfit scope and counter-reference |
+
+## Worked Example
+A studio with three verified hospitality projects chooses owner-led lodges as its primary niche, packages direct-booking and enquiry outcomes, and sets a paid content-discovery gate. It does not claim regional market leadership or quote a fee its capacity model cannot sustain.
+
+<!-- dual-compat-end -->
 
 ## References
 

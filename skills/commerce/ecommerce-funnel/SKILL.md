@@ -1,51 +1,87 @@
 ---
 name: ecommerce-funnel
-description: Ecommerce funnel strategy and customer lifecycle management. Use when building the customer journey beyond the product catalog — from cold stranger to loyal repeat buyer. Covers customer avatar creation, traffic temperature segmentation, funnel architecture (front-end → upsell → recurring), email campaign types, customer lifecycle stages, and the three growth levers. Companion to the ecommerce skill.
+description: Use when designing ecommerce acquisition, retargeting, lifecycle messaging, offers, upsells, retention, and repeat-purchase journeys; do not use for checkout mechanics or measurement architecture alone.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Ecommerce Funnel
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
+<!-- dual-compat-start -->
 ## Use when
-- The task matches this domain: Ecommerce funnel strategy and customer lifecycle management. Use when building the customer journey beyond the product catalog — from cold stranger to loyal repeat buyer. Covers customer avatar creation, traffic temperature segmentation, funnel architecture (front-end → upsell → recurring), email campaign types, customer lifecycle stages, and the three growth levers. Companion to the ecommerce skill.
-- The user needs domain-specific strategy, writing, or planning in this area.
+- Acquisition, retargeting, abandoned-cart, onboarding, repeat-purchase, win-back, upsell, or loyalty journeys need an owned lifecycle map.
+- Segments, triggers, consent, offers, timing, suppression, experiments, and economics must be designed as one system.
 
 ## Do not use when
-- Another skill is clearly narrower and better matched to the request.
-- The task is unrelated to this domain or needs direct implementation instead.
+- The task is catalogue/store model strategy or checkout state design; use `ecommerce` or `ecommerce-checkout`.
+- The task is event/KPI/dashboard architecture without lifecycle decisions; use `ecommerce-analytics`.
+- Consent, suppression, economics, or fulfilment capacity is unknown; stop before activation.
 
-## Required inputs
-- Business context, target audience, and the artifact or decision being developed.
-- Any existing materials, constraints, or supporting references already available.
+## Required Inputs
+| Input | Source | Required | If absent |
+|---|---|---:|---|
+| Segments, buying cycle, products, margins, channels, and lifecycle objective | Business/commerce brief | yes | Stop offer sequencing and request economics and audience evidence. |
+| Consent, contact rules, suppression, returns, and fulfilment limits | CRM/legal/operations | yes | Produce no send-ready campaign. |
+| Baseline funnel and cohort evidence | Analytics | conditional | Frame journey as a hypothesis, not an optimisation result. |
 
 ## Workflow
-1. Read the current business context and the concrete task to solve.
-2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
+1. Confirm segments, lifecycle objective, economics, consent, suppression, channels, fulfilment, and baseline; stop on unsafe activation gaps.
+2. Map current journey and evidence-backed drop-offs before selecting offers or messages.
+3. Decide triggers, timing, channel, content, offer, exits, frequency, and owner for each stage.
+4. Define instrumentation, primary metrics, margin/service guardrails, and experiment stop conditions.
+5. Review privacy, brand, stock, support, and operational capacity before handoff.
+6. If activation evidence or systems fail, keep the plan in draft, suppress affected audiences, and return the recovery owner/test.
 
 ## Quality standards
-- Outputs must be specific, usable, and grounded in the available evidence.
-- Recommendations should support follow-on execution instead of staying abstract.
-- The result should remain consistent with the broader repository system.
+- Each journey names segment, evidence, trigger, channel, timing, exit, suppression, owner, metric, and guardrail.
+- Offers respect verified margin, stock, fulfilment, brand, consent, and support capacity.
+- Optimisation claims distinguish measured incrementality from correlation and hypothesis.
 
 ## Anti-patterns
+- Activating an inferred segment. Fix: validate segment evidence and eligibility first.
+- Sending without consent or suppression. Fix: block activation until both are enforced.
+- Discounting without margin or capacity checks. Fix: set economic and service guardrails.
+- Measuring opens as business success. Fix: use incremental purchase and guardrail outcomes.
+- Running journeys without exits. Fix: define conversion, recency, frequency, and unsubscribe exits.
 - Do not produce generic framework dumps with no decision made.
 - Do not invent facts to complete the output.
 - Do not ignore the actual audience, offer, or business constraints.
+- Do not send without consent or omit suppression, frequency, and unsubscribe controls.
+- Do not use discounts that conflict with margin, stock, brand, or fulfilment limits.
 
 ## Outputs
-- Strategy notes, writing deliverables, framework outputs, or implementation-facing recommendations.
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Funnel/lifecycle map | Marketing, CRM, ecommerce, analytics | Names segment, trigger, message/offer, channel, timing, exit, suppression, metric, and owner at each stage. |
+| Experiment backlog | Growth owner | Each item has hypothesis, audience, primary metric, guardrail, and stop condition. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Journey assumption register | Evidence, assumption, risk, validation step | Unsupported segment or lift claims are explicitly qualified. |
+
+## Capability Contract
+Planning and review are read-only by default. Creating or sending campaigns, changing audiences or offers, using customer data, publishing, or spending requires explicit authority and consent controls.
+
+## Degraded Mode
+When CRM access, analytics, consent evidence, or verified economics is unavailable, deliver a qualified lifecycle map and mark activation not assessed. Do not provide send-ready lists.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Segment has distinct need/evidence | Tailor journey and measurement | Generic blasting |
+| Consent or suppression is uncertain | Block activation | Privacy harm |
+| Offer erodes margin or service capacity | Redesign or reject it | Unprofitable growth |
+| Baseline is missing | Run a measurement-first test | Unsupported lift claim |
+
+## Worked Example
+For replenishable skincare, separate first-time education from repeat-purchase timing, suppress recent purchasers from abandoned-cart messages, cap frequency, and measure incremental repeat purchase with margin and unsubscribe guardrails rather than reporting opens as success.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
 - Use sibling reference `../ecommerce/references/premium-ecommerce-growth-system.md`
   when planning traffic-to-retargeting paths, lifecycle journeys, abandoned-cart
   recovery, repeat purchase, or ecommerce growth metrics.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
-
+<!-- dual-compat-end -->

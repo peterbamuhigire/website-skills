@@ -1,11 +1,15 @@
 ---
 name: retail-commerce-operating-system
 description: Use when building or specifying a retail website, e-commerce site, omnichannel storefront, product catalogue, customer portal, or commerce frontend that must integrate product data, search/navigation, PDP content, cart/checkout, fulfilment, returns, loyalty/CRM, analytics, POS/inventory, and finance/control evidence.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Retail Commerce Operating System
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
+<!-- dual-compat-start -->
 ## Use When
 
 - A website or web app sells retail products, supports store pickup, exposes inventory, handles returns, captures loyalty/CRM events, or integrates with POS, inventory, ERP, WMS, payment, or fulfilment systems.
@@ -19,11 +23,20 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The project requires accounting treatment, tax, inventory valuation, or reconciliation promises without routing to the finance doctrine engine.
 
 ## Required Inputs
+| Input | Source | Required | If absent |
+|---|---|---:|---|
+| Business model, channels, categories, geography, store/warehouse/fulfilment model | Discovery/business artefacts | yes | Stop architecture decisions and return the missing operating choices. |
+| Systems of record for product, price, inventory, order, customer, payment, loyalty, analytics, and finance | Technical/operations owners | yes | Produce an integration discovery map only. |
+| Fulfilment, pickup, return, support, promotion, consent, and privacy rules | Policy owners | yes | Do not invent customer promises or eligibility logic. |
+| Approved SRS and acceptance criteria | SRS engine or project | conditional | Produce capability requirements, not implementation commitments. |
 
-- Business model, channel mix, store/warehouse/fulfilment model, product categories, and geography.
-- Product data source, inventory source, pricing source, promotion source, order management, payment, loyalty/CRM, and analytics stack.
-- Return policy, fulfilment promises, store pickup/delivery model, customer service model, and legal/privacy constraints.
-- Existing SRS, proposal, business plan, or discovery artefacts where available.
+## Workflow
+1. Confirm the retail decision, scope boundary, owners, and source artefacts; stop if customer promises or systems of record are unknown.
+2. Complete the Retail Build Diagnostic and mark every unknown rather than inferring it.
+3. Select only the required scope modules and define source-of-truth, events, exceptions, and finance/control handoffs for each.
+4. Decide whether the output is a discovery map, SRS input, implementation plan, or audit; keep audit work read-only unless remediation is authorised.
+5. Validate catalogue, search, PDP, pricing, cart, fulfilment, returns, loyalty, store, and measurement dependencies end to end.
+6. Recovery: on tool or integration failure, preserve evidence, repair the failed boundary, and rerun the narrowest safe test.
 
 ## Retail Build Diagnostic
 
@@ -83,6 +96,51 @@ A retail commerce build is not complete until:
 - Dashboards expose stale-data warnings and source lineage for financial or operational KPIs.
 - Performance, accessibility, privacy, and security gates pass under the repository's canonical CI pipeline.
 
+## Outputs
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Retail capability and integration specification | SRS, architecture, build, and operations teams | Every in-scope module names owner, source, contract, event, exception, customer state, and acceptance test. |
+| Retail readiness/audit record | Project owner | Findings cite inspected evidence, severity, owner, and verification step. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| System-of-record and event lineage register | Entity/event, source, destination, consent/control, test | Covers every in-scope customer promise and control handoff. |
+| Scenario test matrix | Scenario, expected/actual, owner, status | Includes stale price/inventory, payment failure, partial fulfilment, pickup failure, and return rejection where applicable. |
+
+## Capability Contract
+Discovery, specification, and audit default to read-only. Editing integrations, catalogue, inventory, price, promotions, orders, customer data, loyalty, payments, or finance records requires explicit authority. Publishing, production mutation, refunds, destructive actions, spending, and compliance/certification claims require separate approval and evidence.
+
+## Degraded Mode
+When systems, test accounts, network, data, devices, or policy evidence are unavailable, return the capability map and unassessed-boundary register. Never convert an inaccessible integration, control, or customer journey into a pass or promise live readiness.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| One system owns an entity | Record it and define downstream freshness/error behaviour | Conflicting truth |
+| Customer promise lacks operational owner | Stop that feature commitment | Undeliverable promise |
+| Scope includes accounting/tax/valuation | Route doctrine and SRS inputs before commitment | Unsupported finance claim |
+| Inventory or price can become stale | Define timestamp, revalidation, and recovery | Oversell or wrong price |
+| Narrow checkout/funnel/analytics task | Route to the sibling skill | Over-scoped operating-system work |
+
+## Quality Standards
+- Customer-facing availability, price, fulfilment, return, and loyalty states trace to named systems and owners.
+- Every integration covers timeout, stale data, duplicates, partial success, retry, and support escalation where relevant.
+- Event payloads define consent, deduplication, destination, and reporting use.
+- Financial, tax, reconciliation, and compliance statements remain doctrine-owned and evidence-backed.
+- Unknown and untested boundaries remain visible at release.
+
+## Anti-Patterns
+- Treating the website as the product-data master. Fix: name and integrate the actual system of record.
+- Displaying stock without freshness or reservation behaviour. Fix: timestamp, revalidate, and define failure recovery.
+- Promising pickup or delivery without capacity and exception ownership. Fix: bind the promise to operational rules and escalation.
+- Designing only the happy path. Fix: test stale price, payment failure, partial fulfilment, rejected return, and delayed refund states.
+- Claiming finance, tax, or audit readiness from frontend events. Fix: route to the finance doctrine and reconcile evidence.
+- Activating loyalty or marketing events without consent and suppression rules. Fix: document lawful basis, preferences, and destinations.
+
+## Worked Example
+A click-and-collect build maps product data to PIM, store stock to inventory, reservation to OMS, payment to the gateway, and refund evidence to finance. It revalidates price and stock before order placement, exposes pickup failure recovery, emits deduplicated events, and leaves tax treatment to the finance doctrine.
+
 ## Finance and Control Route
 
 If the web build touches refunds, discounts, markdowns, loyalty liabilities, gift cards, vendor-funded offers, inventory valuation, POS settlement, or management reporting, route to:
@@ -106,3 +164,10 @@ Do not promise accounting, tax, reconciliation, or audit outcomes from this webs
 ## Evidence Basis
 
 This skill is based on the internal digital-research-engine project `umbrex-retail-playbooks-engine-enhancement`, extracted on 2026-06-25 from public Umbrex retail playbook pages. Use it as a retail website completeness taxonomy, not as proof of client facts, market statistics, or accounting/legal treatment.
+
+## References
+- [`../ecommerce/SKILL.md`](../ecommerce/SKILL.md) for general store strategy and business-model framing.
+- [`../ecommerce-checkout/SKILL.md`](../ecommerce-checkout/SKILL.md) for checkout and post-purchase detail.
+- [`../ecommerce-funnel/SKILL.md`](../ecommerce-funnel/SKILL.md) for acquisition and lifecycle journeys.
+- [`../ecommerce-analytics/SKILL.md`](../ecommerce-analytics/SKILL.md) for events, KPIs, reconciliation, and dashboards.
+<!-- dual-compat-end -->

@@ -24,3 +24,16 @@ def test_every_gate_has_pass_and_fail_fixture():
         if pass_path.suffix == ".json":
             assert json.loads(pass_path.read_text())["expected"] == "pass"
             assert json.loads(fail_path.read_text())["expected"] == "fail"
+
+def test_skill_contract_validator():
+    result = subprocess.run([
+        sys.executable,
+        str(ROOT / "scripts/validate-skill-contracts.py"),
+        "--baseline",
+        str(ROOT / "quality/skill-contract-baseline.json"),
+    ], cwd=ROOT)
+    assert result.returncode == 0
+
+def test_routing_smoke():
+    result = subprocess.run([sys.executable, str(ROOT / "scripts/routing-smoke-test.py")], cwd=ROOT)
+    assert result.returncode == 0

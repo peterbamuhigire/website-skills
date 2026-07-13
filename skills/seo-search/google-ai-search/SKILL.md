@@ -1,12 +1,91 @@
 ---
 name: google-ai-search
-description: Use when optimizing, auditing, or planning a website for Google's generative AI features in Search, including AI Overviews and AI Mode, or when reconciling AI-search/GEO claims with official evidence. Applies official Google Search guidance, separates durable SEO work from AEO/GEO myths, handles llms.txt mythbusting, Bing AI citation-share measurement, source-integrity/UGC poisoning risk, market-fragmented assistant visibility, and routes technical, content, local, ecommerce, measurement, and agentic-readiness work into the website engine.
+description: Use when a website brief promises Google AI Overviews, AI Mode, AEO/GEO, Search Console AI measurement, local or ecommerce AI readiness, or agentic experience preparation; use seo for implementation after guidance.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Google AI Search
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Translate current official Google Search guidance into qualified website requirements without promising AI feature inclusion.
+
+<!-- dual-compat-start -->
+## Use When
+
+- A brief mentions AI Overviews, AI Mode, AEO, GEO, agentic search, or Search Console AI reporting
+- claims need official-source verification.
+
+## Do Not Use When
+
+- Use `seo` for routine implementation or unsupported tactics that claim guaranteed AI citations.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Specific AI-search claim, target market, website type, existing search plan, and current official Google sources | Brief, client, and verified official documentation | yes | Separate supported requirements from myths | Stop when current official guidance cannot be verified |
+
+## Workflow
+
+1. Frame the claim and verify current official Google sources
+2. Distinguish standard search requirements, feature-specific availability, measurement limits, and unsupported AEO/GEO claims
+3. Produce qualified requirements for content, entities, commerce/local data, and agentic readiness
+4. Stop on unverifiable or guaranteed-outcome language, recover by narrowing the claim, then hand implementation to seo.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Google AI Search guidance brief | SEO, content, commerce, local, and measurement owners | Every recommendation cites current official guidance and labels availability or measurement limits |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Official-source register and claim disposition table | Client and release owner | Each claim is supported, rejected, or marked not assessed with source date |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read, search, and network verification are required for current guidance. Planning is read-only by default. Website edits, Search Console changes, publication, spending, and account access require explicit authority.
+
+## Degraded Mode
+
+Without network or current official sources, return the narrowest qualified list of questions and stable principles, mark current feature claims `not assessed`, and do not provide tactical certainty.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Claim is supported by current official guidance | Translate it into a testable requirement | Speculative AEO tactic |
+| Brief promises inclusion or ranking | Remove the guarantee and state controllable work | Misleading commercial claim |
+
+## Quality Standards
+
+- Use official Google sources for current claims, cite at point of recommendation, distinguish availability by market, and never guarantee inclusion or ranking.
+
+## Anti-Patterns
+
+- Presenting AEO as a separate technical standard. Fix: map work to documented Search fundamentals and specific eligible features.
+- Guaranteeing an AI Overview citation. Fix: state controllable quality and eligibility work only.
+- Using a third-party blog as authority for Google behaviour. Fix: verify against official documentation.
+- Claiming Search Console exposes unavailable AI detail. Fix: document actual measurement limits.
+- Reusing stale feature availability. Fix: verify market and date before advising.
+
+## Worked Example
+
+If a proposal guarantees AI Overview placement, replace it with a scoped programme for crawlability, helpful content, entity clarity, merchant or local data, and measurement, citing current official Google guidance.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - A website must be prepared for Google's generative AI Search features,
   including AI Overviews and AI Mode.
 - The work mentions Google AI search, AI Overviews, AI Mode, AEO, GEO, query
@@ -21,7 +100,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Existing SEO/GEO recommendations need to be reconciled with official Google
   Search guidance.
 
-## Do not use when
+## Preserved Domain Exclusions
 - The target is primarily ChatGPT, Perplexity, Claude, Bing, or a private RAG
   system; use `seo` and its broader AI-search references first.
 - The task is only metadata, sitemap, hreflang, or schema implementation with
@@ -29,7 +108,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The user expects guaranteed inclusion in AI Overviews or AI Mode. Google
   does not guarantee crawling, indexing, serving, or AI-feature inclusion.
 
-## Required inputs
+## Preserved Domain Inputs
 - Target pages, page roles, business model, and primary user questions.
 - Current SEO baseline: crawlability, indexability, snippets eligibility,
   canonical/hreflang state, internal links, JavaScript rendering risks, and
@@ -39,7 +118,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Local business, ecommerce, Merchant Center, Google Business Profile, product
   feed, or Business Agent status when relevant.
 
-## Workflow
+## Preserved Domain Workflow
 1. Load `references/google-generative-ai-search-playbook.md` before making
    recommendations.
 2. Start from the Google rule: generative AI features in Search are grounded in
@@ -74,7 +153,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 11. When browser agents or commerce agents matter, load
    `references/agentic-readiness.md` and produce an agent-readiness backlog.
 
-## Quality standards
+## Preserved Domain Quality Guidance
 - Never present AEO/GEO hacks as Google requirements.
 - Treat `llms.txt` as an optional broader engine/LLM handover artifact, not a
   Google AI Search requirement, ranking lever, or default client priority.
@@ -88,7 +167,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   durable, original sources; monitor UGC surfaces for poisoning and brand-safety
   risk; do not attempt to manipulate assistants with planted comments.
 
-## Anti-patterns
+## Preserved Domain Anti-Patterns
 - Creating many near-duplicate pages to capture every fan-out query variant.
 - Breaking useful pages into unnatural fragments only for AI parsing.
 - Rewriting copy into robotic answer blocks when the human page gets worse.
@@ -96,7 +175,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Hiding weak content behind schema, Markdown files, or crawler files.
 - Blocking Googlebot and expecting AI Overviews or AI Mode visibility.
 
-## Outputs
+## Preserved Domain Outputs
 - Google AI Search readiness audit.
 - Content and technical implementation backlog.
 - Mythbusting note for stakeholders.
@@ -105,7 +184,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Source-integrity and UGC-risk notes when the content may be cited by AI tools.
 - Agentic-readiness backlog when relevant.
 
-## References
+## Preserved Domain References
 - `references/google-generative-ai-search-playbook.md` - official Google
   Search guidance distilled into engine rules.
 - `references/technical-readiness-checklist.md` - implementation checklist for

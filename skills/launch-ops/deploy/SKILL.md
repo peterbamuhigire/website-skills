@@ -1,94 +1,132 @@
 ---
 name: deploy
-description: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
+description: Use when a completed website must be built, release-gated, deployed, verified, communicated, and made rollback-ready; use `observability` for telemetry design and quality-gate skills for specialist audits.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Deploy
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- The task matches this domain: Builds multi-language Astro site, verifies output for all language versions, generates deployment scripts and Nginx configuration with language-aware routing. Supports English, French, Kiswahili. Use after all pages are built, as the final step.
-- The user needs an implementation-facing skill rather than a general discussion.
+Control the final release from verified build artefact through production smoke checks, rollback readiness, and post-launch review.
 
-## Do not use when
-- The prerequisite upstream context is missing and the task is not yet execution-ready.
-- Another narrower skill is the clear better fit for the exact subtask.
+<!-- dual-compat-start -->
+## Use When
 
-## Required inputs
-- Project context, current files, and any constraints that affect implementation.
-- Upstream artifacts produced by earlier skills when this skill is part of a pipeline.
+- All approved pages and assets are implementation-complete and need a release gate.
+- A website needs deployment configuration, promotion, rollback, or post-launch verification.
+- A failed launch needs controlled recovery using an existing rollback plan.
+
+## Do Not Use When
+
+- Pages, requirements, content, or design acceptance remain unresolved; return to the owning build skill.
+- The task is only telemetry design; use `observability`.
+- The task is a specialist accessibility, visual, security, or performance audit; use the respective quality gate.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Release candidate and reproducible build command | Project repository | yes | Stop; no deploy from an unrepeatable local state. |
+| Environment, host, domain, secrets ownership, and change window | Project/release owner | yes | Return a release-readiness gap list. |
+| Passing quality-gate evidence and approved exceptions | CI and quality owners | yes | Block release; an unavailable gate is not a pass. |
+| Deployment, rollback, smoke, runbook, and communication plans | Project files and operations owner | yes | Create drafts where authorised, but do not promote to production. |
+| Explicit production authority | User or named release owner | yes for mutation | Stop at deploy-ready handoff. |
 
 ## Workflow
-1. Read only the relevant project inputs and preserved guidance before acting.
-2. Choose the smallest set of references needed for the current job.
-3. Produce the implementation, configuration, or guidance this skill owns.
-4. Validate that the result stays compatible with the rest of the repository workflow.
 
-## Quality standards
-- Outputs must be implementation-ready and internally consistent.
-- Preserve existing behavior unless the task explicitly requires a change.
-- Avoid host-specific path assumptions so the skill remains portable.
+1. Inspect repository state, release scope, environment, and upstream acceptance evidence.
+2. Stop if production authority, rollback target, secrets ownership, or a blocking gate is absent.
+3. Build the release candidate using the documented clean build path.
+4. Run the canonical pipeline and project-specific syntax, link, unit, integration, render, accessibility, performance, visual, security, and metadata checks.
+5. Verify language routes, forms, analytics, error tracking, redirects, DNS/SSL plan, cache behaviour, and low-bandwidth requirements.
+6. Record the release decision, commit/version, artefact identity, approved exceptions, operator, window, and rollback trigger.
+7. Promote through the supported deployment path only after explicit authority.
+8. Run production smoke checks immediately; if a rollback trigger fires, stop traffic-changing work and execute [the rollback runbook](references/rollback-runbook.md).
+9. Communicate the verified result using [the launch communication template](references/launch-communication-template.md).
+10. Schedule and record launch-day, 7-day, and 30-day reviews.
+11. If deployment fails without a safe rollback, preserve evidence, limit further mutation, and escalate to the named operator.
 
-## Anti-patterns
-- Do not hardcode `.claude/skills` or another single install path.
-- Do not skip validation against upstream or downstream dependencies.
-- Do not generate generic output that ignores the actual project context.
+Recovery: repair the failed gate or environment, then rerun the complete affected release sequence before promotion.
+
+## Quality Standards
+
+- The deployed artefact is traceable to a reviewed commit and reproducible build.
+- Every blocking gate passes or has a documented, authorised exception where policy permits one.
+- Rollback steps, owner, trigger, and previous good version are tested before promotion.
+- Production smoke covers primary routes, language variants, forms, telemetry, and critical conversion paths.
+- Secrets never enter source, logs, or handoff documents.
+- Release evidence records both successful and unassessed checks.
+
+## Anti-Patterns
+
+- Deploying from an uncommitted workstation state. Fix: build a traceable release candidate.
+- Treating an unavailable gate as green. Fix: mark it unassessed and block where required.
+- Editing production manually without a recorded path. Fix: use the supported promotion workflow.
+- Launching without rollback ownership. Fix: name the operator, trigger, and previous good artefact.
+- Checking only the home page. Fix: smoke primary routes, locales, forms, and telemetry.
+- Sharing secrets in configuration examples. Fix: reference secret names and approved stores only.
+- Claiming success before production verification. Fix: inspect smoke and telemetry evidence first.
 
 ## Outputs
-- Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
 
-## Canonical CI Pipeline
-
-Every project launched through this skill must run the canonical CI pipeline
-at `templates/ci/website.yml`. Install it with:
-
-```bash
-bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project-path>
-```
-
-The pipeline runs 15 ordered steps (install → lint → unit → build → e2e
-smoke → metadata audit → perf gate → a11y gate → visual QA → security gate
-→ drift check → design quality score → deploy → post-deploy smoke →
-rollback-ready hook). Any failure blocks deploy.
-
-Troubleshooting: `references/ci-troubleshooting.md`.
-
-## Launch Decision Record
-
-Every launch records an explicit decision on:
-
-1. **Observability** — per `observability/SKILL.md`, RUM, error tracking,
-   analytics, and alerts are live; the project runbook at
-   `project-log/runbook.md` names the on-call operator.
-2. **Experimentation infrastructure** — a decision under
-   `project-log/decisions/` captures whether experimentation is enabled
-   for this client, which platform is provisioned, and the quarterly
-   cadence commitment. An answer of "no experiments yet" is acceptable
-   and must still be recorded; silence is drift.
-3. **Design quality score** — every primary template has a filed report
-   under `reports/design-quality/` and the aggregate is ≥ 8/10.
-4. **Runbook review** — the runbook has been reviewed in the last 90
-   days and lists the current on-call operator and escalation path.
-
-A launch without these four recorded is not permitted to ship.
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Release candidate and deployment configuration | Release operator | Artefact identity, environment inputs, and commands are reproducible. |
+| Release decision record | Project and governance owners | Gates, exceptions, authority, operator, window, and rollback trigger are explicit. |
+| Deployment and smoke evidence | Client and operations owners | Production routes and critical flows show observed results with timestamps. |
+| Rollback-ready handoff | On-call operator | Previous version, procedure, trigger, and verification steps are actionable. |
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Use `references/qa-matrix.md` for the minimum launch QA standard across responsive behavior, content, links, performance, accessibility, SEO, analytics, forms, and browsers.
-- Use `references/pre-launch-verification-checklist.md` immediately before production release.
-- Use `references/deployment-runbook.md` for supported hosting patterns, env management, DNS/SSL, and promotion flow.
-- Use `references/rollback-runbook.md` to prepare and execute rollback safely.
-- Use `references/observability-baseline.md` for uptime, form delivery, analytics, and issue-detection expectations.
-- Use `references/post-launch-review-checklist.md` for launch-day, 7-day, and 30-day review windows.
-- Use `references/launch-communication-template.md` to standardize live-site notifications and internal launch comms.
-- Use `references/performance-gate.md` for the canonical performance enforcement layer and its thresholds.
-- Use `references/ci-troubleshooting.md` for the step-by-step triage of the 15-step canonical pipeline.
-- Use `references/africa-calibration.md` for the 3G network profile, weight budget, and data-cost rules the gates apply.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- Use `templates/playwright-starter/` when a project needs a minimal E2E baseline for smoke, navigation, and form coverage.
-- Use `templates/ci/website.yml` (via install-canonical-ci.sh) as the inherited CI pipeline; edit the canonical file, never the downstream copy.
 
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
+- [Pre-launch verification](references/pre-launch-verification-checklist.md)
+- [QA matrix](references/qa-matrix.md)
+- [Deployment runbook](references/deployment-runbook.md)
+- [Rollback runbook](references/rollback-runbook.md)
+- [Observability baseline](references/observability-baseline.md)
+- [Performance gate](references/performance-gate.md)
+- [CI troubleshooting](references/ci-troubleshooting.md)
+- [Africa calibration](references/africa-calibration.md)
+- [Post-launch review](references/post-launch-review-checklist.md)
+- [Legacy detailed guidance](references/legacy-guidance.md)
+<!-- dual-compat-end -->
 
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Gate evidence bundle | CI reports and decision record | Every required gate has pass, fail, approved exception, or unassessed status. |
+| Deployment trace | Commit/version, artefact, environment, and timestamp | Production state is reproducible and attributable. |
+| Smoke and rollback evidence | Checklist/log | Critical flows are observed and rollback readiness is demonstrated. |
+
+## Capability Contract
+
+Read and execute access are required for validation. Editing configuration is allowed only within the authorised project. Network and production mutation require explicit deployment authority. DNS, secrets, spending, external messages, destructive actions, and rollback require the named authority and least privilege.
+
+## Degraded Mode
+
+Fallback when network, credentials, CI, rendering, a target environment, or production authority is unavailable: stop at a deploy-ready evidence pack and exact operator runbook. Never claim deployment, visual quality, telemetry, or rollback readiness without observed evidence.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| All blocking evidence passes and authority is explicit | Promote and smoke | Premature release |
+| Required check unavailable | Mark unassessed and block per policy | False green status |
+| Smoke failure matches rollback trigger | Roll back and verify | Prolonged user impact |
+| Failure is non-blocking and exception is permitted | Record owner and expiry | Silent quality debt |
+| Remote or environment state differs unexpectedly | Stop and reconcile | Overwriting valid production changes |
+
+## Worked Example
+
+A multilingual site builds successfully but the French contact form cannot be verified because its production secret is unavailable. The release is deploy-ready, not released: the evidence pack records the unassessed form, the secret owner, and the exact smoke step required.
+
+## Read Next
+
+- `observability` owns live telemetry and alerts.
+- `security-gate` owns security release evidence.
+- `visual-qa` owns rendered-output review.
+- `customer-service-website-ops` owns post-launch incident communication and recovery.

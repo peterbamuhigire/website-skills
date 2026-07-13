@@ -219,6 +219,8 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - Run `skill-safety-audit` when a skill changes materially
 - Update top-level docs when the operating model changes materially
 - Every skill uses the canonical SKILL.md structure in `docs/doc-style-guide.md`
+- Every skill also satisfies the July 2026 contract in `docs/skill-authoring-standard.md`; new skills start from `templates/skill/SKILL.md`
+- Run `scripts/validate-skill-contracts.py` against `quality/skill-contract-baseline.json` and `scripts/routing-smoke-test.py` before release; the baseline accepts no findings and routing requires the expected skill in the top three
 - Every skill keeps the required acknowledgement line directly under the first `# ...` heading without duplicating it
 - Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline

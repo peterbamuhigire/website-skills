@@ -1,61 +1,122 @@
 ---
 name: sales-copywriting
-description: Persuasion and conversion copywriting frameworks. Cross-cutting core (headlines, CTAs, anti-resistance, proof) applies to all pages. Sales frameworks (PASTOR, 4 P's, guarantees) activate for landing/sales/product pages. Level 2 persuasion — confident and professional, never pushy.
+description: Use when a website page needs a conversion argument, value proposition, proof sequence, objection handling, risk reduction, or CTA ladder; use `content-writing` for general page clarity and `long-form-sales-copy` for full direct-response assets.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Sales Copywriting
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- The task matches this domain: Persuasion and conversion copywriting frameworks. Cross-cutting core (headlines, CTAs, anti-resistance, proof) applies to all pages. Sales frameworks (PASTOR, 4 P's, guarantees) activate for landing/sales/product pages. Level 2 persuasion — confident and professional, never pushy.
-- The work needs a quality gate or standard applied across other outputs.
+Build credible persuasion from customer language, a clear offer, proportionate proof, and an honest next step.
 
-## Do not use when
-- The task is unrelated to this standard or quality lens.
-- A more specific execution skill should own the work instead.
+<!-- dual-compat-start -->
+## Use When
 
-## Required inputs
-- The content, interface, or artifact being reviewed or improved.
-- Any brand, audience, regional, or conversion context that affects the judgment.
+- A landing, product, service, or campaign page needs a stronger conversion argument.
+- Headlines, value propositions, proof, objections, guarantees, or CTAs need revision.
+- Existing copy is clear but does not help the right buyer decide or act.
+
+## Do Not Use When
+
+- The task is general informational or interface copy with no persuasion problem; use `content-writing`.
+- The deliverable is a complete long-form sales letter, VSL, or multi-page direct-response funnel; use `long-form-sales-copy`.
+- The offer, audience, or evidence basis is undefined; resolve those inputs before drafting.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Audience, awareness, and traffic source | Commercial brief or analytics | yes | Return the missing audience decisions; do not write for "everyone". |
+| Offer, price, terms, and desired action | Offer owner | yes | Stop if the actual exchange cannot be stated accurately. |
+| Voice-of-customer, objections, and alternatives | Interviews, reviews, sales/support notes | conditional | Label assumptions and propose message-mining work. |
+| Proof, guarantee authority, and claim constraints | Client and compliance owner | yes for claims | Remove unsupported claims or guarantees. |
 
 ## Workflow
-1. Read the artifact and the decision context before applying rules.
-2. Use only the parts of the preserved guidance that matter to the current task.
-3. Review or revise the work using this skill as a focused quality lens.
-4. Return actionable changes or acceptance criteria instead of abstract theory.
 
-## Quality standards
-- Recommendations must be concrete enough to apply immediately.
-- Changes should improve consistency, usability, or credibility without flattening the brand.
-- The standard should support downstream implementation rather than slow it down.
-- Treat copy as a market-message-offer system: identify the audience, sharpen the promise, and match the CTA to the right next step.
-- For any meaningful rewrite, prefer customer language, objections, and proof over internal brand phrasing.
-- For premium commercial work, use `premium-commercial-writing` to keep persuasion credible, proof-led, AI/search-ready, and premium-fee worthy across the full artifact.
+1. Define the audience, awareness level, traffic context, page goal, and CTA commitment.
+2. Stop if the offer or proof burden is unresolved.
+3. Mine customer language, objections, desired outcomes, alternatives, and switching risks using [message mining and proof](references/message-mining-and-proof.md).
+4. Write the value proposition and test it against specificity, relevance, differentiation, and evidence.
+5. Choose the smallest useful persuasion structure: headline/CTA revision, claim-proof sequence, PASTOR, or 4 Ps.
+6. Place proof near claims and answer the highest-cost objections before the ask.
+7. Add honest risk reduction and CTA reassurance; never invent scarcity, guarantees, or outcomes.
+8. Draft variants only when each expresses a meaningful hypothesis.
+9. Review with [the professional writing gate](../premium-commercial-writing/references/professional-writing-quality-gate.md).
+10. If proof fails, revise the promise and rerun the argument rather than adding hype.
 
-## Anti-patterns
-- Do not apply every rule mechanically when only a subset is relevant.
-- Do not give generic critique with no change implications.
-- Do not override project reality with taste-based preferences alone.
+## Quality Standards
+
+- The right buyer can identify the offer, value, evidence, and next step quickly.
+- The persuasion level matches awareness, traffic source, purchase risk, and brand.
+- Proof is specific, attributable, and adjacent to the claim.
+- Objections are answered honestly without manipulative pressure.
+- CTA language states the action, expected result, and relevant reassurance.
+- Variants differ by a testable message choice, not synonyms.
+
+## Anti-Patterns
+
+- Starting with a framework before understanding the buyer. Fix: mine audience language and objections first.
+- Listing features without consequences. Fix: connect each relevant feature to a supported buyer outcome.
+- Hiding the action in a generic CTA. Fix: name the next step and reward.
+- Using fake urgency or scarcity. Fix: state only verifiable limits and dates.
+- Inventing proof, guarantees, or testimonials. Fix: request evidence or reduce the claim.
+- Applying PASTOR or 4 Ps mechanically. Fix: select only the structure the buyer decision requires.
+- Producing cosmetic variants. Fix: tie each variant to an explicit hypothesis.
 
 ## Outputs
-- Revisions, review findings, acceptance criteria, or quality guidance tied to the artifact under review.
+
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Conversion-copy draft or revision | Page owner and implementer | Audience, promise, proof, objections, risk reduction, and CTA are coherent. |
+| Message and proof bank | Future campaigns | Entries retain source, audience, and approved-use context. |
+| CTA ladder and variants | CRO/experimentation owner | Each CTA matches commitment level and each variant has a hypothesis. |
 
 ## References
-- `references/website-messaging-framework.md` — primary reference for any website page: headline logic (4 U's, 8 types), sub-headline rules, slippery-slide, proof placement, objection-handling map, CTA ladder, service/about/FAQ structures, voice and tone, editing discipline. Grounded in Bly, Sugarman, Handley, Krzyzek.
-- `references/message-mining-and-proof.md` — use when the task needs voice-of-customer mining, message banks, objection extraction, or proof gathering before rewriting the page.
-- `references/value-proposition-and-cta-lab.md` — use when improving home heroes, value propositions, buttons, CTA reassurance, or testable copy variants.
-- `../premium-commercial-writing/references/offer-and-landing-page-writing.md` — use when conversion copy must fit a premium offer page, campaign page, lead magnet, consultation page, or high-ticket service page.
-- `../premium-commercial-writing/references/professional-writing-quality-gate.md` — use for final proof, claim, tone, and CTA quality checks on premium sales copy.
-- `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
-- Default sequence for high-stakes conversion work:
-  1. mine voice-of-customer and objection language
-  2. define the value proposition and offer type
-  3. choose the right page goal and CTA commitment level
-  4. place proof and risk-reversal close to the claim or ask
+- [Website messaging framework](references/website-messaging-framework.md) for page structure.
+- [Message mining and proof](references/message-mining-and-proof.md) for research.
+- [Value proposition and CTA lab](references/value-proposition-and-cta-lab.md) for hypotheses.
+- [Headlines](references/headline-mastery.md), [resistance and objections](references/resistance-and-objections.md), and [closing and guarantees](references/closing-and-guarantees.md) for focused branches.
+- [PASTOR and 4 Ps](references/pastor-and-4ps.md) when a full persuasion sequence is justified.
+- [Legacy detailed guidance](references/legacy-guidance.md) for preserved framework material.
+<!-- dual-compat-end -->
 
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Message-mining record | Source-tagged bank | Customer language, objections, and proof remain traceable. |
+| Claim-proof review | Table or annotations | Every material promise has support or a qualification. |
+| Variant hypothesis record | Short table | Each variant names the changed belief and expected behaviour. |
+
+## Capability Contract
+
+Read access to offer and evidence is required. Review defaults to read-only; source editing requires explicit authority. Search may verify current claims. Publishing, experimentation, spending, guarantees, pricing changes, and external communications require explicit authority from their owners.
+
+## Degraded Mode
+
+Without customer research, analytics, proof, or editing access, return a qualified message hypothesis and evidence-gathering plan. Do not present an assumed objection, claim, or conversion lift as measured fact.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Low-commitment informational page | Use light claim-proof-CTA structure | Over-selling |
+| High-risk purchase with many objections | Use a fuller persuasion sequence | Unanswered buyer resistance |
+| Proof does not support promise | Narrow the promise | Misrepresentation |
+| Full VSL or long-form funnel requested | Route to `long-form-sales-copy` | Neighbour collision |
+
+## Worked Example
+
+Input: a training provider claims "transform your career" but has only a documented syllabus and instructor credentials. Revision: promise the specific skills and learning format, show those credentials, and invite the buyer to review the next cohort; omit the outcome guarantee.
+
+## Read Next
+
+- `premium-commercial-writing` for premium tone and claim discipline.
+- `long-form-sales-copy` for full direct-response assets.
+- `cro-audit` for diagnosis after implementation.
+- `experimentation` for controlled message tests.

@@ -1,12 +1,16 @@
 ---
 name: delivery-automation
-description: Build the agency's own tooling, templates, and workflow automation so a niche web studio delivers faster and cheaper without dropping quality — the productized-delivery operating model. Use when deciding what to systematise or automate, building vs buying a CMS or stack, designing reusable starter kits / design systems / intake flows, applying AI-assisted delivery honestly (where it speeds work and where it does not), running an automation-opportunity audit, or writing delivery SOPs and playbooks. Anchored on Built to Sell (Teachable/Valuable/Repeatable) and on the primary 2025 evidence about AI coding productivity. Pairs with service-blueprint-website-delivery, design-system, deploy, and monthly-report.
+description: Use when auditing and automating repeatable agency delivery work, choosing build versus buy, or creating internal starter kits and SOPs. Use `service-blueprint-website-delivery` for one engagement's operating model and `deploy` for project CI.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Delivery Automation
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+<!-- dual-compat-start -->
+## Use When
 
 - Deciding which parts of website delivery to standardise, templatise, or automate.
 - Choosing build vs buy for a CMS, stack, or internal tool.
@@ -16,7 +20,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Running an audit to find and prioritise automation opportunities.
 - Writing the SOPs and playbooks that make delivery repeatable.
 
-## Do not use when
+## Do Not Use When
 
 - The task is the human/process design of a single client engagement's delivery
   journey (use `service-blueprint-website-delivery`).
@@ -25,11 +29,17 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The task is the CI/deploy pipeline of a specific client project (use `deploy`).
 - The task is the agency's offer, pricing, or positioning (use `agency-positioning`).
 
-## Required inputs
+## Inputs
 
 - The agency's current delivery workflow (the steps from sale to launch).
 - The niche and the typical project shape (so reusable assets fit real work).
 - Honest time data on where delivery hours actually go.
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Stable workflow and SOP | Delivery operations | yes | Standardise before automating. |
+| Volume, time, error, and cost evidence | Time logs and QA records | yes | Run a measured pilot; do not claim savings. |
+| Data, permission, and rollback boundary | Process owners | yes | Stop any mutation or integration. |
 
 ## Workflow
 
@@ -64,7 +74,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    handover path, so the client is never locked to one operator and the agency is
    never locked to one undocumented tool.
 
-## Quality standards
+8. Stop when permissions, rollback, or baseline evidence are missing; recover with a read-only pilot specification.
+
+## Quality Standards
 
 - **Repeatable before automated.** No automation of a process that isn't yet
   standardised — you'd be hard-coding chaos.
@@ -82,18 +94,20 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - **Margin visible.** The point is lower delivery cost at held quality — track the
   delivery hours saved, not the tools built.
 
-## Anti-patterns
+## Anti-Patterns
 
 - Building a custom CMS or tool because it's interesting, not because the audit
   justified it.
-- Automating a non-standardised process.
+- Automating a non-standardised process. Fix: stabilise the SOP and exception owner first.
 - Trusting AI output on complex/maintenance work without review, then shipping
   "almost-right" code.
-- Skipping quality gates to hit a faster timeline.
+- Skipping quality gates to claim speed. Fix: measure cycle time only after required gates pass.
 - A custom tool with no documentation — locking both client and agency in.
-- A big-bang automation rollout instead of pilot-measure-expand.
+- Using a big-bang rollout. Fix: pilot, measure, correct, and expand within a rollback boundary.
 - Confusing this skill's reusable internal assets with a single client's delivery
   blueprint (`service-blueprint-website-delivery`).
+- Claiming savings from unmatched periods. Fix: compare the same workflow definition and cohort basis.
+- Deploying without a manual fallback. Fix: document the fallback owner and test rollback before release.
 
 ## Outputs
 
@@ -103,6 +117,36 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   reporting automation.
 - A delivery SOP / playbook set and an internal wiki seed.
 - A measured before/after on delivery hours per project.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Automation register | Operations owner | Scores volume, time, error, value, risk, owner, and dependency. |
+| Build-versus-buy decision | Leadership and implementer | Records total cost, reversibility, data boundary, support, and rejected option. |
+| Automated workflow and runbook | Delivery team | Has tests, approval points, observability, manual fallback, rollback, and owner. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Before/after measure | Same definition and period basis | Savings and quality claims are reproducible. |
+| Failure-path test | Scenario/result record | Permissions, partial failure, retry, duplicate, and rollback are assessed. |
+
+## Capability Contract
+Analysis defaults to read-only. Editing or execution requires implementation authority. Connecting accounts, processing client data, purchasing tools, deploying automation, or deleting records requires explicit authority and rollback.
+
+## Degraded Mode
+Fallback if tools, logs, or execution are unavailable: return a scored register, pseudoflow, and test plan. Mark savings, reliability, and integration behaviour `not assessed`.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Process is unstable or judgement-heavy | Standardise or keep human-owned | Automating inconsistency or trust work |
+| Commodity capability has a viable vendor | Buy and integrate reversibly | Undifferentiated maintenance burden |
+| Repeated niche logic is strategic and measurable | Build a bounded internal asset | Vendor mismatch or recurring manual cost |
+
+## Worked Example
+Automate image naming only after the convention and exception owner are stable. The tool previews changes, rejects collisions, logs the mapping, and supports rollback; time saved is measured against the same project cohort.
+
+<!-- dual-compat-end -->
 
 ## References
 

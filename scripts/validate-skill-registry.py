@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
 MANIFEST = SKILLS / "manifest.yml"
+VERIFIED = "2026-07-13"
 ACK = "Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178."
 LINK = re.compile(r"\[[^\]]+\]\((?!https?://|mailto:|#)([^)]+)\)")
 
@@ -50,7 +51,7 @@ def discover() -> list[dict[str, object]]:
             "dependencies": [],
             "inputs": ["project-context@1"],
             "outputs": [f"{skill_id}-output@1"],
-            "last_verified": "2026-07-11",
+            "last_verified": VERIFIED,
         })
     return entries
 
@@ -58,7 +59,7 @@ def discover() -> list[dict[str, object]]:
 def generate() -> dict[str, object]:
     return {
         "schema_version": 1,
-        "generated": "2026-07-11",
+        "generated": VERIFIED,
         "canonical_count": len(discover()),
         "external_engines": {
             "design-system-skills": {"locator": "global-routing-table", "required_for": "visual-design"},

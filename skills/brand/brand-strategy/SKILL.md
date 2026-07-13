@@ -1,48 +1,101 @@
 ---
 name: brand-strategy
-description: Brand strategy development for client projects. Use before design-system, page-builder, or any content work. Covers brand discovery, positioning (CBBE pyramid), brand mantra, brand architecture, archetypes, competitive differentiation, and the brand brief deliverable. The output of this skill is docs/brand-brief.md.
+description: Use when discovery must establish audience, positioning, differentiation, architecture, and a decision-ready brand brief before design or copy. Use `brand-storytelling` after the strategy exists and `agency-positioning` for the agency's own commercial offer.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Brand Strategy
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- The task matches this domain: Brand strategy development for client projects. Use before design-system, page-builder, or any content work. Covers brand discovery, positioning (CBBE pyramid), brand mantra, brand architecture, archetypes, competitive differentiation, and the brand brief deliverable. The output of this skill is docs/brand-brief.md.
-- The user needs domain-specific strategy, writing, or planning in this area.
+Turn verified business, customer, category, and competitive evidence into a brand brief that downstream design, copy, and page work can use without guessing.
 
-## Do not use when
-- Another skill is clearly narrower and better matched to the request.
-- The task is unrelated to this domain or needs direct implementation instead.
+<!-- dual-compat-start -->
+## Use When
 
-## Required inputs
-- Business context, target audience, and the artifact or decision being developed.
-- Any existing materials, constraints, or supporting references already available.
+- A new or repositioned brand needs a shared strategic foundation.
+- Design or content teams are making conflicting audience, promise, or tone assumptions.
+- Brand architecture, category framing, differentiation, or naming direction requires a decision.
+
+## Do Not Use When
+
+- The approved brief already exists and the task is narrative execution; use `brand-storytelling`.
+- The task is the web agency's offer, fees, or qualification posture; use `agency-positioning`.
+- The request is only visual styling; route the approved brief to the design-system engine.
+
+## Inputs
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Business model, offer, constraints, and decision owner | Client brief and discovery | yes | Stop and issue a discovery gap list. |
+| Audience evidence and buying context | Interviews, CRM, research, sales notes | yes | Mark hypotheses and prohibit unsupported audience claims. |
+| Competitor and category evidence | Verified market sources | conditional | Produce provisional differentiation and request research. |
 
 ## Workflow
-1. Read the current business context and the concrete task to solve.
-2. Use only the relevant detailed guidance and references for the request at hand.
-3. Produce the strategy, writing, or framework output this skill is responsible for.
-4. Check the result for clarity, realism, and handoff readiness.
 
-## Quality standards
-- Outputs must be specific, usable, and grounded in the available evidence.
-- Recommendations should support follow-on execution instead of staying abstract.
-- The result should remain consistent with the broader repository system.
+1. Confirm the strategic decision, audience, geography, and decision owner.
+2. Separate verified facts, stakeholder opinions, and hypotheses.
+3. Define category, primary audience, frame of reference, problem, value, proof, and exclusions.
+4. Compare credible positioning territories and choose one with an explicit trade-off.
+5. Decide brand architecture, personality, voice principles, and promise-to-proof boundaries.
+6. Write `docs/brand-brief.md` and record unresolved tests and downstream implications.
+7. Stop before design when the decision owner, core audience, or proof boundary is unresolved; recover with a narrowed provisional brief and validation plan.
 
-## Anti-patterns
-- Do not produce generic framework dumps with no decision made.
-- Do not invent facts to complete the output.
-- Do not ignore the actual audience, offer, or business constraints.
+## Quality Standards
+
+- Make one defensible positioning choice; do not combine incompatible territories.
+- Trace claims to evidence and label hypotheses.
+- State whom the brand is not for and what it will not claim.
+- Give design and copy teams operational language, not adjective clouds.
+
+## Anti-Patterns
+
+- Listing five audiences as equally primary. Fix: choose one buying audience and define secondary users.
+- Calling generic virtues differentiators. Fix: tie differentiation to a capability, method, access, proof, or business model.
+- Selecting an archetype before positioning. Fix: decide market meaning first, then use archetype only if it clarifies behaviour.
+- Inventing customer insight. Fix: label the hypothesis and specify how to test it.
+- Writing a mood-board brief. Fix: include category, audience, promise, proof, exclusions, and decision rationale.
 
 ## Outputs
-- Strategy notes, writing deliverables, framework outputs, or implementation-facing recommendations.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| `docs/brand-brief.md` | Design system, storytelling, content, and page teams | Names audience, category, positioning, promise, proof, voice, architecture, exclusions, and unresolved hypotheses. |
+| Positioning decision record | Client decision owner | Compares credible options and records why the selected territory wins. |
+| Validation plan | Research and commercial owners | Every material hypothesis has an owner, method, and decision consequence. |
+
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Evidence register | Claim, source, status, limitation | Distinguishes facts, opinions, and hypotheses. |
+| Approval record | Decision, owner, date, conditions | Downstream teams can identify the approved version. |
+
+## Capability Contract
+
+Default to read-only discovery and analysis. Editing the brief requires authority. Customer contact, research recruitment, publishing positioning, changing live brand assets, or claiming stakeholder approval requires explicit authority.
+
+## Degraded Mode
+
+When customer research, competitor evidence, or stakeholder access is unavailable, return a provisional brief with confidence labels and validation questions. Mark market fit `not assessed`.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Evidence supports one distinct buying reason | Commit to that positioning territory | Generic compromise positioning |
+| Evidence conflicts across segments | Choose a primary segment or split the offer | One brand promise serving incompatible needs |
+| Proof cannot support the desired promise | Narrow the claim or build proof first | Credibility failure in copy and sales |
+
+## Worked Example
+
+A Kampala payroll firm wants to be "trusted, innovative, and professional". Interviews show SME owners value correction before statutory deadlines, while enterprise buyers require integration depth. Choose the SME compliance-recovery territory for the current offer, cite the response workflow as proof, and record enterprise integration as a separate future proposition.
+
+<!-- dual-compat-end -->
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
-
+- `references/brand-discovery-questions.md` - discovery prompts and evidence collection.
+- `references/positioning-frameworks.md` - positioning, architecture, and differentiation choices.
+- `references/legacy-guidance.md` - preserved CBBE, mantra, archetype, and brief guidance.

@@ -1,12 +1,92 @@
 ---
 name: design-quality-score
-description: Canonical rendered-output design-quality scoring layer. Defines the 7-category visual rubric + 8th UX-maturity (process) category, the slop-scan static check, and the pre-launch scoring gate that prevent premium claims from drifting into generic AI-aesthetic output. Scored per primary template; a project ships only when every primary template scores ≥ 8/10.
+description: Use when scoring a rendered website against the engine's seven-category design-quality and anti-slop rubric; use visual-qa for screenshot regression and cross-page-design-consistency-audit for system drift.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Design Quality Score
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Assign a reproducible read-only design score and release advice without confusing absent visual evidence with quality.
+
+<!-- dual-compat-start -->
+## Use When
+
+- A rendered site needs the canonical design score
+- a PR or main release needs slop-scan evidence
+- improvement priorities need category scores.
+
+## Do Not Use When
+
+- Use `visual-qa` for baseline diffs or the cross-page audit to diagnose two competing design systems.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Rendered route sample, scoring rubric, brand and design decisions, viewport matrix, and content states | Build and approved project artefacts | yes | Score against intended and canonical quality | Stop if representative renders or the rubric are unavailable |
+
+## Workflow
+
+1. Confirm read-only scope, build, sample, and rubric
+2. Score each category with cited visual evidence and run the slop scan
+3. Reconcile category totals and stop a blocking main release below the documented threshold
+4. After authorised remediation, rerender and rescore the affected categories.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Design quality scorecard | Designers, developers, and release owner | Category evidence sums to the reported score and release advice follows the documented threshold |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Annotated renders, slop-scan output, category calculations, and unassessed list | Release owner | Another reviewer can reproduce every awarded or deducted point |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read, search, rendering, and visual inspection are required. Default to read-only. Code, token, baseline, production, or publication changes require separate authority.
+
+## Degraded Mode
+
+Without representative renders, fonts, or rubric evidence, return the narrowest qualified partial score, mark affected categories `not assessed`, and do not certify the total.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Category evidence is unavailable | Leave it unassessed rather than awarding points | Inflated score |
+| Main-branch score is below the blocking threshold | Block release and prioritise corrections | Shipping visible quality debt |
+
+## Quality Standards
+
+- Every point needs evidence; score route families and states, preserve authored exceptions, and apply the rubric arithmetic exactly.
+
+## Anti-Patterns
+
+- Scoring from source code alone. Fix: inspect rendered output.
+- Awarding points for an unavailable route. Fix: mark that category unassessed.
+- Letting one polished homepage represent the site. Fix: sample every template family.
+- Changing the rubric mid-review. Fix: record any threshold change as a decision first.
+- Replacing unusual authored choices with defaults. Fix: distinguish intentional design from defects.
+
+## Worked Example
+
+If the homepage is distinctive but three interior templates use generic utilities, score the sampled evidence rather than averaging from the homepage and route the cause to cross-page consistency.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - Before any site launches — each primary template is scored.
 - Before promoting a visual baseline change to main.
 - During visual QA when the operator suspects the output is drifting
@@ -14,7 +94,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - During certification practical exams — the score is part of the
   evidence.
 
-## Do not use when
+## Preserved Domain Exclusions
 - Scoring copy-only or data-only changes. The rubric measures rendered
   design, not isolated content.
 - Scoring early design mocks before they become shipped templates; use
@@ -35,8 +115,7 @@ The scoring is:
 3. **Repeatable**. A second operator scoring the same template arrives
    within one point per category.
 
-## Workflow
-
+## Preserved Domain Workflow
 1. Build the site and confirm Phase 10 gates (perf, a11y, visual-qa,
    security) have passed on the CI or locally.
 2. For each primary template (home, services, service-detail, contact,
@@ -56,8 +135,7 @@ The scoring is:
 8. If any category scores below 8, the template does not ship; remediate
    and re-score.
 
-## Required inputs
-
+## Preserved Domain Inputs
 - A built production-like render of the site (`dist/` or deployed
   preview).
 - The design-system tokens for the client (colour, type, spacing) so
@@ -66,8 +144,7 @@ The scoring is:
 - At least one prior benchmark scored site at the same rubric (the
   Phase 12 benchmark library when available).
 
-## Quality standards
-
+## Preserved Domain Quality Guidance
 - Every scored report cites the rubric clause by number.
 - A score is defensible in a 5-minute walkthrough with a second operator.
 - The aggregate score appears in `dashboards/quality-scorecard.md` row
@@ -76,8 +153,7 @@ The scoring is:
   not permitted to ship. The decision entry is the fix, not the
   waiver.
 
-## Anti-patterns
-
+## Preserved Domain Anti-Patterns
 - Scoring against taste. "I don't like it" is not a category; the
   rubric is.
 - Scoring only the home page. Every primary template must be scored.
@@ -88,15 +164,13 @@ The scoring is:
 - Inflating scores to clear the gate. A second operator spot-check is
   the long-term audit.
 
-## Outputs
-
+## Preserved Domain Outputs
 - `reports/design-quality/<template>.md` per primary template.
 - An aggregate row in `dashboards/quality-scorecard.md`.
 - A pass or fail exit code from `scripts/design-quality-score.sh`
   consumed by the canonical CI pipeline step 12.
 
-## References
-
+## Preserved Domain References
 - `references/rubric.md` — the 7-category rubric with sub-criteria.
 - `references/scored-examples.md` — worked examples with scores and
   rationales.
@@ -116,4 +190,3 @@ The scoring is:
   tokens are correct; violating tokens is a separate drift issue).
 - In the canonical CI, this skill runs advisory on PRs and blocking
   on main.
-

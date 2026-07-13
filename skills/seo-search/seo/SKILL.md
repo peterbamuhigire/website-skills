@@ -1,26 +1,105 @@
 ---
 name: seo
-description: "Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, Bing Webmaster Tools, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use google-ai-search first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, Bing AI Performance, and llms.txt claims. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy."
+description: Use when implementing website metadata, structured data, sitemaps, robots directives, canonical and hreflang signals, internal links, and search-facing content structure; use seo-audit for read-only diagnosis.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Seo
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Implement the approved search contract in website code and content without inventing business or schema facts.
+
+<!-- dual-compat-start -->
+## Use When
+
+- Approved pages need search metadata and schema
+- multilingual routes need canonical and hreflang implementation
+- crawler-facing files and internal links must be built.
+
+## Do Not Use When
+
+- Use `seo-audit` to diagnose an existing site or `google-ai-search` for official Google AI feature guidance.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Approved route map, search intent, page content, entity facts, locale plan, and deployment URL rules | Strategy, content, client evidence, and build | yes | Implement accurate search signals | Stop when required entity or canonical facts are missing |
+
+## Workflow
+
+1. Validate routes, intent, entities, locales, and URL rules
+2. Implement metadata, headings, schema, canonical/hreflang, sitemaps, robots, and internal links
+3. Test rendered source and crawler artefacts
+4. Stop on invented facts, invalid schema, or conflicting index signals, repair the source, then rerun checks.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Implemented search package | Crawlers, users, seo-audit, and release owner | Every indexable route has unique accurate signals, valid eligible schema, and tested crawler files |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Metadata inventory, schema validation, link and crawler checks | Release owner | Results map to the tested route and build |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read, search, edit, and execution are required for authorised implementation. Network validation is optional before deployment; Search Console changes, production mutation, publication, and third-party account access require explicit authority.
+
+## Degraded Mode
+
+Fallback: without network, deployment URL, or validation tools, produce the narrowest qualified implementation, mark external checks `not assessed`, and do not claim indexing or rich-result eligibility.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Entity fact is verified and schema type is eligible | Implement the narrowest accurate schema | Misleading structured data |
+| Route should not appear in search | Apply deliberate noindex and remove conflicting sitemap entry | Index-signal conflict |
+
+## Quality Standards
+
+- Use page-specific evidence, keep titles and descriptions truthful, validate schema, and align canonical, hreflang, robots, and sitemap signals.
+
+## Anti-Patterns
+
+- Copying one title across routes. Fix: write unique intent-aligned metadata.
+- Adding schema properties the client cannot prove. Fix: omit unverified fields.
+- Blocking a URL in robots while expecting noindex to be read. Fix: choose a coherent control.
+- Adding hreflang without reciprocal routes. Fix: validate complete locale clusters.
+- Claiming ranking improvement from implementation. Fix: report only implemented and measured outcomes.
+
+## Worked Example
+
+A legal service page lacks a verified aggregate rating. Implement `LegalService` facts the client can prove, omit rating properties, and record the missing evidence rather than fabricating stars.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, Bing Webmaster Tools, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use `google-ai-search` first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, Bing AI Performance, and `llms.txt` claims. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy.
 - The user needs an implementation-facing skill rather than a general discussion.
 - The website content must work as a world-class marketing asset for the owner and as proof of premium website-development quality for the builder.
 
-## Do not use when
+## Preserved Domain Exclusions
 - The prerequisite upstream context is missing and the task is not yet execution-ready.
 - Another narrower skill is the clear better fit for the exact subtask.
 
-## Required inputs
+## Preserved Domain Inputs
 - Project context, current files, and any constraints that affect implementation.
 - Upstream artifacts produced by earlier skills when this skill is part of a pipeline.
 
-## Workflow
-1. Read only the relevant project inputs and preserved guidance before acting.
+## Preserved Domain Workflow
 2. Choose the smallest set of references needed for the current job.
 3. Produce the implementation, configuration, or guidance this skill owns.
 4. For premium or revenue-critical websites, align with `premium-website-product` so SEO is connected to buyer intent, authority content, conversion, launch distribution, and measurement.
@@ -30,7 +109,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    implementation.
 6. Validate that the result stays compatible with the rest of the repository workflow.
 
-## Quality standards
+## Preserved Domain Quality Guidance
 - Outputs must be implementation-ready and internally consistent.
 - Preserve existing behavior unless the task explicitly requires a change.
 - Avoid host-specific path assumptions so the skill remains portable.
@@ -38,13 +117,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Canonical URLs, internal links, hreflang tags, Open Graph URLs, and sitemap alternates must all use the same localized route map so search engines see clean equivalent URLs per language.
 - Every money page must have a search intent, proof burden, CTA, internal-link target, schema requirement, and analytics event; metadata alone is not acceptable SEO.
 
-## Anti-patterns
+## Preserved Domain Anti-Patterns
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
-- Do not generate generic output that ignores the actual project context.
 - Do not publish translated pages at English slug paths for convenience. Localize the slug, then wire language switching and sitemap alternates to the correct equivalent URL.
 
-## Outputs
+## Preserved Domain Outputs
 - Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
 
 ## Mandatory deliverables (every project, every tier)
@@ -98,7 +176,7 @@ change so they cannot become stale or contradict the HTML site.
 - Google Search Console and Bing Webmaster Tools verification, with Bing AI
   Performance/Citation Share reviewed when the property exposes it.
 
-## References
+## Preserved Domain References
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
 - `../google-ai-search/SKILL.md` — use before this skill when Google AI
   Overviews, AI Mode, AEO/GEO mythbusting, Search Console AI performance, or
@@ -112,10 +190,3 @@ change so they cannot become stale or contradict the HTML site.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - `references/llms-txt-and-ai-crawlers.md` — optional format and templates for `llms.txt`, `llms-full.txt`, AI-crawler robots rules, and per-page AI-citability hooks.
 - `references/required-schema-catalog.md` — concrete JSON-LD templates for active schema types and the retired Google FAQ rich-result note, with multi-language examples.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
-
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
-

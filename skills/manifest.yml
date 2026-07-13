@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-07-11",
+  "generated": "2026-07-13",
   "canonical_count": 59,
   "external_engines": {
     "design-system-skills": {
@@ -36,7 +36,7 @@
       "outputs": [
         "agency-client-retention-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "agency-positioning",
@@ -52,7 +52,7 @@
       "outputs": [
         "agency-positioning-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "authority-offers",
@@ -68,7 +68,7 @@
       "outputs": [
         "authority-offers-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "customer-service-website-ops",
@@ -84,7 +84,7 @@
       "outputs": [
         "customer-service-website-ops-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "delivery-automation",
@@ -100,7 +100,7 @@
       "outputs": [
         "delivery-automation-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "email-sender",
@@ -116,7 +116,7 @@
       "outputs": [
         "email-sender-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "launch-campaigns",
@@ -132,7 +132,7 @@
       "outputs": [
         "launch-campaigns-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "local-in-person-acquisition",
@@ -148,7 +148,7 @@
       "outputs": [
         "local-in-person-acquisition-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "monthly-report",
@@ -164,7 +164,7 @@
       "outputs": [
         "monthly-report-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "policy-pages",
@@ -180,7 +180,7 @@
       "outputs": [
         "policy-pages-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "premium-sales-conversation",
@@ -196,7 +196,7 @@
       "outputs": [
         "premium-sales-conversation-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "referral-program",
@@ -212,7 +212,7 @@
       "outputs": [
         "referral-program-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "service-blueprint-website-delivery",
@@ -228,7 +228,7 @@
       "outputs": [
         "service-blueprint-website-delivery-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "social-media",
@@ -244,7 +244,7 @@
       "outputs": [
         "social-media-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "brand-storytelling",
@@ -260,7 +260,7 @@
       "outputs": [
         "brand-storytelling-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "brand-strategy",
@@ -276,7 +276,7 @@
       "outputs": [
         "brand-strategy-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "design-reference",
@@ -292,7 +292,7 @@
       "outputs": [
         "design-reference-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "design-system",
@@ -308,7 +308,7 @@
       "outputs": [
         "design-system-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "i18n",
@@ -324,7 +324,7 @@
       "outputs": [
         "i18n-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "image-compression",
@@ -340,7 +340,7 @@
       "outputs": [
         "image-compression-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "page-builder",
@@ -356,7 +356,7 @@
       "outputs": [
         "page-builder-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "photo-manager",
@@ -372,7 +372,7 @@
       "outputs": [
         "photo-manager-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "ecommerce",
@@ -388,7 +388,7 @@
       "outputs": [
         "ecommerce-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "ecommerce-analytics",
@@ -404,7 +404,7 @@
       "outputs": [
         "ecommerce-analytics-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "ecommerce-checkout",
@@ -420,7 +420,7 @@
       "outputs": [
         "ecommerce-checkout-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "ecommerce-funnel",
@@ -436,7 +436,7 @@
       "outputs": [
         "ecommerce-funnel-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "retail-commerce-operating-system",
@@ -452,7 +452,7 @@
       "outputs": [
         "retail-commerce-operating-system-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "blog-idea-generator",
@@ -468,7 +468,7 @@
       "outputs": [
         "blog-idea-generator-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "blog-writer",
@@ -484,7 +484,7 @@
       "outputs": [
         "blog-writer-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "content-writing",
@@ -500,7 +500,7 @@
       "outputs": [
         "content-writing-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "east-african-english",
@@ -516,7 +516,7 @@
       "outputs": [
         "east-african-english-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "french-native-copy",
@@ -532,7 +532,7 @@
       "outputs": [
         "french-native-copy-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "language-standards",
@@ -548,7 +548,7 @@
       "outputs": [
         "language-standards-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "long-form-sales-copy",
@@ -564,7 +564,7 @@
       "outputs": [
         "long-form-sales-copy-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "premium-commercial-writing",
@@ -580,7 +580,7 @@
       "outputs": [
         "premium-commercial-writing-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "sales-copywriting",
@@ -596,7 +596,7 @@
       "outputs": [
         "sales-copywriting-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "swahili-native-copy",
@@ -612,7 +612,7 @@
       "outputs": [
         "swahili-native-copy-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "deploy",
@@ -628,7 +628,7 @@
       "outputs": [
         "deploy-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "experimentation",
@@ -644,7 +644,7 @@
       "outputs": [
         "experimentation-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "marketing-measurement-system",
@@ -660,7 +660,7 @@
       "outputs": [
         "marketing-measurement-system-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "observability",
@@ -676,7 +676,7 @@
       "outputs": [
         "observability-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "skill-safety-audit",
@@ -692,10 +692,10 @@
       "outputs": [
         "skill-safety-audit-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
-      "id": "skill-creator",
+      "id": "skill-writing",
       "category": "meta",
       "path": "skills/meta/skill-writing/SKILL.md",
       "owner": "website-skills-maintainers",
@@ -706,9 +706,9 @@
         "project-context@1"
       ],
       "outputs": [
-        "skill-creator-output@1"
+        "skill-writing-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "update-claude-documentation",
@@ -724,7 +724,7 @@
       "outputs": [
         "update-claude-documentation-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "africa-excellence",
@@ -740,7 +740,7 @@
       "outputs": [
         "africa-excellence-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "premium-ui-ux-design",
@@ -756,7 +756,7 @@
       "outputs": [
         "premium-ui-ux-design-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "premium-website-product",
@@ -772,7 +772,7 @@
       "outputs": [
         "premium-website-product-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "website-builder",
@@ -788,7 +788,7 @@
       "outputs": [
         "website-builder-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "website-experience-mapping",
@@ -804,7 +804,7 @@
       "outputs": [
         "website-experience-mapping-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "accessibility-audit",
@@ -820,7 +820,7 @@
       "outputs": [
         "accessibility-audit-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "cross-page-design-consistency-audit",
@@ -836,7 +836,7 @@
       "outputs": [
         "cross-page-design-consistency-audit-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "design-quality-score",
@@ -852,7 +852,7 @@
       "outputs": [
         "design-quality-score-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "security-gate",
@@ -868,7 +868,7 @@
       "outputs": [
         "security-gate-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "visual-qa",
@@ -884,7 +884,7 @@
       "outputs": [
         "visual-qa-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "google-ai-search",
@@ -900,7 +900,7 @@
       "outputs": [
         "google-ai-search-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "seo",
@@ -916,7 +916,7 @@
       "outputs": [
         "seo-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "seo-audit",
@@ -932,7 +932,7 @@
       "outputs": [
         "seo-audit-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "cro-audit",
@@ -948,7 +948,7 @@
       "outputs": [
         "cro-audit-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     },
     {
       "id": "they-ask-you-answer",
@@ -964,7 +964,7 @@
       "outputs": [
         "they-ask-you-answer-output@1"
       ],
-      "last_verified": "2026-07-11"
+      "last_verified": "2026-07-13"
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Roadmap to 95+
 
+Structural July 2026 skill conformance is complete: all 59 active skills are governed by zero-debt contract, routing, and CI gates. The phases below describe capability and production evidence expansion, not deferred conformance repair.
+
 ## Phase 1 — Foundation and truthfulness (target 76/100)
 
 Repair CI path and portability defects; add the skill manifest, generated indexes, relocation map, standards register, `.gitignore` coverage, and registry validation. Exit only when documentation counts/routes are generated and a fixture proves the installer plus all required runners resolve.

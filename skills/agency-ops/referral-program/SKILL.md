@@ -1,12 +1,16 @@
 ---
 name: referral-program
-description: Design and run a generous, systematic client referral program for a niche web design / branding studio. Use when turning happy clients into a repeatable acquisition channel: reward structures (double-sided, cash/credit/charity, tiered, agency fee norms), the referral ask (set the expectation at kickoff, NPS-triggered timing, scripts and email templates), make-it-easy mechanics, cross-niche and partner referral routing, formal tracking and attribution, and the ethics/disclosure check. Pairs with agency-client-retention (the Advocate phase) and monthly-report (referral KPIs). Anchored on peer-reviewed evidence that referred clients are more valuable and less likely to churn.
+description: "Use when designing a consent-based client referral programme with reward, timing, attribution, partner routing, and disclosure rules. Use `agency-client-retention` to earn advocacy and `local-in-person-acquisition` for cold local outreach."
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Referral Program
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+<!-- dual-compat-start -->
+## Use When
 
 - Designing a client referral program from scratch for a web/branding studio.
 - Choosing reward structures and amounts (cash, credit, charity, tiered, fees).
@@ -15,7 +19,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Setting up referral tracking, attribution, and payout rules.
 - Checking referral-fee ethics and disclosure obligations.
 
-## Do not use when
+## Do Not Use When
 
 - The task is keeping/expanding an existing client's spend (use
   `agency-client-retention` — though its Advocate phase feeds this skill).
@@ -26,11 +30,17 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
   product training at scale — that is a partner program; this skill covers the
   client-referral and lightweight-partner case, and points to the distinction.
 
-## Required inputs
+## Inputs
 
 - A base of delivered, satisfied clients (or a near-term path to one).
 - The agency's market and fee floor (from `agency-positioning`) to size rewards.
 - A way to capture a referral submission and attribute it (CRM, form, or log).
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Verified client satisfaction and permission posture | Account records | yes | Do not ask; repair or validate the relationship. |
+| Reward economics and authority | Finance and leadership | yes | Design options only; do not promise or pay. |
+| Attribution, disclosure, and privacy rules | CRM, counsel, and operations | yes | Stop activation and obtain approved rules. |
 
 ## Workflow
 
@@ -63,7 +73,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 9. **Report referral KPIs.** Feed referral count, source, conversion, and value
    into the monthly client/agency reporting (`monthly-report`).
 
-## Quality standards
+8. Stop activation when consent, disclosure, satisfaction, or payout authority is missing; recover with draft rules and a gap register.
+
+## Quality Standards
 
 - **Generosity is deliberate.** The reward is large enough that clients feel
   genuinely thanked, sized against the lifetime value of a won client — referred
@@ -78,16 +90,16 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - **Built on real delivery.** The program amplifies genuine satisfaction; it
   never substitutes for it.
 
-## Anti-patterns
+## Anti-Patterns
 
-- Launching a referral program before clients have experienced a win.
-- One-sided rewards that make the referrer feel they sold their friend.
-- Asking on a fixed calendar date instead of at a moment of delight.
+- Launching before clients experience a win. Fix: require a verified satisfaction trigger.
+- Using a one-sided reward that embarrasses the referrer. Fix: offer an approved double-sided or non-cash structure.
+- Asking on a fixed date. Fix: ask after a verified outcome and with no pressure.
 - Relying on informal "send people my way" with no submission record or
   attribution — the most common reason programs quietly fail.
-- A reward so small it reads as an insult relative to the work referred.
-- Paying on an unqualified lead instead of a closed, qualified one.
-- Ignoring disclosure rules in regulated client sectors.
+- Setting a token reward without economics. Fix: size and approve it against the qualifying event and margin.
+- Paying on an unqualified lead. Fix: tie payout to the documented qualifying event.
+- Ignoring disclosure rules. Fix: obtain and record the required sector-specific disclosure.
 
 ## Outputs
 
@@ -96,6 +108,36 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - A referral submission + attribution mechanism and a tracking log.
 - A cross-niche / partner routing rule and reward.
 - Referral KPIs wired into monthly reporting.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Referral programme rules | Clients, partners, finance, and sales | Names eligibility, reward, attribution, disclosure, privacy, payout, expiry, and disputes. |
+| Ask and routing plan | Account owner | Uses earned timing, permission, one clear submission route, and no-pressure language. |
+| Referral register | Finance and reporting owners | Every record has source, consent, status, attribution, reward, and outcome. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Satisfaction trigger | Dated verified win or explicit advocacy signal | No ask rests on assumed happiness. |
+| Reward audit trail | Referral, rule version, approval, payout evidence | Rewards reconcile and disclosures are recorded. |
+
+## Capability Contract
+Design and review default to read-only. Sending asks, sharing contact data, changing CRM, promising or paying rewards, or creating partner obligations requires explicit authority and consent.
+
+## Degraded Mode
+Fallback if satisfaction, economics, consent, or legal review are unavailable: return draft rules and a gap register. Do not ask, introduce, promise, pay, or claim programme performance.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Client has a verified win and consents | Make a specific low-pressure ask | Extractive request before advocacy |
+| Professional rules restrict rewards | Use permitted recognition or no reward | Undisclosed conflict or ethics breach |
+| Referral is outside niche | Route through an approved partner rule | Poor-fit acceptance and attribution dispute |
+
+## Worked Example
+At a 90-day review, a client confirms the site reduced missed enquiries. With permission, ask for one introduction to a similar business, disclose a service credit, record the introduction source, and pay only after the documented qualifying event.
+
+<!-- dual-compat-end -->
 
 ## References
 

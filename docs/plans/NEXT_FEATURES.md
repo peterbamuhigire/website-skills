@@ -3,7 +3,11 @@
 Priority roadmap, updated each session. Maps outstanding work from the
 website-agency-engine plan against repository state.
 
-## CRITICAL PRIORITY
+## Conformance status — complete 2026-07-13
+
+The July 2026 skill-writing, composition, evaluation, and release upgrade is complete for all 59 active skills. Structural debt is enforced at zero by the local contract validator, baseline, routing fixtures, and CI. Items below are capability, adoption, or production-evidence work; they are not conformance waivers.
+
+## COMPLETED ENGINE PHASES
 
 **Phase 11 — World-Class Operating Discipline**
 - Why: Phase 10 gates are built but enforcement value compounds only when
@@ -19,7 +23,7 @@ website-agency-engine plan against repository state.
     agency-positioning, deploy)
 - Start: `docs/plans/website-agency-engine/phase-11-world-class-operating-discipline.md`
 
-## HIGH PRIORITY
+## COMPLETED AUTHORITY PHASE
 
 **Phase 12 — African Authority Engine**
 - Why: Repository-side deliverables needed before external authority work
@@ -61,6 +65,8 @@ website-agency-engine plan against repository state.
 - Annual upstream open-source contribution (Phase 12 W5).
 
 ## Recently Completed
+
+- **2026-07-13 — July 2026 zero-debt skill conformance**: 59 active skills normalised; local authoring standard and template; zero-debt validator and baseline; routing fixtures and top-three smoke gate; push/PR CI; current maintainer and release documentation.
 
 - **2026-04-16 — Phase 10 (Hard Enforcement and Visual QA Gates)**:
   3 new skills, 13 canonical scripts, 15-step CI pipeline,
