@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "active_root": "skills",
+  "expected_active_skills": 59,
+  "expected_templates": 1,
+  "max_skill_lines": 500,
+  "max_description_characters": 350,
+  "routing_top_k": 3,
+  "failure_counts": {}
+}

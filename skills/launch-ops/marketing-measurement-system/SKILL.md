@@ -1,75 +1,127 @@
 ---
 name: marketing-measurement-system
-description: End-to-end marketing measurement and loyalty system for premium websites — connects business outcome, customer insight, channel mix, content, conversion, retention, and brand health into one operating dashboard. Use to design KPI architecture, monthly evidence, and the loyalty loop that makes a website earn its premium fee over time.
+description: Use when a premium website needs a KPI tree, event plan, customer-insight loop, loyalty measures, and decision-ready reporting; use `observability` for telemetry implementation and `experimentation` for causal tests.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Marketing Measurement System
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Connect the website's business outcome to behavioural evidence, customer insight, channel contribution, retention, and operating decisions.
 
-- Defining the measurement architecture for a new premium website at proposal or kickoff stage.
-- Auditing an existing site whose owners cannot say whether the website is working.
-- Designing a retainer where the agency must show evidence of value monthly.
-- Connecting brand-level marketing investment to digital evidence the website must capture.
-- Building the loyalty layer (newsletter, customer portal, post-purchase, retention content) into the site, not bolted on afterwards.
+<!-- dual-compat-start -->
+## Use When
 
-## Do not use when
+- A new website or retainer needs a measurement architecture and evidence cadence.
+- Owners cannot explain whether the website contributes to business outcomes.
+- Marketing, sales, CRM, email, paid, referral, or offline data must connect to website behaviour.
+- Loyalty and retention need to be designed into the digital experience.
 
-- The site has no commercial outcome to measure (rare, and usually a signal that the brief is wrong).
-- The client refuses access to analytics and refuses to install measurement; route to renegotiation.
+## Do Not Use When
 
-## Required inputs
+- The request is only to install analytics or alerts; use `observability`.
+- A defined hypothesis needs a controlled test; use `experimentation`.
+- The client will provide neither access nor approved measurement; renegotiate scope rather than invent a dashboard.
 
-- The business model and primary commercial outcome the website must move.
-- The future-state experience map, sitemap, and conversion architecture.
-- Existing analytics, CRM, advertising, email, and customer-data tools.
-- Customer cohort data, lifetime value estimates, and known retention curves.
-- Brand and communications context: campaigns, sponsorships, PR, content calendar.
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Business model, outcome, strategy, and decision cadence | Business owner | yes | Stop KPI design and return a decision-framing brief. |
+| Experience map, sitemap, conversion paths, and offers | Website strategy | yes | Produce only a provisional outcome model. |
+| Existing analytics, CRM, advertising, email, and offline sources | Data/tool owners | conditional | Mark source coverage gaps and avoid unsupported historical baselines. |
+| Customer cohorts, retention data, targets, and definitions | Finance, sales, product, or marketing owners | conditional | Use hypotheses, not fabricated benchmarks. |
+| Consent, privacy, retention, and access constraints | Compliance owner | yes before collection | Block collection designs that lack lawful governance. |
 
 ## Workflow
 
-1. Anchor on outcome. Write one sentence: "This website exists to [verb] [target group] so that [business outcome] increases."
-2. Build the KPI tree. Top: business outcome. Middle: behavioural KPIs the website can move (qualified leads, conversion, retention, AOV, renewal rate). Bottom: leading indicators (traffic, intent search rank, completion, time-to-value).
-3. Define the customer insight loop. Ratio of quantitative to qualitative is roughly 70/30. Decide how each is collected, on what cadence, by whom.
-4. Map the channel mix to the website. For each channel (organic search, paid search, social, email, partner, referral, offline), define what the channel hands the site and what the site must hand back.
-5. Specify events. Use the analytics event plan from `website-experience-mapping` and `map-to-sitemap-conversion`.
-6. Specify experiments. Tie the experimentation backlog to the KPI tree and the discovery hypotheses.
-7. Specify loyalty and retention. Define the post-conversion content, communication, and product moves the website must support.
-8. Specify brand health. Define how brand metrics (awareness, consideration, sentiment) map to digital signals when budget allows direct measurement.
-9. Build the monthly evidence pack. Hand to `monthly-report`.
-10. Run the quarterly review. Update the KPI tree and the marketing plan based on what moved.
+1. State one primary business outcome and the decisions measurement must support.
+2. Stop if the outcome is not owned, measurable enough to guide action, or compatible with privacy constraints.
+3. Build the KPI tree from business outcome through behavioural drivers to leading indicators using [KPI definitions](references/kpi-tree-and-definitions.md).
+4. Define each metric: formula, grain, source, owner, target or decision band, comparison period, latency, and caveat.
+5. Map channels to the website and define source/medium, handoff, attribution limits, and offline reconciliation.
+6. Specify events against experience stages, including consent, identity, deduplication, and quality checks.
+7. Define the customer-insight loop using [customer insight guidance](references/customer-insight-loop.md); do not impose a fixed quantitative/qualitative ratio without evidence.
+8. Add loyalty and retention measures appropriate to the business model using [the loyalty plan](references/loyalty-and-retention-plan.md).
+9. Design a one-page decision view and an evidence pack for monthly reporting.
+10. Run the quarterly review; change priorities or budget only when evidence and authority support the decision.
+11. If sources conflict, pause conclusions, reconcile definitions, and record the unresolved variance.
 
-## Quality standards
+Recovery: repair metric definitions or source lineage, then rerun reconciliation before reporting.
 
-- Every KPI on the dashboard has a definition, a source, an owner, a target, and a comparison period.
-- Every event in the analytics plan has a stage on the experience map it serves.
-- The dashboard fits on one page and is readable without analyst help.
-- Loyalty and retention metrics are present from launch, not added six months later.
-- Brand and performance metrics are tied — investment in awareness has a digital signal in search, direct, and engagement metrics.
-- Quarterly reviews end in changed budget allocation, not a polite conversation.
+## Quality Standards
 
-## Anti-patterns
+- Every KPI has a formula, source, owner, decision use, comparison period, and data-quality caveat.
+- Vanity metrics appear only as diagnostic context, never as the primary outcome.
+- Events map to a customer stage and a real decision.
+- Attribution limits, consent, retention, and identity handling are explicit.
+- Retention and loyalty measures match the business model rather than a generic dashboard.
+- Reviews end with owned decisions, not unexplained charts.
 
-- Reporting "page views and bounce rate" as if they are KPIs.
-- Treating the site as an island disconnected from email, CRM, paid media, and offline sales.
-- Optimising the site to a vanity metric (engagement) at the cost of the business metric (qualified leads).
-- Measuring conversion without measuring retention, when the business model depends on retention.
-- Using "industry benchmarks" as targets when the agency could measure the client's own baseline.
-- Hiding bad numbers. The premium agency surfaces them with a recovery plan.
+## Anti-Patterns
+
+- Reporting page views as business success. Fix: connect diagnostic traffic to an owned outcome.
+- Copying industry benchmarks as targets. Fix: establish the client's baseline and decision threshold.
+- Treating the website as isolated from CRM or offline sales. Fix: define source handoffs and reconciliation.
+- Optimising engagement while qualified demand falls. Fix: use outcome and guardrail metrics together.
+- Measuring acquisition but ignoring retention in a recurring model. Fix: add cohort and renewal measures.
+- Hiding bad or missing data. Fix: show the quality issue and recovery owner.
+- Mixing conflicting metric definitions. Fix: create a governed definition and reconcile history explicitly.
 
 ## Outputs
 
-- KPI tree (business → behavioural → leading) with definitions, owners, targets, comparison periods.
-- Analytics event plan tied to the experience map.
-- Experiment register tied to KPI movement.
-- Loyalty and retention plan with website-side commitments.
-- Monthly evidence template.
-- Quarterly business review template.
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| KPI tree and metric dictionary | Business, analytics, and reporting owners | Outcome, drivers, formulas, sources, owners, targets/bands, and caveats are complete. |
+| Event and source plan | `observability` and implementation owners | Events, parameters, stages, consent, QA, and source handoffs are specified. |
+| Insight and loyalty plan | Marketing and service owners | Cadence, cohorts, methods, owners, and decisions are explicit. |
+| Monthly evidence and quarterly review templates | `monthly-report` and leadership | Each view supports named decisions and records data quality. |
 
 ## References
 
-- `references/kpi-tree-and-definitions.md` — KPI tree pattern, definitions library, and target-setting rules.
-- `references/customer-insight-loop.md` — quantitative and qualitative cadence; voice-of-customer pipeline.
-- `references/loyalty-and-retention-plan.md` — post-conversion experience, retention content, churn detection.
-- `references/quarterly-business-review.md` — quarterly review structure that drives budget reallocation.
+- [KPI tree and definitions](references/kpi-tree-and-definitions.md)
+- [Customer insight loop](references/customer-insight-loop.md)
+- [Loyalty and retention plan](references/loyalty-and-retention-plan.md)
+- [Quarterly business review](references/quarterly-business-review.md)
+<!-- dual-compat-end -->
+
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Metric lineage | KPI-to-source map | Every reported metric is traceable to source and formula. |
+| Source-quality register | Table | Access, freshness, completeness, reconciliation, and limitations are recorded. |
+| Decision log | Monthly/quarterly record | Evidence, decision, owner, due date, and follow-up measure are explicit. |
+
+## Capability Contract
+
+Read access to business definitions and available data is required. Analysis defaults to read-only. Editing analytics plans or dashboards requires authority. Data collection, CRM changes, customer contact, production mutation, spending, and budget reallocation require explicit owner approval and privacy compliance.
+
+## Degraded Mode
+
+When source access, reliable history, network, or analytics tooling is unavailable, return the narrowest qualified KPI dictionary and instrumentation plan with baselines and data quality marked `not assessed`. Never infer performance or set precise targets from absent data.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Metric changes a named decision | Keep as KPI | Dashboard clutter |
+| Metric explains but does not decide | Keep as diagnostic | Vanity metric promotion |
+| Sources disagree materially | Reconcile before interpretation | False driver narratives |
+| Direct outcome is delayed | Use validated leading indicator with guardrail | Optimising a weak proxy |
+| Collection lacks consent or purpose | Remove or redesign | Privacy and trust harm |
+
+## Worked Example
+
+A B2B site receives many form submissions but sales labels few as qualified. The system defines qualified lead rate with CRM ownership, maps form and CRM identifiers, reports the reconciliation gap, and avoids celebrating raw submission growth.
+
+## Read Next
+
+- `observability` implements the telemetry contract.
+- `experimentation` tests causal hypotheses.
+- `monthly-report` communicates validated monthly evidence.
+- `ecommerce-analytics` owns commerce-specific funnels and revenue measures.

@@ -5,7 +5,7 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 ## Architecture & cross-cutting engines (updated 2026-06-21)
 
 - **No engine is natively discovered anymore.** All skill engines on this machine — including this one — are consulted via the global routing table by globbing `SKILL.md` directly. Do not rely on native skill discovery; read the matching `SKILL.md` files in place.
-- **design-system-skills** (`C:\wamp64\www\design-system-skills`) is the new cross-cutting engine — the single home for ALL design / typography / UI / UX / visual-formatting skills plus the anti-AI-slop doctrine. It is **referenced, not mirrored**: resolve its path per-device from the global routing table and consult it **in addition** to this engine on any design/visual work.
+- **design-system-skills** is the cross-cutting engine for design, typography, UI, UX, visual formatting, and the anti-AI-slop design doctrine. It is **referenced, not mirrored**: resolve its path per device from the global routing table and consult it **in addition** to this engine on visual work.
 - **chwezi-accounting-doctrine** (the finance engine) is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
 - **7 portable design skills were migrated OUT** of this repo to design-system-skills: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in design-system-skills (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
 - **Build-coupled design skills are KEPT here and now consult the design doctrine** before making visual choices: `design-system`, `page-builder`, `visual-qa`, `website-builder`, and the orchestration `premium-ui-ux-design`. (`design-system` and `visual-qa` were explicitly wired to load the design doctrine first.)
@@ -15,7 +15,16 @@ The machine-readable relocation authority is `skills/manifest.yml`; the human-re
 
 ## Engine integrity
 
-Run `python scripts/validate-skill-registry.py` on Windows or Linux. It verifies the 59-skill registry, paths, IDs, acknowledgements, and skill-local links. The canonical CI installer accepts the engine checkout as an explicit second argument and no longer depends on `.claude/skills`.
+The engine has 59 active skills and one authoring template, discovered from the filesystem. Run these release gates on Windows or Linux:
+
+```powershell
+python -X utf8 scripts/validate-skill-registry.py
+python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
+python -X utf8 scripts/routing-smoke-test.py
+python -m pytest -q
+```
+
+The contract baseline is zero debt: it contains no accepted finding. CI runs the same contract, routing, and regression checks on pushes to `main` and pull requests. The canonical CI installer accepts the engine checkout as an explicit second argument and does not depend on `.claude/skills`.
 
 This repository is consumed by reference from the global engine-routing table.
 Claude Code and Codex should resolve the local `website-skills` checkout, then
@@ -39,6 +48,7 @@ The repository now also functions as a portable website agency engine. It contai
 - Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, not in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` holds detailed guidance, including preserved `legacy-guidance.md` files
 - `scripts/` holds deterministic helpers where a workflow benefits from automation
+- [docs/skill-authoring-standard.md](./docs/skill-authoring-standard.md) defines the July 2026 skill contract; new skills start from [templates/skill/SKILL.md](./templates/skill/SKILL.md)
 - [AGENTS.md](./AGENTS.md) defines repository-wide routing and working rules for Codex
 - Consumers should not assume the repo must live under a host-specific path such as `.claude/skills/`
 - The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant. Operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` stay at root when they serve the repository rather than a single skill.
@@ -55,17 +65,17 @@ website-skills/              <- this repo, referenced from the global engine-rou
 |-- plans/                   Phase plans and system expansion work
 |-- docs/                    Evaluation and system documentation
 |-- skills/                  Portable skills, organised under skills/<category>/<skill>/SKILL.md
-|   |-- agency-ops/          Agency positioning, retention, sales, delivery, comms (11 skills)
-|   |-- brand/               Brand strategy, alignment, storytelling, style guides (4 skills)
-|   |-- build/               Design system, page builder, photo, color, i18n, sectors (8 skills)
+|   |-- agency-ops/          Agency positioning, retention, sales, delivery, comms (14 skills)
+|   |-- brand/               Brand strategy and storytelling (2 skills)
+|   |-- build/               Design system, page builder, assets, i18n, references (6 skills)
 |   |-- commerce/            E-commerce strategy, retail commerce operating systems, funnel, checkout, analytics (5 skills)
 |   |-- content-copy/        Blog, sales copy, language standards, native French/Kiswahili copy, premium writing (10 skills)
 |   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
 |   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
 |   |-- orchestration/       Top-level orchestrators incl. website-builder, premium product, africa-excellence (5 skills)
-|   |-- quality-gates/       Accessibility, visual QA, security, design-quality-score (4 skills)
+|   |-- quality-gates/       Accessibility, visual QA, security, consistency, design score (5 skills)
 |   |-- seo-search/          SEO, SEO audit, Google AI Search (3 skills)
-|   `-- ux-conversion/       CRO audit, form UX, UX psychology, they-ask-you-answer (4 skills)
+|   `-- ux-conversion/       CRO audit and they-ask-you-answer (2 skills)
 |-- certification/           Syllabus, exam bank, cohort records (Phase 11)
 |-- dashboards/              Internal and public quality scorecards (Phase 11 + 12)
 |-- glossary.md              Canonical-name authority (Phase 11)
@@ -241,11 +251,15 @@ When a task is ambiguous, follow this order:
 - Prefer additive changes over restructures
 - Avoid duplicating logic already owned by another skill or shared reference
 - Treat scripts and references as part of the skill surface area during review
+- Keep every active skill at zero contract debt and within the 500-line entrypoint limit
+- Require the expected route in the top three for every routing fixture
 
 ## Related Docs
 
 - [AGENTS.md](./AGENTS.md) — repository routing and quality rules
 - [CLAUDE.md](./CLAUDE.md) — Claude-specific repo guidance
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — authoring, validation, and release procedure
+- [Skill authoring standard](./docs/skill-authoring-standard.md) — local July 2026 contract
 - [docs/plans/INDEX.md](./docs/plans/INDEX.md) — plans index and status
 - [docs/plans/NEXT_FEATURES.md](./docs/plans/NEXT_FEATURES.md) — priority roadmap
 - [docs/plans/website-agency-engine](./docs/plans/website-agency-engine) — 12-phase master roadmap

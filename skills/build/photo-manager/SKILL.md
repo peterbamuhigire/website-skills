@@ -1,28 +1,39 @@
 ---
 name: photo-manager
-description: Catalogs photos from photo-bank/, records dimensions, copies to a single flat src/assets/images/ directory, and generates _catalog.json with category metadata. Use whenever photos need to be processed, cataloged, or placed in the website.
+description: Use when cataloguing, renaming, dimensioning, selecting, approving, and placing the correct logo and website photographs; do not use for derivative encoding alone, which belongs to image-compression.
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Photo Manager
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
+<!-- dual-compat-start -->
 ## Use when
-- The task matches this domain: Catalogs photos from photo-bank/, records dimensions, copies to a single flat src/assets/images/ directory, and generates _catalog.json with category metadata. Use whenever photos need to be processed, cataloged, or placed in the website.
-- The user needs an implementation-facing skill rather than a general discussion.
+- New photos or logos must be inspected, deduplicated, named, rights-qualified, catalogued, and assigned to website placements.
+- A photo library needs the correct logo or website photographs selected, renamed, dimensioned, and catalogued before encoding.
+- `photo-bank/` needs safe staging reconciliation with `src/assets/images/` and `_catalog.json`.
 
 ## Do not use when
-- The prerequisite upstream context is missing and the task is not yet execution-ready.
-- Another narrower skill is the clear better fit for the exact subtask.
+- The task is derivative format/quality/weight optimisation only; use `image-compression`.
+- The task is page markup or responsive image rendering; use `page-builder` after cataloguing.
+- Rights, source location, or destination are unknown; inventory only and stop before placement.
 
-## Required inputs
-- Project context, current files, and any constraints that affect implementation.
-- Upstream artifacts produced by earlier skills when this skill is part of a pipeline.
+## Required Inputs
+| Input | Source | Required | If absent |
+|---|---|---:|---|
+| Source asset directory and existing catalogue | Project files | yes | Stop; do not search unrelated paths or invent catalogue records. |
+| Placement needs, brand rules, alt-text context, and rights status | Content/design brief | yes | Catalogue technical facts only and mark placement/rights pending. |
+| Destination and naming convention | Repository | yes | Return a proposed mapping without copying files. |
 
 ## Workflow
-1. Read only the relevant project inputs and preserved guidance before acting.
-2. Choose the smallest set of references needed for the current job.
-3. Produce the implementation, configuration, or guidance this skill owns.
-4. Validate that the result stays compatible with the rest of the repository workflow.
+1. Inventory staging and existing assets, rights evidence, catalogue entries, and placement needs; stop on unauthorised sources.
+2. Inspect decode, dimensions, orientation, duplicates, subject, and naming collisions without inventing metadata.
+3. Decide approve, quarantine, or reject for each asset and assign stable names and usage metadata.
+4. Copy approved assets, update `_catalog.json`, and validate destination decode and reconciliation.
+5. Apply the cleanup rule only to source files copied and catalogued in this run.
+6. Recovery: on copy/catalogue failure, preserve the source, repair or roll back the incomplete entry, and recheck reconciliation.
 
 ## photo-bank cleanup rule (required)
 - After a photo-bank file is copied into `src/assets/images/` AND its entry is recorded in `_catalog.json`, DELETE the original from `photo-bank/`. The asset copy is the canonical version; the photo-bank is a staging area, not an archive.
@@ -31,24 +42,51 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - This keeps `photo-bank/` showing only un-placed photos, so it doubles as the "still needs a slot" queue.
 
 ## Quality standards
-- Outputs must be implementation-ready and internally consistent.
-- Preserve existing behavior unless the task explicitly requires a change.
-- Avoid host-specific path assumptions so the skill remains portable.
+- Catalogue records reconcile to real decodable files, dimensions, placements, alt intent, and rights status.
+- Names are stable, descriptive, collision-free, and independent of a single host install path.
+- Every staging deletion traces to a verified destination and catalogue entry from the same run.
 
 ## Anti-patterns
+- Selecting imagery from filenames. Fix: inspect the decoded asset and placement context.
+- Inferring rights, people, or locations. Fix: record unknown until evidence is supplied.
+- Allowing name collisions. Fix: assign stable descriptive unique names.
+- Omitting alt intent or rights status. Fix: store both in the catalogue.
+- Deleting staging files early. Fix: verify destination decode and catalogue first.
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
-- Do not generate generic output that ignores the actual project context.
+- Do not infer licences, subjects, locations, or consent from filenames; record unknown.
+- Do not delete a staging file until its destination exists and its catalogue entry validates.
 
 ## Outputs
-- Implementation guidance, configuration, generated artifacts, or concrete follow-on steps.
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Asset files in approved destination | `image-compression` and `page-builder` | Names are unique, files decode, and only authorised sources were copied. |
+| `_catalog.json` | Build and content teams | Every placed asset has path, dimensions, category, usage, alt-text status, and rights status. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Asset reconciliation | Source-to-destination-to-catalogue register | Counts match and every deletion traces to a verified copy. |
+
+## Capability Contract
+Inventory and assess read-only by default. Copy, rename, update catalogues, or apply the staging cleanup rule only when file mutation is authorised. Never delete unplaced files or assert usage rights without evidence.
+
+## Degraded Mode
+If metadata extraction, decoding, rights evidence, or write access is unavailable, return an inventory with unknown fields and proposed placements. Do not delete, copy, or mark an asset approved.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Rights and placement are approved | Copy, catalogue, verify, then clean staging source | Orphaned or unlawful use |
+| Destination name collides | Derive a stable descriptive unique name | Silent overwrite |
+| Asset is decorative | Record empty alt intent | Noisy accessibility text |
+| Subject or rights are unknown | Quarantine from production placement | Misrepresentation or rights risk |
+
+## Worked Example
+For an approved team portrait, record dimensions and rights evidence, copy it under a stable descriptive name, add its page-specific alt-text status to `_catalog.json`, verify the destination decodes, and only then remove that exact staging file. Leave every unused photo in `photo-bank/`.
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
+- [Preserved photo-management guidance](references/legacy-guidance.md)
 
+<!-- dual-compat-end -->

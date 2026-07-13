@@ -1,131 +1,125 @@
 ---
 name: experimentation
-description: Canonical experimentation and CRO layer. Defines the hypothesis template, statistical-significance primer, A/B infrastructure contract, and quarterly review cadence that turn retainer work into a structured learning loop rather than opinion exchange. Every retainer client runs at least one test per quarter; every test has a documented hypothesis and a decision rule.
+description: Use when a measured website question needs a pre-registered controlled test, power check, guardrails, analysis, and decision; use `cro-audit` to diagnose opportunities and `marketing-measurement-system` to define KPIs.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Experimentation
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- A retainer client has a conversion, engagement, or retention question
-  that cannot be answered by existing analytics alone.
-- A strategist or SEO operator wants to test a hypothesis before rolling
-  a change across a site.
-- A client has shipped a major redesign and needs the "did it work"
-  question answered with evidence, not opinion.
+Turn a measurable uncertainty into a controlled learning cycle with a declared hypothesis, stopping rule, guardrails, and decision.
 
-## Do not use when
-- The team has not agreed on the metric. Run `ux-psychology` or
-  `cro-audit` to shape the question first.
-- The site has insufficient traffic. Under ~1,000 primary-CTA events
-  per week, experimentation power is too low to beat noise; use
-  qualitative methods instead.
-- The change is a bug fix. Fixes ship without experimentation.
+<!-- dual-compat-start -->
+## Use When
 
-## Core contract
+- Existing analytics cannot resolve a conversion, engagement, or retention question.
+- A proposed change should be tested before broad rollout.
+- A redesign or message change needs causal evidence rather than before/after opinion.
 
-Every experiment honours five properties:
+## Do Not Use When
 
-1. **Documented hypothesis** using `references/hypothesis-template.md`.
-2. **Minimum detectable effect** computed before start, not after.
-3. **Stopping rule** declared before the test begins — sample-size or
-   calendar-date based.
-4. **Guardrail metrics** named so a winner on the primary metric that
-   harms a guardrail still loses.
-5. **Decision rule** written before the test — how the operator decides
-   to ship, kill, or iterate regardless of result.
+- The metric or opportunity is undefined; use `marketing-measurement-system` or `cro-audit` first.
+- A bug, accessibility failure, security defect, or legal issue needs correction; fix it without experimentation.
+- Traffic or event volume cannot support the required effect within a useful window; use qualitative or staged methods.
 
-A test without these five is not an experiment; it is opinion with
-numbers attached.
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Decision question and falsifiable hypothesis | Product/marketing owner | yes | Return a hypothesis workshop brief. |
+| Baseline metric, event definitions, traffic, and variance | Analytics owner | yes | Do not calculate or run a test from guessed data. |
+| Minimum meaningful effect and decision horizon | Business owner | yes | Stop; statistical detectability alone is not business value. |
+| Guardrails, segment rules, implementation owner, and platform | Project team | yes for launch | Produce a design only; do not activate the test. |
+| Authority to expose users and change production | Named owner | yes for mutation | Stop at preflight evidence. |
 
 ## Workflow
 
-1. **Form the hypothesis** using the template. Record in
-   `project-log/experiments/<test-slug>.md` in the client project.
-2. **Size the test.** Use the sample-size calculator in the
-   stat-significance primer; pick a minimum detectable effect the team
-   would actually ship on.
-3. **Choose variant scope.** One variable per test unless the
-   infrastructure supports a factorial design and the traffic supports
-   it.
-4. **Implement the variants.** Default platform: GrowthBook. Assignment
-   is deterministic per visitor.
-5. **Instrument.** Every variant fires an assignment event into the
-   analytics stack; outcomes fire the same event names as production.
-6. **Pre-flight.** Confirm on staging that assignment is balanced and
-   outcome events fire.
-7. **Run to the stopping rule.** No peeking; no pausing the winner
-   early unless a guardrail breaches.
-8. **Analyse.** Significance test from the primer; report confidence
-   intervals, not only p-values.
-9. **Decide.** Ship, kill, iterate. Log the decision and its rationale.
-10. **Share.** The result goes into the client's monthly report and the
-    agency's quarterly experimentation review.
+1. Write the hypothesis and decision using [the hypothesis template](references/hypothesis-template.md).
+2. Stop if the question is not falsifiable, the metric is unstable, or the effect would not change a decision.
+3. Calculate sample size and duration from observed baseline data using [the significance primer](references/stat-significance-primer.md).
+4. Choose the simplest valid design and declare unit of assignment, exposure, variants, exclusions, primary metric, guardrails, and stopping rule.
+5. Pre-register ship, kill, iterate, and inconclusive decisions before implementation.
+6. Implement deterministic assignment and instrumentation with least-privilege production access.
+7. Preflight assignment balance, exposure events, outcome events, contamination, accessibility, performance, and rollback.
+8. Run to the stopping rule; stop early only for a declared safety or guardrail trigger.
+9. Analyse effect size and uncertainty, inspect segments only as pre-declared or exploratory, and record data-quality limitations.
+10. Decide, clean up losing code, update the baseline, and share learning.
+11. If telemetry fails during the run, pause interpretation, repair the evidence chain, and classify affected data.
 
-## Required inputs
+## Quality Standards
 
-- A retainer client with weekly primary-metric volume sufficient to
-  power the test (generally ≥ 1,000 events/week on the primary metric).
-- An agreed primary metric and guardrail metrics.
-- Experimentation platform (default GrowthBook) provisioned on the
-  client project.
-- Analytics event map already in place.
+- Hypothesis, minimum meaningful effect, stopping rule, guardrails, and decision rules exist before exposure.
+- Sample planning uses observed data and documents assumptions.
+- Assignment and outcome events are verified before launch.
+- Reports include effect size, uncertainty, runtime, exclusions, and data-quality caveats.
+- Inconclusive is a valid result; no post-hoc redefinition creates a winner.
+- Experiment code and flags have a dated cleanup owner.
 
-## Quality standards
+## Anti-Patterns
 
-- Every experiment has a hypothesis file filed before code merges.
-- Power and sample-size calculations are present and match the traffic
-  reality on the site.
-- Primary metric is a real business metric (conversion, revenue, sign-up,
-  qualified lead), not a proxy like dwell time unless explicitly
-  approved.
-- Tests do not fork the site indefinitely; losers are removed within 14
-  days of decision.
-- Quarterly review runs whether or not there are winners.
-
-## Anti-patterns
-
-- Running a test to "see what happens." That is not experimentation; it
-  is page-level gambling.
-- A/B testing the homepage hero every quarter without learning
-  anything durable. Each test should end in a documented belief update.
-- Treating a 5% lift on a sample of 200 as a win. Check the primer.
-- Ignoring seasonality. A test over a holiday week in one market is not
-  transferable to another.
-- Shipping the winner without instrumentation. Every ship becomes a
-  new baseline that later tests must respect.
+- Running a test "to see what happens". Fix: write a falsifiable hypothesis and decision first.
+- Peeking and stopping on a favourable fluctuation. Fix: follow the pre-registered rule.
+- Calling a small sample a win from point estimate alone. Fix: report uncertainty and practical significance.
+- Changing multiple uncontrolled elements. Fix: isolate the variable or use a justified factorial design.
+- Ignoring seasonality or campaign contamination. Fix: schedule or model known effects and record them.
+- Shipping a winner without verified instrumentation. Fix: establish the new measured baseline.
+- Keeping losing variants indefinitely. Fix: assign cleanup ownership and deadline.
 
 ## Outputs
 
-- `project-log/experiments/<test-slug>.md` per test, containing the
-  hypothesis, setup, results, and decision.
-- A quarterly review file at `project-log/experiments/review-<YYYY-Qn>.md`
-  per client, summarising wins, losses, and learning.
-- Aggregate learning notes consolidated into `seo`, `page-builder`, and
-  `content-writing` references when a pattern repeats across clients.
-- A row in `dashboards/quality-scorecard.md` indicating whether the
-  client has an active experiment.
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Experiment plan and logbook | Product, implementation, and analytics owners | Hypothesis, design, sample plan, metrics, stopping and decision rules are complete. |
+| Preflight evidence | Release owner | Assignment, events, guardrails, accessibility, performance, and rollback are observed. |
+| Results and decision record | Business owner and monthly reporting | Effect, uncertainty, caveats, decision, and cleanup action are explicit. |
+| Quarterly learning review | Retainer owner | Wins, losses, inconclusive tests, belief changes, and next priorities are summarised. |
 
 ## References
 
-- `references/hypothesis-template.md` — the required template for every
-  test.
-- `references/stat-significance-primer.md` — p-values, confidence
-  intervals, sample sizing, sequential testing, peeking.
-- `references/ab-infrastructure.md` — GrowthBook default setup; Statsig
-  and PostHog alternatives.
-- `references/experiment-logbook-template.md` — the per-test log
-  structure.
-- `references/quarterly-review-template.md` — the per-client quarterly
-  review.
+- [Hypothesis template](references/hypothesis-template.md)
+- [Statistical significance primer](references/stat-significance-primer.md)
+- [A/B infrastructure](references/ab-infrastructure.md)
+- [Experiment logbook template](references/experiment-logbook-template.md)
+- [Quarterly review template](references/quarterly-review-template.md)
+<!-- dual-compat-end -->
 
-## Notes
+## Evidence Produced
 
-- This skill does not set the metric; `agency-positioning`,
-  `brand-strategy`, and `ecommerce-analytics` each own metric
-  definition for their domain.
-- A/B platform choice is a decision entry; GrowthBook is the default
-  for open-source posture, cost, and African-bandwidth friendliness.
-- The `monthly-report` skill surfaces the experiment's decision and
-  evidence line to the client; it does not re-run the analysis.
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Pre-registration | Versioned plan | It predates exposure and contains all decision rules. |
+| Instrumentation and assignment check | Test output or screenshots/logs | Events and allocation were observed, not assumed. |
+| Analysis record | Reproducible calculation and narrative | Inputs, exclusions, effect, uncertainty, and limitations are traceable. |
 
+## Capability Contract
+
+Read access to analytics and project context is required. Analysis defaults to read-only. Editing flags, instrumentation, or production exposure requires explicit authority. Network, spending, user exposure, destructive cleanup, and claims of statistical or business success require observed evidence and named approval.
+
+## Degraded Mode
+
+When trustworthy data, execution, network, platform, or production authority is unavailable, return the narrowest qualified pre-registered design or qualitative alternative and mark power, instrumentation, and outcomes `not assessed`. Never manufacture a sample estimate or winner.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Adequate data and practical test duration | Run controlled test | Opinion-led rollout |
+| Insufficient power within decision horizon | Use qualitative or staged evidence | Noisy false winner |
+| Guardrail breaches | Stop and mitigate | User or business harm |
+| Result is uncertain at stopping rule | Record inconclusive and decide next evidence | Post-hoc winner creation |
+| Telemetry integrity fails | Pause interpretation | Decisions from corrupted data |
+
+## Worked Example
+
+A consultation CTA change has a business-defined minimum meaningful lift, but baseline event volume implies a six-month test while the campaign lasts four weeks. The skill rejects the A/B test and recommends moderated user sessions plus a staged rollout with observational monitoring.
+
+## Read Next
+
+- `marketing-measurement-system` defines the KPI tree.
+- `observability` ensures event and performance data are trustworthy.
+- `cro-audit` diagnoses candidate problems.
+- `monthly-report` communicates decisions without re-analysing the test.

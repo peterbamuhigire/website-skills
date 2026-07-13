@@ -1,24 +1,104 @@
 ---
 name: website-builder
-description: Master orchestrator for building static websites from markdown content and photos. Use when the user says "build a website", "create a site", or references docs/ content. Reads content from docs/, photos from photo-bank/, and generates a complete Astro website.
+description: Use when orchestrating a complete website from approved documents and assets through strategy, content, design, build, SEO, quality gates, deploy readiness, and handover; use page-builder for implementation-only work.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Website Builder
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Own the end-to-end website delivery sequence and explicit handoffs between specialist skills.
+
+<!-- dual-compat-start -->
+## Use When
+
+- A multi-page website must be delivered end to end
+- several website skills must be sequenced
+- launch evidence and handover must be reconciled.
+
+## Do Not Use When
+
+- Use `page-builder` for approved page implementation only, or `premium-website-product` to define the commercial product before delivery.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Approved scope, client content, asset inventory, language plan, and acceptance criteria | Proposal, discovery, client, and project repository | yes | Establish build truth | Stop and route to discovery when commercial scope or required content is absent |
+
+## Workflow
+
+1. Validate scope, authority, languages, content, and assets
+2. Route strategy and experience mapping before design and implementation
+3. Coordinate page, search, accessibility, visual, security, and release gates
+4. Stop on any hard gate, repair through its owning skill, rerun the gate, then assemble handover evidence.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Deploy-ready website and handover pack | Client, deploy, and support operations | Approved routes render, all hard gates pass, and rollback, ownership, and measurement evidence exist |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Route map, gate results, release evidence, and handover record | Release owner | Every promised page and acceptance criterion maps to inspected evidence |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read, search, edit, and execution are required for an authorised build. Network, deployment, external publication, spending, and production mutation require explicit project authority; delegation is limited to bounded independent work.
+
+## Degraded Mode
+
+Fallback: if build, render, network, or deployment capabilities are unavailable, return the narrowest qualified readiness pack, mark affected gates `not assessed`, and do not claim deploy readiness.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Scope and content approved | Enter implementation sequence | Rework and fabricated content |
+| Any hard quality gate fails | Block release and return to the owning skill | Defective deployment |
+
+## Quality Standards
+
+- Maintain one source for routes, content, tokens, and acceptance; all inherited hard gates must pass before deployment is described as ready.
+
+## Anti-Patterns
+
+- Starting page code before scope and content approval. Fix: complete intake and route mapping first.
+- Letting specialists silently change scope. Fix: record decisions and return commercial changes to the owner.
+- Calling a successful build deploy-ready. Fix: require accessibility, visual, security, SEO, and rollback evidence.
+- Duplicating locale markup. Fix: use shared templates and locale data.
+- Treating an unavailable render as passed. Fix: mark visual gates `not assessed` and block readiness.
+
+## Worked Example
+
+A bilingual services site has approved copy but no French native review. Build shared routes, block French release, and hand the locale to `french-native-copy` before rerunning visual and search gates.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - The user wants a full website build, rebuild, or end-to-end orchestration.
 - The task matches this domain: Master orchestrator for building static websites from markdown content and photos. Use when the user says "build a website", "create a site", or references docs/ content. Reads content from docs/, photos from photo-bank/, and generates a complete Astro website.
 
-## Do not use when
+## Preserved Domain Exclusions
 - The user only needs one narrow subtask and does not need pipeline coordination.
 - Core project inputs do not exist yet and the task is still discovery-only.
 
-## Required inputs
+## Preserved Domain Inputs
 - Project docs, content, assets, and any language configuration.
 - A working target project or implementation area.
 
-## Workflow
+## Preserved Domain Workflow
 1. Read the core project inputs before generating or changing anything.
 2. Route work through sibling skills in the right order using directory-relative names, not a hardcoded install path.
 3. Track outputs from each stage so downstream steps consume the correct artifacts.
@@ -39,7 +119,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    or agentic readiness, apply `google-ai-search` before `seo` and page
    production so Google-specific work is grounded in official Search guidance.
 
-## Quality standards
+## Preserved Domain Quality Guidance
 - Preserve the intended build order and artifact handoffs.
 - Stay portable across Claude Code and Codex installs.
 - Report clearly what was built, skipped, or blocked.
@@ -78,18 +158,17 @@ Every project built under this orchestrator must satisfy:
 
 Any gate failure blocks deploy.
 
-## Anti-patterns
+## Preserved Domain Anti-Patterns
 - Do not assume the skills live only under `.claude/skills`.
 - Do not start generation before reading the project inputs.
 - Do not skip downstream verification.
 - Do not claim a project is shipped on the engine without the canonical CI
   pipeline installed and green.
 
-## Outputs
+## Preserved Domain Outputs
 - Build plan, orchestrated execution notes, generated artifacts, or a blocker report.
 
-## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
+## Preserved Domain References
 - Use `references/intake-questionnaire-template.md` when the project still needs structured intake or discovery capture before build orchestration.
 - Use `references/website-strategy-brief-template.md` as the canonical source-of-truth artifact before design and build work begins.
 - Use `references/project-artifact-standard.md` to confirm the minimum project artifact set before orchestrating downstream work.
@@ -117,8 +196,6 @@ Any gate failure blocks deploy.
 - Use `references/maintenance-calendar.md` for weekly, monthly, quarterly, and annual review cadence.
 - Use `references/agency-operations-handbook-index.md` as the index into the broader agency playbook library.
 - Route to sibling skill `launch-campaigns` when the website brief includes a timed offer, campaign window, waitlist, announcement, webinar, or coordinated prelaunch/launch/follow-up sequence.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 - After intake is complete and before build starts, resolve this engine path
   from the global routing table and install the canonical CI pipeline:
   `bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project-path>`.
@@ -126,8 +203,3 @@ Any gate failure blocks deploy.
   `accessibility-audit`, `visual-qa`, `security-gate`, `observability`,
   `design-quality-score`, `premium-website-product`, `premium-ui-ux-design`,
   `google-ai-search`, and `africa-excellence`.
-
-## Notes
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
-

@@ -1,72 +1,126 @@
 ---
 name: premium-commercial-writing
-description: Cross-cutting premium commercial writing layer for website copy, landing pages, blogs, SEO/GEO pages, sales documents, offer pages, and conversion content. Use when writing must justify premium fees through sharper market-message-offer fit, voice-of-customer clarity, proof, authority, AI-search visibility, professional tone, genuine human texture, and anti-AI-slop editorial standards.
+description: Use when website, authority, offer, SEO, or sales-enablement writing must justify premium fees through buyer insight, proof, clear claims, and editorial restraint; use the owning execution skill for publishing or page implementation.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Premium Commercial Writing
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- Writing or revising website copy, service pages, landing pages, blogs, SEO pages, lead magnets, sales documents, proposals, case studies, offer pages, or campaign content that must support premium fees.
-- Existing copy sounds generic, under-researched, over-polished, hype-led,
-  AI-like, synthetic, filler-heavy, or disconnected from buyer objections.
-- A page must rank, be cited by AI/search systems, persuade a serious buyer, and still sound credible to a human evaluator.
+Apply a commercial editorial layer that makes important writing specific, credible, useful, and worthy of a serious buyer's attention.
 
-## Do not use when
-- The task is purely visual, technical, or operational with no copy, content, SEO, conversion, or brand-language implication.
-- A regulated category forbids persuasive claims that the available proof cannot substantiate.
+<!-- dual-compat-start -->
+## Use When
 
-## Required inputs
-- Audience, offer, business model, geography, language, page type, buyer awareness, traffic source, proof assets, and next action.
-- Voice-of-customer material where available: interviews, sales notes, objections, reviews, testimonials, support threads, search queries, or founder notes.
-- Existing brand voice, sector constraints, SEO intent, and any claims that require evidence.
+- Website copy, articles, offer pages, SEO content, case studies, or sales documents must support premium fees.
+- Existing writing is generic, hype-led, synthetic, under-researched, or weak on proof.
+- A page must persuade human buyers while remaining useful to search and AI-answer systems.
+
+## Do Not Use When
+
+- The task is purely technical or visual with no language implication.
+- A regulated claim cannot be supported; stop rather than improve its persuasion.
+- The task is implementation or publication; the owning page, blog, SEO, or document skill retains that authority.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Audience, offer, page type, and next action | Commercial brief | yes | Return the missing commercial decisions; do not draft generic premium copy. |
+| Voice-of-customer and objection evidence | Interviews, sales/support notes, reviews, or search queries | conditional | Mark the draft inference-led and lower claim confidence. |
+| Proof and source material | Client records and verified research | yes for material claims | Soften or remove unsupported claims and list evidence needed. |
+| Brand, sector, language, and SEO constraints | Upstream owners | conditional | State provisional assumptions and route specialist questions. |
 
 ## Workflow
-1. Define the commercial job: rank, educate, compare, reassure, qualify, convert, retain, or support sales.
-2. Build the market-message-offer brief before drafting. Identify buyer segment, buyer problem, desired result, distinct mechanism, proof burden, risk, CTA, and follow-up path.
-3. Mine buyer language where evidence exists. If evidence is thin, mark the copy as inference-led and lower confidence.
-4. Load `references/genuine-writing-and-ai-slop-gate.md` before drafting any
-   public-facing page, blog, article, or authority content unless the task is a
-   tiny microcopy edit.
-5. Draft around the buyer's decision sequence: orientation, problem, promise, proof, offer, risk reduction, next step.
-6. Edit for premium quality: specificity, rhythm, clarity, authority, restraint, scannability, proof proximity, credible claims, and human texture.
-7. Add search and AI-answer readiness where relevant: intent match, answerable sections, entities, author/expert signals, schema handoff notes, citations to allowed sources, and update cues.
-8. Return the finished copy plus acceptance criteria, unresolved evidence gaps, source notes, and implementation notes for the owning skill.
 
-## Quality standards
-- The first screen or opening section makes the right reader feel oriented, understood, and able to act.
-- Every important claim is either proved, softened, attributed, or removed.
-- CTAs name the buyer reward and the next step instead of using generic interface labels.
-- Writing sounds like a skilled professional with judgment, not a template, slogan sheet, or synthetic article.
-- Premium tone is confident, specific, useful, and commercially serious. It does not rely on luxury adjectives, fake scarcity, empty superlatives, or pressure tactics.
-- AI-search readiness supports human usefulness first. Do not stuff entities, FAQs, or schema ideas into weak content.
-- The draft must contain specific details from the business, buyer, sector,
-  geography, proof, process, or source material. If it could fit any competitor,
-  it fails.
+1. Define the writing's commercial job: rank, educate, compare, reassure, qualify, convert, retain, or enable sales.
+2. Stop if the buyer, offer, proof burden, or next action is unresolved.
+3. Build a market-message-offer brief: segment, problem, desired result, mechanism, objections, proof, risk, CTA, and follow-up.
+4. Mine buyer language where evidence exists; label inference when it does not.
+5. Draft around the buyer's decision sequence, not a prestige vocabulary list.
+6. Place proof beside the claim and handle material objections without pressure tactics.
+7. Add search and AI-answer structure only where it improves human usefulness.
+8. Edit with [the genuine-writing gate](references/genuine-writing-and-ai-slop-gate.md) and [professional quality gate](references/professional-writing-quality-gate.md).
+9. Return finished copy, source notes, evidence gaps, acceptance criteria, and implementation notes to the owning skill.
+10. If evidence fails, revise or remove the dependent claim before handoff.
 
-## Anti-patterns
-- Polishing copy before the page strategy is clear.
-- Treating SEO as keywords only or AI visibility as crawler files only.
-- Borrowing prestige from frameworks while ignoring the actual offer, buyer, proof, or sector risk.
-- Copying source-book language, long paraphrases, examples, or quotes into project files.
-- Writing for everyone because the client is afraid to qualify the right-fit buyer.
-- Publishing AI-sounding content because it is grammatically clean. Clean prose
-  still fails if it lacks evidence, judgment, specificity, and source integrity.
+Recovery: repair the brief or evidence map, then rerun the professional and anti-slop gates.
+
+## Quality Standards
+
+- The opening or first screen orients the right buyer and makes the next step clear.
+- Every important claim is proved, softened, attributed, or removed.
+- Tone is confident and commercially serious without luxury adjectives, fake scarcity, or empty superlatives.
+- CTAs name the buyer reward and next step.
+- The draft contains specific business, buyer, sector, geography, proof, process, or source detail.
+- Search structure never substitutes for a useful argument.
+
+## Anti-Patterns
+
+- Polishing before the page strategy exists. Fix: resolve buyer, offer, proof, and action first.
+- Treating SEO as keywords or AI visibility as crawler files. Fix: answer real decisions with explicit entities and evidence.
+- Borrowing authority from named frameworks. Fix: use the client's offer, buyer language, and proof.
+- Copying source-book wording. Fix: distil operational principles and write original copy.
+- Writing for everyone. Fix: qualify the right-fit buyer and acknowledge exclusions.
+- Using fake urgency or unsupported prestige. Fix: state genuine constraints and verifiable value.
+- Publishing clean but generic prose. Fix: add specific evidence and authored judgment or cut it.
 
 ## Outputs
-- Premium copy drafts, page rewrites, blog/article drafts, SEO/GEO content notes, offer-page copy, document language, editorial QA findings, or acceptance criteria.
-- Message bank, proof bank, objection bank, CTA ladder, source notes, and content gaps when the project needs reusable writing assets.
+
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Premium commercial draft or revision | Owning content skill and approver | Buyer, offer, proof, objections, CTA, and voice are explicit and coherent. |
+| Message, proof, objection, and CTA banks | Future page and campaign owners | Entries are sourced, reusable, and labelled by audience or stage. |
+| Editorial QA record | Release owner | Claims, source gaps, anti-slop checks, and implementation notes are complete. |
 
 ## References
-- `references/genuine-writing-and-ai-slop-gate.md` - mandatory for public-facing page copy, blog posts, authority content, SEO pages, and any draft that risks sounding generic, synthetic, or under-researched.
-- `references/professional-writing-quality-gate.md` - use for editorial QA, premium tone, claim discipline, proof standards, and final acceptance checks.
-- `references/website-page-writing-patterns.md` - use for home, about, service, pricing, FAQ, case-study, contact, and support-reduction pages.
-- `references/offer-and-landing-page-writing.md` - use for offer pages, campaign pages, waitlists, webinars, lead magnets, consultation pages, productized services, and direct-response flows.
-- `references/blog-and-authority-writing.md` - use for blogs, thought leadership, topical authority, series, pillar/cluster content, and sales-enablement articles.
-- `references/seo-ai-search-writing.md` - use when content must rank, support entity authority, produce useful answer blocks, and feed `seo`/GEO implementation.
-- `references/document-and-sales-enablement-writing.md` - use for proposals, briefs, lead magnets, guides, case studies, one-pagers, and client-facing documents.
-- `../../book-extractions/premium-commercial-writing-audit-2026.md` - audit trail and high-level synthesis of the supplied source material. Use it for provenance, not as reusable copy.
 
-## Notes
-- This skill coordinates writing quality. The owning execution skill still controls the deliverable: `blog-writer` owns blog publishing, `seo` owns metadata/schema/crawler files, `page-builder` owns implementation, and `sales-copywriting` or `long-form-sales-copy` owns direct-response structure.
-- Load only the reference file needed for the current writing task.
+- [Genuine writing and AI-slop gate](references/genuine-writing-and-ai-slop-gate.md) for every public draft.
+- [Professional writing quality gate](references/professional-writing-quality-gate.md) for final editorial acceptance.
+- [Website page patterns](references/website-page-writing-patterns.md) for common page types.
+- [Offer and landing-page writing](references/offer-and-landing-page-writing.md) for direct-response flows.
+- [Blog and authority writing](references/blog-and-authority-writing.md) for thought leadership and topical authority.
+- [SEO and AI-search writing](references/seo-ai-search-writing.md) for answer structure and entity clarity.
+- [Document and sales-enablement writing](references/document-and-sales-enablement-writing.md) for longer commercial assets.
+<!-- dual-compat-end -->
+
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Market-message-offer brief | Structured notes | Buyer, problem, result, mechanism, proof, risk, CTA, and follow-up are present. |
+| Claim and source record | Table or annotations | Each material claim has status and source. |
+| Editorial gate result | Checklist | Unresolved evidence and implementation constraints remain visible. |
+
+## Capability Contract
+
+Read access to briefs, evidence, and existing copy is required. Search and network access are optional for current fact verification. Review defaults to read-only; editing requires authority. Publishing, production mutation, spending, and external communication are outside this skill unless separately authorised.
+
+## Degraded Mode
+
+Without research, source files, voice-of-customer evidence, or editing access, return a narrower qualified draft or review with assumptions and missing proof named. Never convert an unverified claim into polished certainty.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| High-value claim with strong proof | State specifically near the evidence | Vague differentiation |
+| Important claim with weak proof | Soften, attribute, or remove | Misrepresentation |
+| Buyer insight is inference-led | Label and propose validation | Synthetic certainty |
+| Direct-response structure dominates | Compose with `sales-copywriting` | Weak conversion logic |
+| Publishing or implementation requested | Hand off to owning skill | Unauthorised mutation |
+
+## Worked Example
+
+A consultancy calls itself "the leading digital partner" but supplies no ranking evidence. Replace the superlative with the firm's documented sector focus, delivery method, named proof, and a consultation CTA; record the missing comparative evidence.
+
+## Read Next
+
+- `content-writing` owns general website page copy.
+- `blog-writer` owns article research and publishing handoff.
+- `sales-copywriting` owns conversion frameworks.
+- `seo` owns metadata, schema, and crawler implementation.

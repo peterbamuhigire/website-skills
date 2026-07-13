@@ -1,12 +1,92 @@
 ---
 name: africa-excellence
-description: Canonical Africa-realistic excellence layer. Owns the low-bandwidth, mobile-money, USSD-aware, multilingual, country-trust, and cultural-pattern standards that every African-market site is built and reviewed against. Global defaults are the floor; this skill raises the ceiling for Africa.
+description: Use when a website must work credibly in African markets across constrained bandwidth, mobile-first use, mobile money, USSD-aware journeys, local languages, trust, and cultural context; use deploy for release execution.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Africa Excellence
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Apply Africa-realistic product and delivery constraints without flattening diverse markets into stereotypes.
+
+<!-- dual-compat-start -->
+## Use When
+
+- Users face expensive or unstable data
+- mobile money or USSD shapes conversion
+- local trust, address, language, or device conditions affect the experience.
+
+## Do Not Use When
+
+- Use as a substitute for country and audience research, or for deployment execution owned by `deploy`.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Target countries, audience evidence, device and network profile, payment channels, language plan, and trust requirements | Research, analytics, client operations, and project brief | yes | Calibrate patterns to a real market | Stop when the market is described only as 'Africa' without country evidence |
+
+## Workflow
+
+1. Name countries, audiences, evidence, and constraints
+2. Choose bandwidth, device, payment, language, trust, and offline-continuity patterns
+3. Integrate requirements into content, design, commerce, and measurement
+4. Stop on stereotype or unverified infrastructure claims, recover through research or qualified assumptions, then test on the agreed constrained profile.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Africa excellence requirements and acceptance matrix | Website-builder, design-system, commerce, and deploy | Each market constraint maps to an implementation owner and observable test |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Country evidence register and constrained-profile results | Product and release owners | Sources are locatable and unavailable tests are marked `not assessed` |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read and search are required. Planning is read-only by default; implementation and network tests require authority. Live payments, USSD sessions, user contact, spending, and publication require explicit permission.
+
+## Degraded Mode
+
+Without device, network, payment, or country evidence, return the narrowest qualified risk matrix, mark those checks `not assessed`, and do not generalise a pass across Africa.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Save-Data or constrained 3G is material | Serve a lighter media and motion path | Exclusion through data cost |
+| Mobile money is a primary payment rail | Design explicit pending, failed, reversed, and receipt states | Payment ambiguity |
+
+## Quality Standards
+
+- Name the market and evidence; meet the repository's Africa-calibrated performance budget; support payment, language, trust, and recovery states relevant to the chosen country.
+
+## Anti-Patterns
+
+- Treating Africa as one market. Fix: name countries, segments, and evidence.
+- Adding flags and patterns as cultural localisation. Fix: adapt language, trust, payment, and service reality.
+- Assuming continuous broadband. Fix: test constrained profiles and Save-Data behaviour.
+- Showing mobile-money success only. Fix: cover pending, failed, reversed, duplicate, and receipt states.
+- Certifying a country without local evidence. Fix: mark it unassessed and commission research or testing.
+
+## Worked Example
+
+For Uganda, test the 350 KB target on the agreed 3G profile, expose MTN MoMo and Airtel Money pending/reversal states, and label any untested USSD handoff rather than claiming nationwide readiness.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - Any project for an African client, regardless of which African market.
 - Any project whose primary audience uses African mobile-money rails,
   3G networks, African languages, or lives in an African trust
@@ -16,7 +96,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - When auditing a site that was built against global defaults and needs
   an Africa-specific upgrade.
 
-## Do not use when
+## Preserved Domain Exclusions
 - The project's primary audience is not in an African market and will
   not encounter African mobile-money, USSD, or language contexts. Use
   sector-strategies and design-system defaults instead.
@@ -51,8 +131,7 @@ by this skill:
    framing, photography conventions, and market-specific formality vs
    warmth. See `references/cultural-patterns.md`.
 
-## Workflow
-
+## Preserved Domain Workflow
 1. **Classify the market.** Identify the primary country and any
    secondary markets. Record in the strategy brief.
 2. **Apply the six standards** to the design-system, page-build, SEO,
@@ -70,16 +149,14 @@ by this skill:
    enterprise buyers who use cards, not mobile money), record the
    deviation in a decision entry.
 
-## Required inputs
-
+## Preserved Domain Inputs
 - Primary and secondary African markets.
 - Payment rails in scope.
 - Primary and secondary languages.
 - Feature-phone relevance (does a USSD counterpart exist?).
 - Client's sector and regulatory posture.
 
-## Quality standards
-
+## Preserved Domain Quality Guidance
 - 3G-throttled profile loads the primary route under the 350 KB budget
   and LCP ≤ 2.5 s. The Phase 10 performance gate enforces this; this
   skill raises the bar where the gate permits.
@@ -96,8 +173,7 @@ by this skill:
 - Testimonials prefer community framing where the market responds to
   community over individual testimony.
 
-## Anti-patterns
-
+## Preserved Domain Anti-Patterns
 - Using global SaaS visual defaults (purple-to-blue gradient,
   diverse-office-stock photos) for African clients. These fail the
   design-quality rubric's originality category.
@@ -114,8 +190,7 @@ by this skill:
 - Applying a Lagos cultural-tone template to a Kampala build or vice
   versa without verification.
 
-## Outputs
-
+## Preserved Domain Outputs
 - Every primary template reviewed against the six references before
   launch.
 - A recorded Africa-excellence audit line in the project's launch log.
@@ -124,8 +199,7 @@ by this skill:
   (trust-signal placement, section originality) that reflect the
   market.
 
-## References
-
+## Preserved Domain References
 - `references/low-bandwidth-patterns.md` — performance patterns beyond
   the global defaults.
 - `references/mobile-money-ux.md` — regional mobile-money providers,
@@ -150,4 +224,3 @@ by this skill:
   skill defines pattern practice.
 - The benchmark library (Phase 12) will include at least one site per
   major African sub-region against this skill.
-

@@ -22,6 +22,8 @@ Do not assume this repository must live under `.claude/skills/`. Resolve local s
 - Do not bulk-load every reference file in a skill. Read only what the current task needs.
 - Use bundled scripts when they are the safest or most repeatable path.
 - Keep outputs implementation-oriented. Avoid abstract summaries when a concrete deliverable is expected.
+- Author or normalise active skills against `docs/skill-authoring-standard.md` and start new entries from `templates/skill/SKILL.md`.
+- Before releasing any skill-engine change, run the zero-debt contract validator, routing smoke test, registry validator, tests, canonical per-skill quick validator, and canonical engine scanner. A missing or unavailable check is not a pass.
 
 ## Routing
 

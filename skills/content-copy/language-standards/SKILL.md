@@ -1,51 +1,116 @@
 ---
 name: language-standards
-description: Language and tone standards for all written content across 3 languages — English (British, East African), French (Francophone African), and Kiswahili (East African standard). Enforces authentic, culturally appropriate, professional communication in each language. Apply throughout all content generation steps.
+description: Use when a multilingual website needs cross-language tone, terminology, locale ownership, and consistency rules; use `french-native-copy`, `swahili-native-copy`, or `east-african-english` for language-specific execution.
+metadata:
+  portable: true
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Language Standards
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
-- The task matches this domain: Language and tone standards for all written content across 3 languages — English (British, East African), French (Francophone African), and Kiswahili (East African standard). Enforces authentic, culturally appropriate, professional communication in each language. Apply throughout all content generation steps.
-- The work needs a quality gate or standard applied across other outputs.
+Govern meaning and tone across English, French, and Kiswahili while routing native writing to the language-specific skill.
 
-## Do not use when
-- The task is unrelated to this standard or quality lens.
-- A more specific execution skill should own the work instead.
+<!-- dual-compat-start -->
+## Use When
 
-## Required inputs
-- The content, interface, or artifact being reviewed or improved.
-- Any brand, audience, regional, or conversion context that affects the judgment.
+- A site needs a language policy, terminology register, or cross-language review.
+- English, French, and Kiswahili versions must communicate the same offer without literal translation.
+- Teams need to decide which content is shared and which is locale-specific.
+
+## Do Not Use When
+
+- The task is native French, Kiswahili, or East African English writing; use the relevant execution skill.
+- The task is URL routing, hreflang, sitemap, or locale architecture; use `i18n`.
+- Only one sentence in one language needs routine editing and no cross-language decision is involved.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | When missing |
+|---|---|---:|---|
+| Approved source meaning and business facts | Content owner | yes | Stop comparison and identify the missing source of truth. |
+| Locale list, market, and audience per language | Project or research brief | yes | Do not assume France equals francophone Africa or that one Kiswahili register fits every market. |
+| Brand voice and terminology | Brand owner | conditional | Create a provisional register and flag it for approval. |
+| Existing locale copy | Project files | conditional | Produce policy and handoff rules rather than a completed consistency audit. |
 
 ## Workflow
-1. Read the artifact and the decision context before applying rules.
-2. Use only the parts of the preserved guidance that matter to the current task.
-3. Review or revise the work using this skill as a focused quality lens.
-4. Return actionable changes or acceptance criteria instead of abstract theory.
 
-## Quality standards
-- Recommendations must be concrete enough to apply immediately.
-- Changes should improve consistency, usability, or credibility without flattening the brand.
-- The standard should support downstream implementation rather than slow it down.
+1. Name each locale, target market, audience, and native-copy owner.
+2. Establish the source-of-truth meaning, facts, offer, proof, and CTA.
+3. Classify fields as shared, locale-adapted, or locale-specific using [multilingual rules](references/multilingual.md).
+4. Build a terminology register for brand names, services, regulated terms, dates, numbers, and currencies.
+5. Route execution to the matching native-copy skill; do not raw-translate the English structure.
+6. Compare versions for meaning, claim strength, omissions, CTA commitment, and tone rather than sentence symmetry.
+7. Stop and resolve any legal, commercial, or factual mismatch before release.
+8. If a native reviewer or locale evidence is unavailable, mark that locale provisional and return the exact review needed.
 
-## Anti-patterns
-- Do not apply every rule mechanically when only a subset is relevant.
-- Do not give generic critique with no change implications.
-- Do not override project reality with taste-based preferences alone.
+Recovery: repair the source meaning or locale decision, then rerun the parity review across all affected languages.
+
+## Quality Standards
+
+- Every locale has a named market and language owner.
+- Facts, prices, dates, claim strength, and offer boundaries remain consistent unless localisation is approved.
+- Register and terminology remain consistent within each locale.
+- French and Kiswahili are authored natively rather than produced by raw translation.
+- Cross-language review records intentional differences and unresolved issues.
+
+## Anti-Patterns
+
+- Treating English as a sentence-by-sentence template. Fix: preserve meaning while allowing native structure.
+- Using one generic "French" market. Fix: name the francophone audience and conventions.
+- Mixing Kenyan and Tanzanian Kiswahili choices without a decision. Fix: set the market and register.
+- Translating brand or regulated terms inconsistently. Fix: maintain an approved terminology register.
+- Declaring parity because paragraph counts match. Fix: compare claims, proof, actions, and omissions.
+- Silently weakening or strengthening a claim in one locale. Fix: record and approve the variation.
 
 ## Outputs
-- Revisions, review findings, acceptance criteria, or quality guidance tied to the artifact under review.
+
+| Artefact | Consumer | Observable acceptance condition |
+|---|---|---|
+| Language policy | Content, design, and implementation teams | Locales, markets, ownership, source language, and adaptation rules are explicit. |
+| Terminology register | Native writers and reviewers | Each controlled term has approved forms and prohibited or unresolved variants. |
+| Cross-language consistency review | Release owner | Material mismatches and intentional differences are recorded by locale. |
 
 ## References
-- Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version.
-- `references/multilingual.md` — three-language consistency rules and per-language routing into the native-copy execution skills.
-- `references/business-english-advanced.md` — advanced professional English standard.
-- Read only the specific files under `references/` that match the current task instead of loading the whole directory.
-- This skill has no bundled scripts by default; keep execution focused on the documented workflow and any existing project files.
 
-## Notes
-- This skill owns the cross-language tone policy. For native-quality execution in a specific language, route to the dedicated execution skill: `french-native-copy` for French, `swahili-native-copy` for Kiswahili, and `east-african-english`/`content-writing` for English. Do not produce French or Kiswahili copy by raw translation; the native-copy skills are mandatory for those languages.
-- Treat this `SKILL.md` as the portable execution layer for both Claude Code and Codex.
-- Preserve existing project behavior unless the current task explicitly requires a change.
+- [Multilingual rules](references/multilingual.md) for shared and locale-specific policy.
+- [Advanced business English](references/business-english-advanced.md) for professional English decisions.
+- [Legacy detailed guidance](references/legacy-guidance.md) for preserved tone and terminology conventions.
+<!-- dual-compat-end -->
 
+## Evidence Produced
+
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Locale decision register | Table | Market, register, owner, and approval status exist for every locale. |
+| Parity review | Checklist or issue list | Claims, facts, proof, CTAs, and missing content were compared. |
+
+## Capability Contract
+
+Read access to all compared locale content is required. Review defaults to read-only. Editing requires explicit authority and native execution through the relevant skill. Network research is optional; publication and routing changes require separate authority.
+
+## Degraded Mode
+
+If a locale, native reviewer, or market evidence is unavailable, assess only the accessible meaning and structure, mark native quality `not assessed`, and provide the smallest review brief. Never count an unreviewed locale as passed.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Meaning is universal but expression differs | Adapt natively | Translation artefacts |
+| Offer, law, currency, or convention differs | Create locale-specific content | Materially wrong local copy |
+| No native quality evidence | Mark provisional and require review | False certification |
+| URL or hreflang issue dominates | Hand off to `i18n` | Mixing content governance with routing |
+
+## Worked Example
+
+An English CTA says "Book a consultation". The French and Kiswahili writers may choose different natural verbs, but the review confirms that all three promise the same meeting type, qualification step, and response expectation.
+
+## Read Next
+
+- `french-native-copy` for French execution.
+- `swahili-native-copy` for Kiswahili execution.
+- `east-african-english` for regional English execution.
+- `i18n` for technical locale architecture.

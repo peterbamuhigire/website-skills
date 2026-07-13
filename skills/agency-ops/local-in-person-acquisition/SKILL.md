@@ -1,12 +1,16 @@
 ---
 name: local-in-person-acquisition
-description: In-person, door-to-door local client acquisition for a niche web design studio — the anti-spam channel. Use when planning how to win local SMB clients face-to-face rather than by cold email, ads, or bots: territory and route planning, daily contact cadence, the free 5-minute website audit as a door-opener, the walk-in pitch and decision-maker scripts, walk-in etiquette, the SMB objection bank ("I have Wix / no time / no budget / I'll DIY / I have Facebook"), the multi-touch follow-up sequence, and visit→conversation→meeting→sale pipeline tracking. Pairs with agency-positioning (niche selection) and seo-audit (the audit artefact). Calibrated for a niche-first studio in Uganda, East Africa, and comparable markets.
+description: "Use when planning ethical face-to-face acquisition for a niche local web studio through territories, short audits, walk-in conversations, follow-up, and pipeline tracking. Use `agency-positioning` to choose the niche and `premium-sales-conversation` after qualification."
+metadata:
+  portable: true
+  compatible_with: [claude-code, codex]
 ---
 
 # Local In-Person Acquisition
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+<!-- dual-compat-start -->
+## Use When
 
 - Planning a local client-acquisition push for a niche web design / branding studio.
 - Building a territory plan and daily prospecting cadence for one city or zone.
@@ -16,7 +20,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Designing the follow-up sequence after a first in-person contact.
 - Tracking the in-person pipeline (visits, conversations, meetings, sales).
 
-## Do not use when
+## Do Not Use When
 
 - The acquisition channel is inbound, paid ads, cold email, or content marketing
   (use `they-ask-you-answer`, `social-media`, or `seo`).
@@ -27,12 +31,18 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The task is building the audit deliverable as a paid product (use
   `seo-audit` and `agency-positioning/references/premium-audit-offers.md`).
 
-## Required inputs
+## Inputs
 
 - The chosen niche and city/zone (from `agency-positioning`).
 - A reachable prospect list, or the means to build one by walking a defined area.
 - One portfolio piece or a niche-relevant mockup to show on a phone or tablet.
 - A repeatable free-audit checklist (see `references/5-minute-audit-checklist.md`).
+
+| Artefact | Source | Required? | If absent |
+|---|---|---:|---|
+| Approved niche, territory, and no-go rules | `agency-positioning` and local plan | yes | Stop route design. |
+| Verifiable prospect and website facts | Public evidence and observation | yes | Do not make an audit claim. |
+| Contact, consent, safety, and CRM rules | Agency operations | yes | Draft only; do not visit or contact. |
 
 ## Workflow
 
@@ -64,7 +74,9 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
    meeting rate, and close rate weekly, not monthly — the cycle is short enough
    that monthly review wastes a month of correction.
 
-## Quality standards
+8. Stop on refusal, unsafe access, or unverifiable evidence; recover by suppressing contact or returning to desk research.
+
+## Quality Standards
 
 - **Niche-first.** Every visit is to a business inside the chosen niche. "Anyone
   on the street" prospecting dilutes the positioning and the referral compounding.
@@ -79,16 +91,16 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - **Five-touch persistence.** Do not record a "no" until the follow-up sequence
   is exhausted or the prospect explicitly opts out.
 
-## Anti-patterns
+## Anti-Patterns
 
 - Pitching the service in the first sentence instead of opening with an
   observation or a free offer.
-- Leaving a business card on the counter during a lunch rush and calling it a touch.
-- Quoting a price at the doorstep before a real conversation about the business.
-- Knocking everything in sight instead of staying inside the niche.
-- Giving up after one visit (80% of deals need five-plus touches).
-- Logging "knocked 60 doors" as progress when zero became conversations.
-- Reusing a generic pitch that does not name the prospect's business or sector.
+- Leaving a card during a rush and calling it a touch. Fix: count only a real conversation or consented follow-up.
+- Quoting at the doorstep. Fix: qualify the business problem and decision process first.
+- Knocking every business in sight. Fix: stay within the approved niche and territory.
+- Following up after refusal. Fix: stop immediately and record suppression.
+- Logging door count as progress. Fix: report defined conversations, meetings, and qualified opportunities.
+- Reusing a generic pitch. Fix: name the prospect's actual context and observed issue.
 
 ## Outputs
 
@@ -97,6 +109,36 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - A reusable walk-in pitch, opener, and one-page leave-behind.
 - A completed 5-minute audit per serious prospect.
 - A weekly pipeline read: contact / conversation / meeting / close rates.
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Territory and route plan | Acquisition owner | Names niche, boundaries, safe cadence, no-go conditions, and daily owner. |
+| Audit and conversation record | Sales owner | Separates observed website facts from hypotheses and records consented next action. |
+| Pipeline register | Agency leadership | Every touch has date, outcome, permission, next action, owner, and source. |
+
+## Evidence Produced
+| Evidence | Format | Acceptance condition |
+|---|---|---|
+| Prospect audit | Dated observation with URL or visible evidence | No scare claim or invented loss estimate. |
+| Funnel review | Visits, conversations, meetings, sales with definitions | Rates reconcile to raw records. |
+
+## Capability Contract
+Planning defaults to read-only. Visits, calls, messages, CRM changes, location tracking, photography, or collection of personal data require explicit authority, respectful consent, and local safety rules.
+
+## Degraded Mode
+Fallback if maps, prospect evidence, safe access, or contact authority are unavailable: return a desk-based territory hypothesis and audit template. Mark conversion and on-site facts `not assessed`.
+
+## Decision Rules
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Niche and dense safe territory are validated | Run a bounded route pilot | Random door-knocking |
+| Prospect is busy, refuses, or asks to stop | Leave immediately and suppress follow-up | Harassment and trust damage |
+| Audit reveals a verifiable priority and interest | Book qualified discovery | Doorstep quoting without diagnosis |
+
+## Worked Example
+Visit ten owner-operated lodges on a pre-approved route outside peak check-in time. Show one verified mobile booking friction point, ask permission to send the audit, and log a next step. A refusal ends the sequence and enters the suppression field.
+
+<!-- dual-compat-end -->
 
 ## References
 

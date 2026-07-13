@@ -1,18 +1,98 @@
 ---
 name: cross-page-design-consistency-audit
-description: Detects and fixes the most common premium-site failure — one polished page (usually the homepage) wired to a real component system while every interior page is hand-built from ad-hoc utilities, emoji, off-brand grays, generic gradients, and glassmorphism. Owns the "two design systems on one site" check, the per-language markup-duplication / translation-drift check, and the find-and-replace content-artifact scan. Co-activates with design-quality-score and the design-system-skills anti-slop doctrine.
+description: Use when auditing a multi-page or multilingual site for competing design systems, ad-hoc interior templates, translation drift, and cross-route content artefacts; use visual-qa for baseline screenshot regression.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Cross-Page Design Consistency Audit
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-## Use when
+Detect system-level inconsistency across routes and locales without treating one polished page as representative.
+
+<!-- dual-compat-start -->
+## Use When
+
+- Interior pages feel cheaper than the homepage
+- more than three templates need comparison
+- duplicated locale markup or content replacements may have drifted.
+
+## Do Not Use When
+
+- Use `design-quality-score` for intrinsic single-template scoring or `visual-qa` for baseline drift.
+
+## Required Inputs
+
+| Artefact | Source or provider | Required? | Purpose | If absent |
+|---|---|---:|---|---|
+| Rendered representative routes, source templates, token and component definitions, locale content, and route inventory | Build, repository, and design decisions | yes | Compare implementation systems | If rendering is absent, perform only a qualified source review and stop a visual pass |
+
+## Workflow
+
+1. Confirm read-only scope and choose representative routes, locales, and states
+2. Compare component, token, layout, typography, content, and translation patterns
+3. Trace each visible drift to shared or ad-hoc architecture
+4. Stop release on material system divergence, recover through authorised component promotion and rerender the full sample.
+
+## Outputs
+
+| Artefact | Consumer | Acceptance condition |
+|---|---|---|
+| Cross-page consistency report | Design-system, page-builder, and release owner | Every finding names affected routes, shared cause, evidence, correction owner, and retest condition |
+
+## Evidence Produced
+
+| Evidence | Consumer | Acceptance condition |
+|---|---|---|
+| Route comparison matrix, renders, source references, and content-artifact scan | Release owner | Covers every template family and selected locale with pass/fail/not assessed status |
+
+<!-- dual-compat-end -->
+## Capability Contract
+
+Read, search, rendering, and source inspection are required for full assessment. Default to read-only. Refactoring, baseline changes, translation edits, and production mutation require explicit remediation authority.
+
+## Degraded Mode
+
+If rendering, fonts, source, locale data, or route access is unavailable, return the narrowest qualified comparison, mark those checks `not assessed`, and never infer a visual pass.
+
+## Decision Rules
+
+| Choice | Action | Failure or risk avoided |
+|---|---|---|
+| Same content role uses unrelated components across routes | Promote one shared pattern and retest | Two design systems |
+| Locale changes structure rather than data without a documented need | Restore shared markup | Translation drift |
+
+## Quality Standards
+
+- Sample every template family and priority locale; diagnose shared causes; preserve documented content-driven exceptions.
+
+## Anti-Patterns
+
+- Comparing only homepage screenshots. Fix: include every template family.
+- Treating all variation as inconsistency. Fix: preserve documented content or task-driven differences.
+- Fixing each route with more utilities. Fix: promote the approved pattern to the shared layer.
+- Editing during the audit. Fix: separate evidence from authorised remediation.
+- Passing without renders. Fix: mark visual checks `not assessed` and qualify the verdict.
+
+## Worked Example
+
+If English and French service routes duplicate markup and only French loses the CTA component, cite both source paths and renders, then restore shared markup with locale data before retesting.
+
+## References
+
+- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+
+
+## Preserved Domain Use Guidance
 - Auditing or upgrading an existing multi-page site (the homepage looks good — check whether the rest does).
 - Before launch on any site with more than ~3 templates, especially multilingual sites.
 - After a content find-and-replace pass (these reliably leave duplicate-word artifacts).
 - Whenever interior pages "feel cheaper" than the homepage.
 
-## Do not use when
+## Preserved Domain Exclusions
 - Scoring a single template's intrinsic quality — that is `design-quality-score`.
 - The site is one page.
 
@@ -103,8 +183,7 @@ rg -n "Tooke Tooke|banana flour, banana flour"   # project-specific example
 Also scan JSON-LD `keywords`/`description` for the same duplications — find-replace hits
 structured data too, and duplicated keywords read as stuffing.
 
-## Workflow
-
+## Preserved Domain Workflow
 1. **Inventory templates.** List every page × language. Flag any `pages/<lang>/<x>.astro` that
    contains substantial markup instead of importing a shared component — that is the
    duplication anti-pattern.
