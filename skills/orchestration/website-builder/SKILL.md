@@ -32,10 +32,12 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 
 ## Workflow
 
-1. Validate scope, authority, languages, content, and assets
-2. Route strategy and experience mapping before design and implementation
-3. Coordinate page, search, accessibility, visual, security, and release gates
-4. Stop on any hard gate, repair through its owning skill, rerun the gate, then assemble handover evidence.
+1. Validate scope, authority, languages, content, and assets.
+2. Route strategy and experience mapping before design and implementation; require the audience action map, narrative sequence, proof register, and failure/recovery notes.
+3. Coordinate page, search, accessibility, visual, security, measurement, and release gates.
+4. At discovery, each major iteration, launch, and maintenance review, run the Kaizen conversion/product loop: observe, baseline, select one reversible improvement, test, check guardrails, standardise only verified learning, teach it into the system, and re-measure.
+5. For AI-enabled routes, require the AI trust/control/correction/drift evidence before sign-off.
+6. Stop on any hard gate, repair through its owning skill, rerun the gate, then assemble handover evidence.
 
 ## Outputs
 
@@ -47,7 +49,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 
 | Evidence | Consumer | Acceptance condition |
 |---|---|---|
-| Route map, gate results, release evidence, and handover record | Release owner | Every promised page and acceptance criterion maps to inspected evidence |
+| Route map, audience action map, narrative/proof register, gate results, Kaizen experiment record, release evidence, and handover record | Release owner | Every promised page and acceptance criterion maps to inspected evidence, a named learning owner, and a re-measurement date |
 
 <!-- dual-compat-end -->
 ## Capability Contract
@@ -68,6 +70,8 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 ## Quality Standards
 
 - Maintain one source for routes, content, tokens, and acceptance; all inherited hard gates must pass before deployment is described as ready.
+- Treat narrative structure as a delivery input: every page has an audience actor, job, tension, proof, choice, consequence, primary action, and recovery path.
+- Do not standardise a conversion or AI change until the relevant guardrails and evidence are checked; failed and inconclusive experiments remain in the learning record.
 
 ## Anti-Patterns
 
@@ -76,6 +80,8 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 - Calling a successful build deploy-ready. Fix: require accessibility, visual, security, SEO, and rollback evidence.
 - Duplicating locale markup. Fix: use shared templates and locale data.
 - Treating an unavailable render as passed. Fix: mark visual gates `not assessed` and block readiness.
+- Treating a polished story as evidence. Fix: attach source, permission, measurement, and claim status to each narrative beat.
+- Adding AI because it is fashionable. Fix: document the non-AI alternative, system map, control, correction, fallback, and drift owner.
 
 ## Worked Example
 
@@ -84,6 +90,9 @@ A bilingual services site has approved copy but no French native review. Build s
 ## References
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+- [Narrative information architecture and audience empathy](references/narrative-information-architecture-and-empathy.md)
+- [Kaizen website product loop](references/kaizen-website-product-loop.md)
+- [AI trust, control, correction, and drift gate](../../quality-gates/kaizen-engine-and-product-improvement/references/ai-trust-control-correction-drift.md)
 
 
 ## Preserved Domain Use Guidance

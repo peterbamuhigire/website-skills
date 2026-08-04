@@ -49,6 +49,7 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 9. Analyse effect size and uncertainty, inspect segments only as pre-declared or exploratory, and record data-quality limitations.
 10. Decide, clean up losing code, update the baseline, and share learning.
 11. If telemetry fails during the run, pause interpretation, repair the evidence chain, and classify affected data.
+12. Apply the Kaizen conversion loop: record the observation, standardise only a guarded win, teach the learning into the owning pattern, and schedule the next baseline.
 
 ## Quality Standards
 
@@ -58,6 +59,8 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 - Reports include effect size, uncertainty, runtime, exclusions, and data-quality caveats.
 - Inconclusive is a valid result; no post-hoc redefinition creates a winner.
 - Experiment code and flags have a dated cleanup owner.
+- The experiment record states what was learned about the audience problem, not only whether a variant won.
+- A low-cost or qualitative learning path is used when traffic cannot support a reliable controlled test.
 
 ## Anti-Patterns
 
@@ -85,6 +88,7 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 - [A/B infrastructure](references/ab-infrastructure.md)
 - [Experiment logbook template](references/experiment-logbook-template.md)
 - [Quarterly review template](references/quarterly-review-template.md)
+- [Kaizen conversion experiment loop](references/kaizen-conversion-experiment-loop.md)
 <!-- dual-compat-end -->
 
 ## Evidence Produced

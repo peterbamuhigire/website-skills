@@ -1,6 +1,32 @@
 # Website Skills
 
+## Mandatory Kaizen contract
+
+Continuous improvement governs the engine and every website it produces. Load
+`skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md` for engine/product audits;
+published scores are hard-capped at 65/100 and each plan targets 95/100 with rendered,
+accessibility, security, performance, analytics, and reviewer evidence.
+
 Portable website-building and agency-operating skills for Claude Code and Codex.
+
+## Book-derived 2026 capability upgrade
+
+Digital Storytelling, Video Game Storytelling, Designing for AI, Paid for Your Perspective,
+Dynamic Characters, LEAN, Applying the Kaizen in Africa, and Facility Move Playbook strengthen
+website work with narrative information architecture, empathy, brand expression, meaningful
+friction reduction, AI disclosure/control/correction/drift, conversion experiments, accessibility,
+readability, security, performance, handoff, and post-launch learning. Websites are treated as
+products with evidence-backed iteration and quality gates.
+
+## Kaizen and product-audit contract
+
+Use `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure`.
+Publish audits at `min(raw_score, 65)` and target 95/100 with owner, evidence, measure, risk,
+rollback, and re-audit. Product audits cover strategy, IA, content, conversion, accessibility,
+visual quality, technical quality, SEO, security, performance, handoff, and learning instrumentation.
+Route current claims to `digital-research-skills` and visual-system decisions to
+`design-system-skills`. See `docs/continuous-improvement/` and
+`skills/quality-gates/kaizen-engine-and-product-improvement/`.
 
 ## Architecture & cross-cutting engines (updated 2026-06-21)
 

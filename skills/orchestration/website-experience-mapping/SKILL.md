@@ -33,15 +33,16 @@ Translate outside-in customer behaviour into an actionable website experience ma
 ## Workflow
 
 1. Define actor, outcome, scope, evidence quality, and map type
-2. Map stages, questions, emotions, channels, failures, and moments of truth
-3. Connect each website intervention to behaviour and operational ownership
-4. Stop on unsupported critical assumptions, recover through research or explicit hypothesis labelling, then hand approved requirements to page architecture.
+2. Map stages, questions, emotions, channels, failures, and moments of truth; use the narrative reference to identify tension, proof, choice, consequence, and audience agency.
+3. Translate the map into an audience action map and page-goal sequence before producing a sitemap or wireframe.
+4. Connect each website intervention to behaviour, evidence, measurement, and operational ownership.
+5. Stop on unsupported critical assumptions, recover through research or explicit hypothesis labelling, then hand approved requirements to page architecture.
 
 ## Outputs
 
 | Artefact | Consumer | Acceptance condition |
 |---|---|---|
-| Website experience map and intervention brief | Content, design-system, and page-builder | Each priority moment links evidence, user need, website response, owner, and success signal |
+| Website experience map, audience action map, and intervention brief | Content, design-system, page-builder, and experimentation | Each priority moment links evidence, user need, tension, proof, choice, recovery, website response, owner, and success signal |
 
 ## Evidence Produced
 
@@ -68,6 +69,8 @@ Without research, analytics, or workshop access, return the narrowest qualified 
 ## Quality Standards
 
 - Map an explicit actor and outcome; separate evidence from assumptions; every intervention needs an owner and observable success signal.
+- Require the reviewer to restate the page promise, proof, decision, and next step; return ambiguous routes to mapping.
+- Translate empathy into observable constraints: device, bandwidth, language, literacy, accessibility, trust, support, and offline recovery.
 
 ## Anti-Patterns
 
@@ -76,6 +79,7 @@ Without research, analytics, or workshop access, return the narrowest qualified 
 - Turning the map into a page inventory. Fix: preserve behaviour, questions, and failure moments.
 - Ignoring offline and support channels. Fix: map the ecosystem around the website.
 - Proceeding with a critical unknown. Fix: stop for research or narrow the decision.
+- Using a character or emotional label without a behavioural implication. Fix: tie it to a need, uncertainty, content choice, or measurable action.
 
 ## Worked Example
 
@@ -84,6 +88,7 @@ Analytics shows mobile visitors abandon at fee questions. Map that moment, cite 
 ## References
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+- [Narrative information architecture and audience empathy](../website-builder/references/narrative-information-architecture-and-empathy.md)
 
 
 ## Preserved Domain Use Guidance
