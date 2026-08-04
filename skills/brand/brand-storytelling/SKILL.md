@@ -35,12 +35,13 @@ Build truthful brand narratives with a clear audience role, tension, proof, and 
 ## Workflow
 
 1. Confirm the audience, page job, approved positioning, and desired action.
-2. Build a fact bank with sources, permissions, dates, and uncertainty.
-3. Choose the simplest suitable narrative spine; keep the customer as agent where appropriate.
-4. Define situation, tension, choice, action, evidence, outcome, and next step.
-5. Draft in the brand's voice, preserving exact approved quotations and qualifying outcomes.
-6. Check continuity, claim support, dignity, privacy, and commercial relevance.
-7. Stop when a material fact or permission is missing; recover with questions or a clearly marked structural draft.
+2. Use the narrative information-architecture reference to name the audience actor, stakes, tension, proof, choice, consequence, and the organisation's enabling role.
+3. Build a fact bank with sources, permissions, dates, and uncertainty.
+4. Choose the simplest suitable narrative spine; keep the customer as agent where appropriate.
+5. Define situation, tension, choice, action, evidence, outcome, and next step.
+6. Draft in the brand's voice, preserving exact approved quotations and qualifying outcomes.
+7. Check continuity, claim support, dignity, privacy, readability, and commercial relevance.
+8. Stop when a material fact or permission is missing; recover with questions or a clearly marked structural draft.
 
 ## Quality Standards
 
@@ -48,6 +49,7 @@ Build truthful brand narratives with a clear audience role, tension, proof, and 
 - Narrative serves the page decision; it does not delay the useful answer.
 - Customers are not reduced to props, and quotes remain faithful to source.
 - Specific details earn their place and have permission where needed.
+- The story spine can be mapped to page hierarchy, proof, CTA, accessibility, and a measurable audience action.
 
 ## Anti-Patterns
 
@@ -56,6 +58,8 @@ Build truthful brand narratives with a clear audience role, tension, proof, and 
 - Forcing every case study into a hero's journey. Fix: choose the shortest structure that explains the decision and result.
 - Using an unattributed composite quote as testimony. Fix: paraphrase without quotation marks or obtain approval.
 - Ending with sentiment but no page action. Fix: connect the earned meaning to one relevant next step.
+- Treating an emotional beat as permission to exaggerate a claim. Fix: attach source, permission, and status to every material beat.
+- Using a dramatic image that hides the page task or excludes people. Fix: route visual decisions through design-system and accessibility review.
 
 ## Outputs
 
@@ -97,6 +101,7 @@ For a clinic case study, open with the verified appointment backlog, explain the
 ## References
 
 - `references/narrative-spine-and-emotional-arc.md` - narrative selection and emotional pacing.
+- `../orchestration/website-builder/references/narrative-information-architecture-and-empathy.md` - translate audience empathy and narrative beats into page architecture, proof, choice, recovery, and measurement.
 - `references/story-templates.md` - practical page and case-study structures.
 - `references/content-strategy.md` - channel and content-system application.
 - `references/legacy-guidance.md` - preserved story frameworks.

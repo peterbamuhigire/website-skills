@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated": "2026-07-13",
-  "canonical_count": 59,
+  "canonical_count": 60,
   "external_engines": {
     "design-system-skills": {
       "locator": "global-routing-table",
@@ -869,6 +869,29 @@
         "security-gate-output@1"
       ],
       "last_verified": "2026-07-13"
+    },
+    {
+      "id": "kaizen-engine-and-product-improvement",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [
+        "design-quality-score",
+        "visual-qa",
+        "accessibility-audit",
+        "security-gate"
+      ],
+      "inputs": [
+        "project-context@1",
+        "product-evidence@1"
+      ],
+      "outputs": [
+        "kaizen-product-audit-output@1",
+        "kaizen-improvement-plan-output@1"
+      ],
+      "last_verified": "2026-08-04"
     },
     {
       "id": "visual-qa",

@@ -31,16 +31,18 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 2. Stop the affected route when approved content, page goals, design rules, or route contracts are missing.
 3. Choose the smallest set of references needed for the current job.
+4. Read the narrative information-architecture reference and carry the page actor, job, tension, proof, choice, primary CTA, and recovery path into the page-goal and component implementation.
 3. On commercial websites, preserve the `premium-website-product` brief: page goal, search intent, proof, CTA, schema, analytics event, and developer-quality evidence must survive implementation.
 4. Produce the implementation, configuration, or guidance this skill owns.
 5. Exercise decision, error, empty, loading, disabled, focus, and locale states where applicable.
-6. Run build, route, accessibility, responsive, schema, and event checks available in the repository.
+7. Run build, route, accessibility, responsive, schema, event, readability, and failure-state checks available in the repository.
 7. Recovery: if a check fails, retain the last working slice, isolate and repair the page/component, then rerun the failing acceptance check.
 
 ## Quality standards
 - Each route preserves its approved audience, goal, proof, CTA, schema, event, and locale contract.
 - Reusable components cover applicable loading, empty, error, focus, disabled, and reduced-motion states.
 - Build, route, accessibility, responsive, and integration evidence names failures and unassessed checks.
+- Text hierarchy, link purpose, image alternative, form recovery, and the primary action remain understandable at mobile width, zoom, keyboard focus, and slow-network conditions.
 
 ## Anti-patterns
 - Inventing missing copy or proof. Fix: stop and request the approved source.
@@ -48,6 +50,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Shipping only the happy state. Fix: implement all applicable states.
 - Dropping page-goal metadata. Fix: trace CTA, schema, and event acceptance per route.
 - Calling source inspection a visual pass. Fix: render or mark visual checks not assessed.
+- Letting visual novelty compete with the page task. Fix: restore the intended focal point and verify the audience action map.
+- Treating a complete page as complete without a recovery path. Fix: test errors, empty states, back navigation, unavailable content, and support handoff.
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
 - **Never write a generic author bio on blog or article pages.** The author bio must be specific to the article's topic — describing the author's (or organisation's) credentials and experience *relevant to what the article covers*. See `blog-writer/references/article-design.md` → Author Bio Standard for the full rule, examples, and bilingual requirements.
@@ -83,6 +87,7 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 
 ## References
 - `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
+- `../website-builder/references/narrative-information-architecture-and-empathy.md` — translate audience empathy, narrative sequence, proof, choice, and recovery into page implementation.
 - `references/authority-content-matrix.md` — content architecture by page type, cornerstone pages, pillar + cluster system, editorial ops. Use when planning the content system for Growth / Authority tiers.
 - `references/page-goal-matrix.md` — convert strategy into page-specific audience, goal, proof, CTA, SEO decisions.
 - `../premium-commercial-writing/references/website-page-writing-patterns.md` — use when implementation must preserve premium page copy structure for home, service, pricing, about, case-study, contact, or FAQ pages.
@@ -100,4 +105,3 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 - Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.
 - Route upstream to `sales-copywriting` when the implementation needs revised value propositions, button labels, or objection handling.
 - Route upstream to `premium-commercial-writing` when the page copy, SEO/GEO content, document download, blog excerpt, or offer section must meet the premium commercial writing gate before build.
-
