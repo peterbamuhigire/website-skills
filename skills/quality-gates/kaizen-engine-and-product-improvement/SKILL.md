@@ -87,6 +87,6 @@ If a landing-page experiment raises form starts but increases abandonment or rem
 ## References
 
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
-- [Portfolio standard](C:/wamp64/www/digital-research-skills/docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md)
+- [Portfolio standard](C:/wamp64/www/digital-research-engine/docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md)
 - `skills/orchestration/website-builder/`
 - `skills/quality-gates/design-quality-score/`

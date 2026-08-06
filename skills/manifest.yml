@@ -7,7 +7,7 @@
       "locator": "global-routing-table",
       "required_for": "visual-design"
     },
-    "digital-research-skills": {
+    "digital-research-engine": {
       "locator": "global-routing-table",
       "required_for": "live-research"
     }
