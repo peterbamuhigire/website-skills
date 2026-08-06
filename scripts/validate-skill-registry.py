@@ -63,7 +63,7 @@ def generate() -> dict[str, object]:
         "canonical_count": len(discover()),
         "external_engines": {
             "design-system-skills": {"locator": "global-routing-table", "required_for": "visual-design"},
-            "digital-research-skills": {"locator": "global-routing-table", "required_for": "live-research"},
+            "digital-research-engine": {"locator": "global-routing-table", "required_for": "live-research"},
         },
         "relocations": {
             "brand-alignment": "design-system-skills:brand-alignment",

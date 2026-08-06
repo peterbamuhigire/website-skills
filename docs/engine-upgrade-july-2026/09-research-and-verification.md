@@ -2,7 +2,7 @@
 
 ## Research frame
 
-Research type: comparative benchmarking. Decision: which current primary-source requirements must change the engine's executable contract. The research used the digital-research-skills evidence discipline, source verification, gap analysis, critical reasoning, and anti-slop rules.
+Research type: comparative benchmarking. Decision: which current primary-source requirements must change the engine's executable contract. The research used the digital-research-engine evidence discipline, source verification, gap analysis, critical reasoning, and anti-slop rules.
 
 ## Verified changes that affected implementation
 

@@ -33,7 +33,7 @@ Claude-specific projects may still point at this repository from their own confi
 
 **Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting** (applies to `content-copy/blog-writer`, `content-copy/blog-idea-generator`, and any page carrying editorial/blog content). Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
 
-- **Engine location:** resolve `digital-research-skills` from the device's global engine-routing table. Never hard-code a checkout path.
+- **Engine location:** resolve `digital-research-engine` from the device's global engine-routing table. On this machine the canonical checkout is `C:\wamp64\www\digital-research-engine`; do not substitute a retired checkout alias.
 - **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region, each briefed per the engine's standard agent-brief structure. The orchestrator does the synthesis; research agents return raw, sourced findings only.
 - **Attribution is mandatory.** Cite real, locatable sources with URLs; name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything unverifiable as UNVERIFIED — confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation. Close each piece with a short "Sources & the researchers worth crediting" block.
 

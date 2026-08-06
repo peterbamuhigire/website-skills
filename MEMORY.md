@@ -1,5 +1,11 @@
 # MEMORY.md - Key Learnings & Patterns
 
+## Canonical Digital Research Engine Path (2026-08-05)
+
+The machine-wide digital research engine is `C:\wamp64\www\digital-research-engine`.
+Codex and Claude routing must use the engine name `digital-research-engine`; the previous
+checkout name is retired and must not be inferred.
+
 This file preserves important patterns and decisions across sessions to avoid re-learning and enable continuity.
 
 ## Session: Policy Pages & Photo Naming (2026-02-17)

@@ -28,7 +28,7 @@ Use `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teac
 Publish audits at `min(raw_score, 65)` and target 95/100 with owner, evidence, measure, risk,
 rollback, and re-audit. Product audits cover strategy, IA, content, conversion, accessibility,
 visual quality, technical quality, SEO, security, performance, handoff, and learning instrumentation.
-Route current claims to `digital-research-skills` and visual-system decisions to
+Route current claims to `digital-research-engine` at `C:\wamp64\www\digital-research-engine` and visual-system decisions to
 `design-system-skills`. See `docs/continuous-improvement/` and
 `skills/quality-gates/kaizen-engine-and-product-improvement/`.
 
