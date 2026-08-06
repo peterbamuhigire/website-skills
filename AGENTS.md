@@ -1,5 +1,9 @@
 # Repository Agents Guide
 
+The shared agent, command, hook, evidence, and handoff contract is mapped to
+website work in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md);
+the central registry lives in `C:\wamp64\www\skills-web-dev\docs\engine-control-plane.json`.
+
 ## Purpose
 
 This repository is a portable skill library for building websites and related marketing assets.
