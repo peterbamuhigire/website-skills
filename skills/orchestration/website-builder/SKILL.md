@@ -71,6 +71,7 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 
 - Maintain one source for routes, content, tokens, and acceptance; all inherited hard gates must pass before deployment is described as ready.
 - Treat narrative structure as a delivery input: every page has an audience actor, job, tension, proof, choice, consequence, primary action, and recovery path.
+- Treat section edge inset as a hard visual quality rule: each visible section, panel, band, hero, card group, and CTA/control row must have deliberate top, bottom, and side padding/margin from its own visual boundary at every supported viewport. Shared variant classes such as dark/warm/full-bleed bands must not replace the base section spacing class or tokenized section inset.
 - Do not standardise a conversion or AI change until the relevant guardrails and evidence are checked; failed and inconclusive experiments remain in the learning record.
 
 ## Anti-Patterns
@@ -151,6 +152,8 @@ Every project built under this orchestrator must satisfy:
    (`security-gate/SKILL.md`).
 5. **Design quality score** — the rendered-output rubric score is recorded
    and meets the world-class floor (`design-quality-score/SKILL.md`).
+   This includes checking that buttons, controls, images, and text are not
+   glued to section, card, band, or viewport edges.
 6. **Premium UI/UX gate** — premium, ecommerce, lead-generation, and
    high-ticket projects pass `premium-ui-ux-design/SKILL.md` before build sign-off
    and again after visual QA.

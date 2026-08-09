@@ -51,6 +51,7 @@ AI-slop font as primary type.
 - Tokens and components have one documented source of truth and implementable responsive/state rules.
 - Typeface, colour, imagery, spacing, motion, and data-viz decisions carry brand and accessibility rationale.
 - Measured contrast, glyph, state, and viewport results stay distinct from unassessed visual checks.
+- Define section inset tokens and usage rules for every visual container level: page sections/bands, heroes, cards, CTA rows, controls/toolbars, and media groups. Every container must provide deliberate top, bottom, and side breathing room so content never sits on its own boundary; variant classes such as dark/warm/full-bleed must preserve base section spacing.
 - The design system must act as a living product, not a one-time style dump: include usage rules, states, and a clear source of truth.
 - Prefer reusable components and documented patterns over page-specific bespoke styling.
 - Premium design systems must define visual voice, dominant/subordinate/accent color logic, typography roles, imagery rules, data/proof presentation, component states, and responsive production rules.
