@@ -68,6 +68,7 @@ Without rendering, browsers, fonts, devices, or baselines, return the narrowest 
 ## Quality Standards
 
 - Cover every route family, locale, agreed viewport, and meaningful state; baseline changes need a decision record rather than a blanket refresh.
+- Inspect edge spacing explicitly: fail routes where buttons, controls, text, images, logos, cards, or media touch the top, bottom, or side boundary of their section/panel/band unless a documented full-bleed media exception owns that edge. CTA/control rows need their own vertical breathing room, especially below the controls.
 
 ## Anti-Patterns
 
@@ -105,9 +106,10 @@ Every primary template passes:
 3. Horizontal overflow assertion: no element produces horizontal scroll at 375px.
 4. Empty-section warning: every `<section>` contains >= 60 words of body copy
    or an explicit `data-visual-qa="intentionally-sparse"` opt-out.
-5. AI-slop scan: no banned palettes, banned easing curves, banned headline
+5. Section inset assertion: no visible text, button, form control, logo, image, or card sits flush against its section/card/band/viewport edge at 375, 768, or 1280px, except approved full-bleed media.
+6. AI-slop scan: no banned palettes, banned easing curves, banned headline
    patterns, generic icon overuse, or low-information hero sections.
-6. Structured review checklist in `references/review-checklist.md` completed
+7. Structured review checklist in `references/review-checklist.md` completed
    and signed by the QA operator.
 
 A failed diff requires explicit reviewer approval and a baseline update PR.

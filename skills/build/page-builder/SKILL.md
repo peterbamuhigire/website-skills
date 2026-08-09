@@ -43,6 +43,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Reusable components cover applicable loading, empty, error, focus, disabled, and reduced-motion states.
 - Build, route, accessibility, responsive, and integration evidence names failures and unassessed checks.
 - Text hierarchy, link purpose, image alternative, form recovery, and the primary action remain understandable at mobile width, zoom, keyboard focus, and slow-network conditions.
+- Every visible section, card group, CTA row, form/control group, and media block has tokenized inset on all relevant edges. Do not rely on background/variant classes alone for spacing; combine them with the base section/container class or equivalent padding. Buttons and controls must have bottom breathing room and must not touch section boundaries.
 
 ## Anti-patterns
 - Inventing missing copy or proof. Fix: stop and request the approved source.
@@ -50,6 +51,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Shipping only the happy state. Fix: implement all applicable states.
 - Dropping page-goal metadata. Fix: trace CTA, schema, and event acceptance per route.
 - Calling source inspection a visual pass. Fix: render or mark visual checks not assessed.
+- Letting buttons, controls, text, or images sit flush against section/card/band edges. Fix: add shared section inset tokens or component padding, then verify at mobile and desktop widths.
 - Letting visual novelty compete with the page task. Fix: restore the intended focal point and verify the audience action map.
 - Treating a complete page as complete without a recovery path. Fix: test errors, empty states, back navigation, unavailable content, and support handoff.
 - Do not hardcode `.claude/skills` or another single install path.
