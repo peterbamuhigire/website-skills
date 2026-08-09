@@ -13,6 +13,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 Apply an East African, British-influenced English register without caricature, imported slang, or blanket regional assumptions.
 
+## Target Audience (Standard)
+
+English content targets East Africa primarily (Uganda, Kenya, Tanzania, Rwanda) but must be **globally readable** by any English speaker worldwide. The reader is an educated professional with advanced English comprehension — often reading English as L2 or L3 alongside local languages.
+
+**The test:** A business professional in London, Lagos, Nairobi, or Kigali must understand every sentence without confusion. Use East African warmth and courtesy but avoid local slang, localised abbreviations, or references only one country's readers would understand.
+
 <!-- dual-compat-start -->
 ## Use When
 

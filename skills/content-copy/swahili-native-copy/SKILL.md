@@ -13,6 +13,18 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 Author Kiswahili from meaning with correct noun-class concord, register, idiom, and market conventions.
 
+## Target Markets (Standard)
+
+Kiswahili content from this engine targets East and Central Africa. The primary markets are:
+
+**Primary:** Kenya, Tanzania (mainland and Zanzibar)
+**Secondary:** DR Congo (Kiswahili-speaking eastern provinces and Kinshasa growing market)
+**Tertiary:** Uganda (limited Kiswahili readership — do not assume Ugandan readers), Rwanda, Burundi, Mozambique (Kiswahili-speaking communities)
+
+The reader is an educated professional with advanced Kiswahili comprehension. They expect standard Kiswahili (Kiswahili sanifu) — respectful, formal, and clear. Many read Kiswahili as L1 (Tanzania, coastal Kenya) or as a strong L2 (inland Kenya, DRC).
+
+**Default to respectful standard Kiswahili.** Avoid Sheng (Nairobi street slang), avoid Mombasa dialect features, avoid Zanzibari historical variants. When a market-specific term differs between Kenya and Tanzania, record the decision and use the term most widely understood.
+
 <!-- dual-compat-start -->
 ## Use When
 
