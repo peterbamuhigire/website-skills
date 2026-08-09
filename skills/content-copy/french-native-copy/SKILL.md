@@ -13,6 +13,19 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 Author French from meaning rather than English syntax, with a deliberate market, register, terminology, and typography decision.
 
+## Target Markets (Standard)
+
+French content from this engine targets **francophone Africa**, not France. The primary markets are:
+
+**Central Africa:** DRC, Congo-Brazzaville, Cameroon, Gabon, Central African Republic, Chad, Equatorial Guinea
+**West Africa:** Senegal, Mali, Côte d'Ivoire, Togo, Benin, Burkina Faso, Niger, Guinea, Guinea-Bissau, Mauritania
+**Indian Ocean:** Madagascar, Djibouti, Comoros
+**East Africa:** Burundi, Rwanda (francophone communities)
+
+The reader is an educated professional with advanced French comprehension, often reading French as L2 or L3 alongside local languages. They understand formal business French and expect professional register.
+
+**Never assume the reader is in France.** Reference OHADA, BCEAO/BEAC, FCFA, and institutions relevant across francophone Africa. Use vocabulary understood across West and Central Africa — not France-specific, not Québécois, not Belgian.
+
 <!-- dual-compat-start -->
 ## Use When
 

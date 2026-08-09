@@ -13,6 +13,23 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 Govern meaning and tone across English, French, and Kiswahili while routing native writing to the language-specific skill.
 
+## Target Audiences (Standard)
+
+Every multilingual output from this engine targets these audiences. Do not deviate unless the project brief explicitly names different markets.
+
+| Locale | Primary Markets | Secondary Markets | Reader Profile | Register |
+|--------|----------------|-------------------|----------------|----------|
+| **English** | East Africa (Uganda, Kenya, Tanzania, Rwanda) | All English-speaking Africa and global English speakers | Advanced comprehension; educated professionals reading fluently in English (often L2/L3) | British-influenced East African professional English; clear, direct, respectful; globally readable |
+| **French** | DRC, Congo-Brazzaville, Burundi, Senegal, Mali, Côte d'Ivoire, Togo, Cameroon, Gabon, Madagascar | All francophone Africa (Bénin, Burkina Faso, Niger, Guinea, Djibouti, Comoros, Chad, Central African Republic) | Advanced comprehension; educated professionals reading fluently in French (often L2/L3) | Formal vous; francophone African professional French; never France-centric, never Québécois |
+| **Kiswahili** | Kenya, Tanzania, DR Congo | Uganda (limited), Rwanda, Burundi, Mozambique (Kiswahili speakers) | Advanced comprehension; educated professionals reading standard Kiswahili | Respectful Kiswahili sanifu; no slang, no Sheng, no regional dialect drift |
+
+### Rules
+1. **English must be globally readable.** An English speaker in London, Lagos, or Nairobi must understand every sentence. Use East African warmth and courtesy but avoid local slang or references only Ugandans would understand.
+2. **French targets francophone Africa, not France.** Reference OHADA, BCEAO/BEAC, FCFA, and institutions relevant across West and Central Africa. Never assume the reader is in Paris.
+3. **Kiswahili targets Kenya and Tanzania first.** DR Congo is the secondary growth market. Uganda has limited Kiswahili readership — do not assume Ugandan readers for Swahili content.
+4. **Advanced reader assumption.** Do not simplify vocabulary, over-explain concepts, or use patronising language. The audience reads at an advanced level in their chosen language.
+5. **No raw translation.** Each language is authored from meaning. The French and Kiswahili outputs must read as if originally written in that language by a professional from the target market.
+
 <!-- dual-compat-start -->
 ## Use When
 
