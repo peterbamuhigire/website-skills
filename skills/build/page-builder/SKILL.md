@@ -43,6 +43,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Reusable components cover applicable loading, empty, error, focus, disabled, and reduced-motion states.
 - Build, route, accessibility, responsive, and integration evidence names failures and unassessed checks.
 - Text hierarchy, link purpose, image alternative, form recovery, and the primary action remain understandable at mobile width, zoom, keyboard focus, and slow-network conditions.
+- Any trend-led interaction has a complete semantic baseline and tested fallback when JavaScript, animation, personalisation, voice, live data, WebGL, AR, or permission is unavailable.
 - Every visible section, card group, CTA row, form/control group, and media block has tokenized inset on all relevant edges. Do not rely on background/variant classes alone for spacing; combine them with the base section/container class or equivalent padding. Buttons and controls must have bottom breathing room and must not touch section boundaries.
 
 ## Anti-patterns
@@ -53,6 +54,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Calling source inspection a visual pass. Fix: render or mark visual checks not assessed.
 - Letting buttons, controls, text, or images sit flush against section/card/band edges. Fix: add shared section inset tokens or component padding, then verify at mobile and desktop widths.
 - Letting visual novelty compete with the page task. Fix: restore the intended focal point and verify the audience action map.
+- Making an enhanced path the only path. Fix: retain an equivalent static, keyboard, text, and low-bandwidth route to the same outcome.
 - Treating a complete page as complete without a recovery path. Fix: test errors, empty states, back navigation, unavailable content, and support handoff.
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
@@ -95,6 +97,7 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 - `../premium-commercial-writing/references/website-page-writing-patterns.md` — use when implementation must preserve premium page copy structure for home, service, pricing, about, case-study, contact, or FAQ pages.
 - `../premium-commercial-writing/references/professional-writing-quality-gate.md` — use before implementation when supplied copy needs final proof, claim, tone, CTA, and scannability checks.
 - `references/conversion-sequence-implementation.md` — use when the build must preserve value-proposition clarity, CTA ladders, cluster linking, or launch-stage page states.
+- `../design-reference/references/trend-selection-and-progressive-enhancement.md` — use when approved direction includes kinetic type, modular grids, adaptive UI, spatial/3D, dark mode, voice, live visualisation, or AR.
 - `../website-builder/references/premium-website-engine-playbook.md` — use when page
   production must preserve the premium strategy, acquisition, conversion, measurement,
   and handoff artifacts for high-value clients.

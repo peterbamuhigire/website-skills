@@ -29,7 +29,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 1. Confirm the comparison question, audience, constraints, and inspectable sources; stop if none exists.
 2. Inspect the relevant pages and states at agreed viewports, or representative pages/figures in supplied PDFs and image collections, recording the exact locator and observed facts separately from inference. Treat incomplete extraction or image-only material as visual reference evidence, not authoritative text.
-3. Classify each useful pattern as adopt, adapt, or reject using the decision rules.
+3. Classify each useful pattern as adopt, adapt, reject, or unassessed using the decision rules. For contemporary trend references, load `references/trend-selection-and-progressive-enhancement.md` and complete its style-fit gate before recommending implementation.
 4. Synthesize page, trust, content, interaction, and visual implications without copying brand assets. For PDF/image inspiration, use `references/reference-library-analysis.md` and hand off abstract principles, not distinctive compositions.
 5. Validate traceability and hand the approved direction to `design-system`.
 6. Recovery: if a source becomes inaccessible, preserve captured evidence, mark affected checks unassessed, and request an equivalent source.
@@ -37,10 +37,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Quality standards
 - Recommendations distinguish observation, inference, and client preference and cite the exact source/page/state.
 - The synthesis names adopt/adapt/reject decisions and gives downstream implementation implications.
+- Style recommendations explain fit for the particular client, audience, offer, content, trust context, and environment; trend popularity alone is never evidence.
 - Unknown behaviour remains unassessed; no competitor claim is inferred from visual similarity.
 
 ## Anti-patterns
 - Auditing without a comparison question. Fix: name the audience decision and lens first.
+- Chasing a trend because it is labelled current. Fix: require a client-fit thesis, user-task hypothesis, and the style-fit gate; reject unsupported novelty.
 - Recording taste words without evidence. Fix: cite the exact URL, state, and pattern.
 - Copying another brand. Fix: abstract the principle and document a differentiated adaptation.
 - Treating a screenshot as interaction proof. Fix: inspect live or mark it not assessed.
@@ -83,6 +85,7 @@ Given three law-firm references, record that two expose sector-specific proof be
 - Use `references/competitor-analysis-worksheet.md` to analyse competitors as positioning and trust inputs, not just design inspiration.
 - Use `references/research-synthesis-template.md` to turn reference and sector analysis into differentiated design direction.
 - Use `references/reference-library-analysis.md` for PDF, image, screenshot, or catalogue inputs.
+- Use `references/trend-selection-and-progressive-enhancement.md` for web-trend references, style-fit decisions, progressive-enhancement contracts, and evidence-based adopt/adapt/reject decisions.
 
 <!-- dual-compat-end -->
 ## Canonical worksheet format
