@@ -33,7 +33,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 ## Workflow
 
 1. Validate scope, authority, languages, content, and assets.
-2. Route strategy and experience mapping before design and implementation; require the audience action map, narrative sequence, proof register, and failure/recovery notes.
+2. Route strategy and experience mapping before design and implementation; require the audience action map, narrative sequence, proof register, failure/recovery notes, and a client-specific style thesis. Select the style that best fits the audience, offer, brand, content, trust context, and environment before considering visual trends.
 3. Coordinate page, search, accessibility, visual, security, measurement, and release gates.
 4. At discovery, each major iteration, launch, and maintenance review, run the Kaizen conversion/product loop: observe, baseline, select one reversible improvement, test, check guardrails, standardise only verified learning, teach it into the system, and re-measure.
 5. For AI-enabled routes, require the AI trust/control/correction/drift evidence before sign-off.
@@ -70,6 +70,7 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 ## Quality Standards
 
 - Maintain one source for routes, content, tokens, and acceptance; all inherited hard gates must pass before deployment is described as ready.
+- Record the chosen website style and its fit evidence before token or component work; do not select a style merely because it is fashionable or visually impressive in a reference.
 - Treat narrative structure as a delivery input: every page has an audience actor, job, tension, proof, choice, consequence, primary action, and recovery path.
 - Treat section edge inset as a hard visual quality rule: each visible section, panel, band, hero, card group, and CTA/control row must have deliberate top, bottom, and side padding/margin from its own visual boundary at every supported viewport. Shared variant classes such as dark/warm/full-bleed bands must not replace the base section spacing class or tokenized section inset.
 - Do not standardise a conversion or AI change until the relevant guardrails and evidence are checked; failed and inconclusive experiments remain in the learning record.
@@ -81,6 +82,7 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 - Calling a successful build deploy-ready. Fix: require accessibility, visual, security, SEO, and rollback evidence.
 - Duplicating locale markup. Fix: use shared templates and locale data.
 - Treating an unavailable render as passed. Fix: mark visual gates `not assessed` and block readiness.
+- Treating a trend article as a requirements document. Fix: convert observations into an evidence-backed style-fit and adopt/adapt/reject record while preserving the simplest complete user path.
 - Treating a polished story as evidence. Fix: attach source, permission, measurement, and claim status to each narrative beat.
 - Adding AI because it is fashionable. Fix: document the non-AI alternative, system map, control, correction, fallback, and drift owner.
 
@@ -93,6 +95,7 @@ A bilingual services site has approved copy but no French native review. Build s
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 - [Narrative information architecture and audience empathy](references/narrative-information-architecture-and-empathy.md)
 - [Design reference and inspiration-library analysis](../../build/design-reference/SKILL.md) — required when the brief includes reference URLs, screenshots, PDFs, or image catalogues; pass principles and constraints downstream, never copied compositions or assets.
+- [Trend selection and progressive enhancement](../../build/design-reference/references/trend-selection-and-progressive-enhancement.md) — load when references propose contemporary interaction or visual trends; require a client-fit thesis, task hypothesis, baseline, fallback, budget, privacy controls, and evidence before standardising.
 - [Kaizen website product loop](references/kaizen-website-product-loop.md)
 - [AI trust, control, correction, and drift gate](../../quality-gates/kaizen-engine-and-product-improvement/references/ai-trust-control-correction-drift.md)
 

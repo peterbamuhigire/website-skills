@@ -50,6 +50,7 @@ AI-slop font as primary type.
 ## Quality standards
 - Tokens and components have one documented source of truth and implementable responsive/state rules.
 - Typeface, colour, imagery, spacing, motion, and data-viz decisions carry brand and accessibility rationale.
+- Trend-led treatments are enhancements over a semantic baseline and include measurable budgets, fallbacks, and a client/user-task rationale; novelty is not a design-system requirement.
 - Measured contrast, glyph, state, and viewport results stay distinct from unassessed visual checks.
 - Define section inset tokens and usage rules for every visual container level: page sections/bands, heroes, cards, CTA rows, controls/toolbars, and media groups. Every container must provide deliberate top, bottom, and side breathing room so content never sits on its own boundary; variant classes such as dark/warm/full-bleed must preserve base section spacing.
 - The design system must act as a living product, not a one-time style dump: include usage rules, states, and a clear source of truth.
@@ -91,6 +92,7 @@ If fonts, render tools, browsers, or brand evidence are unavailable, produce a b
 | Duplicate values express one meaning | Consolidate under a semantic token | Token drift |
 | Typeface lacks licence or required glyphs | Reject pending verification | Legal or i18n failure |
 | Motion ignores reduced-motion needs | Remove it or provide a reduced variant | Accessibility failure |
+| Advanced treatment has no static or low-capability equivalent | Complete the fallback contract before tokenising it | Fragile or exclusionary system |
 
 ## Worked Example
 For a multilingual professional-services site, choose a licensed serif with verified Latin Extended glyphs for editorial headings, pair it with a restrained sans for UI, define fluid type tokens and focus/error states, then hand `page-builder` tested component rules rather than isolated mock-up values.
