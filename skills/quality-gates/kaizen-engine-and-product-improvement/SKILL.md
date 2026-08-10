@@ -72,6 +72,22 @@ If representative renders, analytics, user evidence, fonts, source registers, or
 
 Do not infer conversion improvement without measurement. Do not use dated platform facts without verification. Keep content/structure in this engine and visual-system decisions in design-system-skills. Make user controls, trust, privacy, accessibility, and fallback paths explicit for AI features.
 
+Apply Kaizen at two levels: first audit this skills engine's routes, references,
+validators, handoffs, and visual-reference handling; then audit the individual site
+or visual web product. Both initial analyses publish `min(raw_score, 65)` before a
+95/100 improvement cycle. Inspiration books and captures may inform hypotheses,
+but only differentiated, rights-safe, accessible, performant, measured changes
+may be standardised.
+
+## Mandatory 65-to-95 gate
+
+The first review is an initial analysis: calculate raw findings, publish only
+`min(raw_score, 65)`, and keep missing renders, analytics, and accessibility or
+security evidence visible as blockers. Freeze that baseline before improving.
+Target 95/100 one reversible change at a time, naming the root cause, exact owning
+skill or artefact, owner, measure, visual/accessibility/performance guardrails,
+stop/rollback rule, acceptance evidence, standardisation decision, and re-audit date.
+
 ## Anti-Patterns
 
 - Copying a trendy layout without page-goal evidence. Fix: test the user task.

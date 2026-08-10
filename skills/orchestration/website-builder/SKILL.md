@@ -92,6 +92,7 @@ A bilingual services site has approved copy but no French native review. Build s
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 - [Narrative information architecture and audience empathy](references/narrative-information-architecture-and-empathy.md)
+- [Design reference and inspiration-library analysis](../../build/design-reference/SKILL.md) — required when the brief includes reference URLs, screenshots, PDFs, or image catalogues; pass principles and constraints downstream, never copied compositions or assets.
 - [Kaizen website product loop](references/kaizen-website-product-loop.md)
 - [AI trust, control, correction, and drift gate](../../quality-gates/kaizen-engine-and-product-improvement/references/ai-trust-control-correction-drift.md)
 

@@ -22,15 +22,15 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Required Inputs
 | Input | Source | Required | If absent |
 |---|---|---:|---|
-| Reference URLs and what the client admires | Client brief | yes | Stop and request at least one reference or a named comparison set. |
+| Reference URLs, screenshots, PDF/image collections, or captures and what the client admires | Client brief | yes | Stop and request at least one reference or a named comparison set. |
 | Audience, offer, sector, and brand constraints | Discovery artefacts | yes | Produce only a qualified observation log; do not infer positioning. |
 | Existing site or competitor set | Project files or research | no | Label the work inspiration analysis, not competitive analysis. |
 
 ## Workflow
 1. Confirm the comparison question, audience, constraints, and inspectable sources; stop if none exists.
-2. Inspect the relevant pages and states at agreed viewports, recording URLs and observed facts separately from inference.
+2. Inspect the relevant pages and states at agreed viewports, or representative pages/figures in supplied PDFs and image collections, recording the exact locator and observed facts separately from inference. Treat incomplete extraction or image-only material as visual reference evidence, not authoritative text.
 3. Classify each useful pattern as adopt, adapt, or reject using the decision rules.
-4. Synthesize page, trust, content, interaction, and visual implications without copying brand assets.
+4. Synthesize page, trust, content, interaction, and visual implications without copying brand assets. For PDF/image inspiration, use `references/reference-library-analysis.md` and hand off abstract principles, not distinctive compositions.
 5. Validate traceability and hand the approved direction to `design-system`.
 6. Recovery: if a source becomes inaccessible, preserve captured evidence, mark affected checks unassessed, and request an equivalent source.
 
@@ -49,6 +49,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Do not skip validation against upstream or downstream dependencies.
 - Do not copy a reference site's styling; extract the underlying pattern and explain fit.
 - Do not treat screenshots as proof of responsive or interactive behaviour; verify or mark it unassessed.
+- Do not treat an inspiration book or image collection as permission to reproduce its assets, copy, or recognisable composition; record provenance and rights status, then adopt/adapt/reject the underlying pattern.
 
 ## Outputs
 | Artefact | Consumer | Observable acceptance condition |
@@ -81,6 +82,7 @@ Given three law-firm references, record that two expose sector-specific proof be
 ## References
 - Use `references/competitor-analysis-worksheet.md` to analyse competitors as positioning and trust inputs, not just design inspiration.
 - Use `references/research-synthesis-template.md` to turn reference and sector analysis into differentiated design direction.
+- Use `references/reference-library-analysis.md` for PDF, image, screenshot, or catalogue inputs.
 
 <!-- dual-compat-end -->
 ## Canonical worksheet format
