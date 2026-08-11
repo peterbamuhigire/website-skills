@@ -37,7 +37,7 @@ Use these skills as the default router:
 - `website-builder`: Full website orchestration from docs and assets through deploy readiness.
 - `i18n`: Language routing, multilingual structure, and shared versus locale-specific rules.
 - `design-reference`: Extracting decisions from example websites.
-- `sector-strategies` or `sectors/legal`: Sector-specific patterns and trust signals.
+- `design-system-skills:sector-strategies` or `sectors/legal`: Sector-specific patterns and trust signals.
 - `design-system`: Typography, palette, motion, spacing, and visual system decisions.
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
@@ -62,10 +62,10 @@ Use these cross-cutting skills whenever their lens materially improves the outpu
 - `swahili-native-copy`: Native-quality Kiswahili copywriting execution. Mandatory for any Kiswahili page, microcopy, email, or metadata; never produce Kiswahili by raw translation.
 - `premium-commercial-writing`: Premium-fee-worthy commercial writing across website copy, landing pages, blogs, SEO/GEO pages, documents, and offer pages.
 - `content-writing`: Website copy structure and clarity.
-- `brand-alignment`: Audience and brand coherence.
+- `design-system-skills:brand-alignment`: Audience and brand coherence.
 - `sales-copywriting`: Conversion-focused messaging.
-- `form-ux-design`: Any user-input flow.
-- `ux-psychology`: Behavioral and heuristic UX review.
+- `design-system-skills:form-ux-design`: Any user-input flow.
+- `design-system-skills:ux-psychology`: Behavioural and heuristic UX review.
 
 Use these support skills on demand:
 

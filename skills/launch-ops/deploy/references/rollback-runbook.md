@@ -30,6 +30,16 @@ Rollback if any of these occur after release:
 - DNS or server configuration snapshot if relevant
 - rollback owner
 
+The automated helper also requires `ROLLBACK_APPROVED=yes`, an exact
+`ROLLBACK_TARGET` equal to `DEPLOY_PATH`, a runner-managed
+readable `DEPLOY_KNOWN_HOSTS` file path, and a recorded `ROLLBACK_REASON`. In
+the canonical CI template, set `DEPLOY_KNOWN_HOSTS_PATH` to the pre-provisioned
+runner file and provide `ROLLBACK_APPROVED`, `ROLLBACK_REASON`, and
+`RELOAD_SERVICE` as named environment variables. Approval is not enabled by
+the template. The helper accepts only a whitelisted reload service (`nginx`,
+`apache2`, `httpd`, or `none`). Missing or ambiguous authority stops before
+SSH or remote mutation.
+
 ## Standard Rollback Procedure
 
 1. Declare rollback decision
@@ -71,6 +81,14 @@ If DNS changes caused the issue:
 - form submission works
 - redirects behave as expected
 - analytics and monitoring return to normal
+
+The helper verifies that `current` points to the previous release and
+`previous` points to the former current release. If the symlink swap, post-swap
+verification, or service reload fails, it restores and re-verifies the recorded
+last-safe symlink pair when possible, and records a recovery failure when it
+cannot. Recovery still requires operator review;
+this script does not certify the restored site's business or field-performance
+outcome.
 
 ## Incident Notes Template
 

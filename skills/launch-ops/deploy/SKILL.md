@@ -106,6 +106,15 @@ Recovery: repair the failed gate or environment, then rerun the complete affecte
 
 Read and execute access are required for validation. Editing configuration is allowed only within the authorised project. Network and production mutation require explicit deployment authority. DNS, secrets, spending, external messages, destructive actions, and rollback require the named authority and least privilege.
 
+The repository rollback adapter requires `ROLLBACK_APPROVED=yes`, an exact
+`ROLLBACK_TARGET` equal to `DEPLOY_PATH`, a pre-provisioned
+readable `DEPLOY_KNOWN_HOSTS` file path, and a `ROLLBACK_REASON` containing only
+bounded log-safe characters. The canonical CI template supplies these values
+from named environment variables; it does not turn approval on by default. The
+helper records the last-safe symlink pair, validates that both release symlinks
+resolve under the declared release root, and verifies recovery after a failed
+swap or service reload.
+
 ## Degraded Mode
 
 Fallback when network, credentials, CI, rendering, a target environment, or production authority is unavailable: stop at a deploy-ready evidence pack and exact operator runbook. Never claim deployment, visual quality, telemetry, or rollback readiness without observed evidence.

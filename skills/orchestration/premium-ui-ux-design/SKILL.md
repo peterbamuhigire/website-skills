@@ -129,7 +129,7 @@ For a Kampala advisory firm, choose a licensed editorial serif supported by its 
 - `references/mobile-dashboard-website-patterns.md` - mobile navigation, first-visit guidance, dashboard/proof presentation, and mobile quality checks.
 - `references/premium-website-gate.md` - scoring and blocking defects.
 - `../premium-website-product/references/premium-website-market-asset-gate.md` - website-as-premium-product, content, SEO, launch, stack, and agency proof gate.
-- `references/source-register.md` - local EPUB sources used to build this skill.
+- `references/source-register.md` - provenance disposition and rights gate; no active source path is asserted.
 
 ## World-class UX foundations (book-derived)
 

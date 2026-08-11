@@ -11,6 +11,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
@@ -108,6 +109,35 @@ def validate(data: dict[str, object]) -> list[str]:
             target = raw.split("#", 1)[0].strip().strip("<>")
             if target and not (path.parent / target).resolve().exists():
                 errors.append(f"unresolved link in {entry['path']}: {raw}")
+    category_counts = Counter(str(entry["category"]) for entry in found)
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    readme_count = re.search(r"Current skill count:\s*(\d+)", readme)
+    if not readme_count or int(readme_count.group(1)) != len(found):
+        errors.append("README.md current skill count is not filesystem-derived")
+    readme_categories = {
+        category: int(count)
+        for category, count in re.findall(r"(?:\|--|`--)\s+([a-z-]+)/[^\n]*\((\d+) skills\)", readme)
+    }
+    if readme_categories != dict(category_counts):
+        errors.append(f"README.md category counts {readme_categories} != {dict(category_counts)}")
+    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    claude_categories = {
+        category: int(count)
+        for category, count in re.findall(r"\*\*`([a-z-]+)/`\*\*\s*\((\d+)\)", claude)
+    }
+    if claude_categories != dict(category_counts):
+        errors.append(f"CLAUDE.md category counts {claude_categories} != {dict(category_counts)}")
+    relocations = data.get("relocations", {})
+    relocation_map = (ROOT / "docs" / "relocation-map.md").read_text(encoding="utf-8")
+    if not isinstance(relocations, dict):
+        errors.append("manifest relocations must be an object")
+    else:
+        for old_name, destination in relocations.items():
+            expected_row = f"| `{old_name}` | `{destination}` |"
+            if expected_row not in relocation_map:
+                errors.append(f"relocation missing from docs/relocation-map.md: {old_name} -> {destination}")
+            if not isinstance(destination, str) or not destination.startswith("design-system-skills:"):
+                errors.append(f"relocation destination is not an external engine route: {old_name} -> {destination}")
     return errors
 
 

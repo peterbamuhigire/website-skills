@@ -54,7 +54,7 @@
     "uplink_kbps": 750,
     "rtt_ms": 300,
     "cpu_slowdown": 4,
-    "_comment": "Simulated representative-African-mobile. See docs/plans/website-agency-engine/phase-10 Workstream 6."
+    "_comment": "Simulated representative-African-mobile. Use the current deploy performance guidance and label lab evidence separately from field evidence."
   },
   "fail_policy": {
     "on_regression": "block_deploy",

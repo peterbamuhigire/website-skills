@@ -273,4 +273,9 @@ jobs:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          DEPLOY_KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS_PATH }}
+          ROLLBACK_APPROVED: ${{ vars.ROLLBACK_APPROVED }}
+          ROLLBACK_TARGET: ${{ vars.DEPLOY_PATH }}
+          ROLLBACK_REASON: ${{ vars.ROLLBACK_REASON }}
+          RELOAD_SERVICE: ${{ vars.RELOAD_SERVICE }}
         run: bash $SKILLS_DIR/scripts/rollback.sh
