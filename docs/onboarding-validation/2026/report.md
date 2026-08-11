@@ -28,7 +28,7 @@ from the Phase 11 plan and are non-negotiable.
 
 | Persona | First solo target | Primary skills owned |
 |---|---|---|
-| Strategist | First solo discovery ≤ 2 weeks | website-builder, design-reference, sector-strategies, brand-strategy |
+| Strategist | First solo discovery ≤ 2 weeks | website-builder, design-reference, design-system-skills:sector-strategies, brand-strategy |
 | Designer / Builder | First solo build ≤ 4 weeks | design-system, photo-manager, page-builder, visual-qa |
 | SEO + Content operator | First solo SEO production ≤ 3 weeks | seo, blog-writer, seo-audit, content-writing |
 | QA + Launch operator | First solo launch ≤ 4 weeks | accessibility-audit, visual-qa, security-gate, deploy |

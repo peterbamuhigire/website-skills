@@ -28,7 +28,7 @@ contributing.
 | Scripts | `scripts/*.sh` and script-embedded code | MIT | Standard permissive. |
 | CI template | `templates/ci/website.yml` | MIT | Copy into your repo freely. |
 | Performance budgets and Lighthouse config | `performance-budgets.json`, `lighthouserc.json` | MIT | Copy-ready. |
-| Plan documents | `docs/plans/website-agency-engine/*.md` | CC BY-SA 4.0 | Derivatives must be similarly licensed — the strategic roadmap should stay open when forked. |
+| Plan documents | `docs/plans/*.md` | CC BY-SA 4.0 | Derivatives must be similarly licensed — the strategic roadmap should stay open when forked. |
 | Glossary and doc style guide | `glossary.md`, `docs/doc-style-guide.md` | CC BY 4.0 | Attribution required. |
 | Africa-excellence references | `skills/orchestration/africa-excellence/**` | CC BY 4.0 | Attribution required; the agency encourages reuse. |
 | Design-quality rubric | `skills/quality-gates/design-quality-score/references/rubric.md` | CC BY 4.0 | Attribution required; cite the rubric when using. |

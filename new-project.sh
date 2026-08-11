@@ -344,7 +344,7 @@ You have skills in `.claude/skills/`. Read them before generating any code.
 | `website-builder` | Starting a build or full rebuild | All docs/, photo-bank/ | Orchestrates everything |
 | `i18n` | Always (cross-cutting) | docs/i18n-config.md | Language infrastructure |
 | `design-reference` | When client provides reference URLs | Client URLs | docs/design-reference.md |
-| `sector-strategies` | Industry-specific design direction | docs/en/company-profile.md | docs/sector-brief.md |
+| `design-system-skills:sector-strategies` | Industry-specific design direction | docs/en/company-profile.md | docs/sector-brief.md |
 | `design-system` | Before building any pages | docs/en/style-brief.md, company-profile.md | tailwind.config.mjs, global.css, design-tokens.md |
 | `photo-manager` | Before building pages, after design | photo-bank/**/* | src/assets/images/ (flat), _catalog.json |
 | `page-builder` | After design + photos are ready | docs/{lang}/*.md, design-tokens.md, _catalog.json | src/pages/{lang}/, components/, layouts/ |

@@ -2,7 +2,7 @@
 
 **Status**: Curated public view of the engine roadmap.
 **Cadence**: Updated at each quarterly review.
-**Source of truth**: `docs/plans/website-agency-engine/` (internal).
+**Source of truth**: `docs/plans/INDEX.md` and this public roadmap.
 **Purpose**: So the African web community can see where the engine is
 going.
 

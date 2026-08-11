@@ -163,7 +163,9 @@ Triggered on failure of deploy or post-deploy smoke. Runs
 3. Reloads the web server
 4. Logs to `reports/deploy/rollback.log`
 
-Full runbook: `deploy/references/rollback-runbook.md`.
+Full runbook: `deploy/references/rollback-runbook.md`. The helper requires
+explicit rollback authority, an exact target binding, and a pre-provisioned
+known-hosts file; it refuses the old implicit host-key acceptance path.
 
 ## When to Open a Decision Entry
 

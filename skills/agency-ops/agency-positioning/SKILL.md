@@ -162,7 +162,7 @@ A studio with three verified hospitality projects chooses owner-led lodges as it
   single-vertical niche: the five specialisation types, the 1,000–10,000 prospect /
   10–100 competitor guardrail, niche scoring, the positioning-statement formula,
   concentration risk, and staged adjacent-niche expansion. Pairs with the design-side
-  `../../build/sector-strategies/SKILL.md`.
+  `design-system-skills:sector-strategies`, resolved through the global engine-routing table.
 - `references/niche-positioning-sources.md` — attributed sources for the niche rubric
   (Enns, Morgan, Baker, Dunford, Godin) with UNVERIFIED flags.
 - `references/premium-website-offer-playbook.md` — the three-tier offer ladder

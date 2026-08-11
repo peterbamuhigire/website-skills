@@ -24,7 +24,7 @@ on references that contradict it.
   governance. Not "phases", "stages" (those terms are reserved elsewhere),
   or "pillars".
 - **Phase** — a numbered unit of the roadmap under
-  `docs/plans/website-agency-engine/`. Phases are delivered wholesale, not
+  `docs/plans/` and the public roadmap. Phases are delivered wholesale, not
   incrementally-merged.
 - **Workstream** — a numbered sub-unit of a phase. Each phase is made of
   workstreams.

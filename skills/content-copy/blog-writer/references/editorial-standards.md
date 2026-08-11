@@ -314,8 +314,8 @@ Add only an apostrophe: "the clients' feedback", "the developers' tools"
 
 ### Link Text
 Link text must describe the destination. Never use "click here":
-- CORRECT: "Read our [guide to ERP implementation](/en/blog/erp-implementation/)."
-- INCORRECT: "For more information, [click here](/en/blog/erp-implementation/)."
+- CORRECT: "Read our guide to ERP implementation at `/en/blog/erp-implementation/`."
+- INCORRECT: "For more information, use an unnamed link to `/en/blog/erp-implementation/`."
 
 ### One Space After Periods
 Always one space, never two.

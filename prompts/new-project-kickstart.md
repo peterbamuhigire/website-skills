@@ -143,7 +143,7 @@ Produce a structured discovery summary in this format:
 [List based on project configuration above]
 
 **Sector treatment:**
-[Which sector skill to use, if any — e.g. sectors/legal, or sector-strategies with "professional services"]
+[Which sector skill to use, if any — e.g. sectors/legal, or design-system-skills:sector-strategies with "professional services"]
 
 **Information gaps (need your input before I proceed):**
 [Numbered list of missing information that will affect content quality. Be specific: "No phone number found", "Pricing not mentioned — I will use placeholder", "No team photos available — I will use CSS placeholders"]
@@ -408,7 +408,7 @@ Follow the website-builder skill exactly. It will orchestrate the remaining skil
 1. **i18n** — Set up multi-language infrastructure based on `docs/i18n-config.md`
 2. **design-reference** — Only if reference URLs were provided in the project configuration
 3. **brand-strategy** — Run for brand positioning (produces `docs/brand-brief.md`)
-4. **sector-strategies** or `sectors/{sector}` — Based on the industry identified in Phase 3
+4. **design-system-skills:sector-strategies** or `sectors/{sector}` — Based on the industry identified in Phase 3
 5. **design-system** — Define fonts, colours, tokens, animations
 6. **photo-manager** — Compress and catalog all photos from `photo-bank/`
 7. **page-builder** — Build all Astro pages, layouts, and components

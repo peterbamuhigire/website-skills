@@ -53,7 +53,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
 - **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
-- **`quality-gates/`** (5) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, security-gate, visual-qa
+- **`quality-gates/`** (6) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, kaizen-engine-and-product-improvement, security-gate, visual-qa
 - **`seo-search/`** (3) — google-ai-search, seo, seo-audit
 - **`ux-conversion/`** (2) — cro-audit, they-ask-you-answer
 
@@ -157,7 +157,7 @@ Website build skills are sequential:
 1. `i18n`
 2. `design-reference` when reference sites are part of the brief
 3. `brand-strategy` when a project needs a structured brand brief
-4. `sector-strategies` or a sector-specific skill
+4. `design-system-skills:sector-strategies` or a sector-specific skill
 5. `design-system`
 6. `photo-manager`
 7. `page-builder`
@@ -167,7 +167,7 @@ Website build skills are sequential:
 
 `website-builder` orchestrates this sequence. It reads the enabled-language setup, the client content set, and the available assets, then routes work through the relevant downstream skills.
 
-Cross-cutting skills such as `language-standards`, `content-writing`, and `brand-alignment` apply throughout the workflow instead of owning a single output artifact.
+Cross-cutting skills such as `language-standards`, `content-writing`, and `design-system-skills:brand-alignment` apply throughout the workflow instead of owning a single output artifact.
 
 ## Current Agency Engine Layers
 

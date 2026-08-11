@@ -1,0 +1,13 @@
+{
+  "id": "website-kaizen-local-fixture",
+  "label": "Fictional/test-labelled local website fixture",
+  "pages": ["index.html", "about.html"],
+  "budget_route": "/",
+  "evidence_scope": {
+    "links": "lab",
+    "semantics": "lab",
+    "accessibility_inputs": "lab",
+    "performance_budget_inputs": "lab",
+    "field_core_web_vitals": "NOT ASSESSED"
+  }
+}

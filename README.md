@@ -103,7 +103,7 @@ website-skills/              <- this repo, referenced from the global engine-rou
 |   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
 |   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
 |   |-- orchestration/       Top-level orchestrators incl. website-builder, premium product, africa-excellence (5 skills)
-|   |-- quality-gates/       Accessibility, visual QA, security, consistency, design score (5 skills)
+|   |-- quality-gates/       Accessibility, visual QA, security, consistency, Kaizen, design score (6 skills)
 |   |-- seo-search/          SEO, SEO audit, Google AI Search (3 skills)
 |   `-- ux-conversion/       CRO audit and they-ask-you-answer (2 skills)
 |-- certification/           Syllabus, exam bank, cohort records (Phase 11)
@@ -122,7 +122,7 @@ website-skills/              <- this repo, referenced from the global engine-rou
 - `website-builder`: orchestrates the website workflow and owns cross-skill operating references
 - `i18n`: language routing, multilingual structure, and shared versus locale-specific rules
 - `design-reference`: extracts design decisions from reference websites
-- `sector-strategies`: industry-specific trust patterns and content priorities
+- `design-system-skills:sector-strategies`: industry-specific trust patterns and content priorities
 - `premium-ui-ux-design`: premium visual direction, conversion hierarchy, color,
   imagery, data/proof presentation, production polish, and premium website gate
 - `design-system`: typography, palette, motion, spacing, and visual-system decisions
@@ -292,5 +292,5 @@ When a task is ambiguous, follow this order:
 - [Skill authoring standard](./docs/skill-authoring-standard.md) — local July 2026 contract
 - [docs/plans/INDEX.md](./docs/plans/INDEX.md) — plans index and status
 - [docs/plans/NEXT_FEATURES.md](./docs/plans/NEXT_FEATURES.md) — priority roadmap
-- [docs/plans/website-agency-engine](./docs/plans/website-agency-engine) — 12-phase master roadmap
-- [docs/evaluation/2026-04-12](./docs/evaluation/2026-04-12) — evaluation driving Phase 10–12
+- [Public roadmap](./docs/roadmap-public.md) — current public roadmap
+- [July 2026 engine upgrade summary](./docs/engine-upgrade-july-2026/00-executive-summary.md) — implementation and remaining evidence gaps

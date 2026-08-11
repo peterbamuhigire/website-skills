@@ -80,4 +80,4 @@ Show one realistic input, decision, output fragment, and failure recovery.
 
 ## References
 
-- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+- [Website Skills authoring standard](../../docs/skill-authoring-standard.md)

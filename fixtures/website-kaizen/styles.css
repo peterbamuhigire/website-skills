@@ -1,0 +1,28 @@
+:root {
+  color: #17324d;
+  background: #f7f4ed;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 2rem 1rem;
+}
+
+header,
+footer {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+main {
+  padding: 4rem 0;
+}
+
+a {
+  color: #8c2f39;
+}

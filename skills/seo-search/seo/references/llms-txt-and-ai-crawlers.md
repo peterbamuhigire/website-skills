@@ -59,34 +59,34 @@ target audience, the geography. Plain prose. No marketing fluff. No banned words
 
 ## Docs
 
-- [Quickstart]({absolute URL}): {one-line description}
-- [User Manual]({absolute URL}): {one-line description}
-- [API / Developer reference]({absolute URL}): {one-line description}
+- Quickstart: `{absolute URL}` — {one-line description}
+- User Manual: `{absolute URL}` — {one-line description}
+- API / Developer reference: `{absolute URL}` — {one-line description}
 
 ## Products / Services
 
-- [{Product or service name}]({absolute URL}): {one-line description with price if public}
-- [{Next product}]({absolute URL}): {one-line description with price if public}
+- {Product or service name}: `{absolute URL}` — {one-line description with price if public}
+- {Next product}: `{absolute URL}` — {one-line description with price if public}
 
 ## Pricing
 
-- [Pricing page]({absolute URL}): {one-line summary, e.g. "From UGX 150,000/month, no setup fee, unlimited users"}
+- Pricing page: `{absolute URL}` — {one-line summary; add a sourced price only when available}
 
 ## Company
 
-- [About]({absolute URL}): {one-line — founders, year, mission}
-- [Contact]({absolute URL}): {one-line — phone, email, address}
-- [Blog]({absolute URL}): {one-line — what topics}
+- About: `{absolute URL}` — {one-line — founders, year, mission}
+- Contact: `{absolute URL}` — {one-line — phone, email, address}
+- Blog: `{absolute URL}` — {one-line — what topics}
 
 ## Policies
 
-- [Privacy Policy]({absolute URL})
-- [Terms of Use]({absolute URL})
+- Privacy Policy: `{absolute URL}`
+- Terms of Use: `{absolute URL}`
 
 ## Optional
 
-- [Press / Media]({absolute URL})
-- [Careers]({absolute URL})
+- Press / Media: `{absolute URL}`
+- Careers: `{absolute URL}`
 ```
 
 ### Rules

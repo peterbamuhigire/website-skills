@@ -267,10 +267,10 @@ SKILL.md:
 
 ## Available datasets
 
-**Finance**: Revenue, ARR, billing → See [reference/finance.md](reference/finance.md)
-**Sales**: Opportunities, pipeline, accounts → See [reference/sales.md](reference/sales.md)
-**Product**: API usage, features → See [reference/product.md](reference/product.md)
-**Marketing**: Campaigns, attribution → See [reference/marketing.md](reference/marketing.md)
+**Finance**: Revenue, ARR, billing → use the finance reference supplied by the host repository; no local companion is bundled here.
+**Sales**: Opportunities, pipeline, accounts → use the sales reference supplied by the host repository; no local companion is bundled here.
+**Product**: API usage, features → use the product reference supplied by the host repository; no local companion is bundled here.
+**Marketing**: Campaigns, attribution → use the marketing reference supplied by the host repository; no local companion is bundled here.
 
 ## Quick search
 
@@ -290,14 +290,14 @@ Show basic content and link to advanced content:
 
 ## Creating documents
 
-Use docx-js for new documents. See [DOCX-JS.md](DOCX-JS.md).
+Use the host repository's approved DOCX generation guidance for new documents; no local `DOCX-JS.md` companion is bundled here.
 
 ## Editing documents
 
 For simple edits, modify the XML directly.
 
-**For tracked changes**: See [REDLINING.md](REDLINING.md)
-**For OOXML details**: See [OOXML.md](OOXML.md)
+**For tracked changes**: use the host repository's approved redlining guidance; no local `REDLINING.md` companion is bundled here.
+**For OOXML details**: use the host repository's approved OOXML guidance; no local `OOXML.md` companion is bundled here.
 
 ## Avoid deeply nested references
 
