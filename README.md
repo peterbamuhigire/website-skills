@@ -6,6 +6,8 @@ handoff requirements.
 
 ## Mandatory Kaizen contract
 
+For a ready-to-run product or project operation, use [`prompts/full-kaizen-operation.md`](prompts/full-kaizen-operation.md).
+
 Continuous improvement governs the engine and every website it produces. Load
 `skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md` for engine/product audits;
 published scores are hard-capped at 65/100 and each plan targets 95/100 with rendered,
