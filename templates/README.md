@@ -52,8 +52,8 @@ These templates live in their respective skill folders and are used during the b
 | Template | Location | When to Use |
 |---|---|---|
 | SEO Configuration | `seo/docs-seo-template.md` | After pages are planned — add meta titles and descriptions |
-| Brand Colours | `design-system-skills:sector-strategies` | Resolve the relocated design engine through the global routing table when specific brand colours with hex codes are required |
-| Sector Brief | `design-system-skills:sector-strategies` | Resolve the relocated design engine through the global routing table for industry-specific design direction |
+| Brand Colours | <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills: sector-strategies</a> | Resolve the relocated design engine through the global routing table when specific brand colours with hex codes are required |
+| Sector Brief | <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills: sector-strategies</a> | Resolve the relocated design engine through the global routing table for industry-specific design direction |
 
 ### Project Log (Required for Retainer / Monthly Reports)
 
