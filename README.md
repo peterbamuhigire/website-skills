@@ -1,8 +1,10 @@
 # Website Skills
 
-See [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md) for
-website-specific agents, thin commands, lifecycle hooks, evidence, and launch
-handoff requirements.
+Website Skills is a portable skill engine for planning, building, launching, measuring, and maintaining websites and related digital experiences. It brings website strategy, content, SEO, UX, implementation guidance, release operations, and post-launch improvement into a shared workflow for Claude Code and Codex.
+
+Website practitioners and agency delivery teams use it to turn briefs, source content, and assets into structured website work. It covers qualification and intake, information architecture, page and content production, accessibility, performance, security, analytics, deployment, and handover, while keeping custom software and visual-system decisions in their owning specialist engines.
+
+The engine gives teams a reviewable path from brief to a maintainable website, with explicit evidence, launch gates, ownership, and recovery steps. It does not replace application engineering, current-fact research, finance doctrine, or the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>; use those companion engines when work crosses into those areas.
 
 ## Mandatory Kaizen contract
 
@@ -30,16 +32,16 @@ Use `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teac
 Publish audits at `min(raw_score, 65)` and target 95/100 with owner, evidence, measure, risk,
 rollback, and re-audit. Product audits cover strategy, IA, content, conversion, accessibility,
 visual quality, technical quality, SEO, security, performance, handoff, and learning instrumentation.
-Route current claims to the [Digital Research Engine](https://github.com/peterbamuhigire/digital-research-skills) and visual-system decisions to
-`design-system-skills`. See `docs/continuous-improvement/` and
+Route current claims to the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> and visual-system decisions to
+the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>. See `docs/continuous-improvement/` and
 `skills/quality-gates/kaizen-engine-and-product-improvement/`.
 
 ## Architecture & cross-cutting engines (updated 2026-06-21)
 
 - **No engine is natively discovered anymore.** All skill engines on this machine — including this one — are consulted via the global routing table by globbing `SKILL.md` directly. Do not rely on native skill discovery; read the matching `SKILL.md` files in place.
-- **design-system-skills** is the cross-cutting engine for design, typography, UI, UX, visual formatting, and the anti-AI-slop design doctrine. It is **referenced, not mirrored**: resolve its path per device from the global routing table and consult it **in addition** to this engine on visual work.
-- **chwezi-accounting-doctrine** (the finance engine) is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
-- **7 portable design skills were migrated OUT** of this repo to design-system-skills: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in design-system-skills (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
+- **<a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills</a>** is the cross-cutting engine for design, typography, UI, UX, visual formatting, and the anti-AI-slop design doctrine. It is **referenced, not mirrored**: consult the repository **in addition** to this engine on visual work.
+- **<a href="https://github.com/peterbamuhigire/chwezi-accounting-doctrine" target="_blank" rel="noopener noreferrer">Chwezi Accounting Doctrine</a>** is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
+- **7 portable design skills were migrated OUT** of this repo to <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills</a>: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in that repository (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
 - **Build-coupled design skills are KEPT here and now consult the design doctrine** before making visual choices: `design-system`, `page-builder`, `visual-qa`, `website-builder`, and the orchestration `premium-ui-ux-design`. (`design-system` and `visual-qa` were explicitly wired to load the design doctrine first.)
 - **Current skill count: 60**, generated and validated from `skills/manifest.yml`.
 
@@ -59,11 +61,11 @@ python -m pytest -q
 The contract baseline is zero debt: it contains no accepted finding. CI runs the same contract, routing, and regression checks on pushes to `main` and pull requests. The canonical CI installer accepts the engine checkout as an explicit second argument and does not depend on `.claude/skills`.
 
 This repository is consumed by reference from the global engine-routing table.
-Claude Code and Codex should resolve the local `website-skills` checkout, then
+Claude Code and Codex should use the <a href="https://github.com/peterbamuhigire/website-skills" target="_blank" rel="noopener noreferrer">Website Skills repository</a>, then
 read portable skills under `skills/<category>/<skill-name>/SKILL.md` directly.
 
-Projects share the same skills by referencing the local engine path; they no
-longer need a nested skills submodule.
+Projects share the same skills by referencing this repository; they no longer
+need a nested skills submodule.
 
 The repository now also functions as a portable website agency engine. It contains build skills plus:
 
@@ -124,7 +126,7 @@ website-skills/              <- this repo, referenced from the global engine-rou
 - `website-builder`: orchestrates the website workflow and owns cross-skill operating references
 - `i18n`: language routing, multilingual structure, and shared versus locale-specific rules
 - `design-reference`: extracts design decisions from reference websites
-- `design-system-skills:sector-strategies`: industry-specific trust patterns and content priorities
+- <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills: sector-strategies</a>: industry-specific trust patterns and content priorities
 - `premium-ui-ux-design`: premium visual direction, conversion hierarchy, color,
   imagery, data/proof presentation, production polish, and premium website gate
 - `design-system`: typography, palette, motion, spacing, and visual-system decisions
