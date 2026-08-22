@@ -36,3 +36,11 @@ Route thin commands `build-site`, `visual-qa`, `accessibility-qa`, and
 
 Native hooks are optional; repository scripts and CI are valid adapters. Do
 not call a site launch-ready when a required check is missing.
+
+## Human approval adapter
+
+Release and production-change controls are detailed in
+[`approval-enforcement.md`](approval-enforcement.md) and catalogued in
+[`approval-adapter.json`](approval-adapter.json). Publishing, deployment,
+indexing, consent, forms, tracking, and destructive changes must use the
+shared trusted gate before execution.
