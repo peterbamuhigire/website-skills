@@ -102,6 +102,22 @@ For a multilingual professional-services site, choose a licensed serif with veri
 - Use sibling skill `premium-ui-ux-design` when perceived quality, beauty, conversion, or high-ticket trust is part of the job.
 - Prioritize `references/ux-quality-checklist.md` when validating whether the system is coherent enough to ship.
 
+## Living system controls
+
+Treat the website design system as a maintained product. Before implementation,
+record its boundary (routes, products, platforms), source-of-truth location,
+owner, contribution/review route, and the smallest high-frequency component
+set. Every reusable component needs documented purpose, usage and non-usage,
+content limits, accessibility notes, responsive behaviour, and default/hover/
+focus/active/disabled/loading/error/empty states as applicable.
+
+Before release, record component status, visual/functional/content/layout/motion
+consistency checks, changelog impact, consumer notification, and the next review
+date. Track adoption/reuse, one-off exceptions, defects, and drift. An
+ownerless or overbuilt library is not a quality signal.
+
+Practitioner cross-check: [Eleken design-system checklist](https://www.eleken.co/blog-posts/design-system-checklist) and [design-consistency guide](https://www.eleken.co/blog-posts/design-consistency). Use for operating prompts only; do not import agency outcomes or benchmarks.
+
 <!-- dual-compat-end -->
 ## Notes
 - Minimum system outputs for substantial work:

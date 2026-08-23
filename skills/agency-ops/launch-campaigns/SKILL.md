@@ -32,6 +32,10 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Workflow
 1. Clarify the campaign goal, audience segment, and fixed dates before drafting.
+1a. If the launch concerns a new product or SaaS offer, record the problem,
+    target user, first-value action, evidence already observed, and the one
+    uncertainty the launch should test. A launch sequence is not a substitute
+    for product validation.
 2. Define the campaign sequence: prelaunch, launch, follow-up, and close.
 3. Map each stage to the right asset and CTA.
 4. Write only the assets required for the current stage and channel mix.
@@ -52,6 +56,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Asking for high commitment before earning trust. Fix: sequence education and proof before the sales ask.
 - Drafting channels independently. Fix: maintain one message and CTA map across every asset.
 - Sending without consent or link checks. Fix: verify audience permissions, destinations, owners, and suppression rules.
+- Treating registrations, page visits, or social attention as product validation. Fix: predeclare the behaviour or commitment that changes the decision and pair it with a quality guardrail.
 
 ## Outputs
 
@@ -97,5 +102,4 @@ For a Kampala training cohort closing on 30 September, map a proof-led article t
 
 ## Notes
 - Route to `sales-copywriting` for deep page persuasion work, `blog-writer` for launch-supporting articles, and `website-builder` when the launch work changes the actual site build.
-
 

@@ -33,6 +33,11 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 ## Workflow
 
 1. Validate scope, authority, languages, content, and assets.
+1a. If the brief includes a portal, SaaS, ecommerce, AI, integration, data,
+    regulated workflow, or other non-trivial application behaviour, route the
+    scope to `srs-skills` before page or feature commitments. Require signed
+    requirements, first-value/onboarding criteria, accessibility and performance
+    constraints, analytics events, and launch/rollback conditions as build inputs.
 2. Route strategy and experience mapping before design and implementation; require the audience action map, narrative sequence, proof register, failure/recovery notes, and a client-specific style thesis. Select the style that best fits the audience, offer, brand, content, trust context, and environment before considering visual trends.
 3. Coordinate page, search, accessibility, visual, security, measurement, and release gates.
 4. At discovery, each major iteration, launch, and maintenance review, run the Kaizen conversion/product loop: observe, baseline, select one reversible improvement, test, check guardrails, standardise only verified learning, teach it into the system, and re-measure.
@@ -84,6 +89,7 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 - Treating an unavailable render as passed. Fix: mark visual gates `not assessed` and block readiness.
 - Treating a trend article as a requirements document. Fix: convert observations into an evidence-backed style-fit and adopt/adapt/reject record while preserving the simplest complete user path.
 - Treating a polished story as evidence. Fix: attach source, permission, measurement, and claim status to each narrative beat.
+- Launching a SaaS-like website or portal on visual polish alone. Fix: require evidence of the first-value path, target-user demand, operational readiness, and a named next experiment before calling the route launch-ready.
 - Adding AI because it is fashionable. Fix: document the non-AI alternative, system map, control, correction, fallback, and drift owner.
 
 ## Worked Example
