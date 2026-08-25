@@ -1,46 +1,9 @@
-# Control-plane adoption
+# Skills-engine control-plane adoption
 
-This engine adopts the shared ten-engine contract from
-`C:\wamp64\www\skills-web-dev\docs\engine-control-plane.md`. Website
-doctrine remains authoritative for UX, content, SEO, implementation,
-performance, accessibility, security, and launch operations.
+This repository exposes the website-skills engine through the declarative .skills-engine/engine-manifest.yaml contract.
 
-## Local roles and commands
+The engine remains independently usable. Its router and domain SKILL.md files are authoritative. Universal coordination may read the router, discover skills, inspect Git, and review declared validators.
 
-| Role | Responsibility | Evidence owner |
-|---|---|---|
-| Site planner | Define journeys, information architecture, content, and acceptance criteria. | Route and scope record. |
-| Builder | Implement the smallest approved change within the declared stack. | Diff and local verification. |
-| Accessibility auditor | Run automated and manual WCAG checks, including keyboard and screen-reader smoke. | Accessibility report. |
-| Performance benchmarker | Measure budgets and critical journeys on the target device/network profile. | Performance results. |
-| Visual reviewer | Inspect rendered pages, responsive states, overflow, hierarchy, and visual consistency. | Render report. |
+Missing dependency, platform, source, or approval evidence is NOT ASSESSED. Writes, pulls, publication, submissions, ledger/filing changes, deployment, and control changes require explicit approval.
 
-Route thin commands `build-site`, `visual-qa`, `accessibility-qa`, and
-`launch` to existing skills and canonical CI gates.
-
-## Hook and release contract
-
-- `preflight` records the route, target environment, browser/device matrix,
-  content source, and deployment/rollback plan.
-- `context` loads the current design system, routes, analytics assumptions,
-  known defects, and prior render evidence before edits.
-- `before_write` checks scope, backup/reversibility, content authority, and
-  security or privacy impact.
-- `after_write` runs targeted tests plus accessibility, performance, visual,
-  and security checks appropriate to the change.
-- `release` requires rendered screens, browser-journey evidence,
-  performance-budget results, accessibility/security gates, and a post-deploy
-  smoke or explicit `NOT ASSESSED` consequence.
-- `stop` preserves preview/build state, failed checks, open visual or
-  operational risks, and the next owner.
-
-Native hooks are optional; repository scripts and CI are valid adapters. Do
-not call a site launch-ready when a required check is missing.
-
-## Human approval adapter
-
-Release and production-change controls are detailed in
-[`approval-enforcement.md`](approval-enforcement.md) and catalogued in
-[`approval-adapter.json`](approval-adapter.json). Publishing, deployment,
-indexing, consent, forms, tracking, and destructive changes must use the
-shared trusted gate before execution.
+MCP-safe operations are read-only discovery, router read, skill read, and documented-check inspection. Forks are inspected from their own checkout; no validator is invented when the repository is not catalogued.
