@@ -86,6 +86,7 @@ Recovery: repair the brief or evidence map, then rerun the professional and anti
 - [Blog and authority writing](references/blog-and-authority-writing.md) for thought leadership and topical authority.
 - [SEO and AI-search writing](references/seo-ai-search-writing.md) for answer structure and entity clarity.
 - [Document and sales-enablement writing](references/document-and-sales-enablement-writing.md) for longer commercial assets.
+- [Human English and reader-centred craft](../../../book-extractions/human-english-craft-synthesis-2026.md) for audience-fit English, genre, grammar, rhythm, and proof.
 <!-- dual-compat-end -->
 
 ## Evidence Produced
