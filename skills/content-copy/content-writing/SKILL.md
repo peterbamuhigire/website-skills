@@ -84,6 +84,7 @@ Recovery: repair the page strategy or proof map, then rerun the message and stat
 - [UX writing pattern library](references/ux-writing-pattern-library.md) for interface states.
 - [Business vocabulary](references/business-vocabulary.md) for precise commercial language.
 - [Website page writing patterns](../premium-commercial-writing/references/website-page-writing-patterns.md) for premium page types.
+- [Human English and reader-centred craft](../../../book-extractions/human-english-craft-synthesis-2026.md) for reader-fit register, grammar, collocation, rhythm, and proof/read-aloud.
 <!-- dual-compat-end -->
 
 ## Evidence Produced
