@@ -121,6 +121,8 @@ When trustworthy data, execution, network, platform, or production authority is 
 
 A consultation CTA change has a business-defined minimum meaningful lift, but baseline event volume implies a six-month test while the campaign lasts four weeks. The skill rejects the A/B test and recommends moderated user sessions plus a staged rollout with observational monitoring.
 
+For health or high-trust messages, load [message trust and uncertainty experimentation](references/message-trust-and-uncertainty-experimentation.md).
+
 ## Read Next
 
 - `marketing-measurement-system` defines the KPI tree.

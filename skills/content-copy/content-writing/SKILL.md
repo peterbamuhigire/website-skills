@@ -117,6 +117,8 @@ When proof, layout context, research, or editing access is unavailable, return t
 
 Input: a law firm's service page says "We provide world-class legal solutions." Revision: name the relevant matter, who it serves, the firm's documented process, and the consultation next step; omit outcome claims unsupported by case evidence.
 
+For health-institution or public-health content, load [institutional health communication](references/institutional-health-communication.md).
+
 ## Read Next
 
 - `premium-commercial-writing` for high-stakes commercial and authority copy.

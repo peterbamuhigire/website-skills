@@ -47,6 +47,10 @@ the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_b
 
 The machine-readable relocation authority is `skills/manifest.yml`; the human-readable map is `docs/relocation-map.md`.
 
+## September 2026 book-driven Kaizen wave
+
+See [`docs/continuous-improvement/book-driven-kaizen-2026-09-01.md`](docs/continuous-improvement/book-driven-kaizen-2026-09-01.md) for the institutional health communication and message-experiment upgrades.
+
 ## Engine integrity
 
 The engine has 60 active skills and one authoring template, discovered from the filesystem. Run these release gates on Windows or Linux:
