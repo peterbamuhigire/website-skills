@@ -100,9 +100,18 @@ stop/rollback rule, acceptance evidence, standardisation decision, and re-audit 
 
 If a landing-page experiment raises form starts but increases abandonment or removes accessible error feedback, keep the result as a failed experiment, restore the safe baseline, record the evidence, and test a narrower change before standardising.
 
+## Mandatory Digital Research currentness gate
+
+Every Kaizen cycle must begin with `digital-research-skills` source evaluation
+and source verification. Record scope, dates, freshness class, support status,
+uncertainty, and review date for current web standards, accessibility, browser,
+platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
+`NOT_ASSESSED`. Apply the [portfolio Kaizen currentness gate](../../../../digital-research-skills/docs/continuous-improvement/kaizen-currentness-gate.md).
+
 ## References
 
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
-- Portfolio standard: resolve `digital-research-engine` from the global routing table, then read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
+- Portfolio standard: resolve `digital-research-skills` from the global routing table, then read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
+- [Book-driven positioning, story, and proof](../../brand/brand-strategy/references/book-driven-positioning-story-and-proof.md) - strategy, narrative, proof, experiments, and currentness.
 - `skills/orchestration/website-builder/`
 - `skills/quality-gates/design-quality-score/`

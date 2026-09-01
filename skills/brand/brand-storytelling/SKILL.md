@@ -105,3 +105,4 @@ For a clinic case study, open with the verified appointment backlog, explain the
 - `references/story-templates.md` - practical page and case-study structures.
 - `references/content-strategy.md` - channel and content-system application.
 - `references/legacy-guidance.md` - preserved story frameworks.
+- [Book-driven positioning, story, and proof](../brand-strategy/references/book-driven-positioning-story-and-proof.md) - human-centred narrative, proof mapping, and currentness.
