@@ -99,3 +99,4 @@ A Kampala payroll firm wants to be "trusted, innovative, and professional". Inte
 - `references/brand-discovery-questions.md` - discovery prompts and evidence collection.
 - `references/positioning-frameworks.md` - positioning, architecture, and differentiation choices.
 - `references/legacy-guidance.md` - preserved CBBE, mantra, archetype, and brief guidance.
+- [Book-driven positioning, story, and proof](references/book-driven-positioning-story-and-proof.md) - durable book synthesis with evidence and currentness boundaries.
