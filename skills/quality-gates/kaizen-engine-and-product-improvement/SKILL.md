@@ -113,5 +113,6 @@ platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
 - Portfolio standard: resolve `digital-research-skills` from the global routing table, then read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
 - [Book-driven positioning, story, and proof](../../brand/brand-strategy/references/book-driven-positioning-story-and-proof.md) - strategy, narrative, proof, experiments, and currentness.
+- [Book-driven Kaizen Wave 3](references/book-driven-kaizen-wave-3-2026-09-02.md) - task-first dashboards, retrieval/SEO evidence, experimentation, image QA, accessibility, and protocol currency.
 - `skills/orchestration/website-builder/`
 - `skills/quality-gates/design-quality-score/`
