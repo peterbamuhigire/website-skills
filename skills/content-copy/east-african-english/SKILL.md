@@ -115,3 +115,6 @@ Input: a Kenyan service page says "Schedule your free consult today" for a forma
 - `language-standards` governs cross-language consistency.
 - `content-writing` fixes message hierarchy and page purpose.
 - `premium-commercial-writing` supplies the commercial editorial gate.
+## English collocation and lexical-precision overlay
+
+Load [`english-collocations-and-lexical-precision-2026-09-02.md`](../language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md) to strengthen natural word partnerships, register, spelling, accessible literal language, and evidence-calibrated claims while preserving genuine East African professionalism.

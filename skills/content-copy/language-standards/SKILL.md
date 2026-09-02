@@ -135,3 +135,6 @@ An English CTA says "Book a consultation". The French and Kiswahili writers may 
 - `swahili-native-copy` for Kiswahili execution.
 - `east-african-english` for regional English execution.
 - `i18n` for technical locale architecture.
+## English collocation and lexical-precision overlay
+
+Load [`english-collocations-and-lexical-precision-2026-09-02.md`](references/english-collocations-and-lexical-precision-2026-09-02.md) alongside this standard. It strengthens exact word choice, natural collocations, register, idiom restraint, grammar, and human-quality revision.
