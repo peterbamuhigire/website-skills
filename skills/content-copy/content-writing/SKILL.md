@@ -124,3 +124,6 @@ For health-institution or public-health content, load [institutional health comm
 - `premium-commercial-writing` for high-stakes commercial and authority copy.
 - `sales-copywriting` for conversion arguments, proof, and resistance handling.
 - `page-builder` for implementation into reusable sections and components.
+## English collocation and lexical-precision overlay
+
+Load [`english-collocations-and-lexical-precision-2026-09-02.md`](../language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md) during drafting and final copy review. Do not treat its examples as a phrase bank; check meaning, audience, channel, and evidence in context.

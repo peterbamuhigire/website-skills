@@ -125,3 +125,6 @@ A consultancy calls itself "the leading digital partner" but supplies no ranking
 - `blog-writer` owns article research and publishing handoff.
 - `sales-copywriting` owns conversion frameworks.
 - `seo` owns metadata, schema, and crawler implementation.
+## English collocation and lexical-precision overlay
+
+Load [`english-collocations-and-lexical-precision-2026-09-02.md`](../language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md) before final commercial polish. Premium language remains calm, specific, proof-led, and natural; sophistication never comes from rare words or unsupported superlatives.

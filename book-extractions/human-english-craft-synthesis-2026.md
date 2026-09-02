@@ -37,3 +37,7 @@ Could this page belong to ten unrelated companies? Add the real service, audienc
 ## Evidence record
 
 Record page job, audience, source/proof map, market and language, terminology checks, state-copy review, read-aloud/proof status, unresolved gaps, reviewer, and date.
+
+## Collocation and lexical-precision overlay (2026-09-02)
+
+Apply [`english-collocations-and-lexical-precision-2026-09-02.md`](../skills/content-copy/language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md) for natural word partnerships, grammatical frames, reader-fit register, spelling, idiom restraint, and evidence-calibrated claims. Copy should feel highly educated and human because it is specific and considered, not because it is ornate.
