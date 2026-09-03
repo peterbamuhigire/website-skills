@@ -231,3 +231,9 @@ Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`,
 Load [`book-extractions/human-english-craft-synthesis-2026.md`](book-extractions/human-english-craft-synthesis-2026.md) for every web page, landing page, blog, SEO/GEO asset, CTA, form, error message, email, and support message. Apply its five passes with `language-standards`, `content-writing`, `premium-commercial-writing`, the relevant native-copy skill, and the anti-slop/visual/accessibility gates.
 
 Website copy must be reader-first, specific, grammatical, scannable, and honest about the offer, proof, process, limits, and next action. Do not create “human” copy with fake colloquialisms, errors, generic welcome language, keyword stuffing, or unsupported superlatives. Record page job, audience, source/proof map, language and market, state-copy review, proof status, gaps, reviewer, and date.
+
+Apply Digital Research's `docs/continuous-improvement/machine-errors-editorial-gate-2026-09-03.md`
+to page copy and repeated interface modules. Review ME1-ME7 for semantic repetition, decorative
+symmetry, over-explanation, inflated promise, generic examples, rhetorical mannerisms, and
+insight-shaped filler. Preserve repeated navigation, state, accessibility, or legal copy only when
+its function is documented; unavailable evidence is `NOT_ASSESSED`.

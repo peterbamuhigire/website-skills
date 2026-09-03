@@ -144,6 +144,23 @@ These five patterns appear most often in B2B / SaaS / dashboard work. Detect ear
 **Detection cue:** average page word count > 800 with no headings, lists, or visual breaks.
 **Fix:** apply content hierarchy — H2 every 200–300 words, lists for ≥ 3 parallel items, callout boxes for the "one thing to remember."
 
+## Machine-error editorial and interface check
+
+Apply Digital Research's machine-error gate to page copy and repeated UI modules:
+
+| ID | Website adaptation |
+|---|---|
+| ME1 | Adjacent sections add different information rather than restating the hero. |
+| ME2 | Repeated cards or equal columns express real hierarchy, not artificial balance. |
+| ME3 | Copy stops when the user can act; remove explanatory echoes. |
+| ME4 | Promise language matches the evidence and page job. |
+| ME5 | Examples name the actual client, sector, place, or use case. |
+| ME6 | Hooks, CTA patterns, and feature blocks do not repeat as a house tic. |
+| ME7 | Every section or component has a user task, decision, constraint, or proof point. |
+
+Retain repetition that supports navigation, state recognition, accessibility, or consistent component
+behaviour; record the purpose in the design review.
+
 ### Audit checklist
 - [ ] No page has > 7 primary actions above the fold
 - [ ] Every project has personas + at least one user interview transcript on file

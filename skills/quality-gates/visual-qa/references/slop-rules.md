@@ -164,6 +164,15 @@ Automatic blocks require a fix.
 
 ## Reading
 
+## Machine-error review overlay
+
+Add the Digital Research machine-error gate to the rendered review. Record ME1-ME7 for copy and
+interface structure: repeated meaning, decorative symmetry, over-explanation, inflated promise,
+generic example, repeated rhetorical tic, and insight-shaped filler. Compare adjacent sections and
+component instances, not just isolated screenshots. A repeated navigation label, state message, or
+accessibility cue is a valid exception when its function is documented; otherwise cut or redesign the
+repetition. Unavailable source or flow evidence is `NOT_ASSESSED`.
+
 - `design-system/references/ai-slop-prevention.md` — the token-level slop
   rules this file extends.
 - `content-writing/references/banned-phrases.md` — full banned phrase list
