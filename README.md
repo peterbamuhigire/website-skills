@@ -6,6 +6,17 @@ Website practitioners and agency delivery teams use it to turn briefs, source co
 
 The engine gives teams a reviewable path from brief to a maintainable website, with explicit evidence, launch gates, ownership, and recovery steps. It does not replace application engineering, current-fact research, finance doctrine, or the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>; use those companion engines when work crosses into those areas.
 
+## Capability map
+
+| Need | Primary route |
+|---|---|
+| Qualification, discovery, information architecture, and journeys | `skills/orchestration/` |
+| Content, copy, language, SEO, and conversion | `skills/content-copy/` and `skills/ux-conversion/` |
+| Page structure, components, assets, and implementation | `skills/build/` |
+| Accessibility, visual QA, security, and quality scoring | `skills/quality-gates/` |
+| Launch, observability, analytics, experimentation, and maintenance | `skills/launch-ops/` |
+| Premium agency delivery and post-launch service | `skills/agency-ops/` |
+
 ## Mandatory Kaizen contract
 
 For a ready-to-run product or project operation, use [`prompts/full-kaizen-operation.md`](prompts/full-kaizen-operation.md).
