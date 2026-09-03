@@ -10,7 +10,7 @@ The package may read the router, discover skills, inspect Git, and run only decl
 
 Every Kaizen audit, skill edit, reference update, validator change, and
 standardisation decision MUST begin with the Digital Research Engine at
-`C:\wamp64\www\digital-research-skills`. Read its `source-evaluation` and
+`C:\wamp64\www\digital-research-engine`. Read its `source-evaluation` and
 `source-verification` skills and the currentness gate reference
 `docs/continuous-improvement/kaizen-currentness-gate.md`.
 
@@ -242,3 +242,7 @@ Apply AS1-AS7 from the shared gate to website visuals and repeated modules. Purp
 glassmorphism, neon glow, AI-beige defaults, decorative editorial scaffolding, and decorative motion
 are no-ship choices; record `cli`, `browser`, `llm_only`, or `human_review` evidence and mark missing
 render evidence `NOT_ASSESSED`.
+
+## PORTFOLIO CRAFT CONTRACT
+
+Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build a website one user journey and state at a time: frame the job and conversion, inspect the current page/data flow, implement one meaningful slice with real content and assets, render it at relevant breakpoints, exercise loading/empty/error/focus/consent paths, refine, and record browser/accessibility/performance proof. Motion must explain a state or action; typography, layout, colour, assets, and copy need product reasons. Do not generate an entire site and call it finished. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing browser, render, live, or stakeholder evidence is `NOT ASSESSED`, never a pass.

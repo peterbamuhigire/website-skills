@@ -33,8 +33,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 3. Choose the smallest set of references needed for the current job.
 4. Read the narrative information-architecture reference and carry the page actor, job, tension, proof, choice, primary CTA, and recovery path into the page-goal and component implementation.
 3. On commercial websites, preserve the `premium-website-product` brief: page goal, search intent, proof, CTA, schema, analytics event, and developer-quality evidence must survive implementation.
-4. Produce the implementation, configuration, or guidance this skill owns.
-5. Exercise decision, error, empty, loading, disabled, focus, and locale states where applicable.
+4. Produce one page, flow, or component slice that this skill owns; inspect it in the surrounding route and data flow rather than generating the whole site as one opaque batch.
+5. Exercise decision, error, empty, loading, disabled, focus, and locale states where applicable, then make one purposeful refinement before expanding the slice.
 7. Run build, route, accessibility, responsive, schema, event, readability, and failure-state checks available in the repository.
 7. Recovery: if a check fails, retain the last working slice, isolate and repair the page/component, then rerun the failing acceptance check.
 
