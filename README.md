@@ -1,6 +1,6 @@
 # Website Skills
 
-Website Skills is a portable skill engine for planning, building, launching, measuring, and maintaining websites and related digital experiences. It brings website strategy, content, SEO, UX, implementation guidance, release operations, and post-launch improvement into a shared workflow for Claude Code and Codex.
+Website Skills is a delivery engine for planning, designing, building, launching, measuring, and maintaining premium websites and related digital experiences. It carries one user journey and page state at a time from audience and content through visual treatment, accessible implementation, performance, analytics, release, recovery, and post-launch learning, while handing application engineering and shared visual doctrine to their owning engines.
 
 Website practitioners and agency delivery teams use it to turn briefs, source content, and assets into structured website work. It covers qualification and intake, information architecture, page and content production, accessibility, performance, security, analytics, deployment, and handover, while keeping custom software and visual-system decisions in their owning specialist engines.
 
