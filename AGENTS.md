@@ -237,3 +237,8 @@ to page copy and repeated interface modules. Review ME1-ME7 for semantic repetit
 symmetry, over-explanation, inflated promise, generic examples, rhetorical mannerisms, and
 insight-shaped filler. Preserve repeated navigation, state, accessibility, or legal copy only when
 its function is documented; unavailable evidence is `NOT_ASSESSED`.
+
+Apply AS1-AS7 from the shared gate to website visuals and repeated modules. Purple gradients,
+glassmorphism, neon glow, AI-beige defaults, decorative editorial scaffolding, and decorative motion
+are no-ship choices; record `cli`, `browser`, `llm_only`, or `human_review` evidence and mark missing
+render evidence `NOT_ASSESSED`.

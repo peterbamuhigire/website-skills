@@ -162,6 +162,18 @@ Output is both a human summary and a machine JSON under
 Warnings require a one-line reviewer acknowledgement in the PR before merge.
 Automatic blocks require a fix.
 
+## 13. Visual no-ship boundary
+
+The following decorative choices block release: purple gradients, glassmorphism, neon glow,
+AI-beige defaults, decorative editorial scaffolding, and decorative motion. Replace them with a
+brief-specific surface, hierarchy, asset, or task interaction. Functional state transitions,
+accessibility affordances, and data encodings require an explicit reason and evidence mode; an
+unavailable browser/render check is `NOT_ASSESSED`.
+
+The boundary is the AS1-AS7 overlay from Digital Research. In particular, check default convergence
+(AS1), unearned labels/metrics (AS2), identical or nested modules (AS3), decorative attention
+(AS4), placeholder material (AS5), copy tells (AS6), and polish-covered delivery debt (AS7).
+
 ## Reading
 
 ## Machine-error review overlay

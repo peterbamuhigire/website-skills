@@ -161,6 +161,26 @@ Apply Digital Research's machine-error gate to page copy and repeated UI modules
 Retain repetition that supports navigation, state recognition, accessibility, or consistent component
 behaviour; record the purpose in the design review.
 
+### Impeccable-derived visual overlay (AS1-AS7)
+
+Use the shared Digital Research overlay with the visual evidence mode recorded. For websites,
+purple gradients, glassmorphism, neon glow, AI-beige defaults, decorative editorial scaffolding,
+and decorative motion are no-ship choices. This is a hard boundary against agent-tool convergence;
+functional state, accessibility, data encoding, and approved brand tokens must name their reason.
+
+| ID | Website design test |
+|---|---|
+| AS1 | Is the palette, type, layout, or copy pattern chosen for this brief rather than generator default? |
+| AS2 | Do eyebrows, chips, icon tiles, hero metrics, or section numbers help the user or only stage hierarchy? |
+| AS3 | Do cards and spacing express information priority, or is the page a cloned card grid/card stack? |
+| AS4 | Does each effect or motion communicate state or task value, including reduced-motion behaviour? |
+| AS5 | Is every image, illustration, icon, and example purposeful, traceable, and visible? |
+| AS6 | Are buzzwords, em-dash cadence, aphoristic contrasts, or theatrical framing absent from page copy? |
+| AS7 | Are contrast, type size, line length, overflow, focus, empty/error/loading states, and heading hierarchy sound? |
+
+Evidence modes: `cli`, `browser`, `llm_only`, or `human_review`. A missing detector or render is
+`NOT_ASSESSED`, not clean.
+
 ### Audit checklist
 - [ ] No page has > 7 primary actions above the fold
 - [ ] Every project has personas + at least one user interview transcript on file
