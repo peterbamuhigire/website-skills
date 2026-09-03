@@ -93,3 +93,12 @@ reputation-sensitive claims:
 - [ ] CTAs match the reader's readiness and the page's job.
 - [ ] Sources and evidence gaps are visible to the next operator.
 - [ ] No banned AI-slop patterns remain.
+
+## Machine-error editorial gate (ME1-ME7)
+
+Apply Digital Research's dated machine-error gate before release. ME1 checks whether adjacent copy
+repeats meaning; ME2 whether symmetry is decorative; ME3 whether explanation continues past reader
+use; ME4 whether claims inflate consequence; ME5 whether examples are client-specific; ME6 whether
+the same rhetorical device has become a tic; and ME7 whether each paragraph earns space with a claim,
+evidence, instruction, or decision. Merge or cut copy with no delta. Preserve repeated labels,
+accessibility text, and legal notices when their function is explicit.

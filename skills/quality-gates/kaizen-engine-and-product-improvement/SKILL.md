@@ -106,7 +106,8 @@ Every Kaizen cycle must begin with `digital-research-skills` source evaluation
 and source verification. Record scope, dates, freshness class, support status,
 uncertainty, and review date for current web standards, accessibility, browser,
 platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
-`NOT_ASSESSED`. Apply the [portfolio Kaizen currentness gate](../../../../digital-research-skills/docs/continuous-improvement/kaizen-currentness-gate.md).
+`NOT_ASSESSED`. Apply the portfolio Kaizen currentness gate at
+`C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\kaizen-currentness-gate.md`.
 
 ## References
 
