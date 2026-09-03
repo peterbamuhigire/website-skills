@@ -102,3 +102,16 @@ use; ME4 whether claims inflate consequence; ME5 whether examples are client-spe
 the same rhetorical device has become a tic; and ME7 whether each paragraph earns space with a claim,
 evidence, instruction, or decision. Merge or cut copy with no delta. Preserve repeated labels,
 accessibility text, and legal notices when their function is explicit.
+
+### Impeccable-derived AS overlay
+
+For website copy and presentations, review AS1-AS7 with `human_review` or the relevant `cli`/
+`browser` evidence. Remove default-convergence copy, unearned eyebrows/chips, repeated card copy,
+decorative attention language, generic placeholder assets/examples, buzzword/em-dash/aphorism/
+theater cadence, and copy that hides a readability or state defect. Purple gradients, glassmorphism,
+neon glow, AI-beige defaults, decorative editorial scaffolding, and decorative motion are no-ship
+visual choices; preserve only a documented functional, accessibility, data, or approved brand reason.
+AS1-AS7 coverage is explicit: AS2, AS3, AS4, AS5, and AS7 are `not_applicable` for copy-only
+deliverables unless the page includes the corresponding visual or rendered surface.
+AS6 remains applicable to every copy deliverable: remove recurring buzzword, em-dash, aphoristic,
+or theatrical cadence.
