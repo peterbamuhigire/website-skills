@@ -1,19 +1,23 @@
 # Google Generative AI Search Playbook
 
-Self-contained operating guidance prepared from official Google Search Central
-documentation. Verified on 2026-06-19 against official Google Search Central
-guidance and current AI-search measurement/security reporting. Primary sources:
+Self-contained operating guidance prepared from current first-party sources.
+Verified on 2026-09-05. Re-check by 2026-12-05 or when a platform changes its
+inclusion controls, crawler policy, or report definitions. Primary sources:
 
 - Google's Guide to Optimizing for Generative AI Features on Google Search:
   https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
-- AI features and your website:
-  https://developers.google.com/search/docs/appearance/ai-features
+- Search generative AI control:
+  https://support.google.com/webmasters/answer/16908024
+- Generative AI performance report:
+  https://support.google.com/webmasters/answer/16984139
 - Guidance on using generative AI content:
   https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
 - Bing Webmaster Tools AI Performance reporting:
-  https://blogs.bing.com/webmaster
-- Cornell/arXiv research on deep-research agent poisoning:
-  https://arxiv.org/
+  https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
+- OpenAI crawler controls:
+  https://developers.openai.com/api/docs/bots
+- Currentness register:
+  ../../../../docs/source-registers/search-ai-currentness-2026-09-05.json
 
 ## Core position
 
@@ -101,18 +105,26 @@ Check:
 
 ### 5. Measure value, not only clicks
 
-Google reports AI-feature traffic inside Search Console's normal Web search
-performance reporting. Do not expect a clean standalone AI Overview report for
-every question.
+As of 31 August 2026, Search Console provides a dedicated generative AI
+performance report worldwide for AI Overviews and AI Mode. The report exposes
+impressions by page, country, date, and device; it does not expose a universal
+rank, prompt-level query list, citation fidelity, or business value. Its data is
+also included in the overall Web performance report.
 
 Measure:
 
-- Search Console impressions, clicks, CTR, query/page changes, and coverage
-  issues
+- dedicated generative AI impressions and page/country/device/date changes
+- normal Web impressions, clicks, CTR, queries, pages, and index coverage
 - engaged sessions, time on site, scroll depth, form starts, lead quality,
   subscriptions, sales, calls, and assisted conversions
 - before/after changes by landing page and query class rather than one vanity
   ranking
+
+Search Console also provides a property-level include/exclude control for
+generative AI features. Record the decision, inherited property state, owner,
+date, expected impact, and post-change observation. This Search control is
+separate from `Google-Extended`, which does not control ordinary Search
+inclusion.
 
 ## Mythbusting rules
 
@@ -151,20 +163,20 @@ not sell it as an AI-citation lever.
 
 ## Bing/Copilot AI measurement
 
-Bing Webmaster Tools has begun exposing AI Performance dimensions that are more
-specific than traditional search reports. When Bing/Copilot visibility matters,
-track:
+Bing Webmaster Tools introduced AI Performance in public preview on 10 February
+2026. Its documented measures are:
 
-- **Citation Share**: the share of citations attributed to the site among all
-  citations shown for the same grounding query. Use it as an observational
-  trend KPI, not a ranking score, traffic-share metric, or competitor spy tool.
-- **Intents**: the purpose or need behind AI answer queries.
-- **Topics**: grouped subject areas where the site is being used or ignored.
-- **Compare**: period-over-period shifts in AI citation activity.
+- **Total Citations**: displayed source citations in the selected period;
+- **Average Cited Pages**: average unique site pages cited per day;
+- **Grounding queries**: a sample of phrases used to retrieve cited content;
+- **Page-level citation activity**: citation counts for individual URLs; and
+- **Visibility trends**: change in citation activity over time.
 
-Operational rule: pair Bing AI Performance with Search Console, analytics, CRM,
-and conversion data. A rising citation share is useful only when the cited pages
-also support trust, conversion, retention, or qualified demand.
+Microsoft explicitly warns that these measures do not indicate ranking,
+authority, placement, or a page's role in an answer. Pair them with citation
+support review, analytics, CRM, and conversion evidence. Use IndexNow for added,
+updated, or removed URLs when the project supports it; submission accelerates
+discovery but does not guarantee indexing or citation.
 
 ## Source-integrity and UGC poisoning guardrail
 
@@ -192,10 +204,14 @@ AI-search visibility is not one engine. Google, Bing/Copilot, ChatGPT, Gemini,
 Claude, Perplexity, and vertical assistants can retrieve, cite, or summarize
 different sources. Build the common foundation first, then measure by engine:
 
-- Google: Search Console Web reporting, page/query classes, conversions
-- Bing/Copilot: Bing Webmaster Tools AI Performance and Citation Share
-- ChatGPT/Perplexity/Claude-style retrieval: server logs, bot requests,
-  referral patterns where available, and third-party AI-visibility tracking
+- Google: dedicated generative AI impressions, normal Web reporting, page
+  classes, and conversions
+- Bing/Copilot: total citations, cited pages, sampled grounding queries,
+  page-level activity, and trends in Bing Webmaster Tools AI Performance
+- ChatGPT: OAI-SearchBot access, server logs, cited URLs, answer-support review,
+  and referrals carrying `utm_source=chatgpt.com` where present
+- other assistants: current first-party crawler guidance, server logs, cited
+  URLs, answer-support review, and referral patterns where available
 - Brand monitoring: cited pages, source quality, answer accuracy, and unsafe
   recommendations
 

@@ -147,7 +147,8 @@ website-skills/              <- this repo, referenced from the global engine-rou
 - `design-system`: typography, palette, motion, spacing, and visual-system decisions
 - `photo-manager`: image cataloging, naming, dimensions, and logo selection
 - `page-builder`: converts content and design decisions into pages and reusable UI
-- `seo`: metadata, schema, sitemap, and crawler-facing configuration
+- `seo`: layered cross-platform discoverability, metadata, evidence-matched
+  schema, sitemaps, crawler governance, entity presence, and SXO handoff
 - `google-ai-search`: applies official Google Search guidance for AI Overviews,
   AI Mode, AEO/GEO mythbusting, local/ecommerce readiness, Search Console
   measurement, and agentic-readiness planning
@@ -252,6 +253,11 @@ The repository currently spans five operating layers:
 
 Recent agency-engine expansion work added the following reference layers:
 
+- `2026-09-05`: Rebuilt search and AI-answer discoverability as a currentness-
+  gated layered system spanning technical SEO, answer clarity, probabilistic
+  GEO, entity presence, crawler purpose, SXO, and outcome measurement. Added a
+  claim register, dedicated doctrine validator, routing collisions, CI and
+  engine-manifest enforcement. See [the kaizen record](./docs/continuous-improvement/search-ai-discoverability-kaizen-2026-09-05.md).
 - `2026-04-14`: Phase 2 added intake, qualification, proposal, kickoff, artifact standards, and stage-gate operations
 - `2026-04-14`: Phase 3 added website strategy briefs, competitor synthesis, trust architecture, page-goal mapping, and intent mapping
 - `2026-04-14`: Phase 6 added QA matrix, launch verification, deployment and rollback runbooks, observability baseline, and a Playwright starter

@@ -37,3 +37,7 @@ def test_skill_contract_validator():
 def test_routing_smoke():
     result = subprocess.run([sys.executable, str(ROOT / "scripts/routing-smoke-test.py")], cwd=ROOT)
     assert result.returncode == 0
+
+def test_search_doctrine_currentness():
+    result = subprocess.run([sys.executable, str(ROOT / "scripts/validate-search-doctrine.py")], cwd=ROOT)
+    assert result.returncode == 0

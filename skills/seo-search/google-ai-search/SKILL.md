@@ -22,6 +22,8 @@ Translate current official Google Search guidance into qualified website require
 ## Do Not Use When
 
 - Use `seo` for routine implementation or unsupported tactics that claim guaranteed AI citations.
+- Use `seo` for cross-platform ChatGPT, Bing, entity-presence, crawler-control,
+  or referral-measurement implementation after platform guidance is settled.
 
 ## Required Inputs
 
@@ -93,8 +95,9 @@ If a proposal guarantees AI Overview placement, replace it with a scoped program
 - A client asks whether `llms.txt`, chunking, special schema, AI-specific pages,
   off-site mention campaigns, Reddit/UGC placement, or "AI citation hacks" are
   needed for Search or AI assistants.
-- The work needs AI-search measurement beyond Google, including Bing Webmaster
-  Tools AI Performance, Citation Share, Intents, Topics, or period comparison.
+- The work needs Google generative AI reporting or Bing Webmaster Tools AI
+  Performance measures such as citations, cited pages, grounding queries, or
+  page-level activity.
 - The work involves brand-safety risk from user-generated content, poisoned
   snippets, weak sources, fabricated citations, or volatile ranking updates.
 - Existing SEO/GEO recommendations need to be reconciled with official Google
@@ -139,13 +142,14 @@ If a proposal guarantees AI Overview placement, replace it with a scoped program
    crawling, `nosnippet`/`data-nosnippet`/`max-snippet`/`noindex` for preview
    control, and Google-Extended only for non-Search AI training/grounding
    controls.
-8. Measure Google Search through Search Console's Web performance reporting
-   plus analytics outcomes such as conversions, engaged time, subscriptions,
-   leads, or sales.
-9. When Bing/Copilot or multi-assistant visibility matters, add Bing Webmaster
-   Tools AI Performance reporting: Citation Share, Intents, Topics, and Compare.
-   Treat citation share as an observational KPI, not traffic share or a ranking
-   score.
+8. Measure Google generative Search through the dedicated Search Console report
+   for AI Overviews and AI Mode, then connect impressions to normal Web search,
+   analytics, and outcomes such as conversions, subscriptions, leads, or sales.
+   Record the separate Search Console include/exclude control and its owner.
+9. When Bing/Copilot or multi-assistant visibility matters, use the currently
+   documented Bing AI Performance measures: total citations, average cited
+   pages, sampled grounding queries, page-level citation activity, and trends.
+   Do not interpret these as ranking, authority, placement, or business value.
 10. For editorial, FAQ, review, forum, or community-heavy work, run a
    source-integrity pass before publishing: primary sources first, named experts
    where possible, no anonymous UGC as sole proof for money or safety claims,
@@ -179,7 +183,8 @@ If a proposal guarantees AI Overview placement, replace it with a scoped program
 - Google AI Search readiness audit.
 - Content and technical implementation backlog.
 - Mythbusting note for stakeholders.
-- Search Console, Bing AI Performance, and analytics measurement plan.
+- Search Console generative AI, Bing AI Performance, citation-support review,
+  and analytics measurement plan.
 - Local/ecommerce readiness checklist.
 - Source-integrity and UGC-risk notes when the content may be cited by AI tools.
 - Agentic-readiness backlog when relevant.

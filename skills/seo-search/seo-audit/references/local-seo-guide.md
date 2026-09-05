@@ -1,224 +1,93 @@
-# Local SEO Guide for African Businesses
+# Local Search and Entity Presence Audit
 
-Comprehensive local SEO strategy for businesses serving specific geographic areas. Critical for "near me" queries, voice search, and AI search platforms that pull from Google Business Profiles.
+Parent skill: [`../SKILL.md`](../SKILL.md)
 
-Source: *The SEO Book* (Tobias Ebner & Levin Granitza), Chapter 3: Local SEO.
+Audit whether a real organisation or location is consistently, accurately, and
+usefully represented for local discovery. Do not rely on universal voice-search
+statistics, review-response deadlines, post quotas, or “near me” formulas.
 
----
+## Scope
 
-## Why Local SEO Matters in Africa
+Record the business model, eligible locations or service areas, markets,
+languages, customer tasks, business-profile owners, website routes, feeds,
+directories, and conversion outcomes. Separate storefronts, offices, service
+areas, franchises, practitioners, and online-only operations.
 
-Internet penetration is growing rapidly across East Africa. More businesses and consumers search online for local services. Ranking for "[service] + [location]" queries captures high-intent traffic from people ready to buy.
+## Website evidence
 
-**Key statistics:**
-- 82% of smartphone users search for local businesses using voice search
-- "Near me" searches have doubled year-over-year
-- Local search results are the primary source for voice assistant answers
-- Google uses Google Business Profiles (GMB) to answer "near me" queries
+- [ ] Name, address or service area, phone, hours, categories, products/services,
+      and contact routes are verified and internally consistent.
+- [ ] Each location page represents a genuine location or materially distinct
+      local service, not a doorway-page variant.
+- [ ] Local pages provide useful evidence such as access instructions, service
+      scope, staff, facilities, local pricing or process, support, and limitations.
+- [ ] Titles, headings, copy, links, canonical, hreflang, and metadata describe
+      the location naturally without geographic stuffing.
+- [ ] Maps, directions, forms, calls, bookings, and messages work accessibly on
+      relevant mobile and desktop contexts.
+- [ ] Location changes, temporary closures, and relocations have redirect,
+      profile, schema, citation, and customer-notification plans.
 
----
+## Business profiles and directories
 
-## Google Business Profile (Critical)
+- [ ] Google Business Profile, Bing Places, merchant/product surfaces, and
+      relevant directories represent the same verified entity.
+- [ ] Organisation ownership and least-privilege access are documented.
+- [ ] Categories, hours, contacts, service areas, products, and media are current.
+- [ ] Feature availability and eligibility are verified for the target market.
+- [ ] Duplicate, practitioner, department, virtual-office, and closed listings
+      have an intentional policy.
+- [ ] Reviews are solicited and answered according to current platform policy,
+      privacy, consent, capacity, and service-recovery needs—never fabricated,
+      gated, or incentivised deceptively.
 
-### Setup Checklist
-1. Claim or create profile at business.google.com
-2. Verify via postcard, phone, or email
-3. Complete ALL fields — incomplete profiles rank lower:
-   - Business name (exact match with website)
-   - Full address (street, city, region, country)
-   - Phone number (local format)
-   - Website URL
-   - Business hours (including holidays)
-   - Primary category (most specific available)
-   - Secondary categories (up to 9 additional)
-4. Add photos: minimum 10 (office exterior, interior, team, work samples)
-5. Write business description using target keywords naturally
+## Structured data
 
-### Ongoing Optimisation
-- Post updates weekly (offers, news, projects, events)
-- Include photos with every post
-- Link posts to relevant website pages
-- Respond to ALL reviews within 24-48 hours (positive and negative)
-- Add products/services with descriptions and pricing
-- Keep business hours accurate (especially holidays)
-- Use Q&A section to pre-answer common customer questions
+Use `LocalBusiness` or the narrowest valid subtype only when a genuine local
+entity exists. Mark up facts visible on the page and supported by the project:
+stable entity ID, name, URL, verified address or service area, contact, hours,
+geo where accurate, and legitimate profile references. Omit unsupported ratings,
+prices, areas, credentials, or locations.
 
-### Review Strategy
-- Request reviews from satisfied clients after project completion
-- Make it easy: provide direct link to Google review page
-- Respond professionally to negative reviews (shows you care)
-- Never buy fake reviews or self-rate (Google detects and penalises)
-- Target steady growth: 2-4 new reviews per month is sustainable
+Schema.org validity does not guarantee a Google feature. Validate vocabulary,
+rendered fact parity, and current consumer eligibility separately.
 
-### Categories for Common Business Types
-| Business Type | Primary Category | Secondary Categories |
-|--------------|-----------------|---------------------|
-| IT Company | Information Technology Company | Software Company, Web Designer |
-| Law Firm | Law Firm | Legal Services, Immigration Attorney |
-| Restaurant | Restaurant | African Restaurant, Takeaway |
-| Healthcare | Hospital / Medical Clinic | Doctor, Medical Centre |
-| Education | School / Educational Institution | Training Centre, Tutoring Service |
-| Tour/Travel | Tour Agency | Travel Agency, Safari Tour Agency |
+## Local authority and corroboration
 
----
+Assess legitimate sector associations, partners, public records, local media,
+events, community work, and customer-approved case evidence for relevance and
+source quality. Do not equate directory quantity with authority or create
+inauthentic mentions.
 
-## NAP Consistency
+## Search and AI measurement
 
-Name, Address, Phone must be **identical** across every platform:
+- analyse local queries, pages, countries, devices, calls, directions, bookings,
+  messages, and qualified outcomes using the property's own baseline;
+- review Google generative AI impressions and Bing AI citation activity where
+  available without calling them local ranking scores;
+- test representative conversational prompts only as repeated observations,
+  recording market, locale, platform, date, citations, factual support, and
+  errors;
+- distinguish visibility, representation accuracy, referral, task completion,
+  and business outcome.
 
-### Where to Check
-- Website header and footer
-- Contact page
-- Structured data (JSON-LD)
-- Google Business Profile
-- Bing Places
-- Social media profiles (Facebook, LinkedIn, Instagram)
-- Online directory listings
-- Email signatures
+## Finding priorities
 
-### Common Mistakes
-- Abbreviating "Street" vs "St." inconsistently
-- Using different phone number formats (+256 vs 0 prefix)
-- Old address on some directories after a move
-- Different business name variations ("Ltd" vs "Limited" vs omitted)
-- Missing suite/floor numbers on some listings
+1. harmful wrong facts, impersonation, closure, or safety information;
+2. ownership loss, duplicate entities, and conflicting locations;
+3. broken booking/contact/accessibility or index controls;
+4. page-profile-feed-schema inconsistency;
+5. weak local usefulness or evidence;
+6. measurement and maintenance gaps.
 
-**Rule**: Pick ONE exact format for name, address, and phone. Use it everywhere. Check quarterly.
+Every finding names evidence, owner, impact, confidence, correction, platform
+dependency, acceptance check, and retest date. Missing account or live-profile
+access is `NOT_ASSESSED`.
 
----
+## Currentness
 
-## Citation Building for East Africa
-
-### Key Directories (Submit to All)
-- Google Business Profile (essential)
-- Bing Places for Business (powers AI search: ChatGPT, Claude, Perplexity)
-- Yellow Pages Uganda / Kenya / Tanzania
-- Uganda Business Directory
-- LinkedIn Company Page
-- Facebook Business Page
-
-### Industry Directories
-| Industry | Directories |
-|----------|------------|
-| Software / IT | Clutch.co, GoodFirms, TopDevelopers.co |
-| Legal | Martindale, local bar association directory |
-| Healthcare | Healthgrades equivalent, medical board directory |
-| Tourism | TripAdvisor, Viator, local tourism board |
-| Education | local education ministry directory |
-
-### Citation Audit Process
-1. Search your business name + city in Google
-2. List every directory where you appear
-3. Compare NAP on each listing against your canonical format
-4. Correct any inconsistencies immediately
-5. Submit to directories where you're not yet listed
-6. Set calendar reminder: re-audit quarterly
-
----
-
-## Schema Markup for Local SEO
-
-### LocalBusiness/ProfessionalService Schema
-```json
-{
-  "@type": "ProfessionalService",
-  "name": "Company Name",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot 123, Example Road",
-    "addressLocality": "Kampala",
-    "addressRegion": "Central Region",
-    "addressCountry": "UG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 0.3476,
-    "longitude": 32.5825
-  },
-  "telephone": "+256-XXX-XXXXXX",
-  "openingHours": "Mo-Fr 08:00-17:00",
-  "areaServed": [
-    { "@type": "Country", "name": "Uganda" },
-    { "@type": "Country", "name": "Kenya" },
-    { "@type": "Country", "name": "Tanzania" }
-  ],
-  "priceRange": "$$"
-}
-```
-
-**Critical fields**: `address`, `geo`, `telephone`, `areaServed`, `openingHours` — missing any of these reduces local ranking potential.
-
----
-
-## Local Landing Pages
-
-### When to Create
-- Business serves multiple distinct cities or regions
-- Each location has different services, staff, or specialisations
-- Targeting "service + city" keywords for multiple locations
-
-### Quality Rules
-- Each page must have **unique content** (not just city name swapped)
-- Include location-specific testimonials and case studies
-- Mention local landmarks, neighbourhoods, or relevant local context
-- Include unique LocalBusiness schema with correct geo-coordinates per location
-- Embed a Google Map for the specific location
-- Include local phone number and address
-
-### What to Avoid
-- Doorway pages: thin pages with only a city name changed (Google penalises these)
-- Duplicate content across location pages
-- Fake addresses or virtual offices listed as physical locations
-- Pages for locations where you have no real presence
-
----
-
-## Content Strategy for Local Ranking
-
-1. **Location in titles**: "Website Design in Kampala, Uganda" (primary keyword + city + country)
-2. **Location in descriptions**: "Serving businesses across East Africa" (region targeting)
-3. **Local case studies**: Mention client locations and local context
-4. **Local testimonials**: Include client names, companies, and locations
-5. **Community involvement**: Highlight local partnerships, events, sponsorships
-6. **Local keyword variations**: "website designers Uganda" alongside "web developer Kampala"
-7. **Multi-language local content**: Location pages in all enabled languages (en, fr, sw)
-
----
-
-## Voice Search & Local SEO
-
-Voice searches are predominantly local. Optimise for how people speak:
-
-### Voice Query Patterns
-| Typed Search | Voice Search Equivalent |
-|-------------|----------------------|
-| "IT consultant Kampala" | "Where can I find an IT consultant near Kampala?" |
-| "website design Uganda" | "Who does website design in Uganda?" |
-| "best restaurant Kampala" | "What's the best restaurant near me?" |
-
-### Optimisation Steps
-1. Complete Google Business Profile (voice assistants pull from GMB)
-2. Use natural question phrases in FAQ page headings
-3. Provide concise answers (30 words for quick snippet, then expanded detail)
-4. Include "near me" context in content naturally
-5. Ensure mobile-first design (voice search = mobile search)
-6. Page loads under 3 seconds (voice results load faster than average)
-
----
-
-## Local SEO Audit Checklist
-
-Run this audit quarterly alongside the main SEO audit:
-
-- [ ] Google Business Profile complete and verified
-- [ ] NAP consistent across website, GMB, directories, and structured data
-- [ ] Geo meta tags present (geo.region, geo.placename, ICBM)
-- [ ] LocalBusiness/ProfessionalService schema with geo-coordinates
-- [ ] Location keywords in page titles, descriptions, and H1 tags
-- [ ] Contact page has full address, phone, map embed
-- [ ] Listed in minimum 5 relevant directories
-- [ ] Reviews: minimum 10 on Google, responded to within 48 hours
-- [ ] Local content updated within last 3 months
-- [ ] Bing Places listing created and verified
-- [ ] Location pages exist for each area served (if multi-location)
-- [ ] All location pages have unique content and schema
+Verify all platform capabilities and policies against first-party sources on the
+day of work. Use the shared claim register at
+[`../../../../docs/source-registers/search-ai-currentness-2026-09-05.json`](../../../../docs/source-registers/search-ai-currentness-2026-09-05.json)
+for search/AI rules; add a project register for local-platform and jurisdictional
+facts.

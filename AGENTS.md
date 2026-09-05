@@ -49,6 +49,8 @@ Do not assume this repository must live under `.claude/skills/`. Resolve local s
 - Keep outputs implementation-oriented. Avoid abstract summaries when a concrete deliverable is expected.
 - Author or normalise active skills against `docs/skill-authoring-standard.md` and start new entries from `templates/skill/SKILL.md`.
 - Before releasing any skill-engine change, run the zero-debt contract validator, routing smoke test, registry validator, tests, canonical per-skill quick validator, and canonical engine scanner. A missing or unavailable check is not a pass.
+- When search, AI-answer visibility, crawler policy, structured data, or
+  webmaster reporting changes, also run `scripts/validate-search-doctrine.py`.
 
 ## Routing
 
@@ -62,10 +64,15 @@ Use these skills as the default router:
 - `design-system`: Typography, palette, motion, spacing, and visual system decisions.
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
-- `seo`: Implementation of metadata, schema, sitemaps, and crawler-facing configuration.
+- `seo`: Implementation of metadata, schema, sitemaps, crawler controls, and
+  the layered cross-platform discoverability model: SEO foundation, answer
+  clarity, probabilistic GEO, entity presence, and post-discovery SXO.
 - `google-ai-search`: Official Google Search guidance for AI Overviews, AI Mode,
   AEO/GEO mythbusting, Search Console measurement, local/ecommerce readiness,
   and agentic-experience preparation.
+- Do not route ambiguous “AIO” or model-training placement as a separate ranking
+  system. Separate training, live retrieval, citation, representation, referral,
+  and conversion outcomes.
 - `deploy`: Build verification, deployment artifacts, and release readiness. Owns the canonical CI pipeline at `templates/ci/website.yml` and its troubleshooting reference.
 - `accessibility-audit`: WCAG 2.2 AA enforcement gate — axe-core, manual checklist, screen-reader smoke scripts. Runs in the canonical CI pipeline as a hard gate.
 - `visual-qa`: Rendered-output review loop — Playwright screenshot diff, heading/overflow/empty-section assertions, AI-slop scan. Runs in the canonical CI pipeline as a hard gate.

@@ -1,469 +1,202 @@
-# AI Search Engine Optimization (GEO) — 2026 Edition
-
-Scope note: this reference covers broad AI-search visibility across multiple
-platforms. For Google's generative AI features in Search, use
-`../../google-ai-search/SKILL.md`; Google explicitly frames AI Overviews and AI
-Mode optimization as foundational SEO, not a separate AEO/GEO hack layer.
-
-## Understanding AI-Powered Search Architecture
-
-Modern AI search operates on a dual architecture:
-
-### 1. Pre-trained Knowledge Base
-
-AI models encode vast information during pre-training, creating an implicit understanding of source authority and credibility.
-
-**Characteristics:**
-- **Source:** Training data (web crawl, books, articles up to cutoff date)
-- **Update Frequency:** Static until next model version
-- **Cutoff Lag:** 6-24 months behind current date
-- **Authority Signal:** Frequency in high-quality training sources
+# Search and AI Discoverability — 2026 Operating Model
+
+Parent skill: [`../SKILL.md`](../SKILL.md)
+
+This reference governs cross-platform search and AI-answer discoverability. Use
+[`../../google-ai-search/SKILL.md`](../../google-ai-search/SKILL.md) for Google-specific
+generative Search decisions. Verify platform capabilities and crawler policies
+against current first-party documentation before implementation.
 
-**Implication:** Long-term authority building through content cited extensively across the web has better chances of being embedded in the model's memory.
-
-### 2. Real-Time Search Augmentation (RAG)
-
-AI systems perform live searches at inference time to stay relevant and accurate, issuing search queries based on user intent and integrating findings with their own knowledge.
-
-**Process:**
-1. Issue search queries based on user intent
-2. Read content from web and connected sources
-3. Evaluate sources for relevance and authority
-4. Integrate findings with own knowledge
-5. Formulate response with citations
+## Doctrine
+
+SEO, AEO, GEO, AIO, and SXO are not five equivalent ranking systems.
 
-**Implication:** You can be discovered regardless of pre-training representation if you're visible and credible when AI systems search.
+- **SEO** is the technical, content, and authority foundation for discovery,
+  crawling, indexing, retrieval, and conventional search presentation.
+- **AEO** is a useful label for making answers clear and reusable. It is not a
+  separate Google ranking system.
+- **GEO** is an emerging, probabilistic practice concerned with retrieval,
+  citation, representation, and contribution to generated answers.
+- **AIO** is ambiguous. Do not use it in a client artefact without defining it.
+  Never promise placement in model-training data.
+- **Entity and knowledge presence** is the preferred operational replacement:
+  create a consistent, verifiable public record for the organisation, people,
+  products, services, locations, and claims.
+- **SXO** is the post-discovery experience and conversion layer. It does not
+  automatically improve ranking.
 
-## Major AI Search Platforms
-
-### Google AI Overviews / AI Mode
+The operating model is layered:
 
-Use `../../google-ai-search/SKILL.md` for Google-specific AI Search work.
-Google's official guidance treats visibility in AI Overviews and AI Mode as an
-extension of core Search, not a separate GEO channel with separate technical
-requirements.
-
-| Feature | Description |
-|---------|-------------|
-| **Search Provider** | Google Search (native) |
-| **Underlying systems** | Core Search ranking and quality systems |
-| **Retrieval pattern** | RAG over Google's Search index; query fan-out may run related searches |
-| **Eligibility floor** | Indexed and eligible to appear in Google Search with a snippet |
-| **Guarantee** | No guarantee of crawling, indexing, serving, or AI-feature inclusion |
-
-**Optimization Focus:**
-- Keep foundational SEO strong: crawlability, indexability, internal links,
-  canonical clarity, page experience, and text availability.
-- Create unique, non-commodity, people-first content with first-hand
-  experience, original proof, useful structure, and high-quality media.
-- Keep Google Business Profile and Merchant Center data current where relevant.
-- Use structured data for rich-result eligibility and clarity only when it
-  matches visible content.
-- Do not rely on `llms.txt`, chunking, special AI markup, artificial long-tail
-  pages, or inauthentic mentions for Google AI Search.
-
-### OpenAI ChatGPT with Bing Search
-
-| Feature | Description |
-|---------|-------------|
-| **Search Provider** | Microsoft Bing |
-| **Citation Style** | Footnoted web sources with "Sources" sidebar |
-| **Content Preference** | Authority seeker—favors high-authority, fact-focused sources |
-| **Research Mode** | Executes hundreds of searches autonomously |
-| **Partnerships** | Direct feeds from Le Monde, Reuters, other publishers |
-
-**Optimization Focus:**
-- Heavily favors Wikipedia, reputable news outlets, reference sites
-- Rarely cites e-commerce or company blogs
-- Optimize for Bing's algorithms
-- Build relationships with media partnerships where relevant
-
-### Anthropic Claude with Web Search
-
-| Feature | Description |
-|---------|-------------|
-| **Search Provider** | Microsoft Bing |
-| **Citation Style** | Inline citations within responses |
-| **Content Preference** | Verifiable information with clear citation practices |
-| **Research Mode** | Agentic, progressive searches based on earlier results |
-| **Emphasis** | Source transparency |
-
-**Optimization Focus:**
-- Clear, verifiable information with transparent sourcing
-- Detailed author profiles with credentials
-- Comprehensive topic coverage
-
-### Perplexity.ai
-
-| Feature | Description |
-|---------|-------------|
-| **Search Provider** | Microsoft Bing |
-| **Citation Style** | Footnotes linking to each fact's source |
-| **Content Preference** | Expert curator—often quotes expert review sites |
-| **Domain Preference** | Established domains (10+ years) |
-| **Research Mode** | Multiple iterative searches across hundreds of sources |
-
-**Optimization Focus:**
-- Build domain authority over time
-- Create expert-level content that becomes reference material
-- Participate in expert forums and review sites
-
-## Critical Insight: The Bing Factor
-
-**Most AI platforms (ChatGPT, Perplexity, Claude) use Microsoft Bing as their search backbone.**
-
-This means: **Optimizing for Bing's algorithms is now the most important way to improve visibility across multiple AI search platforms.**
-
-### Bing Optimization Priority
-
-1. **Ensure Bing indexation** — Verify in Bing Webmaster Tools
-2. **Optimize for Bing's ranking factors:**
-   - Trustrank (based on quality links and mentions)
-   - Domain age (older = more trusted)
-   - Freshness (recent updates matter)
-   - Entity associations (schema + mentions)
-3. **Submit to Bing:** Use Bing Webmaster Tools to verify and submit sitemap
-
-## E-E-A-T for AI Visibility
-
-Experience, Expertise, Authoritativeness, Trustworthiness are crucial for AI visibility.
-
-### Optimization by Element
-
-**Experience:**
-- Encourage content from practitioners with direct experience
-- Have experts share original insights, cases, examples
-- Label content with author expertise and background
-- Include original photos, screenshots, methodology details
-
-**Expertise:**
-- Showcase credentials through detailed author bios
-- Implement schema markup for relevant expertise
-- Include qualifications, certifications, years of experience
-- Link to professional profiles (LinkedIn, industry directories)
-
-**Authoritativeness:**
-- Earn quality backlinks from respected industry sites
-- Get mentioned by other authorities (news, academic papers)
-- Build Google Knowledge Graph inclusion
-- Join industry associations and display memberships
-- Secure speaking engagements and conference mentions
-
-**Trustworthiness:**
-- Ensure accuracy by citing sources
-- Keep content updated with current information
-- Display clear contact information and physical address
-- Maintain HTTPS security
-- Include privacy policy and terms of use
-- Be transparent about affiliate relationships
-
-### Technical E-E-A-T Implementation
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "author": {
-    "@type": "Person",
-    "name": "Dr. Sarah Johnson",
-    "description": "Board-certified specialist with 15 years experience",
-    "sameAs": "https://linkedin.com/in/drsarahjohnson"
-  },
-  "reviewedBy": {
-    "@type": "Person",
-    "name": "Prof. David Wilson",
-    "description": "Head of Research at University",
-    "sameAs": "https://scholar.google.com/citations?user=xxx"
-  },
-  "datePublished": "2026-02-17",
-  "dateModified": "2026-02-17"
-}
-```
-
-## Content Strategy for AI-First Search
-
-### Shift from Keywords to Intent
-
-| Traditional SEO | AI-First SEO |
-|-----------------|--------------|
-| Target specific keywords | Target topics and questions |
-| Optimize for rankings | Optimize for citations |
-| Create individual pages | Create content clusters |
-| Focus on text | Use multiple formats |
-| Measure clicks | Measure visibility |
-
-### The Inverted Pyramid Structure
-
-Write content that's AI-quotable:
-
-```
-1. Direct Answer (1-2 paragraphs)
-   "Yes—our platform integrates with 50+ tools including Salesforce via REST API."
-
-2. Supporting Details
-   Evidence, examples, data, citations
-
-3. Context and Nuance
-   Edge cases, exceptions, deeper explanations
-
-4. Related Questions
-   What users might ask next
-```
-
-### Question-Driven Content Architecture
-
-Mine questions from:
-- Google "People Also Ask"
-- Industry forums and Reddit
-- Customer support tickets
-- Sales team inquiries
-- Site internal search queries
-
-Create content titles that are explicit questions:
-- ✅ "How Do I Integrate Your SaaS with Salesforce?"
-- ❌ "SaaS Integration Guide"
-
-### Topic Cluster Architecture for AI Discovery
-
-```
-Pillar Page: "Complete Guide to AI Search Optimization"
-    ├── Cluster: "Understanding AI Search Algorithms"
-    │   ├── "How RankBrain Works"
-    │   ├── "BERT and Natural Language Processing"
-    │   └── "The Role of MUM in Search"
-    ├── Cluster: "Technical SEO for AI"
-    │   ├── "Schema Markup Best Practices"
-    │   ├── "Site Architecture for AI Crawling"
-    │   └── "Core Web Vitals in 2026"
-    └── Cluster: "Content Strategy for AI Visibility"
-        ├── "Writing for Conversational Search"
-        ├── "E-E-A-T Optimization Guide"
-        └── "Multimodal Content Strategy"
-```
-
-**Benefits:**
-- AI understands your topical authority
-- Internal linking networks for AI crawling
-- Comprehensive coverage of related subtopics
-- Increased chances of being cited across multiple queries
-
-### Content Types Most Valued by AI
-
-Based on analysis of 40,000 AI responses:
-
-| Content Type | Citation Frequency |
-|--------------|-------------------|
-| Product-related content | 46-70% |
-| Expert reviews and comparisons | High (commercial intent) |
-| Educational/How-to content | High (informational) |
-| News and current events | High (time-sensitive) |
-| Academic/research content | High (technical) |
-
-## The AI-Citable Article Template
-
-This structure consistently earns AI citations across ChatGPT, Perplexity, Claude, and Gemini. Based on real-world testing: 387 AI citations from ~20 articles in 60 days.
-
-### Structure (Every Article)
-
-1. **H1** — exact match or close variant of target keyword
-2. **Intro** — 150 words max. State the problem, promise the answer. No throat-clearing
-3. **H2 sections** — each one answers a sub-question a human would actually ask. Use natural question phrasing ("How does X work?" not "X Overview")
-4. **Comparison table** — if applicable. AI tools love structured, extractable data (see below)
-5. **FAQ section when users need it** — answer real buyer questions in visible content. Do not claim that `FAQPage` markup drives AI citations; Google ended its FAQ rich-result feature in May 2026.
-6. **Conclusion** — clear CTA, but soft. Answer density matters more than selling
-
-**Article length:** 2,000–2,500 words. Google and AI platforms reward **coverage**, not length. Padding dilutes citation density.
-
-**Answer density rule:** Every H2 section should open with a **direct 1–2 sentence answer** before expanding into detail. AI platforms extract from the first paragraph under each heading.
-
-### Comparison Tables for AI Extraction
-
-AI platforms preferentially extract and cite structured comparison data. A comparison table is more likely to be cited than the same information in prose.
-
-**HTML table format** (preferred over markdown in production):
-```html
-<table>
-  <thead>
-    <tr><th>Feature</th><th>Option A</th><th>Option B</th><th>Option C</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Price</td><td>$49/mo</td><td>$99/mo</td><td>$199/mo</td></tr>
-    <tr><td>Users</td><td>5</td><td>25</td><td>Unlimited</td></tr>
-  </tbody>
-</table>
-```
-
-**When to include comparison tables:**
-- "[X] vs [Y]" articles — always
-- "Best [category]" roundups — always
-- Feature explanations with multiple options — when 3+ items compared
-- Pricing and plan comparisons — always
-
-**Table rules for AI citability:**
-- Clear column headers describing each option
-- Rows that answer one specific dimension per row
-- Consistent data types per column (all prices, all yes/no, all numbers)
-- No merged cells or nested tables — AI parsers struggle with complexity
-- Include a summary row or "Best for" row at the bottom
-
-**Schema support:** No dedicated Table schema exists, but wrapping comparison content in an Article with `about` and `mentions` properties helps AI platforms understand context.
-
-## Multimodal Content Optimization
-
-AI models increasingly consume content beyond text:
-
-| Format | Optimization |
-|--------|-------------|
-| **Images** | Descriptive filenames, comprehensive alt text, surrounding context |
-| **Video** | Full transcripts, captions, timestamps, detailed descriptions |
-| **Audio/Podcasts** | Complete transcripts, show notes, key takeaways |
-| **Infographics** | Text summaries, data tables, alt text |
-| **Presentations** | Slide text, speaker notes, downloadable PDFs |
-
-**Key Insight:** When AI has vision capabilities (GPT-4o, Gemini Pro 2.5), it can extract information from images and diagrams directly. Providing text alternatives ensures accessibility to all AI systems.
-
-## Structured Data for AI Comprehension
-
-### FAQ Schema for Direct Extraction
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "How does AI search impact SaaS visibility?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "AI search fundamentally changes SaaS visibility by prioritising authoritative content..."
-    }
-  }]
-}
-```
-
-### HowTo Schema for Instructional Content
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Optimize for AI Search",
-  "step": [{
-    "@type": "HowToStep",
-    "text": "Implement comprehensive schema markup",
-    "url": "https://www.example.com/guide#step1"
-  }]
-}
-```
-
-## Content Freshness for AI Visibility
-
-AI systems prefer fresh information, especially for:
-- News and current events
-- Product information and pricing
-- Industry trends and statistics
-- Time-sensitive queries
-
-**Best Practices:**
-- Review and update cornerstone content quarterly
-- Add "last updated" dates to all content
-- Substantially update content rather than minor tweaks
-- Create evergreen content that stays relevant
-- Remove or redirect outdated content
-
-## Long-Tail, Conversational Query Targeting
-
-Query volume for 5+ word searches grew 1.5X faster than shorter queries.
-
-**Query Evolution:**
-- ❌ "channel manager hotel"
-- ✅ "What's the best channel manager for my boutique hotel in The Rocks, Sydney?"
-
-**Strategy:** Target long-tail, high-intent keywords with much greater specificity than before. Create content that directly answers conversational questions.
-
-## AI-Specific Metrics to Track
-
-### New Metrics Beyond Traditional SEO
-
-| Metric | How to Track |
-|--------|-------------|
-| **AI referral traffic** | Filter analytics for: chat.openai.com, bing.com/chat, perplexity.ai, claude.ai |
-| **AI citation count** | Manual sampling, specialized tools (Mentions, Profound) |
-| **AI visibility score** | Composite of AI presence across platforms |
-| **Brand mention volume** | Brand monitoring tools, social listening |
-| **Share of AI voice** | Your presence vs competitors in AI responses |
-
-### Setting Up AI Traffic Tracking
-
-```javascript
-// Google Analytics 4 - Create segment for AI traffic
-Source: chat.openai.com
-Source: bing.com/chat
-Source: perplexity.ai
-Source: claude.ai
-Source: gemini.google.com
-```
-
-### Monitoring AI Citations
-
-1. **Manual sampling:** Periodically query AI platforms for key terms
-2. **Social listening:** Monitor discussions about your brand
-3. **Alert tools:** Google Alerts for brand mentions
-4. **Specialized platforms:** Mentions, Profound, and emerging tools
-5. **Customer feedback:** Add "How did you hear about us?" with AI option
-
-## Comparison: AI Platforms vs Traditional SEO
-
-| Aspect | Traditional SEO | AI Search |
-|--------|-----------------|-----------|
-| **Primary Signal** | Links and ranking factors | Mentions + pre-training representation |
-| **Citation Model** | First link gets click | Content appears in answer |
-| **Traffic Destination** | Website visit | Often stays in chat interface |
-| **Update Speed** | Weeks to months | Real-time to daily |
-| **Citation Quality** | Single link | Multiple sources evaluated |
-| **Authority Signal** | Domain authority | E-E-A-T signals |
-
-## Practical GEO Checklist
-
-### Content Optimization
-- [ ] Create question-driven content titles
-- [ ] Use inverted pyramid structure (direct answer first)
-- [ ] Build topic clusters with pillar pages
-- [ ] Implement FAQ schema only where the visible page genuinely contains FAQ content
-- [ ] Add HowTo schema for instructional content
-- [ ] Optimize video transcripts and alt text
-- [ ] Ensure freshness indicators (last updated dates)
-
-### Authority Building
-- [ ] Implement comprehensive author bios with credentials
-- [ ] Add Person schema with professional links
-- [ ] Earn mentions from authoritative sources
-- [ ] Participate in industry communities
-- [ ] Secure speaking engagements and conference citations
-- [ ] Build review site presence (G2, Capterra, industry-specific)
-
-### Technical Implementation
-- [ ] Verify Bing indexation
-- [ ] Submit sitemap to Bing Webmaster Tools
-- [ ] Implement E-E-A-T schema markup
-- [ ] Optimize for Bing's ranking factors
-- [ ] Ensure mobile optimization
-- [ ] Maintain excellent Core Web Vitals
-- [ ] Set up AI referral traffic tracking
-
-### Measurement
-- [ ] Track AI referral traffic monthly
-- [ ] Sample key queries in major AI platforms
-- [ ] Monitor brand mentions across web
-- [ ] Review GA4 conversion paths that include AI touchpoints
-- [ ] Update competitive AI visibility analysis quarterly
-
-## Key Takeaways
-
-1. **AI search is real, but SEO fundamentals still matter** — Strong SEO foundations create visibility across both traditional and AI surfaces
-2. **Bing optimization is now critical** — Most AI platforms use Bing; optimizing for Bing helps multiple platforms
-3. **E-E-A-T is your moat** — Low-quality content gets filtered; high E-E-A-T increases AI selection likelihood
-4. **Authority compounds** — Citations, mentions, and backlinks across the web increase AI visibility
-5. **Multimodal content wins** — AI consumes text, images, video, and audio; optimize all formats
-6. **Intent-driven strategy beats keyword chasing** — AI systems understand intent; create comprehensive answers
-7. **Measurement must evolve** — Add AI-specific metrics to traditional SEO tracking
+1. technical availability and index eligibility;
+2. intent-aligned, useful content;
+3. answer clarity and evidence;
+4. entity consistency and supported structured data;
+5. legitimate distribution and corroboration;
+6. platform-specific retrieval and citation observation;
+7. accessible task completion and conversion;
+8. measurement, learning, and substantive maintenance.
+
+## Keep training and retrieval separate
+
+Model training and live retrieval are different systems with different controls.
+
+| Concern | Publisher control | Appropriate outcome |
+|---|---|---|
+| Potential model training | Platform-specific training crawler policy where offered | A documented allow/block decision; no visibility promise |
+| Automatic search retrieval | Search crawler access, indexability, quality, and platform inclusion controls | Eligibility for retrieval or citation; never guaranteed inclusion |
+| User-triggered fetching | Accessible pages and interfaces; platform-specific user-agent behaviour | Successful task completion when a user asks an agent to visit |
+
+Do not treat presence in training data as a ranking, visibility KPI, or reliable
+route to current brand representation. Prefer controllable, observable retrieval
+and public-source quality.
+
+## Cross-platform workflow
+
+### 1. Establish availability
+
+- return the intended HTTP status;
+- keep priority information publicly crawlable and indexable;
+- align canonical, sitemap, robots, noindex, and snippet controls;
+- expose meaningful internal links in rendered HTML;
+- make important text available without fragile client-side execution;
+- provide transcripts or visible summaries for information locked in media;
+- test mobile, accessibility, security, and real-user performance.
+
+Eligibility is not an inclusion guarantee.
+
+### 2. Build an intent architecture
+
+Map each priority user task to the page best able to satisfy it. Separate page
+roles where user needs materially differ, but do not manufacture near-duplicate
+pages for keyword variants or speculative query fan-out.
+
+Each priority page records:
+
+- audience and job;
+- search or discovery intent;
+- primary entity and claim set;
+- proof burden and source owner;
+- internal-link role;
+- next useful action;
+- measurement event;
+- update trigger.
+
+### 3. Make answers useful and extractable
+
+Use the shortest complete answer that preserves conditions and exceptions. Clear
+headings, definitions, steps, comparisons, and tables can improve comprehension
+and make passages reusable, but there is no universal paragraph length, heading
+formula, or machine-chunking rule.
+
+A reusable claim should identify its subject, scope, period, jurisdiction, and
+limitations without depending on vague pronouns or surrounding promotional copy.
+
+### 4. Publish evidence worth retrieving
+
+Prefer primary sources, original data, methods, product documentation, versioned
+specifications, measurable case studies, and practitioner experience. For a
+material result, disclose the measurement owner, period, sample, method, and
+limitations. Never invent statistics, reviews, credentials, dates, or experience.
+
+Freshness is query-dependent. Update dates only after a substantive change such
+as corrected facts, current procedures, new evidence, changed product behaviour,
+or repaired references. Preserve publication and modification history.
+
+### 5. Establish entity and knowledge presence
+
+Keep legal and trading names, descriptions, locations, contacts, products,
+services, authors, and policies consistent across owned properties and legitimate
+third-party profiles. Use the narrowest accurate Schema.org types and only facts
+visible on the page or otherwise supported by project evidence.
+
+Wikipedia is not a controlled company profile. Do not create or edit an article
+for promotion, manufacture notability, or conceal a conflict of interest. Route
+corrections through the platform's current policies and independent sources.
+
+### 6. Govern crawlers by purpose
+
+Use [`llms-txt-and-ai-crawlers.md`](llms-txt-and-ai-crawlers.md). Record separate
+decisions for search inclusion, potential training, and user-triggered access.
+Re-check first-party bot documentation and published IP ranges at implementation
+time. Do not copy a global allowlist into every project.
+
+### 7. Measure the whole funnel
+
+| Stage | Examples | Interpretation limit |
+|---|---|---|
+| Crawl and index | response codes, blocked URLs, canonical/index state | Eligibility, not visibility |
+| Conventional search | impressions, queries, positions, clicks | Platform-specific observations |
+| Generative search | impressions, cited URLs, citation counts, grounding queries | Citation is not ranking, accuracy, or business value |
+| Representation | claim fidelity, source support, omitted qualifications | Requires human review |
+| Experience | task completion, meaningful engagement, accessibility defects | Define by page job |
+| Conversion | qualified enquiries, demos, sign-ups, revenue, assisted outcomes | Respect consent and attribution limits |
+| Downstream quality | lead quality, retention, support burden, satisfaction | Needs CRM or operational reconciliation |
+
+For ChatGPT search referrals, monitor the currently documented
+`utm_source=chatgpt.com` parameter. For Google and Bing, use the current official
+report definitions rather than assumed dimensions.
+
+### 8. Test probabilistic AI visibility responsibly
+
+An AI-visibility observation records:
+
+- platform, surface, model or product label where visible, date, market, locale,
+  signed-in state, and device;
+- a versioned prompt set with natural paraphrases and control prompts;
+- repeated runs rather than one screenshot;
+- whether search was invoked;
+- cited and linked URLs;
+- whether each citation supports the generated claim;
+- material omissions, contradictions, and uncertainty;
+- referral and conversion evidence where available.
+
+Separate at least these outcomes: discovery, retrieval, citation, prominence,
+factual contribution, fidelity, referral, and business outcome. Do not infer one
+from another. Current research is useful for hypotheses, not universal ranking
+rules; cross-platform causal evidence remains limited.
+
+## Structured data boundary
+
+Structured data can help eligible consumers understand page entities and can
+qualify pages for supported rich results. It is not special AI markup and does
+not guarantee a rich result, citation, or ranking.
+
+- Google deprecated HowTo rich results in 2023.
+- Google stopped showing FAQ rich results from 7 May 2026.
+- FAQ content may still help users; `FAQPage` markup requires a documented
+  non-Google consumer and visible matching content.
+- Validate Schema.org syntax separately from eligibility for a current Google
+  search feature.
+
+## Priority order
+
+1. Resolve crawling, indexing, canonical, rendering, and security failures.
+2. Build clear product, service, category, documentation, and comparison pages.
+3. Add original local or sector expertise and auditable proof.
+4. Establish entity consistency and accurate structured data.
+5. Permit only the search crawlers the owner intends to support.
+6. Improve answer clarity without degrading human writing.
+7. Earn legitimate independent corroboration.
+8. Improve the post-arrival task and conversion experience.
+9. Observe AI citations and representation with a repeatable protocol.
+10. Reallocate effort only when visibility connects to a useful outcome.
+
+## Reject these tactics
+
+- mass-produced AI articles or fan-out page factories;
+- arbitrary word counts, question-heading quotas, or artificial chunking;
+- schema properties absent from visible, verified facts;
+- indiscriminate FAQ or HowTo markup;
+- date changes without substantive revision;
+- `llms.txt` sold as a Google or universal AI-ranking lever;
+- training-data placement services presented as controllable visibility work;
+- manufactured Wikipedia, forum, review, or social mentions;
+- one-run chatbot mention counts presented as ranking evidence;
+- guarantees of indexing, ranking, citation, recommendation, or conversion.
+
+## Current evidence boundary
+
+The claim-level currentness record for this doctrine is
+[`../../../../docs/source-registers/search-ai-currentness-2026-09-05.json`](../../../../docs/source-registers/search-ai-currentness-2026-09-05.json).
+Re-verify time-sensitive platform claims by 2026-12-05 or sooner when a provider
+changes its crawler, reporting, structured-data, or inclusion controls.

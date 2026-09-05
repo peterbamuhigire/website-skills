@@ -1,208 +1,110 @@
-# SEO Measurement Guide — KPI Framework
+# Search and AI Discoverability Measurement Guide
 
-How to measure, monitor, and demonstrate SEO success. This framework defines the key performance indicators, benchmarks, and monitoring schedule for every website we build.
+Parent skill: [`../SKILL.md`](../SKILL.md)
 
-Source: *The SEO Book* (Tobias Ebner & Levin Granitza), Chapter 7: Measuring and Demonstrating the Success of SEO.
+Measure the chain from technical eligibility to business or public-service
+outcome. Never use universal traffic-growth, CTR, bounce, conversion, ranking,
+review-count, or payback benchmarks as portable acceptance criteria.
 
----
+## Measurement hierarchy
 
-## The SEO Success Chain
+| Stage | Core question | Evidence examples | Do not infer |
+|---|---|---|---|
+| Availability | Can systems and users reach the intended page? | statuses, robots, render, internal links, sitemap | Indexing or quality |
+| Index state | Is the intended canonical eligible and selected? | webmaster reports, URL inspection, canonical sample | Ranking or demand |
+| Conventional visibility | Where and when is the site shown? | impressions, queries, pages, country, device, position | Causality or conversion |
+| Generative visibility | Is the page shown or cited in AI features? | Google generative impressions, Bing citations, cited URLs | Rank, fidelity, or value |
+| Representation | Is the answer supported and accurate? | claim-citation review, omissions, contradiction log | Referral or persuasion |
+| Referral | Did a person arrive from the surface? | consent-aware source/medium and landing page | Full exposure or causality |
+| Experience | Did the visitor complete the page's task? | task success, errors, form completion, accessibility | Revenue without reconciliation |
+| Outcome | Did the visit contribute to a useful result? | qualified leads, sales, retention, satisfaction, service completion | Sole-channel credit |
 
-SEO success flows through a measurable chain. Each link must be tracked:
+## Metric contract
 
-```
-Rankings → Impressions → Clicks → Traffic → Engagement → Conversions → Revenue
-```
+Every KPI or diagnostic records:
 
-If any link is weak, the chain breaks. Diagnose by working backwards from the goal.
+- definition and formula;
+- grain and segmentation;
+- source and property;
+- owner and decision it informs;
+- collection and processing latency;
+- comparison period and seasonality treatment;
+- consent, identity, retention, and access controls;
+- known aggregation, sampling, privacy, and attribution limitations;
+- baseline, decision band, and review trigger;
+- quality status and reconciliation evidence.
 
----
+## Google Search Console
 
-## Traffic Metrics
+Analyse normal Web search by page, query class, country, device, and comparable
+period. Position and CTR are diagnostics, not stable universal targets; result
+features, brand demand, intent, device, and query mix change their meaning.
 
-### Organic Visits
-- **What**: Number of visitors arriving from organic search results (not paid ads)
-- **Where**: Google Analytics 4 → Acquisition → Traffic Source = Organic Search
-- **Benchmark**: Healthy sites see organic traffic grow 5-15% month-over-month after launch
-- **Warning**: If organic traffic drops >20% in one month, investigate immediately (algorithm update, crawl error, penalty)
+As of 31 August 2026, the dedicated generative AI report covers AI Overviews and
+AI Mode impressions by page, country, device, and date. It does not expose a
+universal rank, prompt list, citation fidelity, or downstream outcome. Record the
+separate property include/exclude control and inheritance state.
 
-### Traffic by Source
-| Source | What It Tells You |
-|--------|-------------------|
-| Google organic | Primary search visibility |
-| Bing organic | AI search platform visibility (ChatGPT, Perplexity, Claude use Bing) |
-| Direct | Brand awareness and repeat visitors |
-| Referral | Off-page authority and partnerships |
-| Social | Social media effectiveness |
+## Bing Webmaster Tools
 
-**Important**: Track Google and Bing organic traffic separately. Bing traffic indicates AI search platform visibility.
+Bing AI Performance is a public-preview report. Use its currently documented
+measures: total citations, average cited pages, sampled grounding queries,
+page-level citation activity, and trends. Microsoft states these do not indicate
+rank, authority, placement, or a page's role in an answer.
 
----
+## Assistant observation protocol
 
-## Engagement Metrics
+For ChatGPT, Perplexity, Claude, Gemini, Copilot, or another assistant:
 
-### Bounce Rate Benchmarks
-| Page Type | Acceptable Bounce Rate | Concerning |
-|-----------|----------------------|------------|
-| Homepage | 40-60% | >70% |
-| Service pages | 30-50% | >60% |
-| Blog articles | 60-80% | >85% |
-| Contact page | 40-60% | >70% |
-| Landing pages | 30-50% | >65% |
+1. freeze a representative prompt set and natural paraphrases;
+2. record platform, surface, visible product/model label, market, locale,
+   signed-in state, device, and date;
+3. use repeated runs and controls;
+4. record whether search occurred and every cited/linked URL;
+5. verify whether each citation supports the answer at claim level;
+6. log material omissions, contradictions, hallucinations, and uncertainty;
+7. match referrals and qualified outcomes where consent and data permit;
+8. report distributions and instability rather than one screenshot.
 
-**Context matters**: A high bounce rate on a blog article is not always bad — the reader may have found their answer. But a high bounce rate on a service page means visitors are not finding what they expected.
+Separate discovery, retrieval, citation, prominence, factual contribution,
+fidelity, referral, and outcome. A change in one is not proof of a change in the
+others.
 
-### Time on Site (Dwell Time)
-- **Good**: 2-4 minutes average session duration
-- **Concerning**: Under 30 seconds (visitors leaving immediately)
-- **What affects it**: Content quality, page load speed, search intent match, readability
+## Diagnostic comparisons
 
-### Pages per Session
-- **Good**: 2-4 pages per session
-- **Indicates**: Effective internal linking and engaging content
-- **Low count**: Check navigation, CTAs, and content cross-linking
+Use the site's own history, matched route/query cohorts, pre-declared experiment,
+or a justified external benchmark with source, definition, market, and date.
+When a metric changes, test competing explanations:
 
----
+- demand or seasonality;
+- campaign and brand activity;
+- tracking, consent, attribution, or report changes;
+- crawl, render, canonical, index, or migration defects;
+- content, internal-link, offer, or conversion changes;
+- platform update or feature availability;
+- competitor and result-layout change.
 
-## Conversion Metrics
+Do not label a decline a penalty without evidence.
 
-### Conversion Rate
-**Formula**: `(Conversions ÷ Total Visitors) × 100`
+## Alerts
 
-| Business Type | Average Conversion Rate | Good |
-|---------------|------------------------|------|
-| Professional services | 2-5% | >5% |
-| E-commerce | 1-3% | >3% |
-| B2B / SaaS | 2-5% | >5% |
-| Local business | 3-8% | >8% |
+Alert thresholds come from business impact and observed variance. Immediate
+investigation is appropriate for release-linked widespread 4xx/5xx, accidental
+noindex/robots blocks, broken canonicals, failed conversions, security incidents,
+or analytics loss. Visibility movement without technical breakage normally needs
+comparable data and a recorded hypothesis before remediation.
 
-### What Counts as a Conversion
-Define before launch — every site must track at least one:
-- Contact form submission
-- Phone call initiated (via `tel:` link click)
-- Email click (via `mailto:` link click)
-- CTA button click (primary action)
-- Newsletter signup (if applicable)
-- Quote request or booking
+## Reporting shape
 
-### Cost-per-Acquisition (CPA)
-**Formula**: `Total Marketing Spend ÷ Number of Conversions`
+1. Answer the named decision first.
+2. State evidence period, coverage, quality, and missing sources.
+3. Show the funnel stages separately.
+4. Explain material changes with confidence and competing hypotheses.
+5. Name owned actions, guardrails, rollback, and re-measurement date.
+6. Preserve `NOT_ASSESSED` where account, prompt, render, CRM, or production
+   evidence is unavailable.
 
-Compare CPA across channels to prove SEO ROI:
-- SEO (organic) — typically lowest CPA after initial investment
-- Paid search (Google Ads) — immediate but ongoing cost
-- Social media — brand building, harder to attribute directly
-- Directories — moderate, depends on industry
+## Currentness
 
----
-
-## Ranking & Visibility Metrics
-
-### Google Search Console Metrics
-| Metric | What It Means | Where to Find |
-|--------|---------------|---------------|
-| Impressions | How often your pages appeared in search results | GSC → Performance → Search Results |
-| Clicks | How many times users clicked through to your site | GSC → Performance → Search Results |
-| CTR (Click-Through Rate) | Clicks ÷ Impressions — how compelling your titles/descriptions are | GSC → Performance → Search Results |
-| Average Position | Your average ranking position for tracked queries | GSC → Performance → Search Results |
-
-### CTR Benchmarks by Position
-| Ranking Position | Expected CTR |
-|-----------------|-------------|
-| Position 1 | 32.5% |
-| Position 2 | 17.6% |
-| Position 3 | 11.4% |
-| Position 4-10 | 2-8% |
-| Page 2+ | <1% |
-
-**Implication**: If a page ranks position 1 but has CTR well below 32%, the title or description needs improvement. If a page ranks position 5+ but has high CTR, it has strong titles and may climb with more authority.
-
-### Brand vs Non-Brand Search
-Track separately in Google Search Console:
-- **Brand queries**: Searches including your company/product name — measure brand awareness
-- **Non-brand queries**: Generic searches like "website designer Uganda" — measure SEO effectiveness
-- Healthy sites show growth in both categories over time
-
----
-
-## Off-Page Metrics
-
-### Domain Authority (DA) / Page Authority (PA)
-- **What**: Predictive scores (0-100) estimating ranking ability
-- **Where**: Moz, Ahrefs (Domain Rating), SEMrush (Authority Score)
-- **New sites**: DA 1-10 (expected; builds over months/years)
-- **Established sites**: DA 20-40 (competitive for local searches)
-- **Authority sites**: DA 50+ (competitive for national/international terms)
-
-### Backlink Quality Indicators
-| Metric | What to Check | Red Flag |
-|--------|--------------|----------|
-| Referring domains | Total unique domains linking to you | Sudden spike = possible spam attack |
-| TrustFlow | Quality/trustworthiness of linking sites (Majestic) | Low TrustFlow with high links = spam |
-| SpamScore | Probability that links are spam (Moz) | SpamScore > 30% requires investigation |
-| Anchor text distribution | Natural mix of branded, URL, and keyword anchors | >50% exact-match keyword anchors = unnatural |
-
-### Review & Reputation Metrics
-- Google Business Profile: star rating and review count
-- Industry-specific review sites (Clutch, G2, etc.)
-- Response rate to reviews (both positive and negative)
-- Review growth rate (aim for steady increase)
-
----
-
-## Crawling & Indexation Health
-
-### Google Search Console — Coverage Report
-| Status | What It Means | Action |
-|--------|--------------|--------|
-| Valid | Pages indexed and serving in search | Monitor — no action needed |
-| Valid with warnings | Indexed but has issues | Review and fix warnings |
-| Excluded | Not indexed (by choice or error) | Verify intentional exclusion |
-| Error | Cannot be indexed | Fix immediately (404, server error, blocked) |
-
-### Crawl Error Types
-- **Server errors (5xx)**: Server unreachable — check hosting
-- **Not found (404)**: Page deleted or URL changed — set up redirects
-- **Soft 404**: Page returns 200 but shows "not found" content — fix or redirect
-- **Redirect errors**: Redirect chains or loops — simplify to single redirect
-- **Blocked by robots.txt**: Unintentional blocking — review robots.txt rules
-
----
-
-## Monitoring Schedule
-
-### Weekly
-- [ ] Check GSC for new crawl errors
-- [ ] Review Core Web Vitals status
-- [ ] Check organic traffic trend (vs previous week)
-- [ ] Scan for new backlinks (quality check)
-
-### Monthly
-- [ ] Full GA4 traffic report (organic, direct, referral, social)
-- [ ] Conversion rate and goal completion review
-- [ ] Keyword ranking changes for top 10 target keywords
-- [ ] Bounce rate and dwell time by page type
-- [ ] Review and respond to new Google Business Profile reviews
-- [ ] Lighthouse score check (homepage + 2 key pages)
-
-### Quarterly
-- [ ] Run full SEO audit (this skill)
-- [ ] Competitor ranking comparison for target keywords
-- [ ] Backlink profile health check (DA, SpamScore, TrustFlow)
-- [ ] Brand search volume trend (Google Trends or GSC)
-- [ ] Content freshness review (update stale pages)
-- [ ] Core Web Vitals performance trend
-
----
-
-## Red Flags — Investigate Immediately
-
-| Signal | Possible Cause | First Step |
-|--------|---------------|------------|
-| Organic traffic drops >20% | Algorithm update, penalty, crawl error | Check GSC Coverage + filter by date |
-| Sudden backlink spike | Spam attack or negative SEO | Audit new links, disavow toxic ones |
-| Crawl errors increasing | Broken links, server issues, redirect loops | GSC → Coverage → Errors |
-| Conversion rate drops | UX change, broken form, slow page | Test all conversion paths manually |
-| Keyword rankings plummet | Competitor outranking, content freshness, penalty | Compare content quality vs competitors |
-| Bounce rate spikes | Slow page, misleading title/description, poor mobile | Check page speed + search intent match |
-| Pages not indexed | robots.txt blocking, noindex tag, crawl budget | GSC URL Inspection tool |
+Use the claim register at
+[`../../../../docs/source-registers/search-ai-currentness-2026-09-05.json`](../../../../docs/source-registers/search-ai-currentness-2026-09-05.json).

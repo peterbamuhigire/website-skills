@@ -12,12 +12,12 @@ Companion files: `analytics-event-map.md` (in `seo/references/`), `page-conversi
 
 1. **Strategy, not tactics.** SEO built as a business function tied to revenue, not as a list of tasks tied to rankings.
 2. **Users first, engines second.** The site is built for the reader. Search-engine optimisation happens in service of that, not against it.
-3. **Rankings are a vanity metric.** Conversions, leads, pipeline, and revenue are the scoreboard.
+3. **Rankings are diagnostic, not the business outcome.** Connect visibility to qualified actions, pipeline, revenue, retention, or the page's public-service goal.
 4. **Intent beats volume.** A keyword with 40 right-fit searches per month beats one with 40,000 wrong-fit searches.
 5. **Technical excellence is the floor, not the ceiling.** Crawlability, indexation, and speed are minimum bars, not differentiators.
-6. **Content that nobody links to voluntarily does not rank sustainably.** Brands do not build links; they earn them.
-7. **The website sells before humans do.** About 60% of the buying decision completes before the first human contact — the site must carry that weight.
-8. **SEO compounds.** Payback is 6–24 months. If the client cannot tolerate that, they should buy paid traffic instead.
+6. **Earn corroboration.** Build original resources worth citing and pursue legitimate distribution; do not manufacture links or mentions.
+7. **The website must support self-directed evaluation.** Give buyers enough evidence, limits, and next-step clarity to progress before contact.
+8. **SEO timing is context-dependent.** Establish a project baseline, leading indicators, decision horizon, and stop/reallocation rule instead of promising a fixed payback period.
 
 ---
 
@@ -41,7 +41,7 @@ Delivered as part of every Growth and Authority engagement; a lighter version de
 
 - Topical hub architecture for the top 3 service verticals
 - Internal linking model designed around topical authority
-- FAQ schema on service and support pages
+- Useful FAQ content where research shows unresolved questions; no Google FAQ rich-result promise
 - LocalBusiness + Review + Article schema where applicable
 - Core Web Vitals hardening
 - Pre-launch technical audit (crawl errors, indexation issues, redirect chains, broken links, image optimisation, JS-rendered content flagging)
@@ -53,7 +53,7 @@ Delivered as part of every Growth and Authority engagement; a lighter version de
 - Topical authority map for the firm's full category
 - Authority asset production (1 cornerstone research or diagnostic piece)
 - Programmatic content architecture where the offering supports it
-- Structured data strategy across article, video, FAQ, HowTo, Person, Service
+- Structured data strategy across currently supported, evidence-matched page and entity types
 - Attribution model connecting organic to pipeline and revenue
 - KPI dashboard
 - 90-day post-launch monitoring with three optimisation passes
@@ -83,19 +83,20 @@ Built in the strategy phase, before design or content.
 | Transactional | "I'm ready to act" | Pricing, booking, contact | Convert |
 | Brand-related | "I know this firm" | Any | Varies by rung |
 
-A page that mixes intents serves none well. Commit each page to a single intent.
+A page needs one primary job. It may support compatible secondary intents when
+the information architecture remains clear; split pages only when needs or
+journeys materially conflict.
 
 ### Deliverable format (spreadsheet or CSV)
 
 Columns: keyword, monthly volume (Search Console + tool estimate), intent category, target page URL, priority tier (1–3), current position, target position, content type, internal linking anchors, measurement goal.
 
-### Non-brand vs brand ratio
+### Brand and non-brand demand
 
-Track this as the single most useful SEO health metric:
-
-- New site: expect 85/15 brand-to-non-brand
-- 12-month target: 50/50
-- 24-month target: 25/75 (inverted)
+Track brand and non-brand visibility separately when Search Console data is
+available. Establish the site's own baseline and explain query-classification
+limitations. Do not impose a universal ratio: the appropriate mix depends on
+brand maturity, business model, market, and campaign activity.
 
 ---
 
@@ -103,14 +104,14 @@ Track this as the single most useful SEO health metric:
 
 ### Titles
 
-- 55–60 characters.
+- Write to the query and page job; preview likely truncation but use no rigid character target.
 - Keyword front-loaded where natural.
 - Format: `Primary phrase | Qualifier — Firm`.
 - Unique per page. Never auto-generated from H1 verbatim for cornerstone pages — use the hand-written version.
 
 ### Meta descriptions
 
-- 150–158 characters.
+- Write an accurate, useful summary; preview likely truncation but use no rigid character target.
 - Written to sell the click, not stuff keywords.
 - Include the primary keyword once, naturally.
 - End with a soft CTA ("Book a diagnostic" / "See the approach").
@@ -163,7 +164,7 @@ Every page links to 3–6 related pages, chosen by relevance. Related modules on
 
 For each of the top 3 service verticals:
 
-- **Pillar page:** comprehensive, ~1,500–3,000 words, targets the head-term intent
+- **Pillar page:** complete enough to satisfy the intended task; use no word-count quota
 - **Cluster pages:** 5–15 supporting articles, each targeting a specific long-tail intent
 - **Bi-directional linking:** pillar links to all clusters; every cluster links to the pillar plus 2–4 siblings
 - **Shared anchor text vocabulary:** consistent, not spammy exact-match
@@ -189,7 +190,7 @@ For each of the top 3 service verticals:
 - Testimonials section: `Review` nested in `Organization` or `Service`
 - Location / contact (LocalBusiness-eligible firms): `LocalBusiness` with geo coordinates, opening hours, postal address
 - Events: `Event`
-- How-tos or process pages: `HowTo`
+- Process pages: semantic HTML steps; do not use `HowTo` for a Google rich-result promise because that feature is deprecated
 - Video embeds: `VideoObject` with uploadDate, thumbnailUrl, duration
 
 ### Schema governance
@@ -256,7 +257,8 @@ AI requirements.
 - **Use stable heading structures.** H2 questions, H3 specific answers. LLMs parse this pattern reliably.
 - **Publish original research.** A single piece of primary data (survey, benchmark, case-study aggregation) outperforms 50 derivative pieces.
 - **Build an entity footprint.** Wikipedia-adjacent citations, Crunchbase, LinkedIn, industry associations — all feed entity recognition.
-- **Use FAQ schema only when the visible page genuinely contains FAQ content.**
+- **Google no longer shows FAQ rich results.** Publish FAQ content for users;
+  use `FAQPage` only for a documented non-Google consumer and matching visible content.
   It supports rich-result eligibility where Google supports that feature; it is
   not special AI Overview markup.
 - **Use `Article` schema with author `Person` markup.** Attribution is entity-rich.
@@ -264,7 +266,9 @@ AI requirements.
 
 ### AI bot policy
 
-- Default: allow reputable AI crawlers (GPTBot, Google-Extended, ClaudeBot, PerplexityBot). Disallow scrapers with no citation practice.
+- Record crawler decisions by purpose: search inclusion, potential training, and
+  user-triggered access. Do not apply one global allowlist; verify current
+  provider documentation and align `robots.txt`, CDN, WAF, and host controls.
 - Robots.txt documented with reasoning. Reviewed quarterly.
 - `llms.txt` published where the firm is willing to support broader LLM
   discovery and handover. This is not required for Google AI Overviews or AI
@@ -388,7 +392,8 @@ Schwartz is explicit: not every business justifies SEO investment. The agency se
 - The runway is under 12 months. SEO compounds; paid ads buy time.
 - The market is hyper-local and small (a single neighbourhood dentist with a one-mile radius).
 - The offer is one-time and niche (single-product, single-sale businesses).
-- The client cannot tolerate investment with 6–24 month payback.
+- The client will not agree to a measured decision horizon, leading indicators,
+  and stop/reallocation rule appropriate to its market and risk.
 
 ### Substitute with
 
