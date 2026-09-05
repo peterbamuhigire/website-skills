@@ -7,9 +7,49 @@ router:
 skills:
   discovery_glob: skills/**/SKILL.md
 validation:
-  - id: release-gate
+  - id: registry
     command: >-
       python scripts/validate-skill-registry.py
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
+  - id: skill-contracts
+    command: >-
+      python scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
+  - id: routing
+    command: >-
+      python scripts/routing-smoke-test.py
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
+  - id: search-doctrine-currentness
+    command: >-
+      python scripts/validate-search-doctrine.py
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
+  - id: source-ingestion
+    command: >-
+      python scripts/source_ingestion_guardrail.py --root .
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
+  - id: tests
+    command: >-
+      python -m pytest -q
     working_directory: .
     platforms:
       - windows

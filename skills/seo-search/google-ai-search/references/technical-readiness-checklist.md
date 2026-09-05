@@ -46,6 +46,8 @@ generative AI Search features.
 ## Controls
 
 - [ ] Googlebot access is intentionally allowed or blocked.
+- [ ] The Search Console generative AI include/exclude control and inherited
+      property state are recorded with owner and review date.
 - [ ] `nosnippet`, `data-nosnippet`, `max-snippet`, and `noindex` are used only
   where the business accepts the visibility tradeoff.
 - [ ] Google-Extended decisions are documented separately from Google Search
@@ -56,4 +58,6 @@ generative AI Search features.
 - [ ] Search Console property verified.
 - [ ] URL Inspection confirms Googlebot sees the intended content.
 - [ ] Sitemap submitted and accepted.
+- [ ] Dedicated generative AI impressions are reviewed by page, country,
+      device, and date when sufficient data exists.
 - [ ] Analytics events connect Search visits to meaningful outcomes.

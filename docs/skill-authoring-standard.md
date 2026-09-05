@@ -35,6 +35,7 @@ Start new skills from `templates/skill/SKILL.md`. Before merge or release, run:
 ```powershell
 python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
 python -X utf8 scripts/routing-smoke-test.py
+python -X utf8 scripts/validate-search-doctrine.py
 python -m pytest -q
 ```
 

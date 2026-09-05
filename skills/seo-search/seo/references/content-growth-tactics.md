@@ -89,7 +89,8 @@ Publishing on additional platforms multiplies reach because each platform has it
 
 - 50M+ unique monthly visitors with its own search engine
 - SlideShare presentations rank fairly high on Google searches — additional entry points for your content
-- 57% of viral presentations' views came from embeds (Mary Meeker's 2013 Internet Trends data)
+- Track embeds and qualified referrals when presentation distribution is part
+  of the plan; do not generalise historical campaign statistics.
 - Reformat blog content as slide decks: same knowledge, new audience, new search index
 - **Traffic path:** Profile link + contextual slides + final CTA slide with URL + presentation description
 - Use target keywords in the slide title and description for both SlideShare internal search and Google
@@ -140,8 +141,9 @@ Informational blog post (attracts organic search traffic)
 
 Fishbein's observation: Most content creators invert the optimal ratio.
 
-- **Wrong:** 80% of effort on creating, 20% on distributing
-- **Right:** 20% of effort on creating, 80% on distributing
+- Allocate creation, maintenance, and distribution effort from the asset's
+  quality, audience, channel evidence, lifecycle, and measured return. Do not
+  impose a universal ratio.
 
 A piece of content published and distributed across 6 platforms reaches 6× the audience of a piece published on one platform. The creation cost is the same; distribution is the multiplier.
 

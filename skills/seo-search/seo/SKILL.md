@@ -1,6 +1,6 @@
 ---
 name: seo
-description: Use when implementing website metadata, structured data, sitemaps, robots directives, canonical and hreflang signals, internal links, and search-facing content structure; use seo-audit for read-only diagnosis.
+description: Use when implementing cross-platform search and AI-answer discoverability, including metadata, entity presence, structured data, sitemaps, crawler controls, canonicals, hreflang, internal links, answer clarity, and referral measurement; use seo-audit for read-only diagnosis.
 metadata:
   portable: true
   compatible_with:
@@ -18,7 +18,9 @@ Implement the approved search contract in website code and content without inven
 
 - Approved pages need search metadata and schema
 - multilingual routes need canonical and hreflang implementation
-- crawler-facing files and internal links must be built.
+- crawler-facing files and internal links must be built
+- cross-platform ChatGPT, Bing, or other AI-answer discoverability needs entity
+  consistency, crawler controls, answer clarity, and referral measurement.
 
 ## Do Not Use When
 
@@ -87,7 +89,7 @@ A legal service page lacks a verified aggregate rating. Implement `LegalService`
 
 
 ## Preserved Domain Use Guidance
-- The task matches this domain: Comprehensive search engine optimization for multi-language static sites and AI visibility. Implements meta tags, JSON-LD structured data, E-E-A-T schema markup, multi-language sitemap generation, hreflang tags, robots.txt, crawler optimization (IndexNow, sitemap pinging), Google Analytics 4 via Partytown, Google Search Console verification, Bing Webmaster Tools, canonical URLs, and language-specific Open Graph tags. Covers traditional SEO and broader AI-search visibility. Use `google-ai-search` first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, Bing AI Performance, and `llms.txt` claims. Supports 3 languages: English, French, Kiswahili. Reads from docs/{lang}/seo.md for per-page, per-language configuration. Generates language-specific sitemaps and SEO audit report. Run after page-builder, before deploy.
+- The task matches this domain: comprehensive search implementation for multilingual static sites and AI-answer discoverability. It covers metadata, evidence-backed JSON-LD, sitemaps, hreflang, robots and snippet controls, IndexNow where supported, analytics, Search Console, Bing Webmaster Tools, canonical URLs, internal links, and localised social metadata. Use `google-ai-search` first for Google AI Overviews, AI Mode, AEO/GEO mythbusting, generative AI reporting, or Google inclusion controls. Read `ai-seo-optimization.md` for the cross-platform layered model. Run after page-builder and before deploy.
 - The user needs an implementation-facing skill rather than a general discussion.
 - The website content must work as a world-class marketing asset for the owner and as proof of premium website-development quality for the builder.
 
@@ -104,7 +106,7 @@ A legal service page lacks a verified aggregate rating. Implement `LegalService`
 3. Produce the implementation, configuration, or guidance this skill owns.
 4. For premium or revenue-critical websites, align with `premium-website-product` so SEO is connected to buyer intent, authority content, conversion, launch distribution, and measurement.
 5. When the task mentions Google AI Overviews, AI Mode, AEO/GEO, Bing AI
-   Performance, Citation Share, `llms.txt`, UGC poisoning, or agentic readiness,
+   Performance, generative AI reporting, `llms.txt`, UGC poisoning, or agentic readiness,
    run `google-ai-search` first and treat its output as an upstream input to SEO
    implementation.
 6. Validate that the result stays compatible with the rest of the repository workflow.
@@ -127,21 +129,24 @@ A legal service page lacks a verified aggregate rating. Implement `LegalService`
 
 ## Mandatory deliverables (every project, every tier)
 
-These artifacts MUST ship on every site this skill touches. They are the floor, not the ceiling.
+These artefacts form the default implementation floor. Apply them only where
+the page, business model, locale plan, and verified evidence support them.
 
 ### Schema.org JSON-LD — required set
 
-Always emit on every relevant page (in addition to the foundational Organization, WebSite, BreadcrumbList):
+Select only types and properties supported by visible, verified facts. Sitewide
+entities may be referenced by stable `@id`; they need not be duplicated on every
+page. Page-type candidates include:
 
-1. **LocalBusiness** (or the most specific subtype: `MedicalBusiness`, `MedicalOrganization`, `Hospital`, `Dentist`, `Restaurant`, `Store`, `LegalService`, etc.) — with `address`, `geo`, `areaServed`, `telephone`, `openingHoursSpecification`, `sameAs` profiles, and `aggregateRating` when authentic reviews exist.
-2. **Product** — for every distinct sellable offering (SaaS plan, package, physical good). Pair with **`Offer`** (price, priceCurrency, availability, url) and **`AggregateOffer`** when multiple price points exist.
-3. **Service** — for every service line. Include `serviceType`, `provider`, `areaServed`, `hasOfferCatalog` enumerating the sub-services with their `Offer`s.
-4. **FAQ content** — publish useful, visible answers when buyers need them. Do not require `FAQPage` for Google: Google ended the FAQ rich-result feature on 7 May 2026 and removed its documentation in June 2026. Use `FAQPage` only for a documented non-Google consumer and keep markup aligned with visible content.
-5. **SoftwareApplication / MobileApplication / WebApplication** — for any software product, with `applicationCategory`, `operatingSystem`, `offers`, `featureList`.
-6. **Article / NewsArticle / BlogPosting** — on every editorial page, with `author` (Person with `sameAs`), `publisher` (Organization with `logo`), `datePublished`, `dateModified`, `image`.
-7. **Person** — for every named author/founder/expert, with `jobTitle`, `worksFor`, `sameAs` (LinkedIn, scholar, professional registries), `knowsAbout`, `alumniOf` where appropriate.
-8. **Review / AggregateRating** — when authentic reviews exist (never synthesised).
-9. **Industry-specific subtypes** when the business fits: `Hospital`, `MedicalClinic`, `Pharmacy`, `Dentist`, `LegalService`, `FinancialService`, `EducationalOrganization`, `LodgingBusiness`, `TouristAttraction`, etc. Pick the narrowest type that fits.
+1. **Organization** and **WebSite** for the actual publisher and site.
+2. **BreadcrumbList** on non-home pages with visible breadcrumb context.
+3. **LocalBusiness** or a narrower subtype only for a genuine customer-serving location; include only verified location, hours, contact, service area, profile, and review facts.
+4. **Product** and **Offer/AggregateOffer** when the page exposes a real sellable product and current offer facts.
+5. **Service** when the visible page describes a real service and provider.
+6. **FAQ content** when buyers need it. Google stopped showing FAQ rich results on 7 May 2026; use `FAQPage` only for a documented non-Google consumer.
+7. **SoftwareApplication / MobileApplication / WebApplication** for a real software product with verified compatibility, feature, and offer facts.
+8. **Article / NewsArticle / BlogPosting** for matching editorial pages, with truthful authorship and publication/modification dates.
+9. **Person**, **Review**, and **AggregateRating** only when the page and evidence support the represented person or authentic review data.
 
 Validate the resulting JSON-LD with the Schema.org validator and Google's Rich Results Test before sign-off.
 
@@ -149,17 +154,15 @@ Validate the resulting JSON-LD with the Schema.org validator and Google's Rich R
 
 These files are optional, client-specific handover artifacts. Google's official
 guidance says `llms.txt`, AI text files, Markdown mirrors, and special markup are
-not required to appear in AI Overviews or AI Mode, and current field data shows
-very low AI-search crawler demand for `llms.txt`. Do not sell these files as
+not used to improve Google Search visibility. Do not sell these files as
 Google, Bing, ChatGPT, Claude, Perplexity, or Gemini ranking levers.
 
 Generate them only when the client, CMS, documentation workflow, or project
 handover contract explicitly benefits from a plain-text knowledge artifact:
 
-1. **`/llms.txt`** - Markdown file (~2-4 KB) following the [llmstxt.org](https://llmstxt.org) spec: H1 site name, blockquote summary, then linked sections (Docs, Products, Services, Policies, Contact). Treat as a convenience file, not an SEO lever.
-2. **`/llms-full.txt`** - Concatenated full-text of the most important pages (home, about, services/features, pricing, FAQ, contact, key blog cornerstones), 20-60 KB. Plain prose, no nav chrome, includes structured fact blocks (NAP, hours, prices, supported regions).
-3. **`/robots.txt`** - Always required. State the search crawler policy clearly, reference all language sitemaps and the index sitemap, and do not block AI crawlers unless the client has explicitly opted out in writing.
-4. **`/.well-known/security.txt`** on every site. RFC 9116 requires `Contact`
+1. **`/llms.txt` or `/llms-full.txt`** — generated, versioned text indexes only for a named consumer or workflow; no fixed size or content quota.
+2. **`/robots.txt`** — required crawler policy. Record search, potential-training, and user-triggered agent decisions separately and align them with CDN/WAF controls.
+3. **`/.well-known/security.txt`** on every site. RFC 9116 requires `Contact`
    and `Expires`; this engine also requires `Canonical` and `Policy` so
    vulnerability reports have a clear owner and disclosure route.
 
@@ -168,15 +171,19 @@ change so they cannot become stale or contradict the HTML site.
 
 ### Other required artifacts
 
-- Per-language XML sitemaps + sitemap-index.xml, ping submitted via IndexNow on deploy.
-- Canonical URLs and `hreflang` (including `x-default`) on every page.
+- Valid XML sitemap coverage, using per-language sitemaps or one suitable sitemap design; reference it in `robots.txt` and submit it through supported webmaster tooling.
+- IndexNow notifications for added, updated, or removed canonical URLs when supported; do not call this a sitemap ping or indexing guarantee.
+- Canonical URLs on every indexable page and complete reciprocal `hreflang` clusters, including a deliberate `x-default` where appropriate.
 - OpenGraph + Twitter card metadata, language-localised, with a real OG image (not a placeholder).
 - Favicons: 16, 32, 180 (apple-touch), 192, 512.
 - Per-page metadata authored in the project language, never machine-translated from English.
-- Google Search Console and Bing Webmaster Tools verification, with Bing AI
-  Performance/Citation Share reviewed when the property exposes it.
+- Google Search Console and Bing Webmaster Tools verification. Review Google's
+  generative AI report and control plus Bing AI Performance when the property
+  exposes them, using only currently documented dimensions.
 
 ## Preserved Domain References
+- `references/ai-seo-optimization.md` — layered SEO, AEO, GEO, entity-presence,
+  crawler-governance, SXO, and cross-platform measurement doctrine.
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.
 - `../google-ai-search/SKILL.md` — use before this skill when Google AI
   Overviews, AI Mode, AEO/GEO mythbusting, Search Console AI performance, or

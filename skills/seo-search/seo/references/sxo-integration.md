@@ -96,7 +96,9 @@ Every page must serve both types of decision-maker:
 | **Consideration** (MOFU) | Comparisons, case studies, methodology | Solution keywords | Position as knowledgeable guide |
 | **Decision** (BOFU) | Service pages, pricing, testimonials | Brand + review keywords | Prove capability, build confidence |
 
-**95% of visitors are NOT ready to buy.** A website with only decision-stage content ignores 95% of its potential audience.
+Do not assume a universal share of purchase-ready visitors. Use search, CRM,
+sales, and user-research evidence to decide how much awareness, consideration,
+decision, and support content the site needs.
 
 ### High-Converting Keyword Selection
 
@@ -134,7 +136,8 @@ Every page must serve both types of decision-maker:
 - Logical field order matching mental model
 - Easy-to-find submit button (primary CTA styling)
 - Inline validation with specific error messages
-- Minimal fields (every extra field reduces completion by ~10%)
+- Request only information needed for the stated next step; test field removal
+  against lead quality, completion, accessibility, and operational follow-up.
 
 ---
 
@@ -145,19 +148,19 @@ Every page must serve both types of decision-maker:
 | Metric | Target | What It Means |
 |--------|--------|--------------|
 | **Conversion rate** | Industry-dependent; track improvement over time | Visitors taking desired action |
-| **Bounce rate** | Under 60% for content pages; under 40% for landing pages | Single-page exits |
-| **Time on page** | Over 30 seconds (under = rewrite or remove) | Content engagement |
-| **Organic traffic** | Month-over-month growth | Search visibility improving |
-| **Pages per session** | 2+ average | Users exploring beyond entry page |
+| **Qualified conversion** | Establish baseline and decision band | Intended task completed by an appropriate visitor |
+| **Engagement** | Define by page job | Supporting diagnostic, not automatic quality proof |
+| **Organic visibility** | Compare equivalent periods and query classes | Search exposure, not causal business impact |
+| **Task success and errors** | Research- or telemetry-backed baseline | Whether the visit was useful and accessible |
 
 ### Content Health Signals
 
 | Signal | Action |
 |--------|--------|
-| Average time on page < 30 seconds | Rewrite or remove the content |
-| Declining pageviews over 3 months | Update content with fresh information |
-| High bounce rate (> 70%) | Improve above-fold content and internal linking |
-| Content older than 2 years | Audit for accuracy; refresh or mark as archived |
+| Short engagement | Check whether the task was completed quickly before diagnosing a problem |
+| Declining visibility or visits | Separate demand, seasonality, reporting, index, ranking, and conversion hypotheses |
+| High single-page-session rate | Evaluate page job, events, satisfaction, and next-step clarity before changing content |
+| A scheduled or event-driven review is due | Verify facts and usefulness; update dates only after substantive change |
 
 ---
 
@@ -198,7 +201,8 @@ Our websites serve 3 languages (en, fr, sw). SXO integration points:
 
 ### Blog Content for Demand Generation
 - Target long-tail question keywords ("How to choose an ERP for manufacturing in Uganda")
-- Answer the question directly in first 40-60 words (featured snippet format)
+- Answer directly where that serves the reader, using the shortest complete
+  wording that preserves conditions and exceptions; use no fixed word count.
 - Expand with detail, examples, and expertise
 - Internal link to relevant service pages (awareness → consideration)
 - Promote through social and email channels

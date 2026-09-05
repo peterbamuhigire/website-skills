@@ -1,309 +1,101 @@
----
-title: Google Analytics 4 & Search Console Integration
----
-
-# Google Analytics 4 & Search Console Setup Guide
-
-## Google Analytics 4 via Partytown (Zero-Performance Impact)
-
-### Why Partytown?
-- Offloads GA4 script to Web Worker (separate thread)
-- **Never blocks main thread** — no layout shift, no frame drops
-- Maintains 95-100 Lighthouse scores even with full analytics
-- 17KB additional JavaScript (only in production)
-
-### Setup Steps
-
-#### 1. Install Partytown
-```bash
-npm install @builder.io/partytown
-```
-
-#### 2. Update astro.config.mjs
-```javascript
-import { defineConfig } from 'astro/config';
-import partytown from '@builder.io/partytown/astro';
-
-export default defineConfig({
-  integrations: [
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-    // ... other integrations
-  ],
-});
-```
-
-#### 3. Create .env with GA4 Measurement ID
-```bash
-# .env (gitignored)
-PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-```
-
-#### 4. Verify .env is Gitignored
-In `.gitignore`:
-```
-.env
-.env.local
-.env.*.local
-```
-
-#### 5. Add GA4 Script to BaseLayout.astro
-
-```astro
----
-// In BaseLayout.astro head section
-const gaID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
-const isProduction = import.meta.env.PROD;
----
-
-<head>
-  <!-- ... existing head content ... -->
-
-  {isProduction && gaID && (
-    <>
-      <!-- Google Analytics via Partytown (Web Worker) -->
-      <script type="text/partytown">
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{gaID}', {
-          'anonymize_ip': true,
-          'allow_google_signals': false,
-          'allow_ad_personalization_signals': false,
-        });
-      </script>
-
-      <!-- GA4 Google Tag Script (async, deferred) -->
-      <script async type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id={gaID}"></script>
-    </>
-  )}
-</head>
-```
-
-**Key details:**
-- Only loads in production (`import.meta.env.PROD`)
-- `anonymize_ip: true` — privacy by default
-- `allow_google_signals: false` — disable demographic data
-- `allow_ad_personalization_signals: false` — extra privacy
-
-### Alternative: Direct Injection (Simpler but +28KB)
-
-If Partytown setup seems complex:
-
-```astro
-<head>
-  {isProduction && gaID && (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaID}`}></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{gaID}', {'anonymize_ip': true});
-      </script>
-    </>
-  )}
-</head>
-```
-
-**Trade-off**: Simpler, but adds ~28KB JavaScript to main thread. Lighthouse score drops 2-5 points.
-
-### Privacy-Friendly Alternatives
-
-If you prefer privacy-first analytics:
-
-#### Plausible Analytics
-- No cookies, GDPR-compliant by default
-- $29/month, $290/year
-- Real-time dashboard, no learning curve
-- Privacy Policy: "We don't sell your data" (business model = subscriptions only)
-
-```astro
-<!-- Plausible (privacy-first) -->
-<script defer data-domain="example.com" src="https://plausible.io/js/script.js"></script>
-```
-
-#### Umami Analytics
-- Open-source, GDPR-compliant
-- Self-hosted (privacy = yours alone)
-- Free or $9/month for managed hosting
-- Zero cookie tracking
-
-```html
-<!-- Umami (self-hosted or managed) -->
-<script async src="https://analytics.example.com/script.js" data-website-id="12345678"></script>
-```
-
-#### Fathom Analytics
-- Privacy-first, EU-hosted
-- $14/month, €120/year
-- GDPR/CCPA compliant by default
-- Real-time, simple dashboard
-
-```html
-<script src="https://cdn.usefathom.com/script.js" data-site="YOUR_SITE_ID" defer></script>
-```
-
-### Verify GA4 Is Live
-
-After deployment:
-
-```bash
-# 1. Check for gtag script in page source
-curl https://yoursite.com | grep "googletagmanager"
-
-# 2. Open browser DevTools
-#    → Application tab
-#    → Cookies
-#    → Look for _ga, _gid cookies (GA4 sets these)
-
-# 3. Check Google Analytics dashboard
-#    → Realtime report
-#    → Refresh site in another tab
-#    → Should see 1 active user
-```
-
-If no cookies appear:
-- Check `PUBLIC_GA_MEASUREMENT_ID` in `.env`
-- Verify `import.meta.env.PROD` is true (check Astro build output)
-- Check browser console for errors: `gtag is not defined`
-
----
-
-## Google Search Console Verification
-
-### Method 1: HTML Meta Tag (Recommended)
-
-Automatic verification from `docs/seo.md`.
-
-1. **Get verification code from GSC:**
-   - Go to: https://search.google.com/search-console
-   - Add property → Enter site URL
-   - Select "HTML tag" method
-   - Copy the `content` value from the meta tag
-
-2. **Add to docs/seo.md:**
-```markdown
-google_site_verification: "abcd1234xyz5678"
-```
-
-3. **Read by SEO skill:**
-```astro
-<!-- In BaseLayout.astro -->
-{googleSiteVerification && (
-  <meta name="google-site-verification" content={googleSiteVerification} />
-)}
-```
-
-4. **Verify in GSC:**
-   - Back to GSC property setup
-   - Click "Verify" button
-   - GSC crawls site, finds the meta tag within 1-2 hours
-
-### Method 2: HTML File Upload (Manual Backup)
-
-If meta tag doesn't work:
-
-1. **Download HTML file from GSC**
-   - File name: `google[randomstring].html`
-
-2. **Place in public/ directory:**
-   ```
-   public/
-   └── google[randomstring].html
-   ```
-
-3. **Commit and deploy**
-   - File is now at: `https://yoursite.com/google[randomstring].html`
-
-4. **Verify in GSC**
-   - GSC crawls the file
-   - Verification completes
-
----
-
-## Post-Launch Monitoring
-
-### Week 1-2 Checklist
-
-- [ ] **Google Search Console:**
-  - [ ] Verify site ownership (meta tag or HTML file)
-  - [ ] Submit sitemap: `https://yoursite.com/sitemap-index.xml`
-  - [ ] Request indexing for key pages (homepage, services, about)
-  - [ ] Check Coverage report for crawl errors
-
-- [ ] **Google Analytics 4:**
-  - [ ] Dashboard shows real users (Realtime report)
-  - [ ] Events are tracking (scroll events, click events)
-  - [ ] Conversion goals set up (contact form submission, etc.)
-
-- [ ] **Mobile Usability:**
-  - [ ] GSC shows "No issues" in Mobile Usability report
-  - [ ] Run PageSpeed Insights on homepage
-
-### Ongoing Monitoring (Monthly)
-
-| Check | Frequency | Where |
-|-------|-----------|-------|
-| Core Web Vitals | Weekly | GSC → Experience → Core Web Vitals |
-| Search traffic | Weekly | GSC → Overview → Top queries |
-| Crawl errors | Weekly | GSC → Coverage |
-| GA4 goal completion | Weekly | GA4 → Conversions → Goals |
-| Lighthouse score | Monthly | PageSpeed Insights (manual) |
-| Backlink profile | Monthly | Ahrefs / SEMrush (external tools) |
-
-### Red Flags (Action Required)
-
-| Issue | Action |
-|-------|--------|
-| High crawl error rate | Check robots.txt, fix broken links |
-| Pages not indexed | Submit to GSC, check canonical URLs |
-| Low CLS score | Identify cumulative layout shift (images, fonts) |
-| 404 errors in GSC Coverage | Fix broken internal links |
-| Low search click-through rate | Review titles/descriptions in search results |
-
----
-
-## Common GA4 Troubleshooting
-
-### "gtag is not defined" error
-- **Cause:** GA4 script not loaded or Partytown not configured
-- **Fix:** Check `.env` has `PUBLIC_GA_MEASUREMENT_ID`, verify `import.meta.env.PROD` in build
-
-### No GA4 cookies visible
-- **Cause:** Site not in production or analytics blocked
-- **Fix:** Check Network tab in DevTools — `gtag/js` request should return 200
-- Check browser privacy settings not blocking GA4
-
-### Lighthouse score dropped after adding GA4
-- **Cause:** Using direct injection instead of Partytown
-- **Fix:** Switch to Partytown setup (or use privacy-first alternative like Plausible)
-
-### GSC verification meta tag not found
-- **Cause:** BaseLayout not reading from docs/seo.md or meta tag syntax wrong
-- **Fix:** Verify docs/seo.md has `google_site_verification` key, check page source HTML
-
----
-
-## Security Notes
-
-- **Never commit .env** — keep `PUBLIC_GA_MEASUREMENT_ID` in `.env.local` (gitignored)
-- **API keys:** If using Umami/Fathom with API, store in `.env` (not in code)
-- **Partytown config:** Forward only necessary functions; default is safe for GA4
-
----
-
-## Performance Impact Summary
-
-| Method | JS Size | Core Web Vitals | Privacy | Setup Time |
-|--------|---------|-----------------|---------|-----------|
-| **Partytown (Recommended)** | +17KB | 95-100 | Medium | 15 min |
-| Direct Injection | +28KB | 93-97 | Medium | 5 min |
-| Plausible | +1KB | 95-100 | ✅ Excellent | 2 min |
-| Umami (self-hosted) | +3KB | 95-100 | ✅ Excellent | 30 min |
-| Fathom | +2KB | 95-100 | ✅ Excellent | 2 min |
-
-**Recommendation:** Use Partytown for full Google Analytics with zero performance loss. Use Plausible/Fathom/Umami if privacy is priority.
+# Analytics and Search Measurement Verification
+
+Parent skill: [`../SKILL.md`](../SKILL.md)
+
+Verify that the approved measurement design produces decision-useful evidence
+without violating consent, privacy, security, or performance requirements. Do
+not prescribe one analytics vendor, implementation pattern, script size,
+performance score, setup duration, or reporting cadence for every project.
+
+## Inputs
+
+- business outcome and page-task map;
+- event and parameter dictionary;
+- approved analytics/search platforms and account owners;
+- consent, lawful basis, retention, identity, and access rules;
+- environments, canonical domains, test identities, and release ID;
+- attribution model and CRM/offline reconciliation plan.
+
+Stop if collection lacks a stated purpose, owner, consent/governance decision,
+or safe test environment.
+
+## Implementation verification
+
+For each environment and consent state:
+
+- inspect the rendered page and network requests;
+- verify only approved scripts and endpoints load;
+- confirm events fire once with the correct name, parameters, page identity,
+  locale, and timestamp;
+- test accept, reject, partial, withdrawal, and changed-consent paths;
+- verify personal or sensitive data is absent unless explicitly designed,
+  minimised, secured, and authorised;
+- test SPA/navigation, validation errors, retries, duplicate submission,
+  success, and offline/reconnect behaviour where applicable;
+- compare performance and reliability before and after instrumentation;
+- confirm production secrets or privileged tokens are not exposed client-side.
+
+Browser debug output is structural evidence. Verify receipt and processing in
+the destination report where authorised.
+
+## Search Console verification
+
+Choose a currently supported ownership method with the domain owner. Prefer
+organisation-controlled ownership and least privilege. Record method, property,
+owner, date, recovery path, and whether verification is observed.
+
+Submit the canonical sitemap through supported Search Console mechanisms and
+reference it in `robots.txt`. Do not use the deprecated unauthenticated sitemap
+ping endpoint. Treat submission and URL inspection as evidence of processing,
+not indexing or ranking guarantees.
+
+Review normal Web performance and, as of 31 August 2026, the dedicated
+generative AI impressions report and property inclusion control. The latter is
+separate from `Google-Extended`.
+
+## Bing verification
+
+Verify the site through a supported method or authorised import, submit the
+sitemap, and inspect representative URLs. When available, review AI Performance
+using current public-preview definitions: total citations, average cited pages,
+sampled grounding queries, page-level citation activity, and trends. Do not
+interpret them as ranking, authority, placement, citation support, or business
+value.
+
+## Referral and outcome checks
+
+- preserve source/medium and campaign parameters through redirects and locale
+  routing where lawful;
+- monitor currently documented ChatGPT search referrals carrying
+  `utm_source=chatgpt.com`, while allowing for incomplete tagging;
+- connect sessions to qualified actions with consent-aware identifiers;
+- reconcile web events with CRM, commerce, call, or offline outcomes;
+- report unmatched, duplicated, blocked, sampled, and delayed records.
+
+## Acceptance evidence
+
+| Area | Acceptance condition |
+|---|---|
+| Event contract | Intended events and parameters observed once in each tested state |
+| Consent/privacy | Collection follows the approved state and excludes prohibited data |
+| Account governance | Organisation owner, least privilege, recovery, and review date recorded |
+| Search tools | Property, sitemap, representative URLs, and report access observed or `NOT_ASSESSED` |
+| Attribution | Limits, redirects, identity, and reconciliation gaps documented |
+| Performance | Before/after evidence meets the project's budgets |
+| Release identity | Evidence maps to the deployed build and environment |
+
+## Failure handling
+
+- Disable or roll back instrumentation that leaks data, breaks consent, causes
+  duplicate conversions, or breaches performance/reliability guardrails.
+- Repair the source event or consent implementation rather than adjusting a
+  dashboard to hide the defect.
+- Re-run the failed state plus one unaffected regression path.
+- Keep delayed, inaccessible, low-volume, or externally processed evidence
+  `NOT_ASSESSED` until observed.
+
+## Currentness
+
+Use [`webmaster-tools-setup.md`](webmaster-tools-setup.md),
+[`analytics-event-map.md`](analytics-event-map.md), and the claim register at
+[`../../../../docs/source-registers/search-ai-currentness-2026-09-05.json`](../../../../docs/source-registers/search-ai-currentness-2026-09-05.json).

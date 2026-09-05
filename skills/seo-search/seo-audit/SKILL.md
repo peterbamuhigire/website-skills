@@ -1,6 +1,6 @@
 ---
 name: seo-audit
-description: Use when performing a read-only audit of an existing website's crawl, indexation, metadata, content, internal links, schema, local search, or measurement defects; use seo for authorised implementation.
+description: Use when performing a read-only audit of an existing website's crawl, indexation, metadata, content, schema, AI citations, answer fidelity, crawler access, referrals, local search, or measurement defects; use seo for implementation.
 metadata:
   portable: true
   compatible_with:
@@ -18,7 +18,9 @@ Diagnose search defects and prioritise corrections from reproducible evidence wi
 
 - An existing site has traffic or indexing concerns
 - pre-release search signals need independent review
-- remediation priorities need evidence.
+- remediation priorities need evidence
+- AI citations, answer fidelity, crawler access, or AI referrals need repeated,
+  read-only diagnosis without changing the site.
 
 ## Do Not Use When
 
@@ -33,9 +35,14 @@ Diagnose search defects and prioritise corrections from reproducible evidence wi
 ## Workflow
 
 1. Confirm read-only scope, target, markets, and available evidence
-2. Inspect crawl, index, metadata, content, links, schema, local, performance, and measurement signals
-3. Prioritise findings by impact and confidence and stop release on conflicting critical signals
-4. After authorised remediation, rerun only affected checks and a regression sample.
+2. Inspect crawl, index, metadata, intent architecture, answer quality, evidence,
+   entity consistency, links, schema, local, performance, and measurement signals
+3. When AI-answer visibility is in scope, separate search eligibility, retrieval,
+   citation, factual contribution, answer fidelity, referral, and business outcome;
+   test repeated prompt paraphrases and platform-specific reports without
+   treating a citation as a rank
+4. Prioritise findings by impact and confidence and stop release on conflicting critical signals
+5. After authorised remediation, rerun only affected checks and a regression sample.
 
 ## Outputs
 
@@ -76,6 +83,10 @@ Without network, crawler, rendered source, or performance data, return the narro
 - Auditing only the homepage. Fix: sample every route and intent family.
 - Treating inaccessible Search Console as clean. Fix: mark performance evidence `not assessed`.
 - Listing hundreds of equal-priority issues. Fix: rank by impact, confidence, effort, and dependency.
+- Treating AEO, GEO, AIO, and SXO as four additional ranking systems. Fix: use
+  the layered discoverability model and define each observed outcome.
+- Counting one chatbot mention as visibility proof. Fix: repeat versioned prompt
+  sets, verify cited support, and connect observations to referrals or outcomes.
 
 ## Worked Example
 
@@ -84,10 +95,12 @@ If product pages are absent from the sitemap but indexed through links, cite aff
 ## References
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+- [Search and AI discoverability operating model](../seo/references/ai-seo-optimization.md)
+- [Google generative AI Search playbook](../google-ai-search/references/google-generative-ai-search-playbook.md)
 
 
 ## Preserved Domain Use Guidance
-- The task matches this domain: Comprehensive SEO audit for static websites. Analyses 14 categories — technical SEO, on-page, content quality, structured data, pagespeed & performance, mobile usability, local SEO, internal linking, security & trust, accessibility, competitive positioning, voice search readiness, off-page signals, and SEO measurement. Produces a scored audit report with prioritised action items. Works with any Astro static site. Run after deploy or on demand to identify SEO gaps and improvement opportunities.
+- The task matches this domain: comprehensive, framework-neutral website audit across technical access, index state, intent, content and evidence, entity presence, structured data, performance, mobile, accessibility, local/commerce, links, crawler governance, conventional search, AI-answer visibility, SXO, and measurement. It produces a prioritised evidence register without editing the site.
 - The user needs evaluation, findings, prioritization, or remediation guidance.
 
 ## Preserved Domain Exclusions

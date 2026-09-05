@@ -1,0 +1,102 @@
+{
+  "canonical_files": [
+    "skills/seo-search/google-ai-search/SKILL.md",
+    "skills/seo-search/google-ai-search/references/google-generative-ai-search-playbook.md",
+    "skills/seo-search/seo/SKILL.md",
+    "skills/seo-search/seo/docs-seo-template.md",
+    "skills/seo-search/seo/references/ai-seo-optimization.md",
+    "skills/seo-search/seo/references/analytics-event-map.md",
+    "skills/seo-search/seo/references/analytics-verification.md",
+    "skills/seo-search/seo/references/e-e-a-t-implementation.md",
+    "skills/seo-search/seo/references/llms-txt-and-ai-crawlers.md",
+    "skills/seo-search/seo/references/premium-seo-package.md",
+    "skills/seo-search/seo/references/post-deploy-verification.md",
+    "skills/seo-search/seo/references/required-schema-catalog.md",
+    "skills/seo-search/seo/references/sxo-integration.md",
+    "skills/seo-search/seo/references/webmaster-tools-setup.md",
+    "skills/seo-search/seo-audit/SKILL.md"
+    ,"skills/seo-search/seo-audit/references/audit-checklist.md"
+    ,"skills/seo-search/seo-audit/references/local-seo-guide.md"
+    ,"skills/seo-search/seo-audit/references/seo-measurement-guide.md"
+  ],
+  "forbidden_patterns": [
+    {
+      "pattern": "Citation Share",
+      "reason": "Not part of the Bing AI Performance measures verified on 2026-09-05."
+    },
+    {
+      "pattern": "first\\s+40(?:-|–|—)60\\s+words",
+      "reason": "No universal answer-length rule is supported."
+    },
+    {
+      "pattern": "6(?:-|–|—)24\\s+months",
+      "reason": "A fixed SEO payback period is not a portable engine rule."
+    },
+    {
+      "pattern": "95%\\s+of\\s+visitors",
+      "reason": "The visitor-readiness statistic lacks portable evidence."
+    },
+    {
+      "pattern": "every\\s+extra\\s+field\\s+reduces",
+      "reason": "A universal per-field conversion penalty is unsupported."
+    },
+    {
+      "pattern": "single[- ]most[- ]cited",
+      "reason": "No universal llms.txt citation position is established."
+    },
+    {
+      "pattern": "highest[- ]citation",
+      "reason": "No universal llms.txt section citation advantage is established."
+    },
+    {
+      "pattern": "stops\\s+being\\s+cited\\s+in\\s+AI\\s+answers\\s+entirely",
+      "reason": "Training opt-out and search inclusion must remain separate."
+    },
+    {
+      "pattern": "https://www\\.google\\.com/ping\\?sitemap",
+      "reason": "Google's unauthenticated sitemap ping endpoint is deprecated."
+    },
+    {
+      "pattern": "https://www\\.bing\\.com/ping\\?sitemap",
+      "reason": "Do not preserve unauthenticated sitemap ping automation."
+    },
+    {
+      "pattern": "FAQ\\s+schema\\s+on\\s+service",
+      "reason": "Google stopped showing FAQ rich results in 2026."
+    },
+    {
+      "pattern": "Add\\s+HowTo\\s+schema",
+      "reason": "Google's HowTo rich result is deprecated."
+    },
+    {
+      "pattern": "Cutoff\\s+Lag",
+      "reason": "Model cut-offs are platform and version specific."
+    },
+    {
+      "pattern": "most\\s+AI\\s+platforms.*Bing",
+      "reason": "Cross-platform retrieval providers must not be inferred."
+    }
+  ],
+  "required_snippets": {
+    "skills/seo-search/seo/references/ai-seo-optimization.md": [
+      "not five equivalent ranking systems",
+      "Keep training and retrieval separate",
+      "Test probabilistic AI visibility responsibly"
+    ],
+    "skills/seo-search/seo/references/llms-txt-and-ai-crawlers.md": [
+      "OAI-SearchBot",
+      "GPTBot",
+      "Search generative AI control"
+    ],
+    "skills/seo-search/google-ai-search/references/google-generative-ai-search-playbook.md": [
+      "31 August 2026",
+      "Total Citations",
+      "Grounding queries"
+    ],
+    "skills/seo-search/seo/references/post-deploy-verification.md": [
+      "sitemap ping endpoint is deprecated",
+      "Submission is a discovery hint"
+    ]
+  },
+  "currentness_register": "docs/source-registers/search-ai-currentness-2026-09-05.json"
+}

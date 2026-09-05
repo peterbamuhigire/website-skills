@@ -55,7 +55,9 @@ This is the most important principle. It has two components:
 
 Every point at which the searcher encounters your content — the search result snippet, the page title, the H1, the opening paragraph, the call to action — must reinforce the same keyword theme. Relevance is the glue that keeps visitors on the page and leads them to a conversion.
 
-This principle also applies in reverse: relevance signals to Google that your page is a genuine answer to the query. Pages that are genuinely relevant on every level — title, meta, headings, body copy, internal links — rank higher and hold their rankings longer.
+Apply the language consistently where it remains natural and accurate across
+title, headings, body, and links. Relevance is necessary, but no wording pattern
+guarantees ranking or durability.
 
 ### Principle 3: Keywords and the Buying Cycle
 
@@ -265,7 +267,9 @@ The standard search funnel model assumes linear digital research. East African b
 
 **WhatsApp referrals start searches:** A buyer receives a WhatsApp recommendation — "try Peter Bamuhigire, he's good" — and their first action is a Google search for Peter's name or company. This makes branded/navigational keywords and a strong Google Business Profile critical.
 
-**Mobile-first, often mobile-only:** Most East African business buyers research on smartphones. Voice search usage is higher than in Western markets. Long queries typed on mobile keyboards are truncated; queries asked to voice assistants are full sentences.
+**Mobile context:** Verify device mix and input behaviour from the project's own
+analytics and research. Do not import regional voice-search assumptions without
+current, market-specific evidence.
 
 **Word-of-mouth validates online:** Unlike Western buyers who may make a decision entirely from online research, East African buyers often use online research to validate a referral. The site must confirm credibility, not generate it from scratch.
 
@@ -273,7 +277,8 @@ The standard search funnel model assumes linear digital research. East African b
 
 **Implications for keyword strategy:**
 - Branded searches (name, company name) are high-value — optimize the home page to rank for personal brand name
-- Local keywords with "Uganda" or "Kampala" are essential for voice search validation
+- Test natural local terms and named locations when they match genuine service
+  relevance; do not add them merely to target voice interfaces.
 - Industry-specific keywords (ERP for healthcare Uganda, software for NGO Uganda) convert better than generic service terms
 - Social proof terms ("reviews", "testimonials", "case studies") are searched by validation-stage buyers — create this content
 
@@ -297,7 +302,9 @@ African market characteristics make long-tail keywords exceptionally productive:
 
 2. **High intent on geo terms:** A person searching "software developer Kampala" is not academic browsing — they are looking for someone to hire. Conversion rates on geo-modified long-tail terms are high.
 
-3. **Voice search growth:** African mobile users use voice search more than keyboard search for local queries. Voice queries are naturally long-tail ("Who is the best IT consultant in Kampala?"). Targeting these question-form keywords captures voice traffic.
+3. **Conversational discovery:** Include representative natural-language prompts
+   in research when user evidence supports them. Treat voice and assistant
+   behaviour as platform-, language-, and market-specific observations.
 
 4. **Tool undercount creates opportunity:** Google Keyword Planner systematically underestimates search volume for African markets. Competitors who rely on tool data skip keywords that appear to have "zero volume" but actually generate qualified leads.
 
@@ -447,7 +454,8 @@ Francophone Africa is a unique keyword opportunity for three reasons:
 ### 10.1 Voice Search Characteristics
 
 Voice queries differ from typed queries in five key ways:
-1. **Length:** 5-9 words average (vs. 2-3 for typed)
+1. **Length:** Variable by user, language, device, and platform; use observed
+   queries rather than a universal word range.
 2. **Form:** Question-based (who, what, where, when, why, how)
 3. **Register:** Conversational, natural speech — not keyword shorthand
 4. **Location:** Often include "near me" or a named location

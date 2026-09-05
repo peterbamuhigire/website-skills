@@ -1,6 +1,8 @@
-# Required Schema.org JSON-LD Catalog
+# Evidence-Matched Schema.org JSON-LD Catalogue
 
-Concrete templates for every JSON-LD block this skill mandates. Copy, adapt, ship.
+Illustrative patterns for JSON-LD blocks this skill may use. Never copy example
+facts into a project. Replace or remove every property based on visible,
+verified page evidence and current consumer support.
 
 Use schema only where the visible page supports it. Common types include **Organization**, **WebSite**, **BreadcrumbList**, the most specific applicable **LocalBusiness** subtype, **Product** + **Offer**, **Service**, **Person** for named authors, and **Article** on editorial pages. Software products add **SoftwareApplication**. No type is mandatory merely because it exists in this catalogue.
 
@@ -8,7 +10,7 @@ All `@id` URLs must be stable, absolute and unique per entity. Cross-reference e
 
 ---
 
-## Organization (every page)
+## Organization (site entity where applicable)
 
 ```json
 {
@@ -48,7 +50,7 @@ All `@id` URLs must be stable, absolute and unique per entity. Cross-reference e
 
 ---
 
-## LocalBusiness / industry subtype (every page, every location)
+## LocalBusiness / industry subtype (genuine customer-serving locations)
 
 Pick the narrowest subtype:
 
@@ -105,7 +107,7 @@ Pick the narrowest subtype:
 
 ---
 
-## Product + Offer / AggregateOffer (every sellable item)
+## Product + Offer / AggregateOffer (matching product and offer pages)
 
 ```json
 {
@@ -150,7 +152,7 @@ Pick the narrowest subtype:
 
 ---
 
-## Service (every service line)
+## Service (matching service pages)
 
 ```json
 {
@@ -219,7 +221,10 @@ Pick the narrowest subtype:
 
 ## FAQPage (not a Google rich-result requirement)
 
-Google ended FAQ rich results on 7 May 2026 and removed the feature documentation in June 2026. Do not add this markup to promise visibility or require a minimum question count. Retain it only when a documented non-Google consumer needs it and the questions and answers are visible on the page.
+Google stopped showing FAQ rich results on 7 May 2026. Do not add this markup to
+promise Google visibility or require a minimum question count. Retain it only
+when a documented non-Google consumer needs it and the questions and answers are
+visible on the page.
 
 ```json
 {
@@ -243,7 +248,7 @@ There is no engine minimum. Content quality and visible-content alignment govern
 
 ---
 
-## Article / BlogPosting / NewsArticle (every editorial page)
+## Article / BlogPosting / NewsArticle (matching editorial pages)
 
 ```json
 {
@@ -264,7 +269,7 @@ There is no engine minimum. Content quality and visible-content alignment govern
 
 ---
 
-## Person (every named author or expert)
+## Person (verified people represented on the page)
 
 ```json
 {
@@ -307,7 +312,7 @@ There is no engine minimum. Content quality and visible-content alignment govern
 
 ---
 
-## WebSite + SearchAction (root)
+## WebSite (root entity)
 
 ```json
 {
@@ -334,10 +339,17 @@ There is no engine minimum. Content quality and visible-content alignment govern
 
 ## Validation
 
-Before sign-off, run every page through:
+Before sign-off:
 
-1. Google Rich Results Test (`https://search.google.com/test/rich-results`)
-2. Schema.org validator (`https://validator.schema.org/`)
-3. Bing Markup Validator (via Bing Webmaster Tools)
+1. Validate Schema.org syntax and vocabulary with the Schema Markup Validator
+   (`https://validator.schema.org/`).
+2. For types currently supported by Google Search, test eligible pages with the
+   Rich Results Test (`https://search.google.com/test/rich-results`).
+3. Verify rendered visible content, entity IDs, canonical URLs, dates, prices,
+   availability, and relationships against the approved fact source.
+4. Record unsupported types, consumer-specific warnings, and unavailable live
+   tests as `NOT_ASSESSED`.
 
-Zero warnings, zero errors. If a warning is unavoidable (e.g. missing `aggregateRating` because the business is new), document it in the SEO audit report.
+Syntax errors and misleading or unverified properties block release. Warnings
+are triaged by consumer and page context; a warning is neither an automatic fail
+nor permission to invent a property.

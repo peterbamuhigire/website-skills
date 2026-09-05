@@ -1,313 +1,189 @@
-# llms.txt, llms-full.txt and AI Crawler Rules
+# `llms.txt`, AI Crawlers, and Publisher Controls
 
-This reference defines optional plain-text handover files and required crawler
-policy rules. `llms.txt` and `llms-full.txt` can help documentation workflows,
-agentic coding tools, internal knowledge packaging, and client handover, but
-they are not AI-search ranking levers and are not mandatory deliverables.
+Parent skill: [`../SKILL.md`](../SKILL.md)
 
-Google Search caveat: Google's official guidance for AI Overviews and AI Mode
-says `llms.txt`, AI text files, Markdown mirrors, and special markup are not
-required for inclusion in generative AI features on Google Search; Google Search
-ignores them for visibility and rankings. In this engine, `llms.txt` and
-`llms-full.txt` are retained only for broader LLM handover, documentation,
-non-Google client requirements, and client-owned plain-text knowledge packaging.
-Do not present them as Google, Bing, ChatGPT, Claude, Gemini, Perplexity, or
-other AI-search ranking levers.
+This reference separates optional plain-text knowledge artefacts from crawler
+controls. Re-verify every named bot and control against the provider's current
+first-party documentation before implementation.
 
----
+## Governing rule
 
-## Why these files may exist
+Do not use one undifferentiated “AI crawler” switch. Record three decisions:
 
-Some LLM-powered tools and downstream agents may do two things:
+1. Should automatic search products be able to discover and cite the site?
+2. May providers crawl the site for potential model training?
+3. Should user-triggered agents be able to fetch and operate the site?
 
-1. **Real-time retrieval** — they hit your site at inference time and need a fast, JS-free, prose-first source of truth.
-2. **Grounding for citations** — they want a structured page of *what your business is, what it sells, where it operates, what it costs* that they can lift facts from with confidence.
+These decisions have different user agents, consequences, and owners. A search
+allow does not require a training allow.
 
-The HTML site, however well-built, is often too JS-heavy, too marketing-styled,
-or too fragmented for some non-Google AI tools and downstream handover
-workflows to parse cheaply. `llms.txt` and `llms-full.txt` help with those
-contexts, but they do not replace crawlable, indexable HTML and they are not a
-Search ranking or citation requirement.
+## `llms.txt` and `llms-full.txt`
 
-Generate these files only when at least one of these is true:
+These are optional, non-standardised-in-practice handover artefacts. Generate
+them only when a named consumer, documentation workflow, internal knowledge
+pipeline, or client contract benefits from a maintained text index.
 
-- the client explicitly wants a plain-text knowledge package
-- developer documentation or API docs benefit from agentic coding-tool parsing
-- the CMS generates them automatically and they can be kept accurate
-- a non-Google crawler or downstream workflow has a documented need
+Google states that `llms.txt`, AI text files, Markdown mirrors, and special
+machine-readable files are not used for visibility or ranking in Google Search,
+including generative AI features. Do not sell these files as Google SEO, AEO, or
+GEO levers. Do not claim that other platforms use them without current
+first-party evidence.
 
-Skip them when the project lacks the budget to keep them synchronized with the
-site. Stale machine-readable files are worse than no file.
+If a project chooses to publish them:
 
----
+- generate from the same verified content source as the HTML site;
+- include only canonical public URLs and facts visible on the site;
+- include a generated-at time, content version, and owner;
+- omit private, gated, personal, draft, or unverified information;
+- regenerate or remove the files when source content changes;
+- test links, encoding, and conflict with canonical HTML;
+- measure actual requests before investing further.
 
-## `/llms.txt` - optional
-
-**Location:** site root (`/llms.txt`).
-**Format:** Markdown, UTF-8, ~2–4 KB.
-**Spec:** Follows [llmstxt.org](https://llmstxt.org/).
-
-### Structure
+Minimal optional shape:
 
 ```markdown
-# {Site / Product Name}
+# {Site or product name}
 
-> {One-sentence summary of what this is, who it's for, and the country/region served.}
+> {Accurate one-sentence description, audience, and relevant market.}
 
-{2–4 sentence elaboration: what the product or company does, the unique value, the
-target audience, the geography. Plain prose. No marketing fluff. No banned words.}
+Generated: {ISO date and time}
+Canonical site: {absolute URL}
 
-## Docs
+## Products and services
 
-- Quickstart: `{absolute URL}` — {one-line description}
-- User Manual: `{absolute URL}` — {one-line description}
-- API / Developer reference: `{absolute URL}` — {one-line description}
+- {Verified name}: {absolute canonical URL} — {visible factual summary}
 
-## Products / Services
+## Documentation
 
-- {Product or service name}: `{absolute URL}` — {one-line description with price if public}
-- {Next product}: `{absolute URL}` — {one-line description with price if public}
+- {Document title}: {absolute canonical URL} — {scope and version}
 
-## Pricing
+## Company and policies
 
-- Pricing page: `{absolute URL}` — {one-line summary; add a sourced price only when available}
-
-## Company
-
-- About: `{absolute URL}` — {one-line — founders, year, mission}
-- Contact: `{absolute URL}` — {one-line — phone, email, address}
-- Blog: `{absolute URL}` — {one-line — what topics}
-
-## Policies
-
-- Privacy Policy: `{absolute URL}`
-- Terms of Use: `{absolute URL}`
-
-## Optional
-
-- Press / Media: `{absolute URL}`
-- Careers: `{absolute URL}`
+- About: {absolute canonical URL}
+- Contact: {absolute canonical URL}
+- Privacy: {absolute canonical URL}
 ```
 
-### Rules
+There is no mandatory file size, FAQ count, “most-cited line”, or citation
+benefit. Treat all such claims as unsupported unless a named consumer publishes
+testable guidance.
 
-- All links MUST be absolute URLs (e.g. `https://example.com/en/pricing/`), not relative.
-- One section per topic; LLMs parse by section heading.
-- The blockquote summary directly under the H1 is the single most-cited line — write it like a Wikipedia opening sentence.
-- For multi-language sites, default to the primary language. Optionally publish `/llms.txt` per language root (`/en/llms.txt`, `/fr/llms.txt`) — but always have the canonical one at site root.
-- Do NOT include nav chrome, scripts, tracking pixels, or banned words.
+## OpenAI controls verified on 2026-09-05
 
----
+OpenAI documents independent controls:
 
-## `/llms-full.txt` - optional
+| User agent | Purpose | Operational rule |
+|---|---|---|
+| `OAI-SearchBot` | Automatic discovery for ChatGPT search features | Allow when ChatGPT search inclusion is intended; also permit current published IP ranges at infrastructure layers |
+| `GPTBot` | Crawling content that may be used for foundation-model training | Decide separately under the owner's data-use policy |
+| `ChatGPT-User` | User-triggered page visits and actions | Do not treat as the search-inclusion control; current documentation says robots rules may not apply to these user-initiated requests |
 
-**Location:** site root (`/llms-full.txt`).
-**Format:** Plain text or Markdown, UTF-8, ~20–60 KB.
-**Purpose:** Full-prose dump of the site's most-cited pages, concatenated, ready for an LLM to ground answers from.
+OpenAI says a site may allow `OAI-SearchBot` while disallowing `GPTBot`.
+ChatGPT search referral URLs currently include `utm_source=chatgpt.com`; measure
+that parameter without assuming every ChatGPT-originated visit will contain it.
 
-### Structure
+Example: search allowed, potential training disallowed.
 
 ```text
-{Site Name} — Full Knowledge Base
-Last updated: {ISO date}
-Canonical site: {URL}
-
-================================================================================
-PAGE: Home — {URL}
-================================================================================
-
-{Full prose content of homepage. Hero copy, value props, key features, social
-proof, CTAs flattened to plain prose. Strip nav, footer, scripts.}
-
-================================================================================
-PAGE: About — {URL}
-================================================================================
-
-{Full About-page prose. Founder bio, year established, mission, team.}
-
-================================================================================
-PAGE: Services / Features — {URL}
-================================================================================
-
-{Each service or feature as its own subsection. Name, what it does, who it's
-for, price if public, how it works, integrations, compliance.}
-
-================================================================================
-PAGE: Pricing — {URL}
-================================================================================
-
-{Each tier as a subsection: name, price, what's included, what's excluded, who
-it's for. Include all currencies. Include any add-ons.}
-
-================================================================================
-PAGE: FAQ — {URL}
-================================================================================
-
-Q: {Question}
-A: {Answer in 2–4 sentences.}
-
-Q: {Question}
-A: {Answer in 2–4 sentences.}
-
-(20+ Q&A pairs minimum — this section is the highest-citation block in the file.)
-
-================================================================================
-FACTS — Quick reference
-================================================================================
-
-- Company: {Legal name}
-- Product: {Name}
-- Founded: {Year}
-- Headquarters: {Full address}
-- Phone: {E.164 number}
-- Email: {Address}
-- Languages: {List}
-- Countries served: {List}
-- Currencies: {List}
-- Pricing range: {Low — High}
-- Key compliance: {Standards}
-- Founder(s): {Names with one-line credentials}
-- Website: {URL}
-- LinkedIn: {URL}
-
-================================================================================
-GLOSSARY (industry-specific terms)
-================================================================================
-
-{Term}: {1-sentence definition in plain language}
-{Term}: {1-sentence definition}
-
-```
-
-### Rules
-
-- One file. Concatenate the most-cited pages: home, about, services/features, pricing, FAQ, contact, plus the top 3–5 cornerstone blog/resource pages.
-- Each section starts with a clear `PAGE:` header so LLMs can attribute citations.
-- The `FACTS` block is critical — this is the structured NAP-and-everything-else block AI engines lift verbatim.
-- The `GLOSSARY` is only required when the industry uses jargon a non-specialist won't understand.
-- No HTML tags. No JS. No banned words. Plain prose.
-- Regenerate on every content change — wire into the build, not handcrafted once.
-
----
-
-## `robots.txt` — AI-crawler rules
-
-Default policy: **allow all major AI crawlers** unless the client has signed an explicit opt-out.
-
-```
-# Search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# AI crawlers — allowed
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-# Default
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://{host}/sitemap-index.xml
-Sitemap: https://{host}/sitemap-en.xml
-Sitemap: https://{host}/sitemap-fr.xml
-Sitemap: https://{host}/sitemap-sw.xml
-```
-
-### When to block
-
-Only when the client has explicitly asked, in writing, to opt out of AI training. In that case:
-
-```
 User-agent: GPTBot
 Disallow: /
 
-User-agent: Google-Extended
-Disallow: /
+User-agent: *
+Allow: /
 
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
+Sitemap: https://example.com/sitemap.xml
 ```
 
-Note: opting out usually means the site stops being cited in AI answers entirely. Make sure the client understands that trade-off.
+This is an example, not a global default. Confirm CDN, WAF, hosting, and IP rules
+do not contradict `robots.txt`.
 
----
+## Google controls verified on 2026-09-05
 
-## Per-page AI-citability hooks
+Google Search generative-feature inclusion is controlled in Search Console as
+of 31 August 2026. It is separate from `Google-Extended`, which controls certain
+non-Search generative AI training and grounding uses.
 
-Beyond the root files, every important page should be AI-citable on its own. Apply on home, about, services/features, pricing, FAQ, blog cornerstones:
+- Keep Googlebot crawl, index, canonical, and snippet signals coherent for
+  ordinary and generative Search eligibility.
+- Record the Search Console generative-AI include/exclude decision and property
+  inheritance.
+- Record the `Google-Extended` decision separately.
+- Use `noindex` when the page must not appear in Google Search at all.
+- Do not infer Google Search inclusion from a `Google-Extended` setting.
 
-1. **Direct-answer first paragraph** — open the body with a 1–2 sentence direct answer to the question the page is named after. AI engines extract the first paragraph under the H1 disproportionately.
-2. **One H2 per sub-question** — phrase H2s as natural questions ("How does Medic8 work offline?") not topic labels ("Offline mode").
-3. **A comparison or specs table** wherever there is structured data (pricing, plan features, integration list, supported regions). AI engines lift tables verbatim.
-4. **A visible FAQ block when research shows unresolved buyer questions.** `FAQPage` markup is not a Google AI or rich-result requirement.
-5. **`dateModified`** in `Article` schema, kept fresh on every content edit. Recency is a strong AI ranking signal.
-6. **Plain `Person` schema for any named author** with `sameAs` links to professional profiles.
+## Other providers
 
----
+Do not ship remembered user-agent lists. For Anthropic, Perplexity, Apple,
+Common Crawl, Amazon, Cohere, and other providers, verify at implementation time:
+
+- exact current user-agent names and published IP ranges;
+- whether the bot is for search, training, user-triggered access, or another use;
+- whether `robots.txt` is honoured for that use;
+- propagation delay and caching behaviour;
+- effect of blocking on links, snippets, citations, and user-triggered access;
+- provider documentation date and next review date.
+
+If first-party documentation is absent or ambiguous, mark the effect
+`NOT_ASSESSED` and let the owner choose the narrowest policy consistent with
+legal, privacy, commercial, and infrastructure requirements.
+
+## Decision record
+
+Every project records one row per provider and purpose:
+
+| Field | Required value |
+|---|---|
+| Provider and user agent | Exact current name |
+| Purpose | Search, potential training, user-triggered fetch, or other |
+| Decision | Allow, block, rate-limit, or `NOT_ASSESSED` |
+| Scope | Site, path, file type, environment |
+| Owner and approval date | Named decision owner and ISO date |
+| First-party source | URL, publication/update date, access date |
+| Expected consequence | Qualified; no invented guarantee |
+| Infrastructure alignment | robots, CDN, WAF, host, authentication |
+| Measurement | server logs, referrals, platform report, error evidence |
+| Review trigger | Date or provider change |
+
+## AI-ready page implementation
+
+The HTML page remains the source of truth.
+
+- Lead with a clear answer when that serves the visitor; use no fixed word count.
+- Use descriptive headings that match the reading path; questions are optional.
+- Present genuine comparisons, definitions, procedures, and evidence in semantic
+  HTML when they improve the task.
+- Keep important content crawlable and understandable outside images or scripts.
+- Use structured data only when it matches visible, verified facts.
+- Preserve authorship, source, publication, substantive revision, version,
+  jurisdiction, and limitation information where relevant.
+- Design forms and controls accessibly so user-triggered agents and assistive
+  technology can identify labels, roles, states, errors, and completion.
 
 ## Verification checklist
 
-Before sign-off:
+- [ ] Search, potential-training, and user-triggered purposes are separate.
+- [ ] Every named provider was checked against current first-party documentation.
+- [ ] Owner approval and review date exist for each allow/block decision.
+- [ ] `robots.txt`, meta directives, Search Console controls, CDN, WAF, and host
+      policies are coherent.
+- [ ] Search inclusion is not promised from crawler permission alone.
+- [ ] Optional text artefacts have a named consumer and regeneration owner.
+- [ ] No arbitrary length, FAQ-count, citation, ranking, or freshness claim ships.
+- [ ] Server-log and referral measurement respects consent and retention policy.
+- [ ] Unavailable provider evidence is `NOT_ASSESSED`, not guessed.
 
-- [ ] `/llms.txt` exists, validates as markdown, all links absolute and 200-OK.
-- [ ] `/llms-full.txt` exists, includes home, about, services, pricing, FAQ, contact, and FACTS block.
-- [ ] `/robots.txt` allows GPTBot, ChatGPT-User, Google-Extended, ClaudeBot, anthropic-ai, PerplexityBot, CCBot, Bingbot, Googlebot.
-- [ ] `/robots.txt` references all language sitemaps + sitemap-index.
-- [ ] Every cornerstone page opens with a direct-answer paragraph.
-- [ ] Pages answer evidenced buyer questions; no unnecessary FAQ block or retired rich-result promise is present.
-- [ ] `Person` schema with `sameAs` exists for every named author.
-- [ ] `dateModified` is current on every Article schema.
-- [ ] OG image renders correctly when pasted into ChatGPT and Slack.
-- [ ] `llms.txt` and `llms-full.txt` are wired into the build pipeline, not hand-edited.
+## Current sources
+
+- Google generative AI optimisation guide:
+  https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+- Google Search generative AI control:
+  https://support.google.com/webmasters/answer/16908024
+- OpenAI crawler documentation:
+  https://developers.openai.com/api/docs/bots
+- OpenAI publisher FAQ:
+  https://help.openai.com/en/articles/12627856-publishers-and-developers-faq
+- Claim-level evidence record:
+  [`../../../../docs/source-registers/search-ai-currentness-2026-09-05.json`](../../../../docs/source-registers/search-ai-currentness-2026-09-05.json)

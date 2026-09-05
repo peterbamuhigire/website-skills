@@ -57,12 +57,13 @@ The schema below is platform-agnostic. Event names are suggestions that match GA
 AI-search visibility is measured outside normal web analytics in many cases.
 Track it as a reporting layer, not as a replacement for conversion analytics:
 
-- Google Search Console: Web performance by page/query class
-- Bing Webmaster Tools: AI Performance, Citation Share, Intents, Topics,
-  Compare
+- Google Search Console: dedicated generative AI impressions by page, country,
+  device, and date, plus normal Web performance by page/query class
+- Bing Webmaster Tools: total citations, average cited pages, sampled grounding
+  queries, page-level citation activity, and trends
 - Server logs: known AI retrieval/crawler requests where available
-- Third-party AI visibility tools: cited pages, answer accuracy, share of
-  citations, and unsafe recommendations
+- Repeated assistant observations: cited pages, claim support, answer fidelity,
+  omissions, and unsafe recommendations
 - CRM/GA4: whether cited or answer-ready pages support qualified demand
 
 Do not report `llms.txt` generation as an AI-visibility KPI. Report whether the

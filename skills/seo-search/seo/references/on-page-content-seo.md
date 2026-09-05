@@ -40,8 +40,9 @@ Google assigns higher relevance scores when keywords appear in specific position
 - Already enforced in main SKILL.md (50-60 chars).
 
 ### 2. H1 Heading
-- Must contain the primary keyword or a close variant.
-- One H1 per page (already enforced).
+- Must identify the page topic and task clearly in language natural to the audience.
+- Prefer one clear page-level H1 for an unambiguous reading path; do not treat
+  an exact keyword or heading count as a ranking rule.
 - H1 should closely match the `<title>` tag content.
 
 ### 3. First 20 Words of Body Content
