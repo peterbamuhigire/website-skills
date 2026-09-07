@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -27,13 +28,25 @@ class PageParser(HTMLParser):
         self.tags: list[str] = []
         self.attrs: dict[str, list[dict[str, str]]] = {}
         self.headings: list[int] = []
+        self.title_text: list[str] = []
+        self.in_title = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         normalised = {key: value or "" for key, value in attrs}
         self.tags.append(tag)
         self.attrs.setdefault(tag, []).append(normalised)
+        if tag == "title":
+            self.in_title = True
         if re.fullmatch(r"h[1-6]", tag):
             self.headings.append(int(tag[1]))
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "title":
+            self.in_title = False
+
+    def handle_data(self, data: str) -> None:
+        if self.in_title:
+            self.title_text.append(data)
 
 
 def local_target(page: Path, href: str, fixture: Path) -> Path | None:
@@ -64,7 +77,7 @@ def check_page(page: Path, fixture: Path) -> dict[str, object]:
         for attrs in parser.attrs.get("input", [])
     )
     headings_ok = all(next_level - level <= 1 for level, next_level in zip(parser.headings, parser.headings[1:]))
-    has_description = any(attrs.get("name") == "description" and attrs.get("content") for attrs in parser.attrs.get("meta", []))
+    has_description = any(attrs.get("name") == "description" and attrs.get("content", "").strip() for attrs in parser.attrs.get("meta", []))
     return {
         "page": page.name,
         "links": {"status": "PASS" if not broken else "FAIL", "broken": broken},
@@ -81,22 +94,46 @@ def check_page(page: Path, fixture: Path) -> dict[str, object]:
             "images_without_alt": images_without_alt,
             "inputs_without_labels": missing_form_labels,
         },
-        "metadata": {"status": "PASS" if parser.attrs.get("title") and has_description else "FAIL"},
+        "metadata": {"status": "PASS" if "".join(parser.title_text).strip() and has_description else "FAIL"},
     }
 
 
 def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGETS) -> dict[str, object]:
+    fixture = fixture.resolve()
     config = json.loads((fixture / "fixture.json").read_text(encoding="utf-8"))
     budget_data = json.loads(budgets.read_text(encoding="utf-8"))
-    pages = [fixture / name for name in config["pages"]]
+    names = config.get("pages") if isinstance(config, dict) else None
+    if not isinstance(names, list) or not names:
+        raise ValueError("pages must be a non-empty list")
+    if any(not isinstance(name, str) or not name.strip() for name in names):
+        raise ValueError("page names must be non-empty strings")
+    pages = [(fixture / name).resolve() for name in names]
+    if len(set(pages)) != len(pages):
+        raise ValueError("pages must have unique resolved paths")
+    if any(not page.is_relative_to(fixture) or not page.is_file() for page in pages):
+        raise ValueError("pages must be existing files within the fixture")
     page_results = [check_page(page, fixture) for page in pages]
     required_budget_keys = {"total_weight_kb", "js_kb_gzip", "css_kb_gzip"}
-    available_keys = required_budget_keys.issubset(budget_data.get("global", {}))
-    asset_bytes = sum(path.stat().st_size for path in fixture.iterdir() if path.is_file() and path.name != "fixture.json")
-    raw_ceiling = int(budget_data["global"]["total_weight_kb"] * 1024) if available_keys else 0
+    global_budget = budget_data.get("global") if isinstance(budget_data, dict) else None
+    if not isinstance(global_budget, dict):
+        raise ValueError("global budgets must be an object")
+    available_keys = required_budget_keys.issubset(global_budget)
+    try:
+        if available_keys and any(type(global_budget[key]) not in (int, float)
+                                  or not math.isfinite(global_budget[key]) or global_budget[key] < 0
+                                  for key in required_budget_keys):
+            raise ValueError("required budgets must be finite non-negative numbers")
+        raw_ceiling = int(global_budget["total_weight_kb"] * 1024) if available_keys else 0
+    except OverflowError as exc:
+        raise ValueError("required budgets exceed numeric conversion range") from exc
+    assets = [path for path in fixture.rglob("*") if path.is_file() and path != fixture / "fixture.json"]
+    if any(not path.resolve().is_relative_to(fixture) for path in assets):
+        raise ValueError("fixture assets must stay within the fixture")
+    asset_bytes = sum(path.stat().st_size for path in assets)
     checks = {
         "links": all(result["links"]["status"] == "PASS" for result in page_results),
         "semantics": all(result["semantics"]["status"] == "PASS" for result in page_results),
+        "metadata": all(result["metadata"]["status"] == "PASS" for result in page_results),
         "accessibility_inputs": all(result["accessibility_inputs"]["status"] == "PASS" for result in page_results),
         "performance_budget_inputs": available_keys and asset_bytes <= raw_ceiling,
     }
@@ -121,7 +158,11 @@ def main() -> int:
     parser.add_argument("--fixture", type=Path, default=DEFAULT_FIXTURE)
     parser.add_argument("--budgets", type=Path, default=DEFAULT_BUDGETS)
     args = parser.parse_args()
-    result = run_benchmark(args.fixture.resolve(), args.budgets.resolve())
+    try:
+        result = run_benchmark(args.fixture.resolve(), args.budgets.resolve())
+    except (OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
+        print(json.dumps({"status": "FAIL", "error": str(exc), "evidence_type": "lab fixture only"}))
+        return 1
     print(json.dumps(result, indent=2))
     return 0 if result["status"] == "PASS" else 1
 
