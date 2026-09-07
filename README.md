@@ -309,6 +309,10 @@ When a task is ambiguous, follow this order:
 - Keep every active skill at zero contract debt and within the 500-line entrypoint limit
 - Require the expected route in the top three for every routing fixture
 
+## Current first-wave implementation (7 September 2026)
+
+The bounded first wave adds [`docs/kaizen/first-wave-website-journey.md`](./docs/kaizen/first-wave-website-journey.md) and [`docs/kaizen/first-wave-website-measurement.md`](./docs/kaizen/first-wave-website-measurement.md). They define the required brief, route/action map, proof register, render and state evidence, event ownership, negative cases and release boundaries. The website fixture benchmark passed for the local lab fixture; routing smoke passed 31/31 and the skill-contract validator reported zero debt. These are specifications and contracts, not a completed client site or live telemetry. Browser, accessibility, security, deployment, conversion and client-value evidence remain unassessed until a completed packet is attached. Next action: attach one authorised journey packet and run the named owner/reviewer handoff.
+
 ## Related Docs
 
 - [AGENTS.md](./AGENTS.md) — repository routing and quality rules
