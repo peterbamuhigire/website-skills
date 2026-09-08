@@ -87,6 +87,13 @@ Recovery: repair the page strategy or proof map, then rerun the message and stat
 - [Human English and reader-centred craft](../../../book-extractions/human-english-craft-synthesis-2026.md) for reader-fit register, grammar, collocation, rhythm, and proof/read-aloud.
 <!-- dual-compat-end -->
 
+## Book-informed editorial lens
+
+Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+for outside-in journey context, intent-led language, topic value, and
+distinctive voice. Treat the books as historical/editorial inputs, not current
+platform evidence.
+
 ## Evidence Produced
 
 | Evidence | Format | Acceptance condition |

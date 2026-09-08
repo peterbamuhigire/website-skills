@@ -94,6 +94,9 @@ Use these skills as the default router:
 - `google-ai-search`: Official Google Search guidance for AI Overviews, AI Mode,
   AEO/GEO mythbusting, Search Console measurement, local/ecommerce readiness,
   and agentic-experience preparation.
+- `book-extractions/carter-new-rules-ai-search-synthesis-2026.md`: qualified
+  concept input for response-mode planning, entity clarity, outcome separation,
+  and reversible experiments; it never supplies current platform facts.
 - Do not route ambiguous “AIO” or model-training placement as a separate ranking
   system. Separate training, live retrieval, citation, representation, referral,
   and conversion outcomes.

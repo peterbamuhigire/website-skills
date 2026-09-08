@@ -78,6 +78,7 @@ def check_page(page: Path, fixture: Path) -> dict[str, object]:
     )
     headings_ok = all(next_level - level <= 1 for level, next_level in zip(parser.headings, parser.headings[1:]))
     has_description = any(attrs.get("name") == "description" and attrs.get("content", "").strip() for attrs in parser.attrs.get("meta", []))
+    title_value = re.sub(r"<!--.*?-->", "", "".join(parser.title_text), flags=re.DOTALL).strip()
     return {
         "page": page.name,
         "links": {"status": "PASS" if not broken else "FAIL", "broken": broken},
@@ -94,7 +95,7 @@ def check_page(page: Path, fixture: Path) -> dict[str, object]:
             "images_without_alt": images_without_alt,
             "inputs_without_labels": missing_form_labels,
         },
-        "metadata": {"status": "PASS" if "".join(parser.title_text).strip() and has_description else "FAIL"},
+        "metadata": {"status": "PASS" if title_value and has_description else "FAIL"},
     }
 
 
