@@ -181,7 +181,15 @@ change so they cannot become stale or contradict the HTML site.
   generative AI report and control plus Bing AI Performance when the property
   exposes them, using only currently documented dimensions.
 
+## Book-informed editorial lens
+
+Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+for outside-in journeys, intent/resource maps, topic value, distinctive voice,
+native distribution, and evidence/approval handoffs. Treat the supplied books
+as historical or editorial inputs, not current platform authority.
+
 ## Preserved Domain References
+- `../../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md` — qualified book-informed planning lens for response modes, entity clarity, outcome separation, and reversible experiments.
 - `references/ai-seo-optimization.md` — layered SEO, AEO, GEO, entity-presence,
   crawler-governance, SXO, and cross-platform measurement doctrine.
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.

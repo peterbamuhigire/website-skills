@@ -205,6 +205,36 @@ If a proposal guarantees AI Overview placement, replace it with a scoped program
   when copy must be rewritten for usefulness, proof, entity clarity, and buyer
   intent.
 
+## Book-informed planning lens (qualified)
+
+Use [the Carter independent synthesis](../../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md)
+as a durable planning input, never as authority for current platform behaviour.
+It adds four useful distinctions to this Google-specific route:
+
+- plan content for remembered brand facts, retrieved/current facts, and deep
+  reasoning as response modes, while treating model routing as changeable;
+- separate representation, retrieval, citation/answer contribution, referral,
+  and conversion in the measurement plan;
+- improve entity clarity with natural, explicit relationships between the
+  organisation, offer, audience, place, proof, and limits; and
+- test one content, technical, or agent-ready slice with a guardrail and
+  rollback path before standardising it.
+
+The book does not override Google's current guidance. Do not impose a universal
+50-word opening, FAQ on every page, fixed freshness cadence, token/chunking
+recipe, citation lift, or agent protocol. For current claims, use the website
+source register and record source scope, dates, freshness class, support status,
+uncertainty, owner, and re-audit date.
+
+Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+as a second, qualified planning lens. It joins three durable checks: the
+outside-in journey from discovery through destination and follow-up; intent and
+customer language mapped to a useful page or cluster; and a distinctive,
+reader-friendly voice that survives review without becoming generic. Add the
+source, owner, rights/approval state, review date, failure path, and separate
+visibility/referral/action measures to the page brief. The supplied books are
+historical or editorial inputs, not current platform authorities.
+
 ## Notes
 - This skill is source-aware: re-check Google's Search Central documentation
   before major client policy changes because the guidance can change.

@@ -22,6 +22,36 @@
       "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services."
     },
     {
+      "source_id": "GOOGLE_SEARCH_ESSENTIALS_2026",
+      "title": "Google Search Essentials",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-08",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for Google Search eligibility, spam policies, and core practices; does not establish behaviour of other AI or social services."
+    },
+    {
+      "source_id": "GOOGLE_SEO_STARTER_2026",
+      "title": "SEO Starter Guide: The Basics",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-08",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for general Google SEO guidance; it does not guarantee indexing, ranking, or performance."
+    },
+    {
       "source_id": "GOOGLE_GENAI_REPORT_2026",
       "title": "Generative AI performance report (Search)",
       "url": "https://support.google.com/webmasters/answer/16984139",
@@ -153,6 +183,36 @@
       "archive_status": "NOT_ASSESSED",
       "confidence": "medium",
       "scope_and_limit": "Critical scoping review of heterogeneous evidence; preprint conclusions support caution, not a definitive cross-platform algorithm model."
+    },
+    {
+      "source_id": "WILEY_CARTER_METADATA_2026",
+      "title": "The New Rules of AI Search: SEO for visibility in ChatGPT, Google Gemini and Generative Search",
+      "url": "https://uat.store.wiley.com/en-us/the-new-rules-of-ai-search-seo-for-visibility-in-chatgpt-google-gemini-and-generative-search-p-9781394399697",
+      "publisher": "John Wiley & Sons",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-08",
+      "access_date": "2026-09-08",
+      "freshness_class": "context-bound",
+      "support_status": "context_bound_direct_access_unavailable",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Indexed publisher record lists title, author, edition, ISBN family, and publisher listing; direct page access returned 403, so it does not fully verify the contents of the supplied local file or current platform behaviour."
+    },
+    {
+      "source_id": "LOCAL_CARTER_EPUB_2026",
+      "title": "Supplied EPUB: The New Rules of AI Search",
+      "url": "local:C:/Users/Peter/Downloads/_OceanofPDF.com_The_new_rules_of_AI_Search_-_Crystal_Carter.epub",
+      "publisher": "Local file; mirror provenance unresolved",
+      "source_tier": 5,
+      "publication_or_version_date": "2026-07-23",
+      "access_date": "2026-09-08",
+      "freshness_class": "context-bound",
+      "support_status": "concept_only_unresolved_provenance",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Used only for a clearly labelled independent synthesis of durable ideas; never for current platform, market, model, traffic, adoption, pricing, or feature claims. SHA-256: 615F90CAE3C4234CE8D892128DBC9CAF44C8D07E0DD13777AF7EAD0558DE175D."
     }
   ],
   "claims": [
