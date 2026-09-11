@@ -117,3 +117,13 @@ platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
 - [Book-driven Kaizen Wave 3](references/book-driven-kaizen-wave-3-2026-09-02.md) - task-first dashboards, retrieval/SEO evidence, experimentation, image QA, accessibility, and protocol currency.
 - `skills/orchestration/website-builder/`
 - `skills/quality-gates/design-quality-score/`
+
+## Responsible publishing overlay
+
+The supplied 25 writing signs are revision prompts, not an authorship detector. Every page must
+have a named audience and job; every material claim needs scope, date, source fit, limitation, and
+an action consequence. Keep internal links distinct from citations, label hypothetical examples,
+and never invent proof, scarcity, outcomes, or platform facts. Audit copy and visual delivery
+separately, cite exact evidence for style findings, and mark missing checks `NOT_ASSESSED`.
+
+- Shared standard: [`AI-slop responsible publishing`](../../../../skills-web-dev/references/ai-slop-responsible-publishing-standard-2026-09-11.md)

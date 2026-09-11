@@ -75,6 +75,16 @@ Build credible persuasion from customer language, a clear offer, proportionate p
 | Message and proof bank | Future campaigns | Entries retain source, audience, and approved-use context. |
 | CTA ladder and variants | CRO/experimentation owner | Each CTA matches commitment level and each variant has a hypothesis. |
 
+## Responsibility overlay
+
+Use the 25 signs to edit clarity, rhythm, and specificity; never use them to infer authorship.
+For each material promise, record audience, scope, date, source fit, transformation, limitation,
+and the buyer decision it supports. Put proof beside the claim, label hypothetical cases, and
+distinguish internal navigation from evidence citations. Never invent testimonials, scarcity,
+guarantees, outcomes, or platform facts. Missing evidence is `NOT_ASSESSED`.
+
+- Shared standard: [`AI-slop responsible publishing`](../../../../skills-web-dev/references/ai-slop-responsible-publishing-standard-2026-09-11.md)
+
 ## References
 
 - [Website messaging framework](references/website-messaging-framework.md) for page structure.
