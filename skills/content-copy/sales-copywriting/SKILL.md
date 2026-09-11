@@ -82,6 +82,7 @@ Build credible persuasion from customer language, a clear offer, proportionate p
 - [Value proposition and CTA lab](references/value-proposition-and-cta-lab.md) for hypotheses.
 - [Headlines](references/headline-mastery.md), [resistance and objections](references/resistance-and-objections.md), and [closing and guarantees](references/closing-and-guarantees.md) for focused branches.
 - [PASTOR and 4 Ps](references/pastor-and-4ps.md) when a full persuasion sequence is justified.
+- [Buyer psychology and ethical persuasion](references/buyer-psychology-and-ethical-persuasion.md) for choice architecture, proof, memory cues, transparent urgency, and conversion experiments.
 - [Legacy detailed guidance](references/legacy-guidance.md) for preserved framework material.
 <!-- dual-compat-end -->
 
