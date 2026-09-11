@@ -126,4 +126,6 @@ an action consequence. Keep internal links distinct from citations, label hypoth
 and never invent proof, scarcity, outcomes, or platform facts. Audit copy and visual delivery
 separately, cite exact evidence for style findings, and mark missing checks `NOT_ASSESSED`.
 
-- Shared standard: [`AI-slop responsible publishing`](../../../../skills-web-dev/references/ai-slop-responsible-publishing-standard-2026-09-11.md)
+- Shared standard: resolve `skills-web-dev/references/ai-slop-responsible-publishing-standard-2026-09-11.md`
+  through the global engine-routing table; it is external to this repository and is not an internal
+  Markdown route.
