@@ -35,12 +35,21 @@ Turn verified business, customer, category, and competitive evidence into a bran
 ## Workflow
 
 1. Confirm the strategic decision, audience, geography, and decision owner.
-2. Separate verified facts, stakeholder opinions, and hypotheses.
-3. Define category, primary audience, frame of reference, problem, value, proof, and exclusions.
-4. Compare credible positioning territories and choose one with an explicit trade-off.
-5. Decide brand architecture, personality, voice principles, and promise-to-proof boundaries.
-6. Write `docs/brand-brief.md` and record unresolved tests and downstream implications.
-7. Stop before design when the decision owner, core audience, or proof boundary is unresolved; recover with a narrowed provisional brief and validation plan.
+2. Inspect the brief, current site, supplied research, and verified sources. Separate facts,
+   stakeholder opinions, and hypotheses instead of asking for information already available.
+3. Map open brand decisions, dependencies, and owners. Ask only the current frontier: audience and
+   business constraints before positioning, positioning before architecture and expression. Batch
+   independent questions and retain dissent.
+4. Mark answers proposed or confirmed; do not turn consultant recommendations into client decisions.
+   Recompute the frontier after each round.
+5. Define category, primary audience, frame of reference, problem, value, proof, and exclusions.
+6. Compare credible positioning territories and choose one with an explicit trade-off.
+7. Decide brand architecture, personality, voice principles, and promise-to-proof boundaries.
+8. Confirm the shared audience, promise, proof, differentiation, exclusions, and downstream
+   design/copy consequences before releasing the brand brief.
+9. Write `docs/brand-brief.md` and record unresolved tests and downstream implications.
+10. Stop before design when the decision owner, core audience, or proof boundary is unresolved;
+    recover with a narrowed provisional brief and validation plan.
 
 ## Quality Standards
 
@@ -97,6 +106,7 @@ A Kampala payroll firm wants to be "trusted, innovative, and professional". Inte
 ## References
 
 - `references/brand-discovery-questions.md` - discovery prompts and evidence collection.
+- Use the SRS engine's `decision-frontier-elicitation` reference as the canonical dependency and shared-understanding method; this skill supplies brand and website decision fields only.
 - `references/positioning-frameworks.md` - positioning, architecture, and differentiation choices.
 - `references/legacy-guidance.md` - preserved CBBE, mantra, archetype, and brief guidance.
 - [Book-driven positioning, story, and proof](references/book-driven-positioning-story-and-proof.md) - durable book synthesis with evidence and currentness boundaries.
