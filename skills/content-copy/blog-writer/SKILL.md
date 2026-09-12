@@ -40,14 +40,15 @@ Produce useful articles with a stated argument, verified claims, genuine voice, 
 
 1. Validate the brief: reader, buyer question, search intent, point of view, proof, author basis, internal links, and next action.
 2. Stop if the article would exist only to target a keyword or if its central claim cannot be supported.
-3. Build a claim-and-source map; distinguish first-party evidence, external facts, opinion, and inference.
-4. Choose a structure from [article design](references/article-design.md) that fits the reader's decision rather than a default listicle.
-5. Draft the argument with specific examples, trade-offs, constraints, and regional context where supported.
-6. Attribute material claims at the point of use and record update-sensitive facts.
-7. Edit for reader experience, human voice, scannability, and the standards in [the genuine-writing gate](../premium-commercial-writing/references/genuine-writing-and-ai-slop-gate.md).
-8. Add metadata, internal-link suggestions, image requirements, and implementation notes when the publishing contract requires them.
-9. Run a final source, anti-slop, and handoff review. If a source fails, remove or qualify the dependent claim and re-check the argument.
-10. Publish or edit project files only with explicit authority; otherwise return the draft and handoff.
+3. Run the mandatory three-wave article SEO/SERP study from the digital-research-engine. Create the query-and-intent map, read the accessible top five results per cluster, and record the content, evidence and AI-answer gaps; mark inaccessible results `UNASSESSED`.
+4. Build a claim-and-source map; distinguish first-party evidence, external facts, competitor patterns, opinion, and inference. Search results and competitor copy are not factual proof.
+5. Choose a structure from [article design](references/article-design.md) that fits the reader's decision rather than a default listicle, using the documented gap and source plan.
+6. Draft the argument with specific examples, trade-offs, constraints, and regional context where supported.
+7. Attribute material claims at the point of use and record update-sensitive facts.
+8. Edit for reader experience, human voice, scannability, and the standards in [the genuine-writing gate](../premium-commercial-writing/references/genuine-writing-and-ai-slop-gate.md).
+9. Add metadata, internal-link suggestions, image requirements, and implementation notes when the publishing contract requires them.
+10. Run a final source, anti-slop, and handoff review. If a source fails, remove or qualify the dependent claim and re-check the argument.
+11. Publish or edit project files only with explicit authority; otherwise return the draft and handoff.
 
 Recovery: repair the brief, source, or claim, then rerun source and editorial checks before handoff.
 
@@ -69,6 +70,7 @@ Recovery: repair the brief, source, or claim, then rerun source and editorial ch
 - Adding invented case details or quotations. Fix: label missing proof and request it.
 - Treating clean grammar as editorial quality. Fix: test specificity, intent, judgment, and usefulness.
 - Publishing without authority. Fix: return the draft and exact implementation steps.
+- Drafting from one search result or a keyword list. Fix: complete and retain the three-wave article research record, then write to the verified gap.
 
 ## Outputs
 

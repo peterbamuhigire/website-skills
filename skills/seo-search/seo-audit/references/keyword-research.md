@@ -104,6 +104,35 @@ This feedback loop makes keyword research continuous, not a one-time task. Revie
 
 ## Part III: The Keyword Research Process
 
+### 3.0 Mandatory three-wave SERP and AI-answer gap study for articles
+
+For every article or long-form editorial page, pair keyword research with the
+digital-research-engine's three-wave study. This is a content and evidence
+workflow, not a promise of rankings or search volume.
+
+**Wave 1 — map intent.** Define the audience, decision, market and language,
+then group buyer language into 3–7 related query clusters. Record exact queries,
+provider, access date and geography. Use an approved search/API tool; do not
+scrape Google result pages directly or manufacture volume figures.
+
+**Wave 2 — read the set.** Read the accessible top five results for each cluster.
+Capture the result's title, headings, format, audience, evidence, sources,
+localisation, CTA, strengths and missing reader questions. Mark blocked or
+unread pages `UNASSESSED`. A search snippet is a discovery lead, not evidence.
+
+**Wave 3 — design the gap.** Compare what the result set answers, repeats and
+omits. Select one defensible article job, primary and secondary terms, answer
+sections, internal links and authoritative sources. Verify material claims from
+the original source and record unresolved checks. For English and French, map
+intent separately and adapt the wording to the market rather than translating
+the keyword literally.
+
+Retain a dated research record with the queries, five-result URLs and read
+status, competitor patterns, content/AI-answer gaps, source map, chosen terms,
+outline, limitations and measurement plan. Competitor patterns inform the
+editorial opportunity; they do not prove market facts. Search Console or other
+performance data is required before claiming an outcome.
+
 ### 3.1 Stage Overview (Jones Framework)
 
 The keyword research process has five stages:
