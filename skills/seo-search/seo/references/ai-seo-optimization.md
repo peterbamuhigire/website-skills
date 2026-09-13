@@ -25,6 +25,48 @@ SEO, AEO, GEO, AIO, and SXO are not five equivalent ranking systems.
 - **SXO** is the post-discovery experience and conversion layer. It does not
   automatically improve ranking.
 
+## Evidence-checked claim disposition — 2026-09-13
+
+Use this table when a brief presents SEO, AEO, GEO, AIO, or SXO as a package.
+The labels are useful for planning, but they are not five equivalent, documented
+ranking systems. The operating rule is the qualified interpretation below, not
+the shorthand label by itself.
+
+| Label and supplied claim | Disposition | Operating rule |
+|---|---|---|
+| **SEO:** high-intent keyword clusters, on-page/technical SEO, links, speed/crawlability, quarterly refresh | **Supported in part** | Map real audience intent to pages; use search language naturally; make links crawlable; resolve crawl, index, rendering, security, and page-experience defects; earn legitimate references. There is no universal quarterly refresh cadence, and “domain authority” is not a Google-published score to optimise as a KPI. Refresh when facts, procedures, products, evidence, intent, or performance justify a substantive change. |
+| **AEO:** 40–60 word answers, FAQ/How-To schema, PAA, featured snippets, voice/mobile queries | **Supported in part; fixed length rejected** | Write the shortest complete answer that serves the reader, then add conditions, steps, evidence, or comparison detail as needed. Google publishes no exact featured-snippet minimum length and does not let site owners mark a page for inclusion. Use structured data only when the page and consumer support it; it enables eligibility, not display. FAQ/HowTo treatment is not a universal Google tactic. |
+| **GEO:** citations in ChatGPT/Perplexity/Gemini, entity-rich factual content, E-E-A-T, forums/datasets, tables/headings/FAQs | **Supported in part; no citation promise** | Treat retrieval, citation, representation, referral, and conversion as separate observations. Improve useful, original, sourced, entity-clear content and legitimate distribution. Google says AEO/GEO are labels for work that remains SEO; Bing exposes citation observations in AI Performance; OpenAI and Perplexity document search crawlers. None establishes a cross-platform citation recipe or guarantee. |
+| **AIO:** presence in training data, Wikipedia/Wikidata/GitHub footprint, consistent messaging, credible sources, long-term recall | **Ambiguous / training claim rejected** | Define AIO before use. Prefer “entity and knowledge presence” for a consistent, verifiable public record across owned and legitimate third-party sources. Keep search retrieval, user-triggered fetching, and potential model training as separate controls. Do not promise training-data inclusion, model memory, or long-term recall; do not manufacture encyclopaedia, repository, forum, or dataset presence. |
+| **SXO:** speed/mobile, intent match, CTAs, CRO, frictionless journey | **Supported as experience work** | Test the full post-click task: relevance, accessibility, mobile usability, Core Web Vitals, security, clarity, CTA completion, and failure recovery. Page experience can contribute to Search success, but Google says there is no single page-experience signal and good scores do not guarantee ranking. CTAs and CRO are conversion outcomes, not automatic ranking levers. |
+
+### What the evidence supports
+
+- Google’s current generative Search guidance says core SEO remains relevant,
+  pages must be indexed and snippet-eligible, and there are no additional
+  technical requirements or special AI markup for AI Overviews and AI Mode.
+- Google’s current guidance rejects arbitrary word counts and states that it
+  does not provide an exact minimum length for featured snippets. Never turn
+  “40–60 words” into a skill requirement; use it only as a reversible copy test
+  when a page job makes that useful.
+- Structured data must represent visible, accurate content. It can enable an
+  eligible rich result but does not guarantee one. Google’s FAQ and HowTo
+  treatment is subject to current feature support and must not be presented as
+  an AEO default.
+- Bing AI Performance reports citation activity and sampled grounding queries;
+  these are visibility observations, not rank, authority, placement, or
+  business-value metrics. For ChatGPT, keep `OAI-SearchBot`, `GPTBot`, and
+  user-triggered access decisions separate. Re-check Perplexity’s current bot
+  documentation at implementation time.
+
+### Maintenance rule
+
+Do not change a publication date or run a quarterly refresh merely to signal
+freshness. Record a trigger, the substantive change, the source owner, and the
+next review date. For fast-changing platform or policy claims, re-verify before
+release and at the review date; for evergreen page facts, re-check when the
+business, offer, evidence, or route changes.
+
 The operating model is layered:
 
 1. technical availability and index eligibility;

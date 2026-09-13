@@ -1,10 +1,10 @@
 {
-  "register_id": "website-search-ai-currentness-2026-09-05",
+  "register_id": "website-search-ai-currentness-2026-09-13",
   "scope": "Search, answer-engine, generative-engine, entity-presence, crawler-governance, structured-data, freshness, and measurement rules used by website-skills.",
-  "access_date": "2026-09-05",
-  "verification_date": "2026-09-05",
+  "access_date": "2026-09-13",
+  "verification_date": "2026-09-13",
   "owner": "website-skills maintainer",
-  "review_date": "2026-12-05",
+  "review_date": "2026-12-12",
   "archive_policy": "Existing archives are recorded where found. Creating new third-party archives was outside this operation; missing archive evidence is NOT_ASSESSED.",
   "sources": [
     {
@@ -213,6 +213,81 @@
       "archive_status": "NOT_ASSESSED",
       "confidence": "low",
       "scope_and_limit": "Used only for a clearly labelled independent synthesis of durable ideas; never for current platform, market, model, traffic, adoption, pricing, or feature claims. SHA-256: 615F90CAE3C4234CE8D892128DBC9CAF44C8D07E0DD13777AF7EAD0558DE175D."
+    },
+    {
+      "source_id": "GOOGLE_PAGE_EXPERIENCE_2026",
+      "title": "Understanding Google Page Experience in Search Results",
+      "url": "https://developers.google.com/search/docs/appearance/page-experience",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-13",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for Google Search page-experience guidance; good Core Web Vitals or page experience do not guarantee top ranking."
+    },
+    {
+      "source_id": "GOOGLE_LINKS_2026",
+      "title": "Link Best Practices for Google",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-13",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for crawlable links, link relevance, anchor text, internal links, and qualified outbound links; it does not define a universal backlink or domain-authority target."
+    },
+    {
+      "source_id": "GOOGLE_STRUCTURED_DATA_2026",
+      "title": "General Structured Data Guidelines",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-13",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for Google rich-result eligibility and structured-data quality; markup does not guarantee display or ranking."
+    },
+    {
+      "source_id": "GOOGLE_FEATURED_SNIPPETS_2026",
+      "title": "Featured Snippets and Your Website",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-09-13",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for Google featured-snippet controls; Google publishes no exact minimum length and does not provide a page-owner marking mechanism."
+    },
+    {
+      "source_id": "PERPLEXITY_CRAWLERS_2026",
+      "title": "Perplexity Crawlers",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "publisher": "Perplexity",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-07-16",
+      "access_date": "2026-09-13",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Authoritative for the documented PerplexityBot and Perplexity-User purposes and robots guidance; user-agent details, IP ranges, and product behaviour may change."
     }
   ],
   "claims": [
@@ -287,6 +362,51 @@
       "freshness_class": "partial",
       "review_date": "2026-12-05",
       "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-009",
+      "claim": "Google publishes no exact featured-snippet minimum length and does not let site owners mark a page for featured-snippet inclusion.",
+      "source_ids": ["GOOGLE_FEATURED_SNIPPETS_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google featured-snippet documentation", "review_date": "2026-09-13"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-12",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "SAI-010",
+      "claim": "Google structured data can enable eligibility for rich results but does not guarantee display; it must represent visible, accurate page content.",
+      "source_ids": ["GOOGLE_STRUCTURED_DATA_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google structured-data guidelines", "review_date": "2026-09-13"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-12",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "SAI-011",
+      "claim": "Google uses multiple page-experience signals including Core Web Vitals, but good scores do not guarantee top ranking and page experience is not a single signal.",
+      "source_ids": ["GOOGLE_PAGE_EXPERIENCE_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google page-experience documentation", "review_date": "2026-09-13"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-12",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "SAI-012",
+      "claim": "Google uses links as a signal for relevance and discovery; its guidance does not define a universal backlink count or domain-authority score.",
+      "source_ids": ["GOOGLE_LINKS_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google link best-practices documentation; the absence of a universal target is a bounded inference from the guidance", "review_date": "2026-09-13"},
+      "freshness_class": "partial",
+      "review_date": "2026-12-12",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-013",
+      "claim": "Perplexity documents separate PerplexityBot search indexing from Perplexity-User user-triggered fetching; current bot and IP details must be rechecked at implementation time.",
+      "source_ids": ["PERPLEXITY_CRAWLERS_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Perplexity crawler documentation", "review_date": "2026-09-13"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-12",
+      "confidence": "high"
     }
   ]
 }
