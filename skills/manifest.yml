@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated": "2026-07-13",
-  "canonical_count": 60,
+  "canonical_count": 61,
   "external_engines": {
     "design-system-skills": {
       "locator": "global-routing-table",
@@ -743,6 +743,22 @@
       "last_verified": "2026-07-13"
     },
     {
+      "id": "hospitality-website-product",
+      "category": "orchestration",
+      "path": "skills/orchestration/hospitality-website-product/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "hospitality-website-product-output@1"
+      ],
+      "last_verified": "2026-07-13"
+    },
+    {
       "id": "premium-ui-ux-design",
       "category": "orchestration",
       "path": "skills/orchestration/premium-ui-ux-design/SKILL.md",
@@ -855,6 +871,22 @@
       "last_verified": "2026-07-13"
     },
     {
+      "id": "kaizen-engine-and-product-improvement",
+      "category": "quality-gates",
+      "path": "skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "kaizen-engine-and-product-improvement-output@1"
+      ],
+      "last_verified": "2026-07-13"
+    },
+    {
       "id": "security-gate",
       "category": "quality-gates",
       "path": "skills/quality-gates/security-gate/SKILL.md",
@@ -869,29 +901,6 @@
         "security-gate-output@1"
       ],
       "last_verified": "2026-07-13"
-    },
-    {
-      "id": "kaizen-engine-and-product-improvement",
-      "category": "quality-gates",
-      "path": "skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md",
-      "owner": "website-skills-maintainers",
-      "status": "active",
-      "aliases": [],
-      "dependencies": [
-        "design-quality-score",
-        "visual-qa",
-        "accessibility-audit",
-        "security-gate"
-      ],
-      "inputs": [
-        "project-context@1",
-        "product-evidence@1"
-      ],
-      "outputs": [
-        "kaizen-product-audit-output@1",
-        "kaizen-improvement-plan-output@1"
-      ],
-      "last_verified": "2026-08-04"
     },
     {
       "id": "visual-qa",
