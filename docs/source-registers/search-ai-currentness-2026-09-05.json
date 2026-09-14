@@ -288,6 +288,51 @@
       "archive_status": "NOT_ASSESSED",
       "confidence": "high",
       "scope_and_limit": "Authoritative for the documented PerplexityBot and Perplexity-User purposes and robots guidance; user-agent details, IP ranges, and product behaviour may change."
+    },
+    {
+      "source_id": "MELTWATER_LINKEDIN_REPORT_2026",
+      "title": "How LinkedIn Content Wins in AI Search",
+      "url": "https://learn.meltwater.com/rs/814-WJU-189/images/2026%20Meltwater%20report%20-%20How%20LinkedIn%20Content%20Wins%20AI%20Search.pdf?version=0",
+      "publisher": "Meltwater and LinkedIn",
+      "source_tier": 2,
+      "publication_or_version_date": "2026-05-12",
+      "access_date": "2026-09-14",
+      "freshness_class": "time-sensitive",
+      "support_status": "context-bound",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Vendor-produced observational analysis of 9.5 million AI citations from B2B prompts across 16 categories and six named AI products; supports directional hypotheses, not causal or universal Google/Search/LLM ranking rules."
+    },
+    {
+      "source_id": "LINKEDIN_MELTWATER_TAKEAWAYS_2026",
+      "title": "AI Search and LinkedIn: 5 Takeaways from 9.5 Million Citations",
+      "url": "https://www.linkedin.com/business/marketing/blog/ai-search/new-meltwater-research-shares-5-insights-from-9-million-citations/",
+      "publisher": "LinkedIn Marketing Blog",
+      "source_tier": 2,
+      "publication_or_version_date": "2026-05-21",
+      "access_date": "2026-09-14",
+      "freshness_class": "time-sensitive",
+      "support_status": "context-bound",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Supporting summary of the Meltwater study; preserves the named prompt/model/category scope but does not independently establish causation or universal platform behaviour."
+    },
+    {
+      "source_id": "MELTWATER_AI_VISIBILITY_BLOG_2026",
+      "title": "9.5M AI citations analyzed: How LinkedIn content wins AI search",
+      "url": "https://www.meltwater.com/en/blog/linkedin-ai-visibility-study",
+      "publisher": "Meltwater",
+      "source_tier": 2,
+      "publication_or_version_date": "2026-05-12",
+      "access_date": "2026-09-14",
+      "freshness_class": "time-sensitive",
+      "support_status": "context-bound",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Supporting vendor explanation of the named Meltwater B2B citation analysis; use with the report and LinkedIn summary and do not generalise beyond the study scope."
     }
   ],
   "claims": [
@@ -407,6 +452,42 @@
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-12",
       "confidence": "high"
+    },
+    {
+      "claim_id": "SAI-014",
+      "claim": "In Meltwater's defined 2026 B2B sample, LinkedIn was reported as a leading AI-citation source; the result is not a universal ranking of all AI search or all markets.",
+      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Matched report and supporting LinkedIn summary; observational vendor study, with limits stated in the claim", "review_date": "2026-09-14"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-14",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-015",
+      "claim": "The study reported more citations from individual LinkedIn member profiles than Company Pages within its measured sample; use this as a distribution hypothesis, not a guaranteed platform preference.",
+      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
+      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Reported 75/25 profile/page split in the named study sample, with limits stated in the claim", "review_date": "2026-09-14"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-14",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-016",
+      "claim": "Clear headings, lists, named entities, quantitative detail, comparisons, and decision guidance were common among highly cited LinkedIn examples in the study; they are reader and extraction hypotheses, not ranking factors.",
+      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026"],
+      "support_review": {"state": "synthesis", "reviewer": "Codex orchestrator", "basis": "Structural prevalence analysis of top cited examples, converted into a qualified implementation hypothesis", "review_date": "2026-09-14"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-14",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-017",
+      "claim": "Original and recently published content was common among cited LinkedIn examples, but the study does not prove that freshness or posting frequency causes citation growth.",
+      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
+      "support_review": {"state": "inference", "reviewer": "Codex orchestrator", "basis": "Study distribution figures with causal wording deliberately rejected; retained as a non-causal experiment hypothesis", "review_date": "2026-09-14"},
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-14",
+      "confidence": "medium"
     }
   ]
 }
