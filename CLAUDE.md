@@ -53,7 +53,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`content-copy/`** (10) — blog-idea-generator, blog-writer, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
-- **`orchestration/`** (5) — africa-excellence, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
+- **`orchestration/`** (6) — africa-excellence, hospitality-website-product, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
 - **`quality-gates/`** (6) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, kaizen-engine-and-product-improvement, security-gate, visual-qa
 - **`seo-search/`** (3) — google-ai-search, seo, seo-audit
 - **`ux-conversion/`** (2) — cro-audit, they-ask-you-answer
