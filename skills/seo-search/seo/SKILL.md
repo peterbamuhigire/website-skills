@@ -188,6 +188,11 @@ for outside-in journeys, intent/resource maps, topic value, distinctive voice,
 native distribution, and evidence/approval handoffs. Treat the supplied books
 as historical or editorial inputs, not current platform authority.
 
+For the qualified Meltwater/LinkedIn evidence on expert-led, structured B2B
+content, load [the 2026-09-14 AI-search implementation synthesis](../../../book-extractions/meltwater-ai-search-implementation-synthesis-2026-09-14.md).
+Use it to shape content and measurement hypotheses only; it does not add a
+Google ranking factor or guarantee citation, traffic, or conversion.
+
 ## Preserved Domain References
 - `../../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md` — qualified book-informed planning lens for response modes, entity clarity, outcome separation, and reversible experiments.
 - `references/ai-seo-optimization.md` — layered SEO, AEO, GEO, entity-presence,
