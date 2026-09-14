@@ -89,6 +89,9 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 - [Experiment logbook template](references/experiment-logbook-template.md)
 - [Quarterly review template](references/quarterly-review-template.md)
 - [Kaizen conversion experiment loop](references/kaizen-conversion-experiment-loop.md)
+## Book-informed practice route
+
+Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for staged experiments, friction evidence, and adoption/value measurement.
 <!-- dual-compat-end -->
 
 ## Evidence Produced

@@ -105,6 +105,9 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - `../design-system/references/math-for-web-design.md` — use when implementing pages with fluid type, bounded spacing, intrinsic grids, aspect-ratio media, full-bleed sections, calculated CTA placement, or JS-driven sizing/motion.
 
+## Book-informed practice route
+
+Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for whole-journey acceptance, actionable diagnostics, and realistic content/state checks.
 <!-- dual-compat-end -->
 ## Notes
 - Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.

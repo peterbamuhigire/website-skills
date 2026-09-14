@@ -56,6 +56,9 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 |---|---|---|
 | Route map, audience action map, narrative/proof register, gate results, Kaizen experiment record, release evidence, and handover record | Release owner | Every promised page and acceptance criterion maps to inspected evidence, a named learning owner, and a re-measurement date |
 
+## Book-informed practice route
+
+Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for scenario-led page goals, failure states, friction logs, and post-launch learning.
 <!-- dual-compat-end -->
 ## Capability Contract
 
