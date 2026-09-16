@@ -31,7 +31,9 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 
 ## Book-derived 2026 capability upgrade
 
-## Prompt-generation capability — September 2026
+## Prompt-generation capability — 2026-09-17
+
+This release adds evidence-first candidate testing, failure-slice review, and explicit `NOT_ASSESSED` handling for volatile prompt claims.
 
 Website workflows now generate prompts for semantic structure, real content,
 responsive states, accessibility, visual QA, browser/validator checks, and
