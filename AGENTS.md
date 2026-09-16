@@ -278,6 +278,10 @@ glassmorphism, neon glow, AI-beige defaults, decorative editorial scaffolding, a
 are no-ship choices; record `cli`, `browser`, `llm_only`, or `human_review` evidence and mark missing
 render evidence `NOT_ASSESSED`.
 
+## DOMAIN PROMPT GENERATION CONTRACT
+
+For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md). Generate a ready-to-paste prompt for one page or journey slice with audience/job, real content, hierarchy, states, responsive/accessibility/performance constraints, assets, output, and render checks. Prefer HTML/CSS/SVG when exact layout or copy matters. **Ready-to-paste prompt:** include assumptions, visual risks, and acceptance checks. **Failure action:** fix one failed state locally; rebuild when the structure is wrong.
+
 ## PORTFOLIO CRAFT CONTRACT
 
 Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build a website one user journey and state at a time: frame the job and conversion, inspect the current page/data flow, implement one meaningful slice with real content and assets, render it at relevant breakpoints, exercise loading/empty/error/focus/consent paths, refine, and record browser/accessibility/performance proof. Motion must explain a state or action; typography, layout, colour, assets, and copy need product reasons. Do not generate an entire site and call it finished. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing browser, render, live, or stakeholder evidence is `NOT ASSESSED`, never a pass.

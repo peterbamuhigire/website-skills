@@ -31,6 +31,13 @@ Portable website-building and agency-operating skills for Claude Code and Codex.
 
 ## Book-derived 2026 capability upgrade
 
+## Prompt-generation capability — September 2026
+
+Website workflows now generate prompts for semantic structure, real content,
+responsive states, accessibility, visual QA, browser/validator checks, and
+release handoff through the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md).
+The contract travels with a standalone fork.
+
 Digital Storytelling, Video Game Storytelling, Designing for AI, Paid for Your Perspective,
 Dynamic Characters, LEAN, Applying the Kaizen in Africa, and Facility Move Playbook strengthen
 website work with narrative information architecture, empathy, brand expression, meaningful
