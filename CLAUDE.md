@@ -25,7 +25,7 @@ Premium is the default commercial standard for this repository. Website work mus
 - Every `SKILL.md` must place this exact line immediately below the first top-level `# ...` heading, never in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - `references/` contains detailed material, including `legacy-guidance.md`
 - `scripts/` contains deterministic helpers where needed
-- [AGENTS.md](./AGENTS.md) provides repository-level routing and quality rules for Codex
+- [AGENTS.md](./AGENTS.md) provides repository-level routing and quality rules. Claude must also read its runner-agnostic doctrine — the Human-English editorial standard (2026-08 Kaizen) and machine-errors/AI-slop editorial gate, the Domain Prompt Generation Contract, the Portfolio Craft Contract, the Digital Research currentness gate for Kaizen, Cross-Engine Handoffs, and the Working Model ambiguity-resolution order — and apply it in full. Skip only the explicitly Codex-only sections (e.g. "Codex-only model setup").
 
 Claude-specific projects may still point at this repository from their own configuration, but the repository should not be treated as dependent on `.claude/skills/` or any nested submodule path.
 
@@ -245,13 +245,13 @@ the `long-form-sales-copy` skill, which applies:
 - Kennedy's 5 Propositions stack (USP + UVP + Irresistible Offer +
   Unique Safety Proposition + Unique Experience Proposition)
 
-Full primary-source extractions live in `skills/book-extractions/`:
+Full primary-source extractions live in `book-extractions/`:
 `kennedy-ultimate-sales-letter-extraction.md`,
 `brunson-dotcomsecrets-ignite-extraction.md`,
 `kennedy-no-bs-sales-success-extraction.md`,
 `kennedy-no-bs-price-strategy-extraction.md`.
 
-For brand-level messaging, use `skills/book-extractions/storybrand-sb7-framework.md`
+For brand-level messaging, use `book-extractions/storybrand-sb7-framework.md`
 (customer = hero, brand = guide) as the upstream foundation; Kennedy and
 Brunson then drive the actual sales-page copy.
 
