@@ -102,17 +102,17 @@ If a landing-page experiment raises form starts but increases abandonment or rem
 
 ## Mandatory Digital Research currentness gate
 
-Every Kaizen cycle must begin with `digital-research-skills` source evaluation
+Every Kaizen cycle must begin with `digital-research-engine` source evaluation
 and source verification. Record scope, dates, freshness class, support status,
 uncertainty, and review date for current web standards, accessibility, browser,
 platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
 `NOT_ASSESSED`. Apply the portfolio Kaizen currentness gate at
-`C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\kaizen-currentness-gate.md`.
+`C:\\wamp64\\www\\digital-research-engine\\docs\\continuous-improvement\\kaizen-currentness-gate.md`.
 
 ## References
 
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
-- Portfolio standard: resolve `digital-research-skills` from the global routing table, then read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
+- Portfolio standard: resolve `digital-research-engine` from the global routing table, then read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
 - [Book-driven positioning, story, and proof](../../brand/brand-strategy/references/book-driven-positioning-story-and-proof.md) - strategy, narrative, proof, experiments, and currentness.
 - [Book-driven Kaizen Wave 3](references/book-driven-kaizen-wave-3-2026-09-02.md) - task-first dashboards, retrieval/SEO evidence, experimentation, image QA, accessibility, and protocol currency.
 - `skills/orchestration/website-builder/`
