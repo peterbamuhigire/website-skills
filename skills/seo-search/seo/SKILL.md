@@ -215,3 +215,4 @@ Google ranking factor or guarantee citation, traffic, or conversion.
 - `references/legacy-guidance.md` — preserved detailed instructions from the previous skill version.
 - `references/llms-txt-and-ai-crawlers.md` — optional format and templates for `llms.txt`, `llms-full.txt`, AI-crawler robots rules, and per-page AI-citability hooks.
 - `references/required-schema-catalog.md` — concrete JSON-LD templates for active schema types and the retired Google FAQ rich-result note, with multi-language examples.
+- `references/entity-and-page-role-contract.md` — page roles, reviewed entity facts, visible proof, locale variants, review triggers, and metadata/schema parity.
