@@ -84,5 +84,6 @@ Map `/en/accounting-software/` to approved French and Kiswahili slugs, generate 
 ## References
 
 - [Preserved multilingual implementation guidance](references/legacy-guidance.md)
+- [Bilingual identity fixtures](references/bilingual-identity-fixtures.md) — synthetic cases for original-script names, transliteration, kinship terms, mixed-script isolation, and intentional omission.
 
 <!-- dual-compat-end -->

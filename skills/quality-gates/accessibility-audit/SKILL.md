@@ -168,6 +168,8 @@ The command:
 - `references/axe-config.md` — axe-core configuration and rule selection.
 - `references/remediation-playbook.md` — the top twenty violations and how to
   fix them.
+- `references/question-mark-and-scan-audit.md` — read-only purpose, scan path,
+  affordance, hierarchy, recovery, privacy-friction, and evidence-state review.
 
 ## Notes
 - This skill does not replace `form-ux-design`, `design-system`, or

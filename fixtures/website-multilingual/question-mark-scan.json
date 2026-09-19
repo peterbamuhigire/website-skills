@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "status": "fixture-only",
+  "records": [
+    {
+      "id": "clear-service-route",
+      "route": "/fr/services/comptabilite/",
+      "task": "decide whether to request an assessment",
+      "evidence_type": "static",
+      "purpose": "PASS",
+      "information_scent": "PASS",
+      "labels_and_affordance": "PASS",
+      "hierarchy": "PASS",
+      "scan_path": "PASS",
+      "recovery": "PASS",
+      "noise": "PASS",
+      "privacy_friction": "PASS",
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "id": "ambiguous-primary-action",
+      "route": "/en/services/bookkeeping/",
+      "task": "decide whether to request an assessment",
+      "evidence_type": "static",
+      "purpose": "FAIL",
+      "information_scent": "FAIL",
+      "labels_and_affordance": "FAIL",
+      "hierarchy": "FAIL",
+      "scan_path": "NOT_ASSESSED",
+      "recovery": "FAIL",
+      "noise": "NOT_ASSESSED",
+      "privacy_friction": "PASS",
+      "findings": [
+        {
+          "locator": "hero > primary link",
+          "observed_question": "What happens after clicking the generic label?",
+          "evidence_type": "static",
+          "owner": "content lead",
+          "repair": "name the assessment action and state the next step",
+          "retest_question": "Can a first-time reviewer name the action and outcome?",
+          "status": "OPEN"
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "browser-evidence-unavailable",
+      "route": "/fr/services/comptabilite/",
+      "task": "recover after a failed request",
+      "evidence_type": "NOT_ASSESSED",
+      "purpose": "NOT_ASSESSED",
+      "information_scent": "NOT_ASSESSED",
+      "labels_and_affordance": "NOT_ASSESSED",
+      "hierarchy": "NOT_ASSESSED",
+      "scan_path": "NOT_ASSESSED",
+      "recovery": "NOT_ASSESSED",
+      "noise": "NOT_ASSESSED",
+      "privacy_friction": "NOT_ASSESSED",
+      "findings": [
+        {
+          "locator": "request form > error state",
+          "observed_question": "Browser and manual evidence were unavailable",
+          "evidence_type": "NOT_ASSESSED",
+          "owner": "QA lead",
+          "repair": "run the rendered failure-state task",
+          "retest_question": "Can the reviewer recover without losing entered context?",
+          "status": "NOT_ASSESSED"
+        }
+      ],
+      "status": "NOT_ASSESSED"
+    }
+  ]
+}

@@ -98,6 +98,8 @@ Recovery: repair meaning, register, or grammar findings, then rerun the native-c
 - [Anglicisms to avoid](references/anglicisms-to-avoid.md)
 - [Typography and formatting](references/typography-and-formatting.md)
 - [Revision checklist](references/revision-checklist.md)
+- [Identity and register review](references/identity-and-register-review.md) — purpose-minimised identity fields, market/register decisions, retention boundaries, and review states.
+- [Meaning-first institutional French handoff](references/meaning-first-institutional-copy.md) — official label, plain meaning, status, next step, owner, escalation, and back-comparison.
 <!-- dual-compat-end -->
 
 ## Evidence Produced

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "status": "fixture-only",
+  "records": [
+    {
+      "id": "current-service-page",
+      "route": "/fr/services/comptabilite/",
+      "locale": "fr-CD",
+      "page_role": "current",
+      "user_job": "confirm the active service and request an assessment",
+      "search_intent": "service evaluation",
+      "primary_entity": "Fictional accounting service",
+      "entity_facts": [
+        {"subject": "Fictional accounting service", "predicate": "offers", "object": "monthly bookkeeping", "source": "synthetic-brief-001"}
+      ],
+      "visible_proof": ["synthetic-brief-001"],
+      "locale_variant": "equivalent",
+      "canonical": "/fr/services/comptabilite/",
+      "alternates": {"en": "/en/services/bookkeeping/"},
+      "metadata_and_schema": "matches-visible-content",
+      "owner": "content lead",
+      "reviewer": "native-copy reviewer",
+      "review_trigger": "service, availability, or owner changes",
+      "review_date": "2026-09-19",
+      "status": "PASS"
+    },
+    {
+      "id": "schema-invisible-fact",
+      "route": "/en/services/bookkeeping/",
+      "locale": "en",
+      "page_role": "transactional",
+      "user_job": "request a bookkeeping assessment",
+      "search_intent": "service enquiry",
+      "primary_entity": "Fictional accounting service",
+      "entity_facts": [
+        {"subject": "Fictional accounting service", "predicate": "offers", "object": "monthly bookkeeping", "source": "synthetic-brief-001"}
+      ],
+      "visible_proof": [],
+      "locale_variant": "equivalent",
+      "canonical": "/en/services/bookkeeping/",
+      "alternates": {"fr-CD": "/fr/services/comptabilite/"},
+      "metadata_and_schema": "schema-claims-unverified-rating",
+      "owner": "content lead",
+      "reviewer": "unassigned",
+      "review_trigger": "service or offer changes",
+      "review_date": "",
+      "status": "FAIL"
+    }
+  ]
+}

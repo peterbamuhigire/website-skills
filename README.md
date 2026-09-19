@@ -261,6 +261,15 @@ The repository currently spans five operating layers:
 
 ## Current Phase Additions
 
+- `2026-09-19`: Phase 1 website Kaizen slice extends identity/register review,
+  mixed-language identity fixtures, meaning-first institutional French,
+  useful entity/page-role records, and question-mark/scan review. See
+  [`docs/kaizen/phase1-identity-locale-page-role-scan.md`](./docs/kaizen/phase1-identity-locale-page-role-scan.md).
+  The synthetic fixture tests cover minimum-field privacy decisions, mixed
+  scripts, metadata/page-role failure, and explicit `NOT_ASSESSED` states; they
+  do not certify native language, legal, browser, accessibility, or production
+  evidence.
+
 Recent agency-engine expansion work added the following reference layers:
 
 - `2026-09-05`: Rebuilt search and AI-answer discoverability as a currentness-
