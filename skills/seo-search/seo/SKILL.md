@@ -34,6 +34,11 @@ Implement the approved search contract in website code and content without inven
 
 ## Workflow
 
+For SaaS intent coverage, comparisons or social-linked destinations, load
+[the SaaS content-web workflow](references/saas-intent-content-web.md). Produce
+its create/merge/reject intent matrix and verify one complete reader journey;
+do not generate every audience/integration combination or promise AI citations.
+
 1. Validate routes, intent, entities, locales, and URL rules
 2. Implement metadata, headings, schema, canonical/hreflang, sitemaps, robots, and internal links
 3. Test rendered source and crawler artefacts

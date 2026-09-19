@@ -39,7 +39,21 @@ If a project chooses to publish them:
 - test links, encoding, and conflict with canonical HTML;
 - measure actual requests before investing further.
 
-Minimal optional shape:
+## Format clarification checked on 2026-09-19
+
+The [Jeremy Howard proposal](https://llmstxt.org/), v2 modified 2026-08-10,
+requires only the H1; the summary, further context and H2 file lists are optional.
+File-list entries use Markdown hyperlinks. Root and scoped subpath placement
+are supported by the proposal. It is not a universal search requirement.
+See the [intake evidence record](../../../../docs/continuous-improvement/2026-09-19-linkedin-aeo-kaizen.md).
+
+As project delivery checks, verify HTTP 200, UTF-8, a suitable plain-text or
+Markdown content type, working links and consistency with the public source.
+These checks establish delivery, not crawler adoption or ranking benefit.
+Keep `llms-full.txt` optional: test the named consumer's context and retrieval
+needs before combining documents; exclude private content and remove stale copies.
+
+Minimal optional shape (replace every placeholder before delivery):
 
 ```markdown
 # {Site or product name}
@@ -51,17 +65,17 @@ Canonical site: {absolute URL}
 
 ## Products and services
 
-- {Verified name}: {absolute canonical URL} — {visible factual summary}
+- [{Verified name}]({absolute canonical URL}): {visible factual summary}
 
 ## Documentation
 
-- {Document title}: {absolute canonical URL} — {scope and version}
+- [{Document title}]({absolute canonical URL}): {scope and version}
 
 ## Company and policies
 
-- About: {absolute canonical URL}
-- Contact: {absolute canonical URL}
-- Privacy: {absolute canonical URL}
+- [About]({absolute canonical URL})
+- [Contact]({absolute canonical URL})
+- [Privacy]({absolute canonical URL})
 ```
 
 There is no mandatory file size, FAQ count, “most-cited line”, or citation
