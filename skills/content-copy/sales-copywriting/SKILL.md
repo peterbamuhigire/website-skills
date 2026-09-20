@@ -83,7 +83,7 @@ and the buyer decision it supports. Put proof beside the claim, label hypothetic
 distinguish internal navigation from evidence citations. Never invent testimonials, scarcity,
 guarantees, outcomes, or platform facts. Missing evidence is `NOT_ASSESSED`.
 
-- Shared standard: resolve `skills-web-dev/references/ai-slop-responsible-publishing-standard-2026-09-11.md`
+- Shared standard: resolve `chwezi-dev-engine/references/ai-slop-responsible-publishing-standard-2026-09-11.md`
   through the global engine-routing table; it is external to this repository and is not an internal
   Markdown route.
 

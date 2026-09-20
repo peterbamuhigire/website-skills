@@ -2,7 +2,7 @@
 
 Website release and content actions are catalogued in
 [`approval-adapter.json`](approval-adapter.json) and are governed by the
-shared contract from `skills-web-dev/docs/approval-contract.md`.
+shared contract from `chwezi-dev-engine/docs/approval-contract.md`.
 
 ## Required release preview
 

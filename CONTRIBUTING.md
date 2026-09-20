@@ -20,11 +20,11 @@ python -X utf8 scripts/routing-smoke-test.py
 python -m pytest -q
 ```
 
-Also run the canonical July 2026 validators from the `skills-web-dev` engine:
+Also run the canonical July 2026 validators from the `chwezi-dev-engine` engine:
 
 ```powershell
-python -X utf8 <skills-web-dev>/skills/sdlc-meta/skill-writing/scripts/quick_validate.py <skill-directory>
-python -X utf8 <skills-web-dev>/skills/sdlc-meta/skill-engine-audit/scripts/engine_compliance.py --root <website-skills-root> --active-root skills --details
+python -X utf8 <chwezi-dev-engine>/skills/sdlc-meta/skill-writing/scripts/quick_validate.py <skill-directory>
+python -X utf8 <chwezi-dev-engine>/skills/sdlc-meta/skill-engine-audit/scripts/engine_compliance.py --root <website-skills-root> --active-root skills --details
 ```
 
 Run `git diff --check`, inspect the complete diff, and remove caches or generated scratch files. The zero-debt baseline is not a suppression list; any structural finding or failed routing fixture blocks release.

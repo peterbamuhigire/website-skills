@@ -85,5 +85,5 @@ review that has not occurred is visible as `NOT_ASSESSED`.
 
 - `../SKILL.md` for market, register, native drafting, and back-comparison.
 - `../../../build/i18n/SKILL.md` for locale routing and missing-content states.
-- `C:/wamp64/www/skills-web-dev/skills/frontend-ux/ux-content-strategy/SKILL.md`
+- `C:/wamp64/www/chwezi-dev-engine/skills/frontend-ux/ux-content-strategy/SKILL.md`
   for status, error, and recovery content ownership.

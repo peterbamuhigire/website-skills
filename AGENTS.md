@@ -55,7 +55,7 @@ primary sources; quarantine stale/ambiguous/unsupported claims and mark them
 
 The shared agent, command, hook, evidence, and handoff contract is mapped to
 website work in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md);
-the central registry lives in `C:\wamp64\www\skills-web-dev\docs\engine-control-plane.json`.
+the central registry lives in `C:\wamp64\www\chwezi-dev-engine\docs\engine-control-plane.json`.
 
 ## Purpose
 
