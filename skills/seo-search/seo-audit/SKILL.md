@@ -26,6 +26,36 @@ Diagnose search defects and prioritise corrections from reproducible evidence wi
 
 - Use `seo` to implement fixes or `google-ai-search` for official AI Overviews and AI Mode guidance.
 
+## Related Environment Agents
+
+When the runtime environment already provides specialised SEO subagents
+(`seo-content-auditor`, `seo-keyword-strategist`, `seo-meta-optimizer`,
+`seo-snippet-hunter`, `seo-structure-architect`, `seo-cannibalization-detector`,
+`seo-authority-builder`, `seo-content-refresher`), prefer delegating a single,
+narrow, already-scoped sub-task to the matching one of those instead of
+re-deriving that judgment inline:
+
+| Narrow sub-task | Prefer this environment agent |
+|---|---|
+| Score provided content for quality/E-E-A-T | `seo-content-auditor` |
+| Keyword density / semantic and LSI coverage on provided copy | `seo-keyword-strategist` |
+| Draft or fix meta titles/descriptions within character limits | `seo-meta-optimizer` |
+| Format an answer block for featured-snippet eligibility | `seo-snippet-hunter` |
+| Header hierarchy, schema suggestions, internal-link structure | `seo-structure-architect` |
+| Compare pages for keyword overlap / cannibalization | `seo-cannibalization-detector` |
+| E-E-A-T / authority-signal gaps on YMYL topics | `seo-authority-builder` |
+| Flag stale statistics, dates, or examples in existing content | `seo-content-refresher` |
+
+Those agents work on content you already have in hand and return a scored,
+narrow verdict. This skill (`seo-audit`) stays the tool for the broader,
+crawl-based, cross-signal audit — technical access, indexation, entity
+consistency, structured data, AI-answer visibility, and measurement across
+an entire site — that none of them individually cover, and for producing the
+single prioritised remediation register that ties their narrow findings
+together. Do not duplicate this skill's workflow as a standalone subagent
+definition inside this engine: it would restate, not add to, the contract
+already specified above.
+
 ## Required Inputs
 
 | Artefact | Source or provider | Required? | Purpose | If absent |
