@@ -278,8 +278,8 @@ Showcase three categories of work:
    - Link: https://github.com/peterbamuhigire/MySQLDevAssistant
    - Tech: Python, MySQL
 
-8. **Skills Web Dev** — Structured markdown learning materials covering web architecture, frontend design, and strategic planning documentation.
-   - Link: https://github.com/peterbamuhigire/skills-web-dev
+8. **Chwezi Dev Engine** — Structured markdown learning materials covering web architecture, frontend design, and strategic planning documentation.
+   - Link: https://github.com/peterbamuhigire/chwezi-dev-engine
    - Tech: PHP, Markdown
 
 **Consulting Engagements (anonymised case studies):**
