@@ -55,10 +55,24 @@ dependency:
   thought-leadership content, and for every SEO/SERP claim: `rules/common/core.md` and
   `CLAUDE.md` both require a live research wave with verified, attributed sources before writing,
   never assumed knowledge.
-- **`skills-web-dev`** — the central multi-engine registry
+- **`chwezi-dev-engine`** — the central multi-engine registry
   (`docs/engine-control-plane.json`) this engine's own AGENTS.md points to lives there, and it is
   the destination when a brief crosses from website delivery into custom application
   engineering.
+
+## Content integrity
+
+This repository contains no client names, client data, or project-specific work product. It is
+a skills library, not a place where client work is carried out — client and project files (the
+actual website builds, briefs, and content) live in separate downstream project repositories,
+never in this repo. (`.gitignore` here excludes build/generated artifacts — per-build reports,
+CI backups, Lighthouse cache, `node_modules/`, `dist/` — because there are no client or project
+directories in this repo to begin with; `project-log/` and `templates/project-artifacts/` hold
+only this engine's own decision history and generic example templates, not client work.) Users
+installing this engine should still exercise their own due diligence — you can ask Claude Code
+or Codex to run a security scan of this engine, its skills, and its reference files before
+relying on it in a sensitive environment (for example: "scan this repository for hardcoded
+secrets, personal paths, or unexpected network calls").
 
 ## Capabilities
 
