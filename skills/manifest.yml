@@ -471,6 +471,22 @@
       "last_verified": "2026-07-13"
     },
     {
+      "id": "brand-voice",
+      "category": "content-copy",
+      "path": "skills/content-copy/brand-voice/SKILL.md",
+      "owner": "website-skills-maintainers",
+      "status": "active",
+      "aliases": [],
+      "dependencies": [],
+      "inputs": [
+        "project-context@1"
+      ],
+      "outputs": [
+        "brand-voice-output@1"
+      ],
+      "last_verified": "2026-09-20"
+    },
+    {
       "id": "blog-writer",
       "category": "content-copy",
       "path": "skills/content-copy/blog-writer/SKILL.md",

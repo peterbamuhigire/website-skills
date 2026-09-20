@@ -1,22 +1,116 @@
 # Website Skills
 
-Website Skills is a delivery engine for planning, designing, building, launching, measuring, and maintaining premium websites and related digital experiences. It carries one user journey and page state at a time from audience and content through visual treatment, accessible implementation, performance, analytics, release, recovery, and post-launch learning, while handing application engineering and shared visual doctrine to their owning engines.
+`website-skills` is the Chwezi premium-website delivery engine — 62 skills (`SKILL.md` files,
+embedding `proposal-skills` as a submodule) for planning, designing, building, launching,
+measuring, and maintaining premium static websites and related digital experiences built from
+markdown content and assets. It carries one user journey and page state at a time from audience
+and content through visual treatment, accessible implementation, performance, analytics,
+release, recovery, and post-launch learning, while handing application engineering and shared
+visual doctrine to their owning engines. Premium is the stated default commercial standard
+(`CLAUDE.md`): a brief that cannot support strategy, world-class content, SEO/GEO, premium UX,
+conversion architecture, technical quality, measurement, and handover gets paid discovery, a
+smaller premium scope, or a no-bid, not a discounted shortcut.
 
-Website practitioners and agency delivery teams use it to turn briefs, source content, and assets into structured website work. It covers qualification and intake, information architecture, page and content production, accessibility, performance, security, analytics, deployment, and handover, while keeping custom software and visual-system decisions in their owning specialist engines.
+Website practitioners and agency delivery teams use it for concrete work such as: qualifying and
+scoping a client brief (`skills/orchestration/`), building a hotel or restaurant site with
+low-bandwidth and mobile-money-aware UX (`skills/orchestration/hospitality-website-product/`),
+reproducing a client's real brand voice consistently across pages and campaigns
+(`skills/content-copy/brand-voice/`), running the accessibility/visual-QA/security release gates
+before launch (`skills/quality-gates/`), or producing native-quality French or Kiswahili copy
+(`skills/content-copy/french-native-copy/`, `skills/content-copy/swahili-native-copy/`). It
+covers qualification and intake, information architecture, page and content production,
+accessibility, performance, security, analytics, deployment, and handover, while keeping custom
+application engineering and shared visual-system decisions in their owning specialist engines.
 
-The engine gives teams a reviewable path from brief to a maintainable website, with explicit evidence, launch gates, ownership, and recovery steps. It does not replace application engineering, current-fact research, finance doctrine, or the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>; use those companion engines when work crosses into those areas.
+## Install
 
-## Capability map
+```
+# Native Claude Code plugin
+/plugin marketplace add https://github.com/peterbamuhigire/website-skills
+/plugin install website@chwezi-website
 
-| Need | Primary route |
-|---|---|
-| Qualification, discovery, information architecture, and journeys | `skills/orchestration/` |
-| Content, copy, language, SEO, and conversion | `skills/content-copy/` and `skills/ux-conversion/` |
-| Page structure, components, assets, and implementation | `skills/build/` |
-| Accessibility, visual QA, security, and quality scoring | `skills/quality-gates/` |
-| Launch, observability, analytics, experimentation, and maintenance | `skills/launch-ops/` |
-| Premium agency delivery and post-launch service | `skills/agency-ops/` |
-| Hotel, resort, lodge, inn, guest house, restaurant, venue, catering, or food-service website | `skills/orchestration/hospitality-website-product/SKILL.md` plus `seo`, `google-ai-search`, UX, accessibility, performance, and conversion routes |
+# npm-free, from a clone
+git clone https://github.com/peterbamuhigire/website-skills
+cd website-skills
+./install.sh --scope project      # macOS/Linux/Git Bash
+.\install.ps1 --scope project     # Windows PowerShell
+```
+
+The plugin name (`website`) and marketplace name (`chwezi-website`) come from this engine's own
+`.claude-plugin/marketplace.json`. Both installers are thin wrappers around
+`scripts/install-engine.js`, which supports `--scope user` (default, `~/.claude`) or `--scope
+project` (`.claude/` under the current directory) — the script's own header notes this "mirrors
+ECC's scope choice."
+
+Sister engines this one routes to most, each an independent, optional install rather than a hard
+dependency:
+
+- **`design-system-skills`** — the single home for ALL design/UI/UX skills this engine defers
+  to: this repository's `CLAUDE.md` carries an explicit `design-system-skills:trigger` block
+  stating "presentation comes from design-system-skills," and routes fonts, colour, layout,
+  brand alignment, form UX, and sector-strategy design work there by name (e.g.
+  `design-system-skills:brand-alignment`, `design-system-skills:sector-strategies`,
+  `design-system-skills:form-ux-design`).
+- **`digital-research-engine`** — mandatory before drafting any blog post, article, or
+  thought-leadership content, and for every SEO/SERP claim: `rules/common/core.md` and
+  `CLAUDE.md` both require a live research wave with verified, attributed sources before writing,
+  never assumed knowledge.
+- **`skills-web-dev`** — the central multi-engine registry
+  (`docs/engine-control-plane.json`) this engine's own AGENTS.md points to lives there, and it is
+  the destination when a brief crosses from website delivery into custom application
+  engineering.
+
+## Capabilities
+
+| Category | Skills | What it covers |
+|---|---:|---|
+| `agency-ops` | 14 | Agency positioning, client retention, delivery automation, launch campaigns, social media, reporting |
+| `content-copy` | 11 | Blog/article writing, sales copy, brand voice, French/Kiswahili native copy, language standards |
+| `build` | 6 | Design reference, design system handoff, i18n, image compression, page building, photo management |
+| `orchestration` | 6 | Master website-builder orchestration, hospitality product, premium UI/UX, Africa-excellence patterns |
+| `quality-gates` | 6 | Accessibility, visual QA, security, cross-page consistency, design-quality score, Kaizen audits |
+| `commerce` | 5 | Ecommerce, checkout, funnel, analytics, retail-commerce operating system |
+| `launch-ops` | 4 | Deployment, experimentation, marketing measurement, observability |
+| `meta` | 3 | Skill writing, skill safety audit, documentation maintenance |
+| `seo-search` | 3 | SEO implementation, SEO audit, Google AI Search/AI Mode readiness |
+| `brand` | 2 | Brand strategy and brand storytelling |
+| `ux-conversion` | 2 | Conversion-rate-optimisation audit, "They Ask You Answer" content strategy |
+
+(62 `SKILL.md` files total under `skills/`, across 11 thematic categories, plus the embedded
+`proposal-skills` submodule for consulting/procurement deliverables.)
+
+## References
+
+- Mustafa, A. et al. *Everything Claude Code (ECC)*. GitHub: `affaan-m/ECC`, 2026. This engine's
+  runtime-agnostic delivery workflow is adapted directly from ECC's shorthand, longform, and
+  security guides (accessed 7 September 2026): see the "Runtime-agnostic delivery workflow"
+  section of this README, which links
+  [shortform](https://raw.githubusercontent.com/affaan-m/ECC/main/the-shortform-guide.md),
+  [longform](https://raw.githubusercontent.com/affaan-m/ECC/main/the-longform-guide.md), and
+  [security](https://raw.githubusercontent.com/affaan-m/ECC/main/the-security-guide.md) guides.
+  Beyond the workflow, two specific skills carry direct ECC lineage:
+  `skills/content-copy/brand-voice/references/voice-profile-schema.md` states "Adapted from
+  ECC's `skills/brand-voice/references/voice-profile-schema.md`," and
+  `skills/content-copy/brand-voice/references/banned-phrases.md` credits ECC's
+  `skills/article-writing/SKILL.md` and ECC's `brand-voice` Hard Bans list for specific banned
+  AI-cliché phrases (e.g. "In today's fast-paced digital landscape," "game-changer," "no
+  fluff," "Excited to share"). The `hooks/quality-gate.js` and `hooks/drift-check-hook.js` hooks
+  are also ECC-pattern adaptations: `drift-check-hook.js`'s own header states it is wired to the
+  Stop event "matching ECC's 'console.log audit: Stop hook checks all modified files after each
+  response' pattern," and `install.sh`'s header cites the same Windows/MSYS2 path-resolution fix
+  documented in ECC's own `install.sh`.
+- This engine also carries a substantial `book-extractions/` directory of named, attributed
+  sources that individual skills route to directly, including: Miller, D. *Building a StoryBrand*
+  (HarperCollins Leadership, 2017), referenced by `brand-storytelling`, `sales-copywriting`, and
+  `brand-strategy`; Kennedy, D. S. *The Ultimate Sales Letter* (Adams Media, 1991/2000; 4th ed.
+  2011), grounding the long-form direct-response copy skills; Krug, S. *Don't Make Me Think,
+  Revisited* (3rd ed., New Riders, 2014), referenced by the `web-usability-krug` route feeding
+  this engine's UX/page-builder skills; and Pickering, H. & Bell, A. *Every Layout*
+  (every-layout.dev), cited for layout-primitive implementation. Every blog post, article, or
+  SEO/SERP claim is additionally required, as a standing rule (`rules/common/core.md`), to be
+  sourced live through the Digital Research Engine and attributed to real, locatable researchers,
+  institutions, or regulators at the time of writing, rather than relying on the static book
+  extractions alone.
 
 ## Mandatory Kaizen contract
 

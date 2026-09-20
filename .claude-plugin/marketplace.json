@@ -1,0 +1,21 @@
+{
+  "name": "chwezi-website",
+  "owner": { "name": "Peter Bamuhigire", "email": "peter.bamuhigire@gmail.com" },
+  "metadata": { "description": "Chwezi website engine — building static websites from markdown content and assets, web project scaffolding, SEO, and site performance/quality gates" },
+  "plugins": [
+    {
+      "name": "website",
+      "source": "./",
+      "description": "61 skills for website build and delivery: agency operations, content and copy, commerce, SEO, quality gates, and launch operations",
+      "version": "1.0.0",
+      "author": { "name": "Peter Bamuhigire" },
+      "homepage": "https://github.com/chwezi/website-skills",
+      "repository": "https://github.com/chwezi/website-skills",
+      "license": "MIT",
+      "keywords": ["website", "seo", "web-performance", "content"],
+      "category": "web",
+      "tags": ["website", "seo", "content"],
+      "strict": false
+    }
+  ]
+}
