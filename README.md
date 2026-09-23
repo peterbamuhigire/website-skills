@@ -123,7 +123,7 @@ secrets, personal paths, or unexpected network calls").
   (every-layout.dev), cited for layout-primitive implementation. Every blog post, article, or
   SEO/SERP claim is additionally required, as a standing rule (`rules/common/core.md`), to be
   sourced live through the Digital Research Engine and attributed to real, locatable researchers,
-  institutions, or regulators at the time of writing, rather than relying on the static book
+  institutions, or regulators during drafting, rather than relying on the static book
   extractions alone.
 
 ## Mandatory Kaizen contract
@@ -172,7 +172,7 @@ the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_b
 - **<a href="https://github.com/peterbamuhigire/chwezi-accounting-doctrine" target="_blank" rel="noopener noreferrer">Chwezi Accounting Doctrine</a>** is likewise **referenced, not mirrored**; activate it alongside this engine whenever finance/accounting arises.
 - **7 portable design skills were migrated OUT** of this repo to <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills</a>: `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`, `sector-strategies`, and `legal` (now `legal-sector-ui-ux`). Any name-based reference to a relocated skill now resolves in that repository (a relocation note exists in `CLAUDE.md`/`AGENTS.md`).
 - **Build-coupled design skills are KEPT here and now consult the design doctrine** before making visual choices: `design-system`, `page-builder`, `visual-qa`, `website-builder`, and the orchestration `premium-ui-ux-design`. (`design-system` and `visual-qa` were explicitly wired to load the design doctrine first.)
-- **Current skill count: 61**, generated and validated from `skills/manifest.yml`.
+- **Current skill count: 62**, generated and validated from `skills/manifest.yml`.
 
 The machine-readable relocation authority is `skills/manifest.yml`; the human-readable map is `docs/relocation-map.md`.
 
@@ -236,7 +236,7 @@ website-skills/              <- this repo, referenced from the global engine-rou
 |   |-- brand/               Brand strategy and storytelling (2 skills)
 |   |-- build/               Design system, page builder, assets, i18n, references (6 skills)
 |   |-- commerce/            E-commerce strategy, retail commerce operating systems, funnel, checkout, analytics (5 skills)
-|   |-- content-copy/        Blog, sales copy, language standards, native French/Kiswahili copy, premium writing (10 skills)
+|   |-- content-copy/        Blog, sales copy, language standards, native French/Kiswahili copy, premium writing (11 skills)
 |   |-- launch-ops/          Deploy, observability, experimentation, measurement (4 skills)
 |   |-- meta/                Skill writing, skill safety audit, documentation (3 skills)
 |   |-- orchestration/       Top-level orchestrators incl. website-builder, hospitality product, premium product, africa-excellence (6 skills)

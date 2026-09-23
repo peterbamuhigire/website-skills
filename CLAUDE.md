@@ -50,7 +50,7 @@ Skills are organised under `skills/<category>/<skill>/` in 11 thematic categorie
 - **`brand/`** (2) — brand-storytelling, brand-strategy
 - **`build/`** (6) — design-reference, design-system, i18n, image-compression, page-builder, photo-manager
 - **`commerce/`** (5) — ecommerce, retail-commerce-operating-system, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
-- **`content-copy/`** (10) — blog-idea-generator, blog-writer, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
+- **`content-copy/`** (11) — blog-idea-generator, blog-writer, brand-voice, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
 - **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
 - **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
 - **`orchestration/`** (6) — africa-excellence, hospitality-website-product, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
@@ -142,7 +142,6 @@ skills/agency-ops/social-media/SKILL.md            <- Social strategy and servic
 skills/meta/skill-writing/SKILL.md           <- Skill authoring
 skills/meta/skill-safety-audit/SKILL.md      <- Skill safety review
 skills/meta/update-claude-documentation/     <- Top-level documentation maintenance
-skills/content-copy/east-african-english/SKILL.md    <- Legacy English-only standard
 ```
 
 ### External Skill Set

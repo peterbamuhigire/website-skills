@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated": "2026-07-13",
-  "canonical_count": 61,
+  "canonical_count": 62,
   "external_engines": {
     "design-system-skills": {
       "locator": "global-routing-table",
