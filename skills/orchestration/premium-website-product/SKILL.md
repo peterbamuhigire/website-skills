@@ -32,7 +32,7 @@ Set the commercial and quality product boundary before a premium website enters 
 
 ## Workflow
 
-1. Assess business outcome, audience, proof, constraints, and decision authority
+1. Assess business outcome, audience, proof, constraints, and decision authority. Apply [value and delivery proof](references/premium-value-and-delivery-proof.md) to compare repair, template/AI-assisted, bespoke and deferred options before recommending investment.
 2. Choose full premium, smaller premium, paid discovery, or no-bid
 3. Define promises, exclusions, evidence, measurement, and acceptance
 4. Stop on unsupported claims or unfinanceable scope, recover by narrowing or discovery, then hand approved scope to delivery.
@@ -85,6 +85,7 @@ A client wants multilingual ecommerce on a brochure budget with no catalogue dat
 ## References
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
+- [Premium value and delivery proof](references/premium-value-and-delivery-proof.md) — alternatives, customer-task acceptance, ownership, service and measured value.
 
 
 ## Preserved Domain Use Guidance
@@ -136,6 +137,6 @@ A client wants multilingual ecommerce on a brochure budget with no catalogue dat
 ## Preserved Domain References
 - `references/premium-website-market-asset-gate.md` - actionable checklist for premium website strategy, content, SEO, UX, stack, delivery, and agency proof.
 - `../website-builder/references/premium-website-engine-playbook.md` - orchestration, acquisition, conversion, measurement, and asset-value system.
-- `../agency-positioning/references/premium-website-offer-playbook.md` - agency offer ladder, fee floors, scope, and premium positioning.
+- [Agency offer playbook](../../agency-ops/agency-positioning/references/premium-website-offer-playbook.md) - offer options, scope and premium positioning; validate fees against engagement economics.
 - `../premium-ui-ux-design/references/premium-website-ui-ux-playbook.md` - premium visual and UX execution.
-- `../premium-commercial-writing/SKILL.md` - use when the website's copy, blogs, SEO/GEO content, sales documents, or offer pages must justify premium fees.
+- [Premium commercial writing](../../content-copy/premium-commercial-writing/SKILL.md) - use when copy, editorial content, sales documents or offer pages must justify fees.
