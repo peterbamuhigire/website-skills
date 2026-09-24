@@ -6,7 +6,7 @@
       "settings": {
         "formFactor": "mobile",
         "throttlingMethod": "simulate",
-        "_comment_profile": "ADVISORY calibration profile only. Uses Lighthouse's own default mobile settings (Slow 4G: 150 ms RTT, 1.6 Mbps down, 750 Kbps up, 4x CPU; moto g power 2022 emulation) so results can be compared with PageSpeed Insights lab data and with field data. It never replaces the blocking stress profile in lighthouserc.json. See skills/launch-ops/deploy/references/lab-to-field-calibration.md"
+        "_comment_profile": "ADVISORY calibration profile only. Uses Lighthouse's own default mobile settings (Slow 4G: 150 ms RTT, 1.6 Mbps down, 750 Kbps up, 4x CPU; moto g power 2022 emulation) so results can be compared with PageSpeed Insights lab data and with field data. It is a Lighthouse tool default, not a measured market median. It never replaces the blocking stress profile in lighthouserc.json. See skills/launch-ops/deploy/references/lab-to-field-calibration.md"
       },
       "url": [
         "http://localhost:4321/"

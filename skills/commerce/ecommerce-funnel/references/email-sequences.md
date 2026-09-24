@@ -81,3 +81,13 @@ Always segment before sending:
 | Lapsed | Silent 120+ days | Final win-back or suppress |
 
 Never send the same email to all segments. Segmented campaigns average 760% more revenue than broadcast campaigns.
+
+## Marketing consent checks (East Africa, dated 2026-09-25)
+
+Before any sequence, promotional SMS or WhatsApp broadcast goes live, confirm
+with counsel: consent or a lawful basis to market to the address, a clear
+sender identity, and a working opt-out (Kenya DPA 2019 s.37 and General
+Regulations 2021 regs 14-17; Uganda DPPA 2019 s.26 written opt-out with a
+14-day response, and PDPO registration). Tanzania and Rwanda marketing rules
+are `NOT_ASSESSED`. Source: Digital Research register 2026-09-24 (LEG-001,
+LEG-002). This is a check, not legal advice.

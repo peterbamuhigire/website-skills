@@ -463,7 +463,8 @@ Response time: 30 days (or sooner for urgent issues)
 ### Supervisory Authority
 If you're unsatisfied with our response:
 - **EU:** Contact your national Data Protection Authority
-- **Uganda:** Uganda Communications Commission (UCC)
+- **Uganda:** Personal Data Protection Office (PDPO), which hears appeals under the Data Protection and Privacy Act 2019 regulations (confirm with counsel)
+- **Kenya:** Office of the Data Protection Commissioner (ODPC)
 - **Other countries:** See your national privacy regulator
 ```
 
@@ -735,3 +736,27 @@ Example archive structure:
 ```
 
 Use this file as your detailed reference when crafting your specific privacy policy.
+
+## East Africa marketing-consent and disclosure checks (dated 2026-09-25)
+
+Source: Digital Research register 2026-09-24 (claims LEG-001 to LEG-003 in
+`docs/source-registers/performance-currentness-2026-09-25.json`). These are
+checks for the client's counsel to confirm, not legal advice or a compliance
+claim.
+
+- Uganda: the Data Protection and Privacy Act 2019 s.26 lets a person require
+  in writing that direct marketing stop, with a 14-day response; controllers
+  are reported to register with the PDPO (12-month validity; current fees and
+  exemptions unconfirmed). Do not write that the Act requires opt-in for
+  marketing. Confirm with counsel.
+- Kenya: the Data Protection Act 2019 s.37 and the General Regulations 2021
+  (regs 14-17) treat direct marketing as needing consent or a lawful basis,
+  a clear sender identity and a simple opt-out. ODPC guidance (recorded media,
+  Nov 2025) limits use of a person's image to the contract term. Confirm with
+  counsel.
+- Tanzania: registration and marketing provisions are `NOT_ASSESSED` in the
+  register beyond the 2026-09-23 registration record. Rwanda: `NOT_ASSESSED`.
+- Influencer and paid-content disclosure: no influencer-specific statute was
+  found in Kenya or Uganda (September 2026). Disclose paid and gifted content
+  as best practice. Confirm with counsel; Uganda's UCC instruments were unread
+  and Tanzania's TCRA online-content licensing may apply.

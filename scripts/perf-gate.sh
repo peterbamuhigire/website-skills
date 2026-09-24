@@ -20,7 +20,8 @@
 #   npm i -D @lhci/cli   (Node 18+ required for the weight walker and HTML lint)
 #
 # Lab profile: lighthouserc.json uses a deliberate low-end STRESS profile
-# (WebPageTest '3G' network values, 300 ms RTT). It is not a median. INP is
+# (WebPageTest '3G' network values, 300 ms RTT; a throttled Slow-4G/3G
+# profile). It is a conservative stress floor, not a market median. INP is
 # not measurable in Lighthouse navigation mode; TBT is the lab proxy and INP
 # is enforced from field/RUM data (see skills/launch-ops/observability).
 

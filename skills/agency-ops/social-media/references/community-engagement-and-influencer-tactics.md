@@ -26,7 +26,7 @@ Channel roles, content buckets, repurposing, and response-time rules live in `le
 4. Judge authenticity first: does the creator already use or credibly relate to the product or category?
 5. Check the creator's audience quality (comment substance, audience location and fit) with the platform's data or a verified tool before paying.
 6. Agree deliverables, approvals, usage rights, disclosure wording, and payment in writing.
-7. Require clear disclosure of every paid or gifted relationship; check current local advertising rules and platform branded-content policies before launch.
+7. Require clear disclosure of every paid or gifted relationship; check current local advertising rules and platform branded-content policies before launch. As of the 2026-09-24 Digital Research register, no influencer-specific disclosure statute was found in Kenya or Uganda: disclose as best practice, confirm with counsel (Kenya: consumer-protection and competition law, the ASBK Code, Media Council Code 2025 for media practitioners; Uganda: UCC instruments unread; Tanzania: TCRA online-content licensing may apply; Rwanda: `NOT_ASSESSED`). Agree in the contract how long the creator's image is used and honour marketing opt-outs (Kenya ODPC recorded-media guidance, Nov 2025; Uganda DPPA 2019 s.26).
 8. Measure with tracked links or codes per creator; report cost per outcome, not only reach.
 
 ### Ambassadors and advocacy

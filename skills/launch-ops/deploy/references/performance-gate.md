@@ -109,9 +109,11 @@ as diagnostic, not as field proof.
 
 Blocking runs use the engine's low-end **stress profile**: WebPageTest "3G"
 network values (1.6 Mbps down, 768 Kbps up, 300 ms RTT) with a 4x CPU slowdown
-and Lighthouse's mobile screen emulation. It is harsher than Lighthouse's own
-default mobile profile and much slower than measured median mobile in some
-markets. It is not a median. See [Africa calibration](africa-calibration.md)
+and Lighthouse's mobile screen emulation. It is a deliberate, conservative
+throttled Slow-4G/3G stress profile: harsher than Lighthouse's own default
+mobile profile and slower than every measured market figure in the register
+(UCC drive tests roughly 5-16 Mbps in Uganda, 2024; SpeedOf.Me 8.4 Mbps, H1
+2026; each with limits). It is not a median. See [Africa calibration](africa-calibration.md)
 for the evidence and wording rules. For comparison with PageSpeed Insights lab
 data, run the advisory `lighthouserc.default-mobile.json`.
 

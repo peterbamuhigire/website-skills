@@ -21,7 +21,7 @@
           "downloadThroughputKbps": 0,
           "uploadThroughputKbps": 0
         },
-        "_comment_profile": "Blocking lab profile = low-end STRESS profile: WebPageTest '3G' preset network values (1.6 Mbps down, 300 ms RTT) with 4x CPU slowdown and Lighthouse's own mobile screen emulation (moto g power 2022, 412x823 @1.75). It is deliberately harsher than Lighthouse's default mobile throttling (1.6 Mbps, 150 ms RTT) and far slower than measured median mobile in Kenya. It is NOT a median. Sources and review dates: docs/source-registers/performance-currentness-2026-09-23.json; rationale: skills/launch-ops/deploy/references/africa-calibration.md"
+        "_comment_profile": "Blocking lab profile = low-end STRESS profile: WebPageTest '3G' preset network values (1.6 Mbps down, 300 ms RTT) with 4x CPU slowdown and Lighthouse's own mobile screen emulation (moto g power 2022, 412x823 @1.75). It is deliberately harsher than Lighthouse's default mobile throttling (1.6 Mbps, 150 ms RTT) and slower than every measured market figure in the register (UCC drive tests roughly 5-16 Mbps in Uganda, Aug-Sep 2024; SpeedOf.Me 8.4 Mbps, H1 2026; Kenya roughly 45-50 Mbps in secondary 2025 snapshots). It is a throttled Slow-4G/3G stress profile for the constrained tail, NOT a median. Uganda/Tanzania/Rwanda Ookla and Opensignal are NOT_ASSESSED. Sources and review dates: docs/source-registers/performance-currentness-2026-09-23.json and performance-currentness-2026-09-25.json; rationale: skills/launch-ops/deploy/references/africa-calibration.md"
       },
       "url": [
         "http://localhost:4321/",

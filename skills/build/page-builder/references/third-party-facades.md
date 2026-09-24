@@ -28,6 +28,13 @@ WhatsApp button and a tap-to-call phone number are both a zero-JavaScript
 contact path and a trust signal: they show that a real, reachable business
 stands behind the site.
 
+Phrasing rule (Digital Research register 2026-09-24, claim MKT-001): call
+WhatsApp a dominant messaging channel in East Africa. Do not write that it is
+used by "90%+ of smartphone users": no source measures that share. If a
+percentage is used, cite its source, base and date (for example Pew 2023,
+adults: at least half in every country surveyed, including Kenya) and check
+the client's own audience data.
+
 Build rules:
 
 - Use a plain link: `https://wa.me/<international-number-without-plus>?text=<url-encoded message>`.
