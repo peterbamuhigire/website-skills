@@ -1,0 +1,310 @@
+{
+  "register_id": "website-performance-legal-currentness-2026-09-25",
+  "scope": "Market network speeds behind the lab stress profile, WhatsApp usage phrasing, East African data-protection and influencer/advertising disclosure checks, and the 2026-09-25 model-currentness review, from Digital Research wave 2 (register 2026-09-24).",
+  "access_date": "2026-09-25",
+  "verification_date": "2026-09-25",
+  "owner": "website-skills maintainer",
+  "review_date": "2026-10-15",
+  "archive_policy": "Archives were not created; archive status is NOT_ASSESSED. Facts come only from the Digital Research currentness registers of 2026-09-23 and 2026-09-24. Nothing here is legal advice.",
+  "sources": [
+    {
+      "source_id": "SRC-UCC-QOS-2024",
+      "title": "UCC quality-of-service drive tests Aug-Sep 2024 (via Ecofin Agency, 2025-01-20)",
+      "url": "register 2026-09-24 SRC-UCC-QOS-2024",
+      "publisher": "Uganda Communications Commission; summary by Ecofin Agency",
+      "source_tier": 2,
+      "publication_or_version_date": "Aug-Sep 2024 tests; Ecofin summary 2025-01-20",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Mean mobile download MTN 16.3, Airtel 15.5, Lycamobile 5.3 Mbps in 30 towns at peak hours; latency 69-84 ms. Figures not verified against the UCC table (image); drive test, not a user median; about two years old."
+    },
+    {
+      "source_id": "SRC-SPEEDOFME",
+      "title": "SpeedOf.Me Uganda",
+      "url": "register 2026-09-24 SRC-SPEEDOFME",
+      "publisher": "SpeedOf.Me",
+      "source_tier": 3,
+      "publication_or_version_date": "H1 2026 (page undated)",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Median download 8.4 Mbps, upload 8.0, latency 192 ms; small self-selected browser sample, mixed desktop and mobile; not Ookla."
+    },
+    {
+      "source_id": "SRC-OOKLA",
+      "title": "Ookla Speedtest Global Index (Uganda, Tanzania, Rwanda) and Opensignal Uganda",
+      "url": "register 2026-09-24 SRC-OOKLA",
+      "publisher": "Ookla; Opensignal",
+      "source_tier": 2,
+      "publication_or_version_date": "not fetched",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "not_assessed",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "WebFetch refused speedtest.net; Opensignal returned 403. NOT_ASSESSED; do not quote figures."
+    },
+    {
+      "source_id": "SRC-KE-SPEED",
+      "title": "Kenya mobile speed snapshots (search-reported Ookla; StatRanker)",
+      "url": "register 2026-09-24 SRC-KE-SPEED",
+      "publisher": "Secondary reports of Ookla; StatRanker",
+      "source_tier": 3,
+      "publication_or_version_date": "about Oct 2025 snapshot; month unconfirmed",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Ookla median 45.37 Mbps and 50.63 Mbps (StatRanker); Ookla page inaccessible; no source found for 28 ms Kenya latency. Tanzania and Rwanda: no source found."
+    },
+    {
+      "source_id": "SRC-NET-SYNTH",
+      "title": "Synthesis: 1.6 Mbps profile is not a measured median",
+      "url": "register 2026-09-24 SRC-NET-SYNTH",
+      "publisher": "Digital Research wave (orchestrator synthesis)",
+      "source_tier": 3,
+      "publication_or_version_date": "2026-09-24",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Every source found is above 1.6 Mbps; the profile is defensible only as a constrained or congested-tail stress profile (inference; the tail is not quantified)."
+    },
+    {
+      "source_id": "SRC-WA-SYNTH",
+      "title": "Synthesis: WhatsApp share-of-smartphone-users claim",
+      "url": "register 2026-09-24 SRC-WA-SYNTH",
+      "publisher": "Digital Research wave (orchestrator synthesis)",
+      "source_tier": 3,
+      "publication_or_version_date": "2026-09-24",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "No source measures WhatsApp share of smartphone users for Uganda, Kenya, Tanzania or Rwanda; 90%+ figures found are unattributed internet-user estimates (Yazi); Pew 2023 adults survey implies Kenya below 90%."
+    },
+    {
+      "source_id": "SRC-UG-DPPA",
+      "title": "Uganda Data Protection and Privacy Act 2019 (s.26) and Regulations 2021 (registration)",
+      "url": "https://media.ulii.org/files/legislation/akn-ug-act-2019-9-eng-2019-05-03.pdf",
+      "publisher": "ULII (legislative text); Regulations via law-firm copy of S.I. 21 of 2021",
+      "source_tier": 1,
+      "publication_or_version_date": "Act 9 of 2019 (Cap. 97 in 2023 revised laws)",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "s.26 written opt-out from direct marketing, 14-day response; PDPO registration duty, 12-month validity (register 2026-09-23 PL-01). PDPO site rendered no content, so current fees and exemptions are unconfirmed. Not legal advice."
+    },
+    {
+      "source_id": "SRC-KE-DPA",
+      "title": "Kenya Data Protection Act 2019 s.37 and Data Protection (General) Regulations 2021 regs 14-17; ODPC guidance",
+      "url": "https://www.odpc.go.ke/wp-content/uploads/2024/03/THE-DATA-PROTECTION-GENERAL-REGULATIONS-2021-1.pdf",
+      "publisher": "ODPC / Government of Kenya",
+      "source_tier": 1,
+      "publication_or_version_date": "DPA 2019; Regulations LN 263 of 2021; ODPC recorded-media guidance Nov 2025",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Direct marketing needs consent or lawful basis, sender identity and an opt-out; ODPC recorded-media guidance covers influencer image use for the contract term. No s.37(3) guidelines found; ODPC influencer-disclosure guidance not found (register 2026-09-24 SRC-KE-DPA, SRC-KE-ODPC)."
+    },
+    {
+      "source_id": "SRC-KE-ADLAW",
+      "title": "Kenya advertising and endorsement disclosure records (CPA 2012 s.12; Competition Act s.55; ASBK Code; Media Council Code 2025)",
+      "url": "register 2026-09-24 SRC-KE-SYNTH, SRC-KE-CPA, SRC-KE-COMP, SRC-KE-ASBK, SRC-KE-MCK-2025",
+      "publisher": "Government of Kenya; ASBK; Media Council of Kenya",
+      "source_tier": 1,
+      "publication_or_version_date": "CPA 2012; Competition Act 2010; ASBK Code 2003; Media Council Code Legal Notice 88 of 2025",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "No influencer-specific statute found; disclosure duties are indirect via misleading-representation law and codes. KICA and Communications Authority instruments not read."
+    },
+    {
+      "source_id": "SRC-UG-TZ-AD",
+      "title": "Uganda and Tanzania advertising/influencer records (SRC-UG-SYNTH, SRC-UG-DLA, SRC-UG-UAA, SRC-TZ-OCR, SRC-TZ-FCA); Rwanda (SRC-RW)",
+      "url": "register 2026-09-24",
+      "publisher": "Digital Research wave",
+      "source_tier": 3,
+      "publication_or_version_date": "2026-09-24",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Uganda: no confirmed consumer protection Act or influencer rule; UCC instruments unread. Tanzania: TCRA online-content licence may apply (2025 amendment text not read); Fair Competition Act misleading-conduct rules. Rwanda: NOT_ASSESSED."
+    },
+    {
+      "source_id": "SRC-ANTH-MODELS",
+      "title": "Anthropic models overview",
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "publisher": "Anthropic",
+      "source_tier": 1,
+      "publication_or_version_date": "undated page, fetched live 2026-09-25",
+      "access_date": "2026-09-25",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Lineup includes Fable 5.1, Opus 5.5, Sonnet 5, Haiku 4.5 (retirement not sooner than 2026-10-15). Documentation catalogue, not this account's runtime availability."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "PERF-009",
+      "claim": "The 1.6 Mbps / 300 ms lab profile is not a measured market median. Measured figures found are higher: UCC Uganda drive tests roughly 5-16 Mbps mean mobile download (Aug-Sep 2024, via Ecofin, unverified against the UCC table) and SpeedOf.Me Uganda 8.4 Mbps (H1 2026, small browser sample). It stays as a deliberate conservative throttled Slow-4G/3G stress profile for the constrained tail; the tail is not quantified (inference). Gate thresholds are not weakened.",
+      "source_ids": [
+        "SRC-UCC-QOS-2024",
+        "SRC-SPEEDOFME",
+        "SRC-NET-SYNTH",
+        "SRC-WPT-CONNECTIVITY"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-NET-SYNTH",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-25",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "PERF-010",
+      "claim": "Kenya mobile is roughly 45-50 Mbps median in 2025 Ookla snapshots (secondary reports; snapshot month unconfirmed). The earlier 28 ms Kenya latency has no source and is withdrawn. Supersedes the Kenya part of PERF-007.",
+      "source_ids": [
+        "SRC-KE-SPEED"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-KE-SPEED",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-25",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "PERF-011",
+      "claim": "Ookla Speedtest Global Index for Uganda, Tanzania and Rwanda and Opensignal for Uganda remain NOT_ASSESSED; no Tanzania or Rwanda speed source was found.",
+      "source_ids": [
+        "SRC-OOKLA"
+      ],
+      "support_review": {
+        "state": "not_assessed",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-OOKLA",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-25",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "MKT-001",
+      "claim": "'WhatsApp is used by 90%+ of smartphone users in East Africa' is unsupported as worded. Say WhatsApp is a dominant messaging channel in East Africa, cite the best-attributed dated figure with its source and base (for example Pew 2023 adults survey, at least half of adults in every country surveyed incl. Kenya), and check the client's own audience data. No percentage is asserted.",
+      "source_ids": [
+        "SRC-WA-SYNTH"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-WA-SYNTH, SRC-PEW-2024",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "context-bound",
+      "review_date": "2026-12-25",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "LEG-001",
+      "claim": "Uganda DPPA 2019 s.26 gives a data subject a written opt-out from direct marketing with a 14-day response; controllers must register with the PDPO (12-month validity). Check with counsel; current fees and exemptions unconfirmed. No opt-in-for-marketing rule is claimed.",
+      "source_ids": [
+        "SRC-UG-DPPA"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) via register 2026-09-23 PL-01 / SRC-UG-DPPA",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "context-bound",
+      "review_date": "2027-03-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "LEG-002",
+      "claim": "Kenya DPA 2019 s.37 and General Regulations 2021 regs 14-17: direct marketing needs consent or a lawful basis, must identify the sender and offer an opt-out; ODPC recorded-media guidance (Nov 2025) limits influencer image use to the contract term. ODPC influencer-disclosure guidance not found. Check with counsel.",
+      "source_ids": [
+        "SRC-KE-DPA"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-KE-DPA, SRC-KE-ODPC",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "context-bound",
+      "review_date": "2026-12-25",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "LEG-003",
+      "claim": "No influencer-specific disclosure statute was found in Kenya or Uganda as of Sept 2026. Disclose paid and gifted content as best practice; Kenya disclosure duties are indirect (CPA 2012 s.12, Competition Act s.55, ASBK Code, Media Council Code 2025 for media practitioners). Uganda consumer-protection and UCC instruments are unread; Tanzania TCRA online-content licensing may apply; Rwanda is NOT_ASSESSED. Confirm with counsel.",
+      "source_ids": [
+        "SRC-KE-ADLAW",
+        "SRC-UG-TZ-AD"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) SRC-KE-SYNTH, SRC-UG-SYNTH, SRC-TZ-OCR",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "context-bound",
+      "review_date": "2026-12-25",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "MODEL-001",
+      "claim": "Model-currentness review 2026-09-25: Anthropic lineup checked against the models overview (Fable 5.1, Opus 5.5, Sonnet 5, Haiku 4.5; Haiku 4.5 retirement floor 2026-10-15); active runner Sonnet 5 (session self-report). Decision RETAIN: engines stay model-agnostic; no skill edit. Account availability and engine-task quality/cost comparison remain NOT_ASSESSED; Codex pins out of scope for Claude sessions.",
+      "source_ids": [
+        "SRC-ANTH-MODELS"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) MR-01..MR-03",
+        "review_date": "2026-09-25"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-10-15",
+      "confidence": "medium"
+    }
+  ]
+}

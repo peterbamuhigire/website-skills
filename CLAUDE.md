@@ -226,9 +226,12 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine
 - Thresholds in `lighthouserc.json` and `performance-budgets.json` are set
-  against a deliberate low-end stress profile (WebPageTest "3G" values:
-  1.6 Mbps, 300 ms RTT, with a 4x CPU slowdown and Lighthouse mobile
-  emulation). It is a worst-case floor, not a market median; see
+  against a deliberate conservative throttled Slow-4G/3G stress profile
+  (WebPageTest "3G" values: 1.6 Mbps, 300 ms RTT, with a 4x CPU slowdown and
+  Lighthouse mobile emulation). It is a worst-case floor, not a market median
+  (measured Uganda figures found are roughly 5-16 Mbps UCC drive tests and 8.4
+  Mbps SpeedOf.Me, each with limits; Ookla and Opensignal for Uganda, Tanzania
+  and Rwanda are NOT_ASSESSED); see
   `skills/launch-ops/deploy/references/africa-calibration.md` and
   `docs/source-registers/performance-currentness-2026-09-23.json`. Lab gates
   block deploy; field Core Web Vitals at p75 decide success. INP is enforced

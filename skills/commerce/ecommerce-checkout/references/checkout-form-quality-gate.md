@@ -92,3 +92,11 @@ Hand integration spec to `ecommerce`, fulfillment SLA to `service-blueprint-webs
 - Pop-up newsletter signup during checkout.
 - Cross-sell modals that interrupt the path.
 - Animated "trust badges" that increase page weight without measurable trust.
+
+## Marketing-consent check (East Africa, dated 2026-09-25)
+
+Keep marketing opt-in separate from order processing and never pre-ticked;
+confirm with counsel the consent wording, opt-out route and PDPO (Uganda) or
+ODPC (Kenya) registration duties for the client (Kenya DPA 2019 s.37; Uganda
+DPPA 2019 s.26). Tanzania and Rwanda are `NOT_ASSESSED`. Source: Digital
+Research register 2026-09-24 (LEG-001, LEG-002).

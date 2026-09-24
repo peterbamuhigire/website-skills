@@ -31,26 +31,33 @@ profile name, the Lighthouse version and the run count.
 
 ### How the stress profile compares with other evidence
 
-| Evidence | Down / RTT | Status (checked 2026-09-23) |
+| Evidence | Down / RTT | Status |
 |---|---|---|
-| Engine stress profile (WPT "3G") | 1.6 Mbps / 300 ms | Deliberate floor; blocks deploy |
+| Engine stress profile (WPT "3G"), a throttled Slow-4G/3G profile | 1.6 Mbps / 300 ms | Deliberate conservative STRESS floor, not a measurement; blocks deploy |
 | Lighthouse default mobile ("Slow 4G") | 1.6 Mbps / 150 ms, 4x CPU | Advisory comparison config `lighthouserc.default-mobile.json` |
-| Kenya median mobile (Ookla Speedtest Global Index, quarter to June 2026) | about 45 Mbps / 28 ms | Crowdsourced, urban and 4G/5G-biased (SRC-OOKLA-KE) |
-| Uganda median mobile | not published | `NOT_ASSESSED`; do not quote a figure |
+| Uganda, UCC QoS drive tests, Aug-Sep 2024, 30 towns, peak hours (SRC-UCC-QOS-2024) | roughly 5-16 Mbps mean mobile download by operator (MTN 16.3, Airtel 15.5, Lycamobile 5.3); latency 69-84 ms | Regulator drive tests, not a user median; about two years old; figures come from an Ecofin Agency summary dated 2025-01-20 and are not verified against the UCC table (register 2026-09-24) |
+| Uganda, SpeedOf.Me, H1 2026 (SRC-SPEEDOFME) | median download 8.4 Mbps; latency 192 ms | Small self-selected browser-test sample, mixed desktop and mobile, page undated; not Ookla, not UCC |
+| Kenya, search-reported Ookla median 45.37 Mbps and a StatRanker snapshot of 50.63 Mbps, about Oct 2025 (SRC-KE-SPEED) | roughly 45-50 Mbps | Secondary reports; snapshot month unconfirmed; the Ookla page was not accessible. No source was found for the earlier "28 ms" Kenya latency, so it is withdrawn |
+| Uganda, Tanzania and Rwanda Ookla Speedtest Global Index; Opensignal Uganda (SRC-OOKLA) | not fetched | `NOT_ASSESSED` (site refused the fetch); do not quote a figure. Tanzania and Rwanda: no source found |
 
-Median Kenyan mobile is roughly 28 times faster in bandwidth and has about a
-tenth of the stress profile's latency. The stress profile therefore stands in
-for the tail: rural users, congested cells, 3G fallback, prepaid users who
-have exhausted a bundle, and low-end devices. Passing it is strong evidence
-that the median visitor is well served; it says nothing precise about any
-market's median.
+Every source found puts market speeds above 1.6 Mbps: the 1.6 Mbps / 300 ms
+profile is **not** a measured Ugandan or East African median (SRC-NET-SYNTH,
+register 2026-09-24). It is defensible only as a deliberately conservative
+stress profile for the constrained and congested tail: rural users, congested
+cells, 3G fallback, prepaid users who have exhausted a bundle, and low-end
+devices. No source quantifies that tail (inference). Passing the profile is
+strong evidence that the median visitor is well served; it says nothing
+precise about any market's median. The gate thresholds are unchanged, because
+the register gives no reason to weaken a worst-case floor.
 
 Rules:
 
 - Never describe the stress profile as "the African median" or as "typical"
-  in a proposal, report or skill. Say "our low-end stress test".
+  in a proposal, report or skill, and never say Ugandan users average 1.6 Mbps.
+  Say "our throttled Slow-4G/3G stress test".
 - State market speeds only from a dated, named source in the currentness
-  register. Uganda's mobile median is `NOT_ASSESSED`.
+  register, with its limit. Uganda, Tanzania and Rwanda Ookla and Opensignal
+  figures are `NOT_ASSESSED`.
 - Crowdsourced speed medians over-represent people who run speed tests. Treat
   them as an upper bound for the typical visitor, not as the floor.
 - Calibrate against field data when it exists: see

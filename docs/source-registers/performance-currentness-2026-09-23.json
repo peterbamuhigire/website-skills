@@ -290,7 +290,7 @@
     },
     {
       "claim_id": "PERF-007",
-      "claim": "Kenya median mobile (Ookla, quarter to June 2026) is about 45 Mbps down and 28 ms latency; the Uganda mobile median is not published and is NOT_ASSESSED.",
+      "claim": "Kenya median mobile (Ookla, quarter to June 2026) is about 45 Mbps down and 28 ms latency; the Uganda mobile median is not published and is NOT_ASSESSED. SUPERSEDED in part 2026-09-25 by PERF-010 and PERF-011 (performance-currentness-2026-09-25.json): the 28 ms latency and the quarter-to-June-2026 month are unverified.",
       "source_ids": [
         "SRC-OOKLA-KE",
         "SRC-OOKLA-UG"
