@@ -136,6 +136,8 @@ Every external link pointing to the site must carry UTMs. The agency maintains a
 
 ### UTM convention
 
+When a campaign arrives from `social-media-skills` with its own UTM convention (the channel-to-site handoff), adopt that convention as-is for the campaign and record it; the default below applies only where no campaign convention has been supplied.
+
 - `utm_source` — the publishing platform (google, bing, linkedin, twitter, newsletter, partner-name)
 - `utm_medium` — the channel (cpc, organic, social, email, referral, partner)
 - `utm_campaign` — the named campaign (q2-2026-growth, event-kampala-summit)

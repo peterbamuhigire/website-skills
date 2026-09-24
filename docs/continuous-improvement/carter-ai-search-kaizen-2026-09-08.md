@@ -1,5 +1,8 @@
 # Carter AI-search kaizen record — 2026-09-08
 
+> **Historical record.** The `book-extractions/` folder named below was removed on 2026-09-24 under the owner's copyright rule; its capabilities now live in skill references (see the capability preservation map in the 2026-09-24 Kaizen record `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
+
+
 ## Decision
 
 Admit the book as a qualified concept input and standardise its useful planning
@@ -35,7 +38,7 @@ website, account, user, conversion, and independent reviewer evidence remain
 
 ## Research disposition
 
-The [independent synthesis](../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md)
+The independent synthesis (retired; now `skills/seo-search/google-ai-search/references/ai-search-response-mode-planning.md`)
 records the local file hash, package coverage, publisher metadata corroboration,
 and limitations. Its concepts are admitted as synthesis only. Current claims
 were checked against the [Google generative AI guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),

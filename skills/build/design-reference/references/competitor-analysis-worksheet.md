@@ -92,7 +92,7 @@ End with a business implication:
 
 ---
 
-## Canonical worksheet format (added 2026-05-04 — Levy matrix alignment)
+## Canonical worksheet format
 
 The canonical worksheet for any premium engagement now uses the 19-column matrix in `levy-competitive-matrix.md`. Follow that structure for new engagements.
 

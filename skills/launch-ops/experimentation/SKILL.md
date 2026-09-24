@@ -82,6 +82,8 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 | Quarterly learning review | Retainer owner | Wins, losses, inconclusive tests, belief changes, and next priorities are summarised. |
 
 ## References
+- [experiment-charter-and-test-discipline.md](references/experiment-charter-and-test-discipline.md) — read when writing an experiment charter, checking tracking readiness, or resolving a split result.
+- [pre-build-validation-and-rollout-playbook.md](references/pre-build-validation-and-rollout-playbook.md) — read when validating an idea before building it or staging a rollout.
 
 - [Hypothesis template](references/hypothesis-template.md)
 - [Statistical significance primer](references/stat-significance-primer.md)
@@ -91,7 +93,7 @@ Turn a measurable uncertainty into a controlled learning cycle with a declared h
 - [Kaizen conversion experiment loop](references/kaizen-conversion-experiment-loop.md)
 ## Book-informed practice route
 
-Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for staged experiments, friction evidence, and adoption/value measurement.
+Use [journey acceptance and friction evidence](../../orchestration/website-builder/references/journey-acceptance-and-friction-evidence.md) for staged experiments, friction evidence, and adoption/value measurement.
 <!-- dual-compat-end -->
 
 ## Evidence Produced

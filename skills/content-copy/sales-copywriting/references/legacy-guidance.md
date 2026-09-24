@@ -228,7 +228,7 @@ See `references/closing-and-guarantees.md` for the 10-part guarantee formula. Ke
 
 ## StoryBrand Website Copy Hierarchy
 
-Five rules for website copy from Donald Miller's *Building a StoryBrand* (Ch12). Full framework: `book-extractions/storybrand-sb7-framework.md`.
+Five rules for website copy from Donald Miller's *Building a StoryBrand* (Ch12). Full framework: [SB7 BrandScript worksheet](../../../brand/brand-storytelling/references/sb7-brandscript-worksheet.md).
 
 1. **Above-fold offer** — 10 words or fewer stating one of: aspirational identity offered, problem solved, or what you do. Never lead with company name, tagline, or product category description.
 2. **Obvious CTAs** — one direct CTA in the top-right header; repeat center-page in the hero; repeat again as readers scroll. Same button colour throughout. One consistent colour = one clear signal.

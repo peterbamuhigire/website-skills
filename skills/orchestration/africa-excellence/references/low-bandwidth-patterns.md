@@ -10,8 +10,10 @@ African networks.
 
 ## Baseline reality
 
-- Primary network profile: 3G, 1,638 Kbps down, 300 ms RTT, 4× CPU
-  slowdown. (See `deploy/references/africa-calibration.md`.)
+- Lab stress profile: WebPageTest "3G" values, 1,638 Kbps down, 300 ms RTT,
+  4× CPU slowdown. It is a deliberate worst-case floor, not a market median;
+  measured median mobile is much faster in some markets. (See
+  `deploy/references/africa-calibration.md`.)
 - Per-route total first-load budget: **350 KB**.
 - Real-world variance: networks routinely drop to EDGE for seconds at
   a time. The site must degrade gracefully, not catastrophically.
@@ -81,8 +83,11 @@ The reverse is not true.
 - **Preload.** The hero image, the critical font, and the primary
   stylesheet if it is external.
 - **Prefetch.** Only next-page navigation when you are confident about
-  destination (e.g. the primary CTA's target). Speculative prefetch on
-  a 3G connection spends data the user may not have.
+  destination (e.g. the primary CTA's target). Prefer conservative
+  eagerness (on hover intent or pointer down), prefetch over prerender, and
+  skip speculation entirely when `Save-Data` is on or the connection is 2G
+  or slower: it spends data the user may not have. See
+  `deploy/references/edge-caching-and-delivery.md`.
 - **DNS-prefetch.** For any third-party domain that will be contacted
   after interaction.
 

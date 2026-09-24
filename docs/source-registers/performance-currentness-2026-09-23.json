@@ -1,0 +1,326 @@
+{
+  "register_id": "website-performance-currentness-2026-09-23",
+  "scope": "Core Web Vitals, Lighthouse version and scoring, lab throttling profiles, lab-to-field calibration and market network speeds used by the website-skills performance gate.",
+  "access_date": "2026-09-23",
+  "verification_date": "2026-09-24",
+  "owner": "website-skills maintainer",
+  "review_date": "2026-12-23",
+  "archive_policy": "Archives were not created in this operation; archive status is NOT_ASSESSED. Facts come from the Digital Research currentness register of 2026-09-23, re-checked at source where noted.",
+  "sources": [
+    {
+      "source_id": "SRC-WEBDEV-VITALS",
+      "title": "Web Vitals",
+      "url": "https://web.dev/articles/vitals",
+      "publisher": "Google Chrome team (web.dev)",
+      "source_tier": 1,
+      "publication_or_version_date": "2024-10-31",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Thresholds and p75 assessment for field data; Google may revise metrics."
+    },
+    {
+      "source_id": "SRC-WEBDEV-INP-LAUNCH",
+      "title": "Interaction to Next Paint becomes a Core Web Vital on March 12",
+      "url": "https://web.dev/blog/inp-cwv-launch",
+      "publisher": "web.dev",
+      "source_tier": 1,
+      "publication_or_version_date": "2024-03-12",
+      "access_date": "2026-09-23",
+      "freshness_class": "stable",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Historical fact: INP replaced FID."
+    },
+    {
+      "source_id": "SRC-LH-RELEASES",
+      "title": "Lighthouse releases",
+      "url": "https://api.github.com/repos/GoogleChrome/lighthouse/releases",
+      "publisher": "GoogleChrome/lighthouse",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-09-18",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "v13.0.0 released 2025-10-10; latest v13.5.0 on 2026-09-18; v13 replaced many legacy audits with performance insights."
+    },
+    {
+      "source_id": "SRC-LH-CONFIG",
+      "title": "Lighthouse default-config.js",
+      "url": "https://github.com/GoogleChrome/lighthouse/blob/main/core/config/default-config.js",
+      "publisher": "GoogleChrome/lighthouse",
+      "source_tier": 1,
+      "publication_or_version_date": "main branch, read 2026-09-23; v12.6.1 tag also read",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Performance weights TBT 30, LCP 25, CLS 25, FCP 10, SI 10, INP 0; insight audit ids present in both 12.6.1 and main."
+    },
+    {
+      "source_id": "SRC-LH-THROTTLING",
+      "title": "Lighthouse throttling documentation",
+      "url": "https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md",
+      "publisher": "GoogleChrome/lighthouse",
+      "source_tier": 1,
+      "publication_or_version_date": "main branch",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Default mobile Slow 4G: 150 ms RTT, 1.6 Mbps down, 750 Kbps up, 4x CPU."
+    },
+    {
+      "source_id": "SRC-LH-CONSTANTS",
+      "title": "Lighthouse constants.js (screen emulation)",
+      "url": "https://github.com/GoogleChrome/lighthouse/blob/main/core/config/constants.js",
+      "publisher": "GoogleChrome/lighthouse",
+      "source_tier": 1,
+      "publication_or_version_date": "main branch",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Mobile emulation 'moto g power (2022)', 412x823, DPR 1.75; confirmed in real reports generated on 2026-09-24."
+    },
+    {
+      "source_id": "SRC-NPM-LHCI",
+      "title": "@lhci/cli 0.15.1 registry record",
+      "url": "https://registry.npmjs.org/@lhci/cli/-/cli-0.15.1.tgz",
+      "publisher": "npm registry (package publisher metadata)",
+      "source_tier": 1,
+      "publication_or_version_date": "0.15.1 published 2025-06-25T23:52:10Z",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Read on 2026-09-23 with npm view @lhci/cli@0.15.1 dependencies.lighthouse, re-run 2026-09-24: lighthouse 12.6.1; tarball shasum 38dcbb1af1e4e2d735726d47635a08a621ed0781. Reconfirm when @lhci/cli publishes a newer version."
+    },
+    {
+      "source_id": "SRC-WPT-CONNECTIVITY",
+      "title": "WebPageTest connectivity presets",
+      "url": "https://raw.githubusercontent.com/catchpoint/WebPageTest/master/www/settings/connectivity.ini.sample",
+      "publisher": "Catchpoint WebPageTest",
+      "source_tier": 1,
+      "publication_or_version_date": "master branch",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "'3G' preset 1.6 Mbps down / 768 Kbps up / 300 ms RTT: the source of the engine stress-profile values."
+    },
+    {
+      "source_id": "SRC-OOKLA-KE",
+      "title": "Speedtest Global Index: Kenya",
+      "url": "https://www.speedtest.net/global-index/kenya",
+      "publisher": "Ookla",
+      "source_tier": 2,
+      "publication_or_version_date": "quarter ending June 2026 (mobile)",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Crowdsourced median mobile about 45.38 Mbps down, 28 ms latency; biased towards urban 4G/5G testers."
+    },
+    {
+      "source_id": "SRC-OOKLA-UG",
+      "title": "Speedtest Global Index: Uganda",
+      "url": "https://www.speedtest.net/global-index/uganda",
+      "publisher": "Ookla",
+      "source_tier": 2,
+      "publication_or_version_date": "Aug 2026",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "partial",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "No mobile median published for Uganda; mobile is NOT_ASSESSED."
+    },
+    {
+      "source_id": "SRC-GH-WEBVITALS",
+      "title": "web-vitals README (attribution build)",
+      "url": "https://github.com/GoogleChrome/web-vitals",
+      "publisher": "GoogleChrome/web-vitals",
+      "source_tier": 1,
+      "publication_or_version_date": "main branch README",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Attribution-build field names (LCP sub-parts, INP phases, CLS largest shift); onFID absent. Read 2026-09-23."
+    },
+    {
+      "source_id": "SRC-NPM-WEBVITALS",
+      "title": "web-vitals 6.2.2 registry record",
+      "url": "https://registry.npmjs.org/web-vitals/-/web-vitals-6.2.2.tgz",
+      "publisher": "npm registry (package publisher metadata)",
+      "source_tier": 1,
+      "publication_or_version_date": "6.2.2 published 2026-09-14T22:58:51Z",
+      "access_date": "2026-09-23",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "npm view web-vitals@6.2.2 read 2026-09-23 and 2026-09-24; repository git+https://github.com/GoogleChrome/web-vitals.git; tarball shasum ff4a7a8d7c5df18074a01f1c4f169e1a57df7193. Reconfirm on each release."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "PERF-001",
+      "claim": "Core Web Vitals are LCP, INP and CLS; good thresholds LCP <= 2.5 s, INP <= 200 ms, CLS <= 0.1 at the 75th percentile of field data per device class.",
+      "source_ids": [
+        "SRC-WEBDEV-VITALS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Currentness register CW-01",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-03-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-002",
+      "claim": "INP replaced FID as a Core Web Vital on 12 March 2024.",
+      "source_ids": [
+        "SRC-WEBDEV-INP-LAUNCH"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Currentness register CW-02",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "stable",
+      "review_date": "2027-09-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-003",
+      "claim": "Latest Lighthouse is 13.5.0 (2026-09-18); performance weights TBT 30, LCP 25, CLS 25, FCP 10, SI 10; INP has weight 0 and is not measured in navigation mode.",
+      "source_ids": [
+        "SRC-LH-RELEASES",
+        "SRC-LH-CONFIG"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Currentness register CW-03 and config read",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-004",
+      "claim": "@lhci/cli 0.15.1 bundles Lighthouse 12.6.1; the engine assertion set produced the same results and no auditRan failures when lhci assert was run against real reports from Lighthouse 12.6.1 and 13.5.0.",
+      "source_ids": [
+        "SRC-NPM-LHCI",
+        "SRC-LH-CONFIG"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "npm registry record (@lhci/cli 0.15.1, published 2025-06-25, depends on lighthouse 12.6.1) and local lhci assert runs",
+        "review_date": "2026-09-24"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-005",
+      "claim": "Lighthouse default mobile throttling is 150 ms RTT, 1.6 Mbps down, 750 Kbps up, 4x CPU; 1.6 Mbps / 300 ms is WebPageTest's 3G preset, used here only as a labelled stress profile.",
+      "source_ids": [
+        "SRC-LH-THROTTLING",
+        "SRC-WPT-CONNECTIVITY"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Currentness register CW-04",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-03-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-006",
+      "claim": "Lighthouse mobile emulation is 'moto g power (2022)' at 412x823, DPR 1.75.",
+      "source_ids": [
+        "SRC-LH-CONSTANTS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Source file and observed report environment",
+        "review_date": "2026-09-24"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-03-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "PERF-007",
+      "claim": "Kenya median mobile (Ookla, quarter to June 2026) is about 45 Mbps down and 28 ms latency; the Uganda mobile median is not published and is NOT_ASSESSED.",
+      "source_ids": [
+        "SRC-OOKLA-KE",
+        "SRC-OOKLA-UG"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Currentness register MK-04",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "PERF-008",
+      "claim": "The web-vitals attribution build exposes LCP sub-parts, INP phases and CLS largest-shift targets; onFID no longer exists.",
+      "source_ids": [
+        "SRC-GH-WEBVITALS",
+        "SRC-NPM-WEBVITALS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "README read and npm registry record (web-vitals 6.2.2, published 2026-09-14)",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "high"
+    }
+  ]
+}

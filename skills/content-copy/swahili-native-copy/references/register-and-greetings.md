@@ -68,4 +68,4 @@ In East African commerce the `duka` (shop) is a social space; jumping straight t
 
 ## Source
 
-Register, greeting, and address conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and *Swahili (Spoken World)* (Living Language). Service/warmth phrases and the relationship-first principle added in 2026 from the *Rough Guide Phrasebook — Swahili* (Lexus) and John M. Mugane, *The Story of Swahili*. See `book-extractions/swahili-language-books-extraction-2026.md`.
+Register, greeting, and address conventions distilled from Joan Russell, *Swahili (Teach Yourself)*, Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, and *Swahili (Spoken World)* (Living Language). Service/warmth phrases and the relationship-first principle added in 2026 from the *Rough Guide Phrasebook — Swahili* (Lexus) and John M. Mugane, *The Story of Swahili*. Sector lexicon and Tanzania/Kenya calibration: [service, hospitality and sector lexicon](service-hospitality-and-sector-lexicon.md).

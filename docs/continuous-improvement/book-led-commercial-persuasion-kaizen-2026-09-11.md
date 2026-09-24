@@ -1,5 +1,8 @@
 # Book-Led Commercial Persuasion Kaizen — 2026-09-11
 
+> **Historical record.** The `book-extractions/` folder named below was removed on 2026-09-24 under the owner's copyright rule; its capabilities now live in skill references (see the capability preservation map in the 2026-09-24 Kaizen record `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
+
+
 ## Scope and baseline
 
 - Engine: `C:\wamp64\www\website-skills`.

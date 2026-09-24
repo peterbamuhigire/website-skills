@@ -8,7 +8,7 @@ Build, verify, and prepare for deployment.
 ## Universal Guidelines Reference
 
 Before and after deployment, review **Universal Design Guidelines** for:
-- Core Web Vitals targets (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- Core Web Vitals targets at p75 of field data (LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1); INP replaced FID on 12 March 2024
 - Performance monitoring and optimization
 - Security maintenance checklist
 - Analytics and monitoring setup

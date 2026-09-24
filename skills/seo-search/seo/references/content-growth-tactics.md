@@ -1,155 +1,98 @@
 # Content-Driven Traffic Growth Tactics
-*Source: Mike Fishbein, "Growth Hacking with Content Marketing"*
 
----
+Parent skill: [seo](../SKILL.md). Read when planning which searches content should target, how to structure topic clusters, how long-tail keywords are chosen, and how content feeds service pages.
 
-## Intent-Based Keyword Targeting
+## The Four Intent Stages
 
-People search for information, not products. This gap is the content opportunity.
+People search for information before they search for suppliers. Informational phrasing usually has more demand than supplier phrasing, and it meets the same person earlier in the decision. Verify volumes for the target market with a keyword tool and record the tool and date; do not quote volumes as fixed facts.
 
-**Fishbein's core insight:** "productivity consultant" gets 70 monthly searches. "How to be more productive" gets 1,300. The informational query is 18× more searched — and it attracts the same audience earlier in their buying journey.
+| Stage | Illustrative search | Meaning | Content type |
+|---|---|---|---|
+| Awareness | "inventory management" | Early; exploring the subject | Long guides, explainers |
+| Learning | "how to control stock in a shop" | Ready to learn | How-to articles, tutorials |
+| Comparison | "best stock software Kenya" | Near a decision; weighing options | Comparison posts, reviews |
+| Buying | "hire stock system consultant Kampala" | Ready to purchase | Service and product pages |
 
-### The Four Intent Stages
-
-| Stage | Example Search | What It Means | Content Type |
-|-------|---------------|---------------|--------------|
-| Research / Awareness | "productivity" | Early stage; relationship-building | Long-form guides, explainers |
-| Learning | "how to be more productive" | Ready to consume educational content | How-to articles, tutorials |
-| Comparative | "best productivity tools" | Near decision; evaluating options | Comparison posts, reviews |
-| Buying | "buy productivity planner", "hire productivity consultant" | Ready to purchase | Service/product pages, landing pages |
-
-**How to use this in practice:**
-
-1. Map every keyword to one of these four stages before writing
-2. Informational queries (Learning stage) feed the blog — they reach audiences before they're ready to buy and establish the site as the authoritative source
-3. Comparative queries are high-conversion — write detailed comparison posts that mention your offering naturally
-4. Buying-intent queries belong on service/product pages, not blog posts
-
-**The content bridge:** Blog posts targeting informational queries should internally link to service pages that serve buying-intent queries. A reader searching "how to implement ERP" who finds your authoritative guide, then clicks to your ERP implementation service page, is a warm lead.
-
----
+Use:
+1. Map every keyword to a stage before writing.
+2. Learning-stage queries feed the blog.
+3. Comparison queries convert well; write fair, detailed comparisons that mention your offer where it truly fits.
+4. Buying-stage queries belong on service or product pages, not posts.
+5. Bridge: each informational post links to the service page that serves the buying-stage query on the same subject.
 
 ## Content Cluster / Topical Authority Approach
 
-Google rewards sites that demonstrate comprehensive authority on a topic, not just individual pages with good keyword placement.
+Search engines reward depth across a subject, not only well-placed keywords on single pages.
 
-**The cluster model:**
-- One **pillar page** covers a broad topic comprehensively (2,000-4,000 words)
-- Multiple **cluster posts** cover subtopics in depth (1,200-2,000 words each)
-- Every cluster post links to the pillar page; the pillar page links to each cluster post
-- The internal linking network signals topical authority to Google
+Model:
+- One pillar page covers the broad topic comprehensively.
+- Several cluster posts each cover one subtopic in depth and target one long-tail keyword.
+- Every cluster post links to the pillar; the pillar links to every cluster post.
+- Set length by what the query needs; compare the pages that currently rank rather than adopting fixed word counts.
 
-**Example for an ERP software company:**
+Illustrative cluster for a Kampala accounting-software vendor:
 
 ```
-Pillar: "The Complete Guide to ERP Implementation in East Africa"
-  └── Cluster: "How to choose an ERP system for your business size"
-  └── Cluster: "ERP implementation timeline: what to expect month by month"
-  └── Cluster: "Top ERP implementation mistakes and how to avoid them"
-  └── Cluster: "ERP for retail: managing inventory across multiple branches"
-  └── Cluster: "Cloud ERP vs on-premise: the real cost comparison"
+Pillar: Complete guide to choosing accounting software in Uganda
+  Cluster: Accounting software for a small shop, by branch count
+  Cluster: URA-compliant invoicing: what the software must do
+  Cluster: Cloud versus installed accounting: cost comparison in UGX
+  Cluster: Migration timeline: what happens each month
+  Cluster: Common set-up mistakes and how to avoid them
 ```
 
-Each cluster post targets a specific long-tail keyword. Collectively, the cluster owns the entire topic in Google's view.
-
-**Build one cluster at a time.** Complete a full cluster (pillar + 5-8 posts) before starting the next topic area. Partial clusters have weaker authority signals than complete ones.
-
----
+Build one cluster at a time. Finish the pillar and its cluster posts before starting a new topic; partial clusters give weaker signals.
 
 ## Long-Tail Keyword Strategy
 
-Fishbein's specific guidance on long-tail keywords:
-
-1. **Target moderate competition from weak competitors.** No competition = probably no money in the niche. Too much competition = difficult to rank. Look for moderate search volume where competitors are small niche blogs, not major media sites.
-
-2. **Segment by audience.** "Social media marketing for dentists" beats "social media marketing" for a dental marketing agency. More specific = less competition + more relevant traffic + higher conversion rate.
-
-3. **Geographic modifiers.** Add city, country, or region to every keyword cluster: "ERP implementation Kampala", "accounting software Uganda", "business management system East Africa". Local/regional queries have higher buying intent and lower competition.
-
-4. **Buyer-intent signals in long-tails.** "buy", "hire", "best", "[service] near me", "[product] price" — these indicate decision-stage searchers. Service pages, not blog posts, should target these.
-
-5. **Use Google Keyword Planner to validate demand.** Higher average monthly searches = more demand. A keyword with 500 monthly searches that perfectly matches your audience beats one with 5,000 searches that attracts irrelevant visitors.
-
----
+1. **Moderate competition, weak competitors.** No competition often means no commercial value; heavy competition means difficulty. Prefer moderate demand where the ranking pages are small niche sites rather than major publishers.
+2. **Segment by audience.** "Bookkeeping for clinics" is more specific, less contested and more relevant than "bookkeeping".
+3. **Add geography.** Attach city, country or region to keyword groups ("payroll software Nairobi"). Local queries usually carry stronger intent.
+4. **Recognise buying signals.** Words such as buy, hire, best, price, near me indicate decision stage; send them to service pages.
+5. **Validate demand, then prefer fit.** Use a keyword tool for volume ranges, but a smaller phrase that matches your buyer exactly beats a larger phrase that brings the wrong visitors.
 
 ## Distribution Channels That Amplify SEO
 
-Publishing on additional platforms multiplies reach because each platform has its own search index and reaches different demographics. These are SEO-amplifying assets, not replacements for a strong website.
+Each platform has its own search and audience, so a presence on several gives more entry points to the same site. They supplement, not replace, a strong website. Check current platform rules and behaviour before relying on any of these effects.
 
-### Quora as an SEO Asset
+- **Question-and-answer sites.** Answers may appear in web search and reach followers of the question. Answer what the audience asks, use the target phrase naturally, link contextually and tailor the profile bio. Target shapes: "best resources to learn X", "best tools for Y", "how can I [outcome you deliver]". Rules: [traffic-channel-menu-and-evaluation.md](../../../content-copy/blog-writer/references/traffic-channel-menu-and-evaluation.md).
+- **Slide platforms.** Reformat a post as a deck; use the keyword in title and description; put the URL on the final slide and in the profile. Track embeds and qualified referrals rather than assuming past campaign results.
+- **Video platforms.** Video results can appear beside pages in web search. Put the full URL in the description, say it at the end, show it on screen, and reuse the post's keyword. Step-by-step demonstrations, screen presentations and face-to-camera explainers all suit this.
 
-- Questions answered on Quora appear in Google search results — Quora pages rank well
-- Answers are emailed to everyone following that question (high-attention inbox)
-- Answer questions your target audience is asking; link to your site contextually when appropriate
-- Include target keyword in your answer — Quora content is indexed and searchable
-- Questions to target: "What are the best resources to learn [area]?", "What are the best tools for [niche]?", "How can I [benefit your offering delivers]?"
-- **Profile optimisation:** Name and brief bio appear above every answer — edit the bio for the topic area; link to your site in your profile
-
-### SlideShare as an SEO Asset
-
-- 50M+ unique monthly visitors with its own search engine
-- SlideShare presentations rank fairly high on Google searches — additional entry points for your content
-- Track embeds and qualified referrals when presentation distribution is part
-  of the plan; do not generalise historical campaign statistics.
-- Reformat blog content as slide decks: same knowledge, new audience, new search index
-- **Traffic path:** Profile link + contextual slides + final CTA slide with URL + presentation description
-- Use target keywords in the slide title and description for both SlideShare internal search and Google
-
-### YouTube as an SEO Asset
-
-- 2nd largest search engine in the world; 1B+ monthly visitors
-- Google owns YouTube — videos rank in Google searches alongside web pages
-- Subscribers compound visibility over time (subscriber count affects ranking)
-- **Traffic path:** Full URL in video description + verbal CTAs at end + URL text overlay throughout video
-- Video types that work: screen presentations, step-by-step demos/tutorials, face-to-camera explainers
-- Target the same keywords as your blog posts — a keyword that works for text often works for video
-
-**Multi-platform presence means multiple search entry points for the same audience.** A potential client might discover you through a Google search (blog), a Quora answer, a SlideShare presentation, or a YouTube video — all leading back to the same website.
-
----
+Full procedures: [content-distribution.md](../../../content-copy/blog-writer/references/content-distribution.md).
 
 ## Internal Linking: Content Clusters to Money Pages
 
-Content clusters serve two purposes: attracting organic traffic AND feeding that traffic into service pages (money pages). Internal links are the mechanism.
+Clusters attract organic visits and pass them on to pages that convert. Internal links do the passing.
 
-**Internal linking rules for content-driven SEO:**
+1. Link every post to at least one service or product page.
+2. Use descriptive anchor text ("our accounting-software set-up service"), never "click here" or "read more".
+3. Link each cluster post to its pillar with natural anchor text.
+4. Link the pillar to each cluster post.
+5. Keep every important page within two clicks of the homepage.
+6. Use a small number of contextual internal links in the body; never point the same anchor text at two different pages.
 
-1. **Every blog post must link to at least one service or product page.** The service page is the "money page" — the one that converts. Blog traffic that never reaches the service page is wasted.
+Funnel logic:
 
-2. **Use keyword-rich anchor text.** "our ERP implementation services" beats "click here". Descriptive anchor text helps Google understand what the destination page is about.
-
-3. **Link from cluster posts to the pillar page.** Every cluster post should reference and link to the pillar page using natural anchor text.
-
-4. **Link from the pillar page to each cluster post.** The pillar page acts as a hub — its outbound internal links pass authority to each cluster post.
-
-5. **Every page reachable within 2 clicks from the homepage.** If a service page is buried 3-4 clicks deep, it gets less crawl equity and less referral traffic.
-
-6. **2-5 internal links per page body** with keyword-rich anchor text. Never use "click here" or "read more". Never link the same anchor text to two different pages.
-
-**The funnel logic:**
 ```
-Informational blog post (attracts organic search traffic)
-  → links to related cluster posts (builds topical authority)
-  → links to pillar page (concentrates authority)
-  → pillar page links to service page (converts traffic)
-  → service page has strong CTA (drives contact/purchase)
+Informational post (organic entry)
+  -> related cluster posts (topical depth)
+  -> pillar page (concentrates relevance)
+  -> service page (converts)
+  -> clear call to action (contact or purchase)
 ```
 
----
+## Effort allocation across creation and distribution
 
-## The 20/80 Content Rule
+Allocate effort between creating, maintaining and distributing from each asset's quality, audience, channel evidence, lifecycle and measured return. Do not impose a universal ratio.
 
-Fishbein's observation: Most content creators invert the optimal ratio.
+Practice:
+- Before publishing anew, check whether recent posts were fully distributed.
+- Give every new post a distribution checklist: social shares, answer-site reply, slide version, newsletter, professional-network post, video where suitable.
+- Repurposing one post into several formats is the most efficient form of distribution.
 
-- Allocate creation, maintenance, and distribution effort from the asset's
-  quality, audience, channel evidence, lifecycle, and measured return. Do not
-  impose a universal ratio.
+See [content-distribution.md](../../../content-copy/blog-writer/references/content-distribution.md) for the full checklist.
 
-A piece of content published and distributed across 6 platforms reaches 6× the audience of a piece published on one platform. The creation cost is the same; distribution is the multiplier.
+## Sources
 
-**Practical application:**
-- Before publishing a new blog post, check whether existing posts have been fully distributed across all channels
-- Every new post should trigger a distribution checklist: social shares, Quora answer, SlideShare version, email newsletter, LinkedIn post, YouTube video (if applicable)
-- Repurposing (turning one post into multiple formats) is the most efficient form of distribution
-
-**See also:** `../blog-writer/references/content-distribution.md` for the full Fishbein distribution framework.
+- Mike Fishbein, *Growth Hacking with Content Marketing* (self-published; edition year not recorded). Informed the intent-stage mapping, long-tail selection and channel-amplification approach; wording, examples and structure here are the engine's own.

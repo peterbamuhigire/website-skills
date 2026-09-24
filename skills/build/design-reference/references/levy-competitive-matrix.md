@@ -1,76 +1,70 @@
-# Levy's Competitive Analysis Matrix
-**Source:** Extracted from `levy-ux-strategy-extraction.md` (Part VII).
-**Used by:** design-reference.
+# Competitive Analysis Matrix
 
----
+Parent skill: [design-reference](../SKILL.md). Read when building a `docs/design-reference.md` for a client who supplied competitor URLs, preparing the competitive section of a proposal, or auditing whether a project's "competitive analysis" holds real data.
 
-## Use this file when
+## Discipline
 
-- Building a `docs/design-reference.md` for a client who provided competitor URLs
-- Preparing the competitive section of a proposal or strategic brief
-- Auditing whether a project's "competitive analysis" actually has data
-
-## The discipline
-
-> "The Internet has been around for more than 20 years. Knowing what has actually worked or failed is crucial to identifying a competitive advantage."
-
-You almost never enter a new market — you enter an existing one. Match user discovery + stakeholder name-drops + keyword search to find competitors.
+Almost no project enters an empty market. Learning what has already worked or failed in the market is the fastest route to a defensible advantage. Find competitors from three sources: what users say they use, competitors that stakeholders name, and keyword searches in the target market.
 
 ## Competitor types
 
-- **Direct competitors** — same/very similar value prop to your customers. Your customers are using them right now.
-- **Indirect competitors** — similar value prop to a *different* segment, OR your exact segment without the exact same value prop.
+- **Direct:** same or very similar value proposition to the same customers, who use it now.
+- **Indirect:** a similar value proposition to a different segment, or the same segment served with a different proposition.
 
-## Target list size
+## Target list
 
-**Minimum: 5 direct + 3 indirect.** Mix established and new entrants. Never stop on page 1 of search results — review at least 5 pages (top 50).
+Minimum five direct and three indirect competitors, mixing established firms and new entrants. Do not stop at the first page of search results; review at least five pages. Local example: for a Kampala hotel-booking site, include regional booking platforms, individual hotel sites and WhatsApp-led operators.
 
-## The matrix — columns to capture
+## Matrix columns
 
-Use Google Sheets (free, cloud, shareable). One row per competitor. ~30 minutes per row first pass.
+Use a shared spreadsheet, one row per competitor, roughly half an hour per row on the first pass. If a competitor's mobile and desktop experiences differ greatly, give it two rows.
 
-| # | Column | What to capture |
-|---|---|---|
-| 1 | URL of website / app store | Both Apple and Android URLs if multi-platform; if mobile and desktop differ greatly, give competitor TWO rows |
-| 2 | Username / password | Throwaway global login for the team. Never use real social logins. Buy paid apps. |
-| 3 | Purpose of site | 1–2 sentence value prop. Sources: About page, Crunchbase, app-store first 2 lines, social profiles, online annual report |
-| 4 | Year founded | |
-| 5 | Funding rounds | Crunchbase. Funded competitors have advantage. |
-| 6 | Revenue streams | Transaction fee, ads, monthly fee, SaaS, data sales. Click "Advertise with Us" if unclear. |
-| 7 | Monthly traffic | Compete.com, Quantcast, Alexa, App Annie, AppFigures, Mopapp, Distimo. Triangulate. |
-| 8 | # SKUs / listings (optional) | Search a common term and use the count as proxy |
-| 9 | Primary categories | Copy global navigation. For horizontal marketplaces, list "most popular" / "best selling." |
-| 10 | Social networks | Active strategy, not just account presence |
-| 11 | Content types | Text/photo/video balance, organization, scannability, detail-page depth |
-| 12 | Personalization features | Favorites, watch lists, profiles, wish lists, custom UI, messaging, saved carts |
-| 13 | Community / UGC features | Message boards, posts, comments. Editorial vs user-generated balance. |
-| 14 | Competitive advantage | Top 3 differentiators per product, with concrete examples |
-| 15 | Heuristic evaluation | Quick A–F grade with primary-goal task, nav consistency, find/search/browse, error feedback |
-| 16 | Customer reviews | Recurring complaints from app stores, Quora, Twitter |
-| 17 | General notes | |
-| 18 | Questions to team | |
-| 19 | Analysis | (Filled in during cross-row analysis pass) |
+| Column | What to capture |
+|---|---|
+| Address | Website and app-store links for each platform |
+| Access | A shared throwaway login for the team; never use personal social logins; buy paid apps where needed |
+| Purpose | One or two sentences of value proposition, from the About page, business-directory listings, the first lines of the app-store entry, social profiles or annual reports |
+| Year founded | |
+| Funding | Public funding records; funded competitors have resource advantages |
+| Revenue streams | Transaction fees, advertising, subscription, software licence, data sales; check any "advertise with us" page if unclear |
+| Monthly traffic | Triangulate several traffic-estimation and app-analytics tools; check which are current |
+| Listing or product count (optional) | Search a common term and use the result count as a rough proxy |
+| Main categories | Copy the global navigation; for marketplaces, note the "most popular" categories |
+| Social presence | Active strategy, not just an account existing |
+| Content types | Balance of text, photo and video; organisation; scannability; depth of detail pages |
+| Personalisation | Favourites, watch lists, profiles, saved baskets, messaging |
+| Community features | Message boards, posts, comments; editorial versus user-generated balance |
+| Competitive advantage | Top three differentiators, with concrete examples |
+| Heuristic grade | Grade A to F using the questions below |
+| Customer reviews | Recurring complaints from app stores, forums and social platforms |
+| General notes | |
+| Questions for the team | |
+| Analysis | Completed during the cross-row pass |
 
-## Heuristic evaluation rubric
+### Heuristic grading questions
 
-For column 15, use these questions to grade A–F:
-- Does the experience let the user accomplish their primary goal? Intuitive?
-- Are navigation, page/screen layouts, and visual design consistent?
-- Is it easy to find/search/browse the content or services?
-- Is feedback (errors, help, support) satisfactory?
+- Can users complete the primary goal, and is it intuitive?
+- Are navigation, layouts and visual design consistent?
+- Is content or service easy to find, search or browse?
+- Are error messages, help and support satisfactory?
 
-## Why a UX person should run this (not a generic researcher)
+## Why a UX specialist should run it
 
-- **Design enhancement** — UX spots nuance (a slightly better shade, a content message like "Saving…saved")
-- **Simplicity** — UX thinks in clicks-to-task; spots interaction-pattern improvements
-- **Cost** — same person researches and builds; faster
-- **Tag team** — UX lead can mentor a junior researcher
-- **UX innovation** — improving design is almost always possible
+- Notices design nuance: a better shade, a status message such as "Saving... saved".
+- Thinks in clicks to task, so spots interaction improvements.
+- Saves cost when the same person researches and builds.
+- Can mentor a junior researcher on the same matrix.
+- Assumes improvement is nearly always possible.
 
-## Output document
+## Output brief
 
-After filling the matrix, distill into a brief that:
-- Lists the top 3 differentiators *every* competitor has (table stakes)
-- Lists 1–2 differentiators NO competitor has (the blue-ocean opportunity)
-- Names the heuristic A–F leader and what they do that the others don't
-- Recommends 3 features to poach from competitors and 1 from a non-competitor
+After the matrix is filled, write a brief that:
+
+1. Lists the top three differentiators every competitor shares (table stakes).
+2. Lists one or two differentiators no competitor has (the open opportunity).
+3. Names the heuristic leader and what it does that the others do not.
+4. Recommends three features to adopt from competitors and one from a non-competing sector.
+
+## Sources
+
+- Levy, J. (2015) *UX Strategy: How to Devise Innovative Digital Products that People Want*, O'Reilly Media. Informed the competitor-matrix method and the output brief; the column set here is the engine's own working template.

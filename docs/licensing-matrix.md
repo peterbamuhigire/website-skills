@@ -37,7 +37,7 @@ contributing.
 | Agency narrative and pricing | `skills/agency-ops/agency-positioning/references/agency-narrative.md`, `skills/agency-ops/agency-positioning/references/pricing-rules.md` | **Closed — proprietary** | Not open. |
 | Proposal templates | external `proposal-skills` engine | **Closed — per referenced-engine licence** | Separate engine resolved from the global routing table; see that repo's LICENSE. |
 | Client project logs | `project-log/**` (in client projects) | **Client-owned** | Engine does not claim rights over client data. |
-| Book extractions | `skills/book-extractions/**` | **Fair use / internal only** | Not redistributed; references only. |
+| Book extractions | none (retired 2026-09-24) | **Not stored** | Book extractions and book summaries must never be stored in this repository. Skills cite books briefly and paraphrase methods as task-oriented references. |
 | Reports from CI | `reports/**` (in client projects) | **Client-owned** | Engine does not claim rights. |
 
 ## Licence texts

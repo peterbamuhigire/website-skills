@@ -74,6 +74,7 @@ If the encoder or visual inspection is unavailable, produce recommended settings
 | Graphic needs lossless edges/transparency | Use lossless-capable output | Artefacts and broken transparency |
 | Output exceeds budget | Reduce dimensions before excessive quality loss | Blurry large files |
 | Derivative fails decode or visual check | Reject and retain source | Broken production media |
+| Hero or other fluid image on mobile | Generate width-based candidates (`w` descriptors plus `sizes`), cap mobile candidates at about 2x density, and keep the chosen candidate inside the route's above-fold budget; use density descriptors only for fixed-size images such as logos | Sending 3x files over slow, metered connections; failing the route weight budget |
 
 ## Worked Example
 For a 2400-pixel hero photograph, generate bounded responsive widths, record WebP and AVIF byte sizes, decode each output, and retain the source. If the 1280-pixel candidate misses the project budget, reduce dimensions before forcing visibly damaged quality.

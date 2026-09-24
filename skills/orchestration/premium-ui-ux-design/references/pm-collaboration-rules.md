@@ -1,46 +1,28 @@
 # PM Collaboration Rules
-**Source:** Extracted from `fekeshazi-pm-ux-guide-extraction.md` (UX Studio).
-**Used by:** premium-ui-ux-design.
 
----
+Parent skill: [premium-ui-ux-design](../SKILL.md). Read when onboarding a client or product manager at kickoff, when a stakeholder asks for a design handoff with no further involvement, when reviewing a tutorial-heavy onboarding flow, or when auditing whether key actions are buried in menus.
 
-## Use this file when
+## Six working rules
 
-- Onboarding a client / PM at project kickoff
-- A stakeholder asks for a "design handoff with no further involvement"
-- Reviewing a tutorial-heavy onboarding flow
-- Auditing whether key actions are buried in menus
+1. **Design is how it works, not only how it looks.** Appearance is the visible part of a larger job. Agree at kickoff that reviews cover behaviour and comprehension as well as visuals.
+2. **Good design improves understanding.** A first-time visitor gives you only a few minutes to answer their questions. Do not rely on tutorials; few people watch them. Make the interface explain itself, and test with a first-time user to prove it.
+3. **Design is experimentation.** No one gets it right first time. Plan several prototype rounds and treat each as a cheap test.
+4. **Design is teamwork and the client takes part.** A client cannot brief once and return only for the finished design. Book regular feedback sessions, name a decision-maker who attends them, and record that attendance as a project dependency.
+5. **Design must be measured and tested.** Use a mix of user tests, fieldwork, split tests, interviews, remote and guerrilla tests, and five-second tests. Without evidence, decisions are guesses.
+6. **Design is a continuing process, not a project.** No design is finished. Plan design capacity alongside development capacity, on a standing cadence, and price the retainer accordingly.
 
-## The 5 + 1 rules
+## Do not hide important functions
 
-### 1. Design is not a pretty skin
-"Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs. The aesthetic outlook is the tip of the iceberg.
-
-### 2. Good design improves understanding
-**At first use, you have a maximum of 5–10 minutes** to give users answers. **Tutorials are futile attempts** — no one watches them. The interface itself must explain how it works.
-
-### 3. Design is about experimentation
-Jony Ive: 561 prototypes before the final Leica M camera. If world-leading designers iterate that hard, no one creates something perfect at once.
-
-### 4. Good design is teamwork — and the client must take part
-"Many people believe they make a deal with a designer and only meet again when handed a wonderful completed design. Bad news: it doesn't work like this." Designer needs constant feedback. Active client/PM participation is non-negotiable.
-
-### 5. Design must be measured and tested
-User tests, fieldwork, A/B tests, interviews, remote tests, guerrilla tests, 5-second tests, ghetto tests, grandma tests. "Without applying these, you whistle in the dark."
-
-### +1: Design is not a project — it is an ongoing process
-"There is no such thing as a finished design." Plan for continuous design alongside continuous dev. "A developer team without a design team is a few bricks short of a load."
-
-## The "don't hide important functions" rule
-
-> "Most people won't even give a try to the menu. They will just leave your app if they can't do what they want on the screen they are."
-
-**Rule:** Don't hide important functions in the menu. They have to be on the screen when the users need them. Surface key actions inline on the relevant entity (a "Setup Alert" button inside the service-detail modal, not buried under a profile-icon menu).
+Many visitors will not open a menu; they leave if they cannot act on the screen they are on. Key actions belong on the screen where the user needs them, attached to the item concerned. Illustration: place a "Set price alert" button inside a product detail panel on a Nairobi marketplace, not under a profile-icon menu.
 
 ## Audit checklist for an existing site
 
-- [ ] Can a first-time user accomplish the primary goal within 5 minutes without watching a tutorial?
-- [ ] Is the primary CTA visible above the fold on every relevant entity page?
-- [ ] Are no critical actions hidden behind a hamburger menu or top-right profile icon?
-- [ ] Does the team have a continuous design cadence (weekly meetings) or only project-bound design?
-- [ ] Is research data the tiebreaker when stakeholders disagree?
+- [ ] Can a first-time user complete the primary goal within five minutes without a tutorial?
+- [ ] Is the primary call to action visible without scrolling on every relevant page?
+- [ ] Are critical actions free of dependence on a hamburger menu or a top-right profile icon?
+- [ ] Does the team keep a continuous design cadence (for example weekly), not only project-bound design?
+- [ ] Does research data settle disagreements between stakeholders?
+
+## Sources
+
+- Fekeshazi, Z. (c. 2017) *Product Managers' Guide to UX Design*, UX Studio. Informed the collaboration rules and the hidden-function check; wording here is the engine's own.

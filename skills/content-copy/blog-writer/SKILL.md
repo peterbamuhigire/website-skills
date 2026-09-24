@@ -81,6 +81,10 @@ Recovery: repair the brief, source, or claim, then rerun source and editorial ch
 | Publishing handoff | SEO and implementation owners | Slug, metadata, internal links, image needs, update date, and unresolved gaps are explicit. |
 
 ## References
+- [plain-language-explainer-recipe.md](references/plain-language-explainer-recipe.md) — read when explaining a technical idea to a reader who decides but does not build.
+- [interview-led-authority-articles.md](references/interview-led-authority-articles.md) — read when turning an expert or client interview into an article with consent, fact-check and approval.
+- [traffic-channel-menu-and-evaluation.md](references/traffic-channel-menu-and-evaluation.md) — read when choosing and evaluating distribution channels for articles.
+- [authored-title-and-podcast-channel-playbook.md](references/authored-title-and-podcast-channel-playbook.md) — read when planning authored titles or a podcast channel.
 
 - [Legacy detailed guidance](references/legacy-guidance.md) for preserved end-to-end conventions.
 - [Ideation and research](references/ideation-and-research.md) for research planning after topic approval.

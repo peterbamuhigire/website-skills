@@ -1,10 +1,11 @@
 ---
 title: Advanced Visual Hierarchy — Layout, Composition & Direction
 description: The physics of how viewers scan and respond to layouts — apply when designing hero sections, cards, CTAs, and full page compositions
-source: Conrad Bohnke, "From Zero to UI/UX Hero" (2024) — Chapter: Visual Design
 ---
 
-# Advanced Visual Hierarchy — Layout, Composition & Direction
+# Advanced Visual Hierarchy: Layout, Composition and Direction
+
+Parent skill: [design-system](../SKILL.md). Read when designing hero sections, cards, calls to action and full-page compositions.
 
 These principles go deeper than "big = important." They explain the physics of how human eyes move across a canvas and how to use that to guide every viewer toward the desired action.
 
@@ -153,3 +154,7 @@ Neither is better — match the brand's character. But commit to one approach pe
 - Use vector (SVG) icons — scale without quality loss
 - Consistent style throughout (all filled OR all outlined — never mixed on the same page)
 - Complex icons must be paired with text labels
+
+## Sources
+
+- Bohnke, C. (2024) *From Zero to UI/UX Hero*, visual-design material. Informed the spacing, grid, composition and eye-direction rules; wording and organisation here are the engine's own. Treat numeric values (spacing steps, ratios, icon sizes) as starting points to test in the project design system.

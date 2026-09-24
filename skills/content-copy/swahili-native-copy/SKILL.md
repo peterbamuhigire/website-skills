@@ -90,6 +90,7 @@ Recovery: repair meaning, concord, or register findings, then rerun the native-c
 | Review findings | Author or approver | Each issue shows the original, correction, reason, and severity. |
 
 ## References
+- [service-hospitality-and-sector-lexicon.md](references/service-hospitality-and-sector-lexicon.md) — read when writing hospitality, food, booking, shopping or directions copy, or calibrating Tanzania versus Kenya usage.
 
 - [Noun classes and concord](references/noun-classes-and-concord.md)
 - [Verb system and politeness](references/verb-system-and-politeness.md)

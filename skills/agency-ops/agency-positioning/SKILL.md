@@ -155,6 +155,9 @@ A studio with three verified hospitality projects chooses owner-led lodges as it
 <!-- dual-compat-end -->
 
 ## References
+- [niche-fit-test-and-market-sizing.md](references/niche-fit-test-and-market-sizing.md) — read when testing a niche with the four-question test and regional or diaspora sizing.
+- [mrr-growth-stage-and-revenue-paths.md](references/mrr-growth-stage-and-revenue-paths.md) — read when setting the agency's revenue target, fee level and back-solved pipeline numbers.
+- [points-of-difference-and-pitch-lines.md](references/points-of-difference-and-pitch-lines.md) — read when writing points of difference, a category-of-one line or elevator pitches.
 
 - `references/agency-narrative.md` — the canonical paragraph, category definition, and
   commitments. Anchor file for everything else.

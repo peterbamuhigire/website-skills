@@ -89,6 +89,7 @@ Fallback: without network, deployment URL, or validation tools, produce the narr
 A legal service page lacks a verified aggregate rating. Implement `LegalService` facts the client can prove, omit rating properties, and record the missing evidence rather than fabricating stars.
 
 ## References
+- [niche-review-site-launch-checklist.md](references/niche-review-site-launch-checklist.md) — read when launching a niche review or comparison site.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 
@@ -188,18 +189,18 @@ change so they cannot become stale or contradict the HTML site.
 
 ## Book-informed editorial lens
 
-Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+Use the [usage, clarity and register review](../../content-copy/content-writing/references/usage-clarity-and-register-review.md)
 for outside-in journeys, intent/resource maps, topic value, distinctive voice,
 native distribution, and evidence/approval handoffs. Treat the supplied books
 as historical or editorial inputs, not current platform authority.
 
 For the qualified Meltwater/LinkedIn evidence on expert-led, structured B2B
-content, load [the 2026-09-14 AI-search implementation synthesis](../../../book-extractions/meltwater-ai-search-implementation-synthesis-2026-09-14.md).
+content, load [the AI-search implementation checklist](references/ai-search-implementation-checklist.md).
 Use it to shape content and measurement hypotheses only; it does not add a
 Google ranking factor or guarantee citation, traffic, or conversion.
 
 ## Preserved Domain References
-- `../../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md` — qualified book-informed planning lens for response modes, entity clarity, outcome separation, and reversible experiments.
+- `../google-ai-search/references/ai-search-response-mode-planning.md` — qualified book-informed planning lens for response modes, entity clarity, outcome separation, and reversible experiments.
 - `references/ai-seo-optimization.md` — layered SEO, AEO, GEO, entity-presence,
   crawler-governance, SXO, and cross-platform measurement doctrine.
 - `references/premium-seo-package.md` — the default SEO package delivered on every Growth/Authority engagement. Strategy-first SEO, intent map, metadata, schema, internal linking, GEO/AI visibility, local SEO, measurement.

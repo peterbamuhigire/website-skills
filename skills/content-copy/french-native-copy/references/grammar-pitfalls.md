@@ -146,7 +146,7 @@ Beyond §8: subjunctive after expressions of **emotion** (`être ravi/désolé q
 
 ## 18. Articulateurs logiques — connectors with the right register
 
-Choosing the connector that matches register and construction is the mark of advanced French. Quick map (full tables in the extraction):
+Choosing the connector that matches register and construction is the mark of advanced French. Quick map (full tables in [advanced grammar and connector tables](advanced-grammar-and-connector-tables.md)):
 
 - **Cause**: `grâce à` + noun (positive outcome), `à cause de` + noun (negative), **`en raison de`** + noun (neutral/institutional — prefer this in sober copy), `car` (written, never sentence-initial), `comme` (always initial), `puisque` (cause already known). Two causes share one conjunction via `que`: `Comme la demande est forte et que les délais se réduisent…`.
 - **Consequence**: `c'est pourquoi`, `par conséquent` (admin), `si bien que` (+ indicative), and `Aussi` / `Ainsi` in initial position trigger **inversion**: `Aussi mettons-nous un conseiller à votre service.`
@@ -177,4 +177,4 @@ Choosing the connector that matches register and construction is the mark of adv
 
 ## Source
 
-Article, agreement, negation, pronoun, relative-pronoun, and verb-construction rules distilled from Sylvie Poisson-Quinton, *French Grammar in 44 Lessons* (Level A1), and *50 Most Used French Verbs* (French Hacking); §10–§17 and the smell-test from Annie Heminway, *Practice Makes Perfect — Complete French Grammar* (McGraw-Hill), and Boulares & Frérot, *Grammaire progressive du français — Niveau avancé* (CLE). See `book-extractions/french-language-books-extraction-2026.md`.
+Article, agreement, negation, pronoun, relative-pronoun, and verb-construction rules distilled from Sylvie Poisson-Quinton, *French Grammar in 44 Lessons* (Level A1), and *50 Most Used French Verbs* (French Hacking); §10–§17 and the smell-test from Annie Heminway, *Practice Makes Perfect — Complete French Grammar* (McGraw-Hill), and Boulares & Frérot, *Grammaire progressive du français — Niveau avancé* (CLE). Extended subjunctive and verb lists, connector tables and register pairs: [advanced grammar and connector tables](advanced-grammar-and-connector-tables.md).

@@ -86,6 +86,9 @@ Without research, analytics, or workshop access, return the narrowest qualified 
 Analytics shows mobile visitors abandon at fee questions. Map that moment, cite the event evidence, assign transparent pricing content, and give page-builder a measurable intervention rather than adding a generic FAQ.
 
 ## References
+- [validation-research-method-playbook.md](references/validation-research-method-playbook.md) — read when choosing a validation research method.
+- [persona-discipline-and-motivation-rules.md](references/persona-discipline-and-motivation-rules.md) — read when writing personas and motivation rules without bias.
+- [innovation-sprint-dvfs-reframe-and-assumption-testing.md](references/innovation-sprint-dvfs-reframe-and-assumption-testing.md) — read when running an innovation sprint, reframing or testing assumptions.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 - [Narrative information architecture and audience empathy](../website-builder/references/narrative-information-architecture-and-empathy.md)

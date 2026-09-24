@@ -216,7 +216,7 @@ Every interactive element (button, link, card, form field, nav item) must design
 ## IMAGES
 
 **Fundamental facts:**
-- Brain processes images **60,000× faster than text** — images set mood before copy is read
+- Images are read before copy and set the mood for it (do not quote the widely repeated "60,000 times faster" figure; it has no reliable source)
 - 1/10 second is enough to form a general perception of any visual scene
 - Every image needs a **clear focal point** that survives cropping at any aspect ratio
 

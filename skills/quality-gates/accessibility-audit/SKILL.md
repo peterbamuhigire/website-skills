@@ -82,6 +82,7 @@ If rendering, a browser, a screen reader, or a device is unavailable, mark the a
 If the menu traps focus at 200% zoom, record the route, viewport, keystrokes, criterion, and blocker severity; do not merely write 'navigation inaccessible'.
 
 ## References
+- [cognitive-affordance-and-memory-review.md](references/cognitive-affordance-and-memory-review.md) — read when reviewing cognitive affordance (presence, visibility, recognisability, intelligibility) and memory load.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 

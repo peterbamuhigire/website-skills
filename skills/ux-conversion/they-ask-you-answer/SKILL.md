@@ -83,6 +83,7 @@ When interviews, call notes, search evidence, case proof, or publishing capacity
 If proposal calls repeatedly ask why a premium site costs more, trace the question to call notes, build a comparison article with verified scope and trade-offs, assign it before discovery follow-up, and measure qualified follow-through. Do not invent a price range or promise close-rate improvement.
 
 ## References
+- [sent-items-faq-sop-mining-sprint.md](references/sent-items-faq-sop-mining-sprint.md) — read when building the buyer-question register from sent emails, chats, FAQs and SOPs.
 - Use `references/buyer-question-research-method.md` when turning buyer questions into strategy, SEO, trust, and content inputs.
 - Use `references/big-5-article-templates.md` and `references/assignment-selling-templates.md` for Sheridan's Big 5 article structures and the Assignment Selling sales-cycle templates.
 - Use `references/content-inc-audience-model.md` (Pulizzi) when building the agency's own audience-first publishing strategy: sweet spot, content tilt, the base, MVA, the 18-month runway, monetisation paths, the 7-step Content Inc. model.

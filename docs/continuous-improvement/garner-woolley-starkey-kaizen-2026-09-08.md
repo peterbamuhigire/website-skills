@@ -1,5 +1,8 @@
 # Website skills kaizen: journey, intent, and voice
 
+> **Historical record.** The `book-extractions/` folder named below was removed on 2026-09-24 under the owner's copyright rule; its capabilities now live in skill references (see the capability preservation map in the 2026-09-24 Kaizen record `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
+
+
 Date: 2026-09-08  
 Owner: website-skills maintainer  
 Re-audit: 2026-12-08  
@@ -24,7 +27,7 @@ native distribution, and approval handoffs.
 ## Research and evidence disposition
 
 The full independent synthesis is in
-[book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md](../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md).
+the Garner, Woolley and Starkey synthesis (retired; now `skills/content-copy/content-writing/references/usage-clarity-and-register-review.md`).
 The supplied files were hash-checked and treated as tier-5 concept inputs. The
 local files are not evidence for current platform behaviour.
 

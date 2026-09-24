@@ -80,6 +80,7 @@ If data, identity resolution, consent evidence, or query capability is unavailab
 Define `order_placed` from a confirmed order identifier rather than a thank-you page view, reconcile event revenue to the order system by day and currency, and report checkout completion with bot/internal traffic exclusions. If reconciliation is unavailable, mark revenue unassessed.
 
 ## References
+- [store-mode-diagnosis-and-merchandising-signals.md](references/store-mode-diagnosis-and-merchandising-signals.md) — read when deciding acquisition versus loyalty mode, revenue per visitor, zero-result searches and stock against sales.
 - Use sibling reference `../ecommerce/references/premium-ecommerce-growth-system.md`
   when defining ecommerce funnel events, channel segmentation, abandoned-cart metrics,
   checkout completion, repeat purchase, or revenue optimization dashboards.

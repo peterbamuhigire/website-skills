@@ -79,11 +79,16 @@ If analytics, browser states, device rendering, authentication, or research evid
 | Heuristic issue without data | Label heuristic and propose validation | False impact certainty |
 | Accessibility, deception, or broken journey blocks use | Escalate before experiments | Optimising harm or failure |
 | No inspectable target | Stop and request evidence | Fabricated audit |
+| Traffic arrives from a marketing campaign | Check message match, proof above the fold and the conversion event against the channel-to-site handoff package | Blaming the page for a brief or tracking fault |
 
 ## Worked Example
 On a mobile pricing page, cite the exact viewport and state where total cost appears only after CTA activation, connect it to measured exits only if valid analytics exist, propose an upfront-cost treatment, and define completion plus refund/contact guardrails. Without analytics, call it a heuristic finding.
 
 ## References
+- [quick-comprehension-tests-and-user-testing.md](references/quick-comprehension-tests-and-user-testing.md) — read when running five-second, point-to-it and moderated tests.
+- [design-critique-scorecard.md](references/design-critique-scorecard.md) — read when a stakeholder asks for a judgement of a page, or preparing a pre-meeting teardown.
+- [funnel-and-follow-up-test-backlog.md](references/funnel-and-follow-up-test-backlog.md) — read when building a funnel and follow-up test backlog.
+- [visitor-psychology-and-cultural-fit-review.md](references/visitor-psychology-and-cultural-fit-review.md) — read when reviewing visitor psychology and cultural fit.
 - Use `references/evidence-led-conversion-system.md` for premium CRO, ecommerce CRO,
   checkout audits, conversion backlog creation, or any audit where analytics and
   business impact matter.

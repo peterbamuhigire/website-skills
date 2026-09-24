@@ -4,7 +4,7 @@ Use this reference for final copy QA on premium commercial writing.
 
 ## Source Boundary
 
-This file is a distilled operating standard. It uses source books and existing repository extractions as high-level inspiration only. Do not copy source-book text, long paraphrases, examples, or quotes into client work or repository files.
+This file is a distilled operating standard. It uses source books as high-level inspiration only; book extractions are never stored in this repository. Do not copy source-book text, long paraphrases, examples, or quotes into client work or repository files.
 
 ## Premium Writing Standard
 

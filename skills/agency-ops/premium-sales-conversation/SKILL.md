@@ -111,6 +111,10 @@ A school requests "a modern website" before term. Diagnose enrolment leakage, co
 <!-- dual-compat-end -->
 
 ## References
+- [sales-process-and-takeaway-selling.md](references/sales-process-and-takeaway-selling.md) — read when running the premium sales process and takeaway selling.
+- [price-presentation-and-choice-close.md](references/price-presentation-and-choice-close.md) — read when presenting price, closing with a choice of options, or answering "send me something".
+- [pre-meeting-research-and-review-meeting.md](references/pre-meeting-research-and-review-meeting.md) — read when preparing the research pack and running the review meeting, including multi-stakeholder pitches.
+- [objection-root-cause-and-lost-deal-debrief.md](references/objection-root-cause-and-lost-deal-debrief.md) — read when diagnosing recurring objections or debriefing lost deals.
 
 - `references/qualification-and-discovery-questions.md` — diagnostic question bank and fit scoring.
 - `references/premium-objection-handling.md` — script-level responses to price, timeline, scope, technology, and trust objections.

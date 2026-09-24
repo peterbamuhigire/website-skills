@@ -68,6 +68,7 @@ return a qualified route/content specification and list the blocked checks.
 | Entity fact and page content are verified | Use narrow accurate metadata/schema | Misleading search signals |
 | Booking or reservation integration is absent | Use a truthful enquiry/human fallback | Broken conversion promise |
 | Render or accessibility evidence is unavailable | Mark release `NOT_ASSESSED` | Polished but unusable site |
+| A layered or parallax "journey" effect is requested | Use it only on a story page, never on booking, rates or contact pages; animate transform and opacity only behind a reduced-motion guard; ship a static version with the same content and booking action; no auto-scroll or scroll-jacking; verify the page still passes the performance gate | Motion sickness, lost bookings and slow pages on mobile data |
 
 ## Quality Standards
 
@@ -104,8 +105,9 @@ of guarantees:
   truthful refreshes. Backlinks are earned through useful partnerships and
   citations; domain authority is not a deliverable promise.
 - **AEO:** answer the real question near the relevant heading, use concise
-  summaries when useful, FAQs and HowTo markup only when the page genuinely
-  contains the content and the current consumer supports it. “40–60 words” is
+  summaries when useful, and visible FAQs where guests ask the questions. Google
+  no longer shows FAQ (since 7 May 2026) or HowTo rich results; add that markup
+  only for a documented non-Google consumer. “40–60 words” is
   a copy experiment, not a universal featured-snippet rule.
 - **GEO:** make pages easy to quote accurately: named entity, location, dates,
   facilities, policies, prices/availability only when current, source/proof,

@@ -1,5 +1,8 @@
 # MEMORY.md - Key Learnings & Patterns
 
+> **Historical record.** The `book-extractions/` folder named below was removed on 2026-09-24 under the owner's copyright rule; its capabilities now live in skill references (see the capability preservation map in the 2026-09-24 Kaizen record `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
+
+
 ## Canonical Digital Research Engine Path (2026-08-05)
 
 The machine-wide digital research engine is `C:\wamp64\www\digital-research-engine`.
@@ -406,5 +409,5 @@ Each extraction includes "Use this for", "High-signal insights" (10 each), and a
 ### Key patterns reinforced
 
 1. **Two skill engines, one studio.** Parent `~/.claude/skills` holds general-purpose + app design skills. This `website-skills` repo holds website-delivery-specific skills. Cross-reference is explicit.
-2. **House style for book intake.** Extract → save raw notes in `_book_extracts/_notes/` → bind notes as skill `references/*.md` → write house-format extraction doc to `skills/book-extractions/` → append pointer section to relevant SKILL.md.
+2. **House style for book intake (superseded 2026-09-24).** Read the book outside the repository → write a task-oriented skill `references/*.md` file in original words with a brief citation → link it from the relevant SKILL.md. Extraction documents and raw notes are never stored in the repository.
 3. **Subagent permission gotcha.** Spawned subagents can hit Write/Bash permission denials when targeting `C:\Users\Peter\.claude\` paths even when the directory exists. Workaround: pre-create directories, and have agents return content inline if writes fail.

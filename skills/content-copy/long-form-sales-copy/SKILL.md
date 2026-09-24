@@ -40,7 +40,7 @@ Adapt Kennedy-style sales-letter discipline and Brunson-style funnel sequencing 
 1. Validate the offer, buyer, traffic temperature, regulatory boundary, and authority for every term.
 2. Stop if the offer cannot be fulfilled as described or the central promise lacks support.
 3. Map features to supported benefits, identify objections, and test the hidden-benefit hypothesis against customer evidence.
-4. Choose the page script by asset: Kennedy-style sales letter, Star-Story-Solution VSL, webinar pitch, order-page close, or post-purchase confirmation.
+4. Choose the page script by asset: long-form sales letter, story-led video sales script, webinar pitch, order-page close, or post-purchase confirmation.
 5. Draft the argument: orientation, problem, admission or constraint, promise, mechanism, proof, offer, risk reduction, action, and FAQ.
 6. Build a truthful value presentation using actual price and terms; never assign invented component values.
 7. Repeat CTAs only at genuine decision points and match each to traffic awareness.
@@ -81,6 +81,9 @@ Recovery: repair the offer, evidence, or compliance gap, then rerun the claim an
 | Scanner and objection review | CRO owner | Headings communicate the offer and material objections are addressed. |
 
 ## References
+- [sales-letter-build-procedure.md](references/sales-letter-build-procedure.md) — read when building a long-form sales letter or page step by step.
+- [funnel-scripts-and-sequences.md](references/funnel-scripts-and-sequences.md) — read when writing funnel scripts, webinar closes, one-time offers or email sequences.
+- [offer-propositions-and-price-framing.md](references/offer-propositions-and-price-framing.md) — read when building the five-proposition stack and copy-level price framing.
 
 - [Offer and landing-page writing](../premium-commercial-writing/references/offer-and-landing-page-writing.md) for premium restraint and proof.
 - [Professional writing quality gate](../premium-commercial-writing/references/professional-writing-quality-gate.md) for final review.

@@ -4,7 +4,14 @@
       "staticDistDir": "./dist",
       "numberOfRuns": 3,
       "settings": {
-        "preset": "desktop",
+        "formFactor": "mobile",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
         "throttlingMethod": "simulate",
         "throttling": {
           "rttMs": 300,
@@ -14,8 +21,7 @@
           "downloadThroughputKbps": 0,
           "uploadThroughputKbps": 0
         },
-        "emulatedFormFactor": "mobile",
-        "_comment_throttling": "Simulated 3G network (1.6 Mbps down, 300ms RTT) to reflect African mobile-market reality; see performance-budgets.json and deploy/references/performance-gate.md"
+        "_comment_profile": "Blocking lab profile = low-end STRESS profile: WebPageTest '3G' preset network values (1.6 Mbps down, 300 ms RTT) with 4x CPU slowdown and Lighthouse's own mobile screen emulation (moto g power 2022, 412x823 @1.75). It is deliberately harsher than Lighthouse's default mobile throttling (1.6 Mbps, 150 ms RTT) and far slower than measured median mobile in Kenya. It is NOT a median. Sources and review dates: docs/source-registers/performance-currentness-2026-09-23.json; rationale: skills/launch-ops/deploy/references/africa-calibration.md"
       },
       "url": [
         "http://localhost:4321/",
@@ -28,28 +34,112 @@
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
-        "categories:performance": ["error", { "minScore": 0.95 }],
-        "categories:accessibility": ["error", { "minScore": 0.95 }],
-        "categories:best-practices": ["error", { "minScore": 0.95 }],
-        "categories:seo": ["error", { "minScore": 1.0 }],
-        "largest-contentful-paint": ["error", { "maxNumericValue": 2000 }],
-        "interaction-to-next-paint": ["error", { "maxNumericValue": 200 }],
-        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
-        "total-blocking-time": ["error", { "maxNumericValue": 200 }],
-        "first-contentful-paint": ["warn", { "maxNumericValue": 1500 }],
-        "speed-index": ["warn", { "maxNumericValue": 3000 }],
-        "uses-responsive-images": "error",
-        "uses-text-compression": "error",
-        "uses-rel-preconnect": "warn",
-        "font-display": "error",
-        "unused-javascript": ["warn", { "maxNumericValue": 20000 }],
+        "categories:performance": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ],
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ],
+        "categories:best-practices": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ],
+        "categories:seo": [
+          "error",
+          {
+            "minScore": 1.0
+          }
+        ],
+        "largest-contentful-paint": [
+          "error",
+          {
+            "maxNumericValue": 2000
+          }
+        ],
+        "total-blocking-time": [
+          "error",
+          {
+            "maxNumericValue": 200
+          }
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.1
+          }
+        ],
+        "first-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 1500
+          }
+        ],
+        "speed-index": [
+          "warn",
+          {
+            "maxNumericValue": 3000
+          }
+        ],
+        "total-byte-weight": [
+          "error",
+          {
+            "maxNumericValue": 358400
+          }
+        ],
+        "unused-javascript": [
+          "warn",
+          {
+            "maxNumericValue": 20000
+          }
+        ],
         "unminified-javascript": "error",
         "unminified-css": "error",
-        "modern-image-formats": "error",
-        "efficient-animated-content": "warn",
-        "preload-lcp-image": "warn",
-        "third-party-summary": ["warn", { "maxLength": 0 }]
-      }
+        "image-delivery-insight": "error",
+        "document-latency-insight": "error",
+        "font-display-insight": "error",
+        "render-blocking-insight": "warn",
+        "lcp-discovery-insight": "warn",
+        "network-dependency-tree-insight": "warn",
+        "third-parties-insight": "warn",
+        "legacy-javascript-insight": "warn",
+        "duplicated-javascript-insight": "warn",
+        "uses-responsive-images": "off",
+        "modern-image-formats": "off",
+        "efficient-animated-content": "off",
+        "uses-text-compression": "off",
+        "font-display": "off",
+        "uses-rel-preconnect": "off",
+        "uses-rel-preload": "off",
+        "offscreen-images": "off",
+        "third-party-summary": "off",
+        "third-party-facades": "off",
+        "prioritize-lcp-image": "off",
+        "render-blocking-resources": "off",
+        "legacy-javascript": "off",
+        "duplicated-javascript": "off",
+        "viewport-insight": "error",
+        "dom-size-insight": "warn",
+        "viewport": "off",
+        "font-size": "off",
+        "dom-size": "off",
+        "lcp-lazy-loaded": "off",
+        "lcp-phases-insight": "off",
+        "interaction-to-next-paint-insight": "off",
+        "no-document-write": "off",
+        "uses-optimized-images": "off",
+        "uses-passive-event-listeners": "off",
+        "first-meaningful-paint": "off",
+        "uses-long-cache-ttl": "off"
+      },
+      "_comment_assertions": "Assertions verified 2026-09-24 against real LHRs from Lighthouse 12.6.1 (bundled by @lhci/cli 0.15.1) and Lighthouse 13.5.0 with @lhci/cli assert: legacy audit ids that Lighthouse 13 removed are switched off and replaced by their performance-insight equivalents, so the gate works on both. INP is deliberately not asserted: Lighthouse navigation runs cannot measure it (enforce INP from field/RUM at p75)."
     },
     "upload": {
       "target": "filesystem",

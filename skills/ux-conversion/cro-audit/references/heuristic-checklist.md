@@ -69,7 +69,7 @@ Section score: __ / 9 pass
 | 4.1 | Testimonials are present on the primary conversion pages (home, services, pricing, checkout) | |
 | 4.2 | Testimonials include full names, photos, and specific outcomes or numbers, not vague praise | |
 | 4.3 | At least some testimonials are from people who demographically match the target visitor (same role, same problem, same context) | |
-| 4.4 | Testimonials are formatted to appear like authentic social media posts rather than polished marketing design (Facebook-style formatting beats standard testimonial design by +296%) | |
+| 4.4 | Testimonials are genuine, attributed and consented; a social-post format is used only for a real, linked post, never to disguise an ordinary quote | |
 | 4.5 | Video testimonials are present on at least the primary sales page (video testimonials double conversion vs. text alone) | |
 | 4.6 | The testimonials section is headed by a challenge headline ("Need More Proof?" or equivalent) that pre-empts scepticism | |
 | 4.7 | Social proof is placed at the highest-anxiety point in the conversion flow — at or near the order form, booking form, or primary CTA | |
@@ -148,7 +148,7 @@ Section score: __ / 10 pass
 | 8.2 | Primary CTAs fall within the natural thumb zone (centre to bottom of screen on a 375px device) | |
 | 8.3 | Forms display as single-column on mobile with no horizontal scrolling | |
 | 8.4 | Headline and primary CTA are visible above the fold on a 375px screen without scrolling | |
-| 8.5 | Page load time is under 3 seconds on a simulated mobile connection (Chrome DevTools: Slow 3G simulation) | |
+| 8.5 | Page passes the engine performance gate on its labelled stress profile, and field LCP is at or under 2.5 s at p75 where field data exists (see deploy/references/performance-gate.md) | |
 | 8.6 | There is no autoplay video or audio on any mobile view | |
 | 8.7 | "Tap to call" links are present on contact pages and in the header for service businesses | |
 | 8.8 | The mobile conversion sequence has been tested end-to-end: landing → scroll → form → submit → confirmation | |

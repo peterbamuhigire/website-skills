@@ -2,7 +2,7 @@
   "register_id": "website-search-ai-currentness-2026-09-13",
   "scope": "Search, answer-engine, generative-engine, entity-presence, crawler-governance, structured-data, freshness, and measurement rules used by website-skills.",
   "access_date": "2026-09-13",
-  "verification_date": "2026-09-13",
+  "verification_date": "2026-09-23",
   "owner": "website-skills maintainer",
   "review_date": "2026-12-12",
   "archive_policy": "Existing archives are recorded where found. Creating new third-party archives was outside this operation; missing archive evidence is NOT_ASSESSED.",
@@ -13,13 +13,13 @@
       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
       "publisher": "Google Search Central",
       "source_tier": 1,
-      "publication_or_version_date": "2026-05-15",
-      "access_date": "2026-09-05",
+      "publication_or_version_date": "2026-07-10",
+      "access_date": "2026-09-23",
       "freshness_class": "time-sensitive",
       "support_status": "verified",
       "archive_url": "https://web.archive.org/web/20260903122209/https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
       "confidence": "high",
-      "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services."
+      "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services. Re-checked 2026-09-23 via the Digital Research currentness register (CW-07): the guide, updated 2026-07-10, states llms.txt/AI text files, special schema, chunking and writing specially for AI are unnecessary, and structured data is not required for generative AI search."
     },
     {
       "source_id": "GOOGLE_SEARCH_ESSENTIALS_2026",
@@ -132,12 +132,12 @@
       "publisher": "Google Search Central",
       "source_tier": 1,
       "publication_or_version_date": "2026-05-08",
-      "access_date": "2026-09-05",
+      "access_date": "2026-09-23",
       "freshness_class": "time-sensitive",
       "support_status": "verified",
       "archive_url": "https://web.archive.org/web/20260831080332/https://developers.google.com/search/updates",
       "confidence": "high",
-      "scope_and_limit": "Authoritative for Google rich-result support; Schema.org vocabulary or other consumers may differ."
+      "scope_and_limit": "Authoritative for Google rich-result support; Schema.org vocabulary or other consumers may differ. Re-checked 2026-09-23 (currentness register CW-09): FAQ rich results stopped showing on 7 May 2026; FAQ documentation later removed."
     },
     {
       "source_id": "GOOGLE_SITEMAP_PING_2023",
@@ -339,8 +339,15 @@
     {
       "claim_id": "SAI-001",
       "claim": "For Google Search, AEO and GEO are third-party labels and generative AI optimisation remains grounded in SEO and core Search systems.",
-      "source_ids": ["GOOGLE_AI_GUIDE_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Direct first-party statement", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GOOGLE_AI_GUIDE_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Direct first-party statement",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -348,8 +355,15 @@
     {
       "claim_id": "SAI-002",
       "claim": "Google Search does not require llms.txt, special AI markup, artificial chunking, or AI-only writing for generative Search visibility.",
-      "source_ids": ["GOOGLE_AI_GUIDE_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Google mythbusting section", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GOOGLE_AI_GUIDE_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Google mythbusting section",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -357,8 +371,16 @@
     {
       "claim_id": "SAI-003",
       "claim": "Google provides a dedicated Search Console generative AI impressions report and a separate property inclusion control worldwide as of 31 August 2026.",
-      "source_ids": ["GOOGLE_GENAI_REPORT_2026", "GOOGLE_GENAI_CONTROL_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Search Console Help pages", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GOOGLE_GENAI_REPORT_2026",
+        "GOOGLE_GENAI_CONTROL_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Search Console Help pages",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -366,8 +388,15 @@
     {
       "claim_id": "SAI-004",
       "claim": "Google deprecated HowTo rich results and stopped showing FAQ rich results from 7 May 2026.",
-      "source_ids": ["GOOGLE_SCHEMA_CHANGES"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Google documentation change log and linked historical announcement", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GOOGLE_SCHEMA_CHANGES"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Google documentation change log and linked historical announcement",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -375,8 +404,15 @@
     {
       "claim_id": "SAI-005",
       "claim": "Bing AI Performance currently documents citations, average cited pages, sampled grounding queries, page-level activity, and trends, none of which is a ranking or authority metric.",
-      "source_ids": ["BING_AI_PERFORMANCE_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Microsoft public-preview announcement", "review_date": "2026-09-05"},
+      "source_ids": [
+        "BING_AI_PERFORMANCE_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Microsoft public-preview announcement",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -384,8 +420,16 @@
     {
       "claim_id": "SAI-006",
       "claim": "OpenAI separates OAI-SearchBot search inclusion from GPTBot potential training, while ChatGPT-User is user-triggered and is not the search-inclusion control.",
-      "source_ids": ["OPENAI_BOTS_2026", "OPENAI_PUBLISHER_FAQ_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current OpenAI crawler and publisher documentation", "review_date": "2026-09-05"},
+      "source_ids": [
+        "OPENAI_BOTS_2026",
+        "OPENAI_PUBLISHER_FAQ_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current OpenAI crawler and publisher documentation",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-05",
       "confidence": "high"
@@ -393,8 +437,15 @@
     {
       "claim_id": "SAI-007",
       "claim": "Google's unauthenticated sitemap ping endpoint is deprecated; use sitemaps through robots.txt, Search Console, or its API and use truthful lastmod values.",
-      "source_ids": ["GOOGLE_SITEMAP_PING_2023"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Google deprecation announcement", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GOOGLE_SITEMAP_PING_2023"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Google deprecation announcement",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "stable",
       "review_date": "2027-09-05",
       "confidence": "high"
@@ -402,8 +453,16 @@
     {
       "claim_id": "SAI-008",
       "claim": "AI citation selection, contribution to an answer, fidelity, referral, and business outcome are separate outcomes; current GEO evidence does not establish a stable universal cross-platform ranking recipe.",
-      "source_ids": ["GEO_ABSORPTION_2026", "GEO_SURVEY_2026"],
-      "support_review": {"state": "synthesis", "reviewer": "Codex orchestrator", "basis": "Qualified synthesis of two original preprints", "review_date": "2026-09-05"},
+      "source_ids": [
+        "GEO_ABSORPTION_2026",
+        "GEO_SURVEY_2026"
+      ],
+      "support_review": {
+        "state": "synthesis",
+        "reviewer": "Codex orchestrator",
+        "basis": "Qualified synthesis of two original preprints",
+        "review_date": "2026-09-05"
+      },
       "freshness_class": "partial",
       "review_date": "2026-12-05",
       "confidence": "medium"
@@ -411,8 +470,15 @@
     {
       "claim_id": "SAI-009",
       "claim": "Google publishes no exact featured-snippet minimum length and does not let site owners mark a page for featured-snippet inclusion.",
-      "source_ids": ["GOOGLE_FEATURED_SNIPPETS_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google featured-snippet documentation", "review_date": "2026-09-13"},
+      "source_ids": [
+        "GOOGLE_FEATURED_SNIPPETS_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Google featured-snippet documentation",
+        "review_date": "2026-09-13"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-12",
       "confidence": "high"
@@ -420,8 +486,15 @@
     {
       "claim_id": "SAI-010",
       "claim": "Google structured data can enable eligibility for rich results but does not guarantee display; it must represent visible, accurate page content.",
-      "source_ids": ["GOOGLE_STRUCTURED_DATA_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google structured-data guidelines", "review_date": "2026-09-13"},
+      "source_ids": [
+        "GOOGLE_STRUCTURED_DATA_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Google structured-data guidelines",
+        "review_date": "2026-09-13"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-12",
       "confidence": "high"
@@ -429,8 +502,15 @@
     {
       "claim_id": "SAI-011",
       "claim": "Google uses multiple page-experience signals including Core Web Vitals, but good scores do not guarantee top ranking and page experience is not a single signal.",
-      "source_ids": ["GOOGLE_PAGE_EXPERIENCE_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google page-experience documentation", "review_date": "2026-09-13"},
+      "source_ids": [
+        "GOOGLE_PAGE_EXPERIENCE_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Google page-experience documentation",
+        "review_date": "2026-09-13"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-12",
       "confidence": "high"
@@ -438,8 +518,15 @@
     {
       "claim_id": "SAI-012",
       "claim": "Google uses links as a signal for relevance and discovery; its guidance does not define a universal backlink count or domain-authority score.",
-      "source_ids": ["GOOGLE_LINKS_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Google link best-practices documentation; the absence of a universal target is a bounded inference from the guidance", "review_date": "2026-09-13"},
+      "source_ids": [
+        "GOOGLE_LINKS_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Google link best-practices documentation; the absence of a universal target is a bounded inference from the guidance",
+        "review_date": "2026-09-13"
+      },
       "freshness_class": "partial",
       "review_date": "2026-12-12",
       "confidence": "medium"
@@ -447,8 +534,15 @@
     {
       "claim_id": "SAI-013",
       "claim": "Perplexity documents separate PerplexityBot search indexing from Perplexity-User user-triggered fetching; current bot and IP details must be rechecked at implementation time.",
-      "source_ids": ["PERPLEXITY_CRAWLERS_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Current Perplexity crawler documentation", "review_date": "2026-09-13"},
+      "source_ids": [
+        "PERPLEXITY_CRAWLERS_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Current Perplexity crawler documentation",
+        "review_date": "2026-09-13"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-12",
       "confidence": "high"
@@ -456,8 +550,16 @@
     {
       "claim_id": "SAI-014",
       "claim": "In Meltwater's defined 2026 B2B sample, LinkedIn was reported as a leading AI-citation source; the result is not a universal ranking of all AI search or all markets.",
-      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Matched report and supporting LinkedIn summary; observational vendor study, with limits stated in the claim", "review_date": "2026-09-14"},
+      "source_ids": [
+        "MELTWATER_LINKEDIN_REPORT_2026",
+        "LINKEDIN_MELTWATER_TAKEAWAYS_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Matched report and supporting LinkedIn summary; observational vendor study, with limits stated in the claim",
+        "review_date": "2026-09-14"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-14",
       "confidence": "medium"
@@ -465,8 +567,16 @@
     {
       "claim_id": "SAI-015",
       "claim": "The study reported more citations from individual LinkedIn member profiles than Company Pages within its measured sample; use this as a distribution hypothesis, not a guaranteed platform preference.",
-      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
-      "support_review": {"state": "supported", "reviewer": "Codex orchestrator", "basis": "Reported 75/25 profile/page split in the named study sample, with limits stated in the claim", "review_date": "2026-09-14"},
+      "source_ids": [
+        "MELTWATER_LINKEDIN_REPORT_2026",
+        "LINKEDIN_MELTWATER_TAKEAWAYS_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "Codex orchestrator",
+        "basis": "Reported 75/25 profile/page split in the named study sample, with limits stated in the claim",
+        "review_date": "2026-09-14"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-14",
       "confidence": "medium"
@@ -474,8 +584,15 @@
     {
       "claim_id": "SAI-016",
       "claim": "Clear headings, lists, named entities, quantitative detail, comparisons, and decision guidance were common among highly cited LinkedIn examples in the study; they are reader and extraction hypotheses, not ranking factors.",
-      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026"],
-      "support_review": {"state": "synthesis", "reviewer": "Codex orchestrator", "basis": "Structural prevalence analysis of top cited examples, converted into a qualified implementation hypothesis", "review_date": "2026-09-14"},
+      "source_ids": [
+        "MELTWATER_LINKEDIN_REPORT_2026"
+      ],
+      "support_review": {
+        "state": "synthesis",
+        "reviewer": "Codex orchestrator",
+        "basis": "Structural prevalence analysis of top cited examples, converted into a qualified implementation hypothesis",
+        "review_date": "2026-09-14"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-14",
       "confidence": "medium"
@@ -483,11 +600,51 @@
     {
       "claim_id": "SAI-017",
       "claim": "Original and recently published content was common among cited LinkedIn examples, but the study does not prove that freshness or posting frequency causes citation growth.",
-      "source_ids": ["MELTWATER_LINKEDIN_REPORT_2026", "LINKEDIN_MELTWATER_TAKEAWAYS_2026"],
-      "support_review": {"state": "inference", "reviewer": "Codex orchestrator", "basis": "Study distribution figures with causal wording deliberately rejected; retained as a non-causal experiment hypothesis", "review_date": "2026-09-14"},
+      "source_ids": [
+        "MELTWATER_LINKEDIN_REPORT_2026",
+        "LINKEDIN_MELTWATER_TAKEAWAYS_2026"
+      ],
+      "support_review": {
+        "state": "inference",
+        "reviewer": "Codex orchestrator",
+        "basis": "Study distribution figures with causal wording deliberately rejected; retained as a non-causal experiment hypothesis",
+        "review_date": "2026-09-14"
+      },
       "freshness_class": "time-sensitive",
       "review_date": "2026-12-14",
       "confidence": "medium"
+    },
+    {
+      "claim_id": "SAI-018",
+      "claim": "Google's AI optimisation guide (updated 2026-07-10) says structured data is not required for generative AI search and that llms.txt, AI text files, special schema, chunking and AI-specific writing are unnecessary; standard SEO and people-first content apply.",
+      "source_ids": [
+        "GOOGLE_AI_GUIDE_2026"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register CW-07 (2026-09-23)",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "SAI-019",
+      "claim": "FAQPage and HowTo remain valid schema.org types but produce no Google rich result; check Google's search gallery before promising any rich result.",
+      "source_ids": [
+        "GOOGLE_SCHEMA_CHANGES"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent",
+        "basis": "Digital Research currentness register CW-09 (2026-09-23)",
+        "review_date": "2026-09-23"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-23",
+      "confidence": "high"
     }
   ]
 }

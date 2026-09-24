@@ -346,9 +346,9 @@ A pyramid where each level must be satisfied before the next matters:
 
 ---
 
-## Working-memory laws (added 2026-05-04 from Branson)
+## Working-memory laws
 
-Source: `book-extractions/branson-ux-ui-design-extraction.md` Section 5.
+Source: Branson's UX/UI design text (working-memory chapter), paraphrased; review procedure in `skills/quality-gates/accessibility-audit/references/cognitive-affordance-and-memory-review.md`.
 
 ### Miller's 7 ± 2 (1956)
 Working memory holds about 7 chunks (often less), for ~30 seconds. Practice can extend; interruption shrinks fast.
@@ -370,9 +370,9 @@ When a task interrupts another, current context goes on a memory "stack." Stacks
 
 ---
 
-## Three Paradigms of HCI design (added 2026-05-04 from Branson)
+## Three Paradigms of HCI design
 
-Source: `book-extractions/branson-ux-ui-design-extraction.md` Section 1 (originally Harrison, Tatar, Sengers 2007).
+Source: Branson's UX/UI design text, summarising Harrison, Tatar and Sengers (2007), paraphrased.
 
 When stakeholders disagree about "good design," they're often working in different paradigms.
 
@@ -380,6 +380,6 @@ When stakeholders disagree about "good design," they're often working in differe
 2. **Human Information Processing (HIP)** — fit machine to cognitive task; Miller's 7 ± 2 lives here. Dominates in information density.
 3. **Design Thinking / Phenomenological** — emotional, social, situated experience. Dominates in landing/brand/hero work.
 
-**Cockpit-voice example (one paragraph):** the same problem of pilot-warning voices analyzed three ways: (1) "use a female voice to cut through male-dominated comms" — engineering; (2) "female voices effectively differentiate signal from noise; familiar voices improve performance further" — HIP; (3) "the chosen voice's sultry tone reinforced cockpit-as-male, became inappropriate as women became pilots" — design thinking.
+**Illustration (original):** a Kampala mobile-money app screen is debated three ways: the engineer wants fewer failed transactions, the information-processing view wants fewer items on the confirmation screen, and the design-thinking view asks how the moment of paying feels for someone in a queue. Each is right for a different surface.
 
 **Rule:** all three paradigms are complementary. A premium website typically requires all three applied to different surfaces.

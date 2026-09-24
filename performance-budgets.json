@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical route-level performance budgets. Loaded by scripts/perf-gate.sh and referenced by lighthouserc.json. Budgets are set for simulated 3G on mobile (African market reality). See deploy/references/performance-gate.md for rationale and deploy/references/africa-calibration.md for why these thresholds matter.",
+  "_comment": "Canonical route-level performance budgets. Enforced category by category by scripts/route-weight-budget.mjs (called from scripts/perf-gate.sh) and cross-checked by Lighthouse total-byte-weight in lighthouserc.json. Lab budgets are set against a deliberate low-end stress profile, not a median connection. INP is a field metric: inp_ms is enforced from RUM/CrUX at p75 (observability), never from Lighthouse navigation runs. See deploy/references/performance-gate.md and deploy/references/africa-calibration.md.",
   "global": {
     "lcp_ms": 2000,
     "inp_ms": 200,
@@ -8,9 +8,13 @@
     "total_weight_kb": 350,
     "js_kb_gzip": 80,
     "css_kb_gzip": 30,
-    "image_above_fold_kb": 200,
+    "above_fold_image_kb": 200,
     "font_kb_total": 80,
-    "third_party_js_kb": 0
+    "third_party_js_kb": 0,
+    "html_kb_gzip": 30,
+    "_comment_metrics": "lcp_ms and cls apply to lab and field (field at p75 per device class); inp_ms applies to field/RUM only; tbt_ms is the lab interactivity proxy. Core Web Vitals 'good' thresholds per web.dev (checked 2026-09-23): LCP 2500 ms, INP 200 ms, CLS 0.1 at p75. The engine's lab LCP 2000 ms is stricter by design.",
+    "tbt_ms": 200,
+    "_comment_total": "total_weight_kb is the binding first-load cap per route: html + css + js (gzip) + fonts + all eager images. The per-category caps below are separate ceilings and sum to more than the total by design. Templates such as /blog/[slug]/ are gated through one representative built page each."
   },
   "routes": {
     "/": {
@@ -43,23 +47,40 @@
     },
     "/blog/[slug]/": {
       "role": "blog-post",
-      "total_weight_kb": 400,
+      "total_weight_kb": 350,
       "above_fold_image_kb": 200,
-      "_comment": "Longer copy + hero image; still capped under 400KB first-load on 3G."
+      "_comment": "Longer copy and a hero image; held to the global total. Raising it needs an exception_decision entry."
     }
   },
   "network_profile": {
-    "name": "Africa-3G-baseline",
+    "name": "low-end-stress-wpt-3g",
+    "label": "Low-end stress profile: WebPageTest '3G' preset network values with 4x CPU slowdown",
     "downlink_kbps": 1638,
-    "uplink_kbps": 750,
+    "uplink_kbps": 768,
     "rtt_ms": 300,
     "cpu_slowdown": 4,
-    "_comment": "Simulated representative-African-mobile. Use the current deploy performance guidance and label lab evidence separately from field evidence."
+    "device_emulation": "Lighthouse mobile emulation (moto g power 2022, 412x823, DPR 1.75)",
+    "is_median": false,
+    "_comment": "Deliberate worst-case floor, not a market median. Lighthouse's own default mobile throttling is 1.6 Mbps / 150 ms RTT / 4x CPU. Measured field reality is much faster in some markets (Ookla Speedtest Global Index, Kenya median mobile about 45 Mbps down / 28 ms, quarter to June 2026; Uganda mobile median not published). Sources: docs/source-registers/performance-currentness-2026-09-23.json. Label lab evidence separately from field evidence."
   },
   "fail_policy": {
     "on_regression": "block_deploy",
     "tolerance_percent": 0,
     "warn_threshold_percent": 5,
     "_comment": "No tolerance on primary metrics. A 5% warn allows local cache noise without failing CI."
+  },
+  "calibration_profiles": {
+    "lighthouse_default_mobile": {
+      "downlink_kbps": 1638,
+      "uplink_kbps": 750,
+      "rtt_ms": 150,
+      "cpu_slowdown": 4,
+      "config": "lighthouserc.default-mobile.json",
+      "use": "advisory comparison with PageSpeed Insights lab data"
+    },
+    "field": {
+      "source": "CrUX or first-party RUM at p75 per device class",
+      "use": "INP enforcement and lab-to-field calibration; see deploy/references/lab-to-field-calibration.md"
+    }
   }
 }

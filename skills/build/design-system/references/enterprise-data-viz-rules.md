@@ -1,60 +1,60 @@
-# Enterprise Data Visualization Rules
-**Source:** Extracted from `enterprise-ux-financial-insurance-extraction.md` (Synechron, 2018).
-**Used by:** design-system. Particularly relevant when website-skills produces dashboards via the dashboards/ engine.
+# Enterprise Data Visualisation Rules
 
----
+Parent skill: [design-system](../SKILL.md). Read when a project includes dashboards, reports or public data pages, including those built through the dashboards engine. Related detail: `data-tables-charts-and-svg-rules.md`.
 
-## The principle
+## Principle
 
-> "The immediate purpose of data visualization is to **improve understanding** — not to make fancy charts/widgets."
+The purpose of a chart is to improve understanding, not to decorate. Choose the chart type for the data and the question it answers, never for the look of the dashboard.
 
-> "Pick the chart type to suit the data and its purpose, not to stylize the dashboard."
+## Hard rules for premium dashboards
 
-## The hard rules (no exceptions on premium dashboards)
+- No 3D charts of any kind. Use flat pie, bar and line forms.
+- No heavy shadows or gradients on chart marks; they distort the perception of size and quantity.
+- Use colour to add meaning (emphasis, focus, category), never as decoration.
+- Give each figure enough context (axis, unit, period, comparison) for the reader to interpret it.
 
-- **No 3D widgets.** Pie chart, bar chart, line chart — all 2D. Always.
-- **No heavy shadows or gradients on chart elements.** They distort perception of size/quantity.
-- **Color enhances meaning and clarity** — for highlighting and focus, not decoration.
-- **Encode for the eye** — adequate context for the data; the brain organizes what it sees.
+## Pre-attentive attributes
 
-## Pre-attentive visual attributes (use intentionally)
-
-The brain processes these *before* conscious attention. Use them to direct the user's eye to what matters:
+The eye registers these before conscious attention. Use them deliberately to direct the reader.
 
 | Attribute | Use for |
 |---|---|
-| **Size** | Quantity, weight, importance |
-| **Color difference** | Categorical distinction; status (red/amber/green sparingly) |
-| **Orientation** | Direction of trend |
-| **Proximity** | Grouping (related items close together) |
-| **Similarity / Difference** | Same shape = same kind; different shape = different kind |
-| **Connections** | Relationship between data points (lines, links) |
+| Size | Quantity, weight, importance |
+| Colour difference | Categories; status (red, amber and green sparingly, and never as the only signal) |
+| Orientation | Direction of trend |
+| Proximity | Grouping related items |
+| Similarity or difference | Same shape for same kind, different shape for different kind |
+| Connection | Relationships between points (lines, links) |
 
-## Chart type → data type mapping
+## Chart choice by data type
 
-| Data type | Right chart |
+| Data | Suitable chart |
 |---|---|
-| Composition (whole + parts) | Stacked bar (only if categories ≤ 5); avoid pie if categories > 4 |
-| Comparison across categories | Horizontal or vertical bar chart |
-| Trend over time | Line chart |
+| Composition (whole and parts) | Stacked bar with few categories (five or fewer); avoid pie beyond about four slices |
+| Comparison across categories | Horizontal or vertical bar |
+| Change over time | Line |
 | Distribution | Histogram or box plot |
 | Correlation | Scatter plot |
-| Geographic | Choropleth or simple map |
-| Hierarchy | Treemap (only if depth ≤ 3) |
+| Geography | Choropleth or simple map |
+| Hierarchy | Treemap, only when depth is three levels or fewer |
 
-## Anti-patterns (must fail design review)
+## Anti-patterns that fail design review
 
-- Pie chart with > 4 slices
-- 3D pie chart (any size)
-- Bar chart with gradient fills
-- Line chart with > 7 series on one axis
-- Donut chart with center number unrelated to the chart total
-- "Speedometer" gauges on data dashboards (engagement-driven, not insight-driven)
-- Color used for decoration instead of meaning
-- Same color used for two different categorical meanings on one screen
+- Pie chart with more than four slices
+- Any 3D pie
+- Bars with gradient fills
+- Line chart with more than about seven series on one axis
+- Donut with a centre figure unrelated to the chart total
+- Speedometer gauges on analytical dashboards
+- Colour used for decoration, not meaning
+- One colour carrying two categorical meanings on the same screen
 
-## Application notes
+## Application by audience
 
-- **Internal dashboards** (back-office): efficiency above aesthetic. Density allowed if hierarchy is clear.
-- **Executive dashboards:** fewer charts, more summary numbers; one "headline" KPI per screen.
-- **Public-facing data viz** (marketing, transparency reports): the rules still apply; resist the urge to "make it pretty" with 3D or gradients.
+- **Internal back-office dashboards:** efficiency before appearance; density is acceptable if hierarchy is clear.
+- **Executive dashboards:** fewer charts, more summary figures, one headline indicator per screen.
+- **Public data pages** (marketing, transparency reports): the same rules apply; do not add 3D or gradients to look attractive. Example: a UGX budget-execution page for a district council uses flat bars and a clear table.
+
+## Sources
+
+- Synechron Inc. (2018) *Bridge the User Experience Gap in Enterprise Applications for Financial Services & Insurance*, Synechron. Informed the data-visualisation principles for enterprise interfaces; rules and thresholds here are the engine's own working set and should be tested on each project.

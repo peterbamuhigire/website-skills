@@ -81,6 +81,10 @@ A Kampala law firm has LinkedIn capacity but no verified case-result permissions
 <!-- dual-compat-end -->
 
 ## References
+- [social-role-scoping-and-account-health-check.md](references/social-role-scoping-and-account-health-check.md) — read when scoping the social role and checking account health.
+- [brand-purpose-and-character-worksheets.md](references/brand-purpose-and-character-worksheets.md) — read when defining brand purpose and character for social voice.
+- [social-service-pricing-and-client-acquisition.md](references/social-service-pricing-and-client-acquisition.md) — read when pricing and packaging the agency's social services.
+- [community-engagement-and-influencer-tactics.md](references/community-engagement-and-influencer-tactics.md) — read when planning community engagement and compliant influencer work.
 - Use `references/repurposing-and-launch-support.md` when social media must distribute website content, support a launch sequence, or map posts to page-level CTAs.
 - Use `references/direct-response-social.md` when the work requires tracked offers, landing pages, retargeting, or measurable social acquisition.
 

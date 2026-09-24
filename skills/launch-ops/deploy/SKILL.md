@@ -19,6 +19,7 @@ Control the final release from verified build artefact through production smoke 
 - All approved pages and assets are implementation-complete and need a release gate.
 - A website needs deployment configuration, promotion, rollback, or post-launch verification.
 - A failed launch needs controlled recovery using an existing rollback plan.
+- The performance gate, Lighthouse lab profile, route weight budgets, third-party script cost, edge caching, or lab-to-field calibration must be run, explained, or repaired.
 
 ## Do Not Use When
 
@@ -81,6 +82,10 @@ Recovery: repair the failed gate or environment, then rerun the complete affecte
 | Rollback-ready handoff | On-call operator | Previous version, procedure, trigger, and verification steps are actionable. |
 
 ## References
+- [lab-to-field-calibration.md](references/lab-to-field-calibration.md) — read when comparing lab results with field p75 data after launch or at quarterly review.
+- [third-party-cost-measurement.md](references/third-party-cost-measurement.md) — read when a client asks to add any external script, tag, widget or embed.
+- [edge-caching-and-delivery.md](references/edge-caching-and-delivery.md) — read when choosing hosting, CDN and cache headers, or when field TTFB is high.
+- [legacy-site-performance-audit.md](references/legacy-site-performance-audit.md) — read when auditing an existing (often WordPress or Shopify) site for speed and stability.
 
 - [Pre-launch verification](references/pre-launch-verification-checklist.md)
 - [QA matrix](references/qa-matrix.md)
@@ -128,6 +133,8 @@ Fallback when network, credentials, CI, rendering, a target environment, or prod
 | Smoke failure matches rollback trigger | Roll back and verify | Prolonged user impact |
 | Failure is non-blocking and exception is permitted | Record owner and expiry | Silent quality debt |
 | Remote or environment state differs unexpectedly | Stop and reconcile | Overwriting valid production changes |
+| Lab gate passes but field data is missing or worse | Report lab as lab, field as field (p75, period); run lab-to-field calibration; never promise a Lighthouse score | Lab scores sold as user experience |
+| Client asks to add a third-party script or widget | Offer a zero-JS substitute or facade first; otherwise measure the performance tax and slow-vendor behaviour, then allowlist with owner and review date | Unmeasured tags that slow every visitor |
 
 ## Worked Example
 

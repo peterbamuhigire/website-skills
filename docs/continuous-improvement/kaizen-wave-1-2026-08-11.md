@@ -172,7 +172,7 @@ remote rollback is made by this report.
   identifier as authority, and mutable standards will have a dated review
   control tied to the workspace source register.
 - Owner: website-skills maintainer with design/website standards owner.
-- Measure: No `z-library`, `z-lib`, EPUB, or local-download identifier remains
+- Measure: no pirate-library, EPUB, or local-download identifier remains
   in the active source register; source-ingestion guardrail remains at zero;
   matched standards show the 2026-08-11 register date and 2026-11-11 review.
 - Risk: Removing provenance reduces historical traceability. The quarantine

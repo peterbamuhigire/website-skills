@@ -6,7 +6,7 @@ Primary sources:
 
 - Danny Iny et al., *Blog Post Ideas*
 - *BLOGS CONTENTS* (used critically, low authority)
-- Mike Fishbein, *Growth Hacking with Content Marketing* synthesis already in `book-extractions/`
+- Mike Fishbein, *Growth Hacking with Content Marketing* (informed the wider idea-source methods, which live in [topic prompts, segments, events and owned material](topic-prompts-segments-events-and-owned-material.md))
 
 ## Core rule
 

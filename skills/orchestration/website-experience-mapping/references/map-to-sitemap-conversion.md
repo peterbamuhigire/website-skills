@@ -19,7 +19,7 @@ Rules:
 
 Map each stage's required page type to one of these archetypes. The archetype controls layout, depth, and proof load.
 
-- Awareness page (educational): primary intent is to answer a question or explain a category. Owns long-form content, FAQ schema, internal links to consideration pages.
+- Awareness page (educational): primary intent is to answer a question or explain a category. Owns long-form content, a visible FAQ where readers ask questions (no FAQ rich-result promise: Google stopped showing them on 7 May 2026, register CW-09; use `FAQPage` markup only for a documented non-Google consumer), internal links to consideration pages.
 - Consideration page (service or product): primary intent is to compare. Owns proof, pricing or pricing logic, objection handling, secondary CTA.
 - Decision page (offer or contact): primary intent is action. Owns short copy, single CTA, trust badges, form, fallback contact.
 - Confirmation page (post-action): primary intent is reassurance and next step. Owns thank-you message, expected timeline, what to do next, support route.

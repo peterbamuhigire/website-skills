@@ -99,6 +99,8 @@ For a clinic case study, open with the verified appointment backlog, explain the
 <!-- dual-compat-end -->
 
 ## References
+- [sb7-brandscript-worksheet.md](references/sb7-brandscript-worksheet.md) — read when building a one-page SB7 BrandScript (customer as hero, brand as guide).
+- [brand-story-spine-roles-drivers-plots.md](references/brand-story-spine-roles-drivers-plots.md) — read when choosing the brand's role, human driver, plot and ownable claim for About or story pages.
 
 - `references/narrative-spine-and-emotional-arc.md` - narrative selection and emotional pacing.
 - `../orchestration/website-builder/references/narrative-information-architecture-and-empathy.md` - translate audience empathy and narrative beats into page architecture, proof, choice, recovery, and measurement.

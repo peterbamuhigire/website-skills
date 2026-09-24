@@ -333,7 +333,7 @@ Speed impacts user experience, SEO ranking, and conversion rates.
 | Metric | Good | Needs Work | Poor |
 |--------|------|-----------|------|
 | **LCP** (Loading) | < 2.5s | 2.5-4.0s | > 4.0s |
-| **FID** (Interactivity) | < 100ms | 100-300ms | > 300ms |
+| **INP** (Interactivity; replaced FID on 12 March 2024) | ≤ 200ms | 200-500ms | > 500ms |
 | **CLS** (Visual Stability) | < 0.1 | 0.1-0.25 | > 0.25 |
 
 **Image Optimization:**
@@ -801,17 +801,17 @@ Measure → Analyze → Hypothesize → Test → Implement → Repeat
 
 ## World-class UX foundations (book-derived, added 2026-05-04)
 
-Five UX/UI book extractions are now the upstream source for design decisions on premium projects. Canonical location: `book-extractions/`.
+Five UX/UI books informed these rules. Their working methods now live as task-oriented references inside the skills listed below; book extractions are never stored in this repository (the former `book-extractions/` folder was removed on 2026-09-24).
 
 ### The four cross-cutting rules
 
-1. **Validated user research is non-negotiable** (Levy). No "Field of Dreams" launches — confront target customers with an MVP/landing page before scaling. Source: `book-extractions/levy-ux-strategy-extraction.md`.
+1. **Validated user research is non-negotiable** (Levy). No "Field of Dreams" launches — confront target customers with an MVP/landing page before scaling. Source: Levy, J. (2015) *UX Strategy*, O'Reilly Media; working method in `skills/orchestration/premium-ui-ux-design/references/ux-strategy-differentiation-and-meaning.md` and `levy-four-tenets.md`.
 
-2. **All 5 outcomes must hit, not 4 of 5** (Synechron Enterprise UX). Useful + Easy + Efficient + Pleasing + Accessible. One No = no premium launch. Source: `book-extractions/enterprise-ux-financial-insurance-extraction.md`.
+2. **All 5 outcomes must hit, not 4 of 5** (Synechron Enterprise UX). Useful + Easy + Efficient + Pleasing + Accessible. One No = no premium launch. Source: Synechron Inc. (2018); pre-launch gate in `skills/orchestration/premium-ui-ux-design/references/enterprise-five-outcomes.md`.
 
-3. **Recognition over recall + 4-stage cognitive affordance** (Branson). Show, don't make users remember. Every interactive element must pass Presence → Visibility → Recognizability → Intelligibility. Source: `book-extractions/branson-ux-ui-design-extraction.md`.
+3. **Recognition over recall + 4-stage cognitive affordance** (Branson). Show, don't make users remember. Every interactive element must pass Presence → Visibility → Recognizability → Intelligibility. Source: Branson's UX/UI design text; review procedure in `skills/quality-gates/accessibility-audit/references/cognitive-affordance-and-memory-review.md`.
 
-4. **Design is ongoing, not a project** (Fekeshazi). Plan for continuous design alongside continuous dev. A dev team without a design team is a few bricks short of a load. Source: `book-extractions/fekeshazi-pm-ux-guide-extraction.md`.
+4. **Design is ongoing, not a project** (Fekeshazi). Plan for continuous design alongside continuous dev. A dev team without a design team is a few bricks short of a load. Source: Fekeshazi, Z. (c. 2017) *Product Managers' Guide to UX Design*, UX Studio; rules in `skills/orchestration/premium-ui-ux-design/references/pm-collaboration-rules.md`.
 
 ### Pointer to the engine's skills
 

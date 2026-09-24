@@ -19,6 +19,7 @@ Build credible persuasion from customer language, a clear offer, proportionate p
 - A landing, product, service, or campaign page needs a stronger conversion argument.
 - Headlines, value propositions, proof, objections, guarantees, or CTAs need revision.
 - Existing copy is clear but does not help the right buyer decide or act.
+- A pricing or packages page needs choice architecture (two to four options, one true recommendation, price timing) or a draft needs the direct-response ethics filter.
 
 ## Do Not Use When
 
@@ -88,6 +89,8 @@ guarantees, outcomes, or platform facts. Missing evidence is `NOT_ASSESSED`.
   Markdown route.
 
 ## References
+- [pricing-page-choice-architecture.md](references/pricing-page-choice-architecture.md) — read when writing a pricing or packages page, deciding when to show price, adding contact or proof cues, or writing exit copy.
+- [headline-families-and-ethics-filter.md](references/headline-families-and-ethics-filter.md) — read when generating headlines across families, placing proof early, or checking direct-response tactics against the ethics filter.
 
 - [Website messaging framework](references/website-messaging-framework.md) for page structure.
 - [Message mining and proof](references/message-mining-and-proof.md) for research.
@@ -122,6 +125,7 @@ Without customer research, analytics, proof, or editing access, return a qualifi
 | High-risk purchase with many objections | Use a fuller persuasion sequence | Unanswered buyer resistance |
 | Proof does not support promise | Narrow the promise | Misrepresentation |
 | Full VSL or long-form funnel requested | Route to `long-form-sales-copy` | Neighbour collision |
+| Draft uses a classic direct-response tactic | Run the ethics filter: no invented quotes, disguised editorial, fake scarcity, fake proof or confirm-shaming | Misleading copy and consumer-law exposure |
 
 ## Worked Example
 

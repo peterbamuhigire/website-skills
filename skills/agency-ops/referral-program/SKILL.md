@@ -140,6 +140,8 @@ At a 90-day review, a client confirms the site reduced missed enquiries. With pe
 <!-- dual-compat-end -->
 
 ## References
+- [joint-venture-partner-channel.md](references/joint-venture-partner-channel.md) — read when setting up a joint-venture or revenue-share partner distinct from client referrals.
+- [introductions-and-connector-routine.md](references/introductions-and-connector-routine.md) — read when building a habit of making and earning introductions.
 
 - `references/reward-structures.md` — double-sided vs one-sided, cash / credit /
   charity / tiered options, agency referral-fee norms, and how to size rewards.

@@ -1,60 +1,61 @@
-# Levy's Four Tenets of UX Strategy
-**Source:** Extracted from `levy-ux-strategy-extraction.md` (canonical at `C:\Users\BIRDC\.claude\skills\book-extractions\`).
-**Used by:** premium-ui-ux-design.
+# UX Strategy Four-Tenet Brief Review
 
----
+Parent skill: [premium-ui-ux-design](../SKILL.md). Read when reviewing a premium website brief at kickoff, when a stakeholder pitches an idea without research, or when the team proposes skipping discovery to save time.
 
-## The formula
+Fuller strategy method: [ux-strategy-differentiation-and-meaning.md](ux-strategy-differentiation-and-meaning.md).
 
-> **UX Strategy = Business Strategy + Value Innovation + Validated User Research + Killer UX Design**
+## The working formula
 
-These are simultaneously-spinning plates, not phases. If any drops, the strategy fails.
+UX strategy = business strategy + value innovation + validated user research + strong UX design.
 
-## Use this file when
+Treat the four as plates spinning together, not as phases. If one drops, the strategy fails. Check all four before scoping.
 
-- Reviewing a brief at kickoff for a premium ($20k+) website project
-- A stakeholder pitches a "killer idea" without research
-- The team is about to skip discovery to "save time"
+## Four misreadings to correct at kickoff
 
-## Four misinterpretations (correct each at kickoff)
+| Misreading | Correction |
+|---|---|
+| "Strategy is a fixed guiding star" | Fast-moving digital markets need iterative, adjustable plans, reviewed on evidence |
+| "Strategy is a clever way of doing design" | Design creates; strategy is the plan made before creating. They are separate disciplines with separate owners |
+| "Strategy is just product strategy" | It spans several products, services and channels that make up one ecosystem |
+| "Strategy is the same as brand strategy" | A weak experience damages the brand; a strong brand cannot rescue a weak experience |
 
-1. **"UX strategy is a North Star."** Reality: digital products in fast markets need agile, iterative, variable processes — not a fixed star.
-2. **"UX strategy is a strategic way to do UX design."** Reality: design = creating; strategy = the game plan *before* creating. Two different disciplines.
-3. **"UX strategy is just product strategy."** Reality: UX strategy spans dozens of products, services, platforms — interconnected ecosystem.
-4. **"UX strategy is closely tied to brand strategy."** Reality: a poor UX decreases brand value, but the brandiest brand cannot rescue a poor UX.
+## The four tenets as review questions
 
-## The four tenets (one paragraph each)
+### 1. Business strategy
+Is the top-line vision written down? Use a business-model canvas (segments, value propositions, channels, relationships, revenue streams, key resources, activities, partners, costs). UX work bears most on segments and value propositions, so confirm those two first.
 
-### Tenet 1: Business Strategy
-The top-line vision. Use the Business Model Canvas (9 building blocks): customer segments, value propositions, channels, customer relationships, revenue streams, key resources, key activities, key partnerships, cost structure. UX strategy intersects with the bolded blocks — segments and value propositions especially.
+### 2. Value innovation
+Does the offer differ from competitors in a way buyers value, without an unaffordable cost? Separate crowded territory (many similar rivals) from uncontested territory created by breaking category conventions. Note that challengers often enter at the low end of a market and move upward.
 
-### Tenet 2: Value Innovation (Blue Ocean)
-Simultaneous pursuit of differentiation and low cost. Red ocean = sea of similar competitors; blue ocean = uncontested territory built by breaking rules. Disruptive innovation (Christensen) starts at the bottom of a market and moves up.
+### 3. Validated user research
+Has a named customer segment confirmed it finds value? Observation and empathy are not validation. Use the lean vocabulary: minimum viable product, build-measure-learn, pivot. Putting the idea in front of target customers is not optional.
 
-### Tenet 3: Validated User Research
-Confirms a specific customer segment finds value in your product. Different from observing or empathy. Lean Startup vocabulary: MVP, Build-Measure-Learn, Pivot. **Confronting target customers is non-negotiable.**
+### 4. Strong UX design
+Does the team work together from the start, design structured experiments, identify the key moments, study the existing market, test with demanding users, and join online and offline touchpoints without friction?
 
-### Tenet 4: Killer UX Design
-Distinguishes itself from novice UX by: working collaboratively from inception, designing structured experiments, identifying key moments, mining the existing market, validating with power users, weaving UX through online + offline touch points (frictionless).
+## Weak-brief filter: ten things that are not a UX strategy
 
-## Top-10 Not-UX-Strategies (use to reject weak briefs)
+Reject or push back on a brief that offers only one of these:
 
-1. A killer idea for a new product
-2. A laundry list of features
-3. A thoroughly researched plan with no need for customer feedback
-4. Permutation of trending buzzwords ("peer-to-peer sharing economy")
-5. Generic motivational statements ("Go Team Challenge Conquer")
-6. An arrogant statement from an expert
-7. A hypothesis with non-validated risky assumptions ("all women like pink")
-8. A grandiose vision misaligned with company capabilities
-9. A vague Hallmark-card affirmation
-10. The North Star
+1. A strong idea for a new product.
+2. A long list of features.
+3. A well-researched plan that needs no customer feedback.
+4. A string of fashionable buzzwords.
+5. Generic motivational slogans.
+6. An expert's assertion of authority.
+7. A hypothesis resting on untested, risky assumptions (for example "all customers prefer the cheapest option").
+8. A grand vision beyond the company's capabilities.
+9. A vague statement of good intentions.
+10. A fixed "guiding star" that nothing can change.
 
-If the client's brief matches any of these, push back before scoping.
+If the brief matches any of these, ask for the missing tenet before you quote for the work.
 
-## Quotes for client decks
+## Client-deck statements (own wording)
 
-- "UX strategy is the high-level plan to achieve one or more business goals under conditions of uncertainty."
-- "A poor UX can decrease the brand value of a product, but not so much the other way around."
-- "Confronting your target customers is non-negotiable."
+- UX strategy is the plan for reaching business goals while the outcome is still uncertain.
+- Weak experience lowers brand value; the reverse relationship is much weaker.
+- Test with target customers before scaling.
 
+## Sources
+
+- Levy, J. (2015) *UX Strategy: How to Devise Innovative Digital Products that People Want*, O'Reilly Media. Informed the four-part strategy check and the weak-brief filter; wording here is the engine's own.

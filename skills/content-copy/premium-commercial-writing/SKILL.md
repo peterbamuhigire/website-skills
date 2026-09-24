@@ -78,6 +78,7 @@ Recovery: repair the brief or evidence map, then rerun the professional and anti
 | Editorial QA record | Release owner | Claims, source gaps, anti-slop checks, and implementation notes are complete. |
 
 ## References
+- [professional-page-and-blog-phrase-bank.md](references/professional-page-and-blog-phrase-bank.md) — read when drafting service, why-us, process, pricing, case-study, About, blog or CTA sentences in human professional language.
 
 - [Genuine writing and AI-slop gate](references/genuine-writing-and-ai-slop-gate.md) for every public draft.
 - [Professional writing quality gate](references/professional-writing-quality-gate.md) for final editorial acceptance.
@@ -86,7 +87,7 @@ Recovery: repair the brief or evidence map, then rerun the professional and anti
 - [Blog and authority writing](references/blog-and-authority-writing.md) for thought leadership and topical authority.
 - [SEO and AI-search writing](references/seo-ai-search-writing.md) for answer structure and entity clarity.
 - [Document and sales-enablement writing](references/document-and-sales-enablement-writing.md) for longer commercial assets.
-- [Human English and reader-centred craft](../../../book-extractions/human-english-craft-synthesis-2026.md) for audience-fit English, genre, grammar, rhythm, and proof.
+- [Human-English five-pass review](../language-standards/references/human-english-five-pass-review.md) for audience-fit English, genre, grammar, rhythm, and proof.
 <!-- dual-compat-end -->
 
 ## Evidence Produced
