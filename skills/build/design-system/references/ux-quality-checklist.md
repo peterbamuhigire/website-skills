@@ -244,33 +244,33 @@ Run in order. Each check builds on the previous.
 
 ---
 
-## First-impression and orientation (added 2026-05-04 from Deacon + Fekeshazi)
+## First-impression and orientation
 
-Sources: `deacon-ux-ui-strategy-extraction.md` Section 4 (UI Design Considerations); `fekeshazi-pm-ux-guide-extraction.md` Section 1.2 (5-10 minute rule).
+Sources: Deacon, P. B. (2020) *UX and UI Design Strategy: A Step-by-Step Guide* (UI design considerations); Fekeshazi, Z. (c. 2017) *Product Managers' Guide to UX Design*, UX Studio (the 5–10 minute rule). Both paraphrased.
 
-### The 5–10 minute rule (Fekeshazi)
+### The first-use time rule
 At first use, you have a maximum of 5–10 minutes to give users answers about how the app works and how they benefit. **Tutorials are futile.** The interface itself must explain.
 
 **Audit:** can a first-time user accomplish the primary goal within 5 minutes without watching a tutorial or reading a help page?
 
-### Consistency (Deacon)
+### Consistency
 - Colors, borders, font size, style, background images, effects — match across pages
 - Doing similar tasks in similar/familiar ways
 - Logo always returns to home
 - Header, footer, body structure consistent across all pages
 
-### Responsiveness (Deacon)
+### Responsiveness
 - Confirm submissions explicitly ("Saved", not silent success)
 - Loading indicators for any operation > 1 second
 - Never leave the user with a blank page or no path back
 - Loading state messages: progress percentage if known, indeterminate spinner if not
 
-### Familiar words (Deacon)
+### Familiar words
 - Use sign-up, register, login — not invented vocabulary
 - "Submit" or "Send" — not "Initiate transmission"
 - Industry-standard terms reduce cognitive load on first visit
 
-### Streaming (Deacon)
+### Streaming
 - Every page contains a link to contact information
 - Throw away unwanted content; clutter doesn't improve the interface
 - Sticky/scroll-aware footer with key links

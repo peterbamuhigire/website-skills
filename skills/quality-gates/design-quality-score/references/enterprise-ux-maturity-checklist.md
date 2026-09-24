@@ -1,90 +1,77 @@
 # Enterprise UX Maturity Checklist
-**Source:** Extracted from `enterprise-ux-financial-insurance-extraction.md` (derived from The Design Ladder, Danish Design Center; Natalie Hanson's UX Maturity Model).
-**Used by:** design-quality-score.
 
----
+Parent skill: [design-quality-score](../SKILL.md). Read when scoring a project for premium-tier launch readiness, auditing the process behind a deliverable (not only the rendered output), or diagnosing where an enterprise client sits and what to fund next.
 
-## Use this file when
+## Maturity levels
 
-- Scoring a project for premium-tier launch readiness
-- Auditing the *process* behind a deliverable, not just the rendered output
-- Diagnosing where an enterprise client currently sits and what to invest in next
-
-## The 5 Maturity Levels
-
-### Level 0: No Design
-Design ignored entirely. Application screens & flows defined by developers + stakeholders. No significant thought toward user or user experience.
-
-### Level 1: Uninformed UI Design (Styling)
-Design considered only as cosmetic/aesthetic value addition. Focus on screens looking pretty (colors, buttons, icons, text placement) without UX thinking.
-
-### Level 2: Style & Color (Problem Solving)
-Design integral to the solution. UX approach defined. Business goals & user needs discussed and integrated into application/information flow.
-
-### Level 3: UX Design
-Application flow drives expected user behavior. Design solves user problems effectively.
-
-### Level 4: Experience Design (Innovation)
-Asks: Why are we designing this? How does this impact the target user's life and journey? How can we add more value? Shifts from "designing a solution" to design thinking. Innovation and wow factor.
+| Level | Name | What it means in practice |
+|---|---|---|
+| 0 | No design | Developers and stakeholders define screens and flows; no thought about the user |
+| 1 | Styling | Design is cosmetic: colours, buttons, icons and text placement without UX thinking |
+| 2 | Problem solving | Design is part of the solution; business goals and user needs shape the information flow |
+| 3 | UX design | The flow drives intended user behaviour and solves user problems effectively |
+| 4 | Experience design | The team asks why it is designing this, how it affects the user's life and journey, and how to add value; it designs from insight, not just to fill a specification |
 
 ## Premium-pricing gate
 
-> A project may not score ≥ 8/10 on premium claims unless documented activities align with **Level 3 (UX Design) at minimum**. Level 4 is the target for the highest-tier work.
+A project may not score 8 out of 10 or higher on premium claims unless its documented activities meet Level 3 as a minimum. Level 4 is the target for the highest tier. The checklist is additive: it does not retrospectively fail templates scored under the earlier seven-category rubric. Apply it to new work.
 
-This checklist is **additive** — it does not retroactively fail templates scored under the prior 7-category rubric. Apply to new work going forward.
+## Activities required by level
 
-## Activity-by-Level Matrix
+A tick means the activity is required at that level.
 
-A check (✓) means the activity is required at that level.
-
-| Activity | L1 Styling | L2 Problem Solving | L3 UX Design | L4 Experience Design |
+| Activity | L1 | L2 | L3 | L4 |
 |---|---|---|---|---|
-| Problem Definition & Business Objective |  |  | ✓ | ✓ |
-| Stakeholder Discussions / Interviews |  |  | ✓ | ✓ |
-| Success Criteria |  |  | ✓ | ✓ |
-| User Research |  |  | ✓ | ✓ |
-| Competitor Analysis |  |  | ✓ | ✓ |
-| User Interviews |  |  | ✓ | ✓ |
-| Personas |  |  | ✓ | ✓ |
-| Experience Maps |  |  |  | ✓ |
-| User Journeys |  |  | ✓ | ✓ |
-| Information Architecture |  |  | ✓ | ✓ |
-| Navigation Flow |  |  | ✓ | ✓ |
-| Task Flows |  |  | ✓ | ✓ |
-| Wireframes (low-fi + high-fi) |  |  | ✓ | ✓ |
-| Clickable Prototype |  |  | ✓ | ✓ |
-| Visual Design Mockups | ✓ | ✓ | ✓ | ✓ |
-| Mood Boards |  |  |  | ✓ |
-| Design Templates & Style Guides | ✓ | ✓ | ✓ | ✓ |
-| Heuristic / Expert Evaluation |  |  | ✓ | ✓ |
-| Usability Testing |  |  |  | ✓ |
-| Test Cases & Scenarios |  |  |  | ✓ |
-| ADA / Section 508 Compliance | ✓ | ✓ | ✓ | ✓ |
+| Problem definition and business objective | | | Y | Y |
+| Stakeholder interviews | | | Y | Y |
+| Success criteria | | | Y | Y |
+| User research | | | Y | Y |
+| Competitor analysis | | | Y | Y |
+| User interviews | | | Y | Y |
+| Personas | | | Y | Y |
+| Experience maps | | | | Y |
+| User journeys | | | Y | Y |
+| Information architecture | | | Y | Y |
+| Navigation flow | | | Y | Y |
+| Task flows | | | Y | Y |
+| Wireframes (low and high fidelity) | | | Y | Y |
+| Clickable prototype | | | Y | Y |
+| Visual mock-ups | Y | Y | Y | Y |
+| Mood boards | | | | Y |
+| Templates and style guides | Y | Y | Y | Y |
+| Heuristic or expert evaluation | | | Y | Y |
+| Usability testing | | | | Y |
+| Test cases and scenarios | | | | Y |
+| Accessibility compliance | Y | Y | Y | Y |
 
 ## Scoring rule
 
-For each activity required at the project's claimed maturity level: was it actually performed and documented? Yes = pass; No = the project drops one level until the gap is closed.
+For each activity required at the level the project claims: was it performed and documented? Yes passes. No drops the project one level until the gap is closed.
 
-## Definitions of activities (one-liners)
+## Activity definitions
 
-- **Problem Definition** — UX designer + stakeholders answer: what is the need, why are we doing this, how does this make life easier for the end user?
-- **Stakeholder Discussions** — focused-group or individual interviews with key contacts who fund/sell/execute
-- **Success Criteria** — checklist of measures the deliverable must hit; documented and agreed
-- **User Research** — qualitative + quantitative; interviews, contextual inquiries, eye tracking, surveys, A/B testing, web analytics, field studies
-- **Competitor Analysis** — review/audit/expert-review of competitor products; matrix output (use `levy-competitive-matrix.md`)
-- **User Interviews** — process, device usage, preference, industry exposure, context-of-use questions
-- **Personas** — name, demographics, goals/motivations, environment, pain points, stress points
-- **Experience Maps** — visual flow with feelings, frustrations, expectations
-- **User Journeys** — chronological touch-point sequence per user group/scenario
-- **Information Architecture** — organization/structure/labelling of all content
-- **Navigation Flow** — persistent / sequential / hierarchical drill-down patterns
-- **Task Flows** — diagrams of tasks user performs to meet goals
-- **Wireframes** — low-fi (paper) + high-fi (no color, focus on flow)
-- **Clickable Prototype** — stitched screens; behaves like real product per scenario
-- **Visual Design Mockups** — full-scale static representation with colors, branding, graphics
-- **Mood Boards** — themes/moods using digital, abstract, physical references
-- **Design Templates & Style Guides** — working models for layout/page/screen consistency
-- **Heuristic Evaluation** — Nielsen-style review against best practices
-- **Usability Testing** — moderated in-person, moderated remote, or unmoderated remote
-- **Test Cases & Scenarios** — derived from actual use cases; goal/task oriented
-- **Accessibility (ADA / Section 508)** — required at all levels
+- **Problem definition:** designer and stakeholders agree the need, the reason for the work and how it makes the user's life easier.
+- **Stakeholder discussions:** group or individual interviews with the people who fund, sell or deliver.
+- **Success criteria:** a documented, agreed list of measures the deliverable must meet.
+- **User research:** qualitative and quantitative: interviews, contextual inquiry, eye tracking, surveys, split tests, analytics, field studies.
+- **Competitor analysis:** audit or expert review of competing products, recorded in a matrix (see [the competitive matrix](../../../build/design-reference/references/levy-competitive-matrix.md)).
+- **User interviews:** questions on process, devices, preferences, industry exposure and context of use.
+- **Personas:** name, demographics, goals and motivations, environment, pain points and stress points.
+- **Experience maps:** visual flow showing feelings, frustrations and expectations.
+- **User journeys:** chronological touchpoint sequences per user group and scenario.
+- **Information architecture:** organisation, structure and labelling of all content.
+- **Navigation flow:** persistent, sequential and hierarchical drill-down patterns.
+- **Task flows:** diagrams of the tasks users perform to meet goals.
+- **Wireframes:** paper or low-fidelity sketches, then higher-fidelity layouts without colour that focus on flow.
+- **Clickable prototype:** linked screens that behave like the product for each scenario.
+- **Visual mock-ups:** full-size static designs with colour, branding and graphics.
+- **Mood boards:** themes and moods collected from digital, abstract and physical references.
+- **Templates and style guides:** working models for layout, page and screen consistency.
+- **Heuristic evaluation:** expert review against recognised usability heuristics.
+- **Usability testing:** moderated in person, moderated remote or unmoderated remote.
+- **Test cases and scenarios:** derived from real use cases and oriented to goals and tasks.
+- **Accessibility compliance:** required at every level; check the standard that applies in the market.
+
+## Sources
+
+- Synechron Inc. (2018) *Bridge the User Experience Gap in Enterprise Applications for Financial Services & Insurance*, Synechron, which draws on the Danish Design Centre's Design Ladder and a UX maturity model. Informed the level model and activity matrix; wording and gate rules here are the engine's own.

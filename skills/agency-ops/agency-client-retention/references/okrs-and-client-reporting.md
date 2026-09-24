@@ -1,385 +1,210 @@
 # OKRs and Client Reporting
 
-The agency runs two distinct measurement systems — and confusing the two is the
-fastest way to make both useless.
+The agency runs two separate measurement systems. Confusing them makes both useless.
 
-1. **Internal OKRs** govern what the agency itself focuses on each quarter.
-   Quarterly cycle. 3 to 5 Objectives. Public to the team. Never tied to
-   compensation. Source: John Doerr, *Measure What Matters* (2018).
-2. **Client KPIs** govern what every retainer reports each month. Always-on
-   dashboards with plain-English commentary. Source: the existing
-   `monthly-report-template.md` plus Sheridan and Pulizzi attribution
-   methods.
+1. **Internal OKRs** set what the agency focuses on each quarter. Three to five objectives, visible to the team, never tied directly to pay.
+2. **Client KPIs** show what each retainer delivered each month: an always-on dashboard with plain-English commentary.
 
-Mix them, and the team uses client metrics as goals (vanity), or treats OKRs
-as reporting (theatre). Keep them separate, and each does its job: OKRs
-focus the agency; KPIs prove the retainer.
+If they are mixed, the team treats client metrics as goals (vanity) or treats OKRs as reporting (theatre). Kept apart, OKRs focus the agency and KPIs prove the retainer.
 
-This file pairs with `monthly-report-template.md` (the client-facing
-report), `retainer-package-catalog.md` (the retainers being measured),
-`post-launch-review-cadence.md` (when KPIs become OKRs in the strategy
-conversation), and `subscription-economy-model.md` (the recurring-revenue
-financial dashboard the founder reads).
+Pairs with `monthly-report-template.md` (client report), `retainer-package-catalog.md`, `post-launch-review-cadence.md` and `subscription-economy-model.md` (founder's recurring-revenue dashboard).
 
 ---
 
-## Part 1 — Internal OKRs (the quarterly engine)
+## 1. Internal OKRs
 
-### What an OKR is
+### Definition and test
 
-Per Doerr (and Andy Grove before him at Intel):
+- **Objective:** qualitative, significant, action-led, time-bound. It says what to achieve.
+- **Key result (KR):** quantitative and verifiable. It says how you will know. Test: did we hit the number, yes or no? A KR needing interpretation is badly written.
 
-- **Objective** — qualitative, significant, action-oriented, time-bound,
-  ideally inspirational. *What* you want accomplished.
-- **Key Result** — quantitative, verifiable, "did we hit the number" testable.
-  *How* you'll get there.
+Limit each cycle to three to five objectives and three to five KRs per objective. More turns focus into a to-do list.
 
-Grove's test for a Key Result: *"Did we hit the number, or didn't we? Yes
-or no? Simple."* No KR should require interpretation.
+### OKRs versus annual management by objectives
 
-Target: **3 to 5 Objectives per cycle, 3 to 5 Key Results per Objective.**
-More than that, and you've replaced focus with a to-do list.
-
-### MBOs vs OKRs (Grove's distinction)
-
-| MBOs | OKRs |
-|------|------|
-| What | What and How |
+| Annual objectives model | OKRs |
+|-------------------------|------|
+| What only | What and how |
 | Annual | Quarterly or monthly |
-| Private and siloed | Public and transparent |
-| Top-down | ~50% bottom-up or sideways |
-| Tied to compensation | Mostly divorced from compensation |
-| Risk averse | Aggressive and aspirational |
+| Private, siloed | Public, transparent |
+| Top-down | Roughly half bottom-up or sideways |
+| Tied to pay | Mostly separate from pay |
+| Risk-averse | Aspirational |
 
-The right column is what we run.
+We run the right-hand column.
 
-### The four superpowers (FACTS)
+### Four working principles
 
-1. **Focus and commit to priorities.** Pick what matters; cap at 3 to 5
-   Objectives. *"If we try to focus on everything, we focus on nothing"*
-   (Doerr).
-2. **Align and connect for teamwork.** Everyone's OKRs are public. Cross-
-   team dependencies surface immediately.
-3. **Track for accountability.** Living documents, not shelf-ware. Weekly
-   check-ins; mid-cycle re-scope; end-of-cycle scoring 0.0–1.0.
-4. **Stretch for amazing.** Aspirational OKRs hit 0.6–0.7 on average. If
-   they hit 1.0 routinely, the bar is too low.
+1. **Focus.** Cap objectives; picking everything means picking nothing.
+2. **Alignment.** Everyone's OKRs are visible; dependencies surface early.
+3. **Tracking.** Living documents: weekly check-in, mid-cycle re-scope, end-of-cycle score from 0.0 to 1.0.
+4. **Stretch.** Aspirational OKRs should average about 0.6 to 0.7. Routine 1.0 means the bar is too low.
 
-### Committed vs aspirational OKRs
+### Committed versus aspirational
 
-- **Committed** — must hit 1.0. Tied to revenue, delivery, operations.
-  Missing one demands a post-mortem. Example: *"Ship 4 client builds on
-  time and on scope."*
-- **Aspirational (moonshot)** — expected average 0.6 to 0.7. Score of 0.4+
-  is acceptable if direction was right. Example: *"Establish the agency
-  as the default authority website firm in [region]."*
+- **Committed:** must reach 1.0 (revenue, delivery, operations). A miss requires a post-mortem. Example: ship four client builds on time and to scope.
+- **Aspirational:** expected 0.6 to 0.7; 0.4 or more is acceptable if direction was right. Example: become the default authority-website firm in your region.
+- If aspirational OKRs reach 1.0 two quarters running, raise the bar.
 
-If aspirational OKRs hit 1.0 two quarters running, the team is sandbagging.
-Raise the bar.
+### Quarterly cycle for a five-person agency
 
-### Quarterly OKR cycle for a 5-person agency
+| When | Activity |
+|------|----------|
+| Two weeks before quarter | Founder drafts two or three company objectives; team drafts personal KRs bottom-up |
+| One week before | Two-hour summit; agree company OKRs; each person agrees one personal objective aligned to one company objective |
+| Quarter start | Post all OKRs in a shared workspace |
+| Weekly (30 minutes) | Each person gives RAG status per KR and one blocker; no deep dives |
+| Mid-quarter (week 6) | 90-minute re-scope: kill obsolete KRs, promote unexpected wins |
+| Last week | Score 0.0 to 1.0; each owner writes a paragraph reflection per objective |
+| First week of next quarter | Two-hour retrospective and kick-off |
 
-| When | What happens |
-|------|--------------|
-| 2 weeks before quarter | Founder drafts 2 to 3 company Objectives. Team drafts personal KRs bottom-up. |
-| 1 week before | 2-hour OKR summit. Agree company OKRs. Each person agrees 1 personal Objective aligned to a company Objective. |
-| Quarter start | All OKRs posted in shared Notion/Coda doc. Visible to everyone. |
-| Weekly (30 min Monday) | OKR check-in — each person gives RAG status per KR + 1 blocker. No deep dive. |
-| Mid-quarter (week 6) | 90-min re-scope session. Kill KRs that no longer matter. Promote unexpected wins. |
-| Last week of quarter | Score 0.0–1.0. Each owner writes 1-paragraph reflection per Objective. |
-| First week of next | 2-hour retro + new cycle kick-off. |
+Expect about two hours per week plus about six hours per quarter.
 
-Total time investment: ~2 hours per week (weekly check-in 30 min × 4 + 1:1
-overhead) plus ~6 hours per quarter for summit + retro. Sustainable for a
-small senior team.
+### Illustrative company OKRs (invented figures, UGX)
 
-### Illustrative company OKRs for a premium B2B website agency
+**Objective 1 (committed): lock in recurring revenue so retainer MRR covers fixed costs with margin.**
 
-**Objective 1 (Committed) — Lock in recurring revenue before quarter-end so
-retainer MRR covers fixed costs with margin.**
+- KR1: grow active retainer MRR from UGX 12,000,000 to UGX 18,000,000.
+- KR2: raise six-month retainer renewal rate from 70% to 90%.
+- KR3: ship 12 monthly client reports with no missed deadlines.
 
-- KR1: Grow active retainer MRR from $18,000 to $28,000.
-- KR2: Move retainer 6-month renewal rate from 70% to 90%.
-- KR3: Ship 12 monthly client reports with zero missed deadlines.
+**Objective 2 (aspirational): become the obvious choice for authority website systems in our target segment.**
 
-**Objective 2 (Aspirational) — Establish category authority. Become the
-obvious choice for "Authority Website Systems" in our ICP.**
+- KR1: publish four cornerstone pages and eight pillar articles; raise organic sessions from 1,200 to 4,000 a month.
+- KR2: secure two speaking slots where the target buyer attends.
+- KR3: capture three case studies with a stated business outcome.
 
-- KR1: Publish 4 cornerstone pages + 8 pillar articles; move organic
-  sessions from 1,200 to 4,000 per month.
-- KR2: Land 2 speaking slots at industry events where ICP attends.
-- KR3: Capture 3 client case studies with stated business outcome.
+**Objective 3 (committed): productise delivery so a Foundation build ships in six weeks without the founder as bottleneck.**
 
-**Objective 3 (Committed) — Productise delivery so a Foundation build ships
-in 6 weeks without the founder as bottleneck.**
+- KR1: document the three-tier build playbook; every build this quarter follows it.
+- KR2: cut founder hours per Foundation build from 40 to 20.
+- KR3: post-launch satisfaction of 9/10 or higher on all builds.
 
-- KR1: Document the 3-tier build playbook; 100% of builds this quarter
-  follow it.
-- KR2: Founder hours per Foundation build drop from 40 to 20.
-- KR3: Post-launch CSAT >= 9/10 on 4 of 4 builds.
+Each team member writes one personal objective laddering to one of these. Three company plus five personal objectives is manageable and still ambitious.
 
-Each of 5 team members writes 1 personal Objective laddering to one of the
-above. Total: 3 company Objectives + 5 personal Objectives = 8 OKRs visible
-to everyone. Tight enough to manage; ambitious enough to matter.
+### Writing a good key result
 
-### How to write a Key Result well
+- Start the objective with a verb: launch, eliminate, establish.
+- Write KRs as "from X to Y" or "N of N".
+- Mix leading indicators (proposals sent, discovery calls booked) with lagging ones (revenue, retained clients). All lagging means no steering.
+- Favour outputs (organic sessions) over inputs (posts published); activity alone becomes theatre.
+- A KR is a result, not a task. "Write eight case studies" is a task. "Publish eight case studies and lift case-study-to-enquiry conversion from 1% to 3%" is a KR.
 
-- **Verb-first Objective**: "Dominate," "Launch," "Eliminate," "Establish."
-- **Quantitative KRs**: "from X to Y" or "ship N of N."
-- **Mix leading and lagging indicators.** Leading = inputs we control
-  (proposals sent, discovery calls booked). Lagging = outcomes (revenue,
-  retained clients). Every-KR-lagging = no steering possible.
-- **Mix input and output.** Input = activity (blog posts shipped). Output =
-  result (organic sessions). Favour output where possible — activity alone
-  becomes theatre.
-- **A KR is a result, not a task.** "Write 8 case studies" is a task list.
-  "Publish 8 case studies and lift case-study page conversion-to-inquiry
-  from 1.1% to 3%" is a KR.
+### Pitfalls
 
-### Cardinal pitfalls (Doerr names these explicitly)
+1. **Tying pay to OKR scores.** The main error: people sandbag. Let OKR history inform pay decisions, never determine them.
+2. **Vanity metrics as KRs.** "Increase awareness" fails; "raise aided recall from 18% to 28% in a named market by a date" passes.
+3. **Sandbagging.** Cure: explicit 0.7 target for aspirational OKRs.
+4. **Theatre.** Writing OKRs, never checking in, scoring everything green. Cure: weekly cadence, public scores, written reflection.
+5. **Too many.** Eleven priorities means none.
+6. **Top-down only.** Imposed OKRs have no commitment; aim for about half bottom-up.
+7. **Scores as punishment.** It kills risk-taking; scores are learning tools.
+8. **Lagging-only indicators.**
 
-1. **Tying compensation directly to OKR scores.** *The* cardinal mistake.
-   Bonus depends on hitting 1.0 → people sandbag. Grove: *"It is not a
-   legal document upon which to base a performance review."* Compensation
-   is informed by, never determined by, OKR history.
-2. **Vanity metrics dressed as KRs.** "Increase brand awareness" is not a
-   KR. "Move aided brand recall from 18% to 28% in [market] by [date]" is.
-3. **Sandbagging.** Setting KRs you know you'll hit. Cure: explicit 0.7
-   target for aspirational OKRs.
-4. **OKR theatre.** Writing OKRs for show, never checking in, scoring all
-   green at quarter end. Cure: weekly cadence; public scores; written
-   reflection.
-5. **Too many OKRs.** A team with 11 priorities has none. Cap at 3 to 5
-   Objectives.
-6. **Top-down only.** Imposed OKRs have no commitment. Aim for ~50%
-   bottom-up.
-7. **OKRs as a beating-stick.** Using scores to punish kills risk-taking.
-   Scores are learning instruments.
-8. **Lagging-only indicators.** Pair with leading indicators or you can't
-   course-correct.
+### OKRs versus KPIs
 
-### OKRs vs KPIs — the critical distinction
+- **KPIs** are health metrics: always-on, slow-moving (MRR, gross margin, satisfaction, uptime, churn, pipeline value, utilisation).
+- **OKRs** are change metrics: quarter-specific, moving something from X to Y.
 
-This is the foundation of everything in this file:
-
-- **KPIs are health metrics.** Always-on dashboards. They tell you whether
-  the business is alive and well. They change slowly. Examples: MRR,
-  gross margin, NPS, uptime, churn rate, pipeline value, utilisation.
-- **OKRs are change metrics.** Quarter-specific. Designed to move
-  something from X to Y. They target a gap, a push, a new capability.
-
-**Rule of thumb.** If a KR is something you'd report every month forever,
-it's a KPI, not a KR. Re-write it as a delta: "from X to Y by end of Q."
-
-For the agency: client monthly reports are KPI dashboards plus commentary.
-Internal agency OKRs are the quarterly change engine. Both matter. Each
-has its own document, its own audience, its own rhythm.
+Rule of thumb: if you would report it monthly forever, it is a KPI. Rewrite a KR as a delta ("from X to Y by quarter end") or move it to the dashboard.
 
 ---
 
-## Part 2 — Client KPI reporting (the monthly engine)
+## 2. Client KPI reporting
 
-The monthly client report (template: `monthly-report-template.md`) is a
-**KPI dashboard with plain-English commentary**. OKRs do not belong here —
-they are ours, not the client's.
+The monthly client report (`monthly-report-template.md`) is a KPI dashboard with commentary. OKRs do not appear in it. It answers one question: did this retainer earn its fee this month?
 
-The report answers one question: *Did this retainer earn its fee this
-month?*
+### Eight standing blocks
 
-### The 8 standing KPI blocks
-
-Every retainer report includes the relevant blocks for the retainer's
-scope. Not every block applies to every retainer — Care & Maintenance
-reports skip rankings; SEO reports skip CRO experiments — but the
-**format is identical** so the client experience is consistent.
+Use the blocks relevant to the retainer's scope; keep the format identical so the client experience is consistent.
 
 | Block | KPIs | Source |
 |-------|------|--------|
-| Traffic & visibility | Sessions, new users, channel mix, top landing pages, branded vs non-branded search share | GA4 |
-| Rankings | Tracked keywords movement, share-of-voice vs 3 competitors, featured-snippet wins | Search Console + Ahrefs/SEMrush |
-| Engagement | Avg engagement time, scroll depth, pages/session, bounce rate on money pages | GA4 |
-| Conversion | Inquiry form submissions, qualified leads (agency-scored), quote requests, phone clicks | GA4 + CRM |
-| Pipeline impact | Leads sourced, leads accepted by sales, opportunities created, revenue attributed | Client CRM |
-| Technical health | Core Web Vitals (LCP, INP, CLS), uptime, broken-link count, schema validity | PSI + crawler |
+| Traffic and visibility | Sessions, new users, channel mix, top landing pages, branded versus non-branded search share | Analytics |
+| Rankings | Tracked keyword movement, share of voice against three competitors, featured-result wins | Search Console plus a rank tracker |
+| Engagement | Engagement time, scroll depth, pages per session, bounce rate on key pages | Analytics |
+| Conversion | Enquiry form submissions, qualified leads (agency-scored), quote requests, phone and WhatsApp clicks | Analytics plus CRM |
+| Pipeline impact | Leads sourced, accepted by sales, opportunities created, revenue attributed | Client CRM |
+| Technical health | Core Web Vitals, uptime, broken links, schema validity | Speed test plus crawler |
 | Content shipped | Articles, case studies, pages published; internal links added | Project log |
-| Next month plan | 3 priorities + what we will test | Commentary |
+| Next-month plan | Three priorities and what we will test | Commentary |
 
-### Report rules
+### Report rules (non-negotiable)
 
-These rules are non-negotiable. Inherited from Doerr (clarity discipline)
-and Sheridan (radical transparency).
-
-1. **Every KPI has a delta.** Vs previous month. Vs same month last year
-   where data exists. A number with no comparison is not a KPI.
-2. **Commentary explains why the number moved**, not just that it moved.
-   "Organic traffic +18% vs last month — driven by 2 new articles ranking
-   on page 1 for [keyword cluster] which together generated 740 new
-   sessions." Not "organic traffic up."
-3. **One section called "What we changed"** lists the specific retainer
-   activities that produced the deltas. This is the proof that the
-   retainer earned its fee.
-4. **One section called "What we recommend"** proposes 2 to 3 bets for
-   the next 30 days. This translates insights into client action.
-5. **The report is written from the project log.** Per Session 11 rules
-   in MEMORY.md: no log entries → report refuses to proceed. No
-   fabrication.
-6. **Plain English, not jargon.** "CWV LCP improved 1.2s" is jargon.
-   "The site loads 1.2 seconds faster on mobile, which means visitors
-   are less likely to leave before the page finishes loading" is plain
-   English.
-7. **Attribution method named for every claim.** "Revenue attributable:
-   $42,000 — measured via first-touch URL on form submissions cross-
-   referenced with closed-won deals in your CRM." If we cannot name the
-   method, we cannot make the claim.
+1. Every KPI carries a delta against last month and, where data exists, the same month last year. A number without comparison is not a KPI.
+2. Commentary explains why a number moved, not just that it did. Example: "Organic traffic up 18%, driven by two new articles now on page one for the service cluster, adding about 740 sessions."
+3. A section titled "What we changed" lists the activities behind the deltas: the proof the retainer earned its fee.
+4. A section titled "What we recommend" proposes two or three bets for the next 30 days.
+5. Write from the project log. No log entries means the report does not proceed; never fabricate.
+6. Plain English. Say "the site loads 1.2 seconds faster on mobile, so fewer visitors leave before it appears", not "LCP improved 1.2 s".
+7. Name the attribution method for every claim, for example "revenue attributed via first-touch page on form submissions matched to closed-won deals in your CRM". If you cannot name the method, do not make the claim.
 
 ### Separation rule
 
-Do not show the client our internal OKR scorecard. Ever. The client sees:
+Never show the client the internal OKR scorecard. The client sees KPIs, commentary and recommendations. Internally we also see retainer-margin views, OKRs and continuous performance management (Section 3). Showing OKRs makes the relationship feel transactional; reading client KPIs as OKRs makes the team game client metrics instead of growing the agency.
 
-- KPIs (the monthly health dashboard).
-- Commentary (what happened and why).
-- Recommendations (what to do next).
+### Thresholds that trigger action (starting values; tune per client)
 
-We see (internally):
+| Event | Response |
+|-------|----------|
+| Traffic down over 25% month on month | Diagnostic email within 24 hours; call within three business days |
+| Conversion rate down over 30% | Same protocol |
+| Critical search event (de-indexing, target-query ranking down over 50%) | Diagnostic within one business day; recovery plan within three |
+| Downtime over one hour | Immediate notice; post-incident report within 24 hours |
+| Bounce rate on a key page over 80% | Flag in next report with hypothesis and test |
+| CRM lead-quality score down two points | Raise at next call; investigate channel attribution |
 
-- KPIs (same dashboard, with extra retainer-margin views).
-- OKRs (this quarter's change targets).
-- CFRs (continuous performance management — see below).
-
-Mixing the two corrupts both. Clients reading "we missed our OKR for
-acquiring you" experience the relationship transactionally; the team
-reading client KPIs as their OKRs starts gaming for client metrics
-instead of agency growth.
-
-### KPI thresholds that demand action
-
-Each retainer has thresholds that, when crossed, trigger an out-of-band
-conversation with the client (not waiting for the monthly call):
-
-- **Traffic drop > 25% month-over-month** → diagnostic email within 24
-  hours; phone call scheduled within 3 business days.
-- **Conversion rate drop > 30%** → same protocol.
-- **Critical SEO event** (de-indexation, ranking drop > 50% on a target
-  query) → diagnostic within 1 business day; recovery plan within 3.
-- **Site downtime > 1 hour** → real-time notification + 24-hour
-  post-incident report.
-- **Bounce rate on a money page > 80%** → flag in next monthly report
-  with hypothesis and proposed test.
-- **Lead quality score (CRM) drops 2 points** → flag at next monthly call;
-  investigate channel attribution.
-
-These thresholds are not OKRs. They are operational health indicators.
-Crossing one means *act*, not *score*.
+These are operational health indicators, not OKRs. Crossing one means act, not score.
 
 ---
 
-## Part 3 — CFRs (continuous performance management)
+## 3. Continuous performance management: conversations, feedback, recognition
 
-Doerr's "younger sibling" framework: Conversations, Feedback, Recognition.
-Adobe killed its annual review in 2012 (saving 80,000 manager hours per
-year) and replaced it with CFRs. The agency does the same.
+Replace the annual review with frequent short loops.
 
-### The minimum viable CFR programme for a 5-person senior team
+- **Weekly one-to-one** (30 minutes): KR status, blockers, one piece of feedback each way, one career thought. No forms.
+- **Peer feedback and recognition channel:** a kudos channel; feedback delivered within 72 hours of the work, in person or in a thread.
+- **Monthly retrospective** (one hour): what went well, what did not, what to change; ten minutes per column. Record decisions in the project log.
+- **Quarterly growth conversation** (60 minutes), separate from OKR scoring: which capability to build, and how the founder supports it.
+- **No annual review.** Review pay on its own annual cycle, informed by OKR history.
 
-- **Weekly 1:1** (founder ↔ each team member). 30 minutes. Agenda:
-  KR status, blockers, one piece of feedback in each direction, one
-  career-growth thought. No forms.
-- **Peer-to-peer feedback channel** in Slack/Discord. A `#kudos` channel
-  for recognition (R). Norm that feedback (F) is delivered within 72
-  hours of the relevant work, in person or in a threaded message.
-- **Monthly retrospective** (1 hour). What went well / what didn't /
-  what to change. Three columns. Ten minutes per column. Decisions land
-  in `project-log/` as ADRs.
-- **Quarterly growth conversation** (60 min). Separate from OKR scoring.
-  Forward-looking: what capability do you want to build this quarter?
-  How does the founder support that?
-- **No annual review.** The weekly + quarterly cadence *is* the review.
-  Compensation is reviewed on its own annual cycle, informed by — not
-  determined by — OKR history.
-
-### Anti-theatre rules
-
-- No ratings, rankings, or stack-ranking.
-- No 360-degree feedback surveys. Feedback is given directly and
-  promptly.
-- No self-assessment forms. OKR reflection *is* the self-assessment.
-- No HR software. A shared doc and a weekly 1:1 suffice at 5 people.
-
-If the agency grows beyond 12 people, add structure (formal review
-schedule, role-based KR templates, capacity-planning tooling). Below 12,
-the lightweight CFR programme above is sufficient.
+**Anti-theatre rules:** no ratings or stack-ranking; no 360 surveys; no self-assessment forms (the OKR reflection is the self-assessment); no HR software at five people. Add structure (review schedule, role-based KR templates, capacity tooling) beyond about 12 staff.
 
 ---
 
-## Part 4 — The founder's monthly dashboard (the agency itself)
+## 4. Founder's monthly dashboard
 
-Beyond client KPIs and internal OKRs, the founder needs a **subscription-
-business dashboard** that tracks the agency itself as a recurring-revenue
-business. Per `subscription-economy-model.md` and Tzuo's *Subscribed*:
+Beyond client KPIs and internal OKRs, the founder reads the agency as a recurring-revenue business (definitions in `subscription-economy-model.md`).
 
-| Metric | Target | Cadence |
-|--------|--------|---------|
-| Active retainer MRR | Grows quarter-over-quarter | Weekly |
-| Net new retainer ARR | Per quarter target by tier | Weekly |
-| Logo churn (retainers cancelled this month) | < 5% per quarter | Weekly |
-| Revenue churn ($ ARR cancelled this month) | < 5% per quarter | Weekly |
-| Net retention (NRR) | >= 110% | Quarterly |
-| Gross retention (GRR) | >= 90% | Quarterly |
-| ARPA (avg revenue per account) | Trends up annually | Quarterly |
-| Growth Efficiency Index (GEI) | < $1.50 of S&M per $1 of new ARR | Quarterly |
-| LTV : CAC | >= 3:1 | Quarterly |
+| Metric | Starting target | Cadence |
+|--------|-----------------|---------|
+| Active retainer MRR | Rising quarter on quarter | Weekly |
+| Net new retainer ARR | Quarterly target by tier | Weekly |
+| Logo churn | Under 5% per quarter | Weekly |
+| Revenue churn | Under 5% per quarter | Weekly |
+| Net revenue retention | 110% or more | Quarterly |
+| Gross revenue retention | 90% or more | Quarterly |
+| ARPA | Rising annually | Quarterly |
+| Growth efficiency (S&M spend per unit of new ARR) | Track the trend | Quarterly |
+| LTV:CAC | 3:1 or better | Quarterly |
 | Recurring profit margin | 60%+ | Monthly |
-| Build pipeline value | 90 days of capacity always covered | Weekly |
-| Retainer renewal rate (12-month) | >= 90% | Annually |
-| Number of clients on 2+ retainers | Trends up | Quarterly |
+| Build pipeline value | 90 days of capacity covered | Weekly |
+| 12-month renewal rate | 90% or more | Annually |
+| Clients on two or more retainers | Rising | Quarterly |
 
-This dashboard is for the founder and senior leadership. It is the master
-view that informs which OKRs to set each quarter.
-
----
-
-## Direct quotes for client and team materials
-
-For internal team materials (OKR rollouts, retros):
-
-1. *"Ideas are easy. Execution is everything."* — Doerr
-2. *"If you try to focus on everything, you focus on nothing."* — Doerr
-3. *"For the feedback to be effective, it must be received very soon
-   after the activity it is measuring occurs."* — Andy Grove
-4. *"In our business we have to set ourselves uncomfortably tough
-   objectives, and then we have to meet them."* — Grove
-5. *"The OKR system is meant to pace a person — to put a stopwatch in
-   his own hand so he can gauge his own performance. It is not a legal
-   document upon which to base a performance review."* — Grove
-6. *"We do not learn from experience… we learn from reflecting on
-   experience."* — John Dewey (cited by Doerr)
-
-For client retainer reports and reviews:
-
-1. *"What gets measured gets managed."* — Drucker (cited widely)
-2. *"You cannot grow what you cannot see."* — agency operating principle
+This dashboard informs which OKRs to set each quarter.
 
 ---
 
-## Summary — the discipline in one paragraph
+## 5. Summary
 
-The agency runs **two measurement systems**: client-facing KPI dashboards
-that prove every retainer earns its fee, and internal quarterly OKRs that
-focus the team on the following quarter's change targets. The two never mix.
-KPIs are reported monthly to clients in plain English, with deltas, with
-attribution methods named, with recommendations. OKRs are quarterly,
-public to the team, capped at 3 to 5 Objectives, mixed committed and
-aspirational, scored 0.0 to 1.0 with written reflections, and *never tied
-to compensation*. CFRs replace the annual review with weekly 1:1s,
-real-time peer feedback, public recognition, and quarterly growth
-conversations. Above this, the founder reads a third dashboard — the
-subscription-business dashboard — that views the agency itself as a
-recurring-revenue business. Three views, one operating system.
+Two systems, never mixed. Client KPIs: monthly, plain English, with deltas, named attribution and recommendations. Internal OKRs: quarterly, team-visible, three to five objectives, mixed committed and aspirational, scored 0.0 to 1.0 with written reflection, never tied directly to pay. Performance management runs on weekly one-to-ones, prompt feedback, recognition and quarterly growth talks. The founder adds a third view, the recurring-revenue dashboard. Three views, one operating system.
+
+Short lines for team materials (write your own): execution matters more than ideas; focus on everything and you focus on nothing; feedback works best soon after the work; OKRs pace the team, they are not a performance-review document; reflection turns experience into learning; what gets measured gets managed.
 
 ---
 
-## Source
+## Sources
 
-Doerr, John. *Measure What Matters: How Google, Bono, and the Gates
-Foundation Rock the World with OKRs.* Portfolio, 2018. Extract at
-`C:/temp/books/measure-what-matters.txt`.
+- Doerr, John (2018) *Measure What Matters*, Portfolio. Informed the objectives-and-key-results method, the committed/aspirational scoring approach and the continuous-feedback model.
+- Tzuo, Tien, with Gabe Weisert (2018) *Subscribed*, Portfolio. Informed the founder's recurring-revenue dashboard.

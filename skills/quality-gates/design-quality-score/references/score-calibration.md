@@ -85,12 +85,12 @@ our standard."
 
 ---
 
-## Resolving scorer disagreements (added 2026-05-04 from Fekeshazi)
+## Resolving scorer disagreements
 
-Source: `fekeshazi-pm-ux-guide-extraction.md` Section 3.4 (User Research as Decision-Arbiter).
+Source: Fekeshazi, Z. (c. 2017) *Product Managers' Guide to UX Design*, UX Studio (user research as the decision arbiter), paraphrased.
 
 ### The principle
-> "Have you had a meeting when there was an important question and all participants had different opinions? How did you decide? Or even worse: who decided? Why don't you let the users answer these questions?"
+When scorers disagree and opinion cannot settle it, ask who decides and on what basis; let user evidence answer the question.
 
 When two scorers disagree on a category by ≥ 2 points (e.g., one says 6, another says 8), the tiebreaker is **not** the senior scorer's opinion. The tiebreaker is **fresh user-test data** addressing the disputed dimension.
 

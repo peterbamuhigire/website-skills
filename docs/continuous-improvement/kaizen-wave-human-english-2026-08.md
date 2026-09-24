@@ -1,5 +1,8 @@
 # Kaizen Wave — Human English for Website Content
 
+> **Historical record.** The `book-extractions/` folder named below was removed on 2026-09-24 under the owner's copyright rule; its capabilities now live in skill references (see the capability preservation map in the 2026-09-24 Kaizen record `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
+
+
 Date: 2026-08-27
 Scope: pages, landing pages, blogs, SEO/GEO assets, CTAs, forms, error messages, emails, and support messages.
 

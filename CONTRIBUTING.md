@@ -1,6 +1,6 @@
 # Contributing to Website Skills
 
-This repository accepts changes that preserve the 59-skill portable catalogue, domain knowledge, routing clarity, and release evidence.
+This repository accepts changes that preserve the 62-skill portable catalogue, domain knowledge, routing clarity, and release evidence.
 
 ## Author or update a skill
 
@@ -10,6 +10,7 @@ This repository accepts changes that preserve the 59-skill portable catalogue, d
 4. Keep the entrypoint at 500 lines or fewer. Put background, long schemas, catalogues, and cases in directly linked `references/` files; new extracted references link back to the parent skill.
 5. Add or update positive, negative, collision, limited-capability, and failure fixtures in `tests/routing/fixtures.json` when routing changes.
 6. Run `skill-safety-audit` for a material skill change.
+7. Never store book extractions or book summaries in the repository. Turn a book method into a task-oriented reference in original words with a brief citation.
 
 ## Local gates
 
@@ -17,6 +18,8 @@ This repository accepts changes that preserve the 59-skill portable catalogue, d
 python -X utf8 scripts/validate-skill-registry.py
 python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
 python -X utf8 scripts/routing-smoke-test.py
+python -X utf8 scripts/validate-search-doctrine.py
+python -X utf8 scripts/source_ingestion_guardrail.py
 python -m pytest -q
 ```
 

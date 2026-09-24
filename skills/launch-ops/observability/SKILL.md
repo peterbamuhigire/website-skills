@@ -81,6 +81,7 @@ Recovery: repair the failing source or configuration, then rerun preflight and p
 | Source-reachability record | Monthly reporting | Each source has an observed status and timestamp. |
 
 ## References
+- [rum-attribution-and-segmentation.md](references/rum-attribution-and-segmentation.md) — read when extending RUM with the attribution build, segments and p75 aggregation.
 
 - [RUM implementation](references/rum-implementation.md)
 - [Error tracking](references/error-tracking.md)
@@ -114,6 +115,7 @@ When provider access, network, credentials, production traffic, or alert deliver
 | Source health fails | Block dependent reporting and investigate | False business conclusions |
 | Alert has no actionable response | Redesign or remove it | Alert fatigue |
 | Production authority is absent | Stop at preflight plan | Unauthorised collection or mutation |
+| INP needs enforcing | Enforce INP at p75 from RUM or CrUX with the attribution build; use TBT only as the lab proxy | Asserting a metric Lighthouse navigation runs cannot measure |
 
 ## Worked Example
 

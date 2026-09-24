@@ -19,8 +19,10 @@ and avoid the common failure modes.
   Usually reported as a p-value or as a confidence interval.
 - **Power** — the probability the test would detect a real effect of
   the size the team cares about. Standard: 80%.
-- **Confidence level** — the probability that the true effect lies
-  inside the reported confidence interval. Standard: 95%.
+- **Confidence level** — the long-run share of intervals, built the same
+  way over many repeated tests, that would contain the true effect.
+  Standard: 95%. It is not the probability that the true effect lies in
+  this particular interval.
 - **False positive** — concluding an effect exists when it does not.
   Standard cap: 5% (α = 0.05).
 - **False negative** — concluding no effect exists when it does. Linked

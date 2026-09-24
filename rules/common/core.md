@@ -28,3 +28,17 @@ Where this engine already has a runnable check (`a11y-gate.sh`,
 `design-quality-score.sh`, `check-security-headers.sh`, `drift-check.sh`), run it
 — do not restate its judgement from memory. If it has not been wired as an
 automatic hook yet, running it manually before delivery is still mandatory.
+
+## Book extractions and book summaries are never stored in this repository
+
+Books are concept inputs only. Turn a book's method into a task-oriented skill
+reference in original words with a brief citation (author, year, title,
+publisher); keep verbatim quotes under 25 words and rare; route every volatile
+claim through the Digital Research currentness gate. Never create a
+`book-extractions/` (or similar) folder or a book-summary file.
+
+## Lab performance results are not user experience
+
+Lab gates block deploy; field Core Web Vitals at the 75th percentile decide
+success. Label every performance number as lab or field with its profile or
+percentile, period and tool version. Never promise a Lighthouse score.

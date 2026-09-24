@@ -68,7 +68,7 @@ Read and search are required to gather source samples. Running `scripts/banned-p
 
 ## Degraded Mode
 
-If fewer than 5 samples are available but at least one clearly attributable sample exists, return the narrowest qualified profile: build only the sections the samples support, mark it `low-confidence`, and mark every unconfirmed trait `not assessed` rather than guessed. If zero real samples exist, do not build a profile — return to `Do Not Use When` and route to sourcing.
+Fallback when writing samples are unavailable or too few: if fewer than 5 samples are available but at least one clearly attributable sample exists, return the narrowest qualified profile: build only the sections the samples support, mark it `low-confidence`, and mark every unconfirmed trait `not assessed` rather than guessed. If zero real samples exist, do not build a profile — return to `Do Not Use When` and route to sourcing.
 
 ## Decision Rules
 

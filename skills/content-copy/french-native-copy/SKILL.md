@@ -90,6 +90,7 @@ Recovery: repair meaning, register, or grammar findings, then rerun the native-c
 | Review findings | Author or approver | Each issue shows the original, correction, reason, and severity. |
 
 ## References
+- [advanced-grammar-and-connector-tables.md](references/advanced-grammar-and-connector-tables.md) — read when needing the extended subjunctive and verb lists, connector tables and register pairs.
 
 - [Register and address](references/register-and-address.md)
 - [Grammar pitfalls](references/grammar-pitfalls.md)

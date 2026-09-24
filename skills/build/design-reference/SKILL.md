@@ -77,11 +77,13 @@ If browsing, authentication, rendering, or responsive inspection is unavailable,
 | Pattern conflicts with constraints | Adapt and record the constraint | Infeasible direction |
 | Pattern depends on unverified behaviour | Mark unassessed and request evidence | False certainty |
 | Pattern is distinctive to another brand | Reject or abstract the principle | Imitation and IP risk |
+| Client asks for a trendy or bold look | Answer the style-fit questions (stigma to overcome, mobile job map, maintenance) and hand route options to design-system-skills `art-direction-routes` | Style chosen by fashion, not fit |
 
 ## Worked Example
 Given three law-firm references, record that two expose sector-specific proof beside the first enquiry CTA, adapt that principle to verified client matters, and reject copying their imagery or typography. Give `design-system` a proof-placement rule, not a mood-board adjective.
 
 ## References
+- [style-fit-questions-and-direction-handoff.md](references/style-fit-questions-and-direction-handoff.md) — read when asking style-fit questions (stigma to overcome, mobile job map, maintenance), testing unusual layouts, flagging style cost, building a borrow map, and handing art direction to design-system-skills.
 - Use `references/competitor-analysis-worksheet.md` to analyse competitors as positioning and trust inputs, not just design inspiration.
 - Use `references/research-synthesis-template.md` to turn reference and sector analysis into differentiated design direction.
 - Use `references/reference-library-analysis.md` for PDF, image, screenshot, or catalogue inputs.

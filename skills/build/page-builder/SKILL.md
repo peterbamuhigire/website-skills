@@ -85,11 +85,21 @@ When build, browser, device, font, or network capability is unavailable, impleme
 | Content or claim is unapproved | Stop that section and request the source | Fabricated copy |
 | Component has interactive states | Implement and test every applicable state | Dead-end UX |
 | Framework contract conflicts with brief | Preserve repository behaviour and escalate | Breaking the build |
+| Page needs chat, map, video or social feed | Use the zero-JS substitute (WhatsApp and tap-to-call, static map, poster) or a three-phase facade | Third-party scripts that break the performance budget |
+| Component was drafted by an AI assistant | Run the AI-generated code performance review before merge | Correct-looking code that harms LCP, INP, CLS or accessibility |
+| Content page would need client-side hash routing | Give every page a real URL with its content in the initial HTML; use cross-document view transitions only as an enhancement where supported | Weak crawlability and extra round trips |
 
 ## Worked Example
 Implement a multilingual service template from the approved page-goal matrix, bind locale-safe routes and catalogued imagery, emit the agreed schema and CTA event, then verify build output, keyboard focus, missing-content behaviour, and the mobile layout before marking the route accepted.
 
 ## References
+- [third-party-facades.md](references/third-party-facades.md) — read when a page needs chat, maps, video, social feeds or reviews: zero-JS substitutes, WhatsApp and phone contact, three-phase facades.
+- [inp-safe-interaction-patterns.md](references/inp-safe-interaction-patterns.md) — read when building interactive islands or fixing field INP above 200 ms.
+- [navigation-mobile-and-form-pattern-rules.md](references/navigation-mobile-and-form-pattern-rules.md) — read when designing navigation, mobile patterns and form structure.
+- [scan-first-page-and-goodwill-rules.md](references/scan-first-page-and-goodwill-rules.md) — read when making pages work at a glance, wording links and protecting visitor goodwill.
+- [form-question-wording-and-data-design.md](references/form-question-wording-and-data-design.md) — read when deciding which questions a form asks and how they are worded.
+- [form-layout-flow-and-validation-rules.md](references/form-layout-flow-and-validation-rules.md) — read when laying out forms, flow, validation and error messages.
+- [section-and-page-type-blueprints.md](references/section-and-page-type-blueprints.md) — read when choosing section and page-type blueprints.
 - `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
 - `../website-builder/references/narrative-information-architecture-and-empathy.md` — translate audience empathy, narrative sequence, proof, choice, and recovery into page implementation.
 - `references/authority-content-matrix.md` — content architecture by page type, cornerstone pages, pillar + cluster system, editorial ops. Use when planning the content system for Growth / Authority tiers.
@@ -107,7 +117,7 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 
 ## Book-informed practice route
 
-Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for whole-journey acceptance, actionable diagnostics, and realistic content/state checks.
+Use [journey acceptance and friction evidence](../../orchestration/website-builder/references/journey-acceptance-and-friction-evidence.md) for whole-journey acceptance, actionable diagnostics, and realistic content/state checks.
 <!-- dual-compat-end -->
 ## Notes
 - Route upstream to `launch-campaigns` when page states or CTA swaps depend on campaign timing.

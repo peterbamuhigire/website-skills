@@ -93,6 +93,9 @@ For a Ugandan accounting firm with documented payroll-review expertise but no ca
 <!-- dual-compat-end -->
 
 ## References
+- [price-strategy-and-discount-policy.md](references/price-strategy-and-discount-policy.md) — read when setting price strategy, discount policy and price-rise rules.
+- [diagnostic-entry-offers.md](references/diagnostic-entry-offers.md) — read when choosing a diagnostic entry offer, a niche cheat-sheet funnel or a reputation audit.
+- [monthly-topical-webinar-engine.md](references/monthly-topical-webinar-engine.md) — read when running monthly topical webinars as an inbound source.
 - `references/offer-ladder.md` - offer-type selection, friction rules, pricing posture, and ascension paths.
 - `references/channel-economics.md` - traffic-source fit, retargeting posture, list-building economics, and measurement.
 

@@ -16,6 +16,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - The brief includes a launch window, deadline, waitlist, event, cohort, enrolment period, announcement, relaunch, or offer push.
 - The website needs coordinated prelaunch, launch, and follow-up assets instead of a single isolated page.
 - The task needs campaign sequencing tied to website pages, blog content, email, WhatsApp, or CTA routing.
+- A marketing or ad campaign hands over a landing-page brief, message-match table, UTM convention, and conversion events that the website must accept, build, tag, and verify.
 
 ## Do Not Use When
 - The work is only evergreen page copy with no campaign timing.
@@ -98,6 +99,8 @@ For a Kampala training cohort closing on 30 September, map a proof-led article t
 <!-- dual-compat-end -->
 
 ## References
+- [channel-to-site-handoff-receiving.md](references/channel-to-site-handoff-receiving.md) — read when a marketing campaign will send traffic to a page this engine builds: accepting the landing-page brief, message match, UTM and event definitions.
+- [touchpoint-consistency-audit.md](references/touchpoint-consistency-audit.md) — read when checking ads, page, scripts, reviews and imagery tell one story before paid traffic starts.
 - `references/website-launch-sequence-framework.md` — primary framework for campaign stages, asset mapping, CTA posture, proof use, and Africa-adapted launch guidance.
 
 ## Notes

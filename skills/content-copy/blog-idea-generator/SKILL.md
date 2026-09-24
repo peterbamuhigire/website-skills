@@ -75,6 +75,7 @@ Recovery: repair the evidence or scope, then rerun clustering and collision revi
 | Cluster or series map | SEO and campaign owners | Relationships and publishing order are explicit with no duplicate intent. |
 
 ## References
+- [topic-prompts-segments-events-and-owned-material.md](references/topic-prompts-segments-events-and-owned-material.md) — read when generating topics from segments, events and owned material.
 
 - [Legacy detailed guidance](references/legacy-guidance.md) for preserved interview and output conventions.
 - [Ideation frameworks](references/ideation-frameworks.md) for selecting a method from the evidence available.

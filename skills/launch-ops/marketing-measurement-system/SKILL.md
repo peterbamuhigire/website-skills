@@ -82,6 +82,8 @@ Recovery: repair metric definitions or source lineage, then rerun reconciliation
 | Monthly evidence and quarterly review templates | `monthly-report` and leadership | Each view supports named decisions and records data quality. |
 
 ## References
+- [one-metric-kpi-contract.md](references/one-metric-kpi-contract.md) — read when choosing the quarter's one metric, admitting a KPI, or receiving UTM conventions and conversion events from social-media-skills.
+- [model-metric-definitions-and-lead-arithmetic.md](references/model-metric-definitions-and-lead-arithmetic.md) — read when writing metric formulas for a business model or back-solving enquiry targets from sales capacity.
 
 - [KPI tree and definitions](references/kpi-tree-and-definitions.md)
 - [Customer insight loop](references/customer-insight-loop.md)
@@ -114,6 +116,7 @@ When source access, reliable history, network, or analytics tooling is unavailab
 | Sources disagree materially | Reconcile before interpretation | False driver narratives |
 | Direct outcome is delayed | Use validated leading indicator with guardrail | Optimising a weak proxy |
 | Collection lacks consent or purpose | Remove or redesign | Privacy and trust harm |
+| Campaign measurement definitions arrive from social-media-skills | Adopt the UTM convention and event names as supplied, map them to site events, test each event and record the date | Two competing conventions and double-counted conversions |
 
 ## Worked Example
 

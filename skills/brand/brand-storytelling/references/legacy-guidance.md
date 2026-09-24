@@ -18,7 +18,7 @@ If any page draft positions the brand as hero, rewrite it.
 
 ## StoryBrand SB7 BrandScript
 
-The SB7 Framework (Donald Miller — *Building a StoryBrand*) is the practical implementation of the central rule. It maps all brand messaging to a 7-element narrative structure. Full details and worksheets: `book-extractions/storybrand-sb7-framework.md`.
+The SB7 Framework (Donald Miller — *Building a StoryBrand*) is the practical implementation of the central rule. It maps all brand messaging to a 7-element narrative structure. Full details and worksheets: [SB7 BrandScript worksheet](sb7-brandscript-worksheet.md).
 
 ### The 7 Elements
 

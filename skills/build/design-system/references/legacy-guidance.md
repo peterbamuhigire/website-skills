@@ -310,7 +310,7 @@ All button tiers (primary/secondary/tertiary) must share the same `border-radius
 
 ### 9. Tidwell Layout Architecture Patterns
 
-From *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 2020). Full pattern reference: `book-extractions/tidwell-cognition-visual-patterns.md`.
+From *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 2020). Full pattern reference: [behaviour and visual pattern rules](behaviour-and-visual-pattern-rules.md).
 
 **Visual Framework** — shared identity across every page.
 - Every page shares: logo position, primary nav, utility nav, footer, font hierarchy, and colour use.

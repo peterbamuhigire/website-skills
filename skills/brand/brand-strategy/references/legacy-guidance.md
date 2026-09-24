@@ -315,7 +315,7 @@ The output of this skill is `docs/brand-brief.md`. This file is the single sourc
 
 ## Step 10: SB7 BrandScript Synthesis
 
-After completing Steps 1–9, synthesise the brand brief into a one-page SB7 BrandScript. The BrandScript translates brand strategy into message architecture — the 7 elements that govern all website copy, sales scripts, and marketing collateral. Full SB7 rules: `book-extractions/storybrand-sb7-framework.md`.
+After completing Steps 1–9, synthesise the brand brief into a one-page SB7 BrandScript. The BrandScript translates brand strategy into message architecture — the 7 elements that govern all website copy, sales scripts, and marketing collateral. Full SB7 rules: [SB7 BrandScript worksheet](../../brand-storytelling/references/sb7-brandscript-worksheet.md).
 
 Complete each element using information already captured in `docs/brand-brief.md`:
 

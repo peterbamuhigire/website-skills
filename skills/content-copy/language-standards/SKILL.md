@@ -99,7 +99,7 @@ Recovery: repair the source meaning or locale decision, then rerun the parity re
 
 ## Human-English overlay
 
-Load [`human-english-craft-synthesis-2026.md`](../../../book-extractions/human-english-craft-synthesis-2026.md) for English copy, headings, CTAs, and microcopy. Apply its reader/purpose, genre/spine, evidence, sentence, and proof passes. Preserve correct regional usage; do not make copy sound “human” through errors, forced slang, or fake warmth.
+Load [the Human-English five-pass review](references/human-english-five-pass-review.md) for English copy, headings, CTAs, and microcopy. Apply its reader/purpose, genre/spine, evidence, sentence, and proof passes. Preserve correct regional usage; do not make copy sound “human” through errors, forced slang, or fake warmth.
 
 ## Evidence Produced
 

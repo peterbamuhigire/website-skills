@@ -82,6 +82,7 @@ Without representative renders, fonts, or rubric evidence, return the narrowest 
 If the homepage is distinctive but three interior templates use generic utilities, score the sampled evidence rather than averaging from the homepage and route the cause to cross-page consistency.
 
 ## References
+- [ai-generated-code-performance-review.md](references/ai-generated-code-performance-review.md) — read when reviewing or prompting AI-generated components for LCP, INP, CLS, states and accessibility before merge.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 

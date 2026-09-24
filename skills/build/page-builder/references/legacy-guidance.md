@@ -487,7 +487,7 @@ Apply `content-writing` skill and `references/website-copywriting.md` to all cop
 
 ## Tidwell Navigation and Mobile Rules
 
-Full patterns: `book-extractions/tidwell-navigation-mobile-forms.md`.
+Full patterns: [navigation, mobile and form pattern rules](navigation-mobile-and-form-pattern-rules.md).
 - **Clear Entry Points:** 2-4 task-oriented "front doors" on landing pages — visually dominate over utility nav
 - **Escape Hatch:** every constrained page (wizard, modal, 404) needs a visible route back; clickable logo = escape hatch
 - **Breadcrumbs:** required >2 levels deep — Home > Category > Current Page, each item except current is a link

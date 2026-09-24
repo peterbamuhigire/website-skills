@@ -225,34 +225,62 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine
-- Thresholds in `lighthouserc.json` and `performance-budgets.json` are
-  calibrated for African 3G mobile reality (1.6 Mbps, 300ms RTT, 4x CPU
-  slowdown); see `skills/launch-ops/deploy/references/africa-calibration.md`
+- Thresholds in `lighthouserc.json` and `performance-budgets.json` are set
+  against a deliberate low-end stress profile (WebPageTest "3G" values:
+  1.6 Mbps, 300 ms RTT, with a 4x CPU slowdown and Lighthouse mobile
+  emulation). It is a worst-case floor, not a market median; see
+  `skills/launch-ops/deploy/references/africa-calibration.md` and
+  `docs/source-registers/performance-currentness-2026-09-23.json`. Lab gates
+  block deploy; field Core Web Vitals at p75 decide success. INP is enforced
+  from field/RUM data, never from Lighthouse navigation runs.
+- `scripts/perf-gate.sh` enforces every budget category through
+  `scripts/route-weight-budget.mjs` and runs `scripts/html-perf-lint.mjs`.
 
 ## Direct-Response Copy for Sales Pages
 
 When building landing pages, sales pages, VSL scripts, webinar funnels,
 book funnels, order pages, upsell/OTO pages, or application pages, use
-the `long-form-sales-copy` skill, which applies:
+the `long-form-sales-copy` skill, which applies the engine's own
+procedures (informed by Kennedy and Brunson, cited in each reference):
 
-- Kennedy's 28-step Ultimate Sales Letter system (headline, Johnson Box,
-  Damaging Admission, Hidden Benefit, value stack, Beat the Price,
-  Creative P.S., Power of a Sequence)
-- Brunson's funnel scripts (Star-Story-Solution 35-beat long-form,
-  Perfect Webinar close, OTO Bump, Soap Opera + Seinfeld email
-  sequences, 7 phases of a lead, 100-Visitor Test)
-- Kennedy's 5 Propositions stack (USP + UVP + Irresistible Offer +
-  Unique Safety Proposition + Unique Experience Proposition)
+- a sales-letter build procedure in six workstreams (promise and
+  headline, credibility and honest admissions, offer and value build,
+  risk reversal and guarantee, close and postscript, sequence and
+  follow-up)
+- funnel scripts in five movements, plus webinar closes, one-time
+  offers, follow-up email sequences, the phases of a lead and a
+  100-visitor test
+- an offer-proposition stack (unique selling, value, offer, safety and
+  experience propositions) with copy-level price framing
 
-Full primary-source extractions live in `book-extractions/`:
-`kennedy-ultimate-sales-letter-extraction.md`,
-`brunson-dotcomsecrets-ignite-extraction.md`,
-`kennedy-no-bs-sales-success-extraction.md`,
-`kennedy-no-bs-price-strategy-extraction.md`.
+The working procedures live in task-oriented references:
+`skills/content-copy/long-form-sales-copy/references/sales-letter-build-procedure.md`,
+`funnel-scripts-and-sequences.md` and `offer-propositions-and-price-framing.md`;
+price strategy in `skills/agency-ops/authority-offers/references/price-strategy-and-discount-policy.md`;
+premium selling in `skills/agency-ops/premium-sales-conversation/references/sales-process-and-takeaway-selling.md`.
+Pricing and packages pages use
+`skills/content-copy/sales-copywriting/references/pricing-page-choice-architecture.md`;
+headline generation and the mandatory direct-response ethics filter use
+`skills/content-copy/sales-copywriting/references/headline-families-and-ethics-filter.md`.
 
-For brand-level messaging, use `book-extractions/storybrand-sb7-framework.md`
-(customer = hero, brand = guide) as the upstream foundation; Kennedy and
-Brunson then drive the actual sales-page copy.
+For brand-level messaging, use
+`skills/brand/brand-storytelling/references/sb7-brandscript-worksheet.md`
+(customer = hero, brand = guide) as the upstream foundation; the long-form
+procedures then drive the actual sales-page copy.
+
+## Book Sources Are Never Stored Here (owner rule, 2026-09-24)
+
+Book extractions, book summaries and raw book text must never be stored in this
+repository. Books are durable concept inputs only: turn a method into a
+task-oriented skill reference (procedure, checklist, template, decision rules,
+phrase bank) written in original words, cite the book briefly (author, year,
+title, publisher), keep verbatim quotes under 25 words and rare, and put any
+volatile claim through the Digital Research currentness gate. The former
+`book-extractions/` folder was removed on 2026-09-24; its capability
+preservation map is recorded in
+`docs/continuous-improvement/book-source-retirement-2026-09-24.md`.
+`scripts/source_ingestion_guardrail.py` rejects any file placed in a
+`book-extractions/`, `book-dumps/`, `raw-books/` or `source-books/` directory.
 
 <!-- design-system-skills:trigger v1 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)

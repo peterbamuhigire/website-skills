@@ -81,6 +81,12 @@ Without rendering, fonts, assets, or the external doctrine, return the narrowest
 For a Kampala advisory firm, choose a licensed editorial serif supported by its authority positioning, pair it with a compact sans for mobile utility, and test both under the 3G font budget before handoff.
 
 ## References
+- [ux-strategy-differentiation-and-meaning.md](references/ux-strategy-differentiation-and-meaning.md) — read when framing UX strategy, differentiation and the no-untested-launch evidence rule.
+- [lean-design-cycle-and-deliverable-selection.md](references/lean-design-cycle-and-deliverable-selection.md) — read when choosing lean design cycles and the right deliverable.
+- [enterprise-internal-tools-and-portal-ux.md](references/enterprise-internal-tools-and-portal-ux.md) — read when designing internal tools or client portals.
+- [ai-feature-discovery-and-risk-framing.md](references/ai-feature-discovery-and-risk-framing.md) — read when deciding whether and how to add an AI feature.
+- [ai-interface-trust-and-control-spec.md](references/ai-interface-trust-and-control-spec.md) — read when specifying trust, control and correction for AI interfaces.
+- [ux-discovery-and-wireframe-procedure.md](references/ux-discovery-and-wireframe-procedure.md) — read when running UX discovery, journey grids, sitemaps and wireframes.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 

@@ -207,7 +207,7 @@ If a proposal guarantees AI Overview placement, replace it with a scoped program
 
 ## Book-informed planning lens (qualified)
 
-Use [the Carter independent synthesis](../../../book-extractions/carter-new-rules-ai-search-synthesis-2026.md)
+Use [AI-search response-mode planning](references/ai-search-response-mode-planning.md)
 as a durable planning input, never as authority for current platform behaviour.
 It adds four useful distinctions to this Google-specific route:
 
@@ -226,7 +226,7 @@ recipe, citation lift, or agent protocol. For current claims, use the website
 source register and record source scope, dates, freshness class, support status,
 uncertainty, owner, and re-audit date.
 
-Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+Use the [usage, clarity and register review](../../content-copy/content-writing/references/usage-clarity-and-register-review.md)
 as a second, qualified planning lens. It joins three durable checks: the
 outside-in journey from discovery through destination and follow-up; intent and
 customer language mapped to a useful page or cluster; and a distinctive,

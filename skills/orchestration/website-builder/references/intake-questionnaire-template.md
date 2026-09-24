@@ -40,6 +40,34 @@ Collect this before any proposal work begins.
 - Who will approve scope, investment, and content?
 - What deadline matters, and why?
 
+### Why This Website: Outcomes and Jobs
+
+Ask this before any page, feature or design discussion. Record the answers in
+writing; people remember the purpose differently once the project is under way.
+
+1. **Outcomes.** "What must this website achieve for the organisation in the
+   next 12 months?" Brainstorm freely, then make each outcome specific and
+   measurable ("20 qualified quote requests a month for office cleaning in
+   Kampala", not "more business").
+2. **Jobs.** For each outcome, list the jobs the site must do to produce it:
+   brochure, catalogue, booking desk, sign-up desk, support desk, notice board,
+   proof library, shop counter.
+3. **Feature test.** Every requested feature (blog, video, chat, gallery,
+   portal) must trace to an outcome. "Our competitor has one" is not a reason.
+   Record rejected features and why.
+4. **Deliberate small scope.** A single professional page can be the right
+   answer for now; record it as a choice with a review date, never as a default.
+5. **Success measure.** Name the metric, baseline (or `unknown`) and target date
+   for each outcome.
+
+| Outcome (specific) | Jobs the site must do | Pages or features | Metric and target date | Priority |
+|---|---|---|---|---|
+| | | | | |
+
+This table becomes the traceability backbone: strategy brief → sitemap and page
+goals → acceptance checks → post-launch review. Revisit it at every quarterly
+review and at any redesign.
+
 ### Current Situation Snapshot
 
 - What is your current website or digital setup?
@@ -187,6 +215,9 @@ These are mandatory before strategy starts.
 
 Discovery is not complete until it can produce:
 
+- outcomes-and-jobs table (see "Why This Website")
+- owner decision register started ([template](owner-decision-register.md))
+- client asset ownership register started ([template](client-asset-ownership-register.md))
 - discovery summary
 - positioning summary
 - sitemap and page goals
@@ -203,3 +234,7 @@ Discovery is not complete until it can produce:
 - Record assumptions explicitly.
 - Flag unknowns that affect scope, compliance, or timeline.
 - If content readiness is weak, recommend paid discovery before a fixed build.
+
+Source for the outcomes-and-jobs step and the owner registers: Plumley, G. (2011)
+*Website Design and Development: 100 Questions to Ask Before Building a Website*,
+Wiley Publishing.

@@ -1,276 +1,176 @@
 # Content Distribution and Growth Framework
-*Source: Mike Fishbein, "Growth Hacking with Content Marketing"*
 
----
+Parent skill: [blog-writer](../SKILL.md). Read when a post is ready to publish and needs a distribution plan, when a piece should be repurposed into other formats, or when deciding which off-site platforms are worth the effort.
 
-## The Nine Ways Content Marketing Grows a Business
+Wider traffic tactics and channel evaluation are in [traffic-channel-menu-and-evaluation.md](traffic-channel-menu-and-evaluation.md). Published titles and podcasts are in [authored-title-and-podcast-channel-playbook.md](authored-title-and-podcast-channel-playbook.md).
 
-Understanding why content works clarifies how to prioritise distribution efforts.
+## Why publish content at all
 
-1. **Establishes authority** — Content displaying expertise improves perceived authority. A blog signals expertise without being perceived as advertising. People hire people who "wrote the book."
+Use these reasons to justify effort and to choose what to measure.
 
-2. **Builds relationships** — Blog readers spend time on your site, listening to you. Fishbein: "I've met people who had been following my blog and as a result know a lot about me and feel like they know me." People buy from people they know, like, and trust.
+| Benefit | Mechanism | Measure |
+|---|---|---|
+| Authority | Useful, expert writing signals competence without reading as advertising | Enquiries that cite the content |
+| Relationships | Readers spend time with the author before any sale | Repeat visits, replies to emails |
+| Wider reach | People search for problems, not suppliers; problem-led pages meet them earlier | Impressions on informational queries |
+| Search performance | Useful pages attract links more readily than sales pages | Referring domains, ranking pages |
+| Sales | Post, sign-up, email nurture, offer | Subscriber-to-customer rate |
+| Sharing | Helpful material is passed on far more readily than product pages | Shares by non-followers |
+| Low cost | Mostly staff time | Hours per qualified lead |
+| Targeting | A specific topic reaches a specific segment | Share of visits from the target segment |
+| Email list | An owned, high-attention channel that survives platform changes | List growth, open rate |
 
-3. **Reaches wider audiences** — People search for information, not products. "How to be more productive" gets 1,300 monthly searches; "productivity consultant" gets 70. Content bridges that gap.
+## Effort split: distribute at least as hard as you create
 
-4. **Improves SEO** — Google prefers recently updated sites. Content earns backlinks — people link to useful blog posts far more than to sales pages.
+Creation cost is paid once; each further channel reaches an audience the original did not. A post left in the archive earns nothing.
 
-5. **Leads to sales** — The sequence: Blog → newsletter signup → email nurture → product launch email → purchase. Relationship built over weeks converts at higher rates than cold traffic.
+1. Before commissioning a new post, check the last five posts against the distribution checklist below.
+2. Where distribution is incomplete, finish it before writing anew.
+3. Set the creation-to-distribution split from evidence: audience, channel results, age of the asset and measured return. Do not assume a fixed ratio; test and record.
 
-6. **Gets shared** — People share valuable content far more than product pages. Social sharing = free exposure. Word of mouth is still the primary recommendation mechanism.
+## Repurposing
 
-7. **Is free or cheap** — Blogging costs almost nothing but time. No up-front costs. Ideal for startups, consultants, and companies without large advertising budgets.
+One idea, several formats, several audiences.
 
-8. **Is more targeted** — Writing "social media marketing for dentists" reaches dentists specifically. More precise than any broadcast channel.
+| Source | Becomes | Method |
+|---|---|---|
+| Blog post | Slide deck | Turn each main point into a slide with one visual |
+| Slide deck | Video | Record a screen walkthrough with narration |
+| Video or course lesson | Blog post | Transcribe, then edit for reading |
+| Video | Podcast episode | Extract the audio where it works without the picture |
+| Blog post | Podcast episode | Read aloud; disclose a synthetic voice if used |
+| Several related posts | Book chapter or guide | Combine, then add context, examples and argument |
+| Post bullet points | Q&A answer | Summarise as a direct answer and link to the full post |
+| Post | Newsletter issue | Curate with fresh commentary |
 
-9. **Builds an email list** — Email is a high-attention environment. An email list compounds in value over time and is the most reliable re-engagement tool.
+Rule: each version must earn its place in its own format. Slides must be designed, videos worth watching, answers complete without a click.
 
----
+## Distribution checklist, in order of return
 
-## The 20/80 Rule: Create Less, Distribute More
+Work down the list after each publication. Skip any channel the audience does not use.
 
-Most content creators invert the optimal ratio.
+### 1. Email list
+- Offer a reason to subscribe (a resource, or simply new posts by email).
+- Place the sign-up at the end of every post, in the sidebar and on a timed prompt where the design allows.
+- Send each new post to the list; send useful content before selling.
 
-- **Wrong:** 80% effort on creating, 20% on distributing
-- **Right:** 20% effort on creating, 80% on distributing
+### 2. LinkedIn (priority for B2B)
+- Post the title, a two-sentence hook and the link, with the featured image.
+- Share in relevant groups with personal commentary.
+- Mention people who are genuinely featured in the piece.
 
-**The logic:** A post published on one platform reaches one audience. The same post reformatted and distributed across six platforms (blog, email, LinkedIn, Quora, SlideShare, YouTube) reaches six separate audiences. The creation cost is fixed; distribution multiplies it.
+### 3. Niche communities and forums
+- Identify where the audience gathers (developer, founder, marketing or sector-specific forums; suitable subreddits).
+- Read the rules first. Post only where links are allowed and the post helps readers.
+- Take part in the discussion; do not just drop a link.
+- Never ask colleagues, clients or friends to up-vote. Coordinated voting is vote manipulation, breaches platform rules and risks a domain ban.
 
-**Before writing a new post:** Check whether existing posts have been fully distributed. An undistributed post sitting in the archive generates no traffic. Distribution is where most of the value is captured.
+### 4. X (Twitter)
+- Format: title, link, two or three relevant hashtags.
+- Mention featured people; tag at most one outside influencer per post, and only if they would truly benefit.
 
----
-
-## The Content Repurposing Framework
-
-One piece of content → multiple formats → multiple platforms → multiple audiences.
-
-### The Multiplication Chain
-
-```
-Blog post
-  → SlideShare presentation (same content, visual format)
-  → YouTube video (present the slide deck or explain on camera)
-  → Podcast episode (extract audio from YouTube / read the post aloud)
-  → Quora answer (summarise the post as an answer to a relevant question)
-  → Amazon book chapter (combine several related posts, elaborate)
-  → Email newsletter issue (curate with commentary)
-```
-
-### Repurposing Tactics
-
-| Source Format | Repurposed Into | Method |
-|--------------|----------------|--------|
-| Blog post | SlideShare deck | Convert bullet points to slides |
-| Blog post | Podcast | Read aloud (use VoiceBunny for professional audio) |
-| Blog post | YouTube video | Present the slide deck on screen or talk to camera |
-| YouTube video | Blog post | Transcribe the video, edit for readability |
-| YouTube/Udemy video | Podcast episode | Extract the audio track |
-| Multiple blog posts | Book chapter | Combine, elaborate, add context and stories |
-| Blog post bullet points | Quora answer | Summarise as a direct answer, link to full post |
-
-**The repurposing rule:** Each reformatted piece must provide genuine value in its new format — not feel like a lazy paste job. Slides should be visually appealing. Videos should be worth watching. Quora answers should stand alone without requiring the click-through.
-
----
-
-## The 9 Distribution Tactics
-
-After publishing, distribute across these channels in order of effort vs. return:
-
-### 1. Email Newsletter
-
-Email is the highest-attention channel. An opt-in subscriber chose to receive your content — they are your most engaged audience.
-
-- Offer value in exchange for signup (ebook, white paper, or simply "get my posts by email")
-- Display signup prominently on the blog — end of every post, sidebar, and popups
-- Every new post = an email to your list (automated via Mailchimp, Aweber, or ConvertKit)
-- Send blog posts instead of sales emails — value first, then convert when ready
-
-### 2. LinkedIn (B2B Priority Channel)
-
-- Post a status update with the article title, a 2-sentence hook, and the link
-- Share in relevant LinkedIn Groups (search for industry groups, join, post with personalised commentary)
-- Posts with images stand out significantly — include the article's featured image
-- Tag people who are featured in or relevant to the article
-
-### 3. Niche Communities and Forums
-
-- Find where your specific audience congregates: StackOverflow (developers), ProductHunt (SaaS), GrowthHackers (marketers), Hacker News (tech/startup), Reddit (find the right subreddit)
-- Reddit: most upvoted articles reach the front page; ask colleagues to upvote
-- Post with genuine engagement — contribute to the discussion, don't just drop a link
-- Industry-specific forums: construction, healthcare, legal, accounting — each has its own online community
-
-### 4. Twitter/X
-
-- Format: "[Article title] [link] [2-3 relevant hashtags]"
-- Mention people featured in or relevant to the article — they may retweet, exposing you to their followers
-- Tag influencers who would benefit from reading (use sparingly — once per post maximum)
-
-### 5. Quora
-
-- Search for questions on Quora that your article directly answers
-- Write a summary answer (not the full article) and link to the post for the full treatment
-- Optimise your Quora bio for the topic area — it appears above every answer
-- Quora answers are indexed by Google and emailed to question followers — compounding reach
+### 5. Question-and-answer sites
+- Find questions the post answers. Write a summary answer that stands alone and link to the full post.
+- Set the profile bio to fit the topic and link the site.
+- Full participation rules: [traffic-channel-menu-and-evaluation.md](traffic-channel-menu-and-evaluation.md) section 4.
 
 ### 6. Facebook
+- Post from the page and, where appropriate, a personal profile; each reaches different people.
+- Use an image. End with a question to prompt comments.
+- In groups, follow the group rules and add personal commentary.
 
-- Personal profile + business page (both have different algorithmic reach)
-- Posts with images stand out significantly in the Facebook feed
-- Facebook Groups: find groups where your target audience is active; post with personal commentary
-- Facebook's algorithm favours content that generates comments — ask a question in your post
+### 7. Slide platforms
+- See "SlideShare: The Underused Traffic Channel" below.
 
-### 7. SlideShare
+### 8. Video platforms
+- See "YouTube as a Blog Amplifier" below.
 
-- Convert the blog post's key points into a slide deck
-- Optimise the title, description, and individual slides with target keywords (SlideShare is a search engine)
-- Include links to your site in: profile, last slide (CTA + URL), description
-- Embed the SlideShare presentation within the original blog post — mutual amplification
-- 50M+ unique monthly visitors; presentations rank in Google searches
-
-### 8. YouTube
-
-- Record a screen presentation walking through the slide deck, or explain the topic on camera
-- Include the blog post URL in the video description (full https:// URL to make it clickable)
-- Add text overlay at the end of the video showing your website URL
-- Use the same target keywords in the video title, description, and tags
-- 2nd largest search engine; videos rank in Google searches — a keyword that works for text often works for video
-
-### 9. Email Signature and Passive Channels
-
-- Update your email signature with every new post: "Latest article: [title] → [URL]"
-- Gmail hides repeated signatures — changing it makes it visible again to every recipient
-- Gchat/Google Chat status: put your latest article URL as your status
-- Every piece of content ends with a CTA: sign up for the newsletter, check related posts, contact us
-
----
+### 9. Signature and passive channels
+- Add "Latest article: [title], [URL]" to the email signature and update it for each post; a changed signature is noticed, a repeated one is ignored.
+- Put the latest URL in chat or profile status lines.
+- End every piece with one call to action: subscribe, read a related post, or contact the business.
 
 ## SlideShare: The Underused Traffic Channel
 
-SlideShare deserves special attention — it is widely underused by content marketers despite its scale.
+Slide-hosting platforms have their own search, related-presentation recommendations and sometimes appear in web search. Check the platform's current audience, features and terms for the target market before investing; do not rely on historical traffic figures.
 
-**The numbers:** 50M+ unique monthly visitors; 10M+ presentations uploaded. Mary Meeker's Internet Trends data showed 57% of viral presentations' views came from embeds in the first week alone.
+Why it can work:
+1. Users search inside the platform.
+2. Related-presentation panels expose a deck to viewers of similar decks.
+3. Decks can rank in web search, giving a second entry point.
+4. Other writers can embed a deck, sending their readers to your profile.
 
-**Why it works for SEO:**
-1. Internal search engine — users search directly within SlideShare
-2. "Related presentations" sidebar drives discovery from competitors' audiences
-3. Presentations rank on Google — another entry point for your content
-4. Embeds multiply reach — other bloggers embed your deck, driving their traffic to your profile
-5. Featured presentations on the homepage gain massive platform-level exposure
-
-**How to maximise SlideShare traffic:**
-1. Rich content wins — slides packed with actionable, valuable information get shared
-2. Visual appeal matters — the format rewards good design (use a consistent template)
-3. Keyword-optimise title, slides, and description for both internal and Google search
-4. CTA on the final slide: clear URL + reason to visit
-5. Link in description and profile
-6. Promote the SlideShare on Twitter, LinkedIn, Facebook; embed in the original blog post
-7. Engage with other SlideShare content (comments, follows) — increases your profile visibility
-
----
+Procedure:
+1. Put useful, actionable content on every slide; decks that teach get shared.
+2. Use one consistent, legible template.
+3. Put the target keyword in the title, description and slide text.
+4. End with a call-to-action slide showing the URL and a reason to visit.
+5. Link the site in the description and profile.
+6. Embed the deck in the original post and promote it on social channels; each helps the other.
+7. Comment on and follow related decks to raise profile visibility.
 
 ## YouTube as a Blog Amplifier
 
-Every blog post has a potential YouTube companion. The two formats reinforce each other.
+Every post can have a video companion.
 
-**Fishbein's three video types:**
-1. **Presentation** — Record your screen walking through a slide deck. Easiest to produce, no camera required.
-2. **Demo/Tutorial** — Screen recording of a step-by-step process ("how to get traffic from Quora", "how to set up a POS system").
-3. **Face-to-Camera** — Talk directly to the camera with good scenery behind you. Strongest relationship-building format.
+Three formats, easiest first:
+1. **Presentation.** Screen-record a slide deck with narration. No camera needed.
+2. **Demonstration.** Screen-record a step-by-step process.
+3. **Face to camera.** Speak directly, with a tidy background. Builds the closest relationship.
 
-**The YouTube-Blog traffic loop:**
-- Blog post → Video (drives blog readers to YouTube; builds subscriber count)
-- YouTube video → Blog post (put the full article URL in description; verbal mention at end of video)
-- Subscribers → Email list (verbal CTA: "get the full guide at...")
+Traffic loop:
+- Post leads viewers to the video. The video description carries the full post URL (including https so it is clickable), and the video ends with a spoken and on-screen prompt to read the full guide.
+- A spoken prompt also moves viewers to the email list: name one place to get the full guide.
 
-**Ranking on YouTube:**
-- On-page factors: title, description (first 2-3 sentences are shown without expanding), tags
-- Channel authority factors: subscriber count, total views, likes, backlinks, comments
-- All five improve with time and consistency — early videos rank poorly; later videos rank well because of accumulated channel authority
-
----
+Ranking factors to work on:
+- On the video: title, the first two or three lines of the description (visible before expanding), tags, and the same target keyword as the post.
+- On the channel: subscribers, total views, likes, comments and inbound links.
+- Channel factors build with time and consistency; expect early videos to rank poorly.
 
 ## High-DA Platform Syndication (Authority Borrowing)
 
-New domains have zero authority. Google and AI platforms don't trust you yet. Syndication on high-DA platforms lets you **borrow authority** while your domain matures.
+A new domain has little authority. Adapted republication on established platforms can reach readers meanwhile, provided the original is credited.
 
-### Strategy: Republish with Canonical URLs
+Procedure per article:
+1. Choose two or three platforms that match the audience (see table); do not syndicate everywhere.
+2. Adapt the introduction to the platform's community; keep the core content unchanged.
+3. Set the canonical reference to the original post where the platform supports it (look for an "originally published at" or canonical URL setting in the editor or front matter). Where it does not, link to the original in the opening lines.
+4. Remove hard sales calls to action; add context specific to the community (for example "as a Kampala-based founder...").
+5. Publish one to two days after the original so search engines index the original first.
+6. Rotate platforms; do not exceed one adaptation a day.
 
-For every article published on your blog, create an **adapted version** for 2–3 high-DA platforms. Each version links back to your site with a `rel="canonical"` tag, telling Google the original lives on your domain. Backlinks stack. Authority transfers.
+| Platform type | Best for | Tone |
+|---|---|---|
+| General publishing platform | Business, marketing, general audiences | Conversational, story-led |
+| Developer blogging communities | Technical readers | Practical, code-led |
+| Professional network articles | B2B, consulting | Professional, sector-focused |
+| Founder communities | Founders, bootstrappers | Transparent, results-sharing |
+| Technology news forums | Technology and start-up readers | Factual, no self-promotion |
 
-### Platform Selection by Audience
+Check each platform's current authority, canonical support and promotion rules before use; they change.
 
-| Platform | DA | Best For | Tone Adaptation |
-|----------|-----|---------|-----------------|
-| **Medium** | ~95 | Business, marketing, general audiences | Conversational, story-driven |
-| **Dev.to** | ~85 | Technical audiences, developers | Technical, code-heavy, practical |
-| **Hashnode** | ~80 | Developer community, SaaS founders | Technical blog style, personal |
-| **LinkedIn Articles** | ~98 | B2B, professional services, consulting | Professional, industry-focused |
-| **Indie Hackers** | ~70 | Founders, bootstrappers, SaaS builders | Transparent, metrics-sharing |
-| **Hacker News** | ~90 | Tech/startup community | Factual, no self-promotion |
-
-### Canonical URL Implementation
-
-When republishing on platforms that support it (Medium, Dev.to, Hashnode):
-
-1. **Set the canonical URL** to point to your original blog post
-2. Medium: Settings → Advanced → "Originally published at" field
-3. Dev.to: Front matter `canonical_url: https://yoursite.com/blog/article-slug`
-4. Hashnode: Article settings → "Are you republishing?" → paste original URL
-
-**This tells Google:** The original content lives on your domain. The syndicated version is a copy. Link equity flows to your site, not the platform.
-
-### Adaptation Rules (NOT Copy-Paste)
-
-- **Adapt the intro** to match the platform's community expectations
-- **Remove hard CTAs** — platforms penalise overt self-promotion
-- **Add platform-specific context** (e.g., "As an East African tech founder..." on Indie Hackers)
-- **Keep the core content identical** — the canonical tag handles duplicate content concerns
-- **Post 24–48 hours after your blog** — let Google index your version first
-
-### Cadence
-
-- Blog: 2 articles/week (or per your content calendar)
-- Syndication: 1 platform adaptation per day, rotating across platforms
-- Don't syndicate to every platform — pick 2–3 that match your audience
-
-### What NOT to Syndicate
-
-- Sales pages or service descriptions (platforms will reject or bury these)
-- Very short posts (under 800 words — they underperform on platforms)
-- Content that relies heavily on your site's context (navigation, internal links)
-
----
+Do not syndicate: sales or service pages; very short posts (platforms bury them; test your own threshold); posts that depend on your site's navigation or internal links.
 
 ## Guest Posting Strategy
 
-Guest posting builds both traffic and backlinks simultaneously — it is the most efficient content marketing channel for SEO and audience growth combined.
+Guest posting earns audience and links together.
 
-**Fishbein's framework:**
+1. **Choose publications the audience reads.** A niche sector newsletter beats a general business blog.
+2. **Build the relationship first.** Comment, engage socially and cite their work before pitching; warm pitches outperform cold ones.
+3. **Pitch a specific idea.** Send a working headline and a three-sentence summary fitted to their audience. Never send a bare "I would like to write for you".
+4. **Link in context.** A link inside the body, from relevant text to a relevant page, usually carries more value than a bio link. Follow the publication's link rules.
+5. **Write an author bio** with a link, to a specific landing page where allowed.
+6. **Adapt proven posts.** Rework your best posts substantially for the new audience; do not paste.
+7. **Persist.** A steady programme builds links and recognition over many months; review referring domains and ranking movement quarterly.
 
-1. **Target the right publications.** Write for blogs and publications that your target audience reads. A guest post in a niche industry newsletter beats a post on a general business blog.
+## Ecosystem principles
 
-2. **Link back contextually.** The most valuable link in a guest post is in the body copy, not just the bio. A contextual link (linking from relevant text to your relevant page) passes more SEO value than a bio link.
+1. Every piece ends with one call to action.
+2. Grow the email list beside every platform; platforms change their algorithms, the list stays yours.
+3. Publish consistently; a steady schedule beats a burst followed by silence.
+4. Authority accumulates from posts to courses to books; start with posts and compile later.
+5. Traffic is the top of the funnel. Without a converting page, clear copy, sound design and an offer people want, extra visits produce nothing. Fix the destination as well as the distribution.
 
-3. **Author bio link.** Always include a brief bio with a link to your site. If the publication allows, link to a specific landing page rather than the homepage.
+## Sources
 
-4. **Relationship first.** Comment on the blog, engage on social media, and mention their content in your own posts before pitching. Cold pitches convert at much lower rates than warm ones.
-
-5. **Pitch a specific idea.** Don't email "I'd like to write for you." Pitch a specific headline and 3-sentence summary that fits their editorial tone and their audience's interests.
-
-6. **Repurpose your best posts.** Turn your highest-performing blog posts into guest posts for publications your audience reads. Significant editing is required (not a copy-paste), but the core research is already done.
-
-**Guest posting compounds.** Each guest post builds domain authority (through backlinks) and brand awareness (through reaching new audiences). Over 12-18 months, a consistent guest posting programme creates a measurable lift in organic search rankings.
-
----
-
-## Content Marketing Ecosystem Principles
-
-1. **Every piece of content ends with a CTA.** Don't let visitors just read and leave. Options: check out related posts, sign up for the email newsletter, book a consultation, buy the product.
-
-2. **Build the email list alongside every platform.** Email is the most reliable re-engagement tool. Platform algorithms change; your email list is permanent.
-
-3. **Consistency beats intensity.** Weekly output over 12 months outperforms 10 posts in one month then silence. Google rewards consistent publishing; readers return for new content; social channels amplify regularity.
-
-4. **Authority compounds.** Books > courses > blog posts in terms of authority signal strength. Each level of content creates a foundation for the next. Start with blog posts; compile into a course or book over time.
-
-5. **Traffic is the top of the funnel, not the goal.** Traffic without: an optimised conversion funnel, strong copywriting, good design and UX, and a product people actually want — converts to nothing. Distribute well but build the destination to receive that traffic.
+- Mike Fishbein, *Growth Hacking with Content Marketing* (self-published; edition year not recorded). Informed the distribution checklist, repurposing chain and platform-amplification approach; the wording, structure and examples here are the engine's own.

@@ -2,13 +2,19 @@
 
 The difference between a fragile agency and a sustainable one is not the quality of the work — it is the quality of the systems. Every client relationship needs a defined structure: how it starts, how it's delivered, how results are communicated, and how the client is grown.
 
-## The Rule of Five Ones (Nelson)
+## The Rule of Five Ones (Nelson) and the recurring base
 
-The foundational unit of a sustainable agency:
+Correction (2026-09-24): in Nelson (2019) *The Seven Figure Agency Roadmap*, the
+Rule of Five Ones means one target market, one lead-generation strategy, one
+conversion mechanism, one programme, held for one year (credited to Taki Moore
+and Clay Collins). It is not a client-count formula. See
+[MRR growth stage and revenue paths](../../agency-positioning/references/mrr-growth-stage-and-revenue-paths.md)
+for the revenue arithmetic, re-based for local currency.
 
-**5 clients × minimum retainer = monthly recurring revenue base**
+The table below is this engine's own illustrative recurring-base ladder in USD
+(structure only; re-base for the client's market):
 
-This is your economic anchor. Before pursuing $20,000 projects, build the recurring base that makes you financially stable enough to take on premium work without panic.
+The recurring base is your economic anchor. Before pursuing $20,000 projects, build the recurring base that makes you financially stable enough to take on premium work without panic.
 
 | Stage | Target | Monthly Recurring Revenue |
 |-------|--------|--------------------------|
@@ -122,7 +128,7 @@ Results are the product. The delivery system must produce them consistently.
 
 ### Phase 3: Retain
 
-Retention is the most profitable phase of the client relationship. It costs 5x more to acquire a new client than to retain an existing one.
+Retention is the most profitable phase of the client relationship. Winning a new client usually costs far more than keeping an existing one; measure your own acquisition and retention costs rather than quoting a multiplier.
 
 **The Three Retention Drivers:**
 

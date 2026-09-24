@@ -33,6 +33,13 @@ The package may read the router, discover skills, inspect Git, and run only decl
 
 ## Rules
 
+Book extractions, book summaries and raw book text must never be stored in this
+repository (owner rule, 2026-09-24). Convert a book's method into a
+task-oriented skill reference in original words with a brief citation; route
+volatile claims through the Digital Research currentness gate. The removed
+`book-extractions/` folder's capability map is in
+`docs/continuous-improvement/book-source-retirement-2026-09-24.md`.
+
 Always-on cross-cutting principles live in `rules/` — see `rules/README.md`.
 Load `rules/common/core.md` alongside the routed skill for any non-trivial task;
 it is short and does not replace the skill, only sets the baseline the skill
@@ -102,9 +109,9 @@ Use these skills as the default router:
 - `google-ai-search`: Official Google Search guidance for AI Overviews, AI Mode,
   AEO/GEO mythbusting, Search Console measurement, local/ecommerce readiness,
   and agentic-experience preparation.
-- `book-extractions/carter-new-rules-ai-search-synthesis-2026.md`: qualified
-  concept input for response-mode planning, entity clarity, outcome separation,
-  and reversible experiments; it never supplies current platform facts.
+- `skills/seo-search/google-ai-search/references/ai-search-response-mode-planning.md`:
+  qualified concept input for response-mode planning, entity clarity, outcome
+  separation, and reversible experiments; it never supplies current platform facts.
 - Do not route ambiguous “AIO” or model-training placement as a separate ranking
   system. Separate training, live retrieval, citation, representation, referral,
   and conversion outcomes.
@@ -181,6 +188,16 @@ Premium agency operating-system skills (added 2026-05-05):
   `page-builder`.
 - Website delivery to implementation: route custom backend, API, SaaS, AI, infrastructure, security, observability, and reliability work to the master engineering engine with clear artefacts and constraints.
 - Website launch to observability, experimentation, retention: after launch, route evidence to `observability`, `experimentation`, `marketing-measurement-system`, `agency-client-retention`, `monthly-report`, and `customer-service-website-ops`.
+- Marketing campaign to website (channel-to-site journey): `social-media-skills`
+  (`ad-to-site-journey-handoff`) hands over the landing-page brief, message-match
+  table, UTM convention and conversion-event definitions; this engine accepts or
+  returns the package and owns build, performance, tags, QA evidence and the fix
+  loop through `launch-campaigns/references/channel-to-site-handoff-receiving.md`,
+  `page-builder`, `marketing-measurement-system` and `cro-audit`.
+- Art direction to design engine: `design-reference` hands style-fit answers,
+  the style thesis, mobile job map, cost flags and borrow map to
+  `design-system-skills` (`art-direction-routes`) for route options and
+  direction boards.
 - Website maintenance/support to proposal engine: when support scope, SLA, retainer, or change-request language must be sold or renewed, route commercial wording back to the proposal engine.
 
 ## Enforcement and Quality Gates (Phases 10 + 11)
@@ -198,9 +215,11 @@ suppressions require a decision entry under `project-log/decisions/`.
   `reports/a11y/`, `reports/visual/`, `reports/security/`, `reports/drift/`,
   `reports/design-quality/`.
 - Visual baseline contract: `tests/visual/baseline/`.
-- Africa calibration: `skills/launch-ops/deploy/references/africa-calibration.md` (3G profile,
-  350 KB weight budget, Save-Data handling) + `skills/orchestration/africa-excellence/` skill for
-  pattern-level standards.
+- Africa calibration: `skills/launch-ops/deploy/references/africa-calibration.md` (labelled
+  low-end stress profile, not a median; 350 KB weight budget enforced per category by
+  `scripts/route-weight-budget.mjs`; Save-Data handling) + `skills/orchestration/africa-excellence/`
+  skill for pattern-level standards. Lab gates block deploy; field p75 decides success; INP is
+  enforced from field/RUM data.
 
 ## Governance (Phase 11)
 
@@ -270,7 +289,7 @@ Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`,
 
 ## Human-English editorial standard (2026-08 Kaizen)
 
-Load [`book-extractions/human-english-craft-synthesis-2026.md`](book-extractions/human-english-craft-synthesis-2026.md) for every web page, landing page, blog, SEO/GEO asset, CTA, form, error message, email, and support message. Apply its five passes with `language-standards`, `content-writing`, `premium-commercial-writing`, the relevant native-copy skill, and the anti-slop/visual/accessibility gates.
+Load [the Human-English five-pass review](skills/content-copy/language-standards/references/human-english-five-pass-review.md) for every web page, landing page, blog, SEO/GEO asset, CTA, form, error message, email, and support message. Apply its five passes with `language-standards`, `content-writing`, `premium-commercial-writing`, the relevant native-copy skill, and the anti-slop/visual/accessibility gates.
 
 Website copy must be reader-first, specific, grammatical, scannable, and honest about the offer, proof, process, limits, and next action. Do not create “human” copy with fake colloquialisms, errors, generic welcome language, keyword stuffing, or unsupported superlatives. Record page job, audience, source/proof map, language and market, state-copy review, proof status, gaps, reviewer, and date.
 

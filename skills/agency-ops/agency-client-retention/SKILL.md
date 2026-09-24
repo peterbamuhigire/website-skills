@@ -13,6 +13,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Use When
 - The task matches this domain: Client pricing, delivery structure, and retention systems for a premium website design and SEO agency. Use when packaging services, setting pricing, onboarding new clients, planning monthly communication, or designing the quarterly strategy review. Covers the Rule of Five Ones pricing architecture, Land-Deliver-Retain model, monthly communication rhythm, Seed the Vision quarterly framework, and performance-based deal structures. Designed for agencies targeting $10,000–$25,000+ website projects with 24-month+ client relationships.
 - The user needs domain-specific strategy, writing, or planning in this area.
+- A care plan or maintenance retainer needs specifying: off-host backups, monthly site inspection, contact audit, access hygiene, performance scorecard, client grading, or account expansion.
 
 ## Do Not Use When
 - Another skill is clearly narrower and better matched to the request.
@@ -70,6 +71,7 @@ When telemetry, cost, or client evidence is unavailable, return an account gap r
 | Outcomes and trust are strong; capacity is viable | Renew or offer evidence-linked expansion | Premature upsell |
 | Trust or delivery is weak but recoverable | Repair before expansion | Churn accelerated by selling |
 | Scope is persistently unprofitable | Reprice, narrow, automate, or exit | Recurring margin erosion |
+| Retainer is being designed or renewed | Include the care-plan components (off-host backups with restore tests, monthly inspection, contact audit, access hygiene) and a fast-signal component beside slow-compounding work | Silent site decay and churn in the 90–120-day window |
 
 ## Worked Example
 A care retainer consumes twice its allowance because content approvals are unmanaged. Reconcile hours and outcomes, repair the approval workflow, then present a priced content add-on or narrower care scope; do not disguise the overrun as goodwill.
@@ -77,6 +79,13 @@ A care retainer consumes twice its allowance because content approvals are unman
 <!-- dual-compat-end -->
 
 ## References
+- [client-site-care-plan.md](references/client-site-care-plan.md) — read when care-plan specification: off-host backups with restore tests, monthly inspection, content streams, contact audit, access hygiene, tiers.
+- [performance-retainer-service.md](references/performance-retainer-service.md) — read when selling and delivering site speed as a monthly scorecard, tag review and tune-up service.
+- [client-grading-and-contact-plan.md](references/client-grading-and-contact-plan.md) — read when setting AA–D client grades, affordable contact per grade, cost-to-serve triggers and renewal-predicting surveys.
+- [account-cube-expansion-sequence.md](references/account-cube-expansion-sequence.md) — read when choosing where an existing client's next piece of work comes from (Account Cube, need-versus-wish test).
+- [new-client-assimilation-and-retention-rhythm.md](references/new-client-assimilation-and-retention-rhythm.md) — read when planning the first 120 days after signature and the monthly review call with client homework.
+- [key-client-relationship-health.md](references/key-client-relationship-health.md) — read when managing strategic accounts, executive sponsors, multi-threading and trust recovery.
+- [retainer-design-and-cost-to-fulfil.md](references/retainer-design-and-cost-to-fulfil.md) — read when designing a fast-signal plus slow-compounding retainer or checking a fee against cost to fulfil.
 - Start with `references/legacy-guidance.md` when you need the preserved detailed instructions from the previous skill version (Rule of Five Ones, Land-Deliver-Retain, Seed the Vision).
 - Use `references/deal-structures.md` for the engagement pricing architecture and proposal structure inherited from earlier phases.
 - Use `references/monthly-report-template.md` for the standard monthly client report format.

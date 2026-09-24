@@ -25,7 +25,7 @@ Each category is scored 0-10. Overall score is weighted average.
 | 2 | On-Page SEO | 12% | Title tags, meta descriptions, heading hierarchy, keyword placement |
 | 3 | Content Quality | 10% | Unique content, word count, keyword density, E-E-A-T signals, buyer journey coverage |
 | 4 | Structured Data | 8% | JSON-LD schemas (Organization, Service, FAQ, HowTo, BreadcrumbList), Rich Snippet readiness |
-| 5 | Pagespeed & Performance | 10% | Page weight, image compression, minification, caching, font loading, CLS, LCP, FID |
+| 5 | Pagespeed & Performance | 10% | Page weight, image compression, minification, caching, font loading, CLS, LCP, INP |
 | 6 | Mobile Usability | 8% | Viewport meta, touch targets, responsive images, no horizontal scroll |
 | 7 | Local SEO | 8% | NAP consistency, Google Business Profile, geo meta tags, citations, reviews, local landing pages |
 | 8 | Internal Linking | 5% | Navigation structure, orphan pages, link depth, anchor text quality |
@@ -174,7 +174,7 @@ For each HTML page in `dist/`:
 - [ ] Google Search Console connected and sitemap submitted
 - [ ] Bing Webmaster Tools set up (critical for AI search visibility)
 - [ ] Conversion goals defined (contact form, phone call, email click)
-- [ ] Core Web Vitals monitored (LCP, FID, CLS baselines established)
+- [ ] Core Web Vitals monitored (LCP, INP, CLS baselines established; FID retired 2024)
 - [ ] Organic traffic baseline recorded for month-over-month comparison
 
 ### Step 3: Score Each Category

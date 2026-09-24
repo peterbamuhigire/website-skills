@@ -32,6 +32,8 @@ Choose the correct matching style before choosing a trend. Start with the client
 | User job | What is the primary task, decision, or reassurance the website must support? | Journey, page-goal, and narrative artefacts | Simplify before styling |
 | Offer and sector | What is being sold, explained, supported, or trusted? What level of seriousness, warmth, authority, or energy is appropriate? | Offer brief, sector context, proof register | Adapt tone and visual intensity |
 | Brand character | Which approved attributes must the experience express, and which must it avoid? | Brand/style brief | Keep unapproved directions exploratory |
+| Stigma or expectation | What does this audience already assume about businesses like this one, and which direction closes that gap without overpromising? | Discovery interviews, reviews, sales objections | Choose a direction that counters the assumption the client can live up to |
+| Maintenance | Who will change text, images, and pages after launch, and can they do it without a designer? | Owner decision register, team skills | Prefer code-rendered, editable styles |
 | Content reality | Do the actual words, images, data, products, translations, and update cadence suit the proposed hierarchy and density? | Content inventory and states | Choose a style the content can sustain |
 | Trust and risk | Does the sector require calm clarity, provenance, safety cues, consent, or high-legibility decision support? | Claims, privacy, regulatory, and support needs | Reject decorative ambiguity |
 | Environment | What browsers, phones, network conditions, assistive technologies, and maintenance capacity must be supported? | Technical and operations brief | Prefer resilient progressive enhancement |
@@ -39,6 +41,8 @@ Choose the correct matching style before choosing a trend. Start with the client
 | Learning | What reversible test and guardrails will show that this style helps the intended job? | Baseline, hypothesis, metrics, and rollback | Do not standardise on taste or fashion |
 
 Record a short style thesis: `For [audience] doing [job], this website uses [style direction] because [brand/offer reason]. It deliberately avoids [misfit] and proves fit through [evidence].`
+
+For the full style-fit question set, unusual-layout test, cost flags, borrow map, and the handoff to `design-system-skills:art-direction-routes`, read [style-fit questions and direction handoff](style-fit-questions-and-direction-handoff.md).
 
 Use no more than two high-novelty treatments on a page unless testing shows that their combination supports the same user job without harming comprehension, accessibility, performance, trust, or maintenance.
 

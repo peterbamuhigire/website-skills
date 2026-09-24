@@ -98,6 +98,12 @@ If fonts, render tools, browsers, or brand evidence are unavailable, produce a b
 For a multilingual professional-services site, choose a licensed serif with verified Latin Extended glyphs for editorial headings, pair it with a restrained sans for UI, define fluid type tokens and focus/error states, then hand `page-builder` tested component rules rather than isolated mock-up values.
 
 ## References
+- [behaviour-and-visual-pattern-rules.md](references/behaviour-and-visual-pattern-rules.md) — read when applying behaviour patterns and visual hierarchy rules to templates.
+- [ui-composition-colour-and-icon-rules.md](references/ui-composition-colour-and-icon-rules.md) — read when deciding dominance, alignment, rhythm, colour jobs, contrast order and icon sets.
+- [grid-colour-gradient-and-surface-craft-rules.md](references/grid-colour-gradient-and-surface-craft-rules.md) — read when setting grids, gradients and surface treatments.
+- [data-tables-charts-and-svg-rules.md](references/data-tables-charts-and-svg-rules.md) — read when building data tables, charts or SVG graphics.
+- [design-system-governance-and-designops.md](references/design-system-governance-and-designops.md) — read when governing the design system and design operations.
+- [layout-primitive-selection-and-overlay-icon-patterns.md](references/layout-primitive-selection-and-overlay-icon-patterns.md) — read when choosing layout primitives and overlay or icon patterns.
 - Use `references/math-for-web-design.md` when sizing, spacing, typography, grids, media ratios, color ramps, or motion timing should be derived from proportion, `clamp()`, `calc()`, `minmax()`, aspect-ratio, or rounding logic.
 - Use sibling skill `premium-ui-ux-design` when perceived quality, beauty, conversion, or high-ticket trust is part of the job.
 - Prioritize `references/ux-quality-checklist.md` when validating whether the system is coherent enough to ship.

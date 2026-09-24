@@ -54,7 +54,7 @@ scope into internal operating facts so production does not rely on proposal pros
 
 ## 5. Technical Facts
 
-- Domain owner:
+- Domain owner (registrant must be the client; see [client asset ownership register](client-asset-ownership-register.md)):
 - Hosting owner:
 - CMS or stack constraints:
 - Integrations in scope:

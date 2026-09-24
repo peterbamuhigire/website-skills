@@ -16,6 +16,35 @@ BOOK_SOURCE_PATH_RE = re.compile(
     r"(?:^|/)(?:book-extractions?|book-dumps?|raw-books?|source-books?)(?:/|$)",
     re.IGNORECASE,
 )
+BOOK_SUMMARY_NAME_RE = re.compile(
+    r"(?:^|[-_.])(?:book[-_]?extraction|book[-_]?summary|extraction)(?:[-_.]|$)",
+    re.IGNORECASE,
+)
+# Content-aware digest markers (owner rule 2026-09-24): a book digest is rejected wherever it is stored,
+# including under skills/*/references/. Each pattern is applied to Markdown/text files.
+QUOTE_SECTION_RE = re.compile(r"^#{1,6}\s*(?:direct|key|notable|selected|memorable)\s+quotes?\b", re.IGNORECASE | re.MULTILINE)
+EXTRACTED_FROM_RE = re.compile(
+    r"^\s*(?:>\s*)?(?:\*\*)?(?:source:?\*{0,2}\s*)?(?:this (?:file|document|reference) extracts\b|extracted from\b|distilled from the full text of\b)",
+    re.IGNORECASE | re.MULTILINE,
+)
+LOCAL_BOOK_PATH_RE = re.compile(
+    r"(?:[A-Za-z]:[\\/]+(?:temp|tmp)[\\/]+books|\.claude[\\/]+skills[\\/]+book|_book_extracts|z-lib(?:rary)?\b|libgen)",
+    re.IGNORECASE,
+)
+# One book's chapter/part sequence: headings such as "## Part IV: ..." or "### 3.2 ... (Author, Chapter 5)".
+CHAPTER_HEADING_RE = re.compile(
+    r"^#{2,4}\s+(?:(?:Part|Chapter|Ch\.?)\s+(?:[0-9]+|[IVXLC]+)\b|.*\((?:[^)]*,\s*)?(?:Chapter|Ch\.)\s*[0-9]+)",
+    re.IGNORECASE | re.MULTILINE,
+)
+CHAPTER_HEADING_LIMIT = 3
+SINGLE_SOURCE_HEADER_RE = re.compile(
+    r"^(?:#\s+.*\u2014.*extraction.*|\*\*source:\*\*\s+.*(?:\u00a9|isbn|publisher).*)$",
+    re.IGNORECASE | re.MULTILINE,
+)
+CONTENT_RULE_EXEMPT = {
+    # The retirement record and rule statements name these patterns by design.
+    "docs/continuous-improvement/book-source-retirement-2026-09-24.md",
+}
 FULL_TEXT_MARKERS = {
     "isbn": re.compile(r"\bISBN(?:-1[03])?\s*:?\s*[\dXx][\dXx\-\s]{8,}"),
     "copyright": re.compile(r"\bcopyright\s+(?:\u00a9|\(c\)|&copy;|[12]\d{3})", re.IGNORECASE),
@@ -42,6 +71,25 @@ class Finding:
         return f"[ERROR] {self.code}: {self.path} {self.message}"
 
 
+def scan_content(relative: Path, text: str) -> list[Finding]:
+    """Content rules for a Markdown or text file. Returns findings for book-digest markers."""
+    if relative.as_posix() in CONTENT_RULE_EXEMPT:
+        return []
+    findings: list[Finding] = []
+    if QUOTE_SECTION_RE.search(text):
+        findings.append(Finding("book-quote-section", relative, 'has a "Direct quotes"/"Key quotes" section; quote sections are never stored'))
+    if EXTRACTED_FROM_RE.search(text):
+        findings.append(Finding("book-extracted-from", relative, 'says it is "extracted from" a source or that it "extracts" one; write a task-oriented reference instead'))
+    if LOCAL_BOOK_PATH_RE.search(text):
+        findings.append(Finding("book-local-path", relative, "names a local book-file path or a pirate-library source"))
+    chapters = CHAPTER_HEADING_RE.findall(text)
+    if len(chapters) > CHAPTER_HEADING_LIMIT:
+        findings.append(Finding("book-chapter-sequence", relative, f"{len(chapters)} chapter/part headings follow one book's sequence; reorganise by task"))
+    if SINGLE_SOURCE_HEADER_RE.search("\n".join(text.splitlines()[:12])):
+        findings.append(Finding("book-single-source-header", relative, "opens with a single-source extraction header"))
+    return findings
+
+
 def scan(root: Path) -> list[Finding]:
     root = root.resolve()
     findings: list[Finding] = []
@@ -65,6 +113,19 @@ def scan(root: Path) -> list[Finding]:
 
         in_book_source_path = BOOK_SOURCE_PATH_RE.search(relative.as_posix()) is not None
         size = path.stat().st_size
+        if in_book_source_path or BOOK_SUMMARY_NAME_RE.search(path.name):
+            # Owner rule (2026-09-24): book extractions and book summaries are never stored
+            # in this repository, whatever their size. Knowledge must live in task-oriented
+            # skill references with a brief citation instead.
+            findings.append(
+                Finding(
+                    "book-extraction-stored",
+                    relative,
+                    "book extractions and book summaries must never be stored in the repository; "
+                    "convert the method into a task-oriented skill reference",
+                )
+            )
+            continue
         if suffix == ".pdf" and in_book_source_path:
             findings.append(
                 Finding(
@@ -85,6 +146,12 @@ def scan(root: Path) -> list[Finding]:
                     f"{size} bytes under a book-extraction path; retain concise synthesis, not source text",
                 )
             )
+
+        try:
+            text_for_rules = path.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            text_for_rules = ""
+        findings.extend(scan_content(relative, text_for_rules))
 
         if size < 30_000:
             continue

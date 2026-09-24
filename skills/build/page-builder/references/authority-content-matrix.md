@@ -69,7 +69,7 @@ The money pages. One per service line. Each written as a complete, self-containe
 - 2–3 secondary keywords naturally distributed.
 - H1 contains primary keyword; H2s distribute secondaries.
 - Internal links from 3+ related articles and 2+ case studies.
-- Schema: `Service` + `Offer` (optional) + `FAQPage` (for inline FAQ section).
+- Schema: `Service` + `Offer` (optional). Keep an inline FAQ section as visible content for readers; add `FAQPage` markup only for a documented non-Google consumer, because Google stopped showing FAQ rich results on 7 May 2026 (currentness register CW-09).
 
 ---
 

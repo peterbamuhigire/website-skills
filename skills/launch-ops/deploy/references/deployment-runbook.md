@@ -62,7 +62,8 @@ Use when:
 
 ## DNS And SSL Checklist
 
-- Domain owner confirmed
+- Domain owner confirmed: the client is the registrant of record (WHOIS or registrar account checked); agency listed only as technical contact; registrant email verified as durable; temporary accounts removed and shared passwords rotated (see [client asset ownership register](../../../orchestration/website-builder/references/client-asset-ownership-register.md))
+- Off-server backup configured and first backup restored as a test (see [client-site care plan](../../../agency-ops/agency-client-retention/references/client-site-care-plan.md))
 - DNS access owner confirmed
 - Current DNS records exported or screenshotted before change
 - SSL issuance path confirmed

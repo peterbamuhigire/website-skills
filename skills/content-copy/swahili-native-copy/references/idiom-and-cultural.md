@@ -90,7 +90,7 @@ Write **Kiswahili sanifu** (standard, based on Zanzibar Kiunguja) — the presti
 
 ## Sector vocabulary
 
-For hospitality, F&B, and agriculture clients, draw on the East African food and welcome lexicon (e.g. `karibu(ni)`, `nyama choma`, `pilau`, `chapati`, `kachumbari`, `chai ya viungo`, and the "always something ready to share" ethos). See `book-extractions/swahili-language-books-extraction-2026.md` §7 for the full glossary.
+For hospitality, F&B, and agriculture clients, draw on the East African food and welcome lexicon (e.g. `karibu(ni)`, `nyama choma`, `pilau`, `chapati`, `kachumbari`, `chai ya viungo`, and the "always something ready to share" ethos). See [service, hospitality and sector lexicon](service-hospitality-and-sector-lexicon.md) for the full glossary.
 
 ## Sentence shape and rhythm
 
@@ -105,4 +105,4 @@ For hospitality, F&B, and agriculture clients, draw on the East African food and
 
 ## Source
 
-Idiom, collocations, proverbs, and cultural conventions distilled from Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, *Swahili (Spoken World)* (Living Language), and Joan Russell, *Swahili (Teach Yourself)*. Value-word lexicon, proverb cautions, kanga-style lines, prestige/variety guidance, and the colonial-pidgin and tourist-Swahili cautions added in 2026 from John M. Mugane, *The Story of Swahili*; Derek Nurse & Thomas Spear, *The Swahili*; Johannes Fabian, *Language and Colonial Power*; the *Trilingual Story Book* (Aames); and *Authentic East African Swahili Cuisine* (Malaquias). See `book-extractions/swahili-language-books-extraction-2026.md`.
+Idiom, collocations, proverbs, and cultural conventions distilled from Lutz Marten & Donovan Lee McGrath, *Colloquial Swahili*, *Swahili (Spoken World)* (Living Language), and Joan Russell, *Swahili (Teach Yourself)*. Value-word lexicon, proverb cautions, kanga-style lines, prestige/variety guidance, and the colonial-pidgin and tourist-Swahili cautions added in 2026 from John M. Mugane, *The Story of Swahili*; Derek Nurse & Thomas Spear, *The Swahili*; Johannes Fabian, *Language and Colonial Power*; the *Trilingual Story Book* (Aames); and *Authentic East African Swahili Cuisine* (Malaquias). Sector lexicon and Tanzania/Kenya calibration: [service, hospitality and sector lexicon](service-hospitality-and-sector-lexicon.md).

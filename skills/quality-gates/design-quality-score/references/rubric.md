@@ -169,7 +169,7 @@ This prevents one strong category from masking one weak one.
 
 ---
 
-## Category 8: UX Maturity (Process — added 2026-05-04 from Synechron Enterprise UX)
+## Category 8: UX Maturity (Process)
 
 **Important:** This category is *additive*. It does not retroactively fail templates scored under the original 7-category rubric. Apply going forward.
 

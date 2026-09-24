@@ -1,26 +1,53 @@
 # Website Skills
 
-`website-skills` is the Chwezi premium-website delivery engine — 62 skills (`SKILL.md` files,
-embedding `proposal-skills` as a submodule) for planning, designing, building, launching,
-measuring, and maintaining premium static websites and related digital experiences built from
-markdown content and assets. It carries one user journey and page state at a time from audience
-and content through visual treatment, accessible implementation, performance, analytics,
-release, recovery, and post-launch learning, while handing application engineering and shared
-visual doctrine to their owning engines. Premium is the stated default commercial standard
-(`CLAUDE.md`): a brief that cannot support strategy, world-class content, SEO/GEO, premium UX,
-conversion architecture, technical quality, measurement, and handover gets paid discovery, a
-smaller premium scope, or a no-bid, not a discounted shortcut.
+`website-skills` is the Chwezi website delivery engine: a library of 62 skills (`SKILL.md`
+files with task-oriented references, scripts and release gates) that lets Claude Code or Codex
+plan, write, design, build, test, launch, measure and maintain premium static websites from a
+client's own content and assets. It treats a website as a business asset rather than a
+brochure. Every build is traced from the client's written outcomes and jobs, through the page
+goals, copy, proof and conversion design, to accessible and fast implementation, a
+machine-enforced release pipeline (performance, accessibility, visual, security and metadata
+gates), measurement, handover and a post-launch improvement loop. Premium is the default
+standard: a brief that cannot support that standard gets paid discovery, a smaller premium
+scope or a no-bid.
 
-Website practitioners and agency delivery teams use it for concrete work such as: qualifying and
-scoping a client brief (`skills/orchestration/`), building a hotel or restaurant site with
-low-bandwidth and mobile-money-aware UX (`skills/orchestration/hospitality-website-product/`),
-reproducing a client's real brand voice consistently across pages and campaigns
-(`skills/content-copy/brand-voice/`), running the accessibility/visual-QA/security release gates
-before launch (`skills/quality-gates/`), or producing native-quality French or Kiswahili copy
-(`skills/content-copy/french-native-copy/`, `skills/content-copy/swahili-native-copy/`). It
-covers qualification and intake, information architecture, page and content production,
-accessibility, performance, security, analytics, deployment, and handover, while keeping custom
-application engineering and shared visual-system decisions in their owning specialist engines.
+It helps website agencies, freelance developers, in-house marketing teams and the business
+owners who commission them. Agencies use it to qualify and price work, run discovery, keep the
+client as owner of the domain and accounts, deliver pages in human, professional English,
+French or Kiswahili, and sell and run care plans and growth retainers. Developers use its
+performance gate (a labelled low-end mobile stress profile, per-category weight budgets, an HTML
+performance lint, and lab-to-field calibration against real-visitor data), its accessibility and
+security gates, and its checklists for AI-generated code, third-party scripts and older sites.
+Owners get a site they own outright, written in the language their customers use, that loads
+quickly on the phones and networks their customers actually have, and that is measured honestly.
+
+The engine works alongside its sister engines rather than duplicating them. Campaign strategy,
+ads and the landing-page brief come from `social-media-skills` and are received here through an
+explicit channel-to-site handoff; visual and typographic decisions come from
+`design-system-skills`; live facts and research come from `digital-research-engine`; proposals
+from `proposal-skills` (embedded as a submodule); and custom application engineering from
+`chwezi-dev-engine`. Books inform the skills as durable methods only: book extractions are never
+stored in this repository, and volatile facts (thresholds, tool versions, platform rules, market
+data) enter only through dated currentness registers.
+
+## Capabilities
+
+| Category | Skills | What it covers |
+|---|---:|---|
+| `agency-ops` | 14 | `agency-positioning` (niche, revenue paths, points of difference), `agency-client-retention` (care plans, client grading, expansion, retainers), `authority-offers`, `premium-sales-conversation` (research pack, price presentation, objections), `launch-campaigns` (launch sequences and the campaign-to-site handoff), `referral-program`, `local-in-person-acquisition`, `social-media`, `monthly-report`, `delivery-automation`, `service-blueprint-website-delivery`, `customer-service-website-ops`, `policy-pages`, `email-sender` |
+| `content-copy` | 11 | `sales-copywriting` (pricing pages, headlines, ethics filter), `long-form-sales-copy`, `premium-commercial-writing`, `content-writing` (page kit, lean home page), `blog-writer`, `blog-idea-generator`, `brand-voice`, `language-standards` (Human-English review), `east-african-english`, `french-native-copy`, `swahili-native-copy` |
+| `build` | 6 | `design-reference` (style fit and art-direction handoff), `design-system` (tokens and build-coupled rules), `page-builder` (templates, forms, facades, INP-safe patterns), `i18n`, `image-compression`, `photo-manager` |
+| `orchestration` | 6 | `website-builder` (discovery, ownership and decision registers, stage gates), `premium-website-product`, `premium-ui-ux-design`, `website-experience-mapping`, `hospitality-website-product`, `africa-excellence` |
+| `quality-gates` | 6 | `accessibility-audit`, `visual-qa`, `security-gate`, `cross-page-design-consistency-audit`, `design-quality-score` (including AI-generated code review), `kaizen-engine-and-product-improvement` |
+| `commerce` | 5 | `ecommerce`, `ecommerce-checkout`, `ecommerce-funnel`, `ecommerce-analytics`, `retail-commerce-operating-system` |
+| `launch-ops` | 4 | `deploy` (performance gate, lab-to-field calibration, third-party cost, edge caching), `observability` (RUM and alerts), `experimentation`, `marketing-measurement-system` |
+| `meta` | 3 | `skill-writing`, `skill-safety-audit`, `update-claude-documentation` |
+| `seo-search` | 3 | `seo`, `seo-audit`, `google-ai-search` (AI Overviews and AI Mode readiness) |
+| `brand` | 2 | `brand-strategy`, `brand-storytelling` |
+| `ux-conversion` | 2 | `cro-audit` (conversion audit, comprehension tests, critique scorecard), `they-ask-you-answer` |
+
+(62 `SKILL.md` files total under `skills/`, across 11 thematic categories, plus the embedded
+`proposal-skills` submodule for consulting/procurement deliverables.)
 
 ## Install
 
@@ -74,25 +101,6 @@ or Codex to run a security scan of this engine, its skills, and its reference fi
 relying on it in a sensitive environment (for example: "scan this repository for hardcoded
 secrets, personal paths, or unexpected network calls").
 
-## Capabilities
-
-| Category | Skills | What it covers |
-|---|---:|---|
-| `agency-ops` | 14 | Agency positioning, client retention, delivery automation, launch campaigns, social media, reporting |
-| `content-copy` | 11 | Blog/article writing, sales copy, brand voice, French/Kiswahili native copy, language standards |
-| `build` | 6 | Design reference, design system handoff, i18n, image compression, page building, photo management |
-| `orchestration` | 6 | Master website-builder orchestration, hospitality product, premium UI/UX, Africa-excellence patterns |
-| `quality-gates` | 6 | Accessibility, visual QA, security, cross-page consistency, design-quality score, Kaizen audits |
-| `commerce` | 5 | Ecommerce, checkout, funnel, analytics, retail-commerce operating system |
-| `launch-ops` | 4 | Deployment, experimentation, marketing measurement, observability |
-| `meta` | 3 | Skill writing, skill safety audit, documentation maintenance |
-| `seo-search` | 3 | SEO implementation, SEO audit, Google AI Search/AI Mode readiness |
-| `brand` | 2 | Brand strategy and brand storytelling |
-| `ux-conversion` | 2 | Conversion-rate-optimisation audit, "They Ask You Answer" content strategy |
-
-(62 `SKILL.md` files total under `skills/`, across 11 thematic categories, plus the embedded
-`proposal-skills` submodule for consulting/procurement deliverables.)
-
 ## References
 
 - Mustafa, A. et al. *Everything Claude Code (ECC)*. GitHub: `affaan-m/ECC`, 2026. This engine's
@@ -113,18 +121,63 @@ secrets, personal paths, or unexpected network calls").
   Stop event "matching ECC's 'console.log audit: Stop hook checks all modified files after each
   response' pattern," and `install.sh`'s header cites the same Windows/MSYS2 path-resolution fix
   documented in ECC's own `install.sh`.
-- This engine also carries a substantial `book-extractions/` directory of named, attributed
-  sources that individual skills route to directly, including: Miller, D. *Building a StoryBrand*
-  (HarperCollins Leadership, 2017), referenced by `brand-storytelling`, `sales-copywriting`, and
-  `brand-strategy`; Kennedy, D. S. *The Ultimate Sales Letter* (Adams Media, 1991/2000; 4th ed.
-  2011), grounding the long-form direct-response copy skills; Krug, S. *Don't Make Me Think,
-  Revisited* (3rd ed., New Riders, 2014), referenced by the `web-usability-krug` route feeding
-  this engine's UX/page-builder skills; and Pickering, H. & Bell, A. *Every Layout*
-  (every-layout.dev), cited for layout-primitive implementation. Every blog post, article, or
-  SEO/SERP claim is additionally required, as a standing rule (`rules/common/core.md`), to be
-  sourced live through the Digital Research Engine and attributed to real, locatable researchers,
-  institutions, or regulators during drafting, rather than relying on the static book
-  extractions alone.
+- Book sources. Skills cite books briefly where a method comes from them; the methods live as
+  task-oriented references written in this engine's own words. The former `book-extractions/`
+  folder was removed on 2026-09-24 (owner's copyright rule); a per-file map of where its methods now
+  live is in `docs/continuous-improvement/book-source-retirement-2026-09-24.md`. Principal sources and
+  where they are used:
+  - Miller, D. (2017) *Building a StoryBrand*, HarperCollins Leadership — `brand-storytelling`
+    (`sb7-brandscript-worksheet.md`), `brand-strategy`, `sales-copywriting`.
+  - Kennedy, D. S. (2011) *The Ultimate Sales Letter*, 4th ed., Adams Media; Kennedy's *No B.S.*
+    sales and price-strategy titles; Brunson, R. *DotCom Secrets* — `long-form-sales-copy`,
+    `authority-offers`, `premium-sales-conversation`.
+  - Krug, S. (2014) *Don't Make Me Think, Revisited*, 3rd ed., New Riders; Tidwell, J., Brewer, C.
+    and Valencia, A. (2020) *Designing Interfaces*, 3rd ed., O'Reilly — `page-builder`,
+    `design-system`.
+  - Pickering, H. and Bell, A. *Every Layout* (every-layout.dev) — `design-system`.
+  - Levy, J. (2015) *UX Strategy*, O'Reilly Media — `premium-ui-ux-design`, `design-reference`.
+  - Osmani, A. (2026) *Web Performance Engineering in the Age of AI*, O'Reilly Media — `deploy`
+    (performance gate, lab-to-field calibration, third-party cost measurement, edge caching,
+    legacy-site audit), `page-builder` (facades, INP-safe interaction patterns), `observability`
+    (RUM attribution), `design-quality-score` (AI-generated code performance review),
+    `agency-client-retention` (performance retainer).
+  - Plumley, G. (2011) *Website Design and Development: 100 Questions to Ask Before Building a
+    Website*, Wiley Publishing — `website-builder` (outcomes-and-jobs intake, client asset
+    ownership register, owner decision register), `agency-client-retention` (care-plan
+    specification), `content-writing` (standard page kit and lean home-page policy),
+    `cro-audit` (comprehension tests and user-testing etiquette).
+  - LaGrone, B. (2016) *Web Design Blueprints*, Packt Publishing — used only as a catalogue of
+    dated patterns to retire in `deploy` (`legacy-site-performance-audit.md`).
+  - McNeil, P. (2010) *The Web Designer's Idea Book, Volume 2*, HOW Books, and McNeil, P. (2013)
+    *The Web Designer's Idea Book, Volume 3*, HOW Books — `design-reference`
+    (`style-fit-questions-and-direction-handoff.md`); art-direction routes are owned by
+    `design-system-skills`. (A file supplied as the "Mobile Web Designer's Idea Book" was
+    Volume 2.)
+  - Wiebe, J. (2011) *Copy Hackers: 6 Persuasion Strategies*, Copy Hackers — `sales-copywriting`
+    (`pricing-page-choice-architecture.md`).
+  - Serling, B. (ed.) (2002) *How To Write Million Dollar Ads, Sales Letters & Web Marketing
+    Pieces*, The Internet Marketing Center — `sales-copywriting`
+    (`headline-families-and-ethics-filter.md`). (A file labelled "Million Dollar Ads (Peng
+    Joon)" was this anthology.)
+  - Nelson, J. (2019) *The Seven Figure Agency Roadmap*, Seven Figure Agency LLC; Hunter, V. L. with
+    Tietyen, D. (1997) *Business-to-Business Marketing: Creating a Community of Customers*, NTC
+    Business Books; Marcos, J., Guesalaga, R., Hough, A. and Vincent, R. (c. 2025) *The
+    High-Performing Key Account Manager*, Kogan Page — `agency-client-retention`, `agency-positioning`,
+    `premium-sales-conversation`, `authority-offers`, `referral-program`.
+  - Debelak, D. (2006) *Perfect Phrases for Business Proposals and Business Plans*, McGraw-Hill —
+    `premium-commercial-writing` (`professional-page-and-blog-phrase-bank.md`).
+  - Croll, A. and Yoskovitz, B. (2013) *Lean Analytics*, O'Reilly Media; Lin, L. C. (2013)
+    *Decode and Conquer*, 2nd ed., Impact Interview; Weinberg, G. and Mares, J. (2014) *Traction*, S-curves Publishing —
+    `marketing-measurement-system`, `experimentation`, `ecommerce-analytics`, `cro-audit`.
+  - Stutts, P. (2021) *The Undefeated Marketing System*, Scribe Media (Lioncrest) —
+    `launch-campaigns` (`touchpoint-consistency-audit.md`).
+  - Every blog post, article, or SEO/SERP claim is additionally required, as a standing rule
+    (`rules/common/core.md`), to be sourced live through the Digital Research Engine and
+    attributed to real, locatable researchers, institutions, or regulators.
+- Current platform facts: `docs/source-registers/performance-currentness-2026-09-23.json`
+  (Core Web Vitals, Lighthouse 13.x weights, lab throttling, market network speeds) and
+  `docs/source-registers/search-ai-currentness-2026-09-05.json` (Google AI features, FAQ rich
+  results ended 7 May 2026, llms.txt not required by Google).
 
 ## Mandatory Kaizen contract
 
@@ -138,6 +191,14 @@ accessibility, security, performance, analytics, and reviewer evidence.
 Portable website-building and agency-operating skills for Claude Code and Codex.
 
 ## Book-derived 2026 capability upgrade
+
+The 2026-09-24 Kaizen wave fixed the performance gate (mobile form factor instead of a desktop
+preset; no lab INP assertion; every weight-budget category enforced; the stress profile labelled
+as WebPageTest "3G" values rather than a market median; Lighthouse 12.6.1 and 13.5.0
+compatibility verified with `lhci assert`), added performance, ownership, care-plan, pricing-page,
+headline, agency-operations and measurement references, defined the receiving side of the
+marketing-to-website handoff, and retired the `book-extractions/` folder, recording in a per-file map where each of its methods now
+lives.
 
 ## Prompt-generation capability — 2026-09-17
 
@@ -182,12 +243,14 @@ See [`docs/continuous-improvement/book-driven-kaizen-2026-09-01.md`](docs/contin
 
 ## Engine integrity
 
-The engine has 60 active skills and one authoring template, discovered from the filesystem. Run these release gates on Windows or Linux:
+The engine has 62 active skills and one authoring template, discovered from the filesystem. Run these release gates on Windows or Linux:
 
 ```powershell
 python -X utf8 scripts/validate-skill-registry.py
 python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
 python -X utf8 scripts/routing-smoke-test.py
+python -X utf8 scripts/validate-search-doctrine.py
+python -X utf8 scripts/source_ingestion_guardrail.py
 python -m pytest -q
 ```
 
@@ -334,7 +397,7 @@ bash "$WEBSITE_SKILLS/scripts/install-canonical-ci.sh" <project>  # one-time boo
 - `content-writing`: website copy structure and clarity
 - `brand-alignment`: audience and brand coherence
 - `sales-copywriting`: conversion-focused messaging (cross-cutting quality lens — PASTOR, 4 P's)
-- `long-form-sales-copy`: direct-response long-form execution (Kennedy 28-step + Brunson Star-Story-Solution, Perfect Webinar, OTO Bump) for landing pages, VSLs, webinar funnels, book funnels, order pages, application pages
+- `long-form-sales-copy`: direct-response long-form execution (sales-letter procedure, funnel scripts, webinar closes, one-time offers) for landing pages, VSLs, webinar funnels, book funnels, order pages, application pages
 - `form-ux-design`: user-input flow design
 - `ux-psychology`: behavioral and heuristic UX review
 - `observability`: live telemetry contract for every shipped site
@@ -413,7 +476,7 @@ Recent agency-engine expansion work added the following reference layers:
   Kiswahili: value-word lexicon, vetted proverbs + cautions, kanga-style lines,
   prestige/variety guidance, colonial-pidgin and tourist-Swahili cautions,
   telling-time fractions, ordinals concord, and Tanzania/Kenya term tables.
-  Sources distilled in `book-extractions/{french,swahili}-language-books-extraction-2026.md`.
+  Sources cited in each reference; book extractions are no longer stored (retired 2026-09-24).
 
 ## Working Model
 
@@ -438,7 +501,7 @@ When a task is ambiguous, follow this order:
 
 ## Current first-wave implementation (7 September 2026)
 
-The bounded first wave adds [`docs/kaizen/first-wave-website-journey.md`](./docs/kaizen/first-wave-website-journey.md) and [`docs/kaizen/first-wave-website-measurement.md`](./docs/kaizen/first-wave-website-measurement.md). They define the required brief, route/action map, proof register, render and state evidence, event ownership, negative cases and release boundaries. The website fixture benchmark passed for the local lab fixture; routing smoke passed 31/31 and the skill-contract validator reported zero debt. These are specifications and contracts, not a completed client site or live telemetry. Browser, accessibility, security, deployment, conversion and client-value evidence remain unassessed until a completed packet is attached. Next action: attach one authorised journey packet and run the named owner/reviewer handoff.
+The bounded first wave adds [`docs/kaizen/first-wave-website-journey.md`](./docs/kaizen/first-wave-website-journey.md) and [`docs/kaizen/first-wave-website-measurement.md`](./docs/kaizen/first-wave-website-measurement.md). They define the required brief, route/action map, proof register, render and state evidence, event ownership, negative cases and release boundaries. The website fixture benchmark passed for the local lab fixture; routing smoke passed 31/31 at that date (36/36 after the 2026-09-24 wave) and the skill-contract validator reported zero debt. These are specifications and contracts, not a completed client site or live telemetry. Browser, accessibility, security, deployment, conversion and client-value evidence remain unassessed until a completed packet is attached. Next action: attach one authorised journey packet and run the named owner/reviewer handoff.
 
 ## Runtime-agnostic delivery workflow (7 September 2026)
 

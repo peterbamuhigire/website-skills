@@ -77,6 +77,8 @@ Recovery: repair the page strategy or proof map, then rerun the message and stat
 | Microcopy set | Form and interface owner | Labels, help, error, consent, loading, and confirmation states are covered where applicable. |
 
 ## References
+- [standard-page-kit.md](references/standard-page-kit.md) — read when scoping the page inventory, briefing core pages, or enforcing the lean home-page policy.
+- [consultant-and-creator-site-kit.md](references/consultant-and-creator-site-kit.md) — read when the site belongs to one consultant, expert, speaker or creator.
 
 - [Legacy detailed guidance](references/legacy-guidance.md) for preserved writing patterns.
 - [Message hierarchy framework](references/message-hierarchy-framework.md) for page-level sequencing.
@@ -84,12 +86,12 @@ Recovery: repair the page strategy or proof map, then rerun the message and stat
 - [UX writing pattern library](references/ux-writing-pattern-library.md) for interface states.
 - [Business vocabulary](references/business-vocabulary.md) for precise commercial language.
 - [Website page writing patterns](../premium-commercial-writing/references/website-page-writing-patterns.md) for premium page types.
-- [Human English and reader-centred craft](../../../book-extractions/human-english-craft-synthesis-2026.md) for reader-fit register, grammar, collocation, rhythm, and proof/read-aloud.
+- [Human-English five-pass review](../language-standards/references/human-english-five-pass-review.md) for reader-fit register, grammar, collocation, rhythm, and proof/read-aloud.
 <!-- dual-compat-end -->
 
 ## Book-informed editorial lens
 
-Use the [Garner, Woolley, and Bishop/Starkey independent synthesis](../../../book-extractions/garner-woolley-starkey-content-and-language-synthesis-2026.md)
+Use the [usage, clarity and register review](references/usage-clarity-and-register-review.md)
 for outside-in journey context, intent-led language, topic value, and
 distinctive voice. Treat the books as historical/editorial inputs, not current
 platform evidence.

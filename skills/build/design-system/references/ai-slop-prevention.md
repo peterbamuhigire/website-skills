@@ -113,9 +113,9 @@ This reference is a quality gate. Check it:
 
 ---
 
-## Enterprise anti-patterns (added 2026-05-04 from Synechron Enterprise UX)
+## Enterprise anti-patterns
 
-Source: `enterprise-ux-financial-insurance-extraction.md` Part I (diagnosis of why most enterprise apps fail).
+Attribution: the diagnosis of common enterprise-application failures draws on Synechron Inc. (2018) *Bridge the User Experience Gap in Enterprise Applications for Financial Services & Insurance*; wording is the engine's own.
 
 These five patterns appear most often in B2B / SaaS / dashboard work. Detect early and fail loudly.
 

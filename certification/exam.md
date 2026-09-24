@@ -59,7 +59,7 @@ What is the correct path?
 **A7.** The performance gate is calibrated for which network profile?
 - [ ] US broadband
 - [ ] 4G LTE (global median)
-- [x] African 3G (1638 Kbps, 300 ms RTT, 4× CPU slowdown)
+- [x] A labelled low-end stress profile: WebPageTest "3G" values (1638 Kbps, 300 ms RTT) with a 4× CPU slowdown and Lighthouse mobile emulation; a worst-case floor, not a market median
 - [ ] No network profile — perf is measured unthrottled
 
 **A8.** What blocks deploy on the canonical pipeline?

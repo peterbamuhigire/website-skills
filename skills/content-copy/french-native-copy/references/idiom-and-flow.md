@@ -81,4 +81,4 @@ Beyond the list above, these read as warm and natural in story-driven copy: `Alo
 
 ## Source
 
-Connectors, collocations, CTA conventions, and idiom distilled from *2000 French Phrases* (French Hacking), *Conversational French Dialogues* (Touri Language Learning), and *Read & Think French, Premium* (Think French magazine); the native craft tells, extra connectors, and story-driven phrasing from *Learn French II — Parallel Text* (Polyglot Planet). See `book-extractions/french-language-books-extraction-2026.md`.
+Connectors, collocations, CTA conventions, and idiom distilled from *2000 French Phrases* (French Hacking), *Conversational French Dialogues* (Touri Language Learning), and *Read & Think French, Premium* (Think French magazine); the native craft tells, extra connectors, and story-driven phrasing from *Learn French II — Parallel Text* (Polyglot Planet). Extended subjunctive and verb lists, connector tables and register pairs: [advanced grammar and connector tables](advanced-grammar-and-connector-tables.md).

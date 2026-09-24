@@ -150,7 +150,7 @@ Primary purpose: handle leftover objections.
 - [ ] Answers 1–3 sentences; longer answers link to a dedicated page
 - [ ] Organised by category (scope, timeline, pricing, process, outcomes, boundaries)
 - [ ] Collapsible accordion or anchor links for scanning
-- [ ] Schema: FAQPage structured data
+- [ ] No FAQ rich-result promise: Google stopped showing FAQ rich results on 7 May 2026; `FAQPage` markup only for a documented non-Google consumer
 
 ### Pricing page
 

@@ -1,33 +1,35 @@
-# The Five UX Outcomes — Pre-launch Gate
-**Source:** Extracted from `enterprise-ux-financial-insurance-extraction.md` (Synechron, 2018).
-**Used by:** premium-ui-ux-design.
+# The Five UX Outcomes: Pre-launch Gate
 
----
+Parent skill: [premium-ui-ux-design](../SKILL.md). Read before launching any premium-priced site or application, and when deciding whether a solution can be sold as enterprise-grade.
 
 ## The rule
 
-A premium-priced solution must hit ALL FIVE outcomes. Hitting four of five is **not enterprise-grade** and disqualifies premium-pricing claims.
+A premium-priced solution must achieve all five outcomes. Four out of five is not enterprise-grade and does not support a premium-pricing claim.
 
 ## The five outcomes
 
-| # | Outcome | Verification question | Pass criterion |
-|---|---|---|---|
-| 1 | **Useful** | Built for the target audience addressing their needs and requirements? | Persona-validated; tested against documented goals |
-| 2 | **Easy to use** | Solution is usable with minimal or no training? | First-task success in usability test without coaching |
-| 3 | **Efficient** | Fast to access and use the information? | Task time benchmarked against competitor or prior baseline |
-| 4 | **Pleasing** | Right kind of aesthetics and design elements for a lasting experience? | Subjective rating ≥ 4/5 on initial-impression test |
-| 5 | **Accessible** | Adheres to compliance for people with special needs? | ADA / Section 508 / WCAG 2.1 AA verified |
+| Outcome | Verification question | Pass criterion |
+|---|---|---|
+| Useful | Is it built for the target audience and their stated needs? | Validated against personas; tested against documented goals |
+| Easy to use | Can people use it with little or no training? | First-task success in usability testing without coaching |
+| Efficient | Is information quick to reach and use? | Task time measured against a competitor or earlier baseline |
+| Pleasing | Do the look and feel suit a lasting relationship with the product? | Initial-impression rating meets the target set for the project (state the scale and threshold in the test plan) |
+| Accessible | Does it meet the accessibility standard that applies in the market? | Verified against the chosen WCAG level, and any local legal requirement checked |
 
 ## Pre-launch checklist
 
-For every primary template, answer Yes/No to all five. **One No = no launch.**
+For every primary template, answer yes or no to each item. One no means no launch.
 
-- [ ] Useful — verified against persona goals
-- [ ] Easy to use — first-task success without coaching
-- [ ] Efficient — task time within target
-- [ ] Pleasing — initial-impression rating met
-- [ ] Accessible — ADA / WCAG 2.1 AA passes
+- [ ] Useful: verified against persona goals
+- [ ] Easy to use: first-task success without coaching
+- [ ] Efficient: task time within target
+- [ ] Pleasing: initial-impression target met
+- [ ] Accessible: audit passes at the agreed WCAG level
 
-## Why this matters for premium pricing
+## Why the gate supports premium pricing
 
-Most enterprise apps fail on outcomes 2 and 3 — they're full of features but slow and confusing. Hitting all 5 is a real differentiator that justifies premium fees. The Synechron book's diagnostic of why most enterprise apps fail (feature overload, uninformed design, inconsistent, old-fashioned, cluttered) all map back to one or more of these missed outcomes.
+Many enterprise products fail on the second and third outcomes: they hold many features but are slow and confusing. Typical causes are feature overload, uninformed design, inconsistency, dated styling and clutter. Each maps to one or more missed outcomes, so passing all five is a real differentiator. Use the gate results as evidence in the proposal and the acceptance report.
+
+## Sources
+
+- Synechron Inc. (2018) *Bridge the User Experience Gap in Enterprise Applications for Financial Services & Insurance*, Synechron. Informed the five-outcome framing and the diagnosis of common enterprise-application failures; criteria and thresholds here are the engine's own.

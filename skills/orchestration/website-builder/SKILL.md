@@ -19,6 +19,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 - A multi-page website must be delivered end to end
 - several website skills must be sequenced
 - launch evidence and handover must be reconciled.
+- Discovery needs the outcomes-and-jobs intake, the owner decision register, or the client asset ownership register (client as domain registrant).
 
 ## Do Not Use When
 
@@ -58,7 +59,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 
 ## Book-informed practice route
 
-Use [the 2026-09-14 website product-engineering synthesis](../../../book-extractions/2026-09-14-product-engineering-website-synthesis.md) for scenario-led page goals, failure states, friction logs, and post-launch learning.
+Use [journey acceptance and friction evidence](references/journey-acceptance-and-friction-evidence.md) for scenario-led page goals, failure states, friction logs, and post-launch learning.
 <!-- dual-compat-end -->
 ## Capability Contract
 
@@ -74,6 +75,7 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 |---|---|---|
 | Scope and content approved | Enter implementation sequence | Rework and fabricated content |
 | Any hard quality gate fails | Block release and return to the owning skill | Defective deployment |
+| Discovery starts | Complete the outcomes-and-jobs table, start the owner decision register and the client asset ownership register | Features without purpose and sites the client does not own |
 
 ## Quality Standards
 
@@ -100,6 +102,9 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 A bilingual services site has approved copy but no French native review. Build shared routes, block French release, and hand the locale to `french-native-copy` before rerunning visual and search gates.
 
 ## References
+- [client-asset-ownership-register.md](references/client-asset-ownership-register.md) — read when starting, verifying or handing over the client asset ownership register (domain registrant is the client).
+- [owner-decision-register.md](references/owner-decision-register.md) — read when recording the decisions only the owner can make.
+- [website-asset-planning-and-ownership-rules.md](references/website-asset-planning-and-ownership-rules.md) — read when planning website assets and their ownership rules.
 
 - [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
 - [Narrative information architecture and audience empathy](references/narrative-information-architecture-and-empathy.md)
