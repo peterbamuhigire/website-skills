@@ -8,7 +8,7 @@ This is a planning method, not a platform manual. Current platform behaviour is 
 
 Confirm against current primary documentation before stating any of these; record the source and access date:
 
-- Check Google's current AI optimisation guide (the version reviewed in this engine was dated 10 July 2026). That guide states that `llms.txt` or other AI text files, special schema, artificial chunking, and writing specially for AI are unnecessary for Google Search. Do not recommend them as Google requirements.
+- Check Google's [AI optimisation guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) before advising (guide updated 10 July 2026; rechecked 26 September 2026). It states that `llms.txt` or other AI text files, special schema, artificial chunking, and writing specially for AI are unnecessary for Google Search. Do not recommend them as Google requirements. This applies to Google Search, not other answer products.
 - Check Google's current rich-result documentation before proposing FAQ markup. Google stopped showing FAQ rich results on 7 May 2026; do not promise an FAQ rich result.
 - Check the current Bing Webmaster Tools documentation for its AI Performance report; treat it as a measurement surface, not a ranking or authority score.
 - Check OpenAI's current crawler documentation. Keep search inclusion (`OAI-SearchBot`), potential model training (`GPTBot`), and user-triggered access (`ChatGPT-User`) as separate decisions. See [llms-txt-and-ai-crawlers.md](../../seo/references/llms-txt-and-ai-crawlers.md).
@@ -128,6 +128,6 @@ Otherwise narrow the claim or mark it `NOT_ASSESSED`. Re-audit this reference wh
 ## Sources
 
 - Crystal Carter (2026) *The New Rules of AI Search: SEO for Visibility in ChatGPT, Google Gemini, and Generative Search*, John Wiley & Sons. Used as a qualified planning lens only; its statistics and tool claims are not admitted.
-- Google Search Central, AI optimisation guide (version reviewed 10 July 2026) — check the current version.
+- Google Search Central, [AI optimisation guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) (updated 10 July 2026; rechecked 26 September 2026; check the current version before advising).
 - Bing Webmaster Blog, AI Performance in Bing Webmaster Tools (public preview announcement, February 2026) — check the current version.
 - OpenAI, crawler documentation — check the current version.

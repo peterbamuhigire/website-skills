@@ -14,12 +14,12 @@
       "publisher": "Google Search Central",
       "source_tier": 1,
       "publication_or_version_date": "2026-07-10",
-      "access_date": "2026-09-23",
+      "access_date": "2026-09-26",
       "freshness_class": "time-sensitive",
       "support_status": "verified",
       "archive_url": "https://web.archive.org/web/20260903122209/https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
       "confidence": "high",
-      "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services. Re-checked 2026-09-23 via the Digital Research currentness register (CW-07): the guide, updated 2026-07-10, states llms.txt/AI text files, special schema, chunking and writing specially for AI are unnecessary, and structured data is not required for generative AI search."
+      "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services. Directly re-checked 2026-09-26: the guide, updated 2026-07-10, says AI text files and other special machine-readable files/markup, artificial chunking, and rewriting solely for generative AI are unnecessary for Google Search; structured data is not required for generative AI search. Visibility, crawling, indexing and serving are not guaranteed."
     },
     {
       "source_id": "GOOGLE_SEARCH_ESSENTIALS_2026",
@@ -616,18 +616,18 @@
     },
     {
       "claim_id": "SAI-018",
-      "claim": "Google's AI optimisation guide (updated 2026-07-10) says structured data is not required for generative AI search and that llms.txt, AI text files, special schema, chunking and AI-specific writing are unnecessary; standard SEO and people-first content apply.",
+      "claim": "Google's AI optimisation guide (updated 2026-07-10; directly rechecked 2026-09-26) says structured data is not required for generative AI search and that llms.txt, AI text files, special schema, chunking and AI-specific writing are unnecessary; standard SEO and people-first content apply.",
       "source_ids": [
         "GOOGLE_AI_GUIDE_2026"
       ],
       "support_review": {
         "state": "supported",
         "reviewer": "website-skills Kaizen agent",
-        "basis": "Digital Research currentness register CW-07 (2026-09-23)",
-        "review_date": "2026-09-23"
+        "basis": "Directly checked the current Google Search Central guide on 2026-09-26 and compared its specific statements about AI text files, special markup/schema, chunking, AI-specific rewriting and standard SEO. This supports Google Search only, not other answer products.",
+        "review_date": "2026-09-26"
       },
       "freshness_class": "time-sensitive",
-      "review_date": "2026-12-23",
+      "review_date": "2026-10-03",
       "confidence": "high"
     },
     {
