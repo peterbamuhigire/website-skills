@@ -102,4 +102,4 @@ When a vendor or platform study informs a hypothesis, record:
 
 - Meltwater (2026) *How LinkedIn Content Wins in AI Search* (report) and supporting article (12 May 2026). Vendor research; hypothesis input only.
 - LinkedIn Marketing Blog (21 May 2026) "New research: AI Search and LinkedIn: 5 Takeaways from 9.5 Million Citations". Supporting summary.
-- Google Search Central, AI optimisation guide (version reviewed 10 July 2026) — check the current version.
+- Google Search Central, [AI optimisation guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) (updated 10 July 2026; rechecked 26 September 2026; check the current version before advising).
