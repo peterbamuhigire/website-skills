@@ -28,7 +28,8 @@ DIST_DIR="${DIST_DIR:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/visual"
 VISUAL_DIR="${VISUAL_DIR:-$ROOT/tests/visual}"
 
-command -v npx >/dev/null 2>&1 || { echo "visual-qa: npx required" >&2; exit 4; }
+node "$SKILLS_DIR/scripts/require-locked-qa-tools.mjs" '@playwright/test=playwright' || exit 4
+PLAYWRIGHT_BIN="$ROOT/node_modules/.bin/playwright"
 [ -d "$DIST_DIR" ] || { echo "visual-qa: $DIST_DIR not found. Build first." >&2; exit 5; }
 [ -d "$VISUAL_DIR" ] || { echo "visual-qa: $VISUAL_DIR not found. Copy tests/visual/ from the skills repo." >&2; exit 4; }
 
@@ -36,7 +37,7 @@ mkdir -p "$REPORTS_DIR/diff"
 
 echo "visual-qa: running structural assertions"
 STRUCT_EXIT=0
-npx --yes playwright test "$VISUAL_DIR/structure.spec.ts" \
+"$PLAYWRIGHT_BIN" test "$VISUAL_DIR/structure.spec.ts" \
     --reporter=list \
     --output="$REPORTS_DIR/structure" || STRUCT_EXIT=$?
 if [ "$STRUCT_EXIT" -ne 0 ]; then
@@ -46,7 +47,7 @@ fi
 
 echo "visual-qa: running screenshot diff"
 DIFF_EXIT=0
-npx --yes playwright test "$VISUAL_DIR/capture.spec.ts" \
+"$PLAYWRIGHT_BIN" test "$VISUAL_DIR/capture.spec.ts" \
     --reporter=list \
     --output="$REPORTS_DIR/diff" || DIFF_EXIT=$?
 if [ "$DIFF_EXIT" -ne 0 ]; then

@@ -17,7 +17,7 @@ screenshots for every primary template.
 
 ```bash
 npm i -D @playwright/test pixelmatch pngjs
-npx playwright install --with-deps chromium
+./node_modules/.bin/playwright install --with-deps chromium
 ```
 
 WebKit and Firefox are added for any site with a substantial iOS Safari user
@@ -142,13 +142,13 @@ nonces, a cycling testimonial) is masked rather than baselined. Rules:
 
 ```bash
 # Full gate (CI)
-npx playwright test tests/visual/ --config=tests/visual/visual.config.ts
+./node_modules/.bin/playwright test tests/visual/ --config=tests/visual/visual.config.ts
 
 # Update baselines (only on intentional change)
-npx playwright test tests/visual/ --update-snapshots
+./node_modules/.bin/playwright test tests/visual/ --update-snapshots
 
 # One template only
-npx playwright test -g "home @"
+./node_modules/.bin/playwright test -g "home @"
 ```
 
 ## CI Behaviour

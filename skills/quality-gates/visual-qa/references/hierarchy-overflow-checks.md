@@ -145,7 +145,7 @@ two opt-outs on a single page is a review flag.
 ## 5. Running Order in CI
 
 ```bash
-npx playwright test tests/visual/structure.spec.ts
+./node_modules/.bin/playwright test tests/visual/structure.spec.ts
 ```
 
 The structure spec runs before the screenshot diff; a structural failure

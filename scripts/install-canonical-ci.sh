@@ -120,9 +120,12 @@ cat <<EOF
 install-canonical-ci: done.
 
 Next steps in this project:
-  1. npm i -D @lhci/cli @axe-core/cli @playwright/test serve jq
+  1. Pin the QA tools as exact direct devDependencies in package.json and package-lock.json.
+     For accessibility, visual and preview gates: npm i --save-exact -D @axe-core/playwright @playwright/test serve
+     For performance, add @lhci/cli only after npm audit reports no high/critical findings.
+     Run npm audit before adopting any of these packages; the engine will not fetch them.
   2. Capture initial visual baselines once the first template is designed:
-     npx playwright test --update-snapshots tests/visual/capture.spec.ts
+     ./node_modules/.bin/playwright test --update-snapshots tests/visual/capture.spec.ts
   3. Replace placeholders in public/.well-known/security.txt and docs/security-policy.md.
   4. Commit .github/workflows/website.yml, lighthouserc.json, performance-budgets.json,
      .third-party-allowed, public/.well-known/security.txt, docs/security-policy.md,

@@ -25,6 +25,8 @@ set -euo pipefail
 DIST_DIR="${1:-dist}"
 TARGET="${2:-}"
 REPORT="reports/security/headers.txt"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(pwd)"
 mkdir -p "$(dirname "$REPORT")"
 
 [ -d "$DIST_DIR" ] || { echo "check-security-headers: $DIST_DIR not found" >&2; exit 3; }
@@ -32,7 +34,8 @@ mkdir -p "$(dirname "$REPORT")"
 SERVER_PID=""
 if [ -z "$TARGET" ]; then
     PORT="${HEADER_PORT:-4322}"
-    npx --yes serve "$DIST_DIR" -l "$PORT" >/dev/null 2>&1 &
+    node "$SCRIPT_DIR/require-locked-qa-tools.mjs" 'serve=serve' || exit 3
+    "$ROOT/node_modules/.bin/serve" "$DIST_DIR" -l "$PORT" >/dev/null 2>&1 &
     SERVER_PID=$!
     trap 'kill $SERVER_PID 2>/dev/null || true' EXIT
     for _ in $(seq 1 30); do
