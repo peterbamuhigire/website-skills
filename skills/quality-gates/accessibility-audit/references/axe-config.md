@@ -1,19 +1,22 @@
 # axe-core Configuration
 
-Runtime configuration for the accessibility gate. Keeps the ruleset tight to
-WCAG 2.2 AA, adds the two engine-specific rules, and documents every
-suppression.
+Runtime configuration for the accessibility gate. Keeps the automated rule
+scope aligned with WCAG 2.2 AA and documents every suppression. Automated
+scans do not replace manual accessibility review.
 
-## Preferred Runner
+## Canonical Runner
 
-The engine standardises on `@axe-core/cli` for the CI gate. Alternatives
-(axe-playwright, jest-axe) are accepted only for per-component unit tests, not
-as the primary gate.
+The CI gate uses `@axe-core/playwright` through the project's directly pinned
+`@playwright/test` installation. This reuses the project's browser runtime and
+avoids a separate WebDriver downloader. Automated results remain a partial
+accessibility check; keyboard, screen-reader, zoom, contrast and content review
+are still required.
 
 ## Install
 
 ```bash
-npm i -D @axe-core/cli
+npm i --save-exact -D @axe-core/playwright @playwright/test
+npm audit
 ```
 
 ## Invocation
@@ -21,20 +24,14 @@ npm i -D @axe-core/cli
 The canonical invocation lives in `scripts/a11y-gate.sh`. Manual runs:
 
 ```bash
-# All primary routes against a running static preview on :4321
-npx axe http://localhost:4321/ \
-  http://localhost:4321/services/ \
-  http://localhost:4321/about/ \
-  http://localhost:4321/contact/ \
-  http://localhost:4321/blog/ \
-  --exit \
-  --save reports/a11y/axe-summary.json \
-  --dir reports/a11y/ \
-  --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa,best-practice
+# From the consuming project root after npm ci and installing Chromium
+./node_modules/.bin/playwright install chromium
+bash "$WEBSITE_SKILLS_DIR/scripts/a11y-gate.sh"
 ```
 
-The `--exit` flag causes the process to exit non-zero when violations are
-found; CI depends on this behaviour.
+The gate reads concrete routes from `performance-budgets.json`, scans each
+route at a narrow viewport, saves one raw axe result per route, and blocks on
+scan errors or serious/critical violations. It does not fetch missing tools.
 
 ## Tag Scope
 
@@ -86,20 +83,6 @@ Suppressions must:
 - name a specific selector, not the whole page
 - reference the evidence for the manual verification
 - have a review date within 12 months
-
-## Custom Rules Added by the Engine
-
-Implemented as axe custom checks loaded via `--script` flag:
-
-1. **focus-visible-dark-mode** — asserts a visible focus ring when
-   `prefers-color-scheme: dark` is applied.
-2. **reduced-motion-default** — asserts no CSS animation outside a
-   `@media (prefers-reduced-motion: no-preference)` block when the animation
-   lasts more than 500 ms.
-
-Both rules live in `accessibility-audit/references/custom-checks.js` and are
-loaded by `a11y-gate.sh`. If the file is not present, CI warns but does not
-fail — create it before adding the custom rules to the build contract.
 
 ## Page Preparation
 

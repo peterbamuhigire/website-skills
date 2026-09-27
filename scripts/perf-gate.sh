@@ -16,8 +16,8 @@
 #   4  — no built output to serve
 #   5  — static HTML performance lint failed (scripts/html-perf-lint.mjs)
 #
-# Prerequisites (install once per project):
-#   npm i -D @lhci/cli   (Node 18+ required for the weight walker and HTML lint)
+# Prerequisites: add an exact, audited @lhci/cli version to the consuming
+# project's devDependencies and package-lock.json. The gate never downloads it.
 #
 # Lab profile: lighthouserc.json uses a deliberate low-end STRESS profile
 # (WebPageTest '3G' network values, 300 ms RTT; a throttled Slow-4G/3G
@@ -37,8 +37,9 @@ REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}"
 # PORT is only the placeholder host port in the generated Lighthouse CI URLs; LHCI serves DIST_DIR itself.
 PORT="${PERF_GATE_PORT:-4321}"
 
-command -v npx >/dev/null 2>&1 || { echo "perf-gate: npx not found" >&2; exit 3; }
 command -v node >/dev/null 2>&1 || { echo "perf-gate: node not found" >&2; exit 3; }
+node "$SKILLS_DIR/scripts/require-locked-qa-tools.mjs" '@lhci/cli=lhci' || exit 3
+LHCI_BIN="$ROOT/node_modules/.bin/lhci"
 
 [ -d "$DIST_DIR" ] || { echo "perf-gate: $DIST_DIR not found. Run the project build first." >&2; exit 4; }
 [ -f "$LHCI_CONFIG" ] || { echo "perf-gate: lighthouserc.json missing at $LHCI_CONFIG" >&2; exit 3; }
@@ -73,7 +74,7 @@ esac
 
 echo "perf-gate: running Lighthouse CI against $DIST_DIR"
 LHCI_EXIT=0
-npx --yes @lhci/cli autorun --config="$GENERATED_CONFIG" || LHCI_EXIT=$?
+"$LHCI_BIN" autorun --config="$GENERATED_CONFIG" || LHCI_EXIT=$?
 
 if [ "$LHCI_EXIT" -ne 0 ]; then
     echo "perf-gate: FAIL — Lighthouse thresholds not met. See $REPORTS_DIR/lighthouse/" >&2

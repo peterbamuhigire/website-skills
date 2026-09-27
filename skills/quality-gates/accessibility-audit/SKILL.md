@@ -118,7 +118,7 @@ bash "$WEBSITE_SKILLS/scripts/a11y-gate.sh"
 
 The command:
 1. Starts a static preview on `:4321` against `./dist/`.
-2. Runs `@axe-core/cli` against every primary route.
+2. Runs axe through `@axe-core/playwright` using the consuming project's exact, lockfile-backed `@playwright/test` browser runtime against every primary route. The gate does not fetch missing tools; review and pin QA dependencies in the project manifest and lockfile, then run `npm audit`.
 3. Asserts zero serious/critical violations; writes a full report to
    `reports/a11y/<route>.json` and a human-readable summary to
    `reports/a11y/summary.md`.
