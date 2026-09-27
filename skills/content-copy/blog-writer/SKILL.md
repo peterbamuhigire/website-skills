@@ -59,6 +59,8 @@ Recovery: repair the brief, source, or claim, then rerun source and editorial ch
 - Examples and quotations are genuine and traceable; placeholders are labelled.
 - The opening earns attention with the reader's problem or decision, not generic industry scene-setting.
 - Headings, links, CTA, and metadata support the reader rather than pad search volume.
+- Every new or edited article links to existing, relevant, related internal pages or posts on the same site, and every internal link opens in a new tab (`target="_blank" rel="noopener noreferrer"`). Do not link to a page that does not exist yet or is not yet published — mention it in prose instead and link it once it ships.
+- Internal links stay within the same language: an English article links only to English (`/en/...`) pages and posts; a French article links only to French (`/fr/...`) pages and posts. Never cross-link a French page to an English URL or vice versa.
 - The draft sounds like the named author or brand and records any evidence gap.
 
 ## Anti-Patterns

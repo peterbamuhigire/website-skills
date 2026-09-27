@@ -39,6 +39,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 7. Recovery: if a check fails, retain the last working slice, isolate and repair the page/component, then rerun the failing acceptance check.
 
 ## Quality standards
+- Every internal link (to another page, post, or route on the same site) opens in a new tab: `target="_blank" rel="noopener noreferrer"`. This applies on every new or edited blog post and page, in body copy, related-content blocks, and CTAs alike — not only external links.
+- Internal links point to an existing, relevant, related page or post on the same site (or, where the target is not yet published, are omitted rather than left dangling) — never to a generic or unrelated route chosen to satisfy a link-count target.
 - Each route preserves its approved audience, goal, proof, CTA, schema, event, and locale contract.
 - Reusable components cover applicable loading, empty, error, focus, disabled, and reduced-motion states.
 - Build, route, accessibility, responsive, and integration evidence names failures and unassessed checks.
