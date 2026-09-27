@@ -126,23 +126,23 @@
       const list = document.querySelector('#error-list');
       const status = document.querySelector('#form-status');
       const fields = [
-        ['name', 'Add your name.'],
-        ['email', 'Enter a valid email address.'],
-        ['topic', 'Choose a topic.'],
-        ['contact-ok', 'Confirm that the team may use these details to respond.']
+        ['name', 'Add your name.', 'name-error'],
+        ['email', 'Enter a valid email address.', 'email-error'],
+        ['topic', 'Choose a topic.', 'topic-error'],
+        ['contact-ok', 'Confirm that the team may use these details to respond.', 'consent-error']
       ];
       const clearMessages = () => {
         summary.hidden = true;
         status.hidden = true;
         list.replaceChildren();
-        fields.forEach(([id]) => { const field = document.getElementById(id); field.removeAttribute('aria-invalid'); const error = document.getElementById(`${id}-error`); if (error) { error.hidden = true; error.textContent = ''; } });
+        fields.forEach(([id, , errorId]) => { const field = document.getElementById(id); field.removeAttribute('aria-invalid'); const error = document.getElementById(errorId); if (error) { error.hidden = true; error.textContent = ''; } });
       };
       const showErrors = () => {
         clearMessages();
         const invalid = fields.filter(([id]) => { const field = document.getElementById(id); return !field.checkValidity(); });
-        invalid.forEach(([id, message]) => {
+        invalid.forEach(([id, message, errorId]) => {
           const field = document.getElementById(id); field.setAttribute('aria-invalid', 'true');
-          const error = document.getElementById(`${id}-error`); if (error) { error.textContent = message; error.hidden = false; }
+          const error = document.getElementById(errorId); if (error) { error.textContent = message; error.hidden = false; }
           const item = document.createElement('li'); const link = document.createElement('a'); link.href = `#${id}`; link.textContent = message; item.append(link); list.append(item);
         });
         if (invalid.length) { summary.hidden = false; summary.focus(); return true; }
@@ -155,7 +155,8 @@
         const field = event.target;
         if (!field.matches('[aria-invalid="true"]') || !field.checkValidity()) return;
         field.removeAttribute('aria-invalid');
-        const error = document.getElementById(`${field.id}-error`);
+        const errorId = fields.find(([id]) => id === field.id)?.[2];
+        const error = errorId ? document.getElementById(errorId) : null;
         if (error) error.hidden = true;
         [...list.querySelectorAll('a')].filter(link => link.getAttribute('href') === `#${field.id}`).forEach(link => link.closest('li').remove());
         if (!list.children.length) summary.hidden = true;

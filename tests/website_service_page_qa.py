@@ -52,6 +52,9 @@ def run(screenshots_dir: Path | None = None) -> dict:
         assert page.get_by_role("alert").is_visible(), "invalid form must show an error summary"
         assert page.locator("#name").get_attribute("aria-invalid") == "true"
         assert page.get_by_role("link", name="Add your name.").get_attribute("href") == "#name"
+        assert page.locator("#contact-ok").get_attribute("aria-invalid") == "true"
+        assert page.locator("#consent-error").is_visible(), "consent checkbox needs its linked inline error"
+        assert page.locator("#consent-error").inner_text() == "Confirm that the team may use these details to respond."
         if screenshots_dir:
             target = screenshots_dir / "mobile-390-validation-errors.png"
             page.screenshot(path=str(target), full_page=True)
@@ -62,6 +65,7 @@ def run(screenshots_dir: Path | None = None) -> dict:
         page.locator("#topic").select_option(label="Systems or tools")
         page.locator("#details").fill("Please discuss how the handoff works.")
         page.locator("#contact-ok").check()
+        assert page.locator("#consent-error").is_hidden(), "correcting consent must clear its inline error"
         page.get_by_role("button", name="Preview server error").click()
         assert page.get_by_role("status").inner_text().startswith("A temporary error occurred")
         assert page.locator("#name").input_value() == "Sam Example"
