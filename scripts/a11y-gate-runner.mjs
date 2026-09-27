@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 // Automated WCAG rule scan for each non-parameterized route in performance-budgets.json.
 import fs from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 import process from 'node:process';
-import { AxeBuilder } from '@axe-core/playwright';
-import { chromium } from '@playwright/test';
+
+// The gate script lives in the engine checkout; dependencies belong to the consuming project.
+const projectRequire = createRequire(path.join(process.cwd(), 'package.json'));
+const { AxeBuilder } = projectRequire('@axe-core/playwright');
+const { chromium } = projectRequire('@playwright/test');
 
 const baseUrl = process.env.A11Y_BASE_URL;
 const routesPath = process.env.ROUTES_FILE;
