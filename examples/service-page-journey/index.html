@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Illustrative service page prototype for owner review. No service claims or contact details are approved.">
+  <title>Digital operations, made clearer | Chwezi Core Systems — draft</title>
+  <style>
+    :root { color-scheme: light; --ink: #172a2b; --muted: #4e6260; --paper: #f6f5ef; --card: #fffefa; --line: #c8d1c9; --accent: #175c51; --accent-dark: #10453e; --warm: #e9b45f; --error: #a12424; --focus: #a44f00; --radius: 1rem; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 Georgia, "Times New Roman", serif; }
+    a { color: var(--accent-dark); text-underline-offset: .2em; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .wrap { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+    .skip { position: absolute; inset: .5rem auto auto .5rem; z-index: 5; padding: .65rem 1rem; transform: translateY(-160%); background: var(--card); }
+    .skip:focus { transform: none; }
+    .notice { padding: .65rem 1rem; background: #f7e8c9; color: #382b19; font: 700 .86rem/1.45 "Trebuchet MS", sans-serif; text-align: center; }
+    header { border-bottom: 1px solid var(--line); }
+    .head { min-height: 5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { color: var(--ink); font: 700 1rem/1.2 "Trebuchet MS", sans-serif; letter-spacing: .04em; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.2rem; font: 600 .9rem/1.4 "Trebuchet MS", sans-serif; }
+    nav a { color: var(--ink); }
+    main { overflow: clip; }
+    .hero { position: relative; padding: clamp(3.5rem, 9vw, 7.5rem) 0 5rem; }
+    .hero:after { content: ""; position: absolute; width: min(35vw, 27rem); aspect-ratio: 1; right: -3rem; top: 2rem; z-index: -1; border-radius: 50% 50% 12% 50%; background: var(--warm); opacity: .62; }
+    .eyebrow { color: var(--accent-dark); font: 700 .78rem/1.3 "Trebuchet MS", sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { max-width: 18ch; margin: 0; line-height: 1.08; letter-spacing: -.035em; }
+    h1 { margin-top: 1rem; font-size: clamp(2.8rem, 7.8vw, 6.2rem); }
+    h2 { font-size: clamp(2rem, 4.6vw, 3.5rem); }
+    h3 { font-size: 1.3rem; letter-spacing: -.02em; }
+    .lede { max-width: 41rem; margin: 1.5rem 0 2rem; color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.35rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: .7rem 1.15rem; border: 2px solid var(--accent); border-radius: 999px; background: var(--accent); color: white; font: 700 .95rem/1.2 "Trebuchet MS", sans-serif; text-decoration: none; cursor: pointer; }
+    .button:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+    .button.secondary { color: var(--accent-dark); background: transparent; }
+    .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+    .section.alt { background: #e9eee7; }
+    .intro { max-width: 42rem; color: var(--muted); font-size: 1.1rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.2rem; }
+    .card { min-height: 13rem; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+    .card p { margin-bottom: 0; color: var(--muted); }
+    .step { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
+    .step b { flex: 0 0 2rem; color: var(--accent); font: 700 1rem/1.7 "Trebuchet MS", sans-serif; }
+    .step p { margin: .25rem 0 0; color: var(--muted); }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    form { padding: clamp(1.1rem, 4vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+    label { display: block; margin: 1rem 0 .35rem; font: 700 .92rem/1.4 "Trebuchet MS", sans-serif; }
+    input, textarea, select { width: 100%; min-height: 48px; padding: .7rem .8rem; border: 1px solid #7b8b84; border-radius: .35rem; background: white; color: var(--ink); font: 1rem/1.4 "Trebuchet MS", sans-serif; }
+    textarea { min-height: 8rem; resize: vertical; }
+    .hint { margin: .3rem 0 0; color: var(--muted); font-size: .88rem; }
+    .check { display: grid; grid-template-columns: 1.4rem 1fr; gap: .7rem; align-items: start; margin: 1.2rem 0; font: .92rem/1.5 "Trebuchet MS", sans-serif; }
+    .check input { width: 1.3rem; height: 1.3rem; min-height: 0; margin: .1rem 0 0; }
+    .error-summary, .status { margin: 0 0 1rem; padding: .9rem 1rem; border-radius: .4rem; }
+    .error-summary { border: 2px solid var(--error); background: #fff0ee; color: #641717; }
+    .error-summary h3 { font: 700 1rem/1.4 "Trebuchet MS", sans-serif; letter-spacing: 0; }
+    .error-summary ul { margin: .3rem 0 0; }
+    .status { background: #e6f2eb; color: #17412d; }
+    [hidden] { display: none !important; }
+    .demo-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
+    .demo-controls button { min-height: 44px; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: .35rem; background: transparent; color: var(--ink); cursor: pointer; }
+    footer { padding: 2rem 0; border-top: 1px solid var(--line); color: var(--muted); font: .85rem/1.5 "Trebuchet MS", sans-serif; }
+    .small { font-size: .88rem; }
+    @media (max-width: 700px) { .head { align-items: flex-start; flex-direction: column; padding-block: 1rem; } nav { gap: .7rem 1rem; } .grid, .contact { grid-template-columns: 1fr; } .hero { padding-bottom: 4rem; } .hero:after { width: 45vw; right: -2rem; top: 1rem; opacity: .4; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="notice" role="note">Illustrative prototype · Owner, brand, service and privacy review required before use</div>
+  <header>
+    <div class="wrap head">
+      <a class="brand" href="#top" aria-label="Chwezi Core Systems draft, home">CHWEZI CORE SYSTEMS <span aria-hidden="true">/ DRAFT</span></a>
+      <nav aria-label="Main navigation"><a href="#work">Possible work</a><a href="#approach">Approach</a><a href="#enquiry">Enquiry</a></nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="wrap hero" id="top" aria-labelledby="page-title">
+      <p class="eyebrow">Digital operations · draft positioning</p>
+      <h1 id="page-title">Make the work behind your work easier to see.</h1>
+      <p class="lede">A starting point for organisations reviewing how their systems, information and day-to-day processes fit together. This prototype tests a clear conversation path; the offer and service scope still need owner approval.</p>
+      <div class="actions"><a class="button" href="#enquiry">Start a conversation</a><a class="button secondary" href="#approach">See the proposed approach</a></div>
+    </section>
+    <section class="section alt" id="work" aria-labelledby="work-title">
+      <div class="wrap"><p class="eyebrow">Possible areas to explore</p><h2 id="work-title">Begin with the friction people can point to.</h2>
+        <p class="intro">These are discussion prompts for validating the eventual service page. They are not an approved catalogue of services, credentials or delivery promises.</p>
+        <div class="grid">
+          <article class="card"><h3>Disconnected systems</h3><p>Where do people re-enter information or switch tools to complete one task?</p></article>
+          <article class="card"><h3>Unclear handoffs</h3><p>Which approvals, responsibilities or next steps are hard to follow?</p></article>
+          <article class="card"><h3>Hard-to-use information</h3><p>What does a team need to find, trust or act on more easily?</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="wrap"><p class="eyebrow">Proposed conversation</p><h2 id="approach-title">A small first step with room to decide.</h2>
+        <div class="step"><b>01</b><div><h3>Describe the situation</h3><p>Share the task, system or handoff that is taking more effort than it should.</p></div></div>
+        <div class="step"><b>02</b><div><h3>Agree what to examine</h3><p>Confirm the people, boundaries and evidence needed before recommending work.</p></div></div>
+        <div class="step"><b>03</b><div><h3>Choose a next step</h3><p>Decide together whether further discovery or a defined piece of work makes sense.</p></div></div>
+        <p class="small">No diagnostic, delivery timeline, result or fee is promised on this draft page.</p>
+      </div>
+    </section>
+    <section class="section alt" id="enquiry" aria-labelledby="enquiry-title">
+      <div class="wrap contact">
+        <div><p class="eyebrow">A first conversation</p><h2 id="enquiry-title">What would you like to make easier?</h2><p class="intro">Tell us only what is useful for an initial conversation. Do not include passwords, personal records or confidential system details.</p><p class="small">Prototype note: this form is local only. It does not send or save your information. The final recipient, retention, privacy notice and lawful basis require owner review.</p></div>
+        <form id="enquiry-form" novalidate>
+          <div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden><h3>Check the highlighted details</h3><ul id="error-list"></ul></div>
+          <p id="form-status" class="status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+          <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="hint" id="name-error" hidden></p>
+          <label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="hint" id="email-error" hidden></p>
+          <label for="topic">What would you like to discuss?</label><select id="topic" name="topic" required aria-describedby="topic-error"><option value="">Choose one</option><option>Systems or tools</option><option>Process or handoff</option><option>Information or reporting</option><option>Something else</option></select><p class="hint" id="topic-error" hidden></p>
+          <label for="details">A little context <span class="small">(optional)</span></label><textarea id="details" name="details" maxlength="600" aria-describedby="details-hint"></textarea><p class="hint" id="details-hint">Avoid sensitive or confidential details.</p>
+          <label class="check" for="contact-ok"><input id="contact-ok" name="contact-ok" type="checkbox" required aria-describedby="consent-error"><span>I agree that the team may use these details to respond to this enquiry. <span class="small">Draft wording; privacy owner approval required.</span></span></label><p class="hint" id="consent-error" hidden></p>
+          <button class="button" type="submit">Send enquiry (prototype only)</button>
+          <div class="demo-controls" aria-label="Prototype response scenarios"><button type="button" id="simulate-error">Preview server error</button><button type="button" id="simulate-success">Preview accepted response</button></div>
+          <p class="hint">The preview controls demonstrate interface states only; they do not contact a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">Chwezi Core Systems · Prototype for internal review · No live service or contact claims approved</div></footer>
+  <script>
+    (() => {
+      const form = document.querySelector('#enquiry-form');
+      const summary = document.querySelector('#error-summary');
+      const list = document.querySelector('#error-list');
+      const status = document.querySelector('#form-status');
+      const fields = [
+        ['name', 'Add your name.'],
+        ['email', 'Enter a valid email address.'],
+        ['topic', 'Choose a topic.'],
+        ['contact-ok', 'Confirm that the team may use these details to respond.']
+      ];
+      const clearMessages = () => {
+        summary.hidden = true;
+        status.hidden = true;
+        list.replaceChildren();
+        fields.forEach(([id]) => { const field = document.getElementById(id); field.removeAttribute('aria-invalid'); const error = document.getElementById(`${id}-error`); if (error) { error.hidden = true; error.textContent = ''; } });
+      };
+      const showErrors = () => {
+        clearMessages();
+        const invalid = fields.filter(([id]) => { const field = document.getElementById(id); return !field.checkValidity(); });
+        invalid.forEach(([id, message]) => {
+          const field = document.getElementById(id); field.setAttribute('aria-invalid', 'true');
+          const error = document.getElementById(`${id}-error`); if (error) { error.textContent = message; error.hidden = false; }
+          const item = document.createElement('li'); const link = document.createElement('a'); link.href = `#${id}`; link.textContent = message; item.append(link); list.append(item);
+        });
+        if (invalid.length) { summary.hidden = false; summary.focus(); return true; }
+        return false;
+      };
+      form.addEventListener('submit', event => { event.preventDefault(); if (showErrors()) return; status.textContent = 'Prototype only: the enquiry was not sent or stored.'; status.hidden = false; status.focus(); });
+      document.querySelector('#simulate-error').addEventListener('click', () => { clearMessages(); status.textContent = 'A temporary error occurred in this preview. Your entries are still here. Try again later or use the approved contact route when available.'; status.hidden = false; status.focus(); });
+      document.querySelector('#simulate-success').addEventListener('click', () => { if (showErrors()) return; status.textContent = 'Preview accepted. This is a simulated response; nothing was sent or stored.'; status.hidden = false; status.focus(); });
+      form.addEventListener('input', event => {
+        const field = event.target;
+        if (!field.matches('[aria-invalid="true"]') || !field.checkValidity()) return;
+        field.removeAttribute('aria-invalid');
+        const error = document.getElementById(`${field.id}-error`);
+        if (error) error.hidden = true;
+        [...list.querySelectorAll('a')].filter(link => link.getAttribute('href') === `#${field.id}`).forEach(link => link.closest('li').remove());
+        if (!list.children.length) summary.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>
