@@ -50,7 +50,7 @@ if (!require('./plugin-hook-config').isEnabled()) process.exit(0);
 
 const path = require('path');
 const fs = require('fs');
-const { spawnSync } = require('child_process');
+const { runBash } = require('./bash-runner');
 
 const SCRIPTS_DIR = path.join(__dirname, '..', 'scripts');
 const MAX_STDIN = 1024 * 1024;
@@ -114,7 +114,7 @@ function runGate(gate) {
   if (!fs.existsSync(scriptPath)) {
     return { name: gate.name, status: 'skip', reason: `${gate.script} not found` };
   }
-  const result = spawnSync('bash', [scriptPath, ...gate.args], {
+  const result = runBash(scriptPath, gate.args, {
     cwd: process.cwd(),
     encoding: 'utf8',
     timeout: timeoutMs(),

@@ -37,7 +37,7 @@ if (!require('./plugin-hook-config').isEnabled()) process.exit(0);
 
 const path = require('path');
 const fs = require('fs');
-const { spawnSync } = require('child_process');
+const { runBash } = require('./bash-runner');
 
 const SCRIPT_PATH = path.join(__dirname, '..', 'scripts', 'drift-check.sh');
 const SKIP_EXIT_CODES = new Set([8]); // prerequisite or runner error
@@ -56,7 +56,7 @@ function runDriftCheck(cwd) {
   if (!fs.existsSync(SCRIPT_PATH)) {
     return { status: 'skip', reason: 'drift-check.sh not found' };
   }
-  const result = spawnSync('bash', [SCRIPT_PATH], {
+  const result = runBash(SCRIPT_PATH, [], {
     cwd: cwd || process.cwd(),
     encoding: 'utf8',
     timeout: timeoutMs(),
