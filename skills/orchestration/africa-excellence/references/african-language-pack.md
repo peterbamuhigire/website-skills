@@ -47,7 +47,7 @@ The language set is decided during strategy:
 
 | Language | Recommended primary fonts (open-source) | Notes |
 |---|---|---|
-| Kiswahili | Inter, IBM Plex, Source Sans | Latin; no special glyphs beyond ASCII. |
+| Kiswahili | Inter, Public Sans, Source Sans | Latin; no special glyphs beyond ASCII. |
 | Luganda | Inter, Source Sans | Latin; no special glyphs. |
 | Amharic | Noto Sans Ethiopic, Abyssinica SIL | Ge'ez script; body text only in fonts with Ethiopic coverage. |
 | Yoruba | Noto Sans, Inter (with Yoruba subset) | Tone marks: ọ, ẹ, ṣ, and above diacritics. Confirm glyph coverage. |
@@ -56,7 +56,7 @@ The language set is decided during strategy:
 | Zulu | Inter, Source Sans | Latin with clicks written with standard letters. |
 | Twi | Noto Sans, Inter | Tone marks and special letters (ɛ, ɔ). |
 | Wolof | Inter, Noto Sans | Latin with special letters (ñ, ŋ). |
-| Arabic | IBM Plex Arabic, Noto Naskh Arabic | RTL, script-family differences between North African and Gulf styles. |
+| Arabic | Noto Sans Arabic, Noto Naskh Arabic (chosen for script coverage) | RTL, script-family differences between North African and Gulf styles. |
 | Tifinagh | Noto Sans Tifinagh | Very small user base; subset carefully. |
 
 Rules:
@@ -65,8 +65,9 @@ Rules:
   target language. Missing glyphs show as empty boxes; unacceptable.
 - Subset per language shipped. Don't load the full Noto Sans when
   the page is Kiswahili and uses only basic Latin.
-- Prefer Noto family for coverage breadth. IBM Plex and Source Sans
-  are good choices for Latin-script African languages.
+- Prefer Noto family for coverage breadth. Public Sans and Source Sans
+  are good choices for Latin-script African languages; confirm hooked
+  and tone-marked letters render before shipping.
 
 ## Expansion ratios
 
