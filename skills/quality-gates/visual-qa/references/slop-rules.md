@@ -1,9 +1,45 @@
 # AI-Slop Detection Rules for Rendered Output
 
 Extends `design-system/references/ai-slop-prevention.md` with rules that only
-make sense against rendered HTML and CSS. Consumed by `scripts/slop-scan.sh`.
+make sense against rendered HTML and CSS.
 
-The rule names below map 1:1 to entries in the slop-scan JSON output.
+## What `scripts/slop-scan.sh` actually checks
+
+The script automates only part of this catalogue. It hard-codes its own
+patterns (it does not read this file), takes one argument (the dist
+directory; there are no flags) and writes a Markdown report to
+`reports/design-quality/slop-scan.md` under the working directory (or
+`$REPORTS_DIR/design-quality/` when `REPORTS_DIR` is set). It writes no JSON.
+
+| Family | Script coverage |
+|---|---|
+| 1. Gradients | Partial: purple/blue hex and Tailwind `from-purple`/`from-indigo` signatures only; the 30-RGB-unit comparison is not implemented |
+| 2. Easing | None |
+| 3. Headlines | Yes, against the script's own pattern list (it differs from the regexes below) |
+| 4. Low-information hero | None |
+| 5. Icon overuse | None |
+| 6. Filler adjectives | Partial: fillers inside `<h1>`/`<h2>` only, not body-copy counts |
+| 7. Three-column grid | None |
+| 8. Hero imagery | None |
+| 9. Copy blocks on dedicated pages | None |
+| 10. Colour discipline | None |
+| 11. Typography discipline | None |
+| 12. Spacing discipline | None |
+| Script-only checks | Pure `#000` body text, "Trusted by" logo rows without links, filler copy transitions |
+
+Exit codes: 0 pass; 1 headline, filler or transition; 2 gradient or pure
+black; 4 trust row; 5 dist directory missing. Code 3 is declared in the
+script header but never emitted.
+
+**Fonts:** slop-scan performs no banned-font check. Typeface bans are
+enforced by the design engine: `design-system-skills` hook
+`hooks/banned-font-gate.js`, reading
+`doctrine/references/ai-slop-banned-fonts.json`. A release without that gate
+records the font check as `NOT_ASSESSED`.
+
+Where a family below is marked not automated, a passing slop-scan says
+nothing about it: the reviewer checks it by hand and records the result, or
+records `NOT_ASSESSED`.
 
 ## 1. Banned Gradient Backgrounds
 
@@ -24,9 +60,11 @@ stops that fall within 30 RGB units of the banned pairs.
 - `ease-in-out` on hero animations (too slow to feel premium).
 - `cubic-bezier(0, 0, 0.2, 1)` on anything longer than 500 ms (feels generic).
 
-Detection: scan compiled CSS for `transition-timing-function` and
+Intended detection: scan compiled CSS for `transition-timing-function` and
 `animation-timing-function`; compare against the allowlist defined in
 `design-system/tokens.css`.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 3. Banned Headline Patterns
 
@@ -51,8 +89,10 @@ A hero fails when:
 - visible copy above the fold is shorter than 12 words total; or
 - the hero contains only a single short verb-led phrase and a button.
 
-Detection: render the homepage at 1280x800; capture visible text nodes
-above the 800px fold; count words.
+Intended detection: render the homepage at 1280x800; capture visible text
+nodes above the 800px fold; count words.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 5. Generic Icon Overuse
 
@@ -63,8 +103,10 @@ A page fails when:
 - A stretch of 3 or more consecutive sections share a "feature row of three
   icons" pattern.
 
-Detection: count `<svg>` and icon-font elements with a visual bounding box
-greater than 12x12 CSS pixels.
+Intended detection: count `<svg>` and icon-font elements with a visual
+bounding box greater than 12x12 CSS pixels.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 6. Filler Adjectives in Body Copy
 
@@ -84,9 +126,11 @@ A page fails when:
 - the three headings are parallel single-word or two-word phrases (e.g.
   "Fast / Secure / Reliable").
 
-Detection: DOM pattern match against a section with three grid children,
-each matching the above shape; cross-check with
+Intended detection: DOM pattern match against a section with three grid
+children, each matching the above shape; cross-check with
 `design-system/references/ai-slop-prevention.md`.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 This rule allows three-column grids in general; it bans the specific generic
 pattern.
@@ -102,9 +146,11 @@ automatically blocked — manual review required):
 - AI-generated image with visible artifacts (extra fingers, melted ear,
   noisy background text).
 
-Detection: surface a warning when the hero image references a known stock
-library hostname (shutterstock, gettyimages, adobe stock) or carries no
-EXIF (a heuristic for AI generation).
+Intended detection: surface a warning when the hero image references a
+known stock library hostname (shutterstock, gettyimages, adobe stock) or
+carries no EXIF (a heuristic for AI generation).
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 9. Banned Copy Blocks on Dedicated Pages
 
@@ -114,7 +160,9 @@ EXIF (a heuristic for AI generation).
   <y>, we have the right solution for you."
 - Contact page that starts with "Let's get in touch."
 
-Detection: string match on the first 200 characters of `<main>`.
+Intended detection: string match on the first 200 characters of `<main>`.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 10. Colour Discipline
 
@@ -125,8 +173,11 @@ The page fails when:
 - Any hue outside the project's declared palette appears on a non-photograph
   element.
 
-Detection: run `scripts/slop-scan.sh` with the `--palette-check` flag against
-`design-system/tokens.css` as the source of truth.
+Intended detection: compare every rendered colour against
+`design-system/tokens.css` as the source of truth. No script implements this
+today.
+
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
 
 ## 11. Typography Discipline
 
@@ -138,6 +189,8 @@ The page fails when:
 - Any heading sits on the page with letter-spacing > 0.04em (bad default from
   generic design tooling).
 
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
+
 ## 12. Spacing Discipline
 
 The page fails when:
@@ -145,22 +198,30 @@ The page fails when:
 - More than 4 distinct top margins are used on direct children of `<section>`.
 - A section uses non-8px spacing without a design-system reason code.
 
+**Automation status:** documented; not automated; manual review required; script result `NOT_ASSESSED`.
+
 ## Invocation
 
 ```bash
 bash "$WEBSITE_SKILLS/scripts/slop-scan.sh" dist
 ```
 
-Output is both a human summary and a machine JSON under
-`reports/visual/slop-scan.json`.
+Output is a Markdown report at `reports/design-quality/slop-scan.md`
+(relative to the working directory, or under `$REPORTS_DIR` when set). There
+is no JSON output.
 
 ## Escalation
 
-- Automatic block: rules 1, 2, 3, 4, 5, 7, 10.
-- Warning with review: rules 6, 8, 9, 11, 12.
+- Automatic block (script exit non-zero): rule 3, the automated part of
+  rule 1, heading fillers from rule 6, and the script-only checks (pure black
+  body text, unlinked trust rows, filler transitions).
+- Reviewer block (not automated; a human finding blocks release): rules 2, 4,
+  5, 7 and 10, and the unautomated part of rule 1.
+- Warning with review: rules 6 (body copy), 8, 9, 11 and 12.
 
 Warnings require a one-line reviewer acknowledgement in the PR before merge.
-Automatic blocks require a fix.
+Automatic and reviewer blocks require a fix. A family nobody reviewed is
+reported as `NOT_ASSESSED`, never as a pass.
 
 ## 13. Visual no-ship boundary
 

@@ -132,8 +132,9 @@ test('no empty sections', async ({ page }) => {
 
 ### The Opt-Out Is Audited
 
-The slop-scan step reports a count of opt-out sections per page. More than
-two opt-outs on a single page is a review flag.
+The reviewer counts opt-out sections per page; `slop-scan.sh` does not
+count them, so without a manual count the result is `NOT_ASSESSED`. More
+than two opt-outs on a single page is a review flag.
 
 ## 4. Opt-Out Audit Rules
 

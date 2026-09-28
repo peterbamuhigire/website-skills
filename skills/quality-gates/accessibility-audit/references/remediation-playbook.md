@@ -139,4 +139,4 @@ focus ring.
 - The violation is in third-party analytics. Replace with a self-hosted,
   accessible alternative (Plausible self-hosted, Umami).
 - The violation is a design constraint from the brand (low-contrast colour).
-  Escalate to `brand-alignment` and `design-system`; contrast is non-negotiable.
+  Escalate to `design-system-skills:brand-visual-identity` and `design-system`; contrast is non-negotiable.

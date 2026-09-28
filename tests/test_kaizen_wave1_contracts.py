@@ -13,11 +13,19 @@ def test_manifest_and_current_documentation_counts_match_filesystem():
     counts = Counter(path.parent.parent.name for path in skills)
     assert manifest["canonical_count"] == len(skills)
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    assert int(re.search(r"Current skill count:\s*(\d+)", readme).group(1)) == len(skills)
-    assert {
+    # The 2026-09-28 README states the total in prose and the categories in a table; the older
+    # tree form is still accepted. Either way the numbers must match the filesystem.
+    total = re.search(r"Current skill count:\s*(\d+)", readme) or re.search(r"\bIts (\d+) active skills\b", readme)
+    assert total and int(total.group(1)) == len(skills)
+    readme_counts = {
         category: int(count)
         for category, count in re.findall(r"(?:\|--|`--)\s+([a-z-]+)/[^\n]*\((\d+) skills\)", readme)
-    } == dict(counts)
+    }
+    readme_counts.update({
+        category: int(count)
+        for category, count in re.findall(r"^\|\s*`([a-z-]+)`\s*\|\s*(\d+)\s*\|", readme, re.MULTILINE)
+    })
+    assert readme_counts == dict(counts)
     claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
     assert {
         category: int(count)

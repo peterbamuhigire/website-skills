@@ -244,6 +244,6 @@ Five rules for website copy from Donald Miller's *Building a StoryBrand* (Ch12).
 
 - **page-builder:** Reads `references/headline-mastery.md` and `references/fascination-bullets.md` for all pages. Reads full skill for landing/sales pages.
 - **blog-writer:** Reads `references/headline-mastery.md` for all headlines. Applies anti-resistance writing to persuasive articles.
-- **brand-alignment:** Sales-copywriting techniques must align with brand voice. Level 2 persuasion is the ceiling unless the brand brief specifically requests otherwise.
+- **design-system-skills:brand-visual-identity:** Sales-copywriting techniques must align with brand voice. Level 2 persuasion is the ceiling unless the brand brief specifically requests otherwise.
 - **language-standards:** All persuasion copy must follow language standards (British English, formal French, standard Kiswahili). Persuasion techniques adapt to cultural context.
 - **human-voice-standards:** All copy must pass human voice checks. Fascination bullets and PASTOR copy are especially prone to AI patterns — apply the blacklist rigorously.

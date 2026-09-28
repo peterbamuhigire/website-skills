@@ -158,5 +158,5 @@ Premium pricing requires premium evidence. Use this logic chain in all proposals
 - **they-ask-you-answer** — content strategy that attracts premium clients through radical transparency
 - **agency-client-retention** — how to keep clients once positioned correctly
 - **sales-copywriting** — PASTOR framework for proposal and landing page copy
-- **brand-alignment** — ensures all client sites reflect their positioning as strongly as this skill reflects yours
+- **design-system-skills:brand-visual-identity** — ensures all client sites reflect their positioning as strongly as this skill reflects yours
 - **sector-strategies** — industry-specific positioning signals per client vertical

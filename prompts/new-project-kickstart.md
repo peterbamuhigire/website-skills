@@ -143,7 +143,7 @@ Produce a structured discovery summary in this format:
 [List based on project configuration above]
 
 **Sector treatment:**
-[Which sector skill to use, if any — e.g. sectors/legal, or design-system-skills:sector-strategies with "professional services"]
+[Which sector skill to use, if any — e.g. design-system-skills:legal-sector-ui-ux, or design-system-skills:sector-strategies with "professional services"]
 
 **Information gaps (need your input before I proceed):**
 [Numbered list of missing information that will affect content quality. Be specific: "No phone number found", "Pricing not mentioned — I will use placeholder", "No team photos available — I will use CSS placeholders"]

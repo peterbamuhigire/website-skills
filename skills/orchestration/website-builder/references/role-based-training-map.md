@@ -31,7 +31,7 @@ Skill ownership:
 - `website-builder`
 - `agency-positioning`
 - `design-reference`
-- `brand-alignment`
+- `design-system-skills:brand-visual-identity`
 - `they-ask-you-answer`
 
 Primary artifacts:
@@ -71,7 +71,7 @@ Skill ownership:
 
 - `design-system`
 - `design-reference`
-- `brand-alignment`
+- `design-system-skills:brand-visual-identity`
 
 Primary artifacts:
 
