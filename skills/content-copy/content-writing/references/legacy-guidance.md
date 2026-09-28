@@ -460,6 +460,6 @@ This skill is cross-cutting — it applies alongside:
 - **language-standards** — tone, grammar, and formality per language (British English, formal French, East African Kiswahili)
 - **page-builder** — implements these writing standards in Astro page content
 - **seo** — headlines and niche vocabulary directly support search visibility
-- **brand-alignment** — content voice must match brand identity
+- **design-system-skills:brand-visual-identity** — content voice must match brand identity
 - **sector-strategies** — industry-specific content angles and trust signals
 - **web-usability-krug** (global skill) — full Krug reference for scanning design and navigation copy

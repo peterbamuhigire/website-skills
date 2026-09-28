@@ -43,7 +43,7 @@ on references that contradict it.
 ## Skills (canonical names)
 
 Build skills:
-- `i18n`, `language-standards`, `content-writing`, `brand-alignment`,
+- `i18n`, `language-standards`, `content-writing`, `design-system-skills:brand-visual-identity` (external),
   `design-reference`, `sector-strategies`, `website-builder`, `design-system`,
   `photo-manager`, `page-builder`, `seo`, `blog-writer`, `deploy`.
 

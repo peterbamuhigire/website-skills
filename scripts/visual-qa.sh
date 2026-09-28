@@ -60,7 +60,7 @@ if [ -x "$SKILLS_DIR/scripts/slop-scan.sh" ]; then
     SLOP_EXIT=0
     bash "$SKILLS_DIR/scripts/slop-scan.sh" "$DIST_DIR" || SLOP_EXIT=$?
     if [ "$SLOP_EXIT" -ne 0 ]; then
-        echo "visual-qa: FAIL — slop-scan blocked. See reports/visual/slop-scan.json" >&2
+        echo "visual-qa: FAIL — slop-scan blocked. See reports/design-quality/slop-scan.md" >&2
         exit 3
     fi
 else

@@ -3,9 +3,11 @@
 **Read this when**: tuning `scripts/slop-scan.sh` or scoring a template
 against the rubric's copy and originality categories.
 
-**Purpose**: A machine-readable catalogue of banned headline patterns,
-banned colour combinations, and banned pattern language. The
-`slop-scan.sh` script reads this list and fails the build on any match.
+**Purpose**: The documentary catalogue of banned headline patterns,
+banned colour combinations, and banned pattern language. The script
+hard-codes its patterns; this file is the documentary catalogue. It does not
+read this file, so a pattern added here is enforced only after the same
+pattern is added to `scripts/slop-scan.sh`.
 
 ## Banned headline and hero patterns
 
@@ -97,15 +99,15 @@ instantiation.
 
 ## How the slop-scan uses this
 
-`scripts/slop-scan.sh` turns the lists above into grep patterns and
-scans:
+`scripts/slop-scan.sh` carries its own hard-coded copies of the headline,
+heading-filler, gradient and copy-transition patterns, plus pure-black body
+text and unlinked trust-row checks. It scans rendered HTML and compiled CSS
+in `dist/`. It does not check easing curves, inline JS strings or fonts, and
+it writes `reports/design-quality/slop-scan.md`.
 
-- rendered HTML in `dist/` (for copy and markup)
-- compiled CSS (for banned gradient tokens and easing curves)
-- inline JS (for obvious telltale marketing strings)
-
-Any match fails the scan with a non-zero exit. The scan is deliberately
-cheap to run; the rubric catches more subtle failures.
+Any match fails the scan with a non-zero exit. Patterns in this file that
+the script does not carry are checked by the reviewer, or recorded as
+`NOT_ASSESSED`. The rubric catches more subtle failures.
 
 ## Updating the list
 

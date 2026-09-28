@@ -254,4 +254,4 @@ Save to `docs/seo-audit-[YYYY-MM-DD].md` in the project root docs directory.
 - Run **seo** first to build the SEO layer, then run **seo-audit** to verify
 - Findings from audit should feed back into seo skill configuration
 - **blog-writer** content strategy affects Content Quality and Voice Search scores
-- **brand-alignment** messaging consistency affects Competitive Positioning score
+- **design-system-skills:brand-visual-identity** messaging consistency affects Competitive Positioning score

@@ -15,7 +15,7 @@ Its purpose is to make the engine trainable and governable, not dependent on mem
 - `website-builder/references/discovery-to-build-artifact-map.md`
 - `design-reference/references/competitor-analysis-worksheet.md`
 - `design-reference/references/research-synthesis-template.md`
-- `brand-alignment/references/trust-architecture-checklist.md`
+- `design-system-skills:brand-visual-identity` reference `references/trust-architecture-checklist.md`
 
 ## Design And Build
 

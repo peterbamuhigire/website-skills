@@ -7,7 +7,7 @@ pages, emails, social) before it reaches `dist/`, or when tuning
 **Purpose**: a single, code-enforced catalogue of AI-slop phrases banned
 from client copy at DRAFT stage, before a build exists. It intentionally
 overlaps with (does not replace) `skills/quality-gates/design-quality-score/references/banned-patterns.md`,
-which `scripts/slop-scan.sh` enforces against *rendered* `dist/` HTML for
+whose script-carried subset `scripts/slop-scan.sh` enforces against *rendered* `dist/` HTML for
 the design-quality gate. That gate only sees copy after a build. This one
 lets a writer check a draft the moment it exists — a markdown file, a Google
 Doc export, a CMS field dump — with no build step required.

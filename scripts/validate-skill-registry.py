@@ -19,6 +19,10 @@ MANIFEST = SKILLS / "manifest.yml"
 VERIFIED = "2026-07-13"
 ACK = "Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178."
 LINK = re.compile(r"\[[^\]]+\]\((?!https?://|mailto:|#)([^)]+)\)")
+DESIGN_ROUTE = re.compile(r"(?<!<!-- )(?<!<!-- /)design-system-skills:([a-z0-9]+(?:-[a-z0-9]+)*)")
+# Files that record history on purpose, and test fixtures; design routes in them are not live routes.
+ROUTE_HISTORY = ("docs/engine-upgrade-july-2026/", "MEMORY.md", "tools/migrate_skills.py", "tests/")
+ROUTE_SUFFIXES = {".md", ".yml", ".yaml", ".json", ".py"}
 
 
 def frontmatter(path: Path) -> dict[str, str]:
@@ -67,7 +71,7 @@ def generate() -> dict[str, object]:
             "digital-research-engine": {"locator": "global-routing-table", "required_for": "live-research"},
         },
         "relocations": {
-            "brand-alignment": "design-system-skills:brand-alignment",
+            "brand-alignment": "design-system-skills:brand-visual-identity",
             "brand-style-guide": "design-system-skills:brand-style-guide",
             "color-selection": "design-system-skills:color-selection",
             "form-ux-design": "design-system-skills:form-ux-design",
@@ -111,13 +115,18 @@ def validate(data: dict[str, object]) -> list[str]:
                 errors.append(f"unresolved link in {entry['path']}: {raw}")
     category_counts = Counter(str(entry["category"]) for entry in found)
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    readme_count = re.search(r"Current skill count:\s*(\d+)", readme)
+    readme_count = re.search(r"Current skill count:\s*(\d+)", readme) or re.search(r"\bIts (\d+) active skills\b", readme)
     if not readme_count or int(readme_count.group(1)) != len(found):
         errors.append("README.md current skill count is not filesystem-derived")
     readme_categories = {
         category: int(count)
         for category, count in re.findall(r"(?:\|--|`--)\s+([a-z-]+)/[^\n]*\((\d+) skills\)", readme)
     }
+    # The 2026-09-28 README uses a category table (| `category` | N | coverage |) instead of the tree.
+    readme_categories.update({
+        category: int(count)
+        for category, count in re.findall(r"^\|\s*`([a-z-]+)`\s*\|\s*(\d+)\s*\|", readme, re.MULTILINE)
+    })
     if readme_categories != dict(category_counts):
         errors.append(f"README.md category counts {readme_categories} != {dict(category_counts)}")
     claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
@@ -141,9 +150,43 @@ def validate(data: dict[str, object]) -> list[str]:
     return errors
 
 
+def design_routes(root: Path = ROOT) -> dict[str, list[str]]:
+    """Collect every live `design-system-skills:<name>` route, keyed by skill name."""
+    routes: dict[str, list[str]] = {}
+    for path in sorted(root.rglob("*")):
+        rel = path.relative_to(root).as_posix()
+        if not path.is_file() or path.suffix not in ROUTE_SUFFIXES or rel.startswith(ROUTE_HISTORY):
+            continue
+        if any(part in {".git", "node_modules", "__pycache__"} for part in path.parts):
+            continue
+        try:
+            text = path.read_text(encoding="utf-8-sig")
+        except (OSError, UnicodeDecodeError):
+            continue
+        for number, line in enumerate(text.splitlines(), 1):
+            for name in DESIGN_ROUTE.findall(line):
+                routes.setdefault(name, []).append(f"{rel}:{number}")
+    return routes
+
+
+def check_design_routes(root: Path = ROOT, design_root: Path | None = None) -> tuple[str, list[str]]:
+    """Each routed design skill must exist in the sibling design engine; absent sibling is NOT_ASSESSED."""
+    design_root = design_root if design_root is not None else root.parent / "design-system-skills"
+    if not (design_root / "skills").is_dir():
+        return "NOT_ASSESSED", [f"design-system-skills checkout not found at {design_root}"]
+    available = {path.parent.name for path in (design_root / "skills").rglob("SKILL.md")}
+    errors = [
+        f"dangling design route design-system-skills:{name} (no skills/**/{name}/SKILL.md) at {', '.join(where[:3])}"
+        for name, where in sorted(design_routes(root).items())
+        if name not in available
+    ]
+    return ("FAIL" if errors else "PASS"), errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true", help="regenerate skills/manifest.yml")
+    parser.add_argument("--design-root", type=Path, default=None, help="design-system-skills checkout (default: sibling folder)")
     args = parser.parse_args()
     if args.write:
         MANIFEST.write_text(json.dumps(generate(), indent=2) + "\n", encoding="utf-8")
@@ -151,6 +194,13 @@ def main() -> int:
         print("ERROR: skills/manifest.yml is missing", file=sys.stderr); return 1
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     errors = validate(data)
+    route_status, route_messages = check_design_routes(ROOT, args.design_root)
+    if route_status == "FAIL":
+        errors.extend(route_messages)
+    elif route_status == "NOT_ASSESSED":
+        print(f"design routes: NOT_ASSESSED ({route_messages[0]})")
+    else:
+        print(f"design routes: PASS ({len(design_routes())} routed design skills exist)")
     if errors:
         for error in errors: print(f"ERROR: {error}")
         return 1

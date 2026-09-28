@@ -5,7 +5,7 @@
 Run this skill before any design or content work begins. The output — `docs/brand-brief.md` — is required input for:
 
 - `design-system` (colours, fonts, and visual identity flow from brand archetype and positioning)
-- `brand-alignment` (quality gate checks all pages against the brand brief)
+- `design-system-skills:brand-visual-identity` (quality gate checks all pages against the brand brief)
 - `page-builder` (headline voice, CTAs, and messaging hierarchy come from the brand mantra and positioning)
 - `blog-writer` (brand voice, tone, and content pillars come from the brand map)
 
@@ -306,7 +306,7 @@ The output of this skill is `docs/brand-brief.md`. This file is the single sourc
 ### Feeds Into
 
 - `design-system` — reads archetype, colour differentiation direction, and font personality from the brand brief
-- `brand-alignment` — uses brand brief as the quality standard for every page
+- `design-system-skills:brand-visual-identity` — uses brand brief as the quality standard for every page
 - `page-builder` — pulls brand mantra, positioning statement, and voice from the brand brief
 - `blog-writer` — pulls content pillars and brand voice from the brand brief
 - `sales-copywriting` — the brand mantra and positioning define Level 2 persuasion defaults

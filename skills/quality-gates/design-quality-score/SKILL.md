@@ -175,8 +175,8 @@ The scoring is:
 - `references/rubric.md` — the 7-category rubric with sub-criteria.
 - `references/scored-examples.md` — worked examples with scores and
   rationales.
-- `references/banned-patterns.md` — the list of banned patterns the
-  slop-scan enforces.
+- `references/banned-patterns.md` — the documentary catalogue of banned
+  patterns; slop-scan hard-codes and enforces only a subset.
 - `references/score-calibration.md` — how two operators calibrate
   scoring to stay within one point per category.
 - `references/report-template.md` — the per-template report format.

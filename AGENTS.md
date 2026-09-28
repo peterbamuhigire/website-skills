@@ -99,7 +99,7 @@ Use these skills as the default router:
 - `website-builder`: Full website orchestration from docs and assets through deploy readiness.
 - `i18n`: Language routing, multilingual structure, and shared versus locale-specific rules.
 - `design-reference`: Extracting decisions from example websites.
-- `design-system-skills:sector-strategies` or `sectors/legal`: Sector-specific patterns and trust signals.
+- `design-system-skills:sector-strategies` or `design-system-skills:legal-sector-ui-ux`: Sector-specific patterns and trust signals.
 - `design-system`: Typography, palette, motion, spacing, and visual system decisions.
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
@@ -132,7 +132,7 @@ Use these cross-cutting skills whenever their lens materially improves the outpu
 - `swahili-native-copy`: Native-quality Kiswahili copywriting execution. Mandatory for any Kiswahili page, microcopy, email, or metadata; never produce Kiswahili by raw translation.
 - `premium-commercial-writing`: Premium-fee-worthy commercial writing across website copy, landing pages, blogs, SEO/GEO pages, documents, and offer pages.
 - `content-writing`: Website copy structure and clarity.
-- `design-system-skills:brand-alignment`: Audience and brand coherence.
+- `design-system-skills:brand-visual-identity`: Audience and brand coherence (brand-consistency gate reference).
 - `sales-copywriting`: Conversion-focused messaging.
 - `design-system-skills:form-ux-design`: Any user-input flow.
 - `design-system-skills:ux-psychology`: Behavioural and heuristic UX review.
@@ -261,7 +261,7 @@ When a task is ambiguous, follow this order:
 - Treat scripts and reference files as part of the skill surface area during review.
 - Do not accept hidden side effects, installers, or instructions that bypass repository norms.
 
-<!-- design-system-skills:trigger v1 -->
+<!-- design-system-skills:trigger v2 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
 
 Any work touching how an artifact LOOKS — font/typeface choice, type scale, colour, layout/grid,
@@ -269,8 +269,8 @@ visual identity, web/desktop/mobile UI screens, or the visual formatting of a DO
 — routes to the **`design-system-skills`** engine, the single home for ALL design/UI/UX skills
 and the anti-AI-slop doctrine.
 
-**Resolve its location on THIS device from your global engine-routing table** (`~/.claude/CLAUDE.md`,
-or `AGENTS.md` for Codex) — never assume an absolute path; it varies per machine. Then read its
+**Resolve its location on THIS device from the active runner's global engine-routing table or
+`AGENTS.md`** — never assume an absolute path; it varies per machine. Then read its
 `README.md` → `doctrine/design-doctrine.md` → glob `skills/**/SKILL.md` fresh and route by
 frontmatter (read SKILL.md directly, not via the Skill tool). Content and structure stay in THIS
 engine; presentation comes from design-system-skills. Hard rule: never use a banned AI-slop font
@@ -284,7 +284,8 @@ any artifact.
 **Relocated design skills.** These skills were moved OUT of website-skills into the
 `design-system-skills` engine (resolve its path from your global routing table). Any reference
 to them by name resolves there, NOT in this repo:
-`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`,
+`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment` (historical
+name; folded into `brand-visual-identity` and its brand-consistency gate reference),
 `sector-strategies`, `legal` (now `legal-sector-ui-ux`), `data-visualization`,
 `premium-ui-ux-design` (the general design version; website keeps its build-coupled orchestration entry).
 Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`, `website-builder`.

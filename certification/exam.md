@@ -189,11 +189,11 @@ for retainer clients?
 - [ ] 9/10
 
 **A25.** "Welcome to our website" as a hero headline is blocked by which
-`slop-scan.sh` rule?
+`slop-scan.sh` check?
 - [x] Banned headline patterns
-- [ ] Generic icon overuse
-- [ ] Banned colour combinations
-- [ ] Easing-curve ban
+- [ ] Unlinked trust row
+- [ ] Banned gradient signals
+- [ ] Pure black body text
 
 ---
 
@@ -379,7 +379,7 @@ synthesis?
 **D3.** The engine's rule on keyword stuffing is:
 - [ ] Acceptable for long-tail terms
 - [x] Banned; human-voice copy is the standard, keyword density is monitored
-  against the brand-alignment blacklist
+  against the banned-phrases catalogue (`brand-voice/references/banned-phrases.md`)
 - [ ] Allowed in H1 only
 - [ ] No rule
 

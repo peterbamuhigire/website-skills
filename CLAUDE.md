@@ -68,7 +68,7 @@ skills/content-copy/language-standards/SKILL.md <- Language and tone standards
 skills/content-copy/french-native-copy/SKILL.md <- Native-quality French copy execution
 skills/content-copy/swahili-native-copy/SKILL.md <- Native-quality Kiswahili copy execution
 skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
-design-system-skills:brand-alignment    <- External brand coherence quality gate
+design-system-skills:brand-visual-identity <- External brand coherence quality gate (brand-consistency gate reference)
 skills/build/design-reference/SKILL.md   <- Reference-site analysis
 design-system-skills:sector-strategies  <- External industry design and trust signals
 skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
@@ -167,7 +167,7 @@ Website build skills are sequential:
 
 `website-builder` orchestrates this sequence. It reads the enabled-language setup, the client content set, and the available assets, then routes work through the relevant downstream skills.
 
-Cross-cutting skills such as `language-standards`, `content-writing`, and `design-system-skills:brand-alignment` apply throughout the workflow instead of owning a single output artifact.
+Cross-cutting skills such as `language-standards`, `content-writing`, and `design-system-skills:brand-visual-identity` (brand-consistency gate) apply throughout the workflow instead of owning a single output artifact.
 
 ## Current Agency Engine Layers
 
@@ -285,7 +285,7 @@ preservation map is recorded in
 `scripts/source_ingestion_guardrail.py` rejects any file placed in a
 `book-extractions/`, `book-dumps/`, `raw-books/` or `source-books/` directory.
 
-<!-- design-system-skills:trigger v1 -->
+<!-- design-system-skills:trigger v2 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
 
 Any work touching how an artifact LOOKS — font/typeface choice, type scale, colour, layout/grid,
@@ -293,8 +293,8 @@ visual identity, web/desktop/mobile UI screens, or the visual formatting of a DO
 — routes to the **`design-system-skills`** engine, the single home for ALL design/UI/UX skills
 and the anti-AI-slop doctrine.
 
-**Resolve its location on THIS device from your global engine-routing table** (`~/.claude/CLAUDE.md`,
-or `AGENTS.md` for Codex) — never assume an absolute path; it varies per machine. Then read its
+**Resolve its location on THIS device from the active runner's global engine-routing table or
+`AGENTS.md`** — never assume an absolute path; it varies per machine. Then read its
 `README.md` → `doctrine/design-doctrine.md` → glob `skills/**/SKILL.md` fresh and route by
 frontmatter (read SKILL.md directly, not via the Skill tool). Content and structure stay in THIS
 engine; presentation comes from design-system-skills. Hard rule: never use a banned AI-slop font
@@ -308,7 +308,8 @@ any artifact.
 **Relocated design skills.** These skills were moved OUT of website-skills into the
 `design-system-skills` engine (resolve its path from your global routing table). Any reference
 to them by name resolves there, NOT in this repo:
-`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment`,
+`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment` (historical
+name; folded into `brand-visual-identity` and its brand-consistency gate reference),
 `sector-strategies`, `legal` (now `legal-sector-ui-ux`), `data-visualization`,
 `premium-ui-ux-design` (the general design version; website keeps its build-coupled orchestration entry).
 Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`, `website-builder`.

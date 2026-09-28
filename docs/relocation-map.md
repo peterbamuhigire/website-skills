@@ -4,7 +4,7 @@ Active design routes resolve through the device's global engine-routing table. D
 
 | Former website-skills name | Canonical destination | Review date |
 |---|---|---|
-| `brand-alignment` | `design-system-skills:brand-alignment` | 2026-10-01 |
+| `brand-alignment` | `design-system-skills:brand-visual-identity` | 2026-10-01 |
 | `brand-style-guide` | `design-system-skills:brand-style-guide` | 2026-10-01 |
 | `color-selection` | `design-system-skills:color-selection` | 2026-10-01 |
 | `form-ux-design` | `design-system-skills:form-ux-design` | 2026-10-01 |
