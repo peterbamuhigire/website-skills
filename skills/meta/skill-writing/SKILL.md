@@ -1,121 +1,68 @@
 ---
 name: skill-writing
-description: Use when creating or upgrading portable website-engine skills, triggers, contracts, references, validators, or routing fixtures; use skill-safety-audit for independent safety review and update-claude-documentation for router-only changes.
+description: Use when creating or upgrading portable website-engine skills, triggers, contracts, references, validators, or routing fixtures under the canonical chwezi-dev-engine skill-writing standard; use skill-safety-audit for independent safety review and update-claude-documentation for router-only changes.
 metadata:
   portable: true
   compatible_with:
   - claude-code
   - codex
 ---
-
 # Skill Writing
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
-Author reusable website-delivery procedures that route cleanly and expose inspectable inputs, outputs, permissions, failures, and evidence.
-
+Pointer stub. The canonical standard is `chwezi-dev-engine/skills/sdlc-meta/skill-writing` ([canonical on GitHub](https://github.com/peterbamuhigire/chwezi-dev-engine/blob/main/skills/sdlc-meta/skill-writing/SKILL.md); local path `C:\wamp64\www\chwezi-dev-engine\skills\sdlc-meta\skill-writing\SKILL.md`). Load it first; this file keeps a portable minimum and this engine's delta.
 <!-- dual-compat-start -->
 ## Use When
-
-- A repeatable website procedure needs a new skill
-- a legacy skill needs conformance repair
-- routing fixtures or contract validators need updating.
-
+- Creating a reusable portable website skill, repairing a legacy skill's contract, or updating routing fixtures and validators.
 ## Do Not Use When
-
-- Do not create a skill for a one-off task or generic knowledge. Use `skill-safety-audit` for independent safety review.
-
+- Use `skill-safety-audit` for independent safety review and `update-claude-documentation` for router-only changes.
 ## Required Inputs
-
-| Artefact | Source or provider | Required? | Purpose | If absent |
-|---|---|---:|---|---|
-| Reusable problem, neighbour descriptions, and trigger examples | Requester and active catalogue | yes | Prove a distinct route and contract | Stop if the procedure is not repeatable or neighbours cannot be inspected |
-
+| Artefact | Source/provider | Required? | If absent |
+|---|---|---:|---|
+| Reusable problem, trigger prompts and neighbour descriptions | Requester and live catalogue | Yes | Stop; search the catalogue before drafting. |
+| Canonical skill-writing standard | chwezi-dev-engine checkout or GitHub | Yes | Apply the portable minimum and mark canonical-only checks `NOT ASSESSED`. |
 ## Workflow
-
-1. Inspect the active catalogue and neighbours
-2. Choose workflow, standard, or domain shape and declare inputs and outputs first
-3. Author decisions, permission boundaries, degraded behaviour, recovery, examples, and references
-4. Stop on a routing collision, repair the distinction, then run local and canonical validators plus routing fixtures.
-
+1. Read the canonical standard, then this engine's delta; inspect the closest neighbours.
+2. Write the input, output, evidence, capability, degraded-mode and decision contracts before the procedure.
+3. Run `python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json` and `python -X utf8 scripts/routing-smoke-test.py`, then `python -X utf8 skills/meta/skill-writing/scripts/quick_validate.py <skill-dir>`.
+4. Stop on any finding or routing collision; recover by fixing the named contract and rerun, never by weakening the gate.
 ## Outputs
-
 | Artefact | Consumer | Acceptance condition |
 |---|---|---|
-| Normalised skill package | Catalogue maintainer and routing engine | Entrypoint is at most 500 lines, validators pass, and fixtures place it in the expected top three |
-
+| Skill directory and routing fixtures | Maintainer and router | Validators pass and the expected skill ranks in the top three. |
 ## Evidence Produced
-
-| Evidence | Consumer | Acceptance condition |
-|---|---|---|
-| Validator, routing, line-count, link, and safety results | Release owner | Commands and outcomes identify zero unresolved findings |
-
+| Evidence | Artefact and format | Consumer | Acceptance condition |
+|---|---|---|---|
+| Validation and routing record | Command output | Release owner | Zero findings; unrun checks marked `NOT ASSESSED`. |
 <!-- dual-compat-end -->
-## Capability Contract
-
-Read and search are required. Editing and validator execution require an authorised authoring task. Network access is optional for current facts; publication, catalogue removal, and destructive actions require explicit authority.
-
-## Degraded Mode
-
-Without editing or execution, return the narrowest qualified patch plan and mark validation `not assessed`; never claim the skill conforms without results.
-
-## Decision Rules
-
-| Choice | Action | Failure or risk avoided |
-|---|---|---|
-| One repeatable trigger and output contract | Normalise or create one skill | Duplicate routes |
-| Two independent triggers with different permissions or outputs | Split only after collision analysis | Oversized irrelevant context |
-
 ## Quality Standards
-
-- Preserve domain judgement, keep portable instructions runner-neutral, and require positive, negative, collision, limited-capability, and failure-path fixtures.
-
+- Portable minimum, applied even when the canonical is unreachable: frontmatter uses only approved keys and `name` matches the folder.
+- The description starts `Use when`, stays within 350 characters and names a neighbour, with no workflow steps.
+- `SKILL.md` stays within 500 lines; deep detail sits in references one level deep, linked directly.
+- Every new or changed skill gets positive, negative and collision routing fixtures.
+- Bundled scripts run through their interpreter, for example `python -X utf8 scripts/<name>.py`.
+- No book extractions or copied third-party text; paraphrase and attribute.
+- British English, the imperative mood, and `NOT ASSESSED` for any check not run.
+## Engine-Local Delta
+- Follow the [website authoring standard](../../../docs/skill-authoring-standard.md); the acknowledgement line sits directly under the title.
+- Compare the closest page, form and launch skills before adding a route; a skill created to improve catalogue metrics is refused.
+## Capability Contract
+Read and search are required. Editing files and running validators need explicit permission for the authoring task; publishing, deletion and release changes need separate authorisation.
+## Degraded Mode
+If the canonical standard is unavailable, apply the portable minimum, return the narrowest qualified result, and mark each canonical-only check `NOT ASSESSED`; never report it as passed.
+## Decision Rules
+| Condition | Action | Failure or risk avoided |
+|---|---|---|
+| An existing skill owns the trigger and output | Normalise it in place; put branch-only detail in a linked reference | Duplicate routes and oversized entrypoints |
 ## Anti-Patterns
-
-- Creating a skill to improve catalogue metrics. Fix: require a repeatable distinct procedure.
-- Copying the same body into runner adapters. Fix: keep one canonical skill and thin adapters.
-- Writing only positive triggers. Fix: name the neighbour and its winning condition.
-- Granting edit access to a review procedure. Fix: default review to read-only.
-- Claiming validation from file appearance. Fix: run both local and canonical gates and inspect results.
-
+- Copying the canonical body into this engine. Fix: link the canonical and keep only the delta here.
+- Writing only positive triggers. Fix: name the neighbour and add a collision fixture.
+- Treating an unrun validator as a pass. Fix: record `NOT ASSESSED` with the reason.
+- Granting edit rights to a review procedure. Fix: default review and audit to read-only.
+- Weakening a baseline to clear a finding. Fix: repair the named contract instead.
 ## Worked Example
-
 For a new form workflow, compare `page-builder` and the external form-design route, declare the distinct output and permissions, then add positive and neighbour-collision fixtures before activation.
-
 ## References
-
-- [Website Skills authoring standard](../../../docs/skill-authoring-standard.md)
-
-
-## Preserved Domain Use Guidance
-- The task matches this domain: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
-- The user needs repo-maintenance or skill-authoring support rather than project output.
-
-## Preserved Domain Exclusions
-- A build, writing, or audit skill should own the task instead.
-- There is no repository or skill-maintenance action to perform.
-
-## Preserved Domain Inputs
-- The files, changes, or workflow that need maintenance.
-- Current repository conventions and any behavior that must not regress.
-
-## Preserved Domain Workflow
-1. Read the current repository state and the exact maintenance goal.
-2. Use the preserved guidance and any bundled scripts to perform the minimum effective change.
-3. Keep the result aligned with existing repo conventions.
-4. Prepare the output so a follow-on safety review or documentation pass is straightforward.
-
-## Preserved Domain Quality Guidance
-- Maintenance changes must reduce ambiguity, not add process noise.
-- Outputs should preserve portability and existing behavior.
-- The result should be easy for another agent to continue using.
-
-## Preserved Domain Anti-Patterns
-- Do not introduce product-specific assumptions into portable skill rules.
-- Do not bloat SKILL.md when detail belongs in references or scripts.
-- Do not leave partially updated conventions behind.
-
-## Preserved Domain Outputs
-- Updated skill structure, repo-maintenance changes, authoring guidance, or synchronized documentation.
-
-## Preserved Domain References
-- Use bundled tools in `scripts/` when they cover the task more reliably than redoing the work manually.
+- [Canonical skill-writing standard](https://github.com/peterbamuhigire/chwezi-dev-engine/blob/main/skills/sdlc-meta/skill-writing/SKILL.md)
+- [Website authoring standard](../../../docs/skill-authoring-standard.md)
+- [Skill safety audit](../skill-safety-audit/SKILL.md)
