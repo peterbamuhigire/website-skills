@@ -129,13 +129,13 @@ def validate(data: dict[str, object]) -> list[str]:
     })
     if readme_categories != dict(category_counts):
         errors.append(f"README.md category counts {readme_categories} != {dict(category_counts)}")
-    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    claude = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     claude_categories = {
         category: int(count)
         for category, count in re.findall(r"\*\*`([a-z-]+)/`\*\*\s*\((\d+)\)", claude)
     }
     if claude_categories != dict(category_counts):
-        errors.append(f"CLAUDE.md category counts {claude_categories} != {dict(category_counts)}")
+        errors.append(f"AGENTS.md category counts {claude_categories} != {dict(category_counts)}")
     relocations = data.get("relocations", {})
     relocation_map = (ROOT / "docs" / "relocation-map.md").read_text(encoding="utf-8")
     if not isinstance(relocations, dict):

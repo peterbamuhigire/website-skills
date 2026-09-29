@@ -2,6 +2,7 @@ schema_version: "1.0"
 engine_id: website-skills
 display_name: Website Skills
 contract_version: "1.0"
+version: "1.1.0"
 router:
   path: AGENTS.md
 skills:
@@ -66,3 +67,28 @@ source_of_truth:
   router: AGENTS.md
   skills: skills/**/SKILL.md
   references: references/**
+claude_only_block: |
+  - Apply `AGENTS.md` in full, including its runner-agnostic doctrine; skip only its explicitly
+    Codex-only sections (e.g. "Codex-only model setup").
+  - Recommended Claude Code plugins before website development work:
+
+    ```text
+    /plugin marketplace add obra/superpowers-marketplace
+    /plugin install superpowers@superpowers-marketplace
+    /plugin marketplace add anthropics/claude-code
+    /plugin install frontend-design@claude-code-plugins
+    ```
+
+    Use plugins where they materially improve design, implementation, debugging, or QA output.
+invariants:
+  - id: book-extraction-ban
+    phrase: "Book extractions, book summaries and raw book text must never be stored in this"
+  - id: not-assessed
+    phrase: "Missing browser, render, live, or stakeholder evidence is `NOT ASSESSED`, never a pass."
+  - id: premium-default
+    phrase: "Premium is the default commercial standard for this website engine."
+invariant_exemptions:
+  british-english: "No British English output rule exists in the website router (AGENTS.md, former CLAUDE.md); language rules route through language-standards and regional skills. Adding one is new doctrine outside M10-02-T02 scope."
+plugin_exclusions:
+  - path: "templates/skill"
+    reason: "authoring template copied when a new skill is created; not an active skill"
