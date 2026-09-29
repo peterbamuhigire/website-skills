@@ -1,6 +1,6 @@
 ---
 name: blog-idea-generator
-description: Use when a website needs evidence-grounded blog topics, editorial series, or a topic backlog; use `blog-writer` for drafting articles and `content-writing` for page-copy standards.
+description: Use when a website needs evidence-grounded blog topic ideas, editorial series, an editorial calendar, or a topic backlog; use `blog-writer` for drafting articles and `content-writing` for page-copy standards.
 metadata:
   portable: true
   compatible_with:

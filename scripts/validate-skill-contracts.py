@@ -24,6 +24,69 @@ LINK = re.compile(r"\[[^\]]+\]\((?!https?://|mailto:|#)([^)]+)\)")
 FM = re.compile(r"^\ufeff?---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
 AUDIT_WORDS = re.compile(r"\b(audit|review|critique|analysis|assessment)\b", re.I)
 
+# M10-03-T12 lint refinements. Ideas adapted from addyosmani/agent-skills (MIT,
+# https://github.com/addyosmani/agent-skills, commit 2686b62), scripts/lib/skill-lint.js; paraphrased.
+FENCE_OPEN = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
+FENCE_CLOSE = re.compile(r"^ {0,3}(`{3,}|~{3,})\s*$")
+NEGATED_TRIGGER = re.compile(
+    r"\b(?:do\s+not|don't|never|not)\s+(?:use|load|apply)\b[^.;]*[.;]?"
+    r"|\b(?:not|never)\s+(?:when|for|before|after|during)\b[^.;]*[.;]?",
+    re.I,
+)
+POSITIVE_TRIGGER = re.compile(r"\buse\s+(?:when|before|after|during)\b", re.I)
+EXEMPTION_KEY = re.compile(r"exempt|lint|skip[-_]?check|allowlist", re.I)
+# Exemptions live HERE, in the validator, never in skill frontmatter, so a contributor cannot
+# bypass a check by editing their own skill file. Shape: {finding_code: {skill_name: reason}}.
+# Every entry needs a written reason. None are granted today.
+EXEMPTIONS: dict[str, dict[str, str]] = {}
+
+
+def strip_fences(text: str) -> str:
+    """Remove CommonMark fenced code blocks (backtick or tilde; the closer is at least as long)."""
+    kept: list[str] = []
+    fence: tuple[str, int] | None = None
+    for line in text.splitlines(keepends=True):
+        stripped = line.rstrip("\r\n")
+        if fence is None:
+            match = FENCE_OPEN.match(stripped)
+            if match and not (match.group(1)[0] == "`" and "`" in match.group(2)):
+                fence = (match.group(1)[0], len(match.group(1)))
+                continue
+            kept.append(line)
+        else:
+            close = FENCE_CLOSE.match(stripped)
+            if close and close.group(1)[0] == fence[0] and len(close.group(1)) >= fence[1]:
+                fence = None
+    return "".join(kept)
+
+
+def has_positive_trigger(description: str) -> bool:
+    """True when a positive Use when/before/after/during trigger survives global negation stripping."""
+    return bool(POSITIVE_TRIGGER.search(NEGATED_TRIGGER.sub(" ", description)))
+
+
+def host_strict_yaml(frontmatter: str) -> list[str]:
+    """Flag frontmatter a strict YAML host rejects: tabs, unclosed quotes, unquoted ': ' in plain scalars."""
+    problems: list[str] = []
+    for number, line in enumerate(frontmatter.splitlines(), start=1):
+        indent = line[: len(line) - len(line.lstrip(" \t"))]
+        if "\t" in indent:
+            problems.append(f"line {number}: tab indentation")
+            continue
+        match = re.match(r"^\s*(?:-\s+)?[A-Za-z0-9_-]+:\s+(.+?)\s*$", line)
+        if not match:
+            continue
+        value = match.group(1)
+        if value[0] in "\"'":
+            if len(value) < 2 or value[-1] != value[0]:
+                problems.append(f"line {number}: unclosed quote")
+            continue
+        if value[0] in "|>{[&*!#":
+            continue
+        if ": " in value or value.endswith(":"):
+            problems.append(f"line {number}: unquoted ': ' in a plain scalar")
+    return problems
+
 
 def section(text: str, *names: str) -> str | None:
     choices = "|".join(re.escape(name) for name in names)
@@ -36,6 +99,8 @@ def parse(path: Path) -> tuple[dict, str, list[str]]:
     match = FM.match(raw)
     if not match:
         return {}, raw, ["frontmatter"]
+    if host_strict_yaml(match.group(1)):
+        return {}, raw[match.end():], ["frontmatter_host_strict"]
     try:
         data = yaml.safe_load(match.group(1)) or {}
     except yaml.YAMLError:
@@ -46,26 +111,41 @@ def parse(path: Path) -> tuple[dict, str, list[str]]:
 
 
 def add(findings: list[tuple[str, str, str]], code: str, path: Path, detail: str) -> None:
-    findings.append((code, path.relative_to(ROOT).as_posix(), detail))
+    try:
+        location = path.relative_to(ROOT).as_posix()
+    except ValueError:
+        location = path.as_posix()
+    findings.append((code, location, detail))
 
 
 def validate_skill(path: Path, max_lines: int, max_desc: int) -> list[tuple[str, str, str]]:
     fm, body, errors = parse(path)
     findings: list[tuple[str, str, str]] = []
     for error in errors:
-        add(findings, error, path, error.replace("_", " "))
+        detail = error.replace("_", " ")
+        if error == "frontmatter_host_strict":
+            match = FM.match(path.read_text(encoding="utf-8-sig", errors="replace"))
+            detail = "; ".join(host_strict_yaml(match.group(1))) if match else detail
+        add(findings, error, path, detail)
     if errors:
         return findings
+    body = strip_fences(body)
     name = fm.get("name")
     desc = fm.get("description")
     if name != path.parent.name:
         add(findings, "name_mismatch", path, f"{name!r} != {path.parent.name!r}")
     if not isinstance(desc, str) or not desc.startswith("Use when") or "\n" in desc or len(desc) > max_desc:
         add(findings, "description", path, "description must be one line, start 'Use when', and meet the length limit")
+    elif not has_positive_trigger(desc):
+        add(findings, "no_positive_trigger", path, "no positive 'Use when/before/after/during' trigger survives negation stripping")
     unsupported = sorted(set(fm) - ALLOWED_KEYS)
     if unsupported:
         add(findings, "unsupported_frontmatter", path, ", ".join(unsupported))
     metadata = fm.get("metadata")
+    candidate_keys = list(fm) + (list(metadata) if isinstance(metadata, dict) else [])
+    exemption_keys = sorted(str(key) for key in candidate_keys if EXEMPTION_KEY.search(str(key)))
+    if exemption_keys:
+        add(findings, "frontmatter_exemption", path, "exemptions live in the validator, not frontmatter: " + ", ".join(exemption_keys))
     if not isinstance(metadata, dict) or metadata.get("portable") is not True or metadata.get("compatible_with") != COMPATIBILITY:
         add(findings, "portable_metadata", path, "metadata portability contract missing")
     required_sections = {
@@ -128,7 +208,8 @@ def validate_skill(path: Path, max_lines: int, max_desc: int) -> list[tuple[str,
             add(findings, "broken_link", path, raw_link)
     if re.search(r"\b(?:Task|Grep|Glob|apply_patch) tool\b|\bClaude Code must\b|\bCodex must\b", body):
         add(findings, "runner_specific", path, "runner-specific instruction in portable body")
-    return findings
+    exempt = {code for code, skills in EXEMPTIONS.items() if str(name) in skills}
+    return [item for item in findings if item[0] not in exempt]
 
 
 def main() -> int:
