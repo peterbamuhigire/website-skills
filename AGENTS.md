@@ -40,6 +40,13 @@ volatile claims through the Digital Research currentness gate. The removed
 `book-extractions/` folder's capability map is in
 `docs/continuous-improvement/book-source-retirement-2026-09-24.md`.
 
+Turn a book's method into a task-oriented skill reference (procedure, checklist,
+template, decision rules, phrase bank) written in original words, cite the book
+briefly (author, year, title, publisher), and keep verbatim quotes under 25 words
+and rare. The former `book-extractions/` folder was removed on 2026-09-24.
+`scripts/source_ingestion_guardrail.py` rejects any file placed in a
+`book-extractions/`, `book-dumps/`, `raw-books/` or `source-books/` directory.
+
 Always-on cross-cutting principles live in `rules/` — see `rules/README.md`.
 Load `rules/common/core.md` alongside the routed skill for any non-trivial task;
 it is short and does not replace the skill, only sets the baseline the skill
@@ -76,10 +83,25 @@ This repository is a portable skill library for building websites and related ma
 
 Do not assume this repository must live under `.claude/skills/`. Resolve local skills by repository-relative paths such as `skills/orchestration/website-builder/SKILL.md` or `skills/build/design-system/SKILL.md`; resolve relocated design skills such as `sector-strategies` through `skills/manifest.yml` and the global engine-routing table. The repository root should contain project documentation plus `docs/`, `skills/`, and `projects/` where relevant; root-level operational directories such as `scripts/`, `templates/`, `tests/`, and `tools/` are not skills unless they contain their own `SKILL.md`.
 
+It teaches agents to build static websites from markdown content and assets; it is not a standalone application.
+
+It is referenced from the global engine-routing table in client website projects. Claude Code and Codex should resolve the local checkout and consume `skills/<category>/<skill-name>/SKILL.md` directly.
+
+The repository now operates as a portable agency system with explicit layers for:
+
+- qualification and intake
+- strategy and research
+- build and SEO
+- launch and rollback operations
+- governance and operator onboarding
+
+Claude-specific projects may still point at this repository from their own configuration, but the repository should not be treated as dependent on `.claude/skills/` or any nested submodule path.
+
 ## Baseline Rules
 
 - Preserve existing Claude Code behavior unless a task explicitly requires a change.
 - Premium is the default commercial standard for this website engine. Website work is accepted only when it can be delivered as a credible business asset with premium strategy, content, SEO, UX, technical quality, measurement, and handover. If the brief cannot support that standard, recommend paid discovery, a smaller premium scope, or a no-bid/no-build decision.
+- Website work must be framed and delivered as a credible business asset: strategy, world-class content, SEO/GEO, premium UX, conversion architecture, technical quality, measurement, handover, and post-launch improvement.
 - Prefer the skill-local `SKILL.md` first, then load only the specific files needed from that skill's `references/`.
 - Every `SKILL.md` must include this exact acknowledgement line immediately below the first top-level `# ...` heading, not in frontmatter: `Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.`
 - Treat `references/legacy-guidance.md` as preserved detailed guidance from the pre-standardized version of the skill.
@@ -177,6 +199,145 @@ Premium agency operating-system skills (added 2026-05-05):
   automation for faster/cheaper delivery — build-vs-buy, the automation-opportunity
   audit, the honest AI-assisted-delivery reality, productized-delivery SOPs.
 
+## Repository Structure
+
+### Skill Categories
+
+Skills are organised under `skills/<category>/<skill>/` in 11 thematic categories:
+
+- **`agency-ops/`** (14) — agency-client-retention, agency-positioning, authority-offers, customer-service-website-ops, delivery-automation, email-sender, launch-campaigns, local-in-person-acquisition, monthly-report, policy-pages, premium-sales-conversation, referral-program, service-blueprint-website-delivery, social-media
+- **`brand/`** (2) — brand-storytelling, brand-strategy
+- **`build/`** (6) — design-reference, design-system, i18n, image-compression, page-builder, photo-manager
+- **`commerce/`** (5) — ecommerce, retail-commerce-operating-system, ecommerce-analytics, ecommerce-checkout, ecommerce-funnel
+- **`content-copy/`** (11) — blog-idea-generator, blog-writer, brand-voice, content-writing, east-african-english, french-native-copy, language-standards, long-form-sales-copy, premium-commercial-writing, sales-copywriting, swahili-native-copy
+- **`launch-ops/`** (4) — deploy, experimentation, marketing-measurement-system, observability
+- **`meta/`** (3) — skill-safety-audit, skill-writing, update-claude-documentation
+- **`orchestration/`** (6) — africa-excellence, hospitality-website-product, premium-ui-ux-design, premium-website-product, website-builder, website-experience-mapping
+- **`quality-gates/`** (6) — accessibility-audit, cross-page-design-consistency-audit, design-quality-score, kaizen-engine-and-product-improvement, security-gate, visual-qa
+- **`seo-search/`** (3) — google-ai-search, seo, seo-audit
+- **`ux-conversion/`** (2) — cro-audit, they-ask-you-answer
+
+Always reference skills by their full categorised path: `skills/<category>/<skill>/SKILL.md`.
+
+### Core Build Skills
+
+```text
+skills/build/i18n/SKILL.md               <- Multi-language infrastructure
+skills/content-copy/language-standards/SKILL.md <- Language and tone standards
+skills/content-copy/french-native-copy/SKILL.md <- Native-quality French copy execution
+skills/content-copy/swahili-native-copy/SKILL.md <- Native-quality Kiswahili copy execution
+skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
+design-system-skills:brand-visual-identity <- External brand coherence quality gate (brand-consistency gate reference)
+skills/build/design-reference/SKILL.md   <- Reference-site analysis
+design-system-skills:sector-strategies  <- External industry design and trust signals
+skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
+skills/build/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
+skills/build/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
+skills/build/page-builder/SKILL.md       <- Content to pages and components
+skills/seo-search/seo/SKILL.md                <- Search-facing implementation
+skills/seo-search/google-ai-search/SKILL.md   <- Google AI Overviews / AI Mode readiness
+skills/content-copy/blog-writer/SKILL.md        <- Blog production
+skills/launch-ops/deploy/SKILL.md             <- QA, launch checks, deployment, rollback, canonical CI pipeline
+skills/orchestration/premium-website-product/    <- Premium website-as-product strategy, content, SEO, stack, launch, and agency proof gate
+skills/orchestration/premium-ui-ux-design/       <- Premium website UI/UX and visual quality gate
+```
+
+### Enforcement Skills (Phase 10 — added 2026-04-16)
+
+```text
+skills/quality-gates/accessibility-audit/SKILL.md <- WCAG 2.2 AA gate: axe-core + manual + screen reader
+skills/quality-gates/visual-qa/SKILL.md           <- Screenshot diff + hierarchy/overflow/empty-section + AI-slop
+skills/quality-gates/security-gate/SKILL.md       <- Dep audit + headers + security.txt + SRI + secrets + supply chain + compliance
+```
+
+### Operating Discipline Skills (Phase 11 — added 2026-04-16)
+
+```text
+skills/launch-ops/observability/SKILL.md        <- RUM + error tracking + analytics + alert thresholds
+skills/launch-ops/experimentation/SKILL.md      <- Hypothesis template + stat primer + A/B infra + quarterly review
+skills/quality-gates/design-quality-score/SKILL.md <- 7-category rubric + slop-scan (CI step 12)
+```
+
+Phase 11 also adds: `glossary.md` (canonical names), `docs/doc-style-guide.md`
+(writing standards), `docs/deprecation-policy.md` (rename/retirement rules),
+`certification/` (syllabus + 60-question exam + cohort records), and
+`dashboards/quality-scorecard.md` (generated-artefact contract).
+
+### Authority Skills (Phase 12 — added 2026-04-16)
+
+```text
+skills/orchestration/africa-excellence/SKILL.md    <- Low-bandwidth, mobile-money UX, USSD-aware,
+                                 language pack, trust signals, cultural patterns
+```
+
+Phase 12 also adds: `LICENSE` (MIT + CC BY + CC BY-SA + CC BY-NC + proprietary),
+`docs/licensing-matrix.md`, `docs/roadmap-public.md`, and
+`dashboards/public-scorecard.md` (quarterly public quality record).
+
+Canonical scripts under `scripts/`: `perf-gate.sh`, `a11y-gate.sh`,
+`visual-qa.sh`, `security-gate.sh`, `drift-check.sh`, `slop-scan.sh`,
+`design-quality-score.sh`, `install-canonical-ci.sh`, `metadata-audit.sh`,
+`post-deploy-smoke.sh`, `rollback.sh`, and gate-specific helpers.
+Canonical configs at repo root: `lighthouserc.json`, `performance-budgets.json`.
+Canonical CI pipeline at `templates/ci/website.yml`.
+
+### Support And Audit Skills
+
+```text
+skills/seo-search/seo-audit/SKILL.md               <- Post-build SEO audit
+skills/content-copy/blog-idea-generator/SKILL.md     <- Blog ideation
+skills/agency-ops/email-sender/SKILL.md            <- Self-hosted contact-form handler
+design-system-skills:form-ux-design                    <- External form UX guidance
+design-system-skills:ux-psychology                     <- External behavioural UX review lens
+skills/build/image-compression/SKILL.md       <- Build-time image compression
+skills/agency-ops/policy-pages/SKILL.md            <- Privacy and terms guidance
+design-system-skills:color-selection                  <- External colour palette design
+skills/content-copy/sales-copywriting/SKILL.md       <- Persuasion and conversion copywriting
+skills/brand/brand-strategy/SKILL.md          <- Brand brief development
+skills/brand/brand-storytelling/SKILL.md      <- Narrative and story structure
+design-system-skills:brand-style-guide                <- External client-facing style guide
+skills/ux-conversion/cro-audit/SKILL.md               <- Conversion audit
+skills/agency-ops/social-media/SKILL.md            <- Social strategy and service layer
+skills/meta/skill-writing/SKILL.md           <- Skill authoring
+skills/meta/skill-safety-audit/SKILL.md      <- Skill safety review
+skills/meta/update-claude-documentation/     <- Top-level documentation maintenance
+```
+
+### External Skill Set
+
+```text
+proposal-skills <- Separate proposal-generation engine resolved from the global routing table
+```
+
+## Skill Execution Order
+
+Website build skills are sequential:
+
+1. `i18n`
+2. `design-reference` when reference sites are part of the brief
+3. `brand-strategy` when a project needs a structured brand brief
+4. `design-system-skills:sector-strategies` or a sector-specific skill
+5. `design-system`
+6. `photo-manager`
+7. `page-builder`
+8. `seo`
+9. `deploy`
+10. `seo-audit` when post-build auditing is needed
+
+`website-builder` orchestrates this sequence. It reads the enabled-language setup, the client content set, and the available assets, then routes work through the relevant downstream skills.
+
+Cross-cutting skills such as `language-standards`, `content-writing`, and `design-system-skills:brand-visual-identity` (brand-consistency gate) apply throughout the workflow instead of owning a single output artifact.
+
+## Current Agency Engine Layers
+
+The repository should be understood in five layers:
+
+1. Commercial layer: qualification, offers, proposals, proof positioning
+2. Strategy layer: discovery, strategy brief, trust architecture, page-goal mapping, search intent
+3. Build layer: design system, images, pages, SEO, and authority assets
+4. Launch layer: QA, deployment, rollback, observability, review windows
+5. Governance layer: role-based training, maintenance cadence, quality metrics, safety review, documentation hygiene
+
 ## Cross-Engine Handoffs
 
 - Proposal to website delivery: consume approved proposal scope, discovery assumptions, content/SEO promises, timeline, commercial exclusions, support package, and acceptance criteria before build planning.
@@ -200,12 +361,29 @@ Premium agency operating-system skills (added 2026-05-05):
   direction boards.
 - Website maintenance/support to proposal engine: when support scope, SLA, retainer, or change-request language must be sold or renewed, route commercial wording back to the proposal engine.
 
+## Blog & Article Research — Always Use the Digital Research Engine
+
+**Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting** (applies to `content-copy/blog-writer`, `content-copy/blog-idea-generator`, and any page carrying editorial/blog content). Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
+
+- **Engine location:** resolve `digital-research-engine` from the device's global engine-routing table. On this machine the canonical checkout is `C:\wamp64\www\digital-research-engine`; do not substitute a retired checkout alias.
+- **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region, each briefed per the engine's standard agent-brief structure. The orchestrator does the synthesis; research agents return raw, sourced findings only.
+- **Article SEO/SERP standard:** Before drafting any article, run the digital-research-engine's three-wave article study: map intent and 3–7 query clusters; read the accessible top five results for each cluster; then synthesise the content gap, AI-answer opportunities, keyword map, internal links and verified primary-source plan. Use an approved search/API tool rather than direct Google SERP scraping. Record query date, provider, exact queries, result URLs and read status. Treat search visibility as competitive evidence, never as proof or a ranking promise; do not invent search volumes. For bilingual content, research English and French intent separately and translate the decision, not just the words.
+- **Attribution is mandatory.** Cite real, locatable sources with URLs; name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything unverifiable as UNVERIFIED — confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation. Close each piece with a short "Sources & the researchers worth crediting" block.
+
 ## Enforcement and Quality Gates (Phases 10 + 11)
 
 Every project shipped on the engine inherits the 15-step canonical CI pipeline at
 `templates/ci/website.yml` via `scripts/install-canonical-ci.sh`. The
 pipeline is the single source of enforcement. Adjustments to thresholds or
 suppressions require a decision entry under `project-log/decisions/`.
+
+Pipeline order is fixed: install → lint → unit → build → e2e-smoke →
+metadata-audit → perf-gate → a11y-gate → visual-qa → security-gate →
+drift-check → design-quality-score → deploy → post-deploy-smoke →
+rollback-ready. Any gate failure blocks deploy. Thresholds live in
+`lighthouserc.json` and `performance-budgets.json` and are non-negotiable.
+Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
+`skills/launch-ops/deploy/references/performance-gate.md`, `skills/launch-ops/deploy/references/africa-calibration.md`.
 
 - Canonical commands: `perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`,
   `security-gate.sh`, `drift-check.sh`, `slop-scan.sh`,
@@ -235,6 +413,68 @@ suppressions require a decision entry under `project-log/decisions/`.
 - `LICENSE` + `docs/licensing-matrix.md` — explicit per-path licensing.
 - `docs/roadmap-public.md` — public view of the roadmap.
 - `dashboards/public-scorecard.md` — quarterly public quality record.
+
+## Hard Repository Expectations
+
+- Prefer zero unnecessary JS
+- Prefer self-hosted assets over third-party runtime dependencies
+- Keep outputs distinctive; avoid generic templates
+- Source content from project docs rather than inventing client facts
+- Design mobile-first and check multilingual expansion risks
+- Treat privacy and terms pages as standard trust infrastructure
+- Update top-level docs when the operating model changes materially
+- Every skill uses the canonical SKILL.md structure in `docs/doc-style-guide.md`
+- Every skill also satisfies the July 2026 contract in `docs/skill-authoring-standard.md`; new skills start from `templates/skill/SKILL.md`
+- Run `scripts/validate-skill-contracts.py` against `quality/skill-contract-baseline.json` and `scripts/routing-smoke-test.py` before release; the baseline accepts no findings and routing requires the expected skill in the top three
+- Every skill keeps the required acknowledgement line directly under the first `# ...` heading without duplicating it
+- Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
+- Every project ships through the canonical CI pipeline; if the pipeline
+  is not installed and green, the project is not shipped on the engine
+- Thresholds in `lighthouserc.json` and `performance-budgets.json` are set
+  against a deliberate conservative throttled Slow-4G/3G stress profile
+  (WebPageTest "3G" values: 1.6 Mbps, 300 ms RTT, with a 4x CPU slowdown and
+  Lighthouse mobile emulation). It is a worst-case floor, not a market median
+  (measured Uganda figures found are roughly 5-16 Mbps UCC drive tests and 8.4
+  Mbps SpeedOf.Me, each with limits; Ookla and Opensignal for Uganda, Tanzania
+  and Rwanda are NOT_ASSESSED); see
+  `skills/launch-ops/deploy/references/africa-calibration.md` and
+  `docs/source-registers/performance-currentness-2026-09-23.json`. Lab gates
+  block deploy; field Core Web Vitals at p75 decide success. INP is enforced
+  from field/RUM data, never from Lighthouse navigation runs.
+- `scripts/perf-gate.sh` enforces every budget category through
+  `scripts/route-weight-budget.mjs` and runs `scripts/html-perf-lint.mjs`.
+
+## Direct-Response Copy for Sales Pages
+
+When building landing pages, sales pages, VSL scripts, webinar funnels,
+book funnels, order pages, upsell/OTO pages, or application pages, use
+the `long-form-sales-copy` skill, which applies the engine's own
+procedures (informed by Kennedy and Brunson, cited in each reference):
+
+- a sales-letter build procedure in six workstreams (promise and
+  headline, credibility and honest admissions, offer and value build,
+  risk reversal and guarantee, close and postscript, sequence and
+  follow-up)
+- funnel scripts in five movements, plus webinar closes, one-time
+  offers, follow-up email sequences, the phases of a lead and a
+  100-visitor test
+- an offer-proposition stack (unique selling, value, offer, safety and
+  experience propositions) with copy-level price framing
+
+The working procedures live in task-oriented references:
+`skills/content-copy/long-form-sales-copy/references/sales-letter-build-procedure.md`,
+`funnel-scripts-and-sequences.md` and `offer-propositions-and-price-framing.md`;
+price strategy in `skills/agency-ops/authority-offers/references/price-strategy-and-discount-policy.md`;
+premium selling in `skills/agency-ops/premium-sales-conversation/references/sales-process-and-takeaway-selling.md`.
+Pricing and packages pages use
+`skills/content-copy/sales-copywriting/references/pricing-page-choice-architecture.md`;
+headline generation and the mandatory direct-response ethics filter use
+`skills/content-copy/sales-copywriting/references/headline-families-and-ethics-filter.md`.
+
+For brand-level messaging, use
+`skills/brand/brand-storytelling/references/sb7-brandscript-worksheet.md`
+(customer = hero, brand = guide) as the upstream foundation; the long-form
+procedures then drive the actual sales-page copy.
 
 ## Working Model
 
