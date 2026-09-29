@@ -45,17 +45,17 @@ The language set is decided during strategy:
 
 ## Font support
 
-| Language | Recommended primary fonts (open-source) | Notes |
+| Language | Recommended fonts (open-source; chosen for script coverage) | Notes |
 |---|---|---|
-| Kiswahili | Inter, Public Sans, Source Sans | Latin; no special glyphs beyond ASCII. |
-| Luganda | Inter, Source Sans | Latin; no special glyphs. |
+| Kiswahili | Public Sans, Atkinson Hyperlegible; Source Sans 3 as a paired body face only | Latin; no special glyphs beyond ASCII. |
+| Luganda | Public Sans; Source Sans 3 as a paired body face only | Latin; no special glyphs. |
 | Amharic | Noto Sans Ethiopic, Abyssinica SIL | Ge'ez script; body text only in fonts with Ethiopic coverage. |
-| Yoruba | Noto Sans, Inter (with Yoruba subset) | Tone marks: ọ, ẹ, ṣ, and above diacritics. Confirm glyph coverage. |
-| Hausa (Latin) | Inter, Noto Sans | Hooked letters: ɓ, ɗ, ƙ, ƴ. Confirm glyphs. |
+| Yoruba | Noto Sans (with Yoruba subset) | Tone marks: ọ, ẹ, ṣ, and above diacritics. Confirm glyph coverage. |
+| Hausa (Latin) | Noto Sans | Hooked letters: ɓ, ɗ, ƙ, ƴ. Confirm glyphs. |
 | Hausa (Ajami) | Noto Naskh Arabic | Same script family as Arabic; RTL. |
-| Zulu | Inter, Source Sans | Latin with clicks written with standard letters. |
-| Twi | Noto Sans, Inter | Tone marks and special letters (ɛ, ɔ). |
-| Wolof | Inter, Noto Sans | Latin with special letters (ñ, ŋ). |
+| Zulu | Public Sans; Source Sans 3 as a paired body face only | Latin with clicks written with standard letters. |
+| Twi | Noto Sans | Tone marks and special letters (ɛ, ɔ). |
+| Wolof | Noto Sans | Latin with special letters (ñ, ŋ). |
 | Arabic | Noto Sans Arabic, Noto Naskh Arabic (chosen for script coverage) | RTL, script-family differences between North African and Gulf styles. |
 | Tifinagh | Noto Sans Tifinagh | Very small user base; subset carefully. |
 
@@ -65,9 +65,13 @@ Rules:
   target language. Missing glyphs show as empty boxes; unacceptable.
 - Subset per language shipped. Don't load the full Noto Sans when
   the page is Kiswahili and uses only basic Latin.
-- Prefer Noto family for coverage breadth. Public Sans and Source Sans
-  are good choices for Latin-script African languages; confirm hooked
-  and tone-marked letters render before shipping.
+- Prefer Noto family for coverage breadth. Public Sans (and Source Sans 3
+  as a paired body face beneath a distinctive display face) suit
+  Latin-script African languages; confirm hooked and tone-marked letters
+  render before shipping.
+- Never use Inter or any other face on the design engine's banned list
+  (`design-system-skills/doctrine/references/ai-slop-banned-fonts.md`)
+  as primary type, whatever its glyph coverage.
 
 ## Expansion ratios
 
