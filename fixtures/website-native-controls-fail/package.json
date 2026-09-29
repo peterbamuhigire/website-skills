@@ -1,0 +1,7 @@
+{
+  "name": "native-controls-fail-fixture",
+  "private": true,
+  "dependencies": {
+    "flatpickr": "4.6.13"
+  }
+}

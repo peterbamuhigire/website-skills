@@ -34,7 +34,7 @@ AI coding tools produce recognisable visual signatures. These tells are increasi
 **Instead:** Use the Tidwell layout patterns in `design-system/SKILL.md`. Break grids intentionally. Mix full-width sections with constrained content. Use asymmetric layouts where the content calls for it.
 
 ### The AI Effects
-- **Glassmorphism overuse** — blur effects, glass cards, and glow borders on everything. One glass element per page maximum, and only where it serves a purpose (see `liquid-glass-effects.md` for appropriate use)
+- **Glassmorphism** — blur effects, glass cards and glow borders. Decorative glass is a no-ship choice (design engine AI-slop taxonomy; detector rule `glassmorphism`, block); see `liquid-glass-effects.md` for the solid alternatives and the one functional exception
 - **Generic drop shadows on rounded rectangles** — AI defaults to `shadow-lg rounded-xl` on every container
 - **Sparklines as decoration** — tiny charts that show nothing meaningful, placed for visual filler
 - **Glow effects** — outer glow, text glow, border glow — the AI "premium" treatment that looks cheap

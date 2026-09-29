@@ -101,6 +101,7 @@ Without network, crawler, rendered source, or performance data, return the narro
 |---|---|---|
 | Observed index conflict affects priority routes | Block release and correct signals | Lost or duplicate indexation |
 | Traffic decline lacks comparable data | Report hypotheses and request evidence | False causal diagnosis |
+| Built site is available locally | Run `python -X utf8 scripts/content_link_graph.py dist --entry 404.html` (advisory): broken internal links and missing anchors, orphan pages, pages unreachable from home, and hubs, in `reports/content/link-graph.json`; an orphan that is a deliberate landing page goes in `--entry` | Orphaned or unreachable pages that crawlers and visitors never find |
 
 ## Quality Standards
 

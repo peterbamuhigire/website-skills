@@ -33,6 +33,7 @@ Run a read-only rendered-output gate that distinguishes measured regressions fro
 ## Workflow
 
 1. Confirm read-only scope and build identity
+   - **Pre-flight: find the page you are about to judge.** Detect listening local dev or preview servers (Astro defaults 4321 and 4322, plus any port in `package.json` scripts); list listeners with `Get-NetTCPConnection -State Listen` on Windows or `lsof -iTCP -sTCP:LISTEN` / `ss -ltn` elsewhere. Use a single match automatically; ask when there are several; build and preview when there are none. Write throwaway scripts to a temporary directory, never into the project. Never report a visual pass without having opened the rendered page or its screenshot artefact; record URL, port, commit and viewport in the evidence. Detail in `references/screenshot-diff-harness.md` (pre-flight idea adapted from lackeyjb/playwright-skill, MIT, https://github.com/lackeyjb/playwright-skill, commit dd47a6a).
 2. Render the route, locale, viewport, and state matrix
 3. Inspect diffs plus hierarchy, overflow, emptiness, content artefacts, and AI-slop markers
 4. Stop release on unexplained blocking drift, recover by authorised repair or approved baseline decision, then rerun the matrix.

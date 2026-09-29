@@ -5,7 +5,8 @@
 #   1. Playwright screenshot diff vs tests/visual/baseline/
 #   2. Structural assertions (heading hierarchy, horizontal overflow,
 #      empty-section) via tests/visual/structure.spec.ts
-#   3. AI-slop scan on rendered HTML and CSS via scripts/slop-scan.sh
+#   3. AI-slop scan on rendered HTML and CSS via scripts/slop-scan.sh (the
+#      vendored chwezi-slop detector; reports/design-quality/slop.json)
 #
 # Usage:
 #   SKILLS_DIR=/path/to/website-skills bash /path/to/website-skills/scripts/visual-qa.sh
@@ -15,7 +16,7 @@
 #       failure, no slop block)
 #   1 — screenshot diff over threshold
 #   2 — structural assertion failed
-#   3 — slop-scan blocked
+#   3 — slop-scan blocked (slop-scan exit 1) or NOT_ASSESSED (slop-scan exit 5)
 #   4 — prerequisite missing
 #   5 — no built output
 
@@ -56,15 +57,21 @@ if [ "$DIFF_EXIT" -ne 0 ]; then
 fi
 
 echo "visual-qa: running slop-scan"
-if [ -x "$SKILLS_DIR/scripts/slop-scan.sh" ]; then
+# -f, not -x: the script is run with bash and is stored without the executable bit (mode 100644),
+# so an -x test silently skipped the slop scan on Linux checkouts.
+if [ -f "$SKILLS_DIR/scripts/slop-scan.sh" ]; then
     SLOP_EXIT=0
     bash "$SKILLS_DIR/scripts/slop-scan.sh" "$DIST_DIR" || SLOP_EXIT=$?
-    if [ "$SLOP_EXIT" -ne 0 ]; then
-        echo "visual-qa: FAIL — slop-scan blocked. See reports/design-quality/slop-scan.md" >&2
+    if [ "$SLOP_EXIT" -eq 5 ]; then
+        echo "visual-qa: FAIL — slop-scan NOT_ASSESSED (prerequisite missing or detector tampered); not a pass. See reports/design-quality/slop.json" >&2
+        exit 3
+    elif [ "$SLOP_EXIT" -ne 0 ]; then
+        echo "visual-qa: FAIL — slop-scan found blocking findings. See reports/design-quality/slop.json (canonical) and slop-scan.md" >&2
         exit 3
     fi
 else
-    echo "visual-qa: WARN — scripts/slop-scan.sh not found; skipping slop scan" >&2
+    echo "visual-qa: FAIL — scripts/slop-scan.sh not found under $SKILLS_DIR; slop scan NOT_ASSESSED, which is not a pass" >&2
+    exit 4
 fi
 
 {

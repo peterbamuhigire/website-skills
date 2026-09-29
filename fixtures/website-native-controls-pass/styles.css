@@ -1,0 +1,17 @@
+:root {
+  color: #17324d;
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 2rem 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+}

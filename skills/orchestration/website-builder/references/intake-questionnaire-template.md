@@ -14,6 +14,21 @@ The sequence intentionally follows a SPIN-style flow:
 
 This prevents shallow website briefs and protects against quoting the wrong solution.
 
+## Conducting the intake
+
+- **Chat or asynchronous intake** (WhatsApp, email, a web form follow-up, an agent session): ask
+  **one question per message**. Offer multiple choice where the answer space is known (budget
+  band, timeline, number of pages, payment rails), and leave the question open where the
+  client's own words matter (the problem, the customer, what a good month looks like). Never
+  send the questionnaire as a batch, and never ask the next question before the client has
+  answered the current one.
+- **Live calls** (phone, video, in person) may follow the SPIN sequence below as a conversation;
+  the one-question rule does not apply.
+- Record each answer in the client's own words the same day, whichever channel was used.
+- When the answers are complete, write the strategy brief back to the client as a document
+  (Gate 3 in `project-stage-gates.md`); do not start design or build work from the chat
+  transcript.
+
 ## Part 1 - Pre-Call Intake
 
 Collect this before any proposal work begins.

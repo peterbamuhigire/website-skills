@@ -1,6 +1,6 @@
 ---
 name: deploy
-description: Use when a completed website must be built, release-gated, deployed, verified, communicated, and made rollback-ready; use `observability` for telemetry design and quality-gate skills for specialist audits.
+description: Use when a completed website must be built, release-gated, deployed, verified and made rollback-ready, or when a Lighthouse or Core Web Vitals audit of a built site must find and fix failures before launch; use `observability` for telemetry design and quality-gate skills for specialist audits.
 metadata:
   portable: true
   compatible_with:

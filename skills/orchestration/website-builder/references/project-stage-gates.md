@@ -14,13 +14,28 @@ cause expensive rework, weak websites, and scope conflict.
 - Each gate defines what happens if requirements are incomplete.
 - If approval is verbal, it must be written into the approvals log the same day.
 
+## Job classification
+
+Classify every request before choosing the gate path. The two words are adapted in paraphrase
+from Superpowers' three-path request router (obra/superpowers, MIT,
+https://github.com/obra/superpowers, commit 8ca22db); its spike path is not used here, because
+prototypes live in the design engine.
+
+| Class | Examples | Gate path |
+|---|---|---|
+| **Bounded** | A single-page change, a copy tweak, a new testimonial, a price update, one image swap | Write an in-chat summary of the change (page, what changes, acceptance check) and get the client's written approval before editing. Gates 6 to 8 still apply to what ships. |
+| **Architectural** | A new site, a redesign, an information-architecture change, a new language, a new page type or template | Run the full gate sequence from Gate 1 (or from Gate 3 for an existing client) |
+
+When in doubt, treat the job as architectural. A bounded job that grows (a second page, a new
+section type, a navigation change) is reclassified before work continues.
+
 ## Stage-Gate Table
 
 | Gate | Owner | Required artifacts | Approval method | Rollback rule if incomplete |
 |---|---|---|---|---|
 | 1. Qualified Lead | Sales lead | Qualification notes, scorecard, routing decision | CRM note or internal review | Do not open proposal work; route to decline, referral, or paid discovery |
 | 2. Paid Discovery or Signed Proposal | Sales lead | Signed proposal or paid-discovery invoice, initial intake file | Signed document or paid invoice | Stop strategy and scheduling until commercial commitment exists |
-| 3. Strategy Approved | Strategy lead | Discovery summary, website strategy brief, positioning summary, sitemap and page goals, offer and CTA hierarchy | Strategy review call plus written confirmation | Return to discovery and strategy; no design work starts |
+| 3. Strategy Approved | Strategy lead | Discovery summary, website strategy brief, positioning summary, sitemap and page goals, offer and CTA hierarchy | Strategy review call plus written confirmation | Return to discovery and strategy; no design or build work starts |
 | 4. Design System Approved | Design lead | Style brief, approved references, design direction summary | Annotated review or written sign-off | Return to design direction; no build styling starts |
 | 5. Content And Page Structure Approved | Content lead | Final page structure, content inventory, priority page copy plan, SEO brief draft | Document approval or review meeting | Return to content planning; no production page build begins |
 | 6. Build Approved For QA | Production lead | Implemented pages, component checks, technical checklist, tracked known issues, QA matrix draft | Internal QA handoff note | Return to build; no client QA or launch preparation |
@@ -53,6 +68,8 @@ Keep each gate checklist short. Focus on the few dangerous misses.
 - [ ] Offer hierarchy is agreed
 - [ ] Sitemap is approved
 - [ ] Major assumptions are visible
+- [ ] Strategy brief written back to the client as presented; approval covers that brief, not the idea behind it
+- [ ] No build work, including scaffolding or dependency installs, before Gate 3 approval
 
 ### Gate 4 - Design System Approved
 

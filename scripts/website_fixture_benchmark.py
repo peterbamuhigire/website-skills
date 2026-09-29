@@ -12,6 +12,7 @@ import argparse
 import json
 import math
 import re
+import sys
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -20,6 +21,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FIXTURE = ROOT / "fixtures" / "website-kaizen"
 DEFAULT_BUDGETS = ROOT / "performance-budgets.json"
+DEFAULT_PICKERS = ROOT / "quality" / "picker-libraries.json"
+# Same shape as the chwezi-slop waiver reason: "<who>: <evidence>".
+WAIVER_REASON = re.compile(r"^[^:\n]{2,80}: \S.{9,}$")
 
 
 class PageParser(HTMLParser):
@@ -99,7 +103,49 @@ def check_page(page: Path, fixture: Path) -> dict[str, object]:
     }
 
 
-def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGETS) -> dict[str, object]:
+def load_pickers(path: Path = DEFAULT_PICKERS) -> list[dict[str, object]]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    libraries = data.get("libraries") if isinstance(data, dict) else None
+    if not isinstance(libraries, list) or not libraries:
+        raise ValueError("picker-libraries.json must list libraries")
+    return libraries
+
+
+def dependency_minimalism(pages: list[Path], fixture: Path, pickers: list[dict[str, object]]) -> dict[str, object]:
+    """PT-10: fail a known picker library unless the page records why a native control is insufficient."""
+    findings: list[dict[str, str]] = []
+    waivers: list[dict[str, str]] = []
+    invalid_waivers: list[dict[str, str]] = []
+    for page in pages:
+        parser = PageParser()
+        parser.feed(page.read_text(encoding="utf-8"))
+        for tag_attrs in parser.attrs.values():
+            for attrs in tag_attrs:
+                if "data-native-insufficient" in attrs:
+                    reason = attrs["data-native-insufficient"].strip()
+                    target = waivers if WAIVER_REASON.match(reason) else invalid_waivers
+                    target.append({"page": page.name, "reason": reason})
+        for tag, key in (("script", "src"), ("link", "href")):
+            for attrs in parser.attrs.get(tag, []):
+                url = attrs.get(key, "")
+                for library in pickers:
+                    if url and re.search(str(library["asset_pattern"]), url, re.IGNORECASE):
+                        findings.append({"page": page.name, "library": str(library["name"]), "via": f"{tag} {key}={url}"})
+    package = fixture / "package.json"
+    if package.is_file():
+        manifest = json.loads(package.read_text(encoding="utf-8"))
+        declared = {**manifest.get("dependencies", {}), **manifest.get("devDependencies", {})}
+        for library in pickers:
+            for name in library.get("packages", []):
+                if name in declared:
+                    findings.append({"page": "package.json", "library": str(library["name"]), "via": f"dependency {name}"})
+    waived = bool(findings) and bool(waivers) and not invalid_waivers
+    status = "PASS" if not findings or waived else "FAIL"
+    return {"status": status, "findings": findings, "waivers": waivers, "invalid_waivers": invalid_waivers,
+            "rule": "native control first; a picker library needs data-native-insufficient=\"<who>: <evidence>\" on the control"}
+
+
+def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGETS, pickers: Path = DEFAULT_PICKERS) -> dict[str, object]:
     fixture = fixture.resolve()
     config = json.loads((fixture / "fixture.json").read_text(encoding="utf-8"))
     budget_data = json.loads(budgets.read_text(encoding="utf-8"))
@@ -114,6 +160,7 @@ def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGE
     if any(not page.is_relative_to(fixture) or not page.is_file() for page in pages):
         raise ValueError("pages must be existing files within the fixture")
     page_results = [check_page(page, fixture) for page in pages]
+    minimalism = dependency_minimalism(pages, fixture, load_pickers(pickers))
     required_budget_keys = {"total_weight_kb", "js_kb_gzip", "css_kb_gzip"}
     global_budget = budget_data.get("global") if isinstance(budget_data, dict) else None
     if not isinstance(global_budget, dict):
@@ -137,6 +184,7 @@ def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGE
         "metadata": all(result["metadata"]["status"] == "PASS" for result in page_results),
         "accessibility_inputs": all(result["accessibility_inputs"]["status"] == "PASS" for result in page_results),
         "performance_budget_inputs": available_keys and asset_bytes <= raw_ceiling,
+        "dependency_minimalism": minimalism["status"] == "PASS",
     }
     return {
         "id": config["id"],
@@ -150,6 +198,7 @@ def run_benchmark(fixture: Path = DEFAULT_FIXTURE, budgets: Path = DEFAULT_BUDGE
             "fixture_asset_bytes": asset_bytes,
             "raw_ceiling_check": "PASS" if checks["performance_budget_inputs"] else "FAIL",
         },
+        "dependency_minimalism": minimalism,
         "field_core_web_vitals": "NOT ASSESSED",
     }
 
@@ -165,6 +214,7 @@ def main() -> int:
         print(json.dumps({"status": "FAIL", "error": str(exc), "evidence_type": "lab fixture only"}))
         return 1
     print(json.dumps(result, indent=2))
+    print(f"dependency_minimalism: {result['dependency_minimalism']['status']}", file=sys.stderr)
     return 0 if result["status"] == "PASS" else 1
 
 

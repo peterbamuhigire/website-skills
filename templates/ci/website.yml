@@ -217,6 +217,15 @@ jobs:
         with: { submodules: recursive }
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with: { name: dist, path: dist }
+      # slop-scan.sh runs the vendored chwezi-slop detector (Node 18 or later; exit 5 = NOT_ASSESSED, never clean).
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      # Content-link graph (M10-11 GR-12): advisory. Promote to blocking only by a decision record
+      # in project-log/decisions/.
+      - name: Content link graph (advisory)
+        run: python3 $SKILLS_DIR/scripts/content_link_graph.py dist
+        continue-on-error: true
       - id: score
         run: bash $SKILLS_DIR/scripts/design-quality-score.sh
         continue-on-error: ${{ github.event_name == 'pull_request' }}

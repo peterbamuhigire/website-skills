@@ -145,3 +145,57 @@ def test_local_website_fixture_benchmark_is_deterministic():
     assert result["status"] == "PASS"
     assert result["evidence_type"] == "lab fixture only"
     assert result["field_core_web_vitals"] == "NOT ASSESSED"
+
+
+# M10-11-T08 (PT-10): native controls first; a picker library needs a recorded reason.
+def test_native_controls_pass_fixture_passes():
+    code, result = run_fixture(ROOT / 'fixtures/website-native-controls-pass')
+    assert code == 0 and result['status'] == 'PASS'
+    assert result['dependency_minimalism']['status'] == 'PASS'
+
+
+def test_picker_library_fails_dependency_minimalism():
+    command = [sys.executable, str(ROOT / 'scripts/website_fixture_benchmark.py'), '--fixture', str(ROOT / 'fixtures/website-native-controls-fail')]
+    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    assert result.returncode == 1
+    assert 'dependency_minimalism: FAIL' in result.stderr
+    report = json.loads(result.stdout)
+    libraries = {finding['library'] for finding in report['dependency_minimalism']['findings']}
+    assert libraries == {'flatpickr'}
+    assert {finding['page'] for finding in report['dependency_minimalism']['findings']} == {'index.html', 'package.json'}
+
+
+def test_recorded_native_insufficient_reason_waives_the_picker(tmp_path):
+    site = tmp_path / 'site'
+    shutil.copytree(ROOT / 'fixtures/website-native-controls-fail', site)
+    page = site / 'index.html'
+    reason = 'Peter Bamuhigire: booking needs a date range with blackout days the native picker cannot show'
+    page.write_text(page.read_text(encoding='utf-8').replace('id="visit-date"', f'id="visit-date" data-native-insufficient="{reason}"'), encoding='utf-8')
+    code, result = run_fixture(site)
+    assert code == 0 and result['dependency_minimalism']['status'] == 'PASS'
+
+
+def test_vague_native_insufficient_reason_does_not_waive(tmp_path):
+    site = tmp_path / 'site'
+    shutil.copytree(ROOT / 'fixtures/website-native-controls-fail', site)
+    page = site / 'index.html'
+    page.write_text(page.read_text(encoding='utf-8').replace('id="visit-date"', 'id="visit-date" data-native-insufficient="nicer"'), encoding='utf-8')
+    code, result = run_fixture(site)
+    assert code == 1 and result['dependency_minimalism']['status'] == 'FAIL'
+
+
+def test_third_party_js_budget_stays_zero():
+    budgets = json.loads((ROOT / 'performance-budgets.json').read_text(encoding='utf-8'))
+    values = [v for v in _walk(budgets, 'third_party_js_kb')]
+    assert values and all(v == 0 for v in values)
+
+
+def _walk(node, key):
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if k == key:
+                yield v
+            yield from _walk(v, key)
+    elif isinstance(node, list):
+        for item in node:
+            yield from _walk(item, key)

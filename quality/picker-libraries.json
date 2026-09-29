@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "purpose": "Known date and colour picker libraries that a native <input type=\"date\"> or <input type=\"color\"> usually replaces (M10-11-T08, PT-10). scripts/website_fixture_benchmark.py fails a page that loads one, or a fixture package.json that declares one, unless the page carries data-native-insufficient=\"<who>: <evidence>\" on the control. The list proves the mechanism, not completeness; review it yearly.",
+  "reviewed": "2026-09-29",
+  "libraries": [
+    {
+      "name": "flatpickr",
+      "packages": [
+        "flatpickr"
+      ],
+      "asset_pattern": "flatpickr"
+    },
+    {
+      "name": "Pikaday",
+      "packages": [
+        "pikaday"
+      ],
+      "asset_pattern": "pikaday"
+    },
+    {
+      "name": "Air Datepicker",
+      "packages": [
+        "air-datepicker"
+      ],
+      "asset_pattern": "air-datepicker"
+    },
+    {
+      "name": "Pickr",
+      "packages": [
+        "@simonwep/pickr"
+      ],
+      "asset_pattern": "@simonwep/pickr|/pickr(?:\\.es5)?(?:\\.min)?\\.(?:js|css)\\b"
+    },
+    {
+      "name": "vanilla-picker",
+      "packages": [
+        "vanilla-picker"
+      ],
+      "asset_pattern": "vanilla-picker"
+    },
+    {
+      "name": "jQuery UI datepicker",
+      "packages": [
+        "jquery-ui",
+        "jquery-ui-dist"
+      ],
+      "asset_pattern": "jquery-ui|jquery\\.ui|/datepicker(?:\\.min)?\\.(?:js|css)\\b"
+    }
+  ]
+}
