@@ -270,8 +270,8 @@ Showcase three categories of work:
    - Link: https://github.com/peterbamuhigire/pyPDFLibrarianSort
    - Tech: Python, ML
 
-6. **SRS Skills** — AI utilities for creating formal Software Requirements Specification documentation.
-   - Link: https://github.com/peterbamuhigire/srs-skills
+6. **Chwezi SDLC Documentation** — AI utilities for creating formal Software Requirements Specification documentation.
+   - Link: https://github.com/peterbamuhigire/chwezi-sdlc-documentation
    - Tech: Python, AI
 
 7. **MySQLDevAssistant** — Database Development Assistant toolkit for MySQL development with test data management and schema operations.

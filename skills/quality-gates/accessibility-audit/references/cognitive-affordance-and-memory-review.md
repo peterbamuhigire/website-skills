@@ -187,4 +187,4 @@ These rules help visitors with attention, memory, reading or executive-function 
 
 - Branson, S. (2020) *UX / UI Design: Introduction Guide to Intuitive Design and User-Friendly Experience*. Chapters on human memory limitations and cognitive affordance.
 - Hodent, C. (2022) *What UX Is Really About: Introducing a Mindset for Great Experiences*. CRC Press. Chapters on perception, memory, attention and accessibility.
-- Companion references in the design engine: `C:/wamp64/www/design-system-skills/skills/05-ux-process-research-and-psychology/ux-psychology/references/legacy-guidance.md` (sections "Working memory and cognitive load" and "Four-stage cognitive affordance discipline").
+- Companion references in the design engine: `C:/wamp64/www/chwezi-design-engine/skills/05-ux-process-research-and-psychology/ux-psychology/references/legacy-guidance.md` (sections "Working memory and cognitive load" and "Four-stage cognitive affordance discipline").

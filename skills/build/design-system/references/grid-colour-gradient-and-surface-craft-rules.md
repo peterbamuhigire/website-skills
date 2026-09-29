@@ -2,7 +2,7 @@
 
 Parent skill: [design-system](../SKILL.md). Read when setting the page grid, choosing type metrics, building a palette from a brand colour, specifying gradients, shadows, buttons, toggles or illustration rules for a website design system, or when a design "looks off" and the cause is craft rather than concept.
 
-Related files: `legacy-guidance.md` (8pt spacing, two-layer shadows, button states, nested radius, line-height formula), `../../page-builder/references/component-design-rules.md` (navbars, hero, cards, icons, images), and the design engine's colour skills at `C:/wamp64/www/design-system-skills/skills/02-color-brand-and-visual-identity/color-selection/` for palette psychology and the full palette procedure.
+Related files: `legacy-guidance.md` (8pt spacing, two-layer shadows, button states, nested radius, line-height formula), `../../page-builder/references/component-design-rules.md` (navbars, hero, cards, icons, images), and the design engine's colour skills at `C:/wamp64/www/chwezi-design-engine/skills/02-color-brand-and-visual-identity/color-selection/` for palette psychology and the full palette procedure.
 
 ---
 

@@ -183,4 +183,4 @@ Fill per launch and file at
 - POPIA: https://inforegulator.org.za
 - GDPR official text: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 - `policy-pages/SKILL.md` — produces the public-facing documents.
-- `design-system-skills:legal-sector-ui-ux` — additional regulatory constraints for legal-sector sites.
+- `chwezi-design-engine:legal-sector-ui-ux` — additional regulatory constraints for legal-sector sites.

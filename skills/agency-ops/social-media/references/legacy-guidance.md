@@ -6,7 +6,7 @@ Social media management is not simply posting content. It is a multi-disciplinar
 
 ## When to Use
 
-**Alongside a website build:** Run this skill after design-system and before deploy. Use the client's brand voice (from design-system-skills:brand-visual-identity) and content pillars (from they-ask-you-answer) to produce a social media strategy that launches simultaneously with the website. Output: `docs/social-media-strategy.md`.
+**Alongside a website build:** Run this skill after design-system and before deploy. Use the client's brand voice (from chwezi-design-engine:brand-visual-identity) and content pillars (from they-ask-you-answer) to produce a social media strategy that launches simultaneously with the website. Output: `docs/social-media-strategy.md`.
 
 **Standalone social audit/strategy:** Run independently when an existing client needs their social media assessed and restructured. Conduct a free "health check" using Hubspot or Klout scoring, then deliver a strategy document as a paid deliverable.
 
@@ -256,7 +256,7 @@ See `social-media/references/content-calendar-template.md` for the full monthly 
 
 ## Integration With Other Skills
 
-- **brand-strategy / design-system-skills:brand-visual-identity:** Brand voice, character attributes, and visual identity feed directly into social media tone and content standards. Run design-system-skills:brand-visual-identity before defining the Character element.
+- **brand-strategy / chwezi-design-engine:brand-visual-identity:** Brand voice, character attributes, and visual identity feed directly into social media tone and content standards. Run chwezi-design-engine:brand-visual-identity before defining the Character element.
 - **they-ask-you-answer:** The Big 5 content pillars and Selling 7 video formats map directly onto the Content Buckets. Blog articles from they-ask-you-answer become the content that is repurposed across all social platforms.
 - **blog-writer:** Every blog article is a source asset for social content. Apply the 20/80 rule — distribute each article across all active platforms before writing the next one.
 - **ecommerce-funnel:** Social media is the primary traffic source for the top of the ecommerce funnel. Platform selection and content strategy must align with the funnel's traffic temperature model (cold discovery on TikTok/Pinterest; warm nurturing on Instagram/Facebook).

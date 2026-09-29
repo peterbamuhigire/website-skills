@@ -183,4 +183,4 @@ Any form standing between the visitor and their goal (sign-up, checkout, enquiry
 
 - Tidwell, J., Brewer, C. and Valencia, A. (2020) *Designing Interfaces*, 3rd edn. O'Reilly Media. Chapters 3 (navigation), 6 (mobile) and 10 (forms and controls).
 - Krug, S. (2014) *Don't Make Me Think, Revisited*, 3rd edn. New Riders. Navigation, home page and mobile chapters.
-- Companion references in the design engine: `C:/wamp64/www/design-system-skills/skills/14-conversion-and-web-page-patterns/navigation-and-information-architecture/` and `C:/wamp64/www/design-system-skills/skills/04-web-and-ui-design/form-ux-design/`.
+- Companion references in the design engine: `C:/wamp64/www/chwezi-design-engine/skills/14-conversion-and-web-page-patterns/navigation-and-information-architecture/` and `C:/wamp64/www/chwezi-design-engine/skills/04-web-and-ui-design/form-ux-design/`.

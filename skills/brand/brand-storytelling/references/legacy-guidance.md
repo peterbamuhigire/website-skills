@@ -278,5 +278,5 @@ If the homepage leads with WHAT (product description) rather than WHY (belief or
 - `content-writing` — brand storytelling provides the narrative skeleton; content-writing skill applies readability, headline, and formatting standards to all story content
 
 **Cross-cutting with:**
-- `design-system-skills:brand-visual-identity` — brand story must be consistent with the brand map from Leland's framework; every page is tested for brand congruency
+- `chwezi-design-engine:brand-visual-identity` — brand story must be consistent with the brand map from Leland's framework; every page is tested for brand congruency
 - `language-standards` — all five story types must be adapted per language; founding stories and values-in-action stories carry cultural nuance that requires attention in FR and SW versions

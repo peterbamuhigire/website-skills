@@ -31,7 +31,7 @@ Skill ownership:
 - `website-builder`
 - `agency-positioning`
 - `design-reference`
-- `design-system-skills:brand-visual-identity`
+- `chwezi-design-engine:brand-visual-identity`
 - `they-ask-you-answer`
 
 Primary artifacts:
@@ -71,7 +71,7 @@ Skill ownership:
 
 - `design-system`
 - `design-reference`
-- `design-system-skills:brand-visual-identity`
+- `chwezi-design-engine:brand-visual-identity`
 
 Primary artifacts:
 

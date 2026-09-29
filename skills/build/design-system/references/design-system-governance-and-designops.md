@@ -2,7 +2,7 @@
 
 Parent skill: [design-system](../SKILL.md). Read when starting or extending a client's design system, when components or styles are drifting across pages, when setting up who owns and maintains the system, or when design decisions are stalling in committee.
 
-Related files: `../../page-builder/references/component-design-rules.md` (token layers, component documentation contract, reuse-before-create), the cross-page consistency gate in `skills/quality-gates/cross-page-design-consistency-audit/`, and the design engine's `C:/wamp64/www/design-system-skills/skills/04-web-and-ui-design/practical-ui-design/references/visual-consistency.md`.
+Related files: `../../page-builder/references/component-design-rules.md` (token layers, component documentation contract, reuse-before-create), the cross-page consistency gate in `skills/quality-gates/cross-page-design-consistency-audit/`, and the design engine's `C:/wamp64/www/chwezi-design-engine/skills/04-web-and-ui-design/practical-ui-design/references/visual-consistency.md`.
 
 ---
 

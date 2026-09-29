@@ -2,7 +2,7 @@
 
 Parent skill: [website-experience-mapping](../SKILL.md). Read when a client engagement is really a new service, product or digital experience (not only a website rebuild), when an established organisation keeps killing good ideas late, or when a one- to two-week discovery-to-concept studio sprint is being planned.
 
-Deeper method detail and templates: `C:/wamp64/www/design-system-skills/skills/05-ux-process-research-and-psychology/enterprise-ux-process/references/arrive-framework.md`.
+Deeper method detail and templates: `C:/wamp64/www/chwezi-design-engine/skills/05-ux-process-research-and-psychology/enterprise-ux-process/references/arrive-framework.md`.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: premium-ui-ux-design
-description: Use when a premium website build needs build-coupled UX and visual-quality orchestration before design-system and page-builder; use the external design-system-skills engine for general visual doctrine.
+description: Use when a premium website build needs build-coupled UX and visual-quality orchestration before design-system and page-builder; use the external chwezi-design-engine engine for general visual doctrine.
 metadata:
   portable: true
   compatible_with:
@@ -21,7 +21,7 @@ Translate approved website strategy and experience evidence into a distinctive, 
 
 ## Do Not Use When
 
-- Use for general visual doctrine, which belongs to `design-system-skills`, or for token implementation owned by `design-system`.
+- Use for general visual doctrine, which belongs to `chwezi-design-engine`, or for token implementation owned by `design-system`.
 
 ## Required Inputs
 

@@ -299,7 +299,7 @@ Repositories studied in the September 2026 ten-repository Kaizen (M10), from whi
 
 Other repositories:
 
-- design-system-skills — https://github.com/peterbamuhigire/design-system-skills — source of the vendored `chwezi-slop` detector (`tools/slop-detector`, commit `3fe84a6`, hash-pinned in `scripts/vendor/chwezi-slop/VENDOR.json`).
+- chwezi-design-engine — https://github.com/peterbamuhigire/chwezi-design-engine — source of the vendored `chwezi-slop` detector (`tools/slop-detector`, commit `3fe84a6`, hash-pinned in `scripts/vendor/chwezi-slop/VENDOR.json`).
 - chwezi-dev-engine — https://github.com/peterbamuhigire/chwezi-dev-engine — the canonical skill-writing standard that `meta/skill-writing` points to.
 - ECC — github.com/affaan-m/ECC — the Windows path fix in `install.sh` and the user/project scope model in `scripts/install-engine.js`.
 - codex-astra-luna-orchestrator — https://github.com/donvito/codex-astra-luna-orchestrator — concept reference for the Codex model-policy helper, inspected at commit `21f4561`. It was implemented independently, and the upstream installer was not run.

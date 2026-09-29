@@ -19,14 +19,14 @@
     "tools/slop-detector/lib/util.mjs": "0e932f751f8e68f3437106cc4ffc368896031bd1c0b589b3c2ace9febd273074",
     "tools/slop-detector/lib/waivers.mjs": "d4091f46aca16844f7ac66cd3c193754f5210363f4bcc7da4fd9000614591df6",
     "tools/slop-detector/rules/registry.json": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
-    "tools/slop-detector/rules/registry.schema.json": "53e1946ee8ce7545afd670439eab180a9bb559d1336a32c95f12c7157fda18a2"
+    "tools/slop-detector/rules/registry.schema.json": "40a9812f1748849e10af3725415a5ce32305103f5be6dd3ed4da49240b631eee"
   },
   "hash_mode": "sha256 after CRLF normalisation",
   "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
   "schema_version": 1,
   "source_commit": "3fe84a6dc22d954483e1afce06c3e9b53fc2f5ca",
   "source_path": "tools/slop-detector",
-  "source_repo": "https://github.com/peterbamuhigire/design-system-skills",
+  "source_repo": "https://github.com/peterbamuhigire/chwezi-design-engine",
   "tool": "chwezi-slop",
-  "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../design-system-skills"
+  "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine"
 }

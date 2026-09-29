@@ -7,7 +7,7 @@ several direction options.
 
 This file supplies the **questions** and the **website-side decisions**. The
 art-direction vocabulary (named routes, theme intensity, direction boards and
-the fit/stretch/bold options method) is owned by the `design-system-skills`
+the fit/stretch/bold options method) is owned by the `chwezi-design-engine`
 engine, skill `art-direction-routes`; resolve its location from the global
 engine-routing table and do not duplicate it here.
 
@@ -109,11 +109,11 @@ Tag each proposed style element so the client chooses knowingly:
 Hand the borrow map to the client with the direction; it demonstrates craft and
 answers "did you copy X?" before it is asked.
 
-## Handoff to design-system-skills
+## Handoff to chwezi-design-engine
 
 | Handed over | Artefact | Owner after handoff |
 |---|---|---|
-| Style-fit answers, style thesis, mobile job map, cost flags, borrow map | `docs/design-reference.md` | design-system-skills `art-direction-routes` builds route options and direction boards |
+| Style-fit answers, style thesis, mobile job map, cost flags, borrow map | `docs/design-reference.md` | chwezi-design-engine `art-direction-routes` builds route options and direction boards |
 | Chosen route and the owner's decision | Owner decision register (website-builder) | `design-system` (tokens) and `page-builder` (templates) in this engine |
 
 For a premium discovery tier, offer three direction options (fit, stretch,

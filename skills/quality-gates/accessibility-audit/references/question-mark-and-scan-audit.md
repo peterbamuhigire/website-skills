@@ -77,5 +77,5 @@ evidence only; accessibility, browser, and user evidence remain unassessed.
 
 - `../SKILL.md` for the read-only accessibility gate and degraded-mode rules.
 - `../../../build/i18n/SKILL.md` for locale expansion and missing-content states.
-- `C:/wamp64/www/design-system-skills/skills/14-conversion-and-web-page-patterns/navigation-and-information-architecture/SKILL.md`
+- `C:/wamp64/www/chwezi-design-engine/skills/14-conversion-and-web-page-patterns/navigation-and-information-architecture/SKILL.md`
   for navigation, labels, wayfinding, and hierarchy ownership.

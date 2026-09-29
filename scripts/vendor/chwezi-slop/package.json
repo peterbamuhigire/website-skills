@@ -1,5 +1,5 @@
 {
   "private": true,
   "type": "commonjs",
-  "description": "Vendored chwezi-slop detector (design-system-skills tools/slop-detector). font-matcher.js is CommonJS; this file stops a client project's \"type\": \"module\" from reinterpreting it."
+  "description": "Vendored chwezi-slop detector (chwezi-design-engine tools/slop-detector). font-matcher.js is CommonJS; this file stops a client project's \"type\": \"module\" from reinterpreting it."
 }

@@ -19,8 +19,8 @@ def test_dangling_design_route_fails(tmp_path):
     website = tmp_path / "website"
     website.mkdir()
     (website / "AGENTS.md").write_text(
-        "- `design-system-skills:brand-visual-identity`\n- `design-system-skills:no-such-skill`\n"
-        "<!-- design-system-skills:trigger v2 -->\n",
+        "- `chwezi-design-engine:brand-visual-identity`\n- `chwezi-design-engine:no-such-skill`\n"
+        "<!-- chwezi-design-engine:trigger v2 -->\n",
         encoding="utf-8",
     )
     design = make_design_engine(tmp_path / "design", "brand-visual-identity")
@@ -32,7 +32,7 @@ def test_dangling_design_route_fails(tmp_path):
 def test_history_files_are_not_live_routes(tmp_path):
     website = tmp_path / "website"
     (website / "docs" / "engine-upgrade-july-2026").mkdir(parents=True)
-    (website / "docs" / "engine-upgrade-july-2026" / "plan.md").write_text("design-system-skills:brand-alignment\n", encoding="utf-8")
+    (website / "docs" / "engine-upgrade-july-2026" / "plan.md").write_text("chwezi-design-engine:brand-alignment\n", encoding="utf-8")
     design = make_design_engine(tmp_path / "design", "brand-visual-identity")
     assert REGISTRY.check_design_routes(website, design) == ("PASS", [])
 

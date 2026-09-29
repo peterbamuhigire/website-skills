@@ -88,7 +88,7 @@ In Uganda, Kenya and the wider region, stories that cast a company or donor as t
 1. The community, customer or client organisation is the protagonist. The brand is the guide, helper or guardian.
 2. Show what people did, decided and achieved, not only what the brand gave.
 3. Name places and groups accurately and with permission. Do not use a community's hardship as decoration.
-4. Imagery follows the same rule: no poverty imagery, no people shown only as recipients. Route photography and casting decisions to `design-system-skills`.
+4. Imagery follows the same rule: no poverty imagery, no people shown only as recipients. Route photography and casting decisions to `chwezi-design-engine`.
 5. Purpose and giving claims appear only when the action is funded and sustained. One-off gestures presented as purpose damage credibility.
 6. Quest and rags-to-riches stories (starting a business, moving from village to city, returning from the diaspora) resonate strongly in the region. That makes verification more important, not less.
 

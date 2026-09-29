@@ -19,7 +19,7 @@ MANIFEST = SKILLS / "manifest.yml"
 VERIFIED = "2026-07-13"
 ACK = "Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178."
 LINK = re.compile(r"\[[^\]]+\]\((?!https?://|mailto:|#)([^)]+)\)")
-DESIGN_ROUTE = re.compile(r"(?<!<!-- )(?<!<!-- /)design-system-skills:([a-z0-9]+(?:-[a-z0-9]+)*)")
+DESIGN_ROUTE = re.compile(r"(?<!<!-- )(?<!<!-- /)chwezi-design-engine:([a-z0-9]+(?:-[a-z0-9]+)*)")
 # Files that record history on purpose, and test fixtures; design routes in them are not live routes.
 ROUTE_HISTORY = ("docs/engine-upgrade-july-2026/", "MEMORY.md", "tools/migrate_skills.py", "tests/")
 ROUTE_SUFFIXES = {".md", ".yml", ".yaml", ".json", ".py"}
@@ -67,17 +67,17 @@ def generate() -> dict[str, object]:
         "generated": VERIFIED,
         "canonical_count": len(discover()),
         "external_engines": {
-            "design-system-skills": {"locator": "global-routing-table", "required_for": "visual-design"},
+            "chwezi-design-engine": {"locator": "global-routing-table", "required_for": "visual-design"},
             "digital-research-engine": {"locator": "global-routing-table", "required_for": "live-research"},
         },
         "relocations": {
-            "brand-alignment": "design-system-skills:brand-visual-identity",
-            "brand-style-guide": "design-system-skills:brand-style-guide",
-            "color-selection": "design-system-skills:color-selection",
-            "form-ux-design": "design-system-skills:form-ux-design",
-            "legal": "design-system-skills:legal-sector-ui-ux",
-            "sector-strategies": "design-system-skills:sector-strategies",
-            "ux-psychology": "design-system-skills:ux-psychology",
+            "brand-alignment": "chwezi-design-engine:brand-visual-identity",
+            "brand-style-guide": "chwezi-design-engine:brand-style-guide",
+            "color-selection": "chwezi-design-engine:color-selection",
+            "form-ux-design": "chwezi-design-engine:form-ux-design",
+            "legal": "chwezi-design-engine:legal-sector-ui-ux",
+            "sector-strategies": "chwezi-design-engine:sector-strategies",
+            "ux-psychology": "chwezi-design-engine:ux-psychology",
         },
         "skills": discover(),
     }
@@ -145,13 +145,13 @@ def validate(data: dict[str, object]) -> list[str]:
             expected_row = f"| `{old_name}` | `{destination}` |"
             if expected_row not in relocation_map:
                 errors.append(f"relocation missing from docs/relocation-map.md: {old_name} -> {destination}")
-            if not isinstance(destination, str) or not destination.startswith("design-system-skills:"):
+            if not isinstance(destination, str) or not destination.startswith("chwezi-design-engine:"):
                 errors.append(f"relocation destination is not an external engine route: {old_name} -> {destination}")
     return errors
 
 
 def design_routes(root: Path = ROOT) -> dict[str, list[str]]:
-    """Collect every live `design-system-skills:<name>` route, keyed by skill name."""
+    """Collect every live `chwezi-design-engine:<name>` route, keyed by skill name."""
     routes: dict[str, list[str]] = {}
     for path in sorted(root.rglob("*")):
         rel = path.relative_to(root).as_posix()
@@ -171,12 +171,12 @@ def design_routes(root: Path = ROOT) -> dict[str, list[str]]:
 
 def check_design_routes(root: Path = ROOT, design_root: Path | None = None) -> tuple[str, list[str]]:
     """Each routed design skill must exist in the sibling design engine; absent sibling is NOT_ASSESSED."""
-    design_root = design_root if design_root is not None else root.parent / "design-system-skills"
+    design_root = design_root if design_root is not None else root.parent / "chwezi-design-engine"
     if not (design_root / "skills").is_dir():
-        return "NOT_ASSESSED", [f"design-system-skills checkout not found at {design_root}"]
+        return "NOT_ASSESSED", [f"chwezi-design-engine checkout not found at {design_root}"]
     available = {path.parent.name for path in (design_root / "skills").rglob("SKILL.md")}
     errors = [
-        f"dangling design route design-system-skills:{name} (no skills/**/{name}/SKILL.md) at {', '.join(where[:3])}"
+        f"dangling design route chwezi-design-engine:{name} (no skills/**/{name}/SKILL.md) at {', '.join(where[:3])}"
         for name, where in sorted(design_routes(root).items())
         if name not in available
     ]
@@ -186,7 +186,7 @@ def check_design_routes(root: Path = ROOT, design_root: Path | None = None) -> t
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true", help="regenerate skills/manifest.yml")
-    parser.add_argument("--design-root", type=Path, default=None, help="design-system-skills checkout (default: sibling folder)")
+    parser.add_argument("--design-root", type=Path, default=None, help="chwezi-design-engine checkout (default: sibling folder)")
     args = parser.parse_args()
     if args.write:
         MANIFEST.write_text(json.dumps(generate(), indent=2) + "\n", encoding="utf-8")

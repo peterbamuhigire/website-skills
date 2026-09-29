@@ -58,7 +58,7 @@ def test_owner_ranked_below_self_fails(tmp_path):
 
 def test_cross_engine_owner_is_not_assessed():
     docs = ROUTING.corpus()
-    status, _ = ROUTING.check_negative({"skill": "seo-audit", "prompt": "Pick the typeface for the invoice PDF", "owner": "design-system-skills/font-selection-and-pairing"}, docs)
+    status, _ = ROUTING.check_negative({"skill": "seo-audit", "prompt": "Pick the typeface for the invoice PDF", "owner": "chwezi-design-engine/font-selection-and-pairing"}, docs)
     assert status == "NOT_ASSESSED"
 
 

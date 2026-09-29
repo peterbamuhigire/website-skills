@@ -2,7 +2,7 @@
 
 Parent skill: [premium-ui-ux-design](../SKILL.md). Read when a website or client portal will include a predictive, generative or agent-driven feature (chat assistant, recommendation, forecast, automated triage), before any interface is designed.
 
-Use with `ai-interface-trust-and-control-spec.md` (the interface rules that follow this framing) and `../../website-experience-mapping/references/validation-research-method-playbook.md` (research methods and integrity rules). For component-level agent and output patterns, also consult `C:\wamp64\www\design-system-skills\skills\04-web-and-ui-design\ai-agent-ux\SKILL.md` and `...\ai-output-design\SKILL.md`.
+Use with `ai-interface-trust-and-control-spec.md` (the interface rules that follow this framing) and `../../website-experience-mapping/references/validation-research-method-playbook.md` (research methods and integrity rules). For component-level agent and output patterns, also consult `C:\wamp64\www\chwezi-design-engine\skills\04-web-and-ui-design\ai-agent-ux\SKILL.md` and `...\ai-output-design\SKILL.md`.
 
 ## 1. First question: does this need AI?
 

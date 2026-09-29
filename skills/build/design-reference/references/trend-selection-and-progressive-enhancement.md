@@ -42,7 +42,7 @@ Choose the correct matching style before choosing a trend. Start with the client
 
 Record a short style thesis: `For [audience] doing [job], this website uses [style direction] because [brand/offer reason]. It deliberately avoids [misfit] and proves fit through [evidence].`
 
-For the full style-fit question set, unusual-layout test, cost flags, borrow map, and the handoff to `design-system-skills:art-direction-routes`, read [style-fit questions and direction handoff](style-fit-questions-and-direction-handoff.md).
+For the full style-fit question set, unusual-layout test, cost flags, borrow map, and the handoff to `chwezi-design-engine:art-direction-routes`, read [style-fit questions and direction handoff](style-fit-questions-and-direction-handoff.md).
 
 Use no more than two high-novelty treatments on a page unless testing shows that their combination supports the same user job without harming comprehension, accessibility, performance, trust, or maintenance.
 

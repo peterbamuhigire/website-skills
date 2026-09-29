@@ -15,7 +15,7 @@ it contradicted the doctrine below. The earlier version is in git history.
 ## Why
 
 - **Doctrine.** The design engine lists glassmorphism among the no-ship
-  choices for websites (`design-system-skills/doctrine/references/ai-slop-taxonomy.md`,
+  choices for websites (`chwezi-design-engine/doctrine/references/ai-slop-taxonomy.md`,
   K5 AS4 decorative attention) and names "glassmorphism as a default surface
   treatment" as a practice the literature teaches and the engine rejects.
   This engine's `visual-qa/references/slop-rules.md` §13 applies the same

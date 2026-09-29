@@ -1,6 +1,6 @@
 # Design Reference Skill
 
-Turn client-provided reference websites into a structured design guide that feeds directly into the design-system, page-builder, and design-system-skills:brand-visual-identity skills.
+Turn client-provided reference websites into a structured design guide that feeds directly into the design-system, page-builder, and chwezi-design-engine:brand-visual-identity skills.
 
 ## When to Use
 
@@ -313,7 +313,7 @@ Client provides URLs
         ↓
   page-builder reads it   ← for layout patterns, section structure, features
         ↓
-  design-system-skills:brand-visual-identity reads it ← to verify the final site honours the reference direction
+  chwezi-design-engine:brand-visual-identity reads it ← to verify the final site honours the reference direction
 ```
 
 The design-system skill should read `docs/design-reference.md` alongside `docs/style-brief.md` when making typography, colour, and component decisions. If the two files conflict, the style brief takes priority — it represents the client's direct instructions, while the reference guide represents interpreted preferences.

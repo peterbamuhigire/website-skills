@@ -50,7 +50,7 @@ buyers are making a judgement call before a transactional one.
 
 - Professional services firms (management consulting, accounting, financial advisory,
   specialist consulting practices)
-- Legal firms (full-service and specialist practices, see `design-system-skills:legal-sector-ui-ux`)
+- Legal firms (full-service and specialist practices, see `chwezi-design-engine:legal-sector-ui-ux`)
 - Healthcare and allied health (clinics, specialists, health-tech with a clinical
   interface)
 - Education and institutional organisations (schools, universities, professional bodies,

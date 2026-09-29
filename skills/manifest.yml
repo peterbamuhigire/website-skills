@@ -3,7 +3,7 @@
   "generated": "2026-07-13",
   "canonical_count": 62,
   "external_engines": {
-    "design-system-skills": {
+    "chwezi-design-engine": {
       "locator": "global-routing-table",
       "required_for": "visual-design"
     },
@@ -13,13 +13,13 @@
     }
   },
   "relocations": {
-    "brand-alignment": "design-system-skills:brand-visual-identity",
-    "brand-style-guide": "design-system-skills:brand-style-guide",
-    "color-selection": "design-system-skills:color-selection",
-    "form-ux-design": "design-system-skills:form-ux-design",
-    "legal": "design-system-skills:legal-sector-ui-ux",
-    "sector-strategies": "design-system-skills:sector-strategies",
-    "ux-psychology": "design-system-skills:ux-psychology"
+    "brand-alignment": "chwezi-design-engine:brand-visual-identity",
+    "brand-style-guide": "chwezi-design-engine:brand-style-guide",
+    "color-selection": "chwezi-design-engine:color-selection",
+    "form-ux-design": "chwezi-design-engine:form-ux-design",
+    "legal": "chwezi-design-engine:legal-sector-ui-ux",
+    "sector-strategies": "chwezi-design-engine:sector-strategies",
+    "ux-psychology": "chwezi-design-engine:ux-psychology"
   },
   "skills": [
     {

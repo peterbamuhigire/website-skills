@@ -2,7 +2,7 @@
 """Hash-check the vendored chwezi-slop detector (M10-11-T01).
 
 The website client pipeline checks out only this engine, so the design engine's
-deterministic slop detector (design-system-skills/tools/slop-detector, M10-09)
+deterministic slop detector (chwezi-design-engine/tools/slop-detector, M10-09)
 travels here as a vendored copy under scripts/vendor/chwezi-slop/. The copy keeps
 the design engine's relative layout (tools/slop-detector/, hooks/lib/,
 doctrine/references/) because the detector resolves font-matcher.js and the
@@ -11,7 +11,7 @@ banned-font JSON relative to itself.
 Checks, in order:
 1. every file listed in VENDOR.json exists and its SHA-256 (after CRLF
    normalisation) matches the manifest; any mismatch exits 1;
-2. when the sibling checkout ../design-system-skills exists, every vendored file
+2. when the sibling checkout ../chwezi-design-engine exists, every vendored file
    matches the source file; drift exits 1. When the sibling is absent the
    comparison is NOT_ASSESSED, which is reported and is never a pass for that
    comparison (the manifest check still decides the exit code).
@@ -19,7 +19,7 @@ Checks, in order:
 Updating the copy is a deliberate, reviewed step that the orchestrator runs and
 commits; it is never run automatically:
 
-    python -X utf8 scripts/check-vendored-detector.py --sync-from ../design-system-skills
+    python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine
 
 Exit codes: 0 clean; 1 tampered, missing or drifted; 5 manifest unreadable.
 """
@@ -35,8 +35,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_VENDOR = ROOT / "scripts" / "vendor" / "chwezi-slop"
-DEFAULT_SOURCE = ROOT.parent / "design-system-skills"
-SOURCE_REPO = "https://github.com/peterbamuhigire/design-system-skills"
+DEFAULT_SOURCE = ROOT.parent / "chwezi-design-engine"
+SOURCE_REPO = "https://github.com/peterbamuhigire/chwezi-design-engine"
 
 # Paths relative to the design engine root; the vendored copy keeps them.
 # Static tier, registry and banned-font JSON. browser.mjs is carried so the
@@ -113,7 +113,7 @@ def sync(source: Path, vendor: Path) -> int:
         "source_commit": git_head(source),
         "registry_sha256": files["tools/slop-detector/rules/registry.json"],
         "hash_mode": "sha256 after CRLF normalisation",
-        "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../design-system-skills",
+        "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine",
         "files": files,
     }
     (vendor / "VENDOR.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
@@ -141,7 +141,7 @@ def check(vendor: Path, source: Path | None, as_json: bool) -> int:
     if files.get("tools/slop-detector/rules/registry.json") != manifest.get("registry_sha256"):
         findings.append("registry_sha256 does not match the registry.json file hash")
 
-    source_status = "NOT_ASSESSED (sibling ../design-system-skills absent)"
+    source_status = "NOT_ASSESSED (sibling ../chwezi-design-engine absent)"
     drift: list[str] = []
     if source is not None and (source / "tools" / "slop-detector").is_dir():
         for rel in sorted(files):
@@ -176,9 +176,9 @@ def check(vendor: Path, source: Path | None, as_json: bool) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--vendor-dir", type=Path, default=DEFAULT_VENDOR)
-    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE, help="design-system-skills checkout to compare with")
+    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE, help="chwezi-design-engine checkout to compare with")
     parser.add_argument("--no-source", action="store_true", help="skip the source comparison (reported as NOT_ASSESSED)")
-    parser.add_argument("--sync-from", type=Path, help="copy the vendored set from this design-system-skills checkout and rewrite VENDOR.json")
+    parser.add_argument("--sync-from", type=Path, help="copy the vendored set from this chwezi-design-engine checkout and rewrite VENDOR.json")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     if args.sync_from:

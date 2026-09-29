@@ -2,7 +2,7 @@
 
 Parent skill: [premium-ui-ux-design](../SKILL.md). Read when specifying or reviewing the interface of a chat assistant, copilot panel, AI search, recommendation, forecast, anomaly alert or agent workflow on a website or client portal.
 
-Complete `ai-feature-discovery-and-risk-framing.md` first. Component specs for approval tiers, checkpoints, progress tiers, inline refinement and source citation live in `C:\wamp64\www\design-system-skills\skills\04-web-and-ui-design\ai-agent-ux\` and `...\ai-output-design\`; this file sets the behavioural rules they must satisfy.
+Complete `ai-feature-discovery-and-risk-framing.md` first. Component specs for approval tiers, checkpoints, progress tiers, inline refinement and source citation live in `C:\wamp64\www\chwezi-design-engine\skills\04-web-and-ui-design\ai-agent-ux\` and `...\ai-output-design\`; this file sets the behavioural rules they must satisfy.
 
 ## 1. Seven generative interaction patterns
 

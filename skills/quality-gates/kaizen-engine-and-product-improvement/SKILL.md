@@ -70,7 +70,7 @@ If representative renders, analytics, user evidence, fonts, source registers, or
 
 ## Quality Standards
 
-Do not infer conversion improvement without measurement. Do not use dated platform facts without verification. Keep content/structure in this engine and visual-system decisions in design-system-skills. Make user controls, trust, privacy, accessibility, and fallback paths explicit for AI features.
+Do not infer conversion improvement without measurement. Do not use dated platform facts without verification. Keep content/structure in this engine and visual-system decisions in chwezi-design-engine. Make user controls, trust, privacy, accessibility, and fallback paths explicit for AI features.
 
 Apply Kaizen at two levels: first audit this skills engine's routes, references,
 validators, handoffs, and visual-reference handling; then audit the individual site

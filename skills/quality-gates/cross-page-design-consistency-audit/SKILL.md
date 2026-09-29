@@ -199,6 +199,6 @@ structured data too, and duplicated keywords read as stuffing.
 ## Authority
 
 Presentation-layer rules (banned fonts, glassmorphism-as-slop, easing, colour, type scale)
-trace to the cross-cutting design engine: `C:\wamp64\www\design-system-skills` — start at its
+trace to the cross-cutting design engine: `C:\wamp64\www\chwezi-design-engine` — start at its
 `README.md` and `doctrine/design-doctrine.md`. This skill is the *site-wide consistency* lens on
 top of that doctrine; `design-quality-score` is the *per-template* lens. Run all three together.

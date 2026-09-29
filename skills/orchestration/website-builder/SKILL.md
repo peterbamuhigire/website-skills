@@ -36,7 +36,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 1. Validate scope, authority, languages, content, and assets.
 1a. If the brief includes a portal, SaaS, ecommerce, AI, integration, data,
     regulated workflow, or other non-trivial application behaviour, route the
-    scope to `srs-skills` before page or feature commitments. Require signed
+    scope to `chwezi-sdlc-documentation` before page or feature commitments. Require signed
     requirements, first-value/onboarding criteria, accessibility and performance
     constraints, analytics events, and launch/rollback conditions as build inputs.
 2. Route strategy and experience mapping before design and implementation; require the audience action map, narrative sequence, proof register, failure/recovery notes, and a client-specific style thesis. Select the style that best fits the audience, offer, brand, content, trust context, and environment before considering visual trends.

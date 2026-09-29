@@ -2,7 +2,7 @@
 
 Parent skill: [design-system](../SKILL.md). Read when you turn a wireframe into visual design and must decide what dominates each page, how elements align and group, how colour and contrast set reading order, and how icons and interactive states are drawn.
 
-Typeface selection, palette construction and token scales come from the design engine (`C:/wamp64/www/design-system-skills`). Layout, action and behaviour patterns are in `behaviour-and-visual-pattern-rules.md` and `legacy-guidance.md` sections 9 to 11. The squint test is in `ux-quality-checklist.md`.
+Typeface selection, palette construction and token scales come from the design engine (`C:/wamp64/www/chwezi-design-engine`). Layout, action and behaviour patterns are in `behaviour-and-visual-pattern-rules.md` and `legacy-guidance.md` sections 9 to 11. The squint test is in `ux-quality-checklist.md`.
 
 ---
 
