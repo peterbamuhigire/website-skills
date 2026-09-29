@@ -3,6 +3,9 @@
   "$id": "https://techguypeter.com/schemas/website-core-artifacts-v1.json",
   "$defs": {
     "header": {"type": "object", "required": ["artifact", "version", "project", "owner", "status", "updated"], "properties": {"version": {"const": 1}, "status": {"enum": ["draft", "approved", "superseded"]}}},
-    "waiver": {"type": "object", "required": ["gate", "reason", "approver", "expires", "decision_record"]}
+    "waiver": {"type": "object", "required": ["gate", "reason", "approver", "expires", "decision_record"]},
+    "visitorMode": {"enum": ["persuade", "operate", "read", "experience"], "description": "Optional per-page visitor mode (design engine M10-10 vocabulary). slop-scan.sh passes it to the detector as --mode."},
+    "strategyBriefPage": {"type": "object", "required": ["route"], "properties": {"route": {"type": "string"}, "visitor_mode": {"$ref": "#/$defs/visitorMode"}}},
+    "strategyBrief": {"allOf": [{"$ref": "#/$defs/header"}], "properties": {"artifact": {"const": "strategy-brief"}, "pages": {"type": "array", "items": {"$ref": "#/$defs/strategyBriefPage"}}}}
   }
 }

@@ -1,0 +1,847 @@
+{
+  "$comment": "Website copy-pattern data pack for the vendored chwezi-slop detector (M10-11-T03). Source list: skills/quality-gates/design-quality-score/references/banned-patterns.md (decision-governed; slop-scan.sh reads it through this pack). Digital Research owns the machine-error and copy-slop doctrine (digital-research-engine/skills/anti-ai-slop/SKILL.md (ME1-ME7 and AS6)); this pack does not fork that content and carries only the website's own banned-patterns.md lists. Gradients, pure-black body text, bounce easing, fonts and layout families come from the design detector's registry, not from this pack. Validate with: node scripts/validate-slop-pack.mjs",
+  "schema": 1,
+  "tool": "chwezi-slop",
+  "rules": [
+    {
+      "id": "web-headline-welcome-to",
+      "name": "Banned headline: Welcome to (our|the)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-welcome-to",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?welcome to (?:our|the)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Welcome to (our|the)' in a heading (generic welcome framing)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-passionate-about",
+      "name": "Banned headline: We (are|'re) passionate about",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-passionate-about",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?we(?: are|(?:'|’|&rsquo;|&#39;|&#x27;)re) passionate about",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'We (are|'re) passionate about' in a heading (passion claim without proof)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-one-stop",
+      "name": "Banned headline: Your one-stop (shop|solution|destination)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-one-stop",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?your one[- ]stop (?:shop|solution|destination)",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Your one-stop (shop|solution|destination)' in a heading (category bloat)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-bringing-the-future",
+      "name": "Banned headline: Bringing the future of",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-bringing-the-future",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?bringing the future of",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Bringing the future of' in a heading (vague futurism)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-empowering",
+      "name": "Banned headline: Empowering (businesses|people|teams)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-empowering",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?empowering (?:businesses|people|teams)",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Empowering (businesses|people|teams)' in a heading (abstract empowerment)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-revolutionising",
+      "name": "Banned headline: Revolutionising",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-revolutionising",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?revolutioni[sz](?:ing|e)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Revolutionising' in a heading (overclaim verb)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-the-leading",
+      "name": "Banned headline: The leading",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-the-leading",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?the leading\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'The leading' in a heading (unverifiable superlative)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-cutting-edge",
+      "name": "Banned headline: Cutting-edge",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-cutting-edge",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?cutting[- ]edge",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Cutting-edge' in a heading (dated buzzword)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-state-of-the-art",
+      "name": "Banned headline: State of the art",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-state-of-the-art",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?state[- ]of[- ]the[- ]art",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'State of the art' in a heading (dated buzzword)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-innovative-solutions",
+      "name": "Banned headline: Innovative (solutions|services|platform)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-innovative-solutions",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?innovative (?:solutions?|services?|platforms?)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Innovative (solutions|services|platform)' in a heading (double-generic)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-dedicated-committed",
+      "name": "Banned headline: We are (dedicated|committed)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-dedicated-committed",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?we(?: are|(?:'|’|&rsquo;|&#39;|&#x27;)re) (?:dedicated|committed)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'We are (dedicated|committed)' in a heading (generic agency opener)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-transform-your",
+      "name": "Banned headline: Transform(ing) your (business|life|journey)",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-transform-your",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?transform(?:ing)? your (?:business|life|journey)",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Transform(ing) your (business|life|journey)' in a heading (generic promise)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-crafted-with-care",
+      "name": "Banned headline: Crafted with care",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-crafted-with-care",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?crafted with care",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Crafted with care' in a heading (sentimental filler)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-headline-next-level",
+      "name": "Banned headline: Take your (business|brand|project) to the next level",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-headline-and-hero-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-headline-next-level",
+        "params": {
+          "pattern": "<h([1-6])\\b[^>]*>(?:(?!</h[1-6]>)[\\s\\S]){0,300}?take your (?:business|brand|project) to the next level",
+          "flags": "i",
+          "target": "text",
+          "message": "banned headline pattern 'Take your (business|brand|project) to the next level' in a heading (template framing)"
+        }
+      },
+      "exceptions": [
+        "Body copy that discusses the phrase is allowed; the rule reads headings (h1-h6) only."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/headlines.flag.html",
+        "pass": "tests/slop-pack/headlines.pass.html"
+      }
+    },
+    {
+      "id": "web-heading-filler",
+      "name": "Banned filler word in a hero heading",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-filler-words-in-heroes-and-sub-heroes",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-heading-filler",
+        "params": {
+          "pattern": "<h([12])\\b[^>]*>(?:(?!</h[12]>)[\\s\\S]){0,300}?\\b(?:seamless(?:ly)?|holistic|synerg(?:y|istic)|next-gen(?:eration)?|best-in-class|world-class)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "banned filler word in an h1 or h2"
+        }
+      },
+      "exceptions": [
+        "One flagged word in an h1 or h2 fails, as the former slop-scan did (stricter than the two-flag rubric wording)."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/fillers.flag.html",
+        "pass": "tests/slop-pack/fillers.pass.html"
+      }
+    },
+    {
+      "id": "web-heading-filler-context",
+      "name": "Context-dependent filler in a hero heading",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "advisory",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-filler-words-in-heroes-and-sub-heroes",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-heading-filler-context",
+        "params": {
+          "pattern": "<h([12])\\b[^>]*>(?:(?!</h[12]>)[\\s\\S]){0,300}?\\b(?:robust|scalable)\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "'robust' or 'scalable' in an h1 or h2: keep it only when it states a fact"
+        }
+      },
+      "exceptions": [
+        "Allowed as a stated, evidenced fact; a reviewer decides. Advisory findings never fail the scan."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/fillers.flag.html",
+        "pass": "tests/slop-pack/fillers.pass.html"
+      }
+    },
+    {
+      "id": "web-copy-shortcut",
+      "name": "Banned copy shortcut",
+      "category": "slop",
+      "as_overlay": "AS6",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-copy-shortcuts",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-copy-shortcut",
+        "params": {
+          "pattern": "\\b(?:in today(?:'|’|&rsquo;|&#39;|&#x27;)s fast-paced world|in the digital age|at the end of the day|let(?:'|’|&rsquo;|&#39;|&#x27;)s unpack|unpack(?:s|ed|ing)?\\b|let(?:'|’|&rsquo;|&#39;|&#x27;)s dive into|dive into)",
+          "flags": "i",
+          "target": "text",
+          "message": "banned copy shortcut (transition, 'unpack' or 'dive into')"
+        }
+      },
+      "exceptions": [
+        "Scans the whole rendered page, as the former slop-scan transition check did."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/copy-shortcuts.flag.html",
+        "pass": "tests/slop-pack/copy-shortcuts.pass.html"
+      }
+    },
+    {
+      "id": "web-trust-row-unlinked",
+      "name": "Unlinked 'Trusted by' logo row",
+      "category": "slop",
+      "as_overlay": "AS2",
+      "severity": "block",
+      "tier": "deep",
+      "engines": [
+        "html",
+        "text"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-trust-patterns",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-trust-row-unlinked",
+        "params": {
+          "pattern": "(?:trusted by|as featured in|featured in)(?:(?!<a\\s|</section>)[\\s\\S]){0,2000}?<img\\b(?:(?!<a\\s|</section>)[\\s\\S]){0,2000}?<img\\b(?:(?!<a\\s|</section>)[\\s\\S]){0,2000}?<img\\b",
+          "flags": "i",
+          "target": "text",
+          "message": "'Trusted by' or 'Featured in' followed by three or more logos with no link or proof before the section ends"
+        }
+      },
+      "exceptions": [
+        "A row whose logos link to the case study or the publication passes. Star ratings from unnamed sources and stock team photos stay human_review."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/trust-row.flag.html",
+        "pass": "tests/slop-pack/trust-row.pass.html"
+      }
+    },
+    {
+      "id": "web-universal-standard-curve",
+      "name": "Standard curve used as the universal easing",
+      "category": "slop",
+      "as_overlay": "AS4",
+      "severity": "advisory",
+      "tier": "deep",
+      "engines": [
+        "css",
+        "html"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-easing-curves",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-universal-standard-curve",
+        "params": {
+          "pattern": "cubic-bezier\\(\\s*0?\\.4\\s*,\\s*0\\s*,\\s*0?\\.2\\s*,\\s*1\\s*\\)",
+          "flags": "i",
+          "target": "css-value",
+          "message": "cubic-bezier(0.4, 0, 0.2, 1): fine for one utility; check it is not the curve for every transition"
+        }
+      },
+      "exceptions": [
+        "Only drift when applied everywhere; a reviewer decides. Bounce and elastic easing are the design detector's bounce-easing rule (block)."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/easing.flag.css",
+        "pass": "tests/slop-pack/easing.pass.css"
+      }
+    },
+    {
+      "id": "web-ease-in-out-entrance",
+      "name": "ease-in-out on an entrance animation",
+      "category": "slop",
+      "as_overlay": "AS4",
+      "severity": "advisory",
+      "tier": "deep",
+      "engines": [
+        "css",
+        "html"
+      ],
+      "modes": [
+        "persuade",
+        "operate",
+        "read",
+        "experience"
+      ],
+      "doctrine_ref": "skills/quality-gates/design-quality-score/references/banned-patterns.md#banned-easing-curves",
+      "authority": {
+        "human_authority": "Peter Bamuhigire, website-skills owner: decision-governed banned list in skills/quality-gates/design-quality-score/references/banned-patterns.md",
+        "house_ruling": "",
+        "ban_evidence": []
+      },
+      "provenance": "website-skills banned-patterns.md",
+      "check": {
+        "kind": "regex",
+        "name": "web-ease-in-out-entrance",
+        "params": {
+          "pattern": "\\bease-in-out\\b",
+          "flags": "i",
+          "target": "css-value",
+          "message": "ease-in-out: entrance animations should ease out only"
+        }
+      },
+      "exceptions": [
+        "Correct for a looping or symmetrical transition; a reviewer decides."
+      ],
+      "fixtures": {
+        "flag": "tests/slop-pack/easing.flag.css",
+        "pass": "tests/slop-pack/easing.pass.css"
+      }
+    }
+  ]
+}

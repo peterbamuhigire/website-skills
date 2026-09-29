@@ -91,10 +91,22 @@ When build, browser, device, font, or network capability is unavailable, impleme
 | Component was drafted by an AI assistant | Run the AI-generated code performance review before merge | Correct-looking code that harms LCP, INP, CLS or accessibility |
 | Content page would need client-side hash routing | Give every page a real URL with its content in the initial HTML; use cross-document view transitions only as an enhancement where supported | Weak crawlability and extra round trips |
 
+## Minimalism pass
+Run it on every slice before build evidence is recorded. For each control or behaviour, stop at the first rung that meets the approved need:
+1. **HTML element**: `<dialog>`, `<details>`/`<summary>`, `<input type="date|time|color|range|email|tel">`, `<datalist>`, `<select>`, `popover`, `loading="lazy"`, form validation attributes.
+2. **CSS**: `:has()`, `scroll-snap`, `position: sticky`, container queries, `accent-color`, transitions with a reduced-motion path.
+3. **Small first-party script**: a few lines in an island or a `<script type="module">`, no dependency.
+4. **Library**: only with a reason recorded in the build evidence, and on the control as `data-native-insufficient="<who>: <evidence>"` (for example a date range with blackout days that the native picker cannot express).
+
+Record findings one per line, tagged `native:` (replace with a native element), `delete:` (remove; nothing depends on it) or `yagni:` (built for a need nobody approved), and close with a `net:` line giving the bytes removed or added. The format is adapted in paraphrase from `ponytail-review` (Ponytail, MIT, https://github.com/DietrichGebert/ponytail, commit e3ba2aa); the decision ladder itself is the dev engine's solution-selection ladder, referenced here only in prose.
+
+Never remove, under this pass: form validation and error recovery, consent and cookie controls, analytics required by the measurement plan, or accessibility behaviour (focus management, live regions, skip links). When a native control may not be enough (keyboard model, screen-reader output, locale formats), check the design engine's `accessibility-wcag-2-2-compliance/references/native-control-sufficiency.md` before adding a library. `performance-budgets.json` keeps `third_party_js_kb` at 0, and `scripts/website_fixture_benchmark.py` fails a page that loads a known picker library without the waiver attribute (`dependency_minimalism`).
+
 ## Worked Example
 Implement a multilingual service template from the approved page-goal matrix, bind locale-safe routes and catalogued imagery, emit the agreed schema and CTA event, then verify build output, keyboard focus, missing-content behaviour, and the mobile layout before marking the route accepted.
 
 ## References
+- [industry-page-patterns-east-africa.md](../../ux-conversion/cro-audit/references/industry-page-patterns-east-africa.md) — read when a page's section order, primary CTA or trust block depends on the client's sector in East Africa.
 - [third-party-facades.md](references/third-party-facades.md) — read when a page needs chat, maps, video, social feeds or reviews: zero-JS substitutes, WhatsApp and phone contact, three-phase facades.
 - [inp-safe-interaction-patterns.md](references/inp-safe-interaction-patterns.md) — read when building interactive islands or fixing field INP above 200 ms.
 - [navigation-mobile-and-form-pattern-rules.md](references/navigation-mobile-and-form-pattern-rules.md) — read when designing navigation, mobile patterns and form structure.

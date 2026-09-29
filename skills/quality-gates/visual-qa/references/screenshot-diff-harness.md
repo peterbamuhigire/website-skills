@@ -24,6 +24,32 @@ WebKit and Firefox are added for any site with a substantial iOS Safari user
 base (most African B2C sites). The CI matrix stays Chromium-only for speed
 unless the project opts in.
 
+## Pre-flight: find the page you are about to judge
+
+Run this before any capture, local or agent-driven. The idea (detect the running server first,
+ask when it is ambiguous, never claim success without looking at the result) is adapted in
+paraphrase from lackeyjb/playwright-skill (MIT, https://github.com/lackeyjb/playwright-skill,
+commit dd47a6a); the steps below are this engine's.
+
+1. **Detect listening servers.** Check the Astro defaults (4321 for `astro dev`, 4322 for a
+   second instance) and every port named in `package.json` scripts (`--port`, `PORT=`).
+   - Windows: `Get-NetTCPConnection -State Listen | Where-Object LocalPort -in 4321,4322`
+   - macOS or Linux: `lsof -iTCP -sTCP:LISTEN -P -n` or `ss -ltn`
+2. **One match:** use it, and confirm it serves this project (the page title or a known route
+   responds).
+3. **Several matches:** ask which one is the build under review. Do not guess between a stale
+   preview and a current dev server.
+4. **None:** build and preview (`npm run build && npm run preview`), then use that port.
+5. **Throwaway scripts** (one-off Playwright probes, screenshot helpers) go to the system
+   temporary directory, never into the project tree or `tests/visual/`.
+6. **No pass without looking.** A visual result is reported only after the rendered page or the
+   screenshot artefact has been opened. Record in the evidence: URL, port, commit (`git
+   rev-parse --short HEAD`), viewport, and theme. A check that could not see the page is
+   `NOT_ASSESSED`, never a pass.
+
+The locked QA tooling rule (`scripts/require-locked-qa-tools.mjs`) still applies: pre-flight
+never installs Playwright or a browser.
+
 ## Viewport Matrix
 
 | Viewport | Width | Height | Device | Reason |

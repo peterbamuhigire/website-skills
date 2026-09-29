@@ -113,7 +113,7 @@ Every interactive element (button, link, card, form field, nav item) must design
 - Simple / transparent — clean, minimal
 - Light — white background, drop shadow
 - Dark — inverted, high contrast
-- Blurred glass — `backdrop-blur` + semi-transparent background (see `liquid-glass-effects.md`)
+- Solid on scroll — transparent over the hero, a solid token surface once the page scrolls; no backdrop blur (glassmorphism is a no-ship choice, see `liquid-glass-effects.md`)
 
 **Mobile:**
 - Hamburger menu at ≥768px breakpoint

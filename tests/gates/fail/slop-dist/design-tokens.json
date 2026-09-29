@@ -1,0 +1,18 @@
+{
+  "artifact": "design-tokens",
+  "version": 1,
+  "project": "slop-gate-fixture",
+  "owner": "design-lead",
+  "status": "approved",
+  "updated": "2026-09-29",
+  "external_doctrine_verified": true,
+  "tokens": {
+    "font.body": "\"Public Sans\", system-ui, sans-serif",
+    "font.display": "\"Source Serif 4\", Georgia, serif",
+    "color.text": "#1f2328",
+    "color.ground": "#ffffff",
+    "color.accent": "#0b5d4b",
+    "color.accent-ink": "#ffffff",
+    "radius.control": "4px"
+  }
+}

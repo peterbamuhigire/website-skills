@@ -1,0 +1,16 @@
+{
+  "id": "website-native-controls-fail",
+  "label": "Fictional contact page: native date and colour controls (picker library loaded)",
+  "pages": [
+    "index.html"
+  ],
+  "budget_route": "/",
+  "evidence_scope": {
+    "links": "lab",
+    "semantics": "lab",
+    "accessibility_inputs": "lab",
+    "performance_budget_inputs": "lab",
+    "dependency_minimalism": "lab",
+    "field_core_web_vitals": "NOT ASSESSED"
+  }
+}

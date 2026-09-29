@@ -36,8 +36,9 @@ Based on the industry and brief, commit to ONE bold direction:
 
 Choose fonts from **Fontsource** (npm packages, self-hosted):
 
-- **Display/Heading font:** Something with CHARACTER. Examples: Clash Display, Cabinet Grotesk, Satoshi, General Sans, Instrument Serif, Playfair Display, DM Serif Display, Sora, Plus Jakarta Sans, Outfit, Manrope
-- **Body font:** Highly readable, pairs well. Examples: DM Sans, Nunito Sans, Source Sans 3, Libre Franklin, Atkinson Hyperlegible
+- **Display/Heading font:** Something with CHARACTER. Examples: Clash Display, Cabinet Grotesk, Satoshi, General Sans, DM Serif Display, Sora, Manrope
+- **Body font:** Highly readable, pairs well. Examples: Public Sans, Libre Franklin, Atkinson Hyperlegible, Source Sans 3 (body only, never display)
+- **Banned faces and the approval authority:** the design engine's `doctrine/references/ai-slop-banned-fonts.md` (for example DM Sans, Nunito Sans, Instrument Serif, Playfair Display, Plus Jakarta Sans and Outfit are banned) and `font-groups-and-usage.md` for approved baselines. Client CI fails a banned primary font through `scripts/slop-scan.sh` (rule `banned-primary-font`).
 
 Install via: `npm install @fontsource-variable/{font-name}` or `npm install @fontsource/{font-name}`
 
@@ -135,7 +136,7 @@ export default {
       },
       fontFamily: {
         display: ['Clash Display Variable', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        body: ['Public Sans', 'sans-serif'],
       },
     }
   }
@@ -162,7 +163,7 @@ Create `src/styles/global.css`:
 /* CSS Custom Properties for non-Tailwind use */
 :root {
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-emphasis: cubic-bezier(0.22, 1, 0.36, 1); /* ease-out, no overshoot: bounce and elastic curves are banned (motion-design.md) */
 }
 
 /* Smooth scrolling */
@@ -292,7 +293,7 @@ All button tiers (primary/secondary/tertiary) must share the same `border-radius
 - **Nested radius rule (MANDATORY):** Never round inner elements the same as their parent card. Use the formula: `outer radius = inner radius + padding`. For example, a card with `rounded-2xl` (16px) and `p-4` (16px) padding means inner elements get `rounded-xl` (12px) or less — NOT `rounded-2xl`. If both radii match, nested corners look bulgy and uneven. Subtract the padding from the parent radius to get the correct inner radius.
 - Subtle shadow or border — not both
 - Hover: lift effect (translateY(-4px) + shadow increase)
-- **Glass effect option:** For cards over gradient/image backgrounds, consider `bg-white/15 backdrop-blur-lg border border-white/20` — see `liquid-glass-effects.md` for full guide and sector-specific suitability
+- **No glass effect:** glassmorphism is a no-ship choice. For cards over photography use a solid token surface or a fixed-opacity scrim with measured contrast; see `liquid-glass-effects.md`
 
 **Sections:**
 - Generous vertical padding (py-20 to py-32)
@@ -393,17 +394,12 @@ From *Designing Interfaces* (Tidwell, Brewer, Valencia — O'Reilly 2020). Full 
 - Never use icon alone — pair with text label for maximum comprehension.
 - Follow established conventions: magnifying glass = search, envelope = message, house = home.
 
-## Liquid Glass / Glassmorphism
+## Glass and Translucency
 
-For projects where glassmorphism suits the brand (Corporate, Tourism, Portfolio, Creator sectors), consult **`liquid-glass-effects.md`** for:
-- Tailwind CSS v4 implementation patterns (cards, navbars, modals, hero overlays)
-- Sector-specific suitability matrix (HIGH for Corporate/Tourism/Portfolio, LOW for Healthcare)
-- Performance guidelines (max 3 glass elements, blur 8-16px, solid fallbacks)
-- Accessibility requirements (contrast, `prefers-reduced-motion`, `prefers-contrast`)
-- SVG liquid distortion filter (advanced, Chromium-only)
-- Dark mode glass adaptation
-
-**Rule of thumb:** Glass is seasoning, not the main course — use it on 2-3 key elements, not the entire page.
+Glassmorphism (frosted or "liquid" glass surfaces) is a no-ship choice as decoration in every sector, and the
+`chwezi-slop` rule `glassmorphism` fails the slop scan. **`liquid-glass-effects.md`** gives the reasons, the
+solid alternatives for hero text, sticky navigation, cards and dialogs, and the one functional exception
+(recorded waiver, measured contrast, solid fallbacks).
 
 ## Universal Guidelines
 

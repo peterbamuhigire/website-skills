@@ -74,6 +74,22 @@ Map how a buyer moves from problem awareness to action.
 - What proof reduces doubt:
 - What must happen before they convert:
 
+## 4a. Journey Review Focus
+
+List up to five visitor conditions that this brief implies but that no page yet addresses. Each
+condition is pinned to a page and to an acceptance check that already exists, or to a named new
+check. A condition with no page and no check is not finished.
+
+| Visitor condition | Page it is pinned to | Acceptance check |
+|---|---|---|
+| Example: a visitor on a slow 3G connection | Home, Contact | `deploy/references/africa-calibration.md` network profile; the page meets the stress-profile LCP budget |
+| Example: prefers WhatsApp to forms and email | Contact, every service page | A WhatsApp link with a prefilled message is visible without scrolling on a 390px viewport |
+| Example: reads Luganda first | Home, Services | Native-review contract in `fixtures/website-multilingual/native-review.json`; no machine-only Luganda copy ships |
+| Example: uses a shared family phone | Booking or enquiry form | No account is required to enquire; the form keeps no personal data in the browser after submission |
+| | | |
+
+Use the examples only where the evidence in sections 2 and 11 supports them.
+
 ## 5. Message Hierarchy
 
 Use StoryBrand and sticky-message logic.
@@ -126,6 +142,9 @@ For each page record:
 - Proof burden:
 - Primary CTA:
 - SEO intent:
+- Visitor mode (optional): `persuade`, `operate`, `read` or `experience`. When the project's
+  `strategy-brief.json` artefact records it per page (`pages[].visitor_mode`), `slop-scan.sh`
+  runs the detector with `--mode` for that page.
 - Notes:
 
 ## 9. SEO Topic And Intent Map
@@ -182,6 +201,7 @@ Explicitly state what downstream skills should do with this brief.
 - [ ] Positioning is specific
 - [ ] Offer ladder is explicit
 - [ ] Trust requirements are visible
+- [ ] Journey Review Focus conditions are each pinned to a page and an acceptance check
 - [ ] Page architecture is justified
 - [ ] SEO intent is tied to page purpose
 - [ ] Visual direction is constrained by strategy

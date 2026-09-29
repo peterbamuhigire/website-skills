@@ -1,0 +1,2 @@
+# Vendored detector: keep LF on every checkout so registry_sha256 is stable across hosts.
+* text eol=lf

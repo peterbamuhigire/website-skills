@@ -6,7 +6,8 @@
 
 - Apply `AGENTS.md` in full, including its runner-agnostic doctrine; skip only its explicitly
   Codex-only sections (e.g. "Codex-only model setup").
-- Recommended Claude Code plugins before website development work:
+- **Optional plugins (engine gates remain authoritative):** these Claude Code plugins can help
+  with website development work:
 
   ```text
   /plugin marketplace add obra/superpowers-marketplace
@@ -15,4 +16,5 @@
   /plugin install frontend-design@claude-code-plugins
   ```
 
-  Use plugins where they materially improve design, implementation, debugging, or QA output.
+  Use a plugin only where it materially improves design, implementation, debugging, or QA
+  output. A plugin never replaces or overrides an engine gate, stage gate or verification step.

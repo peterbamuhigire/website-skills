@@ -73,6 +73,32 @@ Rules:
   before launch and "good" Core Web Vitals at p75 of field data after launch,
   where field data exists.
 
+## Quick (source-only) versus Deep (artefact) audit
+
+A request such as "run a Lighthouse audit and fix Core Web Vitals" is answered
+in one of two modes. Name the mode in the first line of the audit.
+
+| Mode | Evidence it needs | How findings are labelled | Scorecard |
+|---|---|---|---|
+| **Quick (source-only)** | Source files and the built `dist/` only; no measurement tool has run | Every finding is "potential impact": it names the likely metric (LCP, CLS, TBT or INP) and the reason, never a measured value or a score | "Not measured". Every metric row reads `NOT_ASSESSED` |
+| **Deep (artefact)** | At least one of: a Lighthouse or Lighthouse CI report, a PageSpeed Insights or CrUX export, a performance trace, or a recorded DevTools session | Lab values are reported as lab (tool, version, throttling profile, run count); field values as field (p75, period, source) | Measured rows only; a metric without an artefact stays `NOT_ASSESSED` |
+
+Rules:
+
+- A Quick audit never becomes a pass. It can hand fixes to the build, but the
+  release still needs the lab gate above, and a budgeted route with no
+  evidence stays `NOT_ASSESSED` and blocks release (step 3 of the canonical
+  command).
+- A Deep audit follows the honesty rule in `deploy/SKILL.md` (the "lab gate
+  passes but field data is missing or worse" row): lab is reported as lab,
+  field as field, and no Lighthouse score is promised.
+- Do not convert a Quick finding into a number by estimation. "Potential
+  impact: LCP, hero image is 900 KB and lazy-loaded" is correct; "LCP will
+  improve by 1.2 s" is not.
+- The design engine's `performance-as-ux-and-core-web-vitals` keeps the design
+  framing (loading perception, font and image weight as design constraints).
+  This skill owns audits of a built site.
+
 ## Thresholds That Block Deploy
 
 | Category | Threshold | Evidence class | Enforced by |

@@ -195,6 +195,17 @@ for retainer clients?
 - [ ] Banned gradient signals
 - [ ] Pure black body text
 
+**A25a.** An agent building a client site finds that `slop-scan.sh` flags the
+brand's paper colour `#f5f0e8` as `ai-beige-ground`, and the brand book (2026)
+specifies that exact colour for the printed stock. Which waiver may the agent
+record on its own authority?
+- [ ] A `project` waiver for `ai-beige-ground`, reason "agent: the brand is beige"
+- [ ] A `file` waiver for the stylesheet, reason "brand colour"
+- [x] A `value` waiver for `#f5f0e8` in `.chwezi/slop.json`, reason
+  "Claude agent: paper colour matches the printed brand stock, brand book 2026"
+  (the `<who>: <evidence>` form); any wider scope needs `"granted_by": "human"`
+- [ ] None: the scan must be disabled for the release
+
 ---
 
 ### Engine process

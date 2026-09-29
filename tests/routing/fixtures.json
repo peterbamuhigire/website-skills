@@ -217,6 +217,12 @@
       "kind": "collision",
       "prompt": "Write a pricing packages page with three options, one true recommended plan and honest price timing",
       "expected": "sales-copywriting"
+    },
+    {
+      "id": "lighthouse-cwv-audit",
+      "kind": "collision",
+      "prompt": "Run a Lighthouse audit and fix Core Web Vitals on our marketing site",
+      "expected": "deploy"
     }
   ],
   "negatives": [

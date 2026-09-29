@@ -1,0 +1,8 @@
+/* M10-11-T04 fail fixture stylesheet. Synthetic. */
+body { font-family: "Inter", sans-serif; line-height: 1.6; color: #1f2328; background: #ffffff; }
+.hero { background: linear-gradient(135deg, #7c3aed, #2563eb); padding: 32px; }
+.button { transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.badge { color: #e11d48; }
+.panel { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.2); }
+body { color: #000; }
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }

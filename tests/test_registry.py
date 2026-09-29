@@ -16,10 +16,14 @@ def test_fixture_contracts_are_declared():
 
 def test_every_gate_has_pass_and_fail_fixture():
     cases = json.loads((ROOT / "tests/gates/cases.json").read_text())["cases"]
-    assert len(cases) == 7
+    assert len(cases) == 8
     for case in cases:
         pass_path = ROOT / "tests/gates" / case["pass"]
         fail_path = ROOT / "tests/gates" / case["fail"]
+        if case["gate"] == "slop":
+            # Built-site fixtures; tests/test_slop_scan.py runs slop-scan.sh over them.
+            assert (pass_path / "index.html").is_file() and (fail_path / "index.html").is_file()
+            continue
         assert pass_path.is_file() and fail_path.is_file()
         if pass_path.suffix == ".json":
             assert json.loads(pass_path.read_text())["expected"] == "pass"

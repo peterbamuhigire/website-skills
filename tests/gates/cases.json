@@ -7,6 +7,7 @@
     {"gate":"visual","pass":"pass/visual.json","fail":"fail/visual.json"},
     {"gate":"security","pass":"pass/security.json","fail":"fail/security.json"},
     {"gate":"drift","pass":"pass/drift.json","fail":"fail/drift.json"},
-    {"gate":"design-quality","pass":"pass/design-quality.json","fail":"fail/design-quality.json"}
+    {"gate":"design-quality","pass":"pass/design-quality.json","fail":"fail/design-quality.json"},
+    {"gate":"slop","pass":"pass/slop-dist","fail":"fail/slop-dist","command":"bash scripts/slop-scan.sh <dist>","expected_exit":{"pass":0,"fail":1},"proof":"tests/test_slop_scan.py"}
   ]
 }

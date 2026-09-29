@@ -19,7 +19,7 @@
 # Exit codes:
 #   0 — all templates score ≥ 8 and slop-scan passes
 #   1 — one or more templates below 8
-#   2 — slop-scan fail
+#   2 — slop-scan fail (blocking findings) or slop-scan NOT_ASSESSED
 #   3 — missing template report
 #   4 — malformed report
 #   5 — prerequisite missing
@@ -52,15 +52,22 @@ SLOP_SH="${SKILLS_DIR}/scripts/slop-scan.sh"
 [[ -f "$SLOP_SH" ]] || SLOP_SH="$ROOT/scripts/slop-scan.sh"
 if [[ -f "$SLOP_SH" ]]; then
   echo "Running slop-scan..."
-  if ! bash "$SLOP_SH" "$DIST_DIR"; then
-    echo "FAIL: slop-scan"
-    echo "- slop-scan failed; see reports/design-quality/slop-scan.md" >> "$AGG"
+  SLOP_EXIT=0
+  bash "$SLOP_SH" "$DIST_DIR" || SLOP_EXIT=$?
+  if (( SLOP_EXIT == 5 )); then
+    echo "FAIL: slop-scan NOT_ASSESSED (prerequisite missing or detector tampered); not a pass"
+    echo "- slop-scan: NOT_ASSESSED; see reports/design-quality/slop.json" >> "$AGG"
+    exit 2
+  elif (( SLOP_EXIT != 0 )); then
+    echo "FAIL: slop-scan blocking findings"
+    echo "- slop-scan failed; see reports/design-quality/slop.json (canonical) and slop-scan.md" >> "$AGG"
     exit 2
   fi
-  echo "- slop-scan: pass" >> "$AGG"
+  echo "- slop-scan: pass (reports/design-quality/slop.json)" >> "$AGG"
 else
-  echo "WARN: slop-scan.sh not found; continuing without floor check"
-  echo "- slop-scan: not run (script missing)" >> "$AGG"
+  echo "FAIL: slop-scan.sh not found; the slop floor is NOT_ASSESSED, which is not a pass"
+  echo "- slop-scan: NOT_ASSESSED (script missing)" >> "$AGG"
+  exit 5
 fi
 
 # 2. Determine expected primary templates from dist/

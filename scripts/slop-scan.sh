@@ -1,182 +1,86 @@
 #!/usr/bin/env bash
-# slop-scan.sh — banned-pattern static scan for rendered output.
+# slop-scan.sh: design-quality slop scan of a built site (M10-11-T02).
 #
-# Reads banned patterns from
-#   design-quality-score/references/banned-patterns.md
-# and scans:
-#   - rendered HTML in dist/
-#   - compiled CSS in dist/
-#   - any inline JS strings in dist/
+# A thin wrapper over the design engine's chwezi-slop detector. The website
+# engine keeps no rule engine of its own: the detector's registry supplies the
+# font, colour, motion and layout rules, and quality/slop-rules.website.json
+# supplies the website copy patterns from
+#   skills/quality-gates/design-quality-score/references/banned-patterns.md
+# (so a pattern added there is enforced once it is added to the pack).
+#
+# The detector is the hash-checked copy in scripts/vendor/chwezi-slop/
+# (VENDOR.json). CHWEZI_SLOP_DETECTOR may point at a local design-system-skills
+# checkout instead; the vendored hash check is then skipped and recorded.
+#
+# Runs:
+#   node <detector>/cli.mjs --json --tier deep --fail-on warning \
+#        --extra-rules quality/slop-rules.website.json <dist>
+# plus one --mode run per visitor mode when the strategy-brief artefact
+# declares per-page visitor_mode (STRATEGY_BRIEF, default
+# project-artifacts/strategy-brief.json).
 #
 # Usage:
 #   bash scripts/slop-scan.sh [dist-dir]
 #
+# Outputs (under $REPORTS_DIR/design-quality, default ./reports/design-quality):
+#   slop.json      canonical JSON report (detector report shape)
+#   slop-scan.md   Markdown rendering of slop.json
+#
 # Exit codes:
-#   0 — no banned patterns found
-#   1 — banned headline or filler
-#   2 — banned colour combination (gradient or off-palette)
-#   3 — banned generic layout signal
-#   4 — banned trust pattern
-#   5 — prerequisite missing
+#   0  no blocking findings (advisory findings never block)
+#   1  blocking findings (block or warning severity)
+#   5  prerequisite missing or NOT_ASSESSED: no dist directory, no Node >= 18,
+#      vendored detector missing or tampered, invalid pack, or a detector
+#      operational failure. Never treated as clean.
+# The former per-family codes 2-4 are retired (decision record
+# project-log/decisions/2026-09-29-slop-scan-exit-contract.md).
 
-set -euo pipefail
+set -uo pipefail
 
 ROOT="$(pwd)"
+ENGINE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DIST_DIR="${1:-$ROOT/dist}"
 REPORTS_DIR="${REPORTS_DIR:-$ROOT/reports}/design-quality"
 mkdir -p "$REPORTS_DIR"
 
-REPORT="$REPORTS_DIR/slop-scan.md"
+not_assessed() {
+  local reason="$1"
+  local json_reason="${reason//\\/\\\\}"
+  json_reason="${json_reason//\"/\\\"}"
+  printf '{\n  "tool": "chwezi-slop",\n  "wrapper": "website-skills scripts/slop-scan.sh",\n  "status": "NOT_ASSESSED",\n  "reason": "%s",\n  "findings": [],\n  "exit_code": 5\n}\n' "$json_reason" > "$REPORTS_DIR/slop.json"
+  {
+    echo "# Slop-Scan Report"
+    echo ""
+    echo "Scanned: $DIST_DIR"
+    echo ""
+    echo "## Status"
+    echo ""
+    echo "**NOT_ASSESSED** (exit 5): $reason"
+    echo ""
+    echo "This is not a pass. Fix the prerequisite and re-run."
+  } > "$REPORTS_DIR/slop-scan.md"
+  echo "slop-scan: NOT_ASSESSED: $reason" >&2
+  exit 5
+}
 
 if [[ ! -d "$DIST_DIR" ]]; then
-  echo "FAIL: dist directory not found at $DIST_DIR"
-  exit 5
+  not_assessed "dist directory not found at $DIST_DIR"
 fi
 
-: > "$REPORT"
-{
-  echo "# Slop-Scan Report"
-  echo ""
-  echo "Scanned: $DIST_DIR"
-  echo "Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-  echo ""
-} >> "$REPORT"
-
-FAIL=0
-
-# ---- Banned headlines ----
-BANNED_HEADLINES=(
-  'Welcome to (our|the)'
-  "We('re| are) passionate about"
-  'Your one-stop (shop|solution|destination)'
-  'Bringing the future of'
-  'Empowering (businesses|people|teams)'
-  'Revolutionising'
-  'The leading'
-  'Cutting-edge'
-  'State of the art'
-  'Innovative solutions'
-  'Crafted with care'
-  'Take your (business|brand|project) to the next level'
-)
-
-echo "## Banned headlines" >> "$REPORT"
-HEAD_HITS=0
-for pattern in "${BANNED_HEADLINES[@]}"; do
-  while IFS=: read -r f line match; do
-    # Heuristic: only flag if inside an h1, h2, or hero-like class
-    echo "- ${f#$DIST_DIR/}:$line — $pattern" >> "$REPORT"
-    HEAD_HITS=$((HEAD_HITS+1))
-  done < <(grep -rEni "$pattern" --include='*.html' "$DIST_DIR" 2>/dev/null | head -5 || true)
-done
-if (( HEAD_HITS > 0 )); then
-  FAIL=1
-else
-  echo "- none" >> "$REPORT"
+if ! command -v node >/dev/null 2>&1; then
+  not_assessed "Node.js is not installed (the chwezi-slop detector needs Node 18 or later)"
 fi
-echo "" >> "$REPORT"
-
-# ---- Banned filler in hero / h1 / h2 ----
-BANNED_FILLERS='seamless|seamlessly|holistic|synergy|synergistic|next-generation|next-gen|best-in-class|world-class'
-echo "## Banned filler (heroes/headings)" >> "$REPORT"
-FILLER_HITS=0
-while IFS=: read -r f line match; do
-  echo "- ${f#$DIST_DIR/}:$line — filler in heading" >> "$REPORT"
-  FILLER_HITS=$((FILLER_HITS+1))
-done < <(grep -rEni "<h[12][^>]*>[^<]*($BANNED_FILLERS)" --include='*.html' "$DIST_DIR" 2>/dev/null | head -10 || true)
-if (( FILLER_HITS > 0 )); then
-  [[ $FAIL -eq 0 ]] && FAIL=1
-else
-  echo "- none" >> "$REPORT"
+NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)"
+if (( NODE_MAJOR < 18 )); then
+  not_assessed "Node.js $NODE_MAJOR is too old (the chwezi-slop detector needs Node 18 or later)"
 fi
-echo "" >> "$REPORT"
 
-# ---- Banned gradients in CSS ----
-echo "## Banned gradient signals" >> "$REPORT"
-GRAD_HITS=0
-# Common purple-to-blue SaaS gradient signatures
-GRADIENT_PATTERNS='linear-gradient\(.*#[6-9][0-9a-f]{5}.*#[3-5][0-9a-f]{5}\)|from-purple-[0-9]+.*to-blue-[0-9]+|from-indigo-[0-9]+.*to-purple-[0-9]+'
-while IFS=: read -r f line; do
-  echo "- ${f#$DIST_DIR/}:$line — gradient signature" >> "$REPORT"
-  GRAD_HITS=$((GRAD_HITS+1))
-done < <(grep -rEni "$GRADIENT_PATTERNS" --include='*.css' --include='*.html' "$DIST_DIR" 2>/dev/null | head -10 || true)
-if (( GRAD_HITS > 0 )); then
-  [[ $FAIL -eq 0 ]] && FAIL=2
-else
-  echo "- none" >> "$REPORT"
-fi
-echo "" >> "$REPORT"
-
-# ---- Pure black text on pure white body ----
-echo "## Pure #000 body text signals" >> "$REPORT"
-BLACK_HITS=0
-while IFS=: read -r f line; do
-  echo "- ${f#$DIST_DIR/}:$line — pure #000 on body" >> "$REPORT"
-  BLACK_HITS=$((BLACK_HITS+1))
-done < <(grep -rEni 'body[^{]*\{[^}]*color:\s*#0{3,6}' --include='*.css' "$DIST_DIR" 2>/dev/null | head -5 || true)
-if (( BLACK_HITS > 0 )); then
-  [[ $FAIL -eq 0 ]] && FAIL=2
-else
-  echo "- none" >> "$REPORT"
-fi
-echo "" >> "$REPORT"
-
-# ---- Generic "Trusted by" without links ----
-echo "## Generic 'Trusted by' without links" >> "$REPORT"
-TRUST_HITS=0
-# Heuristic: "Trusted by" text, followed within 500 chars by multiple <img> with no <a>
-while IFS= read -r f; do
-  if grep -iE 'Trusted by|As featured in' "$f" > /dev/null 2>&1; then
-    # Count <img> and <a> in the surrounding block — crude heuristic
-    block=$(awk '/Trusted by|As featured in/{flag=1; count=0} flag && /<\/section>|<\/div>/{flag=0} flag' "$f" 2>/dev/null || true)
-    # `grep || true` guards set -o pipefail: zero matches must not abort the scan
-    img_count=$(echo "$block" | { grep -oE '<img' || true; } | wc -l | tr -d ' ')
-    a_count=$(echo "$block" | { grep -oE '<a ' || true; } | wc -l | tr -d ' ')
-    if (( img_count >= 3 )) && (( a_count < img_count / 2 )); then
-      echo "- ${f#$DIST_DIR/} — trust row with $img_count logos and $a_count links" >> "$REPORT"
-      TRUST_HITS=$((TRUST_HITS+1))
-    fi
-  fi
-done < <(find "$DIST_DIR" -name '*.html' -type f 2>/dev/null)
-if (( TRUST_HITS > 0 )); then
-  [[ $FAIL -eq 0 ]] && FAIL=4
-else
-  echo "- none" >> "$REPORT"
-fi
-echo "" >> "$REPORT"
-
-# ---- Common marketing filler transitions ----
-echo "## Banned copy transitions" >> "$REPORT"
-TRANS_HITS=0
-TRANS_PATTERNS="In today's fast-paced world|In the digital age|At the end of the day|Let's unpack|Let's dive into|Dive into|Unpacking the"
-while IFS=: read -r f line; do
-  echo "- ${f#$DIST_DIR/}:$line — banned transition" >> "$REPORT"
-  TRANS_HITS=$((TRANS_HITS+1))
-done < <(grep -rEni "$TRANS_PATTERNS" --include='*.html' "$DIST_DIR" 2>/dev/null | head -10 || true)
-if (( TRANS_HITS > 0 )); then
-  [[ $FAIL -eq 0 ]] && FAIL=1
-else
-  echo "- none" >> "$REPORT"
-fi
-echo "" >> "$REPORT"
-
-# ---- Summary ----
-{
-  echo "## Summary"
-  echo ""
-  echo "- Banned headlines: $HEAD_HITS"
-  echo "- Banned fillers in headings: $FILLER_HITS"
-  echo "- Banned gradient signals: $GRAD_HITS"
-  echo "- Pure #000 body text: $BLACK_HITS"
-  echo "- Generic trust rows: $TRUST_HITS"
-  echo "- Banned copy transitions: $TRANS_HITS"
-  echo ""
-  if (( FAIL > 0 )); then
-    echo "**Status**: FAIL (code $FAIL)"
-  else
-    echo "**Status**: PASS"
-  fi
-} >> "$REPORT"
-
-echo "Slop-scan report: $REPORT"
-exit $FAIL
+node "$ENGINE_DIR/scripts/slop-scan-run.mjs" "$DIST_DIR" "$REPORTS_DIR"
+CODE=$?
+case "$CODE" in
+  0) echo "slop-scan: PASS. Report: $REPORTS_DIR/slop-scan.md" ;;
+  1) echo "slop-scan: FAIL (blocking findings). Report: $REPORTS_DIR/slop-scan.md" ;;
+  5) echo "slop-scan: NOT_ASSESSED. Report: $REPORTS_DIR/slop-scan.md" ;;
+  *) echo "slop-scan: unexpected exit $CODE from slop-scan-run.mjs; treated as NOT_ASSESSED" >&2; CODE=5 ;;
+esac
+exit "$CODE"
