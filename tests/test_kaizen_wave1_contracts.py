@@ -26,7 +26,7 @@ def test_manifest_and_current_documentation_counts_match_filesystem():
         for category, count in re.findall(r"^\|\s*`([a-z-]+)`\s*\|\s*(\d+)\s*\|", readme, re.MULTILINE)
     })
     assert readme_counts == dict(counts)
-    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    claude = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     assert {
         category: int(count)
         for category, count in re.findall(r"\*\*`([a-z-]+)/`\*\*\s*\((\d+)\)", claude)
