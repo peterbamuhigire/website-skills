@@ -287,7 +287,7 @@ Last-click attribution under-credits SEO and content. Never the sole attribution
 ### Jurisdiction-specific
 
 - **EU/UK:** GDPR-conformant, cookie consent, data processing agreement with Google
-- **Uganda / East Africa:** DPPA 2019 compliance — see `uganda-dppa-compliance` skill if applicable
+- **Uganda / East Africa:** DPPA 2019 compliance — see the chwezi-dev-engine `dpia-generator` skill (formerly `uganda-dppa-compliance`) if applicable
 - **California:** CCPA opt-out link in footer
 - Privacy Policy and Cookie Policy pages link from the banner and footer
 
@@ -419,6 +419,6 @@ The measurement stack is the client's asset. The agency stewards it during the e
 
 - **Ari & Peter Krzyzek, *Made to Sell*:** plan-then-tag, event taxonomy by page type, post-conversion journey, A/B testing discipline (change one variable, wait until baseline exists).
 - **Eli Schwartz, *Product-Led SEO*:** three-level funnel, conversion-over-rankings, Search Console as source of truth, anti-pattern on pay-for-KPIs.
-- **Repo skills:** `seo/`, `seo-audit/`, `monthly-report/`, `policy-pages/`, `uganda-dppa-compliance/`.
+- **Repo skills:** `seo/`, `seo-audit/`, `monthly-report/`, `policy-pages/`, `dpia-generator/` (chwezi-dev-engine).
 
 Tags come and go. The event schema survives platform changes.
