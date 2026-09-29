@@ -12,9 +12,9 @@ Every downstream skill should consume an approved artifact, not a vague conversa
 
 | Discovery artifact | What it contains | Produced in Phase 2 | Consumed by | Why it matters |
 |---|---|---|---|---|
-| Website strategy brief | Business objective, audiences, decision logic, trust requirements, offer ladder, page architecture, SEO intent, visual constraints | Phase 3 | `design-reference`, `design-system-skills:brand-visual-identity`, `content-writing`, `page-builder`, `seo`, `design-system` | Becomes the source of truth for the project |
-| Discovery summary | Business model, audience, goals, constraints, risks, unknowns | Yes | `design-system-skills:brand-visual-identity`, `design-reference`, `sector-strategies`, `content-writing`, `page-builder`, `seo` | Establishes the factual baseline |
-| Positioning summary | Audience, value proposition, differentiation, trust stance | Yes or Phase 1 handoff | `design-system-skills:brand-visual-identity`, `content-writing`, `page-builder` | Prevents generic messaging |
+| Website strategy brief | Business objective, audiences, decision logic, trust requirements, offer ladder, page architecture, SEO intent, visual constraints | Phase 3 | `design-reference`, `chwezi-design-engine:brand-visual-identity`, `content-writing`, `page-builder`, `seo`, `design-system` | Becomes the source of truth for the project |
+| Discovery summary | Business model, audience, goals, constraints, risks, unknowns | Yes | `chwezi-design-engine:brand-visual-identity`, `design-reference`, `sector-strategies`, `content-writing`, `page-builder`, `seo` | Establishes the factual baseline |
+| Positioning summary | Audience, value proposition, differentiation, trust stance | Yes or Phase 1 handoff | `chwezi-design-engine:brand-visual-identity`, `content-writing`, `page-builder` | Prevents generic messaging |
 | Sitemap and page goals | Page list, page purpose, primary CTA by page | Yes | `page-builder`, `seo`, `content-writing` | Keeps structure tied to conversions |
 | Offer and CTA hierarchy | Core offer, supporting offers, CTA priority, low-fit routes | Yes | `content-writing`, `page-builder`, `seo` | Keeps pages aligned to commercial intent |
 | Style brief | Mood, colour direction, typography character, references, anti-patterns | Yes | `design-reference`, `design-system`, `page-builder` | Stops design drift |
@@ -149,7 +149,7 @@ Must include:
 
 No skill work should begin until the corresponding artifact has cleared the right gate:
 
-- `design-system-skills:brand-visual-identity` after Strategy Approved
+- `chwezi-design-engine:brand-visual-identity` after Strategy Approved
 - `design-reference` after the strategy brief exists and the relevant market inputs are reviewed
 - `design-reference` and `design-system` after Design System Approved
 - `content-writing` and `page-builder` after Content and Page Structure Approved

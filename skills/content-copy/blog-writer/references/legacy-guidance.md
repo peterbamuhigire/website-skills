@@ -470,7 +470,7 @@ Every article targets at least one keyword cluster. Research what the target aud
 Cross-cutting skills that apply throughout:
 - `language-standards` — language and tone standards for all languages
 - `east-african-english` — detailed English voice guide (if present in project)
-- `design-system-skills:brand-visual-identity` — visual and messaging consistency with the overall website brand
+- `chwezi-design-engine:brand-visual-identity` — visual and messaging consistency with the overall website brand
 - `seo` — multi-language SEO, hreflang, language-specific sitemaps (ensures articles are SEO-ready)
 - `sales-copywriting` — headline formulas, fascination bullets, closing techniques (always active for all articles)
 

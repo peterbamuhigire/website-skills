@@ -100,7 +100,7 @@ Check for each trigger and note how the page earns it:
 | Social comparison | Visitors compare themselves with similar others. | Show customers slightly further along than the visitor, so progress looks reachable rather than out of reach. |
 | Conformity labels | "Most chosen", "best-seller" tags steer choice. | Use only when the label is true for a stated period. |
 | Mere exposure | Repeated, consistent brand exposure raises liking. | Keep identity, tone and imagery consistent across site, email and social. |
-| Processing fluency | Easy-to-read text and clean layout are judged more trustworthy. | Remove visual noise, weak contrast and decorative fonts from any claim that must be believed. Route typography decisions to design-system-skills. |
+| Processing fluency | Easy-to-read text and clean layout are judged more trustworthy. | Remove visual noise, weak contrast and decorative fonts from any claim that must be believed. Route typography decisions to chwezi-design-engine. |
 | Ongoing one-sided familiarity | A recurring personal voice (founder video, regular column) builds a felt relationship over time. | Consider a consistent human presenter for recurring content; keep them real and named. |
 
 ---
@@ -191,7 +191,7 @@ Culture shapes which levers work. Use national-culture dimensions as a starting 
 
 ### Cultural design checklist
 
-- [ ] Colour choices checked against the target market's meanings (route to design-system-skills colour guidance).
+- [ ] Colour choices checked against the target market's meanings (route to chwezi-design-engine colour guidance).
 - [ ] Language register matches the market's formality norms.
 - [ ] Imagery and copy reflect the market's balance of individual and group benefit.
 - [ ] Authority signals and tone match the expected power distance.

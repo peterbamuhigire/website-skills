@@ -38,7 +38,7 @@ def test_relocation_map_is_the_manifest_route_contract():
     relocation_map = (ROOT / "docs/relocation-map.md").read_text(encoding="utf-8")
     for old_name, destination in manifest["relocations"].items():
         assert f"| `{old_name}` | `{destination}` |" in relocation_map
-        assert destination.startswith("design-system-skills:")
+        assert destination.startswith("chwezi-design-engine:")
 
 
 def test_quarantined_provenance_has_no_active_library_metadata():

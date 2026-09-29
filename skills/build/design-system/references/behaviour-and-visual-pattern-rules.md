@@ -177,4 +177,4 @@ Avoid bright complementary pairs (for example saturated blue on red) as text on 
 ## Sources
 
 - Tidwell, J., Brewer, C. and Valencia, A. (2020) *Designing Interfaces*, 3rd edn. O'Reilly Media. Chapters 1 (behaviour patterns), 4 (layout), 5 (visual style) and 8 (actions).
-- Companion pattern catalogue in the design engine: `C:/wamp64/www/design-system-skills/skills/04-web-and-ui-design/interaction-design-patterns/` (sections `01-behavior.md`, `03-layout.md`, `04-actions.md`).
+- Companion pattern catalogue in the design engine: `C:/wamp64/www/chwezi-design-engine/skills/04-web-and-ui-design/interaction-design-patterns/` (sections `01-behavior.md`, `03-layout.md`, `04-actions.md`).

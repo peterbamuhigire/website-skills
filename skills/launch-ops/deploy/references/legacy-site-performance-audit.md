@@ -62,7 +62,7 @@ Check each and record the fix:
    and `gap`; `box-sizing: border-box`; remove fixed pixel heights from content
    blocks (they break with longer Kiswahili or French strings and with zoom).
 5. **Typography:** root font size back to 100%; fluid scale; body text at least
-   16 px equivalent; typeface chosen with a reason (design-system-skills).
+   16 px equivalent; typeface chosen with a reason (chwezi-design-engine).
 6. **Icons:** replace icon fonts loaded from a CDN with self-hosted inline SVG or
    an SVG sprite, labelled or hidden from assistive technology.
 7. **Navigation:** rebuild the menu toggle as an accessible disclosure button

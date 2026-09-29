@@ -9,7 +9,7 @@
 # (so a pattern added there is enforced once it is added to the pack).
 #
 # The detector is the hash-checked copy in scripts/vendor/chwezi-slop/
-# (VENDOR.json). CHWEZI_SLOP_DETECTOR may point at a local design-system-skills
+# (VENDOR.json). CHWEZI_SLOP_DETECTOR may point at a local chwezi-design-engine
 # checkout instead; the vendored hash check is then skipped and recorded.
 #
 # Runs:

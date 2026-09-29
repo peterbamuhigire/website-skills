@@ -30,7 +30,7 @@ or `warning` severity finding, because the scan runs with
 later, a missing or tampered vendored detector, an invalid pack or a detector
 operational failure. Exit 5 is never treated as clean. The former per-family
 codes 2-4 are retired (`project-log/decisions/2026-09-29-slop-scan-exit-contract.md`).
-`CHWEZI_SLOP_DETECTOR` may point at a local design-system-skills checkout
+`CHWEZI_SLOP_DETECTOR` may point at a local chwezi-design-engine checkout
 instead of the vendored copy; the report records which detector ran.
 
 Evidence modes: `cli` is a static finding from the built source (measured

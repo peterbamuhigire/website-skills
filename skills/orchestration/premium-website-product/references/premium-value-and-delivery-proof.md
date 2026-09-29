@@ -23,7 +23,7 @@ Use an alternatives workpaper: buyer job → present failure → proposed improv
 
 1. **Discovery:** capture customer tasks, objections, buying process, content sources, analytics limits and operating constraints. Retain contradictions; do not replace interviews with AI personas.
 2. **Architecture and content:** map each page to a user question, evidence, next action and maintenance owner. Identify what should not be built. Test service comprehension before polishing.
-3. **Authored design:** route through design-system-skills. Record the visual thesis, distinctive decisions, approved references and asset rights. Review real content in context; copying Apple-like whitespace or a luxury palette is not an authored concept.
+3. **Authored design:** route through chwezi-design-engine. Record the visual thesis, distinctive decisions, approved references and asset rights. Review real content in context; copying Apple-like whitespace or a luxury palette is not an authored concept.
 4. **Implementation:** define integrations, data flow, error paths, access controls, editing needs and performance budgets. Route custom application/backend work to the engineering and SRS engines.
 5. **Acceptance:** test complete customer tasks, including failure and recovery. Keep source, build version, environment, evidence and unresolved defects together.
 6. **Operation:** transfer ownership, train the client, rehearse recovery and define post-launch measurement, maintenance and escalation.

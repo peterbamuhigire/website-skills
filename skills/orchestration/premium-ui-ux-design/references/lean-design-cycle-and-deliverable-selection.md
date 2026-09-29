@@ -118,7 +118,7 @@ Visual design is not decoration. It:
 
 Do not polish during prototyping and usability testing, or before the structure is proven: polish distracts participants, discourages criticism and makes the team reluctant to discard a broken design.
 
-Instead of polishing every screen, invest once in a flexible visual standard: palette, type sizes and colours for heading levels and body, grid column sizes, a consistent icon set, standards for boxes, backgrounds and separators, and a flexible header and footer. Engineers can then combine the standard with wireframes to build presentable screens without a separate visual pass for each iteration. (Apply the design-system-skills typography and colour doctrine when choosing the standard.)
+Instead of polishing every screen, invest once in a flexible visual standard: palette, type sizes and colours for heading levels and body, grid column sizes, a consistent icon set, standards for boxes, backgrounds and separators, and a flexible header and footer. Engineers can then combine the standard with wireframes to build presentable screens without a separate visual pass for each iteration. (Apply the chwezi-design-engine typography and colour doctrine when choosing the standard.)
 
 ## 9. Team rhythm
 

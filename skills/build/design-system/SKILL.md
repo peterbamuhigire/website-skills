@@ -30,7 +30,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Workflow
 
 **Step 0 — Consult the design doctrine first (cross-cutting).** Before choosing fonts, colour,
-spacing, imagery, or motion, consult the **`design-system-skills`** engine: resolve its location
+spacing, imagery, or motion, consult the **`chwezi-design-engine`** engine: resolve its location
 on this device from your global engine-routing table (`~/.claude/CLAUDE.md`, or `AGENTS.md` for
 Codex) — never assume an absolute path — then read `doctrine/design-doctrine.md` and
 `doctrine/references/` (banned AI-slop fonts incl. Inter/Geist, type scale, colour system,

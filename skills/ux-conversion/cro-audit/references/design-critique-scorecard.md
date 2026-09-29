@@ -32,7 +32,7 @@ Lin (2013) draws on Dieter Rams's ten principles of good design. Paraphrased, go
 
 - Declare the criteria to the client before the walk-through, and get agreement where possible. A critique against agreed standards is harder to dismiss as taste.
 - Do not use objective standards as criteria to hold opinions about. Accessibility is checked against WCAG 2.2 Level AA (register CW-05) and speed against Core Web Vitals (register CW-01). Route those to the relevant audit as pass or fail checks and cite the results.
-- Visual judgements (typography, colour, layout, visual identity) are routed to the design-system-skills engine; cite its guidance rather than improvising.
+- Visual judgements (typography, colour, layout, visual identity) are routed to the chwezi-design-engine engine; cite its guidance rather than improvising.
 - Keep "honest" in the set for any page that asks for money or personal data. It links the critique to the [ethical persuasion gate](ethical-persuasion-gate.md).
 
 ## 3. Step 2: walk through before judging

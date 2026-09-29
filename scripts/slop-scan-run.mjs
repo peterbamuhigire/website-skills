@@ -7,7 +7,7 @@
 //
 // Usage: node scripts/slop-scan-run.mjs <dist-dir> <reports-dir>
 // Environment:
-//   CHWEZI_SLOP_DETECTOR  a design-system-skills checkout, its tools/slop-detector
+//   CHWEZI_SLOP_DETECTOR  a chwezi-design-engine checkout, its tools/slop-detector
 //                         directory, or a cli.mjs path (skips the vendored hash check)
 //   SLOP_RULES_PACK       data pack (default: <engine>/quality/slop-rules.website.json)
 //   STRATEGY_BRIEF        strategy-brief artefact (default: ./project-artifacts/strategy-brief.json);
@@ -64,7 +64,7 @@ function resolveDetector() {
     const got = crypto.createHash('sha256').update(Buffer.from(text, 'latin1')).digest('hex');
     if (got !== want) return { error: `vendored detector file tampered (hash mismatch): ${rel}` };
   }
-  return { cli: path.join(VENDOR, 'tools', 'slop-detector', 'cli.mjs'), source: `vendored copy of design-system-skills@${manifest.source_commit}; hash check PASS` };
+  return { cli: path.join(VENDOR, 'tools', 'slop-detector', 'cli.mjs'), source: `vendored copy of chwezi-design-engine@${manifest.source_commit}; hash check PASS` };
 }
 
 function routeToFile(route) {

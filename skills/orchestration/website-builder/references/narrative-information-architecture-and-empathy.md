@@ -10,7 +10,7 @@ Use this reference when a website must help a person understand, decide, trust, 
 |---|---|---|
 | *Digital Storytelling* (Carolyn Handler Miller) | Interactive choices, audience fit, modular structure, characters, dialogue, emotion, rewards, development documents, and project-team handoffs. | Historical technology and platform examples are not current implementation guidance. |
 | *Video Game Storytelling* (Evan Skolnick) | Conflict, tension, character motivation, audience identification, exposition, believability, dialogue, and cross-discipline narrative language. | Game narrative frameworks are adapted as decision-support patterns, not copied as website templates. |
-| *Dynamic Characters* (3DTotal.com) | Silhouette, gesture, visual hierarchy, framing, value separation, and readable visual intent. | Photoshop-specific production instructions are dated; visual-system decisions still route to `design-system-skills`. |
+| *Dynamic Characters* (3DTotal.com) | Silhouette, gesture, visual hierarchy, framing, value separation, and readable visual intent. | Photoshop-specific production instructions are dated; visual-system decisions still route to `chwezi-design-engine`. |
 | *Anatomy for Artists* (Tom Fox) | None. | The supplied extraction contains only `Part1`; do not attribute anatomy-specific claims to it. |
 
 ## Audience-to-architecture translation

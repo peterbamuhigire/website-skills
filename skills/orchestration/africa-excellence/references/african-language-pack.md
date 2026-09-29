@@ -70,7 +70,7 @@ Rules:
   Latin-script African languages; confirm hooked and tone-marked letters
   render before shipping.
 - Never use Inter or any other face on the design engine's banned list
-  (`design-system-skills/doctrine/references/ai-slop-banned-fonts.md`)
+  (`chwezi-design-engine/doctrine/references/ai-slop-banned-fonts.md`)
   as primary type, whatever its glyph coverage.
 
 ## Expansion ratios

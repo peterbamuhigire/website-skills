@@ -53,7 +53,7 @@ Never state an audience figure, reach number or rating without its source and da
 
 - **One-sheet**: one page with headshot, three-line bio, what you offer, searchable specifics, two or three proof points, and contact details. No prices.
 - **Press kit**: the About, Work with me and Contact content as a designed PDF, plus photos and bios. No prices.
-- Build both from the site's approved text so the three never disagree, and date them. Visual design and typography are routed to `design-system-skills`.
+- Build both from the site's approved text so the three never disagree, and date them. Visual design and typography are routed to `chwezi-design-engine`.
 
 ## 6. Contact rules
 
@@ -88,7 +88,7 @@ Never state an audience figure, reach number or rating without its source and da
 |---|---|---|
 | Personal-brand strategy, social growth, rate setting and creator deal negotiation | Positioning notes and rate basis | The social media engine (`social-media-skills`), in its personal-brand and creator-monetisation skills |
 | Speaking or consulting proposals | Approved bios, topics and proof list | `proposal-skills` |
-| Headshot direction, one-sheet and press-kit layout | Content and specifics from this kit | `design-system-skills` |
+| Headshot direction, one-sheet and press-kit layout | Content and specifics from this kit | `chwezi-design-engine` |
 
 This engine owns the site pages, their copy and the downloadable kit content.
 

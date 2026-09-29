@@ -59,7 +59,7 @@ Check definitions:
 
 ## 6. People and imagery standard
 
-Faces and premises are slices too. Set the requirement here and route the visual decisions (art direction, crop, colour treatment, casting) to `design-system-skills`.
+Faces and premises are slices too. Set the requirement here and route the visual decisions (art direction, crop, colour treatment, casting) to `chwezi-design-engine`.
 
 - Photographs of founders and staff are real, current and consented; stock images are never presented as staff or customers.
 - The treatment is consistent across the ad and the site, so a visitor recognises the same people and place.

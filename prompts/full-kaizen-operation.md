@@ -30,7 +30,7 @@ Before planning or editing:
 2. Resolve the canonical `website-skills` repository from the global engine-routing table.
 3. Read its `AGENTS.md`, `skills/manifest.yml`, `skills/orchestration/website-builder/SKILL.md`, and `skills/quality-gates/kaizen-engine-and-product-improvement/SKILL.md`.
 4. Load only the website skills required by the actual findings. Include the premium website product layer for revenue-critical work and the canonical accessibility, visual, performance, security, SEO, observability, and design-quality gates when applicable.
-5. Resolve `design-system-skills` and read its router, doctrine, and matched skills for any typography, colour, layout, interaction, or rendered-output change.
+5. Resolve `chwezi-design-engine` and read its router, doctrine, and matched skills for any typography, colour, layout, interaction, or rendered-output change.
 6. Resolve `digital-research-skills`; use source evaluation and verification for current search, platform, accessibility, legal, market, or standards claims.
 7. Read `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md` in the Digital Research engine.
 

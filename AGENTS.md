@@ -123,7 +123,7 @@ Use these skills as the default router:
 - `website-builder`: Full website orchestration from docs and assets through deploy readiness.
 - `i18n`: Language routing, multilingual structure, and shared versus locale-specific rules.
 - `design-reference`: Extracting decisions from example websites.
-- `design-system-skills:sector-strategies` or `design-system-skills:legal-sector-ui-ux`: Sector-specific patterns and trust signals.
+- `chwezi-design-engine:sector-strategies` or `chwezi-design-engine:legal-sector-ui-ux`: Sector-specific patterns and trust signals.
 - `design-system`: Typography, palette, motion, spacing, and visual system decisions.
 - `photo-manager`: Image cataloging, naming, dimensions, and logo selection.
 - `page-builder`: Converting content and design decisions into pages and reusable UI.
@@ -156,10 +156,10 @@ Use these cross-cutting skills whenever their lens materially improves the outpu
 - `swahili-native-copy`: Native-quality Kiswahili copywriting execution. Mandatory for any Kiswahili page, microcopy, email, or metadata; never produce Kiswahili by raw translation.
 - `premium-commercial-writing`: Premium-fee-worthy commercial writing across website copy, landing pages, blogs, SEO/GEO pages, documents, and offer pages.
 - `content-writing`: Website copy structure and clarity.
-- `design-system-skills:brand-visual-identity`: Audience and brand coherence (brand-consistency gate reference).
+- `chwezi-design-engine:brand-visual-identity`: Audience and brand coherence (brand-consistency gate reference).
 - `sales-copywriting`: Conversion-focused messaging.
-- `design-system-skills:form-ux-design`: Any user-input flow.
-- `design-system-skills:ux-psychology`: Behavioural and heuristic UX review.
+- `chwezi-design-engine:form-ux-design`: Any user-input flow.
+- `chwezi-design-engine:ux-psychology`: Behavioural and heuristic UX review.
 
 Use these support skills on demand:
 
@@ -229,9 +229,9 @@ skills/content-copy/language-standards/SKILL.md <- Language and tone standards
 skills/content-copy/french-native-copy/SKILL.md <- Native-quality French copy execution
 skills/content-copy/swahili-native-copy/SKILL.md <- Native-quality Kiswahili copy execution
 skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
-design-system-skills:brand-visual-identity <- External brand coherence quality gate (brand-consistency gate reference)
+chwezi-design-engine:brand-visual-identity <- External brand coherence quality gate (brand-consistency gate reference)
 skills/build/design-reference/SKILL.md   <- Reference-site analysis
-design-system-skills:sector-strategies  <- External industry design and trust signals
+chwezi-design-engine:sector-strategies  <- External industry design and trust signals
 skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
 skills/build/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
 skills/build/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
@@ -289,15 +289,15 @@ Canonical CI pipeline at `templates/ci/website.yml`.
 skills/seo-search/seo-audit/SKILL.md               <- Post-build SEO audit
 skills/content-copy/blog-idea-generator/SKILL.md     <- Blog ideation
 skills/agency-ops/email-sender/SKILL.md            <- Self-hosted contact-form handler
-design-system-skills:form-ux-design                    <- External form UX guidance
-design-system-skills:ux-psychology                     <- External behavioural UX review lens
+chwezi-design-engine:form-ux-design                    <- External form UX guidance
+chwezi-design-engine:ux-psychology                     <- External behavioural UX review lens
 skills/build/image-compression/SKILL.md       <- Build-time image compression
 skills/agency-ops/policy-pages/SKILL.md            <- Privacy and terms guidance
-design-system-skills:color-selection                  <- External colour palette design
+chwezi-design-engine:color-selection                  <- External colour palette design
 skills/content-copy/sales-copywriting/SKILL.md       <- Persuasion and conversion copywriting
 skills/brand/brand-strategy/SKILL.md          <- Brand brief development
 skills/brand/brand-storytelling/SKILL.md      <- Narrative and story structure
-design-system-skills:brand-style-guide                <- External client-facing style guide
+chwezi-design-engine:brand-style-guide                <- External client-facing style guide
 skills/ux-conversion/cro-audit/SKILL.md               <- Conversion audit
 skills/agency-ops/social-media/SKILL.md            <- Social strategy and service layer
 skills/meta/skill-writing/SKILL.md           <- Skill authoring
@@ -318,7 +318,7 @@ Website build skills are sequential:
 1. `i18n`
 2. `design-reference` when reference sites are part of the brief
 3. `brand-strategy` when a project needs a structured brand brief
-4. `design-system-skills:sector-strategies` or a sector-specific skill
+4. `chwezi-design-engine:sector-strategies` or a sector-specific skill
 5. `design-system`
 6. `photo-manager`
 7. `page-builder`
@@ -328,7 +328,7 @@ Website build skills are sequential:
 
 `website-builder` orchestrates this sequence. It reads the enabled-language setup, the client content set, and the available assets, then routes work through the relevant downstream skills.
 
-Cross-cutting skills such as `language-standards`, `content-writing`, and `design-system-skills:brand-visual-identity` (brand-consistency gate) apply throughout the workflow instead of owning a single output artifact.
+Cross-cutting skills such as `language-standards`, `content-writing`, and `chwezi-design-engine:brand-visual-identity` (brand-consistency gate) apply throughout the workflow instead of owning a single output artifact.
 
 ## Current Agency Engine Layers
 
@@ -359,7 +359,7 @@ The repository should be understood in five layers:
   `page-builder`, `marketing-measurement-system` and `cro-audit`.
 - Art direction to design engine: `design-reference` hands style-fit answers,
   the style thesis, mobile job map, cost flags and borrow map to
-  `design-system-skills` (`art-direction-routes`) for route options and
+  `chwezi-design-engine` (`art-direction-routes`) for route options and
   direction boards.
 - Website maintenance/support to proposal engine: when support scope, SLA, retainer, or change-request language must be sold or renewed, route commercial wording back to the proposal engine.
 
@@ -503,35 +503,35 @@ When a task is ambiguous, follow this order:
 - Treat scripts and reference files as part of the skill surface area during review.
 - Do not accept hidden side effects, installers, or instructions that bypass repository norms.
 
-<!-- design-system-skills:trigger v3 -->
+<!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
 
 Any work touching how an artifact LOOKS — font/typeface choice, type scale, colour, layout/grid,
 visual identity, web/desktop/mobile UI screens, or the visual formatting of a DOCX/PPTX/PDF/XLSX
-— routes to the **`design-system-skills`** engine, the single home for ALL design/UI/UX skills
+— routes to the **`chwezi-design-engine`** engine, the single home for ALL design/UI/UX skills
 and the anti-AI-slop doctrine.
 
 **Resolve its location on THIS device from the active runner's global engine-routing table or
 `AGENTS.md`** — never assume an absolute path; it varies per machine. Then read its
 `README.md` → `doctrine/design-doctrine.md` → glob `skills/**/SKILL.md` fresh and route by
 frontmatter (read SKILL.md directly, not via the Skill tool). Content and structure stay in THIS
-engine; presentation comes from design-system-skills. Hard rule: never use a banned AI-slop font
+engine; presentation comes from chwezi-design-engine. Hard rule: never use a banned AI-slop font
 as primary type — hard ban: Inter, Geist, Roboto, Open Sans, Lato, Arial, Fraunces, IBM Plex (all
 faces); secondary ban: Space Grotesk, Instrument Serif, Instrument Sans, Poppins, Montserrat, Nunito, Nunito Sans, Newsreader, Cormorant (all cuts), Crimson Pro, Plus Jakarta Sans, DM Sans, Outfit, Playfair Display, Lora, Space Mono;
 Roboto Mono and IBM Plex Mono are banned as monospace choices; Source Sans 3 only as a paired
 body face; no bare system stacks alone. State the chosen typeface and reason before producing
 any artifact.
-<!-- /design-system-skills:trigger -->
-<!-- design-system-skills:relocated v1 -->
+<!-- /chwezi-design-engine:trigger -->
+<!-- chwezi-design-engine:relocated v1 -->
 **Relocated design skills.** These skills were moved OUT of website-skills into the
-`design-system-skills` engine (resolve its path from your global routing table). Any reference
+`chwezi-design-engine` engine (resolve its path from your global routing table). Any reference
 to them by name resolves there, NOT in this repo:
 `color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-alignment` (historical
 name; folded into `brand-visual-identity` and its brand-consistency gate reference),
 `sector-strategies`, `legal` (now `legal-sector-ui-ux`), `data-visualization`,
 `premium-ui-ux-design` (the general design version; website keeps its build-coupled orchestration entry).
 Still build-coupled and kept here: `design-system`, `page-builder`, `visual-qa`, `website-builder`.
-<!-- /design-system-skills:relocated -->
+<!-- /chwezi-design-engine:relocated -->
 
 ## Human-English editorial standard (2026-08 Kaizen)
 

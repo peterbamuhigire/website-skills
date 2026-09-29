@@ -2,7 +2,7 @@
 
 Parent skill: [design-system](../SKILL.md). Read when a website page shows a table, chart, statistic panel or hand-built SVG graphic (pricing comparisons, results tables, impact dashboards, annual-report pages), or when reviewing chart or SVG code for correctness.
 
-Related files: `enterprise-data-viz-rules.md` (dashboard hard rules, pre-attentive attributes, chart-type mapping). Full implementation walkthroughs, D3 patterns and runnable skeletons live in the design engine: `C:/wamp64/www/design-system-skills/skills/12-data-viz-and-dashboards/data-visualization/references/svg-css-js-implementation.md` and `chart-encoding.md`.
+Related files: `enterprise-data-viz-rules.md` (dashboard hard rules, pre-attentive attributes, chart-type mapping). Full implementation walkthroughs, D3 patterns and runnable skeletons live in the design engine: `C:/wamp64/www/chwezi-design-engine/skills/12-data-viz-and-dashboards/data-visualization/references/svg-css-js-implementation.md` and `chart-encoding.md`.
 
 ---
 

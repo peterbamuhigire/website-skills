@@ -98,7 +98,7 @@ Do not assume readers can picture the improved life; show it. Choose the outcome
 | Typical day | [current pain] | [improved day] |
 | Standing | [current identity] | [aspired identity] |
 
-Show real customers in the "after" state, not abstract graphics or anonymous stock photography. Art direction: `design-system-skills`.
+Show real customers in the "after" state, not abstract graphics or anonymous stock photography. Art direction: `chwezi-design-engine`.
 
 ## 8. Identity Shift
 

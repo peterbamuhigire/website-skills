@@ -4,7 +4,7 @@ Parent skill: [page-builder](../SKILL.md). Read when choosing field types, layin
 
 Companion file: `form-question-wording-and-data-design.md` covers which questions to ask and how to word labels, options, headings, buttons and error text. Wording outranks layout: fix the words first.
 
-Design-engine companion for platform code (web, Android, iOS components): `C:/wamp64/www/design-system-skills/skills/04-web-and-ui-design/form-ux-design/` (see `references/skill-deep-dive.md` and `references/form-validation.md`).
+Design-engine companion for platform code (web, Android, iOS components): `C:/wamp64/www/chwezi-design-engine/skills/04-web-and-ui-design/form-ux-design/` (see `references/skill-deep-dive.md` and `references/form-validation.md`).
 
 ---
 
