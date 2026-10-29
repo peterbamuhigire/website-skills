@@ -2,7 +2,7 @@
 
 ## What changed
 
-This cycle made seven small evidence-backed changes across the a11y runner, SRI checker and digest validation, ecommerce guidance and routing fixtures, currentness records, and design-engine sibling discovery. The baseline evidence was committed first. Each code or source-currentness item has a separate logical commit; no files were deleted and no other engine was edited.
+This cycle made eight small evidence-backed changes across the a11y runner, SRI checker and digest validation, ecommerce guidance and routing fixtures, currentness records, design-engine sibling discovery, and the bounded drift-validator file ceiling. The baseline evidence was committed first. Each code or source-currentness item has a separate logical commit; no files were deleted and no other engine was edited.
 
 ## Scores
 
@@ -42,5 +42,6 @@ Local native Codex and Claude marketplace install/load/details checks pass offli
 - `8cfb82f` — Google Search currentness refresh.
 - `1940e21`, `b6e5cdb` — model-currentness and official Codex catalogue evidence.
 - `53dddac` — discover canonical design-system sibling.
+- `dbc8b69` — accommodate the bounded Kaizen evidence set in the drift validator.
 
 Branch: `kaizen/2026-10`. The branch has not been pushed; root review and final integration remain pending.

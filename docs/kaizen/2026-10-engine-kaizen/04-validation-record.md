@@ -31,11 +31,11 @@ The exact disposable QA lockfile audit reports **15 high-severity package vulner
 | `validate-skill-contracts.py --baseline quality/skill-contract-baseline.json` | PASS: 62 active, one template, zero contract debt | Static contracts. |
 | `routing-smoke-test.py --min-rank1 92 --lint-fixtures` | PASS: 37/40 rank-1; 40/40 top-three; 22/22 owned negatives; zero lint | Lexical proxy only. |
 | `validate-search-doctrine.py` | PASS: 18 canonical files, currentness verified | Search claim register and required doctrine anchors. |
-| Full pytest suite | PASS: 137 tests | Temporary Python venv; no repo dependencies added. |
+| Full pytest suite | PASS: 138 tests | Temporary Python venv; no repo dependencies added. |
 | `source_ingestion_guardrail.py` | PASS: zero findings | Checkout guardrail. |
 | `check-vendored-detector.py --source ../design-system-skills` | PASS: 20-file manifest and source comparison | Explicit adjacent source checkout; source commit `3fe84a6dc22d954483e1afce06c3e9b53fc2f5ca`. |
 | `validate-slop-pack.mjs` | PASS: 20 website rules checked against 49 registry rules | Pack schema and rule linkage. |
-| `drift_check.py --root . --reports-dir ... --as-of 2026-10-29` | PASS: 598 Markdown files | Local cross-file drift validator. |
+| `drift_check.py --root . --reports-dir ... --as-of 2026-10-29` | PASS: 603 Markdown files | Local cross-file drift validator after increasing its bounded file cap to 650; 16 MiB byte bound is unchanged. |
 | Banned phrase test | PASS: 6/6 test cases | Includes expected positive and negative fixture outcomes. |
 | A11y service fixture | PASS: five routes, no serious/critical issues | Exact locked browser and axe versions; lab-only. |
 | A11y defect fixture | Expected FAIL: one critical and two serious | Intentional negative fixture. |
@@ -50,4 +50,4 @@ The exact disposable QA lockfile audit reports **15 high-severity package vulner
 
 ## Size
 
-Before source edits the checkout count was 837 full entries and 795 package-oriented entries, with zero symlinks. At the implementation checkpoint after seven source changes, the same counter reports 905 full entries and 803 package-oriented entries, with zero symlinks. Both remain well below the hard **5,000** entry cap. Counts include `.git` only in the full checkout measurement; the package-oriented count prunes `.git`, `.cache`, `.venv`, `venv`, `node_modules`, and `__pycache__`.
+Before source edits the checkout count was 837 full entries and 795 package-oriented entries, with zero symlinks. At the implementation checkpoint after the fixes and before the final evidence set, the same counter reported 905 full entries and 803 package-oriented entries. After the evidence set and final validation change, the final count is 924 full entries and 808 package-oriented entries, with zero symlinks. Both remain well below the hard **5,000** entry cap. Counts include `.git` only in the full checkout measurement; the package-oriented count prunes `.git`, `.cache`, `.venv`, `venv`, `node_modules`, and `__pycache__`.
