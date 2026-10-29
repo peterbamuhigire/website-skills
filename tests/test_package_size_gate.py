@@ -118,3 +118,20 @@ def test_both_hard_caps_fail_closed(tmp_path, monkeypatch):
     assert full > 1 and package > 1
     assert any("full checkout entries" in finding for finding in errors)
     assert any("package entries" in finding for finding in errors)
+
+
+def test_immutable_caps_accept_5000_and_reject_5001(tmp_path):
+    root = fixture_root(tmp_path)
+    initial, _ = GATE.count_entries(root)
+    for index in range(5000 - initial):
+        (root / f"entry-{index:04d}").touch()
+
+    errors, full, package, _, _ = GATE.run(root)
+    assert full == package == 5000
+    assert not any("exceed immutable cap" in finding for finding in errors)
+
+    (root / "entry-over-limit").touch()
+    errors, full, package, _, _ = GATE.run(root)
+    assert full == package == 5001
+    assert any("full checkout entries 5001 exceed immutable cap 5000" == finding for finding in errors)
+    assert any("package entries 5001 exceed immutable cap 5000" == finding for finding in errors)
