@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { createRequire } from 'node:module';
 import path from 'node:path';
 import process from 'node:process';
+import { withA11yPage } from './a11y-page-context.mjs';
 
 // The gate script lives in the engine checkout; dependencies belong to the consuming project.
 const projectRequire = createRequire(path.join(process.cwd(), 'package.json'));
@@ -38,18 +39,17 @@ try {
   browser = await chromium.launch({ headless: true });
   for (const route of routes) {
     const url = new URL(route, baseUrl).toString();
-    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     let results;
     try {
-      await page.goto(url, { waitUntil: 'networkidle', timeout: 45_000 });
-      results = await new AxeBuilder({ page })
-        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
-        .analyze();
+      results = await withA11yPage(browser, { viewport: { width: 390, height: 844 } }, async (page) => {
+        await page.goto(url, { waitUntil: 'networkidle', timeout: 45_000 });
+        return new AxeBuilder({ page })
+          .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+          .analyze();
+      });
     } catch (error) {
       failed = true;
       results = { url, error: String(error?.stack ?? error), violations: [] };
-    } finally {
-      await page.close();
     }
 
     fs.writeFileSync(path.join(reportDir, `${reportSlug(route)}.json`), `${JSON.stringify([results], null, 2)}\n`);
