@@ -2,7 +2,7 @@
 
 ## What changed
 
-This cycle made ten small evidence-backed changes across the a11y runner, SRI checker and digest validation, ecommerce guidance and routing fixtures, currentness records, design-engine sibling discovery, the bounded drift validator, hard checkout/package caps, and security-gate remediation guidance. The baseline evidence was committed first. Each code or source-currentness item has a separate logical commit; no files were deleted and no other engine was edited.
+This cycle made small evidence-backed changes across the a11y runner, SRI checker and digest validation, ecommerce guidance and routing fixtures, currentness records, design-engine sibling discovery, the bounded drift validator, hard checkout/package caps, and security-gate remediation guidance. An independent acceptance follow-up also closed an SRI origin-classification gap and added the exact package-cap boundary regression. The baseline evidence was committed first. Each implementation item has a separate logical commit; no files were deleted and no other engine was edited.
 
 ## Scores
 
@@ -45,5 +45,7 @@ Local native Codex and Claude marketplace install/load/details checks pass offli
 - `dbc8b69` — accommodate the bounded Kaizen evidence set in the drift validator.
 - `7c2a181` — immutable full checkout/package size gate and manifest parity.
 - `1a02b98` — dated scoped dependency-override guidance and final dependency/LCP evidence.
+- `430ad66` — stop treating canonical metadata as served origin; audit absolute and protocol-relative SRI assets conservatively.
+- `4733227` — add exact 5,000/5,001 boundary proof for both package counters.
 
 Branch: `kaizen/2026-10`. The branch has not been pushed; root review and final integration remain pending.
