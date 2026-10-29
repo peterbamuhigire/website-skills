@@ -1,8 +1,8 @@
 {
   "register_id": "website-search-ai-currentness-2026-09-13",
   "scope": "Search, answer-engine, generative-engine, entity-presence, crawler-governance, structured-data, freshness, and measurement rules used by website-skills.",
-  "access_date": "2026-09-13",
-  "verification_date": "2026-09-23",
+  "access_date": "2026-10-29",
+  "verification_date": "2026-10-29",
   "owner": "website-skills maintainer",
   "review_date": "2026-12-12",
   "archive_policy": "Existing archives are recorded where found. Creating new third-party archives was outside this operation; missing archive evidence is NOT_ASSESSED.",
@@ -14,12 +14,12 @@
       "publisher": "Google Search Central",
       "source_tier": 1,
       "publication_or_version_date": "2026-07-10",
-      "access_date": "2026-09-26",
+      "access_date": "2026-10-29",
       "freshness_class": "time-sensitive",
       "support_status": "verified",
       "archive_url": "https://web.archive.org/web/20260903122209/https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
       "confidence": "high",
-      "scope_and_limit": "Authoritative for Google Search; does not establish behaviour of other AI services. Directly re-checked 2026-09-26: the guide, updated 2026-07-10, says AI text files and other special machine-readable files/markup, artificial chunking, and rewriting solely for generative AI are unnecessary for Google Search; structured data is not required for generative AI search. Visibility, crawling, indexing and serving are not guaranteed."
+      "scope_and_limit": "Authoritative for Google Search only; does not establish behaviour of other answer or AI services. Directly re-checked 2026-10-29: the guide supports the stated Google Search position on special AI files/markup, artificial chunking, and rewriting solely for generative AI; ordinary Search guidance applies. Search visibility, crawling, indexing and serving are not guaranteed."
     },
     {
       "source_id": "GOOGLE_SEARCH_ESSENTIALS_2026",
@@ -616,18 +616,18 @@
     },
     {
       "claim_id": "SAI-018",
-      "claim": "Google's AI optimisation guide (updated 2026-07-10; directly rechecked 2026-09-26) says structured data is not required for generative AI search and that llms.txt, AI text files, special schema, chunking and AI-specific writing are unnecessary; standard SEO and people-first content apply.",
+      "claim": "Google Search guidance does not require special structured data, AI text files, artificial chunking, or rewriting solely for generative AI; standard Search guidance applies. This claim is limited to Google Search.",
       "source_ids": [
         "GOOGLE_AI_GUIDE_2026"
       ],
       "support_review": {
         "state": "supported",
         "reviewer": "website-skills Kaizen agent",
-        "basis": "Directly checked the current Google Search Central guide on 2026-09-26 and compared its specific statements about AI text files, special markup/schema, chunking, AI-specific rewriting and standard SEO. This supports Google Search only, not other answer products.",
-        "review_date": "2026-09-26"
+        "basis": "Official Google Search Central generative AI guide directly rechecked 2026-10-29; claim wording is limited to Google Search and does not generalise to other AI services.",
+        "review_date": "2026-10-29"
       },
       "freshness_class": "time-sensitive",
-      "review_date": "2026-10-03",
+      "review_date": "2027-01-29",
       "confidence": "high"
     },
     {
