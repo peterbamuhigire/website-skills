@@ -279,7 +279,8 @@ Phase 12 also adds: `LICENSE` (MIT + CC BY + CC BY-SA + CC BY-NC + proprietary),
 Canonical scripts under `scripts/`: `perf-gate.sh`, `a11y-gate.sh`,
 `visual-qa.sh`, `security-gate.sh`, `drift-check.sh`, `slop-scan.sh`,
 `design-quality-score.sh`, `install-canonical-ci.sh`, `metadata-audit.sh`,
-`post-deploy-smoke.sh`, `rollback.sh`, and gate-specific helpers.
+`post-deploy-smoke.sh`, `rollback.sh`, `validate-checkout-size.py`, and
+gate-specific helpers.
 Canonical configs at repo root: `lighthouserc.json`, `performance-budgets.json`.
 Canonical CI pipeline at `templates/ci/website.yml`.
 
@@ -429,6 +430,7 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - Every skill also satisfies the July 2026 contract in `docs/skill-authoring-standard.md`; new skills start from `templates/skill/SKILL.md`
 - Run `scripts/validate-skill-contracts.py` against `quality/skill-contract-baseline.json` and `scripts/routing-smoke-test.py` before release; the baseline accepts no findings and routing requires the expected skill in the top three
 - Every skill keeps the required acknowledgement line directly under the first `# ...` heading without duplicating it
+- Run `scripts/validate-checkout-size.py` before release; it fails closed if either the full checkout or package-oriented entry count exceeds 5,000, symlinks escape the checkout, files cannot be read, or marketplace skill paths/identities diverge from the registry.
 - Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine
