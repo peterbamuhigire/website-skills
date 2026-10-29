@@ -44,6 +44,6 @@ Local native Codex and Claude marketplace install/load/details checks pass offli
 - `53dddac` — discover canonical design-system sibling.
 - `dbc8b69` — accommodate the bounded Kaizen evidence set in the drift validator.
 - `7c2a181` — immutable full checkout/package size gate and manifest parity.
-- Pending — dated scoped dependency-override guidance; final commit to be recorded after validation.
+- `1a02b98` — dated scoped dependency-override guidance and final dependency/LCP evidence.
 
 Branch: `kaizen/2026-10`. The branch has not been pushed; root review and final integration remain pending.
