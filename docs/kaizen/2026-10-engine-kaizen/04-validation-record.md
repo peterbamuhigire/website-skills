@@ -49,12 +49,12 @@ The full per-package audit JSON and experiment locks were retained outside the e
 | Gate | Result after changes | Evidence scope |
 |---|---|---|
 | `validate-skill-registry.py` | PASS: 62 skills; eight routed design skills found | Default sibling discovery plus registry schema. |
-| `validate-checkout-size.py` | PASS: 945 full / 810 package entries at the current pre-documentation-commit measurement, zero symlinks; immutable 5,000 caps for each measure | Also checks manifest identities/paths, exact parity, unreadable walks, and symlink escape. Runs in engine quality CI. |
+| `validate-checkout-size.py` | PASS: 945 full / 810 package entries at the recorded implementation checkpoint, zero symlinks; immutable 5,000 caps for each measure | Ten size-gate unit tests include exact 5,000 acceptance and 5,001 rejection for both measures, lower-limit fixtures, manifest identity/path parity, unreadable walks, and symlink escape. Runs in engine quality CI. |
 | `website_fixture_benchmark.py` | PASS: two-page fixture; 2,026 bytes against 350 KB ceiling | Built-in lab fixture; field CWV NOT_ASSESSED. |
 | `validate-skill-contracts.py --baseline quality/skill-contract-baseline.json` | PASS: 62 active, one template, zero contract debt | Static contracts. |
 | `routing-smoke-test.py --min-rank1 92 --lint-fixtures` | PASS: 37/40 rank-1; 40/40 top-three; 22/22 owned negatives; zero lint | Lexical proxy only. |
 | `validate-search-doctrine.py` | PASS: 18 canonical files, currentness verified | Search claim register and required doctrine anchors. |
-| Full pytest suite | PASS: 147 tests after the new size-gate regressions | Temporary Python venv; no repo dependencies added. |
+| Full pytest suite | PASS: 153 tests after the SRI acceptance and exact-boundary size-gate regressions | Temporary Python venv; no repo dependencies added. |
 | `source_ingestion_guardrail.py` | PASS: zero findings | Checkout guardrail. |
 | `check-vendored-detector.py --source ../design-system-skills` | PASS: 20-file manifest and source comparison | Explicit adjacent source checkout; source commit `3fe84a6dc22d954483e1afce06c3e9b53fc2f5ca`. |
 | `validate-slop-pack.mjs` | PASS: 20 website rules checked against 49 registry rules | Pack schema and rule linkage. |
@@ -62,7 +62,7 @@ The full per-package audit JSON and experiment locks were retained outside the e
 | Banned phrase test | PASS: 6/6 test cases | Includes expected positive and negative fixture outcomes. |
 | A11y service fixture | PASS: five routes, no serious/critical issues | Exact locked browser and axe versions; lab-only. |
 | A11y defect fixture | Expected FAIL: one critical and two serious | Intentional negative fixture. |
-| SRI unit and service fixture | PASS: five tests; clean static site passes | External asset parsing and valid digest length checks. |
+| SRI unit and service fixture | PASS: ten tests; clean static site passes | External asset parsing, digest length, canonical-origin bypass, protocol-relative URL, and explicit served-origin checks. |
 | SRI defect fixture | Expected FAIL: missing/invalid integrity and crossorigin | Intentional negative fixture. |
 | Performance gate | FAIL: all five routes exceed LCP budget | 15 local lab runs; thresholds unchanged; field CWV NOT_ASSESSED. |
 | Security gate, baseline lock | FAIL: npm audit detects 15 high package records, zero critical | Exact QA dependency tree. |
