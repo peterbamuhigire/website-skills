@@ -1,10 +1,10 @@
 {
   "register_id": "website-performance-legal-currentness-2026-09-25",
   "scope": "Market network speeds behind the lab stress profile, WhatsApp usage phrasing, East African data-protection and influencer/advertising disclosure checks, and the 2026-09-25 model-currentness review, from Digital Research wave 2 (register 2026-09-24).",
-  "access_date": "2026-09-25",
-  "verification_date": "2026-09-25",
+  "access_date": "2026-10-29",
+  "verification_date": "2026-10-29",
   "owner": "website-skills maintainer",
-  "review_date": "2026-10-15",
+  "review_date": "2027-01-29",
   "archive_policy": "Archives were not created; archive status is NOT_ASSESSED. Facts come only from the Digital Research currentness registers of 2026-09-23 and 2026-09-24. Nothing here is legal advice.",
   "sources": [
     {
@@ -159,18 +159,18 @@
     },
     {
       "source_id": "SRC-ANTH-MODELS",
-      "title": "Anthropic models overview",
-      "url": "https://platform.claude.com/docs/en/models/overview",
+      "title": "Anthropic model system cards and model deprecations",
+      "url": "https://www.anthropic.com/system-cards",
       "publisher": "Anthropic",
       "source_tier": 1,
-      "publication_or_version_date": "undated page, fetched live 2026-09-25",
-      "access_date": "2026-09-25",
+      "publication_or_version_date": "Official model listing accessed live 2026-10-29",
+      "access_date": "2026-10-29",
       "freshness_class": "time-sensitive",
       "support_status": "verified",
       "archive_url": null,
       "archive_status": "NOT_ASSESSED",
       "confidence": "high",
-      "scope_and_limit": "Lineup includes Fable 5.1, Opus 5.5, Sonnet 5, Haiku 4.5 (retirement not sooner than 2026-10-15). Documentation catalogue, not this account's runtime availability."
+      "scope_and_limit": "Official release/system-card listing and API deprecation table. Model catalogue information only; it does not establish this account or runtime’s model availability. Official Anthropic pages checked 2026-10-29 list Sonnet 5.5 (Sep 2026), Opus 5.5 (Sep 2026), and Haiku 5.5 (Oct 2026)."
     }
   ],
   "claims": [
@@ -292,19 +292,19 @@
     },
     {
       "claim_id": "MODEL-001",
-      "claim": "Model-currentness review 2026-09-25: Anthropic lineup checked against the models overview (Fable 5.1, Opus 5.5, Sonnet 5, Haiku 4.5; Haiku 4.5 retirement floor 2026-10-15); active runner Sonnet 5 (session self-report). Decision RETAIN: engines stay model-agnostic; no skill edit. Account availability and engine-task quality/cost comparison remain NOT_ASSESSED; Codex pins out of scope for Claude sessions.",
+      "claim": "Model-currentness review 2026-10-29: official Anthropic model/system-card and deprecation pages list Claude Sonnet 5.5, Opus 5.5, and Haiku 5.5 as current releases in September–October 2026. Website skills remain model-agnostic. The active Codex assignment for this operation is gpt-6-luna with high reasoning under machine policy; account-specific availability and comparative task quality, latency, and cost remain NOT_ASSESSED. Decision RETAIN: no model-specific skill change.",
       "source_ids": [
         "SRC-ANTH-MODELS"
       ],
       "support_review": {
-        "state": "partially_supported",
+        "state": "supported",
         "reviewer": "website-skills Kaizen agent",
-        "basis": "Digital Research currentness register 2026-09-24 (accessed 2026-09-25) MR-01..MR-03",
-        "review_date": "2026-09-25"
+        "basis": "Official Anthropic model system cards and model deprecation docs accessed 2026-10-29; Codex assignment taken from the active machine policy, not inferred from Anthropic sources. No paid comparison was performed.",
+        "review_date": "2026-10-29"
       },
       "freshness_class": "time-sensitive",
-      "review_date": "2026-10-15",
-      "confidence": "medium"
+      "review_date": "2027-01-29",
+      "confidence": "high"
     }
   ]
 }
