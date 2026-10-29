@@ -207,6 +207,22 @@ The command:
 - This gate does not replace a specialist penetration test for authenticated
   applications. For static marketing sites, this gate is sufficient as the
   ongoing CI contract.
+- A nested patch override may be safer than a forced top-level downgrade when
+  the maintainer's installed dependency is behind a fixed patch. Confirm the
+  parent package range and owner support first, apply the override only in the
+  consuming project, then rerun the lockfile audit and all affected gates. The
+  [October 2026 website-engine fixture record](../../../docs/kaizen/2026-10-engine-kaizen/04-validation-record.md)
+  documents one verified case where `serve@14.2.6` pins `compression@1.8.1`:
+
+  ```json
+  { "overrides": { "serve": { "compression": "1.8.2" } } }
+  ```
+
+  In the disposable fixture this removed the compression advisory after a
+  lockfile install, without changing `serve`; thirteen high package records
+  remained, so the security gate still failed. Treat this as a dated case
+  study, not a reusable suppression or guarantee. Confirm current advisories
+  before using any version override.
 - Work in concert with `deploy/references/deployment-runbook.md` on where the
   edge-configured headers live.
 - `policy-pages/SKILL.md` produces the public-facing privacy and terms pages;
