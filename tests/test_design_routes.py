@@ -43,6 +43,14 @@ def test_missing_design_engine_is_not_assessed(tmp_path):
     assert messages
 
 
+def test_canonical_design_system_sibling_is_discovered(tmp_path):
+    website = tmp_path / "website"
+    website.mkdir()
+    (website / "AGENTS.md").write_text("- `chwezi-design-engine:brand-visual-identity`\n", encoding="utf-8")
+    design = make_design_engine(tmp_path / "design-system-skills", "brand-visual-identity")
+    assert REGISTRY.check_design_routes(website) == ("PASS", [])
+
+
 def test_live_tree_design_routes_resolve():
     status, errors = REGISTRY.check_design_routes()
     assert status in {"PASS", "NOT_ASSESSED"}
