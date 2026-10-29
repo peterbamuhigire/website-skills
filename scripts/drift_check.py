@@ -22,7 +22,9 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 
-MAX_MARKDOWN_FILES = 600
+# Leave room for the seven numbered Kaizen reports, their index, and future updates
+# while keeping the walker bounded well below the 16 MiB byte ceiling.
+MAX_MARKDOWN_FILES = 650
 MAX_TOTAL_BYTES = 16 * 1024 * 1024
 SCOPE_EXCLUDED_PARTS = {
     ".git",
