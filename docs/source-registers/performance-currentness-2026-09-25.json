@@ -171,6 +171,51 @@
       "archive_status": "NOT_ASSESSED",
       "confidence": "high",
       "scope_and_limit": "Official release/system-card listing and API deprecation table. Model catalogue information only; it does not establish this account or runtime’s model availability. Official Anthropic pages checked 2026-10-29 list Sonnet 5.5 (Sep 2026), Opus 5.5 (Sep 2026), and Haiku 5.5 (Oct 2026)."
+    },
+    {
+      "source_id": "SRC-OPENAI-MODELS-2026",
+      "title": "OpenAI API models catalogue",
+      "url": "https://developers.openai.com/api/docs/models",
+      "publisher": "OpenAI",
+      "source_tier": 1,
+      "publication_or_version_date": "Live catalogue accessed 2026-10-29",
+      "access_date": "2026-10-29",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Official API model catalogue accessed 2026-10-29 lists GPT-6.1 Terra, GPT-6.1 Sol, GPT-6 Luna, and GPT-6 Astra. Catalogue does not establish this account or active runtime entitlement."
+    },
+    {
+      "source_id": "SRC-OPENAI-CHANGELOG-2026",
+      "title": "OpenAI API changelog",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "publisher": "OpenAI",
+      "source_tier": 1,
+      "publication_or_version_date": "Live changelog accessed 2026-10-29",
+      "access_date": "2026-10-29",
+      "freshness_class": "time-sensitive",
+      "support_status": "verified",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Official change record checked 2026-10-29; records GPT-6.1 Terra release dated 2026-10-26. Release date alone does not establish task superiority."
+    },
+    {
+      "source_id": "SRC-OPENAI-CODEX-AVAILABILITY-2026",
+      "title": "ChatGPT Work and Codex availability",
+      "url": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "publisher": "OpenAI Help Center",
+      "source_tier": 1,
+      "publication_or_version_date": "Live help page accessed 2026-10-29",
+      "access_date": "2026-10-29",
+      "freshness_class": "time-sensitive",
+      "support_status": "context-bound",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Official product help checked 2026-10-29; account-specific model availability is NOT_ASSESSED."
     }
   ],
   "claims": [
@@ -292,14 +337,17 @@
     },
     {
       "claim_id": "MODEL-001",
-      "claim": "Model-currentness review 2026-10-29: official Anthropic model/system-card and deprecation pages list Claude Sonnet 5.5, Opus 5.5, and Haiku 5.5 as current releases in September–October 2026. Website skills remain model-agnostic. The active Codex assignment for this operation is gpt-6-luna with high reasoning under machine policy; account-specific availability and comparative task quality, latency, and cost remain NOT_ASSESSED. Decision RETAIN: no model-specific skill change.",
+      "claim": "Model-currentness review 2026-10-29: official Anthropic model/system-card and deprecation pages list Claude Sonnet 5.5, Opus 5.5, and Haiku 5.5 as current releases in September–October 2026. The OpenAI catalogue checked the same date lists GPT-6.1 Terra, GPT-6.1 Sol, GPT-6 Luna, and GPT-6 Astra; its changelog dates Terra to 2026-10-26. Active Codex assignment: gpt-6-luna with high reasoning under machine policy; account-specific entitlement remains NOT_ASSESSED. No paid comparison was run; quality, latency, and cost by task remain NOT_ASSESSED. Decision RETAIN: website skills remain model-agnostic and no model-specific skill change is justified by release recency alone.",
       "source_ids": [
-        "SRC-ANTH-MODELS"
+        "SRC-ANTH-MODELS",
+        "SRC-OPENAI-MODELS-2026",
+        "SRC-OPENAI-CHANGELOG-2026",
+        "SRC-OPENAI-CODEX-AVAILABILITY-2026"
       ],
       "support_review": {
         "state": "supported",
         "reviewer": "website-skills Kaizen agent",
-        "basis": "Official Anthropic model system cards and model deprecation docs accessed 2026-10-29; Codex assignment taken from the active machine policy, not inferred from Anthropic sources. No paid comparison was performed.",
+        "basis": "Official Anthropic model system cards/deprecation docs and OpenAI API model catalogue, changelog, and Codex availability help accessed 2026-10-29. Active assignment is from machine policy. No paid comparison or task benchmark was run; account entitlement, task quality, latency, and cost comparison are NOT_ASSESSED.",
         "review_date": "2026-10-29"
       },
       "freshness_class": "time-sensitive",
