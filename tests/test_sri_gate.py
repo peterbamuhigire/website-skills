@@ -42,3 +42,34 @@ def test_wrong_length_sri_digest_fails():
     parser = check_sri.AssetParser("https://example.test/")
     parser.feed('<script src="https://cdn.test/app.js" integrity="sha384-YWJj" crossorigin="anonymous"></script>')
     assert ("https://cdn.test/app.js", "missing or invalid integrity") in parser.findings
+
+
+def test_canonical_url_does_not_exempt_asset_from_sri_audit(tmp_path):
+    page = tmp_path / "index.html"
+    page.write_text('''<link rel="canonical" href="https://cdn.test/page">
+<script src="https://cdn.test/app.js"></script>''', encoding="utf-8")
+    assert ("https://cdn.test/app.js", "missing or invalid integrity") in check_sri.audit(page)
+
+
+def test_protocol_relative_external_asset_is_audited():
+    parser = check_sri.AssetParser("https://site.test/page")
+    parser.feed('<script src="//cdn.test/app.js"></script>')
+    assert ("//cdn.test/app.js", "missing or invalid integrity") in parser.findings
+
+
+def test_explicit_served_origin_exempts_same_origin_asset():
+    parser = check_sri.AssetParser("https://site.test/page")
+    parser.feed('<script src="https://site.test/app.js"></script>')
+    assert parser.findings == []
+
+
+def test_protocol_relative_asset_matching_explicit_served_origin_is_same_origin():
+    parser = check_sri.AssetParser("https://cdn.test/page")
+    parser.feed('<script src="//cdn.test/app.js"></script>')
+    assert parser.findings == []
+
+
+def test_malformed_network_asset_fails_closed():
+    parser = check_sri.AssetParser(None)
+    parser.feed('<script src="https://cdn.test:not-a-port/app.js"></script>')
+    assert ("https://cdn.test:not-a-port/app.js", "invalid network asset URL") in parser.findings

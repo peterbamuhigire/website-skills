@@ -5,6 +5,7 @@ from __future__ import annotations
 import base64
 import datetime as dt
 from html.parser import HTMLParser
+import os
 from pathlib import Path
 import re
 import sys
@@ -13,12 +14,20 @@ from urllib.parse import urlsplit
 HASH = re.compile(r"^sha(256|384|512)-([A-Za-z0-9+/]+={0,2})$")
 
 
-def origin(url: str) -> tuple[str, str, int | None] | None:
-    parsed = urlsplit(url)
-    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+def origin(url: str, default_scheme: str | None = None) -> tuple[str, str, int | None] | None:
+    try:
+        parsed = urlsplit(url)
+        hostname = parsed.hostname
+        port = parsed.port
+    except ValueError:
         return None
-    default_port = 443 if parsed.scheme == "https" else 80
-    return (parsed.scheme.lower(), parsed.hostname.lower(), parsed.port or default_port)
+    scheme = parsed.scheme.lower()
+    if not scheme and parsed.netloc:
+        scheme = default_scheme or "https"
+    if scheme not in {"http", "https"} or not hostname:
+        return None
+    default_port = 443 if scheme == "https" else 80
+    return (scheme, hostname.lower(), port or default_port)
 
 
 def valid_integrity(value: str) -> bool:
@@ -36,9 +45,9 @@ def valid_integrity(value: str) -> bool:
 
 
 class AssetParser(HTMLParser):
-    def __init__(self, canonical: str | None):
+    def __init__(self, document_url: str | None):
         super().__init__(convert_charrefs=True)
-        self.canonical_origin = origin(canonical) if canonical else None
+        self.document_origin = origin(document_url) if document_url else None
         self.findings: list[tuple[str, str]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -56,10 +65,13 @@ class AssetParser(HTMLParser):
         if not asset:
             return
 
-        asset_origin = origin(url)
-        if asset_origin is None or (self.canonical_origin is not None and asset_origin == self.canonical_origin):
+        document_scheme = self.document_origin[0] if self.document_origin else "https"
+        asset_origin = origin(url, default_scheme=document_scheme)
+        if asset_origin is None:
+            if url.lower().startswith(("http://", "https://", "//")):
+                self.findings.append((url, "invalid network asset URL"))
             return
-        if asset_origin[1] == "localhost" or asset_origin[1] == "127.0.0.1":
+        if self.document_origin is not None and asset_origin == self.document_origin:
             return
         if not valid_integrity(values.get("integrity", "")):
             self.findings.append((url, "missing or invalid integrity"))
@@ -69,14 +81,11 @@ class AssetParser(HTMLParser):
             self.findings.append((url, "missing crossorigin"))
 
 
-def audit(path: Path) -> list[tuple[str, str]]:
-    parser = AssetParser(None)
+def audit(path: Path, document_url: str | None = None) -> list[tuple[str, str]]:
+    # Canonical metadata is not proof of the origin serving this document.
+    # Without an explicit document URL, absolute assets are checked conservatively.
+    parser = AssetParser(document_url)
     text = path.read_text(encoding="utf-8", errors="replace")
-    for tag in re.finditer(r"<link\b[^>]*\brel\s*=\s*(['\"]?)canonical\1[^>]*>", text, re.I):
-        href = re.search(r"\bhref\s*=\s*(['\"])(.*?)\1", tag.group(0), re.I)
-        if href:
-            parser.canonical_origin = origin(href.group(2))
-            break
     parser.feed(text)
     return parser.findings
 
@@ -90,11 +99,15 @@ def main() -> int:
         print(f"check-sri: {dist} not found", file=sys.stderr)
         return 3
     files = sorted(dist.rglob("*.html"))
+    document_url = os.environ.get("SRI_DOCUMENT_ORIGIN")
+    if document_url and origin(document_url) is None:
+        print("check-sri: SRI_DOCUMENT_ORIGIN must be an absolute HTTP(S) origin", file=sys.stderr)
+        return 3
     report = Path("reports/security/sri.txt")
     report.parent.mkdir(parents=True, exist_ok=True)
     lines = [f"SRI audit — {dt.datetime.now(dt.timezone.utc).isoformat()}", "---"]
     for page in files:
-        for url, reason in audit(page):
+        for url, reason in audit(page, document_url):
             lines.append(f"FAIL {page.relative_to(dist)}: {url} {reason}")
     report.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(report.read_text(encoding="utf-8"), end="")
