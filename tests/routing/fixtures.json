@@ -93,6 +93,24 @@
       "expected": "ecommerce-checkout"
     },
     {
+      "id": "static-catalogue-enquiry",
+      "kind": "positive",
+      "prompt": "Plan a small static product catalogue with seller-approved WhatsApp enquiry, response owner, verified product facts, and no cart or automated payment",
+      "expected": "ecommerce"
+    },
+    {
+      "id": "catalogue-manual-settlement",
+      "kind": "positive",
+      "prompt": "Decide if a simple product catalogue can use seller-managed manual settlement; verify merchant provider, price, currency, stock, fulfilment, refunds, reconciliation, and no checkout automation",
+      "expected": "ecommerce"
+    },
+    {
+      "id": "seller-contact-destination",
+      "kind": "positive",
+      "prompt": "Define the owned-store product enquiry handoff for a static catalogue, blocking WhatsApp until exact seller destination, response owner, and privacy handling are supplied",
+      "expected": "ecommerce"
+    },
+    {
       "id": "commerce-analytics",
       "kind": "positive",
       "prompt": "Define ecommerce revenue funnel events attribution and merchandising analytics",
@@ -287,6 +305,13 @@
       "skill": "ecommerce",
       "prompt": "Design cart checkout payment failure recovery and order confirmation for ecommerce",
       "owner": "ecommerce-checkout",
+      "source": "forbidden_top1"
+    },
+    {
+      "id": "website-contact-not-ecommerce",
+      "skill": "ecommerce",
+      "prompt": "Build a five-page service-business website with contact page, quote request, navigation, accessibility and deploy readiness; there is no product catalogue or store",
+      "owner": "website-builder",
       "source": "forbidden_top1"
     },
     {

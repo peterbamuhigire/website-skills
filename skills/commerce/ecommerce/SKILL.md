@@ -13,9 +13,11 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 ## Use when
 - A new or existing online store needs its business model, product-decision experience, customer promise, trust proof, and growth handoffs defined together.
 - Product/category experience or channel strategy needs a store-wide decision before narrower checkout, funnel, analytics, or retail-system work.
+- A small static product catalogue needs a seller-mediated enquiry path and a decision on whether any manual settlement process is appropriate.
 
 ## Do not use when
 - The issue is limited to checkout/payment recovery; use `ecommerce-checkout`.
+- The task is full cart, hosted payment, order confirmation, or automated payment recovery; use `ecommerce-checkout`.
 - The issue is acquisition/lifecycle orchestration or KPI/event design; use `ecommerce-funnel` or `ecommerce-analytics`.
 - Omnichannel systems, POS, inventory, fulfilment, or finance controls dominate; use `retail-commerce-operating-system`.
 
@@ -36,6 +38,12 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 6. Produce the strategy with sources, assumptions, exclusions, owners, and acceptance conditions.
 7. Validate fit with checkout, funnel, analytics, fulfilment, policy, and implementation owners.
 8. Recovery: if evidence fails, remove the unsupported tactic, preserve verified decisions, and rerun the missing validation step.
+
+### Static catalogue with seller-mediated enquiry
+
+For a small catalogue that does not need cart or automated checkout, define the product facts and enquiry handoff before choosing a static page pattern. Treat WhatsApp or another contact link as disabled until the seller supplies and approves the exact destination, enquiry owner, response hours, and privacy handling. Do not invent a phone number or link.
+
+Manual settlement is a seller-operated process, not a payment integration. Keep it out of scope until the seller verifies the payment provider and merchant account, exact price and currency, stock and fulfilment status, refund/cancellation terms, reconciliation owner, and access controls. State clearly that an enquiry does not reserve stock or complete an order. If a customer can submit an order, pay online, or receive an automated order confirmation, route the checkout/payment work to `ecommerce-checkout` and require its operational and security inputs.
 
 ## Quality standards
 - Outputs distinguish client facts, framework recommendations, assumptions, and validation needs.
