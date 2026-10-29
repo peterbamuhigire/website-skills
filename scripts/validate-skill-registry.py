@@ -171,7 +171,9 @@ def design_routes(root: Path = ROOT) -> dict[str, list[str]]:
 
 def check_design_routes(root: Path = ROOT, design_root: Path | None = None) -> tuple[str, list[str]]:
     """Each routed design skill must exist in the sibling design engine; absent sibling is NOT_ASSESSED."""
-    design_root = design_root if design_root is not None else root.parent / "chwezi-design-engine"
+    if design_root is None:
+        candidates = [root.parent / "design-system-skills", root.parent / "chwezi-design-engine"]
+        design_root = next((candidate for candidate in candidates if (candidate / "skills").is_dir()), candidates[0])
     if not (design_root / "skills").is_dir():
         return "NOT_ASSESSED", [f"chwezi-design-engine checkout not found at {design_root}"]
     available = {path.parent.name for path in (design_root / "skills").rglob("SKILL.md")}
