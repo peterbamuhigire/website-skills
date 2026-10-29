@@ -135,6 +135,13 @@ The command:
    at `reports/security/summary.md`.
 8. Exits non-zero on any "high" or "critical" finding.
 
+The SRI checker does not use a page's `rel=canonical` URL to determine where
+the page is served. Relative asset URLs are local references; absolute and
+protocol-relative script/style URLs are checked conservatively unless they
+match an explicitly supplied served origin. Set `SRI_DOCUMENT_ORIGIN` to the
+actual absolute HTTP(S) origin only when it is known; without it, absolute
+assets are treated as external. A canonical URL alone is not that evidence.
+
 ## Preserved Domain Workflow
 1. Build the site.
 2. Run the canonical command.
