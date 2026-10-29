@@ -27,8 +27,9 @@ def valid_integrity(value: str) -> bool:
         if not match:
             continue
         try:
-            base64.b64decode(match.group(2), validate=True)
-            return True
+            digest = base64.b64decode(match.group(2), validate=True)
+            if len(digest) == {"256": 32, "384": 48, "512": 64}[match.group(1)]:
+                return True
         except ValueError:
             continue
     return False
