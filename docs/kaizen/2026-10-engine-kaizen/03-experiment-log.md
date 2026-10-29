@@ -10,6 +10,7 @@ All changes were made after baseline commit `1f5db90`. The temporary practitione
 | WSK-04 / `8cfb82f` | Rechecked and scoped SAI-018 against the official Google Search generative AI guide; refreshed its access/review dates and next review. | `validate-search-doctrine.py` and the targeted SAI-018 test pass. Claim wording is limited to Google Search. |
 | WSK-05 / `1940e21`, `b6e5cdb` | Refreshed the overdue Anthropic model currentness entry and added official OpenAI catalogue, changelog, and Codex availability sources. | Current evidence supports retaining model-agnostic website skills and the active `gpt-6-luna` / high assignment. No paid model comparison was run; account entitlement, quality, cost, and latency comparison remain NOT_ASSESSED. |
 | WSK-06 / `53dddac` | Added sibling lookup for the canonical `design-system-skills` repository name while retaining compatibility with the old `chwezi-design-engine` directory name. | Registry now reports eight routed design skills present by default on this checkout. Isolated regression tests cover both available and missing sibling cases. |
+| WSK-07 / `dbc8b69` | Raised the drift walker's Markdown entry bound from 600 to 650 after the full suite found the eight new evidence/index pages took the checkout to 603 files; the existing 16 MiB byte bound is unchanged. | Focused drift regression passes; full suite passes with 138 tests; final drift check reports 603 Markdown files. |
 
 ## Practitioner tasks
 
