@@ -40,6 +40,14 @@ def test_live_fixtures_pass_with_floor_and_lint():
     assert "owned negatives:" in result.stdout
 
 
+def test_ecommerce_has_three_positive_and_two_owned_negative_fixtures():
+    data = json.loads((ROOT / "tests/routing/fixtures.json").read_text(encoding="utf-8"))
+    positives = [row for row in data["fixtures"] if row["expected"] == "ecommerce" and row["kind"] == "positive"]
+    negatives = [row for row in data["negatives"] if row["skill"] == "ecommerce" and row.get("owner")]
+    assert len(positives) >= 3
+    assert len(negatives) >= 2
+
+
 def test_floor_above_measured_fails():
     result = _run("--min-rank1", "100")
     assert result.returncode == 1
