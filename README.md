@@ -30,7 +30,7 @@ It is for website agencies, freelance developers, and in-house marketing and pro
    python3 -X utf8 scripts/validate-skill-registry.py
    ```
 
-3. **Ask for a job in plain words.** The router in `AGENTS.md` sends a whole-site request to `website-builder`, for example: "Build a complete premium company website from client documents and assets through deploy readiness." Other jobs are in [Find the right skill](#find-the-right-skill).
+3. **Ask for a job in plain words.** The router in `AGENTS.md` sends a whole-site request to `website-builder`. For example: "Build a complete premium company website from client documents and assets through deploy readiness." Other jobs are in [Find the right skill](#find-the-right-skill).
 
 ## Contents
 
@@ -71,7 +71,17 @@ Other jobs, such as e-commerce, retainers, monthly reports, policy pages and aud
 ## How it works
 
 - **One router.** `AGENTS.md` is the runner-agnostic router. `CLAUDE.md` imports it. A skill's `SKILL.md` is the portable unit of execution. Detail sits in its `references/` folder, and repeatable helpers sit in `scripts/`.
-- **A fixed build order.** `website-builder` runs the sequence: `i18n`, `design-reference` (when reference sites are part of the brief), `brand-strategy` (when a brand brief is needed), `chwezi-design-engine:sector-strategies`, `design-system`, `photo-manager`, `page-builder`, `seo`, `deploy`, then `seo-audit` when a post-build audit is needed.
+- **A fixed build order.** `website-builder` runs the sequence below. Steps 2, 3 and 10 apply only when their condition holds.
+  1. `i18n`
+  2. `design-reference`, when reference sites are part of the brief
+  3. `brand-strategy`, when a brand brief is needed
+  4. `chwezi-design-engine:sector-strategies`, or a sector-specific skill
+  5. `design-system`
+  6. `photo-manager`
+  7. `page-builder`
+  8. `seo`
+  9. `deploy`
+  10. `seo-audit`, when a post-build audit is needed
 - **Five layers.** Commercial (qualification, offers, proposals), strategy (discovery, trust, search intent), build (design system, images, pages, SEO), launch (QA, deployment, rollback, observability) and governance (training, cadence, metrics, safety review).
 - **One pipeline.** Every project ships through the canonical continuous integration (CI) pipeline in `templates/ci/website.yml`, installed by `scripts/install-canonical-ci.sh`. A failed gate blocks deploy.
 - **Premium by default.** Work is accepted only when it can be delivered as a credible business asset. If the brief cannot support that, the engine recommends paid discovery, a smaller scope, or a no-bid or no-build decision.
@@ -225,11 +235,19 @@ Run these from the repository root. They match `.github/workflows/skill-engine-q
   - `validate-skill-registry.py` is declared but is not a CI step.
 - **Date-based checks fail on a future date unless sources are re-verified.** See [Date-gated checks](#date-gated-checks).
 
-**Not run on a plain Linux host without a locked project:** the browser gates (`perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`), a completed `npm audit`, `post-deploy-smoke.sh`, `rollback.sh` against a real host, and `new-project.sh` (it clones the published repository over the network). Run each of them in a consuming project with the locked tools installed.
+**Not run on a plain Linux host without a locked project:**
+
+- the browser gates (`perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`);
+- a completed `npm audit`;
+- `post-deploy-smoke.sh`;
+- `rollback.sh` against a real host;
+- `new-project.sh`, which clones the published repository over the network.
+
+Run each of them in a consuming project with the locked tools installed.
 
 ## Quality and improvement
 
-The engine follows the Portfolio Kaizen Standard: a cycle of measure, change, check and record, with a published audit score capped at 65 out of 100 and a plan that targets 95.
+The engine follows the Portfolio Kaizen Standard. It is a cycle of measure, change, check and record, with a published audit score capped at 65 out of 100 and a plan that targets 95.
 
 The evidence for the October 2026 cycles is in two folders:
 
