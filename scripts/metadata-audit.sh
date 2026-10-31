@@ -7,6 +7,11 @@
 #   - <link rel="canonical">
 #   - <meta property="og:title"> and <meta property="og:image">
 #   - hreflang tags for every language when i18n is enabled
+#   - <html lang> non-empty (WCAG 3.1.1)
+#   - a viewport meta that does not block zoom: no user-scalable=no or 0, and no
+#     maximum-scale below 2 (WCAG 1.4.4; the same rule as axe meta-viewport).
+#     These two are static twins of axe checks so they surface without a browser;
+#     the browser-based accessibility gate stays authoritative.
 #
 # Usage:
 #   bash .claude/skills/scripts/metadata-audit.sh <dist-dir>
@@ -47,6 +52,25 @@ while IFS= read -r -d '' html; do
                 SEEN_TITLES="$SEEN_TITLES
 $title"
             fi
+        fi
+    fi
+
+    # language and zoom (static twins of axe html-has-lang and meta-viewport)
+    flat=$(tr '\n\r' '  ' < "$html")
+    if ! echo "$flat" | grep -qiE "<html[^>]*[[:space:]]lang=(\"[^\"[:space:]]+\"|'[^'[:space:]]+')"; then
+        echo "FAIL missing or empty <html lang> (WCAG 3.1.1): $rel" >> "$REPORT"
+        FAIL=1
+    fi
+    viewport=$(echo "$flat" | grep -oiE "<meta[^>]+name=(\"viewport\"|'viewport')[^>]*>" | head -1 || true)
+    if [ -n "$viewport" ]; then
+        if echo "$viewport" | grep -qiE 'user-scalable[[:space:]]*=[[:space:]]*(no|0)([^0-9a-zA-Z.]|$)'; then
+            echo "FAIL viewport blocks zoom with user-scalable (WCAG 1.4.4): $rel" >> "$REPORT"
+            FAIL=1
+        fi
+        max_scale=$(echo "$viewport" | grep -oiE 'maximum-scale[[:space:]]*=[[:space:]]*[0-9.]+' | grep -oE '[0-9.]+$' | head -1 || true)
+        if [ -n "$max_scale" ] && awk -v m="$max_scale" 'BEGIN { exit !(m + 0 < 2) }'; then
+            echo "FAIL viewport blocks zoom with maximum-scale=$max_scale, below 2 (WCAG 1.4.4): $rel" >> "$REPORT"
+            FAIL=1
         fi
     fi
 

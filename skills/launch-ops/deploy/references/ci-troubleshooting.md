@@ -11,7 +11,7 @@ here before opening the reports or rerunning.
 3. unit — unit tests
 4. build — produce `dist/`
 5. e2e-smoke — Playwright smoke (homepage, services, contact, sitemap)
-6. metadata-audit — title, description, og, hreflang
+6. metadata-audit — title, description, canonical, og, hreflang, `<html lang>` and a zoom-safe viewport (static twins of two axe checks; the a11y gate stays authoritative)
 7. perf-gate — Lighthouse + budgets
 8. a11y-gate — axe-core
 9. visual-qa — screenshot diff + structure + slop
