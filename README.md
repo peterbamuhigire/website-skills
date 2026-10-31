@@ -6,7 +6,7 @@ It produces strategy and positioning briefs, sitemaps and page specifications, w
 
 ## Installation
 
-**Prerequisites.** Node.js 18 or later for the installer (`install.sh` and `install.ps1` exit without it). Python 3.11 or later for the validators and the Codex model-policy helper (CI uses Python 3.12 with `PyYAML` and `pytest`, and Node.js 22 for the slop-pack and hook tests). Git is needed for the manual route and for `new-project` scaffolding.
+**Prerequisites.** Node.js 18 or later for the installer (`install.sh` and `install.ps1` exit without it). Python 3.11 or later for the validators and the Codex model-policy helper, which imports `tomllib`. `PyYAML` is needed by the routing, contract and agent-integration checks, and `pytest` by the test suite. The repository has no requirements file, so install both yourself; CI installs them unpinned on Python 3.12 and runs the slop-pack and hook tests on Node.js 22. The counts in this README were measured on 2026-10-31 with Python 3.14.8, PyYAML 6.0.3, pytest 9.0.3 and Node.js 22.23.1. Git is needed for the manual route, for `new-project` scaffolding, and because one test and the drift check read the Git index.
 
 **Claude Code plugin.** The repository ships `.claude-plugin/marketplace.json` (marketplace `chwezi-website`) and `.claude-plugin/plugin.json` (plugin `website`, version 1.1.0, all 62 skills):
 
@@ -14,6 +14,8 @@ It produces strategy and positioning briefs, sitemaps and page specifications, w
 /plugin marketplace add https://github.com/peterbamuhigire/website-skills
 /plugin install website@chwezi-website
 ```
+
+The plugin registers three hooks from `hooks/hooks.json`: a Bash pre-check that blocks recognised destructive commands until the operator separately approves an override (`hooks/destructive-bash-gate.js`), an advisory quality gate after file edits (`hooks/quality-gate.js`; set `CHWEZI_QUALITY_GATE_PROFILE` to `minimal`, `standard` or `strict`), and a documentation drift check when a response ends (`hooks/drift-check-hook.js`).
 
 **Installer.** Both entry points delegate to `scripts/install-engine.js`, which copies the engine into `~/.claude` (`--scope user`, the default) or `./.claude` (`--scope project`) and records ownership in `.chwezi/install-state.json`. The script also accepts `--dry-run` and `--json`:
 
@@ -25,7 +27,9 @@ cd website-skills
 node scripts/install-engine.js doctor --scope project
 ```
 
-**Codex.** Codex reads `AGENTS.md`. Its Codex-only section runs `python <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`, and `--apply` only when drift is reported. Claude skips that section.
+Add `--dry-run` to `install.sh` to list the files first (504 on 2026-10-31); nothing is written. Run `doctor` from the project folder that holds the `.claude` folder.
+
+**Codex.** Codex reads `AGENTS.md`. Its Codex-only section runs `.codex/ensure_model_policy.py --runtime codex --check` with a Python 3.11 or later interpreter (`python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`), and `--apply` only when drift is reported. `--check` only reads. With `--runtime claude` the helper prints `NOT_APPLICABLE` and exits 0; Claude skips that section.
 
 **Manual route.** Clone the repository and point the agent at `CLAUDE.md`, which imports `AGENTS.md`, the runner-agnostic router. Skills live at `skills/<category>/<skill>/SKILL.md`. To start a client site, copy `new-project.sh` (or `new-project.ps1`) into an initialised Git repository and run it. It adds this engine as a submodule at `.claude/skills/`, creates the `en`, `fr` and `sw` content folders, and copies the content templates.
 
@@ -113,9 +117,89 @@ The table below is generated from `skills/*/*/SKILL.md` (62 files; no aliases or
 | ux-conversion | `cro-audit` | Audits an existing site for evidence-backed conversion barriers and test priorities. |
 | ux-conversion | `they-ask-you-answer` | Builds a buyer-question content and assignment-selling system for an agency. |
 
+## Related engines
+
+This repository owns website strategy, build, launch and retainer work. Other engines own the neighbouring work, and a skill or router line names them through the engine-routing table of the machine, never by a path.
+
+- **Design.** [`chwezi-design-engine`](https://github.com/peterbamuhigire/chwezi-design-engine) (held in a folder called `design-system-skills` on some machines) owns typography, colour, layout and the anti-slop doctrine. The skills relocated there (`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-visual-identity`, `sector-strategies`, `legal-sector-ui-ux`) are listed in [`docs/relocation-map.md`](docs/relocation-map.md).
+- **Proposals.** [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) owns proposal, tender and commercial wording. It is an external engine: this repository does not embed it. An earlier submodule was removed in commit `37780ba` and `docs/licensing-matrix.md` records it as separately licensed.
+- **Social campaigns.** [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) hands over landing-page briefs through `ad-to-site-journey-handoff`; `launch-campaigns` receives them.
+- **Research and currentness.** The Digital Research engine supplies the currentness gate and the research method that every blog post and every standards claim must pass.
+- **Engineering standard.** [`chwezi-dev-engine`](https://github.com/peterbamuhigire/chwezi-dev-engine) holds the canonical skill-writing standard and the `quick_validate.py` and `engine_compliance.py` checks used in `CONTRIBUTING.md`.
+
 ## Quality gates and validation
 
-The gate scripts run against a built site: `scripts/perf-gate.sh` (budgets in `performance-budgets.json`, Lighthouse configuration in `lighthouserc.json`), `scripts/a11y-gate.sh`, `scripts/security-gate.sh`, `scripts/visual-qa.sh`, `scripts/slop-scan.sh` (vendored detector in `scripts/vendor/chwezi-slop/`, verified by `scripts/check-vendored-detector.py`) and `scripts/post-deploy-smoke.sh`. The engine's own contracts are checked by `scripts/validate-checkout-size.py` (immutable 5,000-entry full-checkout and package caps plus manifest parity), `scripts/validate-skill-registry.py`, `scripts/validate-skill-contracts.py`, `scripts/routing-smoke-test.py`, `scripts/validate-search-doctrine.py`, `scripts/validate-source-registers.py` (expired review dates), `scripts/check_portable_references.py` (machine-specific paths and broken relative links), `scripts/source_ingestion_guardrail.py` and `python -m pytest -q`. A complete worked deliverable, with its release record, gate table and rollback plan, is `examples/service-site-five-page/`. The registry validator and `tests/test_kaizen_wave1_contracts.py` both require the skill total and category counts in this README to match the filesystem. Operator certification material is in `certification/`.
+The gate scripts run against a built site, from the root of a consuming project: `scripts/perf-gate.sh` (budgets in `performance-budgets.json`, Lighthouse configuration in `lighthouserc.json`), `scripts/a11y-gate.sh`, `scripts/security-gate.sh`, `scripts/visual-qa.sh`, `scripts/slop-scan.sh` (vendored detector in `scripts/vendor/chwezi-slop/`, verified by `scripts/check-vendored-detector.py`) and `scripts/post-deploy-smoke.sh`. Set `SKILLS_DIR` to this checkout; reports go to the project's `reports/` folder. A gate never downloads its tools and never passes when it could not run:
+
+| Gate | Needs in the consuming project | Stops with, when it is missing |
+|---|---|---|
+| `perf-gate.sh` | a locked `@lhci/cli` in `package.json` and `package-lock.json`; Lighthouse drives a browser | exit 3 |
+| `a11y-gate.sh` | locked `serve`, `@playwright/test` and `@axe-core/playwright`, and a browser Playwright can drive | exit 3 |
+| `visual-qa.sh` | locked `@playwright/test`; it also runs `slop-scan.sh` | exit 4 |
+| `security-gate.sh` | `jq`, `npm`, a lockfile and registry access for `npm audit` | exit 6 (an audit that did not complete is a failure, not zero findings) |
+| `slop-scan.sh` | Node.js 18 or later; no network | exit 5 |
+| `post-deploy-smoke.sh <url>` | `curl` and a deployed HTTPS URL | exit 3 |
+| `metadata-audit.sh <dist>`, `html-perf-lint.mjs <dist>`, `drift-check.sh` | nothing beyond Bash, Node.js, Python and Git | not applicable |
+
+A complete worked deliverable, with its release record, gate table and rollback plan, is `examples/service-site-five-page/`. Operator certification material is in `certification/`.
+
+### Validating this repository
+
+Run these from the repository root. They match `.github/workflows/skill-engine-quality.yml` and the validators declared in `.skills-engine/engine-manifest.yaml`.
+
+| Command | What it checks | Needs |
+|---|---|---|
+| `python3 -X utf8 scripts/validate-checkout-size.py` | immutable 5,000-entry caps for the full checkout and for the package, and manifest parity | Git |
+| `python3 -X utf8 scripts/validate-skill-registry.py` | the skill total and category counts in this README against the filesystem, relocations, and that the 15 routed design skills exist | design engine checkout for the last check; without one it is `NOT_ASSESSED` |
+| `python3 -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json` | the zero-debt skill contract | PyYAML |
+| `python3 -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures` | a lexical routing proxy over `tests/routing/fixtures.json`, not live routing | PyYAML |
+| `python3 -X utf8 scripts/validate-search-doctrine.py` | the search doctrine files and their currentness register; judged by today's date, no `--as-of` option | none |
+| `python3 -X utf8 scripts/validate-source-registers.py [--as-of YYYY-MM-DD]` | expired or malformed review dates in `docs/standards-register.md` and `docs/source-registers/*.json` | none |
+| `python3 -X utf8 scripts/check_portable_references.py` | machine-specific paths and broken relative links | none |
+| `python3 -X utf8 scripts/source_ingestion_guardrail.py --root .` | rejects book-dump folders | none |
+| `python3 -X utf8 scripts/check-vendored-detector.py` | the hash manifest of the vendored detector, then a comparison with the design engine | design engine checkout for the comparison |
+| `node scripts/validate-slop-pack.mjs` | the website slop pack against the vendored registry | Node.js |
+| `for t in hooks/test-*.js; do node "$t" \|\| exit 1; done` | the four hook test files | Node.js |
+| `python3 -m pytest -q` | the test suite | pytest, PyYAML and a Git checkout |
+
+Notes on running them:
+
+- **The design engine is found, not assumed.** The vendored-detector check and the registry validator look for it through `--source`, then `CHWEZI_DESIGN_ENGINE_ROOT`, then `CHWEZI_ENGINES_ROOT` (a folder of checkouts), then the folders beside this checkout, trying `design-system-skills` and `chwezi-design-engine`. When none is found the comparison is `NOT_ASSESSED`, which is reported and is never a pass.
+- **Re-vendoring the detector** is a reviewed step: `python3 -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>` refuses a source with uncommitted changes and rewrites `scripts/vendor/chwezi-slop/VENDOR.json`. Review the diff, then rerun the slop-pack validator, the tests and the worked example's slop scan.
+- **pytest is a hard prerequisite.** `python3 -m unittest discover -s tests` is not a substitute: on 2026-10-31 it ran 10 tests and failed to import nine modules that import `pytest`. The pytest run needs a Git checkout, not an exported archive, because `tests/test_kaizen_wave2.py::test_drift_check_is_bounded_and_repeatable` calls `git ls-files`. It takes one to two minutes.
+- **Two checks are not collected by pytest and are not CI steps.** Run `python3 -X utf8 tests/agent-integration/test_website_agent_contract.py` (it reads the engine manifest) and `node --test tests/a11y-gate-context.test.mjs` directly.
+- **Declared and CI-run validators differ.** The manifest declares eight validators (registry, skill contracts, routing, search doctrine, source registers, portable references, source ingestion, tests). The CI workflow runs the size, portable-reference, contract, routing, search-doctrine, source-register, vendored-detector, slop-pack, hook and pytest steps, and `source-ingestion-guardrail.yml` runs the ingestion guardrail. `validate-skill-registry.py` is declared but is not a CI step.
+- **Date-based checks fail on a future date unless sources are re-verified.** See the calendar below.
+
+Not run on a plain Linux host without a locked project: the browser gates (`perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`), a completed `npm audit`, `post-deploy-smoke.sh`, `rollback.sh` against a real host, and `new-project.sh` (it clones the published repository over the network). Run each of them in a consuming project with the locked tools installed.
+
+## Quality and improvement
+
+The engine follows the Portfolio Kaizen Standard: a cycle of measure, change, check and record, with a published audit score capped at 65 out of 100 and a plan that targets 95. The evidence for the October 2026 cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/README.md) (29 October) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/README.md) (31 October, pass 2). Each holds the frozen baseline, backlog, experiment log, validation record, final report and next-cycle file. Earlier records are indexed in [`docs/README.md`](docs/README.md).
+
+**Latest published score (pass 2, [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)).** Raw 62.9 out of 100; capped `min(raw, 65)` 62.9, so the cap does not bind. The pass-2 baseline was 55.7 and the 29 October final was 60.0. The target of 95 is not met, and these scores do not override a blocked release gate. The worked example is blocked for release on purpose. For the engine, the standing blockers are the Lighthouse CI dependency tree, the lab LCP of a font-using site, visual capture specs, staging-edge header proof and counsel review of privacy wording. The pass-2 test host could not run real pytest or any browser gate. A real pytest run on a clean clone on 2026-10-31 (pytest 9.0.3) passed 280 of 280 tests; no browser gate was run in that check.
+
+**Open items that matter to a user** (priority P0 in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md)):
+
+1. The vendored `chwezi-slop` detector was behind the design engine's current rules. The pass-2 report records the default check exiting 1 with `DRIFT` on three files; a reviewed re-sync is a separate step (see above).
+2. The Lighthouse CI dependency tree is not remediated or re-audited. `@lhci/cli` 0.15.1 was still the latest release on 2026-10-31 and pins Lighthouse 12.6.1, while Lighthouse is at 13.6.0. The 29 October audit of the disposable QA dependency tree found 15 high-severity package records and no critical record; that is not a count of unique advisories or a statement about every production dependency.
+3. The lab LCP of a font-using five-page site is above the unchanged 2,000 ms assertion. The worked example bundles no fonts, so it cannot test this.
+
+Also open, and relevant when you rely on a skill: the privacy-statute checks are identifier-level and three rest on search summaries, and the Nigerian NDPR and NDPA naming is inconsistent across five files; the static-catalogue page pattern and manual mobile-money wording need an owner decision; 30 of the 62 skills have no positive routing fixture; the provenance of one register record, `LOCAL_CARTER_EPUB_2026`, is unresolved. Routing results are a lexical proxy, not live-model evidence.
+
+**Date-triggered gates.** The two currentness validators fail once a recorded review date passes. Moving a date needs a source check behind it: the register validator also rejects a review date further from its verification than the cadence allows (45, 100 and 400 days for monthly, quarterly and annual rows). The dates below were read from the registers and confirmed by running `validate-source-registers.py --as-of` on the day before and the day after each (the error count steps up on the day shown); `validate-search-doctrine.py` has no such option, so its date was confirmed by running it with a substituted current date.
+
+| First failing day | Records that reach their review date the day before | Validator |
+|---|---|---|
+| 2026-12-01 | `standards-currentness-2026-10-31.json` (the register and three claims) and four standards-table rows: Search, Lab tooling, Structured data, Data-protection statutes (2026-11-30) | `validate-source-registers.py` |
+| 2026-12-06 | Seven claims in `search-ai-currentness-2026-09-05.json` (2026-12-05) | `validate-search-doctrine.py` and `validate-source-registers.py` |
+| 2026-12-13 to 2026-12-26 | That register (2026-12-12), four of its claims (2026-12-14), six standards claims (2026-12-15), `performance-currentness-2026-09-23.json` (2026-12-23) and the claims of `performance-currentness-2026-09-25.json` (2026-12-25); each day-after run adds the records listed | `validate-source-registers.py` |
+| 2027-01-30 | `performance-currentness-2026-09-25.json` (its register, 2027-01-29) | `validate-source-registers.py` |
+| 2027-02-01 | Fourteen records (2027-01-31): seven quarterly standards-table rows (WCAG, WAI-ARIA, Application verification, Web risk awareness, Workflow security, Core Web Vitals, Privacy risk) and seven claims | `validate-source-registers.py` |
+| 2027-03-24, 2027-09-06, 2027-09-24 | Four, one and one claims in the performance and search registers | `validate-source-registers.py` |
+| 2027-11-01 | The annual RFC 9116 row and one standards claim (2027-10-31) | `validate-source-registers.py` |
+
+The next-cycle file also sets a monthly backlog review on 2026-11-30 and a full engine audit with the 65 cap on 2027-01-31.
 
 ## References
 
@@ -299,7 +383,7 @@ Repositories studied in the September 2026 ten-repository Kaizen (M10), from whi
 
 Other repositories:
 
-- chwezi-design-engine — https://github.com/peterbamuhigire/chwezi-design-engine — source of the vendored `chwezi-slop` detector (`tools/slop-detector`, commit `3fe84a6`, hash-pinned in `scripts/vendor/chwezi-slop/VENDOR.json`).
+- chwezi-design-engine — https://github.com/peterbamuhigire/chwezi-design-engine — source of the vendored `chwezi-slop` detector (`tools/slop-detector`; the source commit and the file hashes are pinned in `scripts/vendor/chwezi-slop/VENDOR.json`).
 - chwezi-dev-engine — https://github.com/peterbamuhigire/chwezi-dev-engine — the canonical skill-writing standard that `meta/skill-writing` points to.
 - ECC — github.com/affaan-m/ECC — the Windows path fix in `install.sh` and the user/project scope model in `scripts/install-engine.js`.
 - codex-astra-luna-orchestrator — https://github.com/donvito/codex-astra-luna-orchestrator — concept reference for the Codex model-policy helper, inspected at commit `21f4561`. It was implemented independently, and the upstream installer was not run.
