@@ -13,6 +13,9 @@ import sys
 from pathlib import Path
 from collections import Counter
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_engine_root import find_design_engine  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
 MANIFEST = SKILLS / "manifest.yml"
@@ -172,8 +175,7 @@ def design_routes(root: Path = ROOT) -> dict[str, list[str]]:
 def check_design_routes(root: Path = ROOT, design_root: Path | None = None) -> tuple[str, list[str]]:
     """Each routed design skill must exist in the sibling design engine; absent sibling is NOT_ASSESSED."""
     if design_root is None:
-        candidates = [root.parent / "design-system-skills", root.parent / "chwezi-design-engine"]
-        design_root = next((candidate for candidate in candidates if (candidate / "skills").is_dir()), candidates[0])
+        design_root = find_design_engine(root) or root.parent / "design-system-skills"
     if not (design_root / "skills").is_dir():
         return "NOT_ASSESSED", [f"chwezi-design-engine checkout not found at {design_root}"]
     available = {path.parent.name for path in (design_root / "skills").rglob("SKILL.md")}
