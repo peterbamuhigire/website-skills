@@ -1,41 +1,86 @@
 # Website Skills Engine
 
-The Website Skills Engine is a routed library of agent skills for planning, writing, building, auditing, launching and maintaining static websites built from markdown content and approved assets. Its 62 active skills cover eleven categories: agency operations, brand, build, commerce, content and copy, launch operations, engine maintenance, orchestration, quality gates, search, and conversion. The engine follows WCAG 2.2 AA with the WAI-ARIA Authoring Practices, OWASP ASVS 5.0.0 for verifiable security controls and the OWASP Top 10:2025 for threat awareness, RFC 9116 for `security.txt`, Google Search Essentials and the Google structured-data guidelines with Schema.org, and the Core Web Vitals thresholds published on web.dev. Privacy work is checked against the Uganda Data Protection and Privacy Act 2019, the Kenya Data Protection Act 2019, POPIA, the Nigeria Data Protection Act 2023 and the GDPR. Every release passes through executable gates: performance budgets enforced through Lighthouse CI, an accessibility gate built on axe-core, security and supply-chain checks, visual regression, and a slop scan run by a vendored copy of the `chwezi-slop` detector.
+The Website Skills Engine is a library of agent skills for planning, writing, building, auditing, launching and maintaining static websites. It builds sites from markdown content and approved assets, and it works in Claude Code and Codex. Its 62 active skills cover eleven categories, and every release passes executable checks (scripts that run, not checklists).
 
-It produces strategy and positioning briefs, sitemaps and page specifications, website copy in English, French and Kiswahili, design tokens and component rules, production pages with structured data and analytics event maps, and scaffolded multilingual static-site projects. It also produces accessibility, security, SEO, conversion and design-quality audit reports, release evidence with rollback plans, privacy and terms pages, monthly client reports, and retainer and referral programmes. It serves website agencies, freelance developers, and in-house marketing and product teams, with particular attention to East African markets: constrained bandwidth, mobile money, and local languages. A syllabus and exam support operator certification. A skill or a passed checklist is evidence for review, not a certificate of a live site's results; field performance, legal compliance and conversion claims still need their own evidence.
+It is for website agencies, freelance developers, and in-house marketing and product teams. It pays particular attention to East African markets: constrained bandwidth, mobile money and local languages. Use it when you plan, write, build, audit, launch or maintain a site, or when you run a web agency.
 
-## Installation
+## The short version
 
-**Prerequisites.** Node.js 18 or later for the installer (`install.sh` and `install.ps1` exit without it). Python 3.11 or later for the validators and the Codex model-policy helper, which imports `tomllib`. `PyYAML` is needed by the routing, contract and agent-integration checks, and `pytest` by the test suite. The repository has no requirements file, so install both yourself; CI installs them unpinned on Python 3.12 and runs the slop-pack and hook tests on Node.js 22. The counts in this README were measured on 2026-10-31 with Python 3.14.8, PyYAML 6.0.3, pytest 9.0.3 and Node.js 22.23.1. Git is needed for the manual route, for `new-project` scaffolding, and because one test and the drift check read the Git index.
+### At a glance
 
-**Claude Code plugin.** The repository ships `.claude-plugin/marketplace.json` (marketplace `chwezi-website`) and `.claude-plugin/plugin.json` (plugin `website`, version 1.1.0, all 62 skills):
+- **62 skills** in 11 categories, each at `skills/<category>/<skill>/SKILL.md`.
+- **Three copy languages:** English, French and Kiswahili. French and Kiswahili have their own native-copy skills.
+- **Executable release gates:** performance, accessibility, security, visual QA, slop scan (a detector for banned fonts, gradients and filler copy) and post-deploy smoke checks. A gate never passes when it could not run.
+- **Routing:** the right skill is in the top three for 44 of 44 test prompts and first for 41. This is a lexical proxy (it matches words, not meaning), not live routing.
+- **Tests:** 280 of 280 pytest tests pass (pytest 9.0.3, Python 3.14.8, 2026-10-31).
+- **Audit score:** 62.9 of 100, against a cap of 65 and a target of 95. A score never overrides a blocked release gate.
 
-```text
-/plugin marketplace add https://github.com/peterbamuhigire/website-skills
-/plugin install website@chwezi-website
-```
+### Start here
 
-The plugin registers three hooks from `hooks/hooks.json`: a Bash pre-check that blocks recognised destructive commands until the operator separately approves an override (`hooks/destructive-bash-gate.js`), an advisory quality gate after file edits (`hooks/quality-gate.js`; set `CHWEZI_QUALITY_GATE_PROFILE` to `minimal`, `standard` or `strict`), and a documentation drift check when a response ends (`hooks/drift-check-hook.js`).
+1. **Load the engine.** In Claude Code, add the marketplace and install the plugin. It carries all 62 skills. For Codex, or for a clone and installer, see [Install and update](#install-and-update).
 
-**Installer.** Both entry points delegate to `scripts/install-engine.js`, which copies the engine into `~/.claude` (`--scope user`, the default) or `./.claude` (`--scope project`) and records ownership in `.chwezi/install-state.json`. The script also accepts `--dry-run` and `--json`:
+   ```text
+   /plugin marketplace add https://github.com/peterbamuhigire/website-skills
+   /plugin install website@chwezi-website
+   ```
 
-```sh
-git clone https://github.com/peterbamuhigire/website-skills
-cd website-skills
-./install.sh --scope project        # macOS, Linux or Git Bash
-.\install.ps1 --scope project       # Windows PowerShell
-node scripts/install-engine.js doctor --scope project
-```
+2. **Check the catalogue.** In a clone of this repository, run the registry validator. It ends with `registry valid: 62 skills`.
 
-Add `--dry-run` to `install.sh` to list the files first (504 on 2026-10-31); nothing is written. Run `doctor` from the project folder that holds the `.claude` folder.
+   ```sh
+   python3 -X utf8 scripts/validate-skill-registry.py
+   ```
 
-**Codex.** Codex reads `AGENTS.md`. Its Codex-only section runs `.codex/ensure_model_policy.py --runtime codex --check` with a Python 3.11 or later interpreter (`python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`), and `--apply` only when drift is reported. `--check` only reads. With `--runtime claude` the helper prints `NOT_APPLICABLE` and exits 0; Claude skips that section.
+3. **Ask for a job in plain words.** The router in `AGENTS.md` sends a whole-site request to `website-builder`, for example: "Build a complete premium company website from client documents and assets through deploy readiness." Other jobs are in [Find the right skill](#find-the-right-skill).
 
-**Manual route.** Clone the repository and point the agent at `CLAUDE.md`, which imports `AGENTS.md`, the runner-agnostic router. Skills live at `skills/<category>/<skill>/SKILL.md`. To start a client site, copy `new-project.sh` (or `new-project.ps1`) into an initialised Git repository and run it. It adds this engine as a submodule at `.claude/skills/`, creates the `en`, `fr` and `sw` content folders, and copies the content templates.
+## Contents
 
-## Capabilities
+- [Find the right skill](#find-the-right-skill)
+- [How it works](#how-it-works)
+- [What is inside](#what-is-inside)
+- [Install and update](#install-and-update)
+- [Quality gates and validation](#quality-gates-and-validation)
+- [Quality and improvement](#quality-and-improvement)
+- [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved)
+- [Contributing, author and licence](#contributing-author-and-licence)
+- [Related engines](#related-engines)
+- [References](#references)
 
-The table below is generated from `skills/*/*/SKILL.md` (62 files; no aliases or templates are counted) and matches `skills/manifest.yml`.
+## Find the right skill
+
+Name the job in plain words and the router picks the skill. These twelve jobs are a starting point. Every skill named here has routing test prompts in `tests/routing/fixtures.json`.
+
+| You want to | Use |
+|---|---|
+| Build a whole site from a brief, through release | `website-builder` |
+| Decide what a premium site offer includes, or when to decline a bid | `premium-website-product` |
+| Map the visitor journey before page structure | `website-experience-mapping` |
+| Set typography, colour, spacing, motion and component tokens | `design-system` |
+| Turn approved copy and tokens into responsive pages | `page-builder` |
+| Add locale routes, language switching and hreflang | `i18n` |
+| Write French or Kiswahili that reads as native | `french-native-copy` or `swahili-native-copy` |
+| Research and draft a cited blog article | `blog-writer` |
+| Implement metadata, structured data and sitemaps | `seo` |
+| Check a site against WCAG 2.2 AA, the W3C accessibility guidelines | `accessibility-audit` |
+| Check headers, dependencies, secrets and `security.txt` before release | `security-gate` |
+| Publish, smoke-test and prove rollback readiness | `deploy` |
+
+Other jobs, such as e-commerce, retainers, monthly reports, policy pages and audits, are in the [skill catalogue](docs/skill-catalogue.md). Design, typography, colour and UX work belongs to the design engine (see [Related engines](#related-engines)).
+
+**What it does not do.** A skill or a passed checklist is evidence for review, not a certificate of a live site's results. Field performance, legal compliance and conversion claims still need their own evidence.
+
+## How it works
+
+- **One router.** `AGENTS.md` is the runner-agnostic router. `CLAUDE.md` imports it. A skill's `SKILL.md` is the portable unit of execution. Detail sits in its `references/` folder, and repeatable helpers sit in `scripts/`.
+- **A fixed build order.** `website-builder` runs the sequence: `i18n`, `design-reference` (when reference sites are part of the brief), `brand-strategy` (when a brand brief is needed), `chwezi-design-engine:sector-strategies`, `design-system`, `photo-manager`, `page-builder`, `seo`, `deploy`, then `seo-audit` when a post-build audit is needed.
+- **Five layers.** Commercial (qualification, offers, proposals), strategy (discovery, trust, search intent), build (design system, images, pages, SEO), launch (QA, deployment, rollback, observability) and governance (training, cadence, metrics, safety review).
+- **One pipeline.** Every project ships through the canonical continuous integration (CI) pipeline in `templates/ci/website.yml`, installed by `scripts/install-canonical-ci.sh`. A failed gate blocks deploy.
+- **Premium by default.** Work is accepted only when it can be delivered as a credible business asset. If the brief cannot support that, the engine recommends paid discovery, a smaller scope, or a no-bid or no-build decision.
+
+## What is inside
+
+### Categories
+
+The table is generated from `skills/*/*/SKILL.md` (62 files; no aliases or templates are counted) and matches `skills/manifest.yml`. Each skill, with a one-line description, is in the [skill catalogue](docs/skill-catalogue.md).
 
 | Category | Skills | Coverage |
 |---|---:|---|
@@ -52,84 +97,92 @@ The table below is generated from `skills/*/*/SKILL.md` (62 files; no aliases or
 | `ux-conversion` | 2 | Conversion audit and buyer-question content |
 | **Total** | **62** | |
 
-| Category | Skill | What it does |
-|---|---|---|
-| agency-ops | `agency-client-retention` | Designs post-launch retainers, review cadence, expansion offers and churn controls. |
-| agency-ops | `agency-positioning` | Defines a premium agency's niche, offer ladder, qualification, fees and scope boundaries. |
-| agency-ops | `authority-offers` | Packages expertise into lead magnets, paid audits, workshops and mini-products. |
-| agency-ops | `customer-service-website-ops` | Designs post-launch support triage, escalation and recovery language. |
-| agency-ops | `delivery-automation` | Audits and automates repeatable delivery work; build-versus-buy and SOPs. |
-| agency-ops | `email-sender` | Implements a self-hosted PHP and PHPMailer form-mail flow with spam and CSRF controls. |
-| agency-ops | `launch-campaigns` | Sequences an established offer through prelaunch, launch, close and follow-up. |
-| agency-ops | `local-in-person-acquisition` | Plans ethical face-to-face acquisition for a niche local web studio. |
-| agency-ops | `monthly-report` | Produces an evidence-backed monthly website or SEO client report. |
-| agency-ops | `policy-pages` | Drafts privacy and terms pages from verified processing and jurisdiction facts. |
-| agency-ops | `premium-sales-conversation` | Qualifies and diagnoses a premium opportunity before any quote or proposal. |
-| agency-ops | `referral-program` | Designs a consent-based client referral programme with disclosure rules. |
-| agency-ops | `service-blueprint-website-delivery` | Maps frontstage and backstage delivery operations, owners, SLAs and fail points. |
-| agency-ops | `social-media` | Plans measurable social channels, content and offer-led campaigns tied to a website. |
-| brand | `brand-storytelling` | Turns an approved brand strategy into evidence-based narrative for pages and campaigns. |
-| brand | `brand-strategy` | Establishes audience, positioning, differentiation and a decision-ready brand brief. |
-| build | `design-reference` | Analyses reference and competitor sites into an implementation-facing design direction. |
-| build | `design-system` | Converts an approved brand brief into tokens, component rules, states and motion. |
-| build | `i18n` | Implements multilingual routes, locale content, hreflang, canonicals and sitemaps. |
-| build | `image-compression` | Generates measured web-image derivatives from approved source assets. |
-| build | `page-builder` | Builds approved content, design, schema and analytics into production pages. |
-| build | `photo-manager` | Catalogues, selects, approves and places logos and website photographs. |
-| commerce | `ecommerce` | Defines an online store's model, experience, trust and growth strategy. |
-| commerce | `ecommerce-analytics` | Defines or audits ecommerce events, KPIs, funnels, cohorts and attribution. |
-| commerce | `ecommerce-checkout` | Specifies or audits cart, checkout, payment recovery and post-purchase flow. |
-| commerce | `ecommerce-funnel` | Designs acquisition, retargeting, lifecycle messaging and repeat-purchase journeys. |
-| commerce | `retail-commerce-operating-system` | Specifies an omnichannel retail site integrated with catalogue, POS, fulfilment and finance. |
-| content-copy | `blog-idea-generator` | Produces evidence-grounded topic ideas, series and editorial calendars. |
-| content-copy | `blog-writer` | Turns an approved topic into a researched, source-disciplined article. |
-| content-copy | `brand-voice` | Reproduces a client's actual voice consistently across pages and posts. |
-| content-copy | `content-writing` | Writes page and interface copy with clear hierarchy and evidence-aware editing. |
-| content-copy | `east-african-english` | Makes English copy read as natural, professional East African English. |
-| content-copy | `french-native-copy` | Writes French copy that reads as native for a named francophone market. |
-| content-copy | `language-standards` | Sets cross-language tone, terminology and locale-ownership rules. |
-| content-copy | `long-form-sales-copy` | Writes long-form sales pages, VSL, webinar and funnel copy for a defined offer. |
-| content-copy | `premium-commercial-writing` | Writes authority, offer and SEO copy that justifies premium fees through proof. |
-| content-copy | `sales-copywriting` | Builds a page's conversion argument, proof sequence, objection handling and CTAs. |
-| content-copy | `swahili-native-copy` | Writes Kiswahili copy that reads naturally for a named East African market. |
-| launch-ops | `deploy` | Builds, release-gates, deploys, verifies and makes a site rollback-ready. |
-| launch-ops | `experimentation` | Runs pre-registered controlled tests with power checks, guardrails and decisions. |
-| launch-ops | `marketing-measurement-system` | Defines a KPI tree, event plan and decision-ready reporting. |
-| launch-ops | `observability` | Sets up real-user performance, error tracking, alerts and an operator runbook. |
-| meta | `skill-safety-audit` | Reviews a new or changed skill for unsafe instructions and permission inflation. |
-| meta | `skill-writing` | Creates or upgrades engine skills under the canonical chwezi-dev-engine standard. |
-| meta | `update-claude-documentation` | Reconciles routers, counts and maintainer documentation after catalogue changes. |
-| orchestration | `africa-excellence` | Makes a site work in African markets: bandwidth, mobile money, USSD, language, trust. |
-| orchestration | `hospitality-website-product` | Designs and builds websites for hotels, lodges, restaurants and venues. |
-| orchestration | `premium-ui-ux-design` | Orchestrates build-coupled UX and visual quality before design-system and page work. |
-| orchestration | `premium-website-product` | Qualifies a revenue-critical website as a premium product with scope and no-bid rules. |
-| orchestration | `website-builder` | Orchestrates a complete website from approved inputs through handover. |
-| orchestration | `website-experience-mapping` | Maps journeys, moments of truth and service interactions before page architecture. |
-| quality-gates | `accessibility-audit` | Audits rendered pages against WCAG 2.2 AA with automated and manual checks. |
-| quality-gates | `cross-page-design-consistency-audit` | Detects competing design systems, template drift and translation drift across pages. |
-| quality-gates | `design-quality-score` | Scores a rendered site against the seven-category design-quality and anti-slop rubric. |
-| quality-gates | `kaizen-engine-and-product-improvement` | Audits and improves the engine or any web product it produces. |
-| quality-gates | `security-gate` | Audits dependencies, secrets, headers, SRI, `security.txt` and supply chain before release. |
-| quality-gates | `visual-qa` | Reviews rendered routes for screenshot drift, overflow, empty sections and regressions. |
-| seo-search | `google-ai-search` | Advises on Google AI Overviews, AI Mode and Search Console AI measurement. |
-| seo-search | `seo` | Implements metadata, structured data, sitemaps, crawler controls and entity presence. |
-| seo-search | `seo-audit` | Performs a read-only audit of crawl, indexation, schema, AI citations and measurement. |
-| ux-conversion | `cro-audit` | Audits an existing site for evidence-backed conversion barriers and test priorities. |
-| ux-conversion | `they-ask-you-answer` | Builds a buyer-question content and assignment-selling system for an agency. |
+### What it produces
 
-## Related engines
+- Strategy and positioning briefs, sitemaps and page specifications.
+- Website copy in English, French and Kiswahili.
+- Design tokens and component rules.
+- Production pages with structured data and analytics event maps.
+- Scaffolded multilingual static-site projects.
+- Accessibility, security, SEO, conversion and design-quality audit reports.
+- Release evidence with rollback plans.
+- Privacy and terms pages, monthly client reports, and retainer and referral programmes.
 
-This repository owns website strategy, build, launch and retainer work. Other engines own the neighbouring work, and a skill or router line names them through the engine-routing table of the machine, never by a path.
+### Standards it follows
 
-- **Design.** [`chwezi-design-engine`](https://github.com/peterbamuhigire/chwezi-design-engine) (held in a folder called `design-system-skills` on some machines) owns typography, colour, layout and the anti-slop doctrine. The skills relocated there (`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-visual-identity`, `sector-strategies`, `legal-sector-ui-ux`) are listed in [`docs/relocation-map.md`](docs/relocation-map.md).
-- **Proposals.** [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) owns proposal, tender and commercial wording. It is an external engine: this repository does not embed it. An earlier submodule was removed in commit `37780ba` and `docs/licensing-matrix.md` records it as separately licensed.
-- **Social campaigns.** [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) hands over landing-page briefs through `ad-to-site-journey-handoff`; `launch-campaigns` receives them.
-- **Research and currentness.** The Digital Research engine supplies the currentness gate and the research method that every blog post and every standards claim must pass.
-- **Engineering standard.** [`chwezi-dev-engine`](https://github.com/peterbamuhigire/chwezi-dev-engine) holds the canonical skill-writing standard and the `quick_validate.py` and `engine_compliance.py` checks used in `CONTRIBUTING.md`.
+- **Accessibility:** WCAG 2.2 AA with the WAI-ARIA Authoring Practices.
+- **Security:** OWASP ASVS 5.0.0 (Application Security Verification Standard) for verifiable controls, the OWASP Top 10:2025 for threat awareness, and RFC 9116 for `security.txt`.
+- **Search:** Google Search Essentials and the Google structured-data guidelines, with Schema.org.
+- **Performance:** the Core Web Vitals thresholds published on web.dev.
+- **Privacy:** the Uganda Data Protection and Privacy Act 2019, the Kenya Data Protection Act 2019, POPIA, the Nigeria Data Protection Act 2023 and the GDPR.
+
+### Beyond the skills
+
+- **Gates:** performance budgets enforced through Lighthouse CI, an accessibility gate built on axe-core, security and supply-chain checks, visual regression, and a slop scan run by a vendored copy of the `chwezi-slop` detector.
+- **Worked example:** `examples/service-site-five-page/`, a complete deliverable with its release record, gate table and rollback plan.
+- **Certification:** a syllabus and exam for operators, in `certification/`.
+
+## Install and update
+
+### Prerequisites
+
+- **Node.js 18 or later** for the installer. `install.sh` and `install.ps1` exit without it.
+- **Python 3.11 or later** for the validators and the Codex model-policy helper, which imports `tomllib`.
+- **`PyYAML`** for the routing, contract and agent-integration checks, and **`pytest`** for the test suite. The repository has no requirements file, so install both yourself. CI installs them unpinned on Python 3.12 and runs the slop-pack and hook tests on Node.js 22.
+- **Git** for the manual route, for `new-project` scaffolding, and because one test and the drift check read the Git index.
+
+The counts in this README were measured on 2026-10-31 with Python 3.14.8, PyYAML 6.0.3, pytest 9.0.3 and Node.js 22.23.1.
+
+### Claude Code plugin
+
+The repository ships `.claude-plugin/marketplace.json` (marketplace `chwezi-website`) and `.claude-plugin/plugin.json` (plugin `website`, version 1.1.0, all 62 skills). The two install commands are in [Start here](#start-here).
+
+The plugin registers three hooks from `hooks/hooks.json`:
+
+- a Bash pre-check that blocks recognised destructive commands until the operator separately approves an override (`hooks/destructive-bash-gate.js`);
+- an advisory quality gate after file edits (`hooks/quality-gate.js`; set `CHWEZI_QUALITY_GATE_PROFILE` to `minimal`, `standard` or `strict`);
+- a documentation drift check when a response ends (`hooks/drift-check-hook.js`).
+
+### Installer
+
+Both entry points delegate to `scripts/install-engine.js`. It copies the engine into `~/.claude` (`--scope user`, the default) or `./.claude` (`--scope project`) and records ownership in `.chwezi/install-state.json`. It also accepts `--dry-run` and `--json`.
+
+```sh
+git clone https://github.com/peterbamuhigire/website-skills
+cd website-skills
+./install.sh --scope project        # macOS, Linux or Git Bash
+.\install.ps1 --scope project       # Windows PowerShell
+node scripts/install-engine.js doctor --scope project
+```
+
+Add `--dry-run` to `install.sh` to list the files first (504 on 2026-10-31); nothing is written. Run `doctor` from the project folder that holds the `.claude` folder.
+
+**Update.** Pull this checkout and run the installer again. It overwrites the files it owns. It does not delete files that were removed upstream, so uninstall first if you want an exact copy.
+
+**List or remove.** `node scripts/install-engine.js list-installed --scope project` lists installed engines. `node scripts/install-engine.js uninstall --engine website-skills --scope project` removes only the files the installer wrote, and it stops if any were modified unless you pass `--force`. Both commands ran in a scratch project on 2026-10-31.
+
+### Codex
+
+Codex reads `AGENTS.md`. Its Codex-only section runs `.codex/ensure_model_policy.py --runtime codex --check` with Python 3.11 or later (`python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`). Add `--apply` only when drift is reported. `--check` only reads. With `--runtime claude` the helper prints `NOT_APPLICABLE` and exits 0, and Claude skips that section.
+
+### Manual route
+
+Clone the repository and point the agent at `CLAUDE.md`, which imports `AGENTS.md`, the runner-agnostic router. To start a client site, copy `new-project.sh` (or `new-project.ps1`) into an initialised Git repository and run it. It adds this engine as a submodule at `.claude/skills/`, creates the `en`, `fr` and `sw` content folders, and copies the content templates.
 
 ## Quality gates and validation
 
-The gate scripts run against a built site, from the root of a consuming project: `scripts/perf-gate.sh` (budgets in `performance-budgets.json`, Lighthouse configuration in `lighthouserc.json`), `scripts/a11y-gate.sh`, `scripts/security-gate.sh`, `scripts/visual-qa.sh`, `scripts/slop-scan.sh` (vendored detector in `scripts/vendor/chwezi-slop/`, verified by `scripts/check-vendored-detector.py`) and `scripts/post-deploy-smoke.sh`. Set `SKILLS_DIR` to this checkout; reports go to the project's `reports/` folder. A gate never downloads its tools and never passes when it could not run:
+### The release gates
+
+The gate scripts run against a built site, from the root of a consuming project:
+
+- `scripts/perf-gate.sh` (budgets in `performance-budgets.json`, Lighthouse configuration in `lighthouserc.json`)
+- `scripts/a11y-gate.sh`
+- `scripts/security-gate.sh`
+- `scripts/visual-qa.sh`
+- `scripts/slop-scan.sh`, which uses the vendored detector in `scripts/vendor/chwezi-slop/`, verified by `scripts/check-vendored-detector.py`
+- `scripts/post-deploy-smoke.sh`
+
+Set `SKILLS_DIR` to this checkout; reports go to the project's `reports/` folder. A gate never downloads its tools and never passes when it could not run.
 
 | Gate | Needs in the consuming project | Stops with, when it is missing |
 |---|---|---|
@@ -141,19 +194,17 @@ The gate scripts run against a built site, from the root of a consuming project:
 | `post-deploy-smoke.sh <url>` | `curl` and a deployed HTTPS URL | exit 3 |
 | `metadata-audit.sh <dist>`, `html-perf-lint.mjs <dist>`, `drift-check.sh` | nothing beyond Bash, Node.js, Python and Git | not applicable |
 
-A complete worked deliverable, with its release record, gate table and rollback plan, is `examples/service-site-five-page/`. Operator certification material is in `certification/`.
-
 ### Validating this repository
 
 Run these from the repository root. They match `.github/workflows/skill-engine-quality.yml` and the validators declared in `.skills-engine/engine-manifest.yaml`.
 
 | Command | What it checks | Needs |
 |---|---|---|
-| `python3 -X utf8 scripts/validate-checkout-size.py` | immutable 5,000-entry caps for the full checkout and for the package, and manifest parity | Git |
-| `python3 -X utf8 scripts/validate-skill-registry.py` | the skill total and category counts in this README against the filesystem, relocations, and that the 15 routed design skills exist | design engine checkout for the last check; without one it is `NOT_ASSESSED` |
+| `python3 -X utf8 scripts/validate-checkout-size.py` | the 5,000-entry caps for the full checkout and the package, and manifest parity | Git |
+| `python3 -X utf8 scripts/validate-skill-registry.py` | the skill total and category counts in this README against the filesystem and relocations, and that the 15 routed design skills exist | design engine checkout for the last check; without one it is `NOT_ASSESSED` |
 | `python3 -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json` | the zero-debt skill contract | PyYAML |
 | `python3 -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures` | a lexical routing proxy over `tests/routing/fixtures.json`, not live routing | PyYAML |
-| `python3 -X utf8 scripts/validate-search-doctrine.py` | the search doctrine files and their currentness register; judged by today's date, no `--as-of` option | none |
+| `python3 -X utf8 scripts/validate-search-doctrine.py` | the search doctrine files and their currentness register, judged by today's date (no `--as-of` option) | none |
 | `python3 -X utf8 scripts/validate-source-registers.py [--as-of YYYY-MM-DD]` | expired or malformed review dates in `docs/standards-register.md` and `docs/source-registers/*.json` | none |
 | `python3 -X utf8 scripts/check_portable_references.py` | machine-specific paths and broken relative links | none |
 | `python3 -X utf8 scripts/source_ingestion_guardrail.py --root .` | rejects book-dump folders | none |
@@ -162,318 +213,147 @@ Run these from the repository root. They match `.github/workflows/skill-engine-q
 | `for t in hooks/test-*.js; do node "$t" \|\| exit 1; done` | the four hook test files | Node.js |
 | `python3 -m pytest -q` | the test suite | pytest, PyYAML and a Git checkout |
 
-Notes on running them:
+**Notes on running them**
 
-- **The design engine is found, not assumed.** The vendored-detector check and the registry validator look for it through `--source`, then `CHWEZI_DESIGN_ENGINE_ROOT`, then `CHWEZI_ENGINES_ROOT` (a folder of checkouts), then the folders beside this checkout, trying `design-system-skills` and `chwezi-design-engine`. When none is found the comparison is `NOT_ASSESSED`, which is reported and is never a pass.
-- **Re-vendoring the detector** is a reviewed step: `python3 -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>` refuses a source with uncommitted changes and rewrites `scripts/vendor/chwezi-slop/VENDOR.json`. Review the diff, then rerun the slop-pack validator, the tests and the worked example's slop scan.
+- **The design engine is found, not assumed.** The vendored-detector check and the registry validator look for it through `--source`, then `CHWEZI_DESIGN_ENGINE_ROOT`, then `CHWEZI_ENGINES_ROOT` (a folder of checkouts), then the folders beside this checkout. They try `design-system-skills` and `chwezi-design-engine`. When none is found the comparison is `NOT_ASSESSED`, which is reported and is never a pass.
+- **Re-vendoring the detector is a reviewed step.** Run `python3 -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>`. It refuses a source with uncommitted changes and rewrites `scripts/vendor/chwezi-slop/VENDOR.json`. Review the diff, then rerun the slop-pack validator, the tests and the worked example's slop scan.
 - **pytest is a hard prerequisite.** `python3 -m unittest discover -s tests` is not a substitute: on 2026-10-31 it ran 10 tests and failed to import nine modules that import `pytest`. The pytest run needs a Git checkout, not an exported archive, because `tests/test_kaizen_wave2.py::test_drift_check_is_bounded_and_repeatable` calls `git ls-files`. It takes one to two minutes.
 - **Two checks are not collected by pytest and are not CI steps.** Run `python3 -X utf8 tests/agent-integration/test_website_agent_contract.py` (it reads the engine manifest) and `node --test tests/a11y-gate-context.test.mjs` directly.
-- **Declared and CI-run validators differ.** The manifest declares eight validators (registry, skill contracts, routing, search doctrine, source registers, portable references, source ingestion, tests). The CI workflow runs the size, portable-reference, contract, routing, search-doctrine, source-register, vendored-detector, slop-pack, hook and pytest steps, and `source-ingestion-guardrail.yml` runs the ingestion guardrail. `validate-skill-registry.py` is declared but is not a CI step.
-- **Date-based checks fail on a future date unless sources are re-verified.** See the calendar below.
+- **Declared and CI-run validators differ.** The manifest declares eight validators: registry, skill contracts, routing, search doctrine, source registers, portable references, source ingestion and tests.
+  - The CI workflow runs the size, portable-reference, contract, routing, search-doctrine, source-register, vendored-detector, slop-pack, hook and pytest steps.
+  - `source-ingestion-guardrail.yml` runs the ingestion guardrail.
+  - `validate-skill-registry.py` is declared but is not a CI step.
+- **Date-based checks fail on a future date unless sources are re-verified.** See [Date-gated checks](#date-gated-checks).
 
-Not run on a plain Linux host without a locked project: the browser gates (`perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`), a completed `npm audit`, `post-deploy-smoke.sh`, `rollback.sh` against a real host, and `new-project.sh` (it clones the published repository over the network). Run each of them in a consuming project with the locked tools installed.
+**Not run on a plain Linux host without a locked project:** the browser gates (`perf-gate.sh`, `a11y-gate.sh`, `visual-qa.sh`), a completed `npm audit`, `post-deploy-smoke.sh`, `rollback.sh` against a real host, and `new-project.sh` (it clones the published repository over the network). Run each of them in a consuming project with the locked tools installed.
 
 ## Quality and improvement
 
-The engine follows the Portfolio Kaizen Standard: a cycle of measure, change, check and record, with a published audit score capped at 65 out of 100 and a plan that targets 95. The evidence for the October 2026 cycles is in [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/README.md) (29 October) and [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/README.md) (31 October, pass 2). Each holds the frozen baseline, backlog, experiment log, validation record, final report and next-cycle file. Earlier records are indexed in [`docs/README.md`](docs/README.md). The commits of both cycles are on `main`; on 2026-10-31 none had been pushed. The documentation wave's own follow-ups are in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md). What the two cycles changed, with the check behind each change, is listed in [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved) at the end of this section.
+The engine follows the Portfolio Kaizen Standard: a cycle of measure, change, check and record, with a published audit score capped at 65 out of 100 and a plan that targets 95.
 
-**Latest published score (pass 2, [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)).** Raw 62.9 out of 100; capped `min(raw, 65)` 62.9, so the cap does not bind. The pass-2 baseline was 55.7 and the 29 October final was 60.0. The target of 95 is not met, and these scores do not override a blocked release gate. The worked example is blocked for release on purpose. For the engine, the standing blockers are the Lighthouse CI dependency tree, the lab LCP of a font-using site, visual capture specs, staging-edge header proof and counsel review of privacy wording. The pass-2 test host could not run real pytest or any browser gate. A real pytest run on a clean clone on 2026-10-31 (pytest 9.0.3) passed 280 of 280 tests; no browser gate was run in that check.
+The evidence for the October 2026 cycles is in two folders:
 
-**Open items that matter to a user** (priority P0 in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md)):
+- [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/README.md) holds the 29 October cycle.
+- [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/README.md) holds the 31 October cycle (pass 2).
 
-1. The vendored `chwezi-slop` detector was behind the design engine's current rules: the pass-2 report records the default check exiting 1 with `DRIFT` on three files. It was re-synced afterwards, in commit `ae6487c`, to design-engine commit `72a3a37` (the check now exits 0, with two new rules, positive `tabindex` and minimum target size). A positive `tabindex` now fails `slop-scan.sh`; the target-size rule is browser tier and is not run by that scan. The item stays on the P0 list of `06-next-cycle.md` because that file is a frozen record; whether the website slop pack needs entries for the two rules is undecided.
-2. The Lighthouse CI dependency tree is not remediated or re-audited. `@lhci/cli` 0.15.1 was still the latest release on 2026-10-31 and pins Lighthouse 12.6.1, while Lighthouse is at 13.6.0. The 29 October audit of the disposable QA dependency tree found 15 high-severity package records and no critical record; that is not a count of unique advisories or a statement about every production dependency.
-3. The lab LCP of a font-using five-page site is above the unchanged 2,000 ms assertion. The worked example bundles no fonts, so it cannot test this.
+Each holds the frozen baseline, backlog, experiment log, validation record, final report and next-cycle file. Earlier records are indexed in [`docs/README.md`](docs/README.md). The documentation wave's own follow-ups are in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md). The commits of both cycles are on `main`; on 2026-10-31 none had been pushed.
 
-Also open, and relevant when you rely on a skill: the privacy-statute checks are identifier-level and three rest on search summaries, and the Nigerian NDPR and NDPA naming is inconsistent across five files; the static-catalogue page pattern and manual mobile-money wording need an owner decision; 30 of the 62 skills have no positive routing fixture; the provenance of one register record, `LOCAL_CARTER_EPUB_2026`, is unresolved. Routing results are a lexical proxy, not live-model evidence.
+### Latest published score
 
-**Date-triggered gates.** The two currentness validators fail once a recorded review date passes. Moving a date needs a source check behind it: the register validator also rejects a review date further from its verification than the cadence allows (45, 100 and 400 days for monthly, quarterly and annual rows). The dates below were read from the registers and confirmed by running `validate-source-registers.py --as-of` on the day before and the day after each (the error count steps up on the day shown); `validate-search-doctrine.py` has no such option, so its date was confirmed by running it with a substituted current date.
+Pass 2 ([final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)) scored the engine at raw 62.9 out of 100. The capped score, `min(raw, 65)`, is also 62.9, so the cap does not bind. The pass-2 baseline was 55.7 and the 29 October final was 60.0.
 
-| First failing day | Records that reach their review date the day before | Validator |
-|---|---|---|
-| 2026-12-01 | `standards-currentness-2026-10-31.json` (the register and three claims) and four standards-table rows: Search, Lab tooling, Structured data, Data-protection statutes (2026-11-30) | `validate-source-registers.py` |
-| 2026-12-06 | Seven claims in `search-ai-currentness-2026-09-05.json` (2026-12-05) | `validate-search-doctrine.py` and `validate-source-registers.py` |
-| 2026-12-13 to 2026-12-26 | That register (2026-12-12), four of its claims (2026-12-14), six standards claims (2026-12-15), `performance-currentness-2026-09-23.json` (2026-12-23) and the claims of `performance-currentness-2026-09-25.json` (2026-12-25); each day-after run adds the records listed | `validate-source-registers.py` |
-| 2027-01-30 | `performance-currentness-2026-09-25.json` (its register, 2027-01-29) | `validate-source-registers.py` |
-| 2027-02-01 | Fourteen records (2027-01-31): seven quarterly standards-table rows (WCAG, WAI-ARIA, Application verification, Web risk awareness, Workflow security, Core Web Vitals, Privacy risk) and seven claims | `validate-source-registers.py` |
-| 2027-03-24, 2027-09-06, 2027-09-24 | Four, one and one claims in the performance and search registers | `validate-source-registers.py` |
-| 2027-11-01 | The annual RFC 9116 row and one standards claim (2027-10-31) | `validate-source-registers.py` |
+The target of 95 is not met, and these scores do not override a blocked release gate. The worked example is blocked for release on purpose. The standing blockers for the engine are:
 
-The next-cycle file also sets a monthly backlog review on 2026-11-30 and a full engine audit with the 65 cap on 2027-01-31.
+- the Lighthouse CI dependency tree;
+- the lab largest contentful paint (LCP) of a font-using site;
+- visual capture specs;
+- staging-edge header proof;
+- counsel review of privacy wording.
 
-### What the October 2026 kaizen improved
+The pass-2 test host could not run real pytest or any browser gate. A real pytest run on a clean clone on 2026-10-31 (pytest 9.0.3) passed 280 of 280 tests. No browser gate was run in that check.
 
-Two cycles ran in October 2026. The first, on 29 October, is recorded in its [final report](docs/kaizen/2026-10-engine-kaizen/05-final-report.md) and [experiment log](docs/kaizen/2026-10-engine-kaizen/03-experiment-log.md). Pass 2, on 31 October, is recorded in its [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md), [backlog](docs/kaizen/2026-10-engine-kaizen-pass-2/02-improvement-backlog.md), [experiment log](docs/kaizen/2026-10-engine-kaizen-pass-2/03-experiment-log.md) and [validation record](docs/kaizen/2026-10-engine-kaizen-pass-2/04-validation-record.md). Everything below was kept, and each code change has its own commit. Neither report records a reverted experiment, so none is listed as abandoned. Every hash of this repository is on `main`, checked with `git merge-base --is-ancestor` and `git show --stat`. `7582bbf` and `72a3a37` are commits of the design engine, confirmed there with a read-only `git cat-file`.
+### Open items that matter to a user
 
-Figures marked **re-measured** were run again on 2026-10-31 on `main` at `8c2d59b`, using scratch fixtures held outside the checkout. Every other figure is copied from the evidence file named beside it. `pytest`, a browser and a completed `npm audit` were not available on the host used for that check, so an improvement that rests on one of them is described as the earlier cycle recorded it.
+These are the highest priority (P0) in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
+
+1. **The vendored detector was behind the design engine.** The pass-2 report records the default check exiting 1 with `DRIFT` on three files. Commit `ae6487c` re-synced it to design-engine commit `72a3a37`, and the check now exits 0.
+   - The sync added two rules: positive `tabindex` and minimum target size.
+   - A positive `tabindex` now fails `slop-scan.sh`. The target-size rule is browser tier, so that scan does not run it.
+   - The item stays on the P0 list because `06-next-cycle.md` is a frozen record.
+   - Whether the website slop pack needs entries for the two rules is undecided.
+2. **The Lighthouse CI dependency tree is not remediated or re-audited.** `@lhci/cli` 0.15.1 was still the latest release on 2026-10-31 and pins Lighthouse 12.6.1, while Lighthouse is at 13.6.0. The 29 October audit of the disposable QA dependency tree found 15 high-severity package records and no critical record. That is not a count of unique advisories or a statement about every production dependency.
+3. **The lab LCP of a font-using five-page site is above the unchanged 2,000 ms assertion.** The worked example bundles no fonts, so it cannot test this.
+
+Also open, and relevant when you rely on a skill:
+
+- The privacy-statute checks are identifier-level, and three rest on search summaries. The Nigerian NDPR and NDPA naming is inconsistent across five files.
+- The static-catalogue page pattern and the manual mobile-money wording need an owner decision.
+- 30 of the 62 skills have no positive routing fixture.
+- The provenance of one register record, `LOCAL_CARTER_EPUB_2026`, is unresolved.
+- Routing results are a lexical proxy, not live-model evidence.
+
+### Date-gated checks
+
+Two currentness validators fail once a recorded review date passes. The first failures come on 2026-12-01. Four standards-table rows and one register with three claims reach their review date on 2026-11-30 (`--as-of 2026-11-30` exits 0, `--as-of 2026-12-01` exits 1 with 8 findings). Moving a date needs a source check behind it.
+
+The full calendar, with the records behind each date, is in [`docs/date-gated-checks.md`](docs/date-gated-checks.md). The next-cycle file also sets a monthly backlog review on 2026-11-30 and a full engine audit with the 65 cap on 2027-01-31.
+
+## What the October 2026 kaizen improved
+
+Two cycles ran in October 2026.
+
+- The first, on 29 October, is recorded in its [final report](docs/kaizen/2026-10-engine-kaizen/05-final-report.md) and [experiment log](docs/kaizen/2026-10-engine-kaizen/03-experiment-log.md).
+- Pass 2, on 31 October, is recorded in its [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md), [backlog](docs/kaizen/2026-10-engine-kaizen-pass-2/02-improvement-backlog.md), [experiment log](docs/kaizen/2026-10-engine-kaizen-pass-2/03-experiment-log.md) and [validation record](docs/kaizen/2026-10-engine-kaizen-pass-2/04-validation-record.md).
+
+Everything below was kept, and each code change has its own commit. Neither report records a reverted experiment.
+
+Every hash of this repository is on `main`, checked with `git merge-base --is-ancestor` and `git show --stat`. `7582bbf` and `72a3a37` are design-engine commits, confirmed there with a read-only `git cat-file`.
+
+In the Basis column, **re-measured** means the 31 October end figure was run again on 2026-10-31 on `main` at `8c2d59b`. Every other figure is copied from the evidence file named beside it. The write-up of each change, with the check behind it, is in [`docs/october-2026-kaizen-changes.md`](docs/october-2026-kaizen-changes.md).
+
+### Measures
 
 | Measure | 29 Oct start | 29 Oct end | 31 Oct start | 31 Oct end | Basis |
 |---|---:|---:|---:|---:|---|
-| Score, raw (of 100) | 55.5 | 60.0 | 55.7 | 62.9 | Copied from the scorecards and final reports. A judgement, not a measurement. The 31 October start is below the 29 October end because the fresh look found defects the first cycle had not measured. |
-| Score, capped `min(raw, 65)` | 55.5 | 60.0 | 55.7 | 62.9 | Copied. The cap does not bind at any point and the target of 95 is not met. |
-| Routing, rank-1 precision | 35/37 (94.6%) | 37/40 (92.5%) | 37/40 (92.5%) | 41/44 (93.2%) | **Re-measured** for the last column: `routing-smoke-test.py --min-rank1 92 --lint-fixtures`, exit 0, 44/44 in the top three. A lexical proxy, not live routing. |
+| Score, raw (of 100) | 55.5 | 60.0 | 55.7 | 62.9 | Copied from the scorecards. A judgement, not a measurement. |
+| Score, capped `min(raw, 65)` | 55.5 | 60.0 | 55.7 | 62.9 | Copied. The cap never binds and the target of 95 is not met. |
+| Routing, rank-1 precision | 35/37 (94.6%) | 37/40 (92.5%) | 37/40 (92.5%) | 41/44 (93.2%) | **Re-measured**, `routing-smoke-test.py`, exit 0, 44/44 in the top three. A lexical proxy. |
 | Owned routing negatives passing | 21 | 22 | 22 | 24 | **Re-measured**, same run: 24 of 24. |
-| Tests passing | 130 (1 failed) | 153 | 153 | 280 | Copied, not re-measured: pytest is not installed on this host. The 29 October counts are real pytest. The 31 October pass counted under a stand-in runner, and the documentation wave then recorded 280 of 280 under pytest 9.0.3 on a clean clone. |
-| Machine-specific paths in active content | not measured | not measured | 25 | 0 | **Re-measured**: `check_portable_references.py` exit 0. History documents keep 47 paths at fixed ceilings. A looser `git grep` at the 31 October start counted 26 hits. |
-| Routed design skills the registry check verifies | none found by default | 8 | 8 | 15 | **Re-measured**: `validate-skill-registry.py` exit 0, 62 skills, 15 routed design skills. |
-| Overdue review dates | 2 claims | 0 claims | 6 standards rows | 0 | **Re-measured**: `validate-source-registers.py` exit 0 (4 registers, 53 claims) and `validate-search-doctrine.py` exit 0. No validator read the standards table before 31 October. |
+| Tests passing | 130 (1 failed) | 153 | 153 | 280 | Copied. The 29 October counts are real pytest; the 31 October pass used a stand-in runner. A pytest 9.0.3 run at `b111c0b` on 2026-10-31 passed 280 of 280. |
+| Machine-specific paths in active content | not measured | not measured | 25 | 0 | **Re-measured**, `check_portable_references.py` exit 0. History documents keep 47 paths at fixed ceilings. |
+| Routed design skills the registry check verifies | none found by default | 8 | 8 | 15 | **Re-measured**, `validate-skill-registry.py` exit 0. |
+| Overdue review dates | 2 claims | 0 claims | 6 standards rows | 0 | **Re-measured**, `validate-source-registers.py` and `validate-search-doctrine.py` exit 0. No validator read the standards table before 31 October. |
 
-#### Defects fixed, most serious first
+The 31 October start score is below the 29 October end score because the fresh look found defects the first cycle had not measured.
 
-- **The security gate failed open (critical, `f548bb3`).** With no lockfile or no registry access, `scripts/security-gate.sh` read npm's error document as zero findings, printed `npm audit high=0 critical=0` and carried on. It now judges completion from the report and stops with exit 6. Five of nine new tests failed on the old script and all nine pass; the new tests run the real script against a stub `npm`. **Re-measured** in an empty scratch project: the old script printed `high=0 critical=0` and went on to the header step (exit 2); the current script exits 6 with "npm audit did not complete". Real npm on a lockfile with no dependencies still passes the audit step (copied from the experiment log).
-- **The accessibility gate crashed on every page (`e510d6b`).** On 29 October the locked `a11y-gate.sh` failed all five service pages with `Please use browser.newContext()`. The runner now creates an explicit browser context and page and closes it on success and on error. **Re-measured**: `node --test tests/a11y-gate-context.test.mjs`, 2 of 2 (no browser needed). The browser run is copied from the 29 October record: with locked `@playwright/test` 1.64.1 and `@axe-core/playwright` 4.10.2 the gate scanned five clean routes with no serious or critical findings and failed a deliberately defective page (one critical, two serious). It was not repeated here.
-- **The SRI check misread canonical links (`e85a746`, `ebce413`, `430ad66`).** `check-sri.sh` treated an absolute `rel=canonical` URL as an external asset and failed clean pages; the first fix then let a canonical URL exempt a remote asset. The checker now parses script and stylesheet assets, requires a correctly sized SHA-256, SHA-384 or SHA-512 digest and `crossorigin`, and never infers the served origin from the canonical link (`SRI_DOCUMENT_ORIGIN` supplies it). Ten SRI tests (copied). **Re-measured**: a page whose only absolute URL is its canonical link exits 1 on the old script and 0 on the current one; an external script without `integrity` exits 1 with two failures.
-- **The metadata audit passed pages that fail WCAG (`0a28183`).** `metadata-audit.sh` now fails a page with a missing or empty `<html lang>` (WCAG 3.1.1), with `user-scalable=no` or `0`, or with `maximum-scale` below 2 (WCAG 1.4.4, the axe `meta-viewport` rule). The "pass" fixture named in `tests/gates/cases.json` had itself failed the script (no canonical or share tags) and was corrected. Eleven of 18 new tests failed on the old script; all 18 pass. **Re-measured**: a scratch page with no `lang` and a zoom-locking viewport exits 0 on the old script and 1 on the current one, with two failure lines. These are static twins of axe checks; the browser gate stays authoritative.
-- **The language pack claimed more than the engine can produce (`51931d2`).** `african-language-pack.md` called ten languages first-class while only Kiswahili has a native-copy skill, and quoted speaker figures with no source. "First-class" now requires a native-copy skill; the nine others are labelled layout-supported and need a named native writer and reviewer; a Copy route column names the skill or says none; every figure is kept, labelled unsourced and `NOT_ASSESSED` (claim `WSK-LANG-001`). Six new tests failed before and pass now (copied). No language was added and no figure was sourced.
-- **The hero lint named logos as hero images (`f936529`).** `html-perf-lint.mjs` warned HPL-101 on every page of the example because a 40 px mark was its largest declared image. Images declared at 64 px or less in both dimensions are no longer ranked. Two of eight new tests failed before; all eight pass. **Re-measured** on the five-page example: 5 warnings on the old script, 0 on the current one. A wide, short wordmark (for example 240 by 60) is still ranked as a candidate.
+### Defects fixed, most serious first
 
-#### The vendored slop detector and the design engine
+- **The security gate failed open (critical, `f548bb3`).** With no lockfile or registry access, `scripts/security-gate.sh` read npm's error as zero findings and printed `npm audit high=0 critical=0`. It now stops with exit 6. Five of nine new tests failed on the old script; all nine pass.
+- **The accessibility gate crashed on every page (`e510d6b`).** The runner now creates an explicit browser context and page. `node --test tests/a11y-gate-context.test.mjs` passes 2 of 2. The earlier browser run is copied from the 29 October record, not repeated.
+- **The subresource integrity (SRI) check misread canonical links (`e85a746`, `ebce413`, `430ad66`).** `check-sri.sh` treated a canonical URL as an external asset. It now parses script and stylesheet assets and requires a correctly sized digest and `crossorigin`. Ten SRI tests.
+- **The metadata audit passed pages that fail WCAG (`0a28183`).** It now fails a missing `<html lang>`, a zoom-locking viewport, and a `maximum-scale` below 2. Eleven of 18 new tests failed on the old script; all 18 pass.
+- **The language pack claimed more than the engine can produce (`51931d2`).** "First-class" now requires a native-copy skill. Only Kiswahili has one; the other nine languages are layout-supported only. Speaker figures are labelled unsourced and `NOT_ASSESSED`.
+- **The hero lint named logos as hero images (`f936529`).** Images of 64 px or less in both dimensions are no longer ranked. Warnings on the five-page example fell from 5 to 0.
 
-- **The design engine is found, not assumed (`53dddac`, `38c9bb1`, `bd71a48`).** The registry validator and the vendored-detector check each assumed one sibling folder name, so beside `design-system-skills` the comparison reported `NOT_ASSESSED`. `scripts/design_engine_root.py` now resolves the engine through `--source`, `CHWEZI_DESIGN_ENGINE_ROOT`, `CHWEZI_ENGINES_ROOT`, then both sibling names, and accepts a folder only if its marker folder exists. The hash test no longer depends on the sibling after the design engine committed new rules mid-cycle and broke it. Isolated tests cover a present and a missing sibling (29 October); 11 tests cover each branch of the finder (31 October). **Re-measured**: `check-vendored-detector.py` reports `source comparison PASS`.
-- **The vendored detector was re-synced with the design engine (`ae6487c`).** After design-engine commit `7582bbf` the default check exited 1 with `DRIFT` on three files. `check-vendored-detector.py --sync-from`, which refuses a source with uncommitted changes, copied the design engine at clean commit `72a3a37`. Three vendored files and `VENDOR.json` changed (133 lines added, 8 removed). The registry went from 49 to 51 rules: `positive-tabindex` (deep tier, warning) and `target-size-minimum` (browser tier, warning). Checked before and after: the default check exit 1 to 0; `validate-slop-pack.mjs` 20 pack rules against 49, then 51, registry rules; pytest 280 passed both times; the five-page example's slop scan 0 block, 0 warning, 0 advisory both times (all copied from the commit and [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md)). **Re-measured**: default check exit 0, 51 rules (49 at the parent commit), slop-pack validator exit 0, example scan exit 0.
-  **The one behaviour change:** `slop-scan.sh` runs the detector at `--tier deep --fail-on warning`, so a positive `tabindex` is now a blocking warning. **Re-measured** on a scratch page holding `<a href="/contact" tabindex="3">`: the previous detector reported no findings; the current one reports one `positive-tabindex` warning and `slop-scan.sh` exits 1. The target-size rule is browser tier, so the scan never runs it; it is `NOT_ASSESSED` until a browser run. No website slop-pack entry and no skill text was added for either rule; that is left to the owner.
+### The vendored detector and new checks
 
-#### New checks that keep these fixed
+- **The design engine is found, not assumed (`53dddac`, `38c9bb1`, `bd71a48`).** `scripts/design_engine_root.py` resolves it through `--source`, `CHWEZI_DESIGN_ENGINE_ROOT`, `CHWEZI_ENGINES_ROOT`, then both sibling folder names. Eleven tests cover each branch.
+- **The detector was re-synced (`ae6487c`).** The registry went from 49 to 51 rules, and the default check went from exit 1 to exit 0. One behaviour changed: a positive `tabindex` is now a blocking warning in `slop-scan.sh`.
+- **Machine paths and broken links are checked (`0b29417`).** `scripts/check_portable_references.py` runs in CI. Active findings went from 25 to 0.
+- **Checkout and package size are capped (`7c2a181`, `4733227`, `dbc8b69`).** `scripts/validate-checkout-size.py` fails closed at 5,000 entries.
+- **A worked deliverable exists (`a63a05b`).** [`examples/service-site-five-page/`](examples/service-site-five-page/README.md) is a synthetic site. Its test injects eleven defects and each is caught. The applied-proof score rose from 25 to 40, a judgement.
 
-- **Machine paths and broken links are now checked (`0b29417`).** The rule against machine-specific paths was prose only, and 25 active-content paths (skill references, the router, the rules file and two registers) named a user-profile folder or the local web-server folder. `scripts/check_portable_references.py` fails on such paths and on Markdown relative links that do not resolve or leave the checkout. History documents and client prompts are held to no-increase ceilings in `quality/portable-references-policy.json`. It runs in CI and is declared in the engine manifest. The 25 paths became skill names resolved through the engine-routing table. 27 new tests (copied); active findings 25 to 0 and routed design skills verified 8 to 15, both **re-measured** (see the table). The validator flagged its own router bullet, which quoted a folder name, and the wording was changed instead of adding a bypass.
-- **Checkout and package size are capped by an executable check (29 October; `7c2a181`, `4733227`, `dbc8b69`).** `scripts/validate-checkout-size.py` fails closed when the full checkout or the package-oriented count passes 5,000 entries, when a symlink is broken or leaves the checkout, when a directory cannot be read, or when registry, plugin and marketplace skill identities and paths disagree. It runs in CI. Ten tests, including exactly 5,000 accepted and 5,001 rejected for both counters (copied). **Re-measured**: exit 0 at 1,325 full and 851 package entries, zero symlinks; the full count includes `.git` and rises with each commit. One related limit was raised: the drift walker's Markdown bound went from 600 to 650 when the evidence pages took the checkout to 603 files; its 16 MiB byte bound is unchanged.
-- **A maintained worked deliverable (`a63a05b`).** Applied proof was the weakest dimension at 25 of 100. [`examples/service-site-five-page/`](examples/service-site-five-page/README.md) is a synthetic site for a fictional bicycle workshop: brief, five pages, a release record, a gate table and a rollback plan written to match `scripts/rollback.sh`. `tests/test_worked_service_site.py` runs every recorded offline gate and injects eleven defects (missing `lang`, zoom lock, missing canonical link, filler phrase, broken link, external script without integrity data, unsized image, render-blocking script, 300 KB image above the fold, banned font, credential-shaped string). Each is caught with the gate's own exit code and message. 27 new tests and an applied-proof score of 25 to 40 (copied; the score is a judgement). The release decision is BLOCKED on purpose: `security.txt` fails on the placeholder domain and eight gates are recorded `NOT_ASSESSED` with reasons. **Re-measured**: the metadata audit, hero lint and slop scan pass on the example. The injected-defect test needs pytest and was not re-run.
+### Routing, currentness and documentation
 
-#### Routing and skill guidance
+- **A whole-site request now reaches `website-builder` (`af0ad1e`).** The prompt ranks third of 62 and rank-1 precision rose from 92.5% to 93.2%. Thirty of 62 skills still have no fixture.
+- **A static catalogue with manual settlement has guidance (`4351295`).** The cost is recorded: rank-1 precision fell from 94.6% to 92.5%, so the router did not improve on that measure. The page pattern is still an owner decision.
+- **The standards register has an expiry check (`e52de53`).** Six rows were past their review dates and no validator read the table. All were re-verified on 2026-10-31, and Schema.org 30.0 became 30.1 and Lighthouse 13.5.0 became 13.6.0.
+- **Overdue Google Search and model records were refreshed (`8cfb82f`, `1940e21`, `b6e5cdb`).** `validate-search-doctrine.py` went from failing to passing.
+- **A dependency override is documented (`1a02b98`).** Overriding `serve`'s `compression` to 1.8.2 removes the compression advisory and lowers the high-severity package records from 15 to 13 (zero critical). The gate still blocks.
+- **The documentation matches the repository (`6d88f51`, `565963c`, `d89c769`, `4624a48`, `9fdebd0`, `1c7e007`, `8c2d59b`).** The README, `docs/README.md`, `CONTRIBUTING.md`, `AGENTS.md` and the relocation map were brought up to date.
 
-- **A whole-site request now reaches `website-builder` (`af0ad1e`).** A prompt to build a five-page site through release ranked `deploy` first and `website-builder` outside the top five. Its "Use When" text now names a multi-page site built from a brief and delivered through release, with four positive and two owned-negative fixtures. The prompt now ranks third of 62 (`deploy` stays first). Rank-1 precision went from 92.5% to 93.2%, owned negatives from 22 to 24, and skills with three fixtures and two owned negatives from 2 to 4 of 62 (`website-builder`, `ecommerce`, `security-gate`, `deploy`; **re-measured** by counting `tests/routing/fixtures.json` at the baseline commit and today). Thirty of 62 skills still have no fixture, and the results are a lexical proxy.
-- **A static catalogue with enquiry and manual settlement has guidance (29 October; `4351295`).** `ecommerce` had no explicit steps for a catalogue that sends buyers to a seller by message and settles by hand. The skill now requires a seller-approved enquiry destination and response owner, and verified provider, merchant, price, currency, stock, fulfilment, refund, reconciliation and access-control inputs before manual settlement is proposed. It adds three positive and two owned-negative fixtures and a test that holds that floor. The cost is recorded: rank-1 precision fell from 35/37 (94.6%) to 37/40 (92.5%) against a 92% floor, so the router did not improve on that measure. The page pattern itself is still an owner decision (see the open items above).
+None of this changes the score, the release blockers or the open items above.
 
-#### Currentness and dependency guidance
+## Contributing, author and licence
 
-- **The standards register has an expiry check and was re-verified (`e52de53`).** Six rows of `docs/standards-register.md` were past their review dates, one since 2026-08-01, and no validator read the table. `scripts/validate-source-registers.py` now fails on a past review date, a missing verification date, a review date further from its verification than the cadence allows, or a claim that cites a source no register records. Each row was re-verified against its primary source on 2026-10-31 and recorded as 18 dated claims with honest support states. Two stale values were corrected: Schema.org 30.0 to 30.1 and Lighthouse 13.5.0 to 13.6.0. The five data-protection statute checks stay identifier-level and `partially_supported`; three were read through search summaries because the official pages could not be fetched. 21 new tests (copied). **Re-measured**: exit 0 today, and exit 1 with 8 findings under `--as-of 2026-12-01`, which is the failure it exists to cause.
-- **Overdue Google Search and model records were refreshed (29 October; `8cfb82f`, `1940e21`, `b6e5cdb`).** `validate-search-doctrine.py` failed on SAI-018 (review date 2026-10-03) and the model record `MODEL-001` was overdue. SAI-018 was rechecked against Google's generative-AI guide and now applies to Google Search only. The model record was refreshed from official Anthropic and OpenAI pages and the Codex catalogue check was added. No policy changed, no model comparison was run, and account entitlement was not assessed. The search validator went from failing to passing (**re-measured**: exit 0, 18 files) and the full suite from 130 passed and 1 failed to 153 passed (copied).
-- **A tested, scoped dependency override is documented (29 October; `1a02b98`).** The locked QA tree reports 15 high-severity package records. `skills/quality-gates/security-gate/SKILL.md` now records a dated, tested override of `serve`'s `compression` to 1.8.2, which removes that one record (15 to 13 high, zero critical). The gate still blocks and nothing is suppressed. This was verified in a disposable project on 29 October and not repeated here, since it needs a locked project and registry access. The Lighthouse CI tree is not remediated (see the open items above).
+**Contributing.** [`CONTRIBUTING.md`](CONTRIBUTING.md) lists the steps and the local gates. In short: read `AGENTS.md` and `docs/skill-authoring-standard.md`, start a new skill from `templates/skill/SKILL.md`, update the routing fixtures when routing changes, and run the validators in [Validating this repository](#validating-this-repository). Never store book extractions or book summaries in the repository.
 
-#### Documentation
+**Author.** Peter Bamuhigire, [techguypeter.com](https://techguypeter.com).
 
-- **The documentation matches the repository (`6d88f51`, `565963c`, `d89c769`, `4624a48`, `9fdebd0`, `1c7e007`, `8c2d59b`).** This README gained prerequisites, a validator table with exact commands, notes on running them (pytest is a hard prerequisite, two checks are not collected by pytest, declared and CI-run validators differ), related engines and the quality section. `docs/README.md` indexes the references and improvement records, and `docs/relocation-map.md` was re-verified. `CONTRIBUTING.md` and `docs/skill-authoring-standard.md` give `python3` commands and the full validator list. `AGENTS.md` names relocated skills with their engine. The 29 October marketplace records cite the clean commit `c41cfcb`, and [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md) records what the wave left alone. **Re-measured**: `check_portable_references.py` exit 0 (no broken relative link) and `validate-skill-registry.py` exit 0 (README skill totals match the filesystem).
+**Licence.** The repository carries four open licences by path (MIT, CC BY 4.0, CC BY-SA 4.0 and CC BY-NC 4.0) and a proprietary layer. `LICENSE` summarises them and `docs/licensing-matrix.md` is authoritative.
 
-None of this changes the score, the release blockers or the open items above. The frozen baselines and final reports are the record; this list only indexes them.
+## Related engines
+
+This repository owns website strategy, build, launch and retainer work. Other engines own the neighbouring work. A skill or router line names them through the engine-routing table of the machine, never by a path.
+
+- **Design.** [`chwezi-design-engine`](https://github.com/peterbamuhigire/chwezi-design-engine) (held in a folder called `design-system-skills` on some machines) owns typography, colour, layout and the anti-slop doctrine. The skills relocated there (`color-selection`, `ux-psychology`, `form-ux-design`, `brand-style-guide`, `brand-visual-identity`, `sector-strategies`, `legal-sector-ui-ux`) are listed in [`docs/relocation-map.md`](docs/relocation-map.md).
+- **Proposals.** [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) owns proposal, tender and commercial wording. It is an external engine, and this repository does not embed it. An earlier submodule was removed in commit `37780ba`, and `docs/licensing-matrix.md` records it as separately licensed.
+- **Social campaigns.** [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) hands over landing-page briefs through `ad-to-site-journey-handoff`. `launch-campaigns` receives them.
+- **Research and currentness.** The Digital Research engine supplies the currentness gate and the research method that every blog post and every standards claim must pass.
+- **Engineering standard.** [`chwezi-dev-engine`](https://github.com/peterbamuhigire/chwezi-dev-engine) holds the canonical skill-writing standard and the `quick_validate.py` and `engine_compliance.py` checks used in `CONTRIBUTING.md`.
 
 ## References
 
-Citations only. Book methods are paraphrased into task-oriented references with a short attribution. Book extractions and book summaries are never stored in this repository (see `docs/continuous-improvement/book-source-retirement-2026-09-24.md`). Where the repository omits a publisher or year, it is omitted here.
+The citations behind the engine's skills are in [`docs/references.md`](docs/references.md): books, repositories studied in the September 2026 ten-repository Kaizen, standards and official sources, and websites and articles.
 
-### Books
-
-- Aames, A. *Trilingual Story Book*.
-- Agius and Clancey. *Faster, Smarter, Louder*.
-- Almasi, Fallon et al. *Swahili Grammar for Introductory and Intermediate Levels (Sarufi ya Kiswahili)*.
-- Andrew, R. (2019) *Get Ready for CSS Grid Layout*, 2nd edn, A Book Apart.
-- Andrews, G. *Making Your Website Work: 100 Copy & Design Tweaks*.
-- Ariely, D. (2008) *Predictably Irrational*, HarperCollins.
-- Baker, D. C. *The Business of Expertise*.
-- Bank, C. and Cao, J. *Web UI Design Best Practices*.
-- Beyer et al. *Site Reliability Engineering*.
-- Bhatti et al. *Docs for Developers*.
-- Bishop, W. and Starkey, D. (2006) *Keywords in Creative Writing*, Utah State University Press.
-- Blauer, I. and Woolley, A. (c. 2021) *Keywords for SEO: Actionable Knowledge Bombs to Help You Rank on Google in 2021*.
-- Block. *Flawless Consulting*.
-- Blount, J. (2015) *Fanatical Prospecting*, Wiley.
-- Bly, R. *The Copywriter's Handbook*, 4th edn.
-- Bly, R. *How to Write and Sell Simple Information*.
-- Bohnke, C. (2024) *From Zero to UI/UX Hero*.
-- Boulares, M. and Frérot, J.-L. *Grammaire progressive du français — Niveau avancé*, CLE International.
-- Branson, S. (2020) *UX / UI Design: Introduction Guide to Intuitive Design and User-Friendly Experience*.
-- Brown, R. (2016) *Build Your Reputation: Grow Your Personal Brand for Career and Business Success*, Capstone (John Wiley & Sons).
-- Brunson, R. (2013) *108 Proven Split Test Winners*, DotComSecrets Labs.
-- Brunson, R. (2015) *DotCom Secrets*, Hay House.
-- Brunson, R. *Expert Secrets*.
-- Butterick, M. *Practical Typography*.
-- Caples, J. *Tested Advertising Methods* (as relayed in Serling 2002).
-- Carter, C. (2026) *The New Rules of AI Search: SEO for Visibility in ChatGPT, Google Gemini, and Generative Search*, John Wiley & Sons.
-- Cialdini, R. (2007) *Influence*, Collins.
-- Coleman, J. (2018) *Never Lose a Customer Again*, Portfolio.
-- Conta, A. (2024) *The Art and Science of UX Design*.
-- Cook, P. (2022) *Fundamentals of HTML, SVG, CSS and JavaScript for Data Visualisation*, Leanpub.
-- Croll, A. and Yoskovitz, B. (2013) *Lean Analytics: Use Data to Build a Better Startup Faster*, O'Reilly Media.
-- Deacon, P. B. (2020) *UX and UI Design Strategy: A Step-by-Step Guide*.
-- Debelak, D. (2006) *Business Models Made Easy*, Entrepreneur Press.
-- Debelak, D. (2006) *Perfect Phrases for Business Proposals and Business Plans*, McGraw-Hill.
-- Devitt, R. et al. *Arrive: A Design Innovation Framework to Deliver Breakthrough Services, Products and Experiences*, Routledge.
-- DK. *French–English Bilingual Visual Dictionary*.
-- Doerr, J. (2018) *Measure What Matters*, Portfolio.
-- Dunford, A. (2019) *Obviously Awesome*.
-- Edwards, R. (2018) *How to Write Copy That Sells*, self-published.
-- Enders, J. (2016) *Designing UX: Forms — Create Forms That Don't Drive Your Users Crazy*, SitePoint.
-- Enns, B. (2010) *The Win Without Pitching Manifesto*.
-- Enns, B. *The Four Conversations*.
-- Fabian, J. *Language and Colonial Power*.
-- Fekeshazi, Z. (c. 2017) *Product Managers' Guide to UX Design*, UX Studio.
-- Fishbein, M. *Growth Hacking with Content Marketing*, self-published.
-- Fitzpatrick. *The Mom Test*.
-- Fox, T. *Anatomy for Artists* (read; no claim is attributed to it).
-- Franz, B. (2025) *Usability and User Experience Design*.
-- French Hacking. *2000 French Phrases* and *50 Most Used French Verbs*.
-- Garner, R. (2012) *Search and Social: The Definitive Guide to Real-Time Content Marketing*, Wiley/Sybex.
-- Gerber, M. *The E-Myth*.
-- Godin, S. (2018) *This Is Marketing*.
-- Goward, C. (2012) *You Should Test That*.
-- Graves. *Writing for Profit*.
-- Grigorik, I. *High Performance Browser Networking*, O'Reilly.
-- Halvorson, K. and Rach, M. *Content Strategy for the Web*, 2nd edn.
-- Handley, A. *Everybody Writes*, 2nd edn.
-- Hargis, Carey et al. *Developing Quality Technical Information*.
-- Hedley, D. (2013) *How to Create $1,600/Month Niche Websites for Passive Income*.
-- Heminway, A. *Practice Makes Perfect: Complete French Grammar*, McGraw-Hill.
-- Hennessy, B. (2018) *Influencer: Building Your Personal Brand in the Age of Social Media*, Citadel Press (Kensington).
-- Hodent, C. (2022) *What UX Is Really About: Introducing a Mindset for Great Experiences*, CRC Press.
-- Hoskins, D. *The Product-Minded Engineer*.
-- Hunter, V. L. with Tietyen, D. (1997) *Business to Business Marketing: Creating a Community of Customers*, NTC Business Books.
-- Hype4. *Frontend Unicorn* and *DESIGN.RIP — Master UI Design Elements*.
-- Iny, D. et al. *Blog Post Ideas*.
-- InVision. *Design Systems Handbook*.
-- Jantsch, J. (2010) *The Referral Engine*, Portfolio.
-- Johnson, J. (2021) *How to Become a Social Media Manager*.
-- Jones, R. (2010) *Keyword Intelligence*, Wiley.
-- Kalbag, L. *Accessibility for Everyone*.
-- Karpavičius, A. *Software Craftsmanship Using AI*.
-- Kennedy, D. S. (2000) *The Ultimate Sales Letter*, 2nd edn, Adams Media.
-- Kennedy, D. S. (2004) *No B.S. Sales Success*, 3rd edn, Entrepreneur Press.
-- Kennedy, D. S. and Marrs, J. (2011) *No B.S. Price Strategy*, Entrepreneur Press.
-- Kennedy, D. S., Glazer, B. and Skrob, R. (2009) *The Official Get Rich Guide to Information Marketing*, 2nd edn, Entrepreneur Press.
-- Klein, L. (2013) *UX for Lean Startups: Faster, Smarter User Experience Research and Design*, O'Reilly Media.
-- Kleon, A. (2014) *Show Your Work!*, Workman.
-- Kohavi, Tang and Xu (2020) *Trustworthy Online Controlled Experiments*.
-- Krug, S. (2014) *Don't Make Me Think, Revisited: A Common Sense Approach to Web and Mobile Usability*, 3rd edn, New Riders.
-- Kruger, Z. (2024) *The Art of SXO*.
-- Krzyzek, A. and Krzyzek, P. *Made to Sell*.
-- LaGrone, B. (2016) *Web Design Blueprints*, Packt Publishing.
-- Landa, R. (2022) *Strategic Creativity: A Business Field Guide to Advertising, Branding, and Design*, Routledge.
-- Levy, J. (2015) *UX Strategy: How to Devise Innovative Digital Products that People Want*, O'Reilly Media.
-- Lexus. *Rough Guide Phrasebook: Swahili*.
-- Lima. *Fundamentals of Writing*.
-- Lin, L. C. (2013) *Decode and Conquer: Answers to Product Management Interviews*, 2nd edn, Impact Interview.
-- Living Language. *Swahili (Spoken World)*.
-- Majors, Fong-Jones and Miranda. *Observability Engineering*.
-- Malaquias, M. R. *Authentic East African Swahili Cuisine*.
-- Mangialardi, M. *Design Systems for Developers: Learn How to Code Design Systems That Scale*.
-- Marcos, J., Guesalaga, R., Hough, A. and Vincent, R. (c. 2025) *The High-Performing Key Account Manager: Creating Sustained Value with Strategic Customers*, Kogan Page.
-- Marten, L. and McGrath, D. L. *Colloquial Swahili*.
-- Maxwell. *7 Steps to Better Writing*.
-- McDermott, A. (2023) *Efficient Content Creation: A Practical Guide to Consistently Creating High-Quality Content in a Busy Schedule*, The Recognized Authority.
-- McNeil, P. (2010) *The Web Designer's Idea Book, Volume 2*, HOW Books.
-- McNeil, P. (2013) *The Web Designer's Idea Book, Volume 3*, HOW Books.
-- Miller, C. H. *Digital Storytelling*.
-- Miller, D. (2017) *Building a StoryBrand*, HarperCollins Leadership.
-- Morgan, P. *The Positioning Manual for Indie Consultants* and *for Technical Firms*.
-- Mugane, J. M. *The Story of Swahili*.
-- Murtagh, R. (2012–2013) *Build a Better Website* (also published as *The Million Dollar Website*), MillionDollarWebsite.TV.
-- Nahai, N. (2012) *Webs of Influence: The Psychology of Online Persuasion*, Pearson.
-- Nelson, J. (2019) *The Seven Figure Agency Roadmap: How to Build a Million Dollar Digital Marketing Agency*, Seven Figure Agency LLC.
-- Norman, D. *The Design of Everyday Things*, revised edn.
-- Nudelman, G. with Kempka, D. *UX for AI*.
-- Nurse, D. and Spear, T. *The Swahili*.
-- Osmani, A. (2026) *Web Performance Engineering in the Age of AI*, O'Reilly Media.
-- Paduraru, E. (2024) *Roots of UI/UX Design: Learn to Develop Intuitive Web Experiences*, Creative Tim.
-- Panzarella, L. (2022) *UI & UX Web Design Simply Explained*.
-- Pickering, H. *Inclusive Components*.
-- Pickering, H. and Bell, A. (2019 onward) *Every Layout*, every-layout.dev.
-- Plumley, G. (2011) *Website Design and Development: 100 Questions to Ask Before Building a Website*, Wiley Publishing.
-- Poisson-Quinton, S. *French Grammar in 44 Lessons* (Level A1).
-- Polyglot Planet. *Learn French II — Parallel Text, Short Stories, Intermediate*.
-- Pulizzi, J. (2021) *Content Inc.*, 2nd edn, McGraw Hill.
-- Reichheld, F. and Markey, R. (2011) *The Ultimate Question 2.0*, HBR Press.
-- Robinson, P. *Secrets of Business Value*.
-- Roche, M. *Business English Vocabulary: Advanced Masterclass* and *Business English Speaking: Advanced Masterclass*, IDM Business and Law.
-- Roetzer, P. (2012) *The Marketing Agency Blueprint*, Wiley.
-- Rubinelli, S. *Institutional Health Communication in the Information Age*.
-- Russell, J. *Swahili (Teach Yourself)*.
-- Sadr, A. *Designing for AI* (early release, chapters 1–3).
-- Safie, A. (2010) *Cutting Edge Keyword Research*.
-- Schwartz, E. (2021) *Product-Led SEO*.
-- Segall, R. et al. (Flux Academy) *The Complete Guide for Choosing Colors*.
-- Serling, B. (ed.) (2002) *How To Write Million Dollar Ads, Sales Letters & Web Marketing Pieces*, The Internet Marketing Center.
-- Sheridan, M. (2017) *They Ask, You Answer*, Wiley.
-- Silver, A. *Form Design Patterns*.
-- Skolnick, E. *Video Game Storytelling*.
-- Smashing Magazine (2011) *How to Create Selling E-Commerce Websites*, Smashing Magazine.
-- Sobia Publication (2022) *Powerful Social Media Marketing for Beginners*.
-- Stockwell, J. and Shaw, H. M. (1994) *Direct Marketing Checklists*, NTC Business Books.
-- Stutts, P. (2021) *The Undefeated Marketing System*, Scribe Media (Lioncrest).
-- Sugarman, J. *The Adweek Copywriting Handbook*.
-- Synechron Inc. (2018) *Bridge the User Experience Gap in Enterprise Applications for Financial Services & Insurance*, Synechron.
-- *The Chicago Manual of Style*, 17th edn.
-- Think French magazine. *Read & Think French, Premium*.
-- 3DTotal.com. *Dynamic Characters*.
-- Tidwell, J., Brewer, C. and Valencia, A. (2020) *Designing Interfaces*, 3rd edn, O'Reilly Media.
-- Torres, T. *Continuous Discovery Habits*.
-- Touri Language Learning. *Conversational French Dialogues*.
-- Tullis, T. and Albert, B. *Measuring the User Experience*.
-- Tzuo, T. with Weisert, G. (2018) *Subscribed*, Portfolio.
-- UXPin. *Web UI Design for the Human Eye: Principles of Visual Consistency*.
-- Verganti, R. (2016) *Overcrowded: Designing Meaningful Products in a World Awash with Ideas*, MIT Press.
-- Wagner, J. *Web Performance in Action*, Manning.
-- Walker, J. *Launch*.
-- Warrillow, J. (2011) *Built to Sell*, Portfolio.
-- Warrillow, J. (2015) *The Automatic Customer*, Portfolio/Penguin.
-- Wathan and Schoger. *Refactoring UI*.
-- Weinberg, G. and Mares, J. (2014) *Traction: A Startup Guide to Getting Customers*, S-curves Publishing.
-- Weiss, A. *Value-Based Fees*.
-- Wiebe, J. (2011) *Copy Hackers: 6 Persuasion Strategies*, Copy Hackers; also *Where Stellar Messages Come From*, *The Great Value Proposition Test*, *Buttons* and *Headlines, Subheads & Value Propositions*.
-- Williams, R. (1976) *Keywords: A Vocabulary of Culture and Society*, Fontana.
-- Wilson, P. M. *Simplified Swahili*, Longman.
-- Yellen, P. (1998) *Zero-Resistance Selling*, Prentice Hall Press.
-- Cited by title only in the repository: *Applying the Kaizen in Africa* (2018); *LEAN: Ultimate Collection* (2018); *The Art and Business of Online Writing*; *The Bezos Letters*; *Yes!*; *Buyology*; *Book Yourself Solid*; *SPIN Selling*; *Managing the Professional Service Firm*; *Made to Stick*; *Principles*; *Traction* (role-based training map); *The E-Myth Revisited*; *The E-Myth Manager*; *DesignOps Handbook*; *7 Must-Ask Questions Before You Hire a Website Agency*; *Profitable Online Presence*; *BLOGS CONTENTS*. The human-English review also records author-and-genre sources without titles (David, Gupta, Pinnacle, Betsis and Mamas).
-
-### Repositories
-
-Repositories studied in the September 2026 ten-repository Kaizen (M10), from which this engine adopted ideas. All adoptions are paraphrased, and no source files were copied:
-
-- Impeccable — https://github.com/pbakaus/impeccable — Apache-2.0, commit `114ea1d` — rule ideas and numeric thresholds behind the vendored `chwezi-slop` detector (typography, colour, glow and heading rules; value-scope waivers). Its font lists are used only as evidence for bans.
-- Addy Osmani agent-skills — https://github.com/addyosmani/agent-skills — MIT, commit `2686b62` — the owner-outranks-self routing rule in `scripts/routing-smoke-test.py` and lint refinements in `scripts/validate-skill-contracts.py`.
-- Superpowers — https://github.com/obra/superpowers — MIT, commit `8ca22db` — the job-classification step in the website-builder stage gates and the description-narration lint in `skill-writing/scripts/quick_validate.py`.
-- Ponytail — https://github.com/DietrichGebert/ponytail — MIT, commit `e3ba2aa` — the `native:` / `delete:` / `yagni:` / `net:` finding format for the page-builder minimalism pass.
-- UI UX Pro Max — https://github.com/nextlevelbuilder/ui-ux-pro-max-skill — MIT, commit `09170ee` — the table shape (sector, visitor job, section order, CTA, trust) for the East African industry page patterns. No rows or wording were reused.
-- Graphify — https://github.com/Graphify-Labs/graphify — Apache-2.0 — the framing of links as references between documents, used in `scripts/content_link_graph.py`. No code or package is used.
-- Awesome Claude Skills — https://github.com/ComposioHQ/awesome-claude-skills — no root licence — its vetting surfaced playwright-skill (next entry).
-- playwright-skill — https://github.com/lackeyjb/playwright-skill — MIT, commit `dd47a6a` — the visual-QA pre-flight step: find the running dev server, and never report a pass without inspecting the rendered page.
-- Caveman (https://github.com/JuliusBrussee/caveman), Understand Anything (https://github.com/Egonex-AI/Understand-Anything) and Archify (https://github.com/tt-a1i/archify) were studied in the same review. Nothing from them was adopted into this engine.
-
-Other repositories:
-
-- chwezi-design-engine — https://github.com/peterbamuhigire/chwezi-design-engine — source of the vendored `chwezi-slop` detector (`tools/slop-detector`; the source commit and the file hashes are pinned in `scripts/vendor/chwezi-slop/VENDOR.json`).
-- chwezi-dev-engine — https://github.com/peterbamuhigire/chwezi-dev-engine — the canonical skill-writing standard that `meta/skill-writing` points to.
-- ECC — github.com/affaan-m/ECC — the Windows path fix in `install.sh` and the user/project scope model in `scripts/install-engine.js`.
-- codex-astra-luna-orchestrator — https://github.com/donvito/codex-astra-luna-orchestrator — concept reference for the Codex model-policy helper, inspected at commit `21f4561`. It was implemented independently, and the upstream installer was not run.
-- Lighthouse — https://github.com/GoogleChrome/lighthouse — default configuration, screen-emulation constants and throttling documentation behind the performance gate.
-- web-vitals — https://github.com/GoogleChrome/web-vitals — attribution build used for real-user monitoring.
-- WebPageTest — https://github.com/catchpoint/WebPageTest — connectivity presets.
-- axe-core — https://github.com/dequelabs/axe-core — accessibility rule engine for the accessibility gate.
-- pixelmatch — https://github.com/mapbox/pixelmatch — screenshot-diff comparison for visual QA.
-
-### Standards and official sources
-
-- W3C: WCAG 2.2 (https://www.w3.org/TR/WCAG22/); WAI-ARIA 1.2 and the ARIA Authoring Practices Guide (https://www.w3.org/WAI/standards-guidelines/aria/, https://www.w3.org/WAI/ARIA/apg/).
-- OWASP: ASVS 5.0.0 (https://owasp.org/www-project-application-security-verification-standard/); Top 10:2025 (https://owasp.org/Top10/); Top 10 for Large Language Model Applications; Secure Headers Project (https://owasp.org/www-project-secure-headers/); Dependency-Check (https://owasp.org/www-project-dependency-check/).
-- IETF RFC 9116, security.txt (https://www.rfc-editor.org/rfc/rfc9116).
-- ISO 9241-210:2019, human-centred design for interactive systems, and ISO 9241-110.
-- NIST Privacy Framework (https://www.nist.gov/privacy-framework).
-- Schema.org, version 30.0 (https://schema.org/version/latest/), and the Schema.org validator (https://validator.schema.org/).
-- Google Search Central: Search Essentials; SEO Starter Guide; general structured-data guidelines; featured snippets; page experience; crawlable links; building sitemaps; the generative-AI features guide and the guidance on generative-AI content; the documentation updates log; and the 2023 notice retiring the sitemaps ping (https://developers.google.com/search/docs). Google Search Console Help: the generative-AI performance report and control (https://support.google.com/webmasters/answer/16984139, /16908024). Rich Results Test (https://search.google.com/test/rich-results).
-- web.dev: Web Vitals (https://web.dev/articles/vitals), defining the Core Web Vitals thresholds (https://web.dev/articles/defining-core-web-vitals-thresholds), and INP becoming a Core Web Vital (https://web.dev/blog/inp-cwv-launch).
-- Microsoft Bing Webmaster Tools: sitemaps help, and the AI Performance public preview (https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview). IndexNow documentation (https://www.indexnow.org/documentation).
-- AI crawler and model documentation: OpenAI crawlers (https://developers.openai.com/api/docs/bots) and the publishers and developers FAQ; Perplexity crawlers (https://docs.perplexity.ai/docs/resources/perplexity-crawlers); OpenAI image-generation and image-prompting guides; the Anthropic models overview (https://platform.claude.com/docs/en/models/overview); the llms.txt proposal (https://llmstxt.org/); Model Context Protocol documentation.
-- GitHub Actions secure use (https://docs.github.com/en/actions/reference/security/secure-use); GitHub Advisory Database (https://github.com/advisories); OSV-Scanner (https://google.github.io/osv-scanner/).
-- Tooling documentation: Playwright snapshot testing (https://playwright.dev/docs/test-snapshots); Deque axe rule index (https://dequeuniversity.com/rules/axe/); NVDA user guide (https://www.nvaccess.org/files/nvda/documentation/userGuide.html); Apple VoiceOver (https://www.apple.com/accessibility/voiceover/); Mozilla Observatory (https://observatory.mozilla.org/); HSTS preload list (https://hstspreload.org/); Astro sitemap integration (https://docs.astro.build/en/guides/integrations-guide/sitemap/); Partytown (https://partytown.builder.io/); npm registry records for `@lhci/cli` 0.15.1 and `web-vitals` 6.2.2.
-- Data-protection law and regulators: GDPR, Regulation (EU) 2016/679 (https://eur-lex.europa.eu/eli/reg/2016/679/oj); Uganda Data Protection and Privacy Act 2019 (https://media.ulii.org/files/legislation/akn-ug-act-2019-9-eng-2019-05-03.pdf) and the Personal Data Protection Office (https://pdpo.go.ug); Kenya Data Protection Act 2019 and the Data Protection (General) Regulations 2021 (https://www.odpc.go.ke); South Africa's Information Regulator for POPIA (https://inforegulator.org.za); Nigeria Data Protection Commission (https://ndpc.gov.ng).
-- Kenya advertising and endorsement rules: Consumer Protection Act 2012, Competition Act 2010, the ASBK Code, and the Media Council Code 2025 (Legal Notice 88 of 2025).
-- Uganda public registers used to verify sector trust signals: URSB business registry, Uganda Tourism Board licensing, UNCHE, Ministry of Education private-schools register, Engineers Registration Board, ICPAU firms portal, the Judiciary advocates roll, NGO Bureau register, URA licensed agents, UMRA SACCO supervision, the Ministry of Trade cooperatives registry, the MLHUD land information system, the eHealth licence search, the government e-procurement supplier list, and the Uganda Communications Commission Q2 2026 market report.
-
-### Websites and articles
-
-- Research: METR (2025), "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/; arXiv 2507.09089); Stack Overflow 2025 Developer Survey (https://survey.stackoverflow.co/2025/ai); Faros AI, "The AI Productivity Paradox" (https://www.faros.ai/ai-productivity-paradox); Schmitt, Skiera and Van den Bulte (2011), "Referral Programs and Customer Value", *Journal of Marketing* 75(1) (https://journals.sagepub.com/doi/10.1509/jm.75.1.46); Van den Bulte, Bayer, Skiera and Schmitt (2018), "How Customer Referral Programs Turn Social Capital into Economic Capital", *Journal of Marketing Research* (https://journals.sagepub.com/doi/10.1509/jmr.14.0653); Kahneman and Tversky (1979), "Prospect Theory: An Analysis of Decision under Risk", *Econometrica*; arXiv 2604.25707, "From Citation Selection to Citation Absorption"; arXiv 2607.14035, "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023–2026)".
-- AI search: Meltwater and LinkedIn (2026), *How LinkedIn Content Wins in AI Search* (report, https://www.meltwater.com/en/blog/linkedin-ai-visibility-study), and the LinkedIn Marketing Blog summary of 9.5 million citations.
-- Connectivity and market data: Ookla Speedtest Global Index for Uganda and Kenya (https://www.speedtest.net/global-index/uganda, /kenya); GSMA, *State of the Industry Report on Mobile Money 2026*; DataReportal, *Digital 2026: Uganda* (https://datareportal.com/reports/digital-2026-uganda); MTN MoMo merchant information.
-- Usability and trust: Nielsen Norman Group on trustworthy design and About-us information (https://www.nngroup.com/articles/trustworthy-design/, /about-us-information-on-websites/); Stanford Web Credibility guidelines (https://credibility.stanford.edu/guidelines/index.html); Baymard Institute on payment-method selection and perceived payment-form security (https://baymard.com/blog/).
-- Positioning and agency practice: Win Without Pitching (https://winwithoutpitching.com); Philip Morgan's specialisation guide (https://philipmorgan.net/books-and-guides/specialization-guide/); the 2Bobs podcast on horizontal positioning; Haus Advisors; Epom; Tim Kilroy; Shortform on the smallest viable market; Instrument; Design Studio UI/UX articles on enterprise, dashboard, mobile and SaaS design; Eleken on design consistency and design-system checklists; Converge and Wavespace trend round-ups (treated as trend evidence only).
-- Delivery and productisation (industry-reported, to be confirmed before stating as fact): ManyRequests, Wayfront, Assembly, GigRadar, Growth Rocket, Builts.ai, Futran Solutions, SAM Solutions, Buddy WDD, Webstacks, Bejamas, Kawn and Troy Web.
-- Sales and acquisition: RAIN Group Center for Sales Research; HubSpot sales statistics; SPOTIO; SalesRabbit; SiteSwan; QCFixer; Selling Signals; Nutshell; SEOptimer; Insites; Jeb Blount's site; Joey Coleman's site.
-- Referral programmes: GrowSurf, Referral Factory, Commsor, impact.com, Pipedrive, Tremendous, Viral Loops, Act! CRM, OpenPotion, Thrive Design, Studio1 Design, Kim Tasso, the Neighborly × TradeEngage release, the CFA Institute Standard VI(C) on referral fees, and InnReg on referral-programme compliance.
-- Book publisher records: John Wiley & Sons listings for *The New Rules of AI Search* and *Search and Social*; Utah State University Press digital commons for *Keywords in Creative Writing*; Itamar Blauer's keywords page.
+Book methods are paraphrased into task-oriented references with a short attribution. Book extractions and book summaries are never stored in this repository (see `docs/continuous-improvement/book-source-retirement-2026-09-24.md`).
