@@ -34,6 +34,7 @@ It is for website agencies, freelance developers, and in-house marketing and pro
 
 ## Contents
 
+- [Capabilities](#capabilities)
 - [Find the right skill](#find-the-right-skill)
 - [How it works](#how-it-works)
 - [What is inside](#what-is-inside)
@@ -45,7 +46,11 @@ It is for website agencies, freelance developers, and in-house marketing and pro
 - [Related engines](#related-engines)
 - [References](#references)
 
-## Find the right skill
+## Capabilities
+
+The engine holds 62 skills in 11 categories, grouped under [What is inside](#what-is-inside). The [skill catalogue](docs/skill-catalogue.md) lists each one. The table under Find the right skill is the capability map: common tasks and the skill that handles each.
+
+### Find the right skill
 
 Name the job in plain words and the router picks the skill. These twelve jobs are a starting point. Every skill named here has routing test prompts in `tests/routing/fixtures.json`.
 
