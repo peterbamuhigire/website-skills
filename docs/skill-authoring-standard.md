@@ -32,12 +32,14 @@ Use British English. Keep claims qualified by evidence. Preserve specific domain
 
 Start new skills from `templates/skill/SKILL.md`. Before merge or release, run:
 
-```powershell
-python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
-python -X utf8 scripts/routing-smoke-test.py
-python -X utf8 scripts/validate-search-doctrine.py
-python -m pytest -q
+```sh
+python3 -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
+python3 -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures
+python3 -X utf8 scripts/validate-search-doctrine.py
+python3 -m pytest -q
 ```
+
+`CONTRIBUTING.md` lists the full set of local gates, including the registry, source-register, portable-reference, vendored-detector and slop-pack checks.
 
 Then run the canonical `quick_validate.py` against each skill directory and the canonical `engine_compliance.py` against the `skills` active root. A zero-debt baseline is an assertion, not a waiver: any finding fails the gate.
 
