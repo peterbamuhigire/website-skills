@@ -16,7 +16,7 @@ Own the end-to-end website delivery sequence and explicit handoffs between speci
 <!-- dual-compat-start -->
 ## Use When
 
-- A multi-page website must be delivered end to end
+- A multi-page website, such as a five-page service site, must be built from a brief and delivered end to end through release
 - several website skills must be sequenced
 - launch evidence and handover must be reconciled.
 - Discovery needs the outcomes-and-jobs intake, the owner decision register, or the client asset ownership register (client as domain registrant).

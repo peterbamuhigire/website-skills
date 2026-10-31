@@ -241,6 +241,30 @@
       "kind": "collision",
       "prompt": "Run a Lighthouse audit and fix Core Web Vitals on our marketing site",
       "expected": "deploy"
+    },
+    {
+      "id": "five-page-brief-to-release",
+      "kind": "positive",
+      "prompt": "Build a five-page website for a small bicycle repair business from this written brief and take it through to release",
+      "expected": "website-builder"
+    },
+    {
+      "id": "reconcile-site-handover",
+      "kind": "positive",
+      "prompt": "Reconcile the finished pages, the gate evidence and the client asset register into one handover for the whole website",
+      "expected": "website-builder"
+    },
+    {
+      "id": "audit-did-not-run",
+      "kind": "positive",
+      "prompt": "Our dependency audit showed no findings only because npm could not reach the registry; does the security evidence for release stand",
+      "expected": "security-gate"
+    },
+    {
+      "id": "supply-chain-lockfile",
+      "kind": "positive",
+      "prompt": "Review the lockfile, install scripts and third-party scripts of this static site for supply chain risk before launch",
+      "expected": "security-gate"
     }
   ],
   "negatives": [
@@ -393,6 +417,18 @@
       "skill": "deploy",
       "prompt": "Set up real-user monitoring, error tracking and alert thresholds for the site after launch",
       "owner": "observability"
+    },
+    {
+      "id": "contrast-and-keyboard-not-security",
+      "skill": "security-gate",
+      "prompt": "Check the page for colour contrast, keyboard focus order and screen reader names",
+      "owner": "accessibility-audit"
+    },
+    {
+      "id": "privacy-page-wording-not-security",
+      "skill": "security-gate",
+      "prompt": "Write the privacy notice and terms page for the site",
+      "owner": "policy-pages"
     }
   ]
 }
