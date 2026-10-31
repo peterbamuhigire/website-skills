@@ -1,0 +1,52 @@
+/* Hillside Cycle Workshop (synthetic example). One stylesheet, no JavaScript. */
+:root {
+  --ink: #1f2328;
+  --paper: #ffffff;
+  --muted: #4a5159;
+  --line: #d0d5da;
+  --link: #0b5cad;
+  --link-visited: #5b3f8c;
+  --accent: #0b5cad;
+  --accent-ink: #ffffff;
+  --focus: #b45309;
+  --measure: 40rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+h1, h2 { font-family: "Source Serif 4", Georgia, serif; line-height: 1.2; }
+h1 { font-size: 2rem; margin: 0 0 1rem; }
+h2 { font-size: 1.375rem; margin: 2rem 0 0.5rem; }
+p, ul, ol, dl, table { margin: 0 0 1rem; }
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1rem; }
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:visited { color: var(--link-visited); }
+a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--paper); padding: 0.5rem 1rem; }
+.skip-link:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
+.site-header { border-bottom: 1px solid var(--line); padding: 0.75rem 0; }
+.brand { display: flex; align-items: center; gap: 0.625rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand img { display: block; }
+.site-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; padding: 0; margin: 0.75rem 0 0; }
+.site-nav a { display: inline-block; padding: 0.5rem 0; min-height: 2.75rem; line-height: 1.75rem; }
+.site-nav a[aria-current="page"] { font-weight: 700; color: var(--ink); text-decoration-thickness: 3px; }
+main { padding: 2rem 0 3rem; }
+.lede { font-size: 1.1875rem; }
+.button { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 0.75rem 1.25rem; border-radius: 0.25rem; text-decoration: none; font-weight: 700; min-height: 2.75rem; }
+.button:visited { color: var(--accent-ink); }
+.jobs dt { font-weight: 700; margin-top: 1rem; }
+.jobs dd { margin: 0.125rem 0 0; }
+table { border-collapse: collapse; width: 100%; max-width: 24rem; }
+th, td { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--line); }
+.note { color: var(--muted); font-size: 0.9375rem; }
+.site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: 0.9375rem; }
+.site-footer ul { list-style: none; padding: 0; margin: 0 0 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 40em) { h1 { font-size: 2.5rem; } .site-nav ul { margin-top: 0; } .site-header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; } }

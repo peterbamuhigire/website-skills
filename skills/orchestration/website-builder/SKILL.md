@@ -101,6 +101,8 @@ Fallback: if build, render, network, or deployment capabilities are unavailable,
 
 A bilingual services site has approved copy but no French native review. Build shared routes, block French release, and hand the locale to `french-native-copy` before rerunning visual and search gates.
 
+For a complete single-language build with its brief, gate table, release decision and rollback plan, read [the five-page service site example](../../../examples/service-site-five-page/README.md). It is synthetic and blocked for release on purpose.
+
 ## References
 - [client-asset-ownership-register.md](references/client-asset-ownership-register.md) — read when starting, verifying or handing over the client asset ownership register (domain registrant is the client).
 - [owner-decision-register.md](references/owner-decision-register.md) — read when recording the decisions only the owner can make.
