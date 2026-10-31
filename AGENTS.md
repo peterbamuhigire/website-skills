@@ -114,6 +114,10 @@ Claude-specific projects may still point at this repository from their own confi
 - Before releasing any skill-engine change, run the zero-debt contract validator, routing smoke test, registry validator, tests, canonical per-skill quick validator, and canonical engine scanner. A missing or unavailable check is not a pass.
 - When search, AI-answer visibility, crawler policy, structured data, or
   webmaster reporting changes, also run `scripts/validate-search-doctrine.py`.
+- Run `scripts/validate-source-registers.py` before release. It fails when a review date in
+  `docs/standards-register.md` or any `docs/source-registers/*.json` has passed, when a row has no
+  verification date, or when a review date sits further from its verification than the row's cadence
+  allows. Move a date only after re-checking the source and recording the result.
 
 ## Routing
 
