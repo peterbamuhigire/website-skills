@@ -9,5 +9,6 @@ The second cycle of October 2026. It continues [the 29 October cycle](../2026-10
 5. [Validation and source records](04-validation-record.md)
 6. [Final score and release state](05-final-report.md)
 7. [Next-cycle work](06-next-cycle.md)
+8. [Documentation-wave follow-ups](07-docs-followups.md)
 
 The baseline was committed before any change. The work is on branch `kaizen/2026-10-pass2`, which has not been pushed.
