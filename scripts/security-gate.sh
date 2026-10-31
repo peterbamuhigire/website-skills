@@ -19,7 +19,7 @@
 #   3 - security.txt failure
 #   4 - SRI failure
 #   5 - secret detected
-#   6 - prerequisite missing
+#   6 - prerequisite missing, or npm audit did not complete (never a pass)
 #   7 - supply-chain failure
 
 set -euo pipefail
@@ -38,8 +38,15 @@ echo "security-gate: npm audit"
 AUDIT_JSON="$REPORTS_DIR/audit.json"
 AUDIT_EXIT=0
 npm audit --audit-level=high --json > "$AUDIT_JSON" || AUDIT_EXIT=$?
-HIGH=$(jq '[.vulnerabilities[]?|select(.severity=="high")]|length' "$AUDIT_JSON" 2>/dev/null || echo 0)
-CRIT=$(jq '[.vulnerabilities[]?|select(.severity=="critical")]|length' "$AUDIT_JSON" 2>/dev/null || echo 0)
+# npm exits non-zero both when it finds vulnerabilities and when it cannot audit at all (no
+# lockfile, registry unreachable), so completion is judged from the report, never the exit status.
+# An audit that did not complete is a failure, not "zero findings" (WSK2-01).
+if ! jq -e 'type == "object" and has("auditReportVersion") and (has("error") | not)' "$AUDIT_JSON" >/dev/null 2>&1; then
+    echo "security-gate: FAIL - npm audit did not complete (npm exit $AUDIT_EXIT): a missing lockfile, an unreachable registry or an unreadable report is not a pass" >&2
+    exit 6
+fi
+HIGH=$(jq '[.vulnerabilities[]?|select(.severity=="high")]|length' "$AUDIT_JSON")
+CRIT=$(jq '[.vulnerabilities[]?|select(.severity=="critical")]|length' "$AUDIT_JSON")
 echo "security-gate: npm audit high=$HIGH critical=$CRIT"
 # Apply suppressions
 SUPPRESSIONS_FILE="$ROOT/.audit-suppress.json"

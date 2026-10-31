@@ -125,7 +125,9 @@ bash "$WEBSITE_SKILLS/scripts/security-gate.sh"
 ```
 
 The command:
-1. Runs `npm audit --audit-level=high --json`.
+1. Runs `npm audit --audit-level=high --json`. An audit that does not complete
+   (no lockfile, unreachable registry, unreadable report) stops the gate with
+   exit 6; it is never read as zero findings.
 2. Runs `scripts/check-security-headers.sh dist` against the CSP baseline.
 3. Runs `scripts/check-security-txt.sh dist`.
 4. Runs `scripts/check-sri.sh dist .third-party-allowed`.
