@@ -159,7 +159,7 @@ retest date. Search eligibility, ranking, AI citation and conversion lift are
 - `../website-builder/SKILL.md`
 - `../../seo-search/seo/SKILL.md`
 - `../../seo-search/google-ai-search/SKILL.md`
-- `C:\wamp64\www\chwezi-dev-engine\docs\source-registers\hospitality-currentness-2026-09.json`
+- `docs/source-registers/hospitality-currentness-2026-09.json` in the dev engine (`chwezi-dev-engine`, resolved through the engine-routing table)
 
 ## Anti-patterns
 

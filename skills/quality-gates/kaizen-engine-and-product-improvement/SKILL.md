@@ -107,7 +107,7 @@ and source verification. Record scope, dates, freshness class, support status,
 uncertainty, and review date for current web standards, accessibility, browser,
 platform, security, SEO, and lifecycle claims; quarantine unsupported claims as
 `NOT_ASSESSED`. Apply the portfolio Kaizen currentness gate at
-`C:\\wamp64\\www\\digital-research-engine\\docs\\continuous-improvement\\kaizen-currentness-gate.md`.
+`docs/continuous-improvement/kaizen-currentness-gate.md` in the Digital Research engine (resolved through the engine-routing table).
 
 ## References
 

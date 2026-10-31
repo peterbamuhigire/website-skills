@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "Policy for scripts/check_portable_references.py. Active content may hold no machine-specific absolute path; history documents and client prompts are held to the per-file ceilings below, which may only fall.",
+  "history_prefixes": [
+    "docs/audits/",
+    "docs/continuous-improvement/",
+    "docs/engine-upgrade-july-2026/",
+    "docs/kaizen/",
+    "docs/superpowers/",
+    "project-log/",
+    "prompts/"
+  ],
+  "history_files": [
+    "ENGINE-AUDIT-JULY-2026-MASTER.md",
+    "MEMORY.md",
+    "SESSION_2026-02-17_SUMMARY.md",
+    "SESSION_2026-05-05_REPORT.md"
+  ],
+  "skip_prefixes": [
+    "scripts/vendor/",
+    "reports/"
+  ],
+  "skip_files": [
+    "scripts/check_portable_references.py",
+    "tests/test_portable_references.py"
+  ],
+  "history_ceilings": {
+    "MEMORY.md": 3,
+    "SESSION_2026-05-05_REPORT.md": 2,
+    "docs/audits/2026-09-29-m10-reaudit/11-measured-evidence.md": 1,
+    "docs/continuous-improvement/book-led-commercial-persuasion-kaizen-2026-09-11.md": 1,
+    "docs/continuous-improvement/kaizen-wave-1-2026-08-11.md": 5,
+    "docs/continuous-improvement/kaizen-wave-2-2026-08-11.md": 2,
+    "docs/engine-upgrade-july-2026/01-discovery.md": 1,
+    "docs/kaizen/2026-10-engine-kaizen-pass-2/00-scope-and-evidence.md": 1,
+    "docs/kaizen/2026-10-engine-kaizen-pass-2/01-baseline-scorecard.md": 1,
+    "docs/superpowers/plans/2026-05-04-website-skills-uiux-phase2.md": 2,
+    "prompts/dynapharm-website-content.md": 19,
+    "prompts/maduuka-website-content.md": 9
+  }
+}

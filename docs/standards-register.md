@@ -1,7 +1,7 @@
 # Standards Register
 
-Verified 2026-08-11 against the workspace primary-source register at
-`C:\wamp64\www\KAIZEN-STANDARDS-SOURCE-REGISTER.md`. Links are primary sources
+Verified 2026-08-11 against the workspace primary-source register
+(`KAIZEN-STANDARDS-SOURCE-REGISTER.md`, kept at the portfolio workspace root). Links are primary sources
 where listed. Rows without a matching workspace register entry remain
 `NOT ASSESSED` for this wave; owners review changes and record threshold changes
 under `project-log/decisions/`.
