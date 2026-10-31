@@ -81,7 +81,10 @@ def test_table_has_automatic_block_rows():
 
 
 def test_vendored_detector_hash_check_passes():
-    result = subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "scripts/check-vendored-detector.py")], cwd=ROOT,
+    # The manifest hash check only. The comparison with a sibling design-engine checkout is deliberately off
+    # here: that checkout moves on its own schedule, and its drift is reported by the validator itself
+    # (scripts/check-vendored-detector.py) and tested with fixtures in tests/test_design_engine_root.py.
+    result = subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "scripts/check-vendored-detector.py"), "--no-source"], cwd=ROOT,
                             capture_output=True, text=True)
     assert result.returncode == 0, result.stdout + result.stderr
 
