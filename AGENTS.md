@@ -111,7 +111,7 @@ Claude-specific projects may still point at this repository from their own confi
 - Use bundled scripts when they are the safest or most repeatable path.
 - Keep outputs implementation-oriented. Avoid abstract summaries when a concrete deliverable is expected.
 - Author or normalise active skills against `docs/skill-authoring-standard.md` and start new entries from `templates/skill/SKILL.md`.
-- Before releasing any skill-engine change, run the zero-debt contract validator, routing smoke test, registry validator, tests, canonical per-skill quick validator, and canonical engine scanner. A missing or unavailable check is not a pass.
+- Before releasing any skill-engine change, run the zero-debt contract validator, routing smoke test, registry validator, tests, canonical per-skill quick validator, and canonical engine scanner. A missing or unavailable check is not a pass. The full command list, with what each check needs, is in `CONTRIBUTING.md` and in the README section "Validating this repository"; it includes `scripts/check-vendored-detector.py` and `node scripts/validate-slop-pack.mjs`.
 - When search, AI-answer visibility, crawler policy, structured data, or
   webmaster reporting changes, also run `scripts/validate-search-doctrine.py`.
 - Run `scripts/validate-source-registers.py` before release. It fails when a review date in
@@ -168,8 +168,8 @@ Use these cross-cutting skills whenever their lens materially improves the outpu
 Use these support skills on demand:
 
 - `blog-idea-generator`, `blog-writer`
-- `brand-strategy`, `brand-storytelling`, `brand-style-guide`
-- `color-selection`
+- `brand-strategy`, `brand-storytelling`, `chwezi-design-engine:brand-style-guide`
+- `chwezi-design-engine:color-selection`
 - `policy-pages`
 - `email-sender`
 - `ecommerce`, `retail-commerce-operating-system`, `ecommerce-funnel`, `ecommerce-checkout`, `ecommerce-analytics`
@@ -414,6 +414,7 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - `certification/` — operator programme (syllabus, exam bank, cohort records).
 - `docs/onboarding-validation/2026/report.md` — multi-operator validation.
 - `dashboards/quality-scorecard.md` — internal generated scorecard contract.
+- `docs/README.md` — index of reference documents and improvement records. The October 2026 kaizen evidence is in `docs/kaizen/2026-10-engine-kaizen/` and `docs/kaizen/2026-10-engine-kaizen-pass-2/`; open work is in the latter's `06-next-cycle.md`.
 
 ## Public Authority (Phase 12)
 
