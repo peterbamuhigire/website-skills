@@ -119,12 +119,12 @@ The registry validator printed `registry valid: 62 skills` and `design routes: P
 ```text
 links: old README 88 targets; new README 24; moved to docs 70; LOST 0
 commands: old README 29; kept in README 28; moved to docs 1; LOST 0
-anchors: 3 README.md#anchor links in tracked files; BROKEN 0
+anchors: 3 README.md#<name> links in tracked files; BROKEN 0
 in-page links: 13 anchors used; BROKEN 0
 RESULT: OK
 ```
 
-The one moved command is the code span `git grep` in the machine-paths row of the measures table; it now sits in `docs/october-2026-kaizen-changes.md`. The 70 moved link targets are the citation URLs in `docs/references.md` and the evidence links in the detail page.
+In the anchors line above, `<name>` stands for the word the checker prints in that place. Printing the literal word made the checker read this record as a link to a missing anchor, which it is not. The one moved command is the code span `git grep` in the machine-paths row of the measures table; it now sits in `docs/october-2026-kaizen-changes.md`. The 70 moved link targets are the citation URLs in `docs/references.md` and the evidence links in the detail page.
 
 **Metrics after:**
 
