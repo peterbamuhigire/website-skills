@@ -11,15 +11,18 @@ banned-font JSON relative to itself.
 Checks, in order:
 1. every file listed in VENDOR.json exists and its SHA-256 (after CRLF
    normalisation) matches the manifest; any mismatch exits 1;
-2. when the sibling checkout ../chwezi-design-engine exists, every vendored file
-   matches the source file; drift exits 1. When the sibling is absent the
-   comparison is NOT_ASSESSED, which is reported and is never a pass for that
-   comparison (the manifest check still decides the exit code).
+2. when the design engine checkout is found, every vendored file matches the
+   source file; drift exits 1. The checkout is found through --source, the
+   CHWEZI_DESIGN_ENGINE_ROOT or CHWEZI_ENGINES_ROOT environment variables, or a
+   sibling folder named design-system-skills or chwezi-design-engine (see
+   scripts/design_engine_root.py). When none is found the comparison is
+   NOT_ASSESSED, which is reported and is never a pass for that comparison (the
+   manifest check still decides the exit code).
 
 Updating the copy is a deliberate, reviewed step that the orchestrator runs and
 commits; it is never run automatically:
 
-    python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine
+    python -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>
 
 Exit codes: 0 clean; 1 tampered, missing or drifted; 5 manifest unreadable.
 """
@@ -33,9 +36,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_engine_root import ENV_ENGINES_ROOT, ENV_ROOT, find_design_engine  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_VENDOR = ROOT / "scripts" / "vendor" / "chwezi-slop"
-DEFAULT_SOURCE = ROOT.parent / "chwezi-design-engine"
+SOURCE_MARKER = "tools/slop-detector"
 SOURCE_REPO = "https://github.com/peterbamuhigire/chwezi-design-engine"
 
 # Paths relative to the design engine root; the vendored copy keeps them.
@@ -113,7 +119,7 @@ def sync(source: Path, vendor: Path) -> int:
         "source_commit": git_head(source),
         "registry_sha256": files["tools/slop-detector/rules/registry.json"],
         "hash_mode": "sha256 after CRLF normalisation",
-        "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine",
+        "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>",
         "files": files,
     }
     (vendor / "VENDOR.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
@@ -121,7 +127,7 @@ def sync(source: Path, vendor: Path) -> int:
     return 0
 
 
-def check(vendor: Path, source: Path | None, as_json: bool) -> int:
+def check(vendor: Path, source: Path | None, as_json: bool, disabled: bool = False) -> int:
     manifest_path = vendor / "VENDOR.json"
     try:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -141,9 +147,11 @@ def check(vendor: Path, source: Path | None, as_json: bool) -> int:
     if files.get("tools/slop-detector/rules/registry.json") != manifest.get("registry_sha256"):
         findings.append("registry_sha256 does not match the registry.json file hash")
 
-    source_status = "NOT_ASSESSED (sibling ../chwezi-design-engine absent)"
+    source_status = f"NOT_ASSESSED (design engine checkout not found; set {ENV_ROOT} or {ENV_ENGINES_ROOT}, or pass --source)"
     drift: list[str] = []
-    if source is not None and (source / "tools" / "slop-detector").is_dir():
+    if disabled:
+        source_status = "NOT_ASSESSED (source comparison disabled)"
+    elif source is not None and (source / "tools" / "slop-detector").is_dir():
         for rel in sorted(files):
             src = source / rel
             if not src.is_file():
@@ -151,8 +159,8 @@ def check(vendor: Path, source: Path | None, as_json: bool) -> int:
             elif (vendor / rel).is_file() and sha256_norm(src) != sha256_norm(vendor / rel):
                 drift.append(f"differs from source: {rel}")
         source_status = "PASS" if not drift else "DRIFT"
-    elif source is None:
-        source_status = "NOT_ASSESSED (source comparison disabled)"
+    elif source is not None:
+        source_status = f"NOT_ASSESSED (no {SOURCE_MARKER} folder under {source})"
 
     result = {
         "vendored_files": len(files),
@@ -176,14 +184,16 @@ def check(vendor: Path, source: Path | None, as_json: bool) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--vendor-dir", type=Path, default=DEFAULT_VENDOR)
-    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE, help="chwezi-design-engine checkout to compare with")
+    parser.add_argument("--source", type=Path, default=None, help=f"design engine checkout to compare with (default: {ENV_ROOT}, {ENV_ENGINES_ROOT}, then a sibling folder)")
     parser.add_argument("--no-source", action="store_true", help="skip the source comparison (reported as NOT_ASSESSED)")
     parser.add_argument("--sync-from", type=Path, help="copy the vendored set from this chwezi-design-engine checkout and rewrite VENDOR.json")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     if args.sync_from:
         return sync(args.sync_from.resolve(), args.vendor_dir.resolve())
-    return check(args.vendor_dir.resolve(), None if args.no_source else args.source.resolve(), args.json)
+    explicit = args.source.resolve() if args.source else None
+    source = None if args.no_source else find_design_engine(ROOT, explicit=explicit, marker=SOURCE_MARKER)
+    return check(args.vendor_dir.resolve(), source, args.json, disabled=args.no_source)
 
 
 if __name__ == "__main__":
