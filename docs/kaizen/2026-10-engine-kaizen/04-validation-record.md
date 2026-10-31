@@ -68,8 +68,8 @@ The full per-package audit JSON and experiment locks were retained outside the e
 | Security gate, baseline lock | FAIL: npm audit detects 15 high package records, zero critical | Exact QA dependency tree. |
 | Security gate, tested compression override | FAIL: 13 high package records, zero critical; compression finding removed | Disposable consumer lock only; gate not suppressed. |
 | Visual QA wrapper | NOT_ASSESSED; exits 4 because task project lacks `tests/visual` | Engine checkout has no executable structure/capture specs. |
-| Codex native marketplace | PASS | Isolated network-disabled Podman install/load/details run. |
-| Claude native marketplace | PASS | Isolated network-disabled Podman install/load/details run. |
+| Codex native marketplace and discovery | PASS, 2026-10-29 | On clean commit `c41cfcb`, native install/load/details exited 0 with network disabled and no model call. Prompt-input discovery found 62/62 skills, 0 missing, exit 0; requested model/reasoning were Luna/high. |
+| Claude native marketplace | PASS, 2026-10-29 | On clean commit `c41cfcb`, native install/load/details exited 0 with network disabled and no model call; native details listed 62 skills. This does not claim separate Claude prompt-input discovery. |
 | Deployment and post-deploy smoke | NOT_ASSESSED | No deployment target or authorization was part of the task. |
 
 ## Size

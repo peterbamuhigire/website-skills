@@ -31,7 +31,7 @@ Security findings are scoped to the disposable QA dependency tree. The `npm audi
 
 ## Marketplace status
 
-Local native Codex and Claude marketplace install/load/details checks pass offline in disposable isolated containers. This is not public listing validation, publication, or proof of user-account availability. No marketplace submission, host configuration write, model call, or push occurred.
+On clean commit `c41cfcb` (2026-10-29), local native Codex and Claude marketplace install/load/details checks both exited 0 in isolated containers with network disabled and no model calls. Codex prompt-input discovery found 62/62 expected skills with none missing; Claude install details listed 62 skills, without a separate Claude prompt-input discovery claim. This is not public listing validation, publication, or proof of user-account availability. No marketplace submission, host configuration write, or model call occurred.
 
 ## Commits
 
