@@ -1,0 +1,40 @@
+{
+  "artifact": "release-evidence",
+  "version": 1,
+  "project": "hillside-cycle-workshop-example",
+  "owner": "release-lead",
+  "status": "draft",
+  "updated": "2026-10-31",
+  "synthetic": true,
+  "release": {
+    "decision": "BLOCKED",
+    "reasons": [
+      "The security.txt gate fails by design: the synthetic domain is a placeholder and no real security contact exists.",
+      "Six gates need a consuming project with an exact locked toolchain, a browser, a served preview or a deployment target, and have not run.",
+      "No owner, domain, hosting target, legal review of the privacy page, or rollback rehearsal exists for a fictional business."
+    ]
+  },
+  "gates": [
+    {"gate": "html-perf-lint", "command": "node scripts/html-perf-lint.mjs {site}", "expected_exit": 0, "status": "pass", "proves": "no render-blocking head script, every image sized, no document.write, no unmarked-hero warning"},
+    {"gate": "route-weight-budget", "command": "node scripts/route-weight-budget.mjs --dist {site} --budgets {budgets}", "expected_exit": 0, "status": "pass", "proves": "all five routes inside the engine's global weight budgets; font weight reads 0 KB because no font files are bundled, so it is not representative of a shipped site"},
+    {"gate": "metadata-audit", "command": "bash scripts/metadata-audit.sh {site}", "expected_exit": 0, "status": "pass", "proves": "title, description, canonical, share tags, html lang and a zoom-safe viewport on every page"},
+    {"gate": "banned-phrase-scan", "command": "bash scripts/banned-phrase-scan.sh {site}", "expected_exit": 0, "status": "pass", "proves": "none of the 26 catalogued filler phrases appear in the rendered pages"},
+    {"gate": "content-link-graph", "command": "python3 scripts/content_link_graph.py {site}", "expected_exit": 0, "status": "pass", "proves": "five pages, no broken internal link, no orphan, every page reachable from the home page"},
+    {"gate": "sri", "command": "bash scripts/check-sri.sh {site}", "expected_exit": 0, "status": "pass", "proves": "no external script or stylesheet without integrity metadata (there are none)"},
+    {"gate": "slop-scan", "command": "bash scripts/slop-scan.sh {site}", "expected_exit": 0, "status": "pass", "proves": "no banned primary font, gradient, filler headline or other blocking pattern in the vendored detector's registry"},
+    {"gate": "secrets-scan", "command": "bash scripts/scan-secrets.sh", "expected_exit": 0, "status": "pass", "proves": "no credential-shaped string in the tracked files of a scratch repository holding the site"},
+    {"gate": "security-txt", "command": "bash scripts/check-security-txt.sh {site}", "expected_exit": 1, "status": "fail", "blocks_release": true, "failing_checks": ["placeholder value found"], "proves": "the gate rejects a placeholder domain, which is correct for a synthetic site; every other check passes"}
+  ],
+  "not_assessed": [
+    {"gate": "a11y-gate", "reason": "Needs a consuming project with exact locked Playwright and axe-core versions and an installed browser. The static html lang and viewport checks in metadata-audit are partial twins only."},
+    {"gate": "perf-gate-lighthouse", "reason": "Needs a locked Lighthouse CI toolchain and a browser. Field Core Web Vitals are a separate question and are not measured here."},
+    {"gate": "visual-qa", "reason": "Needs locked Playwright, a browser and committed visual baselines."},
+    {"gate": "security-headers", "reason": "Needs a served preview or staging URL and a locked static server; local preview does not prove edge configuration."},
+    {"gate": "security-gate-audit-and-supply-chain", "reason": "Needs the consuming project's package-lock.json. The site itself has no dependencies; the audit step now stops with exit 6 when it cannot run."},
+    {"gate": "design-quality-score-rubric", "reason": "The rubric score is a reviewer judgement and no scored report exists."},
+    {"gate": "post-deploy-smoke", "reason": "No deployment target exists for a fictional business."},
+    {"gate": "remote-rollback", "reason": "No host. Local input validation of the rollback helper passes (see the README); remote state is not assessed."}
+  ],
+  "waivers": [],
+  "human_reviews": []
+}

@@ -140,6 +140,8 @@ Fallback when network, credentials, CI, rendering, a target environment, or prod
 
 A multilingual site builds successfully but the French contact form cannot be verified because its production secret is unavailable. The release is deploy-ready, not released: the evidence pack records the unassessed form, the secret owner, and the exact smoke step required.
 
+For a complete release record, see [the five-page service site example](../../../examples/service-site-five-page/README.md): one gate fails by design, several are recorded as not assessed with their reasons, the decision is BLOCKED, and the rollback plan names its triggers, owner and verification.
+
 ## Read Next
 
 - `observability` owns live telemetry and alerts.
