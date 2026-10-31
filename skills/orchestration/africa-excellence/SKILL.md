@@ -122,8 +122,9 @@ by this skill:
    flow. See `references/ussd-aware-design.md`.
 4. **Multilingual depth** — beyond "English + French"; Kiswahili,
    Luganda, Amharic, Yoruba, Hausa, Zulu, Twi, Wolof, Arabic, and
-   Tifinagh are treated as first-class when the market requires. See
-   `references/african-language-pack.md`.
+   Tifinagh have layout support (script, fonts, expansion, direction). Only
+   Kiswahili has a native-copy route; the others need a named native writer
+   and reviewer. See `references/african-language-pack.md`.
 5. **Country-specific trust signals** — regulator badges, association
    memberships, payment provider badges, and local certifications per
    market. See `references/africa-trust-signals.md`.
@@ -207,8 +208,9 @@ by this skill:
   formatting.
 - `references/ussd-aware-design.md` — when and how the web flow must
   respect a USSD counterpart.
-- `references/african-language-pack.md` — the 10 first-class African
-  languages: font support, expansion ratios, RTL rules.
+- `references/african-language-pack.md` — the ten African languages with
+  layout support, and which of them has a native-copy route: font support,
+  expansion ratios, RTL rules.
 - `references/africa-trust-signals.md` — regulator, association,
   payment-provider, and cultural trust signals per market.
 - `references/cultural-patterns.md` — testimony hierarchy, photography

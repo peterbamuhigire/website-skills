@@ -4,28 +4,36 @@
 African-market site, or when auditing an existing site's language
 coverage against its audience.
 
-**Purpose**: Define the 10 first-class African languages the engine
-supports beyond "English + French", their font-support requirements,
-expansion ratios for layout, and the RTL rules for markets where they
-apply.
+**Purpose**: Define the ten African languages the engine supports
+beyond "English + French", and the level of support each gets: font
+requirements, expansion ratios for layout and RTL rules for all ten, and
+a native-copy route for Kiswahili only.
 
-## First-class languages
+## Language support
 
-| Language | Code | Script | Region | Speakers (approx) |
-|---|---|---|---|---|
-| Kiswahili | sw | Latin | East Africa (EAC) | 200M |
-| Luganda | lg | Latin | Uganda | 10M |
-| Amharic | am | Ethiopic (Ge'ez) | Ethiopia | 32M |
-| Yoruba | yo | Latin (with tone marks) | Nigeria, Benin, Togo | 45M |
-| Hausa | ha | Latin or Ajami (Arabic script) | Nigeria, Niger | 80M |
-| Zulu | zu | Latin | South Africa | 12M |
-| Twi | tw (ak) | Latin | Ghana | 20M |
-| Wolof | wo | Latin | Senegal, Gambia | 10M |
-| Arabic | ar | Arabic (RTL) | North Africa | ~280M across region |
-| Tifinagh (Berber) | zgh | Tifinagh | Morocco, Algeria | ~10–15M |
+A language is **first-class** in this engine only when a native-copy skill
+exists for it: English, French and Kiswahili (see `language-standards`).
+Every other language here is **layout-supported**: this pack gives its
+script, fonts, expansion ratio and direction rules, but the engine has no
+copy route for it. Copy in those languages needs a named native writer and
+a named native reviewer, and is never machine-translated.
 
-English and French remain first-class globally; this list extends the
-engine's default.
+| Language | Code | Script | Region | Copy route | Speakers (unsourced estimate, NOT_ASSESSED, do not quote) |
+|---|---|---|---|---|---|
+| Kiswahili | sw | Latin | East Africa (EAC) | `swahili-native-copy` | 200M |
+| Luganda | lg | Latin | Uganda | none; native writer and reviewer required | 10M |
+| Amharic | am | Ethiopic (Ge'ez) | Ethiopia | none; native writer and reviewer required | 32M |
+| Yoruba | yo | Latin (with tone marks) | Nigeria, Benin, Togo | none; native writer and reviewer required | 45M |
+| Hausa | ha | Latin or Ajami (Arabic script) | Nigeria, Niger | none; native writer and reviewer required | 80M |
+| Zulu | zu | Latin | South Africa | none; native writer and reviewer required | 12M |
+| Twi | tw (ak) | Latin | Ghana | none; native writer and reviewer required | 20M |
+| Wolof | wo | Latin | Senegal, Gambia | none; native writer and reviewer required | 10M |
+| Arabic | ar | Arabic (RTL) | North Africa | none; native writer and reviewer required | ~280M across region |
+| Tifinagh (Berber) | zgh | Tifinagh | Morocco, Algeria | none; native writer and reviewer required | ~10–15M |
+
+The speaker figures carry no source in this engine, and no figure here has
+been verified (register claim `WSK-LANG-001`). Do not quote them in client
+work until a source with its base and date is recorded.
 
 ## When to ship which language
 
@@ -35,7 +43,7 @@ The language set is decided during strategy:
   trade language. For Uganda that is English plus Kiswahili plus often
   Luganda. For Nigeria, English plus the state's primary (Hausa in
   the north, Yoruba in the south-west, Igbo in the south-east — Igbo
-  is not yet first-class here; add via decision entry when needed).
+  is not covered here; add via decision entry when needed).
 - **Buyer-vs-user rule**: if the buyer operates in English but the
   end-user does not, ship the end-user's language for the
   end-user-facing flows.
