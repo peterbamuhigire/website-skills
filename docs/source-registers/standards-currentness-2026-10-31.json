@@ -1,0 +1,587 @@
+{
+  "register_id": "website-standards-currentness-2026-10-31",
+  "scope": "Standards and legal identifiers the engine's gates and templates rely on: WCAG, WAI-ARIA, OWASP ASVS and Top 10, Core Web Vitals, Lighthouse, Google Search guidance, Schema.org, RFC 9116, GitHub Actions secure use, NIST Privacy Framework, and the data-protection statutes named in the compliance matrix (identifiers only; no clause-level or applicability review; not legal advice).",
+  "access_date": "2026-10-31",
+  "verification_date": "2026-10-31",
+  "owner": "website-skills maintainer",
+  "review_date": "2026-11-30",
+  "archive_policy": "Archives were not created; archive status is NOT_ASSESSED. Sources reached only through search summaries are marked indirect with low confidence and are not primary verification.",
+  "sources": [
+    {
+      "source_id": "SRC-W3C-WCAG22",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "publisher": "W3C",
+      "source_tier": 1,
+      "publication_or_version_date": "2024-12-12",
+      "access_date": "2026-10-31",
+      "freshness_class": "stable",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Page header read (status, date, errata notice); the fetch covered the first 100,000 of 269,706 characters. The errata page was not read."
+    },
+    {
+      "source_id": "SRC-W3C-ARIA12",
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+      "url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "publisher": "W3C",
+      "source_tier": 1,
+      "publication_or_version_date": "2023-06-06",
+      "access_date": "2026-10-31",
+      "freshness_class": "stable",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Header read from the first 100,000 of 446,886 characters. The header names no later version; that absence does not prove no later Recommendation exists."
+    },
+    {
+      "source_id": "SRC-OWASP-ASVS",
+      "title": "OWASP Application Security Verification Standard",
+      "url": "https://asvs.owasp.org/",
+      "publisher": "OWASP",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-05-30",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Latest stable version and its date as stated on the project page; no 5.0.x patch or 5.1 listed. The original project URL redirects here."
+    },
+    {
+      "source_id": "SRC-OWASP-TOP10-2025",
+      "title": "OWASP Top 10:2025",
+      "url": "https://top10.owasp.org/2025",
+      "publisher": "OWASP",
+      "source_tier": 1,
+      "publication_or_version_date": "NOT_ASSESSED",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party_no_release_date",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Edition and the ten category names are stated. No release date appears on the fetched pages."
+    },
+    {
+      "source_id": "SRC-WEBDEV-CWV-THRESHOLDS",
+      "title": "Defining the Core Web Vitals metrics thresholds",
+      "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+      "publisher": "Google web.dev",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-05-07",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Field thresholds at the 75th percentile. They are not interchangeable with this engine's 2,000 ms synthetic Lighthouse stress assertion."
+    },
+    {
+      "source_id": "SRC-GH-LIGHTHOUSE-RELEASES",
+      "title": "Lighthouse releases",
+      "url": "https://github.com/GoogleChrome/lighthouse/releases/latest",
+      "publisher": "GoogleChrome/lighthouse",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-10-27",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Release tag marked Latest is v13.6.0; the date is read from the changelog heading by the fetch tool."
+    },
+    {
+      "source_id": "SRC-NPM-LIGHTHOUSE-LHCI",
+      "title": "npm registry: lighthouse and @lhci/cli",
+      "url": "https://www.npmjs.com/package/@lhci/cli",
+      "publisher": "npm registry",
+      "source_tier": 2,
+      "publication_or_version_date": "2026-10-31",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "registry_query",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Read-only npm view queries on 2026-10-31: lighthouse latest 13.6.0; @lhci/cli latest 0.15.1, which depends on lighthouse 12.6.1. A registry tag does not prove a compatible upgrade path."
+    },
+    {
+      "source_id": "SRC-GOOGLE-SEARCH-ESSENTIALS",
+      "title": "Google Search Essentials",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2025-12-10",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Applies to Google Search only. Generative-AI guidance is on separate pages."
+    },
+    {
+      "source_id": "SRC-GOOGLE-SD-POLICIES",
+      "title": "General structured data guidelines",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "publisher": "Google Search Central",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-07-10",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Applies to Google Search eligibility; valid markup does not guarantee a rich result."
+    },
+    {
+      "source_id": "SRC-SCHEMA-RELEASES",
+      "title": "Schema.org releases",
+      "url": "https://schema.org/docs/releases.html",
+      "publisher": "Schema.org",
+      "source_tier": 1,
+      "publication_or_version_date": "2026-09-16",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Most recent releases as listed first on the page: 30.1 (2026-09-16), 30.0 (2026-03-19), 29.4 (2025-12-08). Fetch covered the first 100,000 of 231,342 characters."
+    },
+    {
+      "source_id": "SRC-RFC-EDITOR-9116",
+      "title": "RFC 9116: A File Format to Aid in Security Vulnerability Disclosure",
+      "url": "https://www.rfc-editor.org/info/rfc9116",
+      "publisher": "RFC Editor",
+      "source_tier": 1,
+      "publication_or_version_date": "2022",
+      "access_date": "2026-10-31",
+      "freshness_class": "stable",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Informational RFC. The page shows only a 2022 copyright year, not a full date, and shows no obsoleting or updating RFC."
+    },
+    {
+      "source_id": "SRC-GH-ACTIONS-SECURE-USE",
+      "title": "Secure use reference (GitHub Actions)",
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "publisher": "GitHub Docs",
+      "source_tier": 1,
+      "publication_or_version_date": "NOT_ASSESSED",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "The page exists and recommends pinning third-party actions to a full-length commit SHA and least-privilege GITHUB_TOKEN permissions. No date is shown."
+    },
+    {
+      "source_id": "SRC-NIST-PRIVACY-FRAMEWORK",
+      "title": "NIST Privacy Framework",
+      "url": "https://www.nist.gov/privacy-framework",
+      "publisher": "NIST",
+      "source_tier": 1,
+      "publication_or_version_date": "NOT_ASSESSED",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_first_party",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "Version 1.0 is the current published version; the page labels 1.1 as an initial public draft. The page shows no publication dates."
+    },
+    {
+      "source_id": "SRC-NDPC-NG",
+      "title": "Nigeria Data Protection Commission",
+      "url": "https://ndpc.gov.ng/",
+      "publisher": "Nigeria Data Protection Commission",
+      "source_tier": 2,
+      "publication_or_version_date": "NOT_ASSESSED",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "direct_regulator",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "medium",
+      "scope_and_limit": "The site says the Commission was established under the Nigeria Data Protection Act 2023 and links a document whose file name reads 'NDP ACT GAID 2025 MARCH 20TH'. It does not say whether the NDPR 2019 is repealed, superseded or saved."
+    },
+    {
+      "source_id": "SRC-KENYALAW-DPA-2019",
+      "title": "Data Protection Act, No. 24 of 2019 (Kenya Law)",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2019/24",
+      "publisher": "Kenya Law",
+      "source_tier": 2,
+      "publication_or_version_date": "2022-12-31",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "indirect_via_search_summary",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Direct fetch returned empty and the regulator's own site showed a maintenance notice. Facts come from search-result summaries that cite Kenya Law and the regulator-hosted gazette; they were not read on the official page."
+    },
+    {
+      "source_id": "SRC-ULII-DPPA-2019",
+      "title": "Data Protection and Privacy Act, 2019, Act 9 of 2019 (ULII)",
+      "url": "https://ulii.org/en/akn/ug/act/2019/9/eng@2019-05-03",
+      "publisher": "Uganda Legal Information Institute",
+      "source_tier": 2,
+      "publication_or_version_date": "2019-05-03",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "indirect_via_search_summary",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Reached through a search-result summary, not read on the page. The regulator's site returned only its title. Secondary sources disagree on the assent and commencement dates."
+    },
+    {
+      "source_id": "SRC-GOVZA-POPIA-COMMENCEMENT",
+      "title": "Presidency on commencement of certain sections of the Protection of Personal Information Act",
+      "url": "https://www.gov.za/speeches/presidency-commencement-certain-sections-protection-personal-information-act-22-jun-2020",
+      "publisher": "Government of South Africa",
+      "source_tier": 2,
+      "publication_or_version_date": "2020-06-22",
+      "access_date": "2026-10-31",
+      "freshness_class": "time-sensitive",
+      "support_status": "indirect_via_search_summary",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Reached through a search-result summary, not read on the page. The Information Regulator's site refused the connection."
+    },
+    {
+      "source_id": "SRC-EURLEX-GDPR",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "publisher": "EUR-Lex",
+      "source_tier": 1,
+      "publication_or_version_date": "2016-04-27",
+      "access_date": "2026-10-31",
+      "freshness_class": "stable",
+      "support_status": "indirect_via_mirrors",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "low",
+      "scope_and_limit": "Two fetches of EUR-Lex returned empty content. Facts come from mirror sites and a search summary; verify against the Official Journal before relying on them."
+    },
+    {
+      "source_id": "SRC-LOCAL-LANGUAGE-PACK",
+      "title": "African language pack (this engine)",
+      "url": "skills/orchestration/africa-excellence/references/african-language-pack.md",
+      "publisher": "website-skills",
+      "source_tier": 5,
+      "publication_or_version_date": "2026-10-31",
+      "access_date": "2026-10-31",
+      "freshness_class": "context-bound",
+      "support_status": "internal_file_inspection",
+      "archive_url": null,
+      "archive_status": "NOT_ASSESSED",
+      "confidence": "high",
+      "scope_and_limit": "Inspected to confirm that its speaker-count column cites no source. It is evidence of the absence, not a source for any figure."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "WSK-STD-001",
+      "claim": "WCAG 2.2 is a W3C Recommendation published 12 December 2024; the page notes that errata exist.",
+      "source_ids": [
+        "SRC-W3C-WCAG22"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Document header read",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "stable",
+      "review_date": "2027-01-31",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-002",
+      "claim": "WAI-ARIA 1.2 is a W3C Recommendation dated 6 June 2023. Its header names no later version; whether a later Recommendation exists is not established by that absence.",
+      "source_ids": [
+        "SRC-W3C-ARIA12"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Header read; absence of a later version is not proof",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "stable",
+      "review_date": "2027-01-31",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-STD-003",
+      "claim": "OWASP ASVS 5.0.0, published 30 May 2025, is the latest stable version; no 5.0.x patch or 5.1 release is listed.",
+      "source_ids": [
+        "SRC-OWASP-ASVS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Project page",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-01-31",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-004",
+      "claim": "OWASP Top 10:2025 is the current edition. Its release date is not stated on the fetched pages and is NOT_ASSESSED.",
+      "source_ids": [
+        "SRC-OWASP-TOP10-2025"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Edition and categories stated; date absent",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-01-31",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-STD-005",
+      "claim": "Core Web Vitals good thresholds are LCP at or under 2500 ms, INP at or under 200 ms and CLS at or under 0.1, at the 75th percentile; poor is above 4000 ms, 500 ms and 0.25. The web.dev page was last updated 2025-05-07.",
+      "source_ids": [
+        "SRC-WEBDEV-CWV-THRESHOLDS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Direct first-party statement",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-01-31",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-006",
+      "claim": "The latest Lighthouse release is v13.6.0 (27 October 2026; npm latest 13.6.0). @lhci/cli latest is 0.15.1 and depends on Lighthouse 12.6.1, so the Lighthouse CI tool does not yet carry the current Lighthouse. This supersedes the version number in PERF-003.",
+      "source_ids": [
+        "SRC-GH-LIGHTHOUSE-RELEASES",
+        "SRC-NPM-LIGHTHOUSE-LHCI"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Release page and read-only registry queries",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-31",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-007",
+      "claim": "Google Search Essentials was last updated 10 December 2025 and has three sections: technical requirements, spam policies and key best practices. It does not cover generative AI features in the main body.",
+      "source_ids": [
+        "SRC-GOOGLE-SEARCH-ESSENTIALS"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Direct first-party statement",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-11-30",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-008",
+      "claim": "Google's general structured data guideline (page updated 10 July 2026) is that markup must represent content users can see, and valid markup does not guarantee a rich result.",
+      "source_ids": [
+        "SRC-GOOGLE-SD-POLICIES"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Direct first-party statement",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-11-30",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-009",
+      "claim": "The latest Schema.org release is 30.1 (16 September 2026); the previous is 30.0 (19 March 2026). This supersedes the 30.0 named in the standards register before this review.",
+      "source_ids": [
+        "SRC-SCHEMA-RELEASES"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Releases page",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-11-30",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "WSK-STD-010",
+      "claim": "RFC 9116 is an Informational RFC (2022); the RFC Editor page shows no obsoleting or updating RFC. Its exact publication date was not shown and is not asserted here.",
+      "source_ids": [
+        "SRC-RFC-EDITOR-9116"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Status and absence of successors read; exact date not shown",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "stable",
+      "review_date": "2027-10-31",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-STD-011",
+      "claim": "GitHub's Actions secure-use reference recommends pinning third-party actions to a full-length commit SHA and setting least-privilege GITHUB_TOKEN permissions.",
+      "source_ids": [
+        "SRC-GH-ACTIONS-SECURE-USE"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Page read",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-01-31",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-STD-012",
+      "claim": "NIST Privacy Framework version 1.0 is the current published version; version 1.1 is an initial public draft and must not be described as final. Publication dates were not shown and are NOT_ASSESSED.",
+      "source_ids": [
+        "SRC-NIST-PRIVACY-FRAMEWORK"
+      ],
+      "support_review": {
+        "state": "supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Status labels on the NIST page",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2027-01-31",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-LEG-001",
+      "claim": "IDENTIFIER CHECK ONLY. Nigeria: the NDPC states it was established under the Nigeria Data Protection Act 2023, and links a March 2025 implementation directive (date inferred from a file name). The NDPC page does not say whether the NDPR 2019 is repealed, superseded or saved. The compliance matrix says the Act supersedes the NDPR; three other files still name the NDPR. Unreconciled; legal review needed.",
+      "source_ids": [
+        "SRC-NDPC-NG"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Regulator site read; NDPR status not stated",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-15",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "WSK-LEG-002",
+      "claim": "IDENTIFIER CHECK ONLY. Kenya: Data Protection Act No. 24 of 2019 (Cap. 411C), assented 8 November 2019 and commenced 25 November 2019, with the Data Protection (General) Regulations 2021 (Legal Notice 263); consolidated to 31 December 2022. Read through search summaries, not on the official page.",
+      "source_ids": [
+        "SRC-KENYALAW-DPA-2019"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Indirect: search summary of Kenya Law and gazette",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-15",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "WSK-LEG-003",
+      "claim": "IDENTIFIER CHECK ONLY. Uganda: Data Protection and Privacy Act, 2019 (Act 9 of 2019), gazetted 3 May 2019 per ULII, enforced by the Personal Data Protection Office under section 4, with Regulations 2021 in effect from 12 March 2021. Secondary sources disagree on assent and commencement dates. Read through a search summary, not on the official page.",
+      "source_ids": [
+        "SRC-ULII-DPPA-2019"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Indirect: search summary of ULII",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-15",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "WSK-LEG-004",
+      "claim": "IDENTIFIER CHECK ONLY. South Africa: Protection of Personal Information Act 4 of 2013 commenced in phases (most sections on 1 July 2020; sections 110 and 114(4) on 30 June 2021) with a one-year conformity period under section 114(1) that ended on 1 July 2021. Read through a search summary of the Presidency notice, not on the official page.",
+      "source_ids": [
+        "SRC-GOVZA-POPIA-COMMENCEMENT"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Indirect: search summary of Presidency notice",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "time-sensitive",
+      "review_date": "2026-12-15",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "WSK-LEG-005",
+      "claim": "IDENTIFIER CHECK ONLY. European Union: Regulation (EU) 2016/679, published in OJ L 119 of 4 May 2016, applies from 25 May 2018 (Article 99); a corrigendum appeared in OJ L 127 of 23 May 2018. Read through mirrors, because EUR-Lex returned empty content.",
+      "source_ids": [
+        "SRC-EURLEX-GDPR"
+      ],
+      "support_review": {
+        "state": "partially_supported",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "Indirect: mirrors and search summary",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "stable",
+      "review_date": "2026-12-15",
+      "confidence": "low"
+    },
+    {
+      "claim_id": "WSK-LANG-001",
+      "claim": "The speaker-count column of the African language pack cites no source. No figure in it is verified, and none may be quoted until a source with a base and date is recorded.",
+      "source_ids": [
+        "SRC-LOCAL-LANGUAGE-PACK"
+      ],
+      "support_review": {
+        "state": "no-source",
+        "reviewer": "website-skills Kaizen agent (pass 2)",
+        "basis": "File inspected; no citation present",
+        "review_date": "2026-10-31"
+      },
+      "freshness_class": "context-bound",
+      "review_date": "2026-12-15",
+      "confidence": "high"
+    }
+  ]
+}

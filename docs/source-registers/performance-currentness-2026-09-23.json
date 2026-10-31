@@ -223,7 +223,7 @@
     },
     {
       "claim_id": "PERF-003",
-      "claim": "Latest Lighthouse is 13.5.0 (2026-09-18); performance weights TBT 30, LCP 25, CLS 25, FCP 10, SI 10; INP has weight 0 and is not measured in navigation mode.",
+      "claim": "Latest Lighthouse is 13.5.0 (2026-09-18); performance weights TBT 30, LCP 25, CLS 25, FCP 10, SI 10; INP has weight 0 and is not measured in navigation mode. SUPERSEDED in part 2026-10-31 by WSK-STD-006 (standards-currentness-2026-10-31.json): the latest Lighthouse is 13.6.0 (2026-10-27); the weights listed here were not rechecked.",
       "source_ids": [
         "SRC-LH-RELEASES",
         "SRC-LH-CONFIG"

@@ -19,6 +19,7 @@ jobs:
       - run: python -X utf8 scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json
       - run: python -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures
       - run: python -X utf8 scripts/validate-search-doctrine.py
+      - run: python -X utf8 scripts/validate-source-registers.py
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
