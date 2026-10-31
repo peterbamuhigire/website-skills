@@ -40,6 +40,14 @@ validation:
       - windows
       - linux
       - macos
+  - id: portable-references
+    command: >-
+      python scripts/check_portable_references.py
+    working_directory: .
+    platforms:
+      - windows
+      - linux
+      - macos
   - id: source-ingestion
     command: >-
       python scripts/source_ingestion_guardrail.py --root .

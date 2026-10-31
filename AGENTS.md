@@ -57,8 +57,8 @@ operates within.
 ## Mandatory Digital Research currentness gate for Kaizen
 
 Every Kaizen audit, skill edit, reference update, validator change, and
-standardisation decision MUST begin with the Digital Research Engine at
-`C:\wamp64\www\digital-research-engine`. Read its `source-evaluation` and
+standardisation decision MUST begin with the Digital Research Engine, resolved
+from the engine-routing table. Read its `source-evaluation` and
 `source-verification` skills and the currentness gate reference
 `docs/continuous-improvement/kaizen-currentness-gate.md`.
 
@@ -71,7 +71,7 @@ primary sources; quarantine stale/ambiguous/unsupported claims and mark them
 
 The shared agent, command, hook, evidence, and handoff contract is mapped to
 website work in [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md);
-the central registry lives in `C:\wamp64\www\chwezi-dev-engine\docs\engine-control-plane.json`.
+the central registry is `docs/engine-control-plane.json` in the dev engine, resolved from the engine-routing table.
 
 ## Purpose
 
@@ -368,7 +368,7 @@ The repository should be understood in five layers:
 
 **Every blog post, article, or thought-leadership piece must be researched with the digital-research-engine before drafting** (applies to `content-copy/blog-writer`, `content-copy/blog-idea-generator`, and any page carrying editorial/blog content). Never write a blog post from assumed knowledge alone. Real examples, statistics, market figures, and cited research must come from a live research wave, with sources verified and credit given to the original authors (named researchers, institutions, regulators).
 
-- **Engine location:** resolve `digital-research-engine` from the device's global engine-routing table. On this machine the canonical checkout is `C:\wamp64\www\digital-research-engine`; do not substitute a retired checkout alias.
+- **Engine location:** resolve `digital-research-engine` from the device's global engine-routing table. Use the checkout that table names; do not substitute a retired checkout alias.
 - **Method:** Start with `research-orchestration/SKILL.md` and run a planned multi-agent wave — one research agent per cohort/region, each briefed per the engine's standard agent-brief structure. The orchestrator does the synthesis; research agents return raw, sourced findings only.
 - **Article SEO/SERP standard:** Before drafting any article, run the digital-research-engine's three-wave article study: map intent and 3–7 query clusters; read the accessible top five results for each cluster; then synthesise the content gap, AI-answer opportunities, keyword map, internal links and verified primary-source plan. Use an approved search/API tool rather than direct Google SERP scraping. Record query date, provider, exact queries, result URLs and read status. Treat search visibility as competitive evidence, never as proof or a ranking promise; do not invent search volumes. For bilingual content, research English and French intent separately and translate the decision, not just the words.
 - **Attribution is mandatory.** Cite real, locatable sources with URLs; name the student/academic researchers, universities, and regulators whose work you draw on. Mark anything unverifiable as UNVERIFIED — confirm it or frame it without inventing authors, titles, or statistics. Never fabricate a citation. Close each piece with a short "Sources & the researchers worth crediting" block.
@@ -431,6 +431,12 @@ Full reference: `skills/launch-ops/deploy/references/ci-troubleshooting.md`,
 - Run `scripts/validate-skill-contracts.py` against `quality/skill-contract-baseline.json` and `scripts/routing-smoke-test.py` before release; the baseline accepts no findings and routing requires the expected skill in the top three
 - Every skill keeps the required acknowledgement line directly under the first `# ...` heading without duplicating it
 - Run `scripts/validate-checkout-size.py` before release; it fails closed if either the full checkout or package-oriented entry count exceeds 5,000, symlinks escape the checkout, files cannot be read, or marketplace skill paths/identities diverge from the registry.
+- Run `scripts/check_portable_references.py` before release. It fails on machine-specific
+  absolute paths (a user-profile path or the local web-server folder) in active content and on any
+  Markdown relative link that does not resolve or leaves the checkout; history documents and
+  client prompts are held to the ceilings in `quality/portable-references-policy.json`. Write a
+  cross-engine reference as a skill name resolved through the engine-routing table
+  (`chwezi-design-engine:form-ux-design`), never as a path.
 - Canonical names live in `glossary.md`; renames follow `docs/deprecation-policy.md`
 - Every project ships through the canonical CI pipeline; if the pipeline
   is not installed and green, the project is not shipped on the engine
@@ -558,4 +564,4 @@ For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/
 
 ## PORTFOLIO CRAFT CONTRACT
 
-Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build a website one user journey and state at a time: frame the job and conversion, inspect the current page/data flow, implement one meaningful slice with real content and assets, render it at relevant breakpoints, exercise loading/empty/error/focus/consent paths, refine, and record browser/accessibility/performance proof. Motion must explain a state or action; typography, layout, colour, assets, and copy need product reasons. Do not generate an entire site and call it finished. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing browser, render, live, or stakeholder evidence is `NOT ASSESSED`, never a pass.
+Load `docs/operations/portfolio-craft-standard-2026-09-04.md` from `chwezi-engine-agents` (resolved from the engine-routing table) when available. Build a website one user journey and state at a time: frame the job and conversion, inspect the current page/data flow, implement one meaningful slice with real content and assets, render it at relevant breakpoints, exercise loading/empty/error/focus/consent paths, refine, and record browser/accessibility/performance proof. Motion must explain a state or action; typography, layout, colour, assets, and copy need product reasons. Do not generate an entire site and call it finished. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing browser, render, live, or stakeholder evidence is `NOT ASSESSED`, never a pass.

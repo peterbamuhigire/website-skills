@@ -1,6 +1,6 @@
 # English Output Overlay - Websites
 
-[Owning skill](../SKILL.md) | Canonical study: `C:\wamp64\www\digital-research-skills\docs\continuous-improvement\english-collocations-and-lexical-precision-2026-09-02.md`
+[Owning skill](../SKILL.md) | Canonical study: `docs/continuous-improvement/english-collocations-and-lexical-precision-2026-09-02.md` in the Digital Research engine (resolved through the engine-routing table)
 
 Apply after page intent, SEO, accessibility, and claim checks.
 

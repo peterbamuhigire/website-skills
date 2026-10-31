@@ -6,8 +6,8 @@
 
 Real examples, statistics, market figures, and any cited research come from a
 live research wave with verified sources. Resolve `digital-research-engine`
-from the device's global engine-routing table (canonical checkout:
-`C:\wamp64\www\digital-research-engine`) — do not substitute a retired alias.
+from the device's global engine-routing table and use the checkout it names —
+do not substitute a retired alias.
 
 ## Attribution is mandatory; never fabricate a citation
 
