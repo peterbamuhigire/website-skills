@@ -69,7 +69,7 @@ All eight improvements were applied. Where one was applied in part, the reason i
 | `c704a07` | Structure, front door and relocation | Rewrote the README (9,334 to 4,421 words). Added `docs/skill-catalogue.md` (the 62-row table), `docs/references.md` (all citations), `docs/date-gated-checks.md` (the calendar) and `docs/october-2026-kaizen-changes.md` (the detailed change write-up). |
 | `570d13e` | Plain English | Split the long sentences in the start steps, the build order, the not-run list and the kaizen introduction. Turned the build order into a numbered list. |
 | `7ad2c62` | Index | Added the four pages and this record to `docs/README.md` and updated the sentence that describes the README sections. This commit links this record before the record exists. The record commit that follows resolves the link. The validators were not run at that intermediate commit. |
-| the record commit | Record | Added this file. |
+| `ea715ba`, `71e480e`, and the commit that added these hashes | Record | Added this file; replaced a literal anchor pattern in the pasted checker output with a placeholder; named the commits here. |
 
 **What moved where.** Moved text is verbatim except for link paths, heading levels and the words "this README", which became "the README".
 
