@@ -3,9 +3,9 @@
     "doctrine/references/ai-slop-banned-fonts.json": "9039a9ddf7cf8fb5055b9d21856492eff753477cd712d02da9ea12141ebc14d0",
     "hooks/lib/font-matcher.js": "3ea9c71396a10c4a2d2aaee1be025cbde0aa647bad51cfa767811056b4484535",
     "tools/slop-detector/cli.mjs": "95984a07f26c32c7b316a26bccc9e86429ee188a460a0f0fa6d42c118ddc92a1",
-    "tools/slop-detector/lib/browser-rules.mjs": "11de9ff94aa5fdf7d3a5b87b3145ef71823736f17f9b0758c65db2135fc9e15c",
+    "tools/slop-detector/lib/browser-rules.mjs": "63d704ad1161bfd1a5274647af603ad4022e2418e55fd857582bbaf18435afd0",
     "tools/slop-detector/lib/browser.mjs": "de5d3d16161829f27cd42cbcf4babc6092f687cd9f1b8f870656c9cd3de21e6f",
-    "tools/slop-detector/lib/checks.mjs": "10e8370666f30eccad6cf5e1b05ec0fae9b9fbc1bea6df327b2a4a91ff3e859b",
+    "tools/slop-detector/lib/checks.mjs": "0bf932343a703ec7c6bcb42c5cf92e33cc6febde99131035257234230c7501f1",
     "tools/slop-detector/lib/colour.mjs": "c5e474d0ae3e9f4710eed57f100984ade65a28d4dda08720791f32c78c1b7c22",
     "tools/slop-detector/lib/detector.mjs": "7c03faa6b1b0184e980a4b3f677ff7b68ad847ff05fc48aa8e2fe38d0422a6e5",
     "tools/slop-detector/lib/doctrine-consistency.mjs": "13bfb5f1820bcf4b586c21416c4ed6fc21c3c86d85f4c33d744d76fc137ace31",
@@ -18,15 +18,15 @@
     "tools/slop-detector/lib/tailwind.mjs": "36cfa3e054022cd5cc7f177120f2c2be5d6935b520a79a768c0edeb60f5dfdd9",
     "tools/slop-detector/lib/util.mjs": "0e932f751f8e68f3437106cc4ffc368896031bd1c0b589b3c2ace9febd273074",
     "tools/slop-detector/lib/waivers.mjs": "d4091f46aca16844f7ac66cd3c193754f5210363f4bcc7da4fd9000614591df6",
-    "tools/slop-detector/rules/registry.json": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+    "tools/slop-detector/rules/registry.json": "a4d34400f7518ab9b3dae63dad1d184803abfe6bc4006e52d83fa2336e229ccc",
     "tools/slop-detector/rules/registry.schema.json": "40a9812f1748849e10af3725415a5ce32305103f5be6dd3ed4da49240b631eee"
   },
   "hash_mode": "sha256 after CRLF normalisation",
-  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "registry_sha256": "a4d34400f7518ab9b3dae63dad1d184803abfe6bc4006e52d83fa2336e229ccc",
   "schema_version": 1,
-  "source_commit": "3fe84a6dc22d954483e1afce06c3e9b53fc2f5ca",
+  "source_commit": "72a3a37817a8c94b39e4edd083d24b730151c17d",
   "source_path": "tools/slop-detector",
   "source_repo": "https://github.com/peterbamuhigire/chwezi-design-engine",
   "tool": "chwezi-slop",
-  "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine"
+  "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from <design engine checkout>"
 }
