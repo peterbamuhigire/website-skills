@@ -15,13 +15,19 @@
 // Hero detection (not "the first <img>", which is often a logo): every image marked
 // fetchpriority="high" or data-hero is a hero. If none is marked, the hero is the image with
 // the largest declared width x height (first in document order on a tie). Images without
-// numeric dimensions cannot be ranked (they already fail HPL-002).
+// numeric dimensions cannot be ranked (they already fail HPL-002). An image whose declared
+// width and height are both at most MARK_MAX_EDGE px is a mark or icon and is never ranked as
+// the hero, so a page whose only image is a small logo gets no HPL-101; such an image still
+// gets HPL-002 and the other checks.
 //
 // Usage: node html-perf-lint.mjs <dist-dir> [--report reports/bundle/html-perf-lint.json]
 // Exit codes: 0 pass (warnings allowed), 1 findings, 3 usage error.
 
 import fs from 'node:fs';
 import path from 'node:path';
+
+// Declared edge length (px) at or below which both dimensions make an image a mark or icon.
+const MARK_MAX_EDGE = 64;
 
 function attr(tag, name) {
   const re = new RegExp(`\\s${name}(?:\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+)))?(?=[\\s/>])`, 'i');
@@ -64,11 +70,17 @@ function lintFile(file, root) {
     const h = parseInt(attr(tag, 'height') || '', 10);
     return Number.isFinite(w) && Number.isFinite(h) ? w * h : 0;
   };
+  const isMark = (tag) => {
+    const w = parseInt(attr(tag, 'width') || '', 10);
+    const h = parseInt(attr(tag, 'height') || '', 10);
+    return Number.isFinite(w) && Number.isFinite(h) && w <= MARK_MAX_EDGE && h <= MARK_MAX_EDGE;
+  };
   let heroes = images.filter((m) => marked(m[0]));
   const hasMarker = heroes.length > 0;
   if (!hasMarker && images.length) {
     let best = null;
     for (const m of images) {
+      if (isMark(m[0])) continue;
       if (area(m[0]) > (best ? area(best[0]) : 0)) best = m;
     }
     if (best) heroes = [best];

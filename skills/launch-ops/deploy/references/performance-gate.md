@@ -27,7 +27,10 @@ The script:
    and iframes without dimensions, `loading="lazy"` on the hero image, and
    `document.write`. The hero is the image marked `fetchpriority="high"` or
    `data-hero`; if none is marked, the image with the largest declared size
-   (a small logo that happens to come first is never treated as the hero).
+   (a small logo that happens to come first is never treated as the hero, and
+   an image whose declared width and height are both 64 px or less is a mark,
+   so a page whose only image is a small logo gets no hero warning; it still
+   needs dimensions).
    Its result is enforced at step 6, after the other gates report.
 3. Runs `scripts/route-weight-budget.mjs`, which resolves every budgeted route
    (a template such as `/blog/[slug]/` uses one representative built page),
