@@ -26,7 +26,7 @@ Every article must include at least 2 images within the body, and may include up
 | Orientation mix | At least 1 landscape AND at least 1 portrait |
 | Placement | Distributed through the article body, not clustered |
 | Sizing | Landscape: full-width or 2/3 width. Portrait: 1/2 width with text wrap or centred. |
-| Captions | Optional but recommended — adds context and accessibility |
+| Captions | When used, connect the image to a practical point in the article |
 | Loading | `loading="lazy"` for all in-article images |
 | Alt text | Required on every image |
 
@@ -37,6 +37,13 @@ Every article must include at least 2 images within the body, and may include up
 - **Never place two images back-to-back** without text between them
 - **Landscape images** work well as full-width section breaks
 - **Portrait images** work well floated alongside text or centred with a caption
+
+### Caption Standard
+
+- Never use disclaimer copy as a reader-facing photo caption. Do not use a caption to say that a photo is illustrative, is not a client or product image, does not depict a real project, or has unrelated details.
+- Write captions that explain the scene's practical connection to the article: a decision, check, handover, responsibility, or next step.
+- Keep source, licence, permission, and representation details in the asset catalogue or internal editorial notes, not in the caption.
+- Alt text describes the visible image for readers using assistive technology; it is not a place for rights notes or disclaimers.
 
 ### Photo Selection Guidance
 When selecting from available photos in `photo-bank/`:

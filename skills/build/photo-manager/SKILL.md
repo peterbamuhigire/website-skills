@@ -45,12 +45,14 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 - Catalogue records reconcile to real decodable files, dimensions, placements, alt intent, and rights status.
 - Names are stable, descriptive, collision-free, and independent of a single host install path.
 - Every staging deletion traces to a verified destination and catalogue entry from the same run.
+- Keep rights, licence, permission, source, and representation details in the asset catalogue or internal notes. Never turn them into disclaimer captions; reader-facing captions should state an article-relevant practical point.
 
 ## Anti-patterns
 - Selecting imagery from filenames. Fix: inspect the decoded asset and placement context.
 - Inferring rights, people, or locations. Fix: record unknown until evidence is supplied.
 - Allowing name collisions. Fix: assign stable descriptive unique names.
 - Omitting alt intent or rights status. Fix: store both in the catalogue.
+- Using a disclaimer as a photo caption. Fix: describe the article's practical point in the caption and keep rights or representation notes in the catalogue.
 - Deleting staging files early. Fix: verify destination decode and catalogue first.
 - Do not hardcode `.claude/skills` or another single install path.
 - Do not skip validation against upstream or downstream dependencies.
