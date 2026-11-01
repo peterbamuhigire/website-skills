@@ -66,6 +66,8 @@ The July 2026 skill-writing, composition, evaluation, and release upgrade is com
 
 ## Recently Completed
 
+- **2026-11-01 — Signup human-validation standard**: Cloudflare Turnstile with server-side verification for web forms; Firebase App Check with Play Integrity and Turnstile WebView fallback for Android; layered bot controls and staged rollout.
+
 - **2026-07-13 — July 2026 zero-debt skill conformance**: 59 active skills normalised; local authoring standard and template; zero-debt validator and baseline; routing fixtures and top-three smoke gate; push/PR CI; current maintainer and release documentation.
 
 - **2026-04-16 — Phase 10 (Hard Enforcement and Visual QA Gates)**:

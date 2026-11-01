@@ -113,6 +113,7 @@ Implement a multilingual service template from the approved page-goal matrix, bi
 - [scan-first-page-and-goodwill-rules.md](references/scan-first-page-and-goodwill-rules.md) — read when making pages work at a glance, wording links and protecting visitor goodwill.
 - [form-question-wording-and-data-design.md](references/form-question-wording-and-data-design.md) — read when deciding which questions a form asks and how they are worded.
 - [form-layout-flow-and-validation-rules.md](references/form-layout-flow-and-validation-rules.md) — read when laying out forms, flow, validation and error messages.
+- [signup-human-validation.md](references/signup-human-validation.md) — read when a website form creates an account or initiates a signup-related email.
 - [section-and-page-type-blueprints.md](references/section-and-page-type-blueprints.md) — read when choosing section and page-type blueprints.
 - `references/page-conversion-checklist.md` — per-template anatomy, conversion QA gate, instrumentation minimums, pre-launch review. Use when building or reviewing any page.
 - `../website-builder/references/narrative-information-architecture-and-empathy.md` — translate audience empathy, narrative sequence, proof, choice, and recovery into page implementation.
