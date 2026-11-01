@@ -105,7 +105,7 @@ when a designer uses an `<h2>` as a container for a decorative SVG; use a
 ## 18. frame-title
 
 **Fix.** Every `<iframe>` needs a `title`. Map embeds, YouTube embeds, and
-reCAPTCHA frames are the usual culprits.
+third-party verification widgets such as Turnstile are common cases to inspect.
 
 ## 19. object-alt and svg-img-alt
 

@@ -1,6 +1,6 @@
 # Email Sender: PHP Contact Form with SMTP
 
-Send emails from static Astro websites using PHP + PHPMailer via the client's own domain SMTP server. Fully self-hosted, no external services (no reCAPTCHA, no third-party APIs).
+Send emails from static Astro websites using PHP + PHPMailer via the client's own domain SMTP server. Email delivery is self-hosted; when a form needs human verification, use the website engine's Turnstile standard and validate tokens server-side.
 
 ## Prerequisites
 

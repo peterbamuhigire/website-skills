@@ -174,7 +174,7 @@ Primary purpose: convert the self-qualified reader to a real next step.
 - [ ] Explicit promise of response time and next step
 - [ ] Alternative channel visible (email, phone, calendar link)
 - [ ] No generic "We'd love to hear from you" hero — state what happens next
-- [ ] Anti-spam: honeypot, reCAPTCHA v3, or equivalent; never visible captcha as first defence
+- [ ] Anti-spam: rate limits and a suitable honeypot; use Cloudflare Turnstile for human verification when required, with server-side token validation
 - [ ] Email autoresponder triggers on submit
 - [ ] Post-submit: thank-you page, not inline toast, so analytics can record
 

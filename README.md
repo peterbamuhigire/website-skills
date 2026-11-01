@@ -46,6 +46,10 @@ It is for website agencies, freelance developers, and in-house marketing and pro
 - [Related engines](#related-engines)
 - [References](#references)
 
+## Signup security default
+
+For public signup forms, use Cloudflare Turnstile Managed mode with server-side token validation to reduce bot-driven and other unauthorised automated use. Native Android signup uses Firebase App Check with Play Integrity and a Turnstile WebView fallback when expected attestation is unavailable. See the [signup human-validation reference](skills/build/page-builder/references/signup-human-validation.md).
+
 ## Capabilities
 
 The engine holds 62 skills in 11 categories, grouped under [What is inside](#what-is-inside). The [skill catalogue](docs/skill-catalogue.md) lists each one. The table under Find the right skill is the capability map: common tasks and the skill that handles each.
