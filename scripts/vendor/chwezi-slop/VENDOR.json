@@ -1,7 +1,7 @@
 {
   "files": {
     "doctrine/references/ai-slop-banned-fonts.json": "9039a9ddf7cf8fb5055b9d21856492eff753477cd712d02da9ea12141ebc14d0",
-    "hooks/lib/font-matcher.js": "3ea9c71396a10c4a2d2aaee1be025cbde0aa647bad51cfa767811056b4484535",
+    "hooks/lib/font-matcher.js": "2100dec1c8f05f2c4361965a0cae1572735e772ed8a1c0f9298488de0250e0ff",
     "tools/slop-detector/cli.mjs": "95984a07f26c32c7b316a26bccc9e86429ee188a460a0f0fa6d42c118ddc92a1",
     "tools/slop-detector/lib/browser-rules.mjs": "63d704ad1161bfd1a5274647af603ad4022e2418e55fd857582bbaf18435afd0",
     "tools/slop-detector/lib/browser.mjs": "de5d3d16161829f27cd42cbcf4babc6092f687cd9f1b8f870656c9cd3de21e6f",
@@ -24,7 +24,7 @@
   "hash_mode": "sha256 after CRLF normalisation",
   "registry_sha256": "a4d34400f7518ab9b3dae63dad1d184803abfe6bc4006e52d83fa2336e229ccc",
   "schema_version": 1,
-  "source_commit": "72a3a37817a8c94b39e4edd083d24b730151c17d",
+  "source_commit": "05f6fb8f70a4f19119eb4a57bb069fd0a3540377",
   "source_path": "tools/slop-detector",
   "source_repo": "https://github.com/peterbamuhigire/chwezi-design-engine",
   "tool": "chwezi-slop",
