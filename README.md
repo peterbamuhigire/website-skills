@@ -265,7 +265,7 @@ The evidence for the October 2026 cycles is in two folders:
 
 Each holds the frozen baseline, backlog, experiment log, validation record, final report and next-cycle file. Earlier records are indexed in [`docs/README.md`](docs/README.md). The documentation wave's own follow-ups are in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md). The commits of both cycles are on `main`; on 2026-10-31 none had been pushed.
 
-### Changes after the October kaizen (1 November 2026)
+### Changes after the October kaizen (1 to 6 November 2026)
 
 - **Signup human validation (`db9e1ea`).** The `page-builder` skill gained [`signup-human-validation.md`](skills/build/page-builder/references/signup-human-validation.md).
   - Web signup uses Cloudflare Turnstile Managed mode with server-side validation, hostname checks, safe retries, accessible challenge handling and a provider-outage path.
@@ -275,6 +275,8 @@ Each holds the frozen baseline, backlog, experiment log, validation record, fina
   - `photo-manager` now keeps rights, licence, permission, source and representation details in the asset catalogue, never in a disclaimer caption.
   - The `blog-writer` article-design reference adds a Caption Standard and changes captions from "optional but recommended" to "when used, connect the image to a practical point".
   - Record: [`docs/updates/2026-11-05-readme-measured-refresh.md`](docs/updates/2026-11-05-readme-measured-refresh.md).
+- **Vendored detector re-synced (6 November).** The design engine's banned-font gate now counts a quoted banned family name only where it is used as a font, so a script that quotes a machine-learning term is no longer flagged. The vendored copy under `scripts/vendor/chwezi-slop/` was re-synced with `check-vendored-detector.py --sync-from`: two files changed (`font-matcher.js` and `VENDOR.json`), and the source comparison passes again.
+  - Record: [`docs/updates/2026-11-06-revendor-slop-detector.md`](docs/updates/2026-11-06-revendor-slop-detector.md).
 - **Re-measured (5 November).** The registry validator ends with `registry valid: 62 skills` and pytest passes 280 of 280, on Python 3.14.10 and pytest 9.2.0.
 
 ### Latest published score
