@@ -12,7 +12,7 @@ It is for website agencies, freelance developers, and in-house marketing and pro
 - **Three copy languages:** English, French and Kiswahili. French and Kiswahili have their own native-copy skills.
 - **Executable release gates:** performance, accessibility, security, visual QA, slop scan (a detector for banned fonts, gradients and filler copy) and post-deploy smoke checks. A gate never passes when it could not run.
 - **Routing:** the right skill is in the top three for 44 of 44 test prompts and first for 41. This is a lexical proxy (it matches words, not meaning), not live routing.
-- **Tests:** 280 of 280 pytest tests pass (pytest 9.0.3, Python 3.14.8, 2026-10-31).
+- **Tests:** 280 of 280 pytest tests pass (pytest 9.2.0, Python 3.14.10, 2026-11-05).
 - **Audit score:** 62.9 of 100, against a cap of 65 and a target of 95. A score never overrides a blocked release gate.
 
 ### Start here
@@ -264,6 +264,18 @@ The evidence for the October 2026 cycles is in two folders:
 - [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/README.md) holds the 31 October cycle (pass 2).
 
 Each holds the frozen baseline, backlog, experiment log, validation record, final report and next-cycle file. Earlier records are indexed in [`docs/README.md`](docs/README.md). The documentation wave's own follow-ups are in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md). The commits of both cycles are on `main`; on 2026-10-31 none had been pushed.
+
+### Changes after the October kaizen (1 November 2026)
+
+- **Signup human validation (`db9e1ea`).** The `page-builder` skill gained [`signup-human-validation.md`](skills/build/page-builder/references/signup-human-validation.md).
+  - Web signup uses Cloudflare Turnstile Managed mode with server-side validation, hostname checks, safe retries, accessible challenge handling and a provider-outage path.
+  - The controls address bot-driven and unauthorised automated use. They are not identity proof.
+  - Provider claims were checked on 1 November 2026. Review them by 1 February 2027. Record: [`docs/updates/2026-11-01-signup-human-validation-standard.md`](docs/updates/2026-11-01-signup-human-validation-standard.md).
+- **Photo caption standard (`4323eab`).** Reader-facing captions state a practical point in the article: a decision, check, handover, responsibility or next step.
+  - `photo-manager` now keeps rights, licence, permission, source and representation details in the asset catalogue, never in a disclaimer caption.
+  - The `blog-writer` article-design reference adds a Caption Standard and changes captions from "optional but recommended" to "when used, connect the image to a practical point".
+  - Record: [`docs/updates/2026-11-05-readme-measured-refresh.md`](docs/updates/2026-11-05-readme-measured-refresh.md).
+- **Re-measured (5 November).** The registry validator ends with `registry valid: 62 skills` and pytest passes 280 of 280, on Python 3.14.10 and pytest 9.2.0.
 
 ### Latest published score
 
