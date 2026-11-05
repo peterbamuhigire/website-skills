@@ -14,6 +14,7 @@ talks, upstream OSS contributions) continue per the public roadmap at
 
 | Plan | Completion Date | Report |
 |---|---|---|
+| Re-vendor the slop detector after the banned-font gate change | 2026-11-06 | [Update record](../updates/2026-11-06-revendor-slop-detector.md) |
 | Photo caption standard and README measured refresh | 2026-11-05 | [Update record](../updates/2026-11-05-readme-measured-refresh.md) |
 | Signup human-validation standard for web and Android | 2026-11-01 | [Update record](../updates/2026-11-01-signup-human-validation-standard.md) |
 | Go-to-market skills (local acquisition, referrals, niche, delivery automation) | 2026-06-13 | [2026-06-13-reddit-webdesign-gtm-research-report.md](2026-06-13-reddit-webdesign-gtm-research-report.md) · [decision](../../project-log/decisions/2026-06-13-go-to-market-skills-from-reddit-post.md) |
