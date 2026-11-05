@@ -14,6 +14,7 @@ talks, upstream OSS contributions) continue per the public roadmap at
 
 | Plan | Completion Date | Report |
 |---|---|---|
+| Photo caption standard and README measured refresh | 2026-11-05 | [Update record](../updates/2026-11-05-readme-measured-refresh.md) |
 | Signup human-validation standard for web and Android | 2026-11-01 | [Update record](../updates/2026-11-01-signup-human-validation-standard.md) |
 | Go-to-market skills (local acquisition, referrals, niche, delivery automation) | 2026-06-13 | [2026-06-13-reddit-webdesign-gtm-research-report.md](2026-06-13-reddit-webdesign-gtm-research-report.md) · [decision](../../project-log/decisions/2026-06-13-go-to-market-skills-from-reddit-post.md) |
 | Phase 12 - African Authority Engine | 2026-04-16 | [2026-04-16-phase-12-african-authority-engine.md](../../project-log/decisions/2026-04-16-phase-12-african-authority-engine.md) |
