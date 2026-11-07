@@ -5,6 +5,11 @@ generative AI Search features.
 
 ## Eligibility
 
+Retain the ordered [per-URL response evidence](../../seo-audit/references/audit-checklist.md#per-url-response-evidence)
+for these checks. Separate status from body, exact-origin robots policy from
+page directives, and simulated fetches from provider observations. A successful
+status alone does not establish content access or indexing.
+
 - [ ] Page is intended for public Google Search visibility.
 - [ ] Page returns HTTP 200.
 - [ ] Page is not blocked by robots.txt, CDN rules, authentication, firewall, or

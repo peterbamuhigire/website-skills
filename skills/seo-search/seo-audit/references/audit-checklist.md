@@ -30,6 +30,41 @@ inference, inaccessible evidence, and `NOT_ASSESSED` checks separately.
 - [ ] Sitemaps contain canonical indexable URLs and truthful significant-change
       `lastmod` values; deprecated ping endpoints are absent.
 
+### Per-URL response evidence
+
+Apply these checks in order and retain the evidence locator at each step:
+
+1. Record exact URL, scheme/host/port, resource type, method, UTC observation
+   time and fetcher identity: verified crawler log, provider report, Search
+   Console inspection or simulated user-agent request. Simulation is not proof
+   that the provider fetched the URL.
+2. Record redirect chain, final HTTP status, Content-Type, relevant response
+   headers and a concise body/challenge/error observation. A `200` response
+   containing a challenge or error is a status/body mismatch to investigate,
+   not an automatic blocked verdict. Google can process successful responses;
+   success alone does not guarantee indexing, and error-like bodies may be
+   treated as soft 404s ([Google HTTP handling](https://developers.google.com/crawling/docs/troubleshooting/http-status-codes)).
+3. Inspect the exact origin's `robots.txt`; record response status, redirects,
+   matched crawler group and path rule. Hosts, schemes and ports have separate
+   scope. Keep raw observations separate from RFC 9309 and named-provider
+   interpretations; do not generalise Google's error handling to every bot
+   ([RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html),
+   [Google robots handling](https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec)).
+4. Check page/header indexing directives after access evidence. When a
+   robots-disallowed URL independently shows `noindex`, flag the intended-policy
+   conflict; do not claim the crawler read or enforced that directive. For
+   public PDF/DOCX samples, inspect the actual document's Content-Type and
+   X-Robots-Tag, including absence or access failure; HTML meta tags are not a
+   substitute ([Google robots directives](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag)).
+5. Keep raw response captures separate from dated Search Console evidence.
+   Record inspection mode, last crawl time, fetch state, robots state and
+   indexing state when available. Preserve discrepancies instead of replacing
+   one method's result with another ([URL Inspection fields](https://developers.google.com/webmaster-tools/v1/urlInspection.index/UrlInspectionResult)).
+
+Missing access, headers, logs or inspection results remain `NOT_ASSESSED`.
+These checks authorise no live configuration changes. Source scope, review
+dates and limitations are in the [response-evidence review](../../../../docs/continuous-improvement/2026-11-07-response-evidence.md).
+
 ## 3. Intent and information architecture
 
 - [ ] Every priority page has a primary audience, task, intent, proof burden,

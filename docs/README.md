@@ -2,6 +2,8 @@
 
 This folder holds the engine's reference documents, its source registers and the records of each improvement cycle. The router is [`AGENTS.md`](../AGENTS.md) and the overview is [`README.md`](../README.md); the skills are under `skills/<category>/<skill>/SKILL.md`.
 
+Latest bounded update: [per-URL response evidence](continuous-improvement/2026-11-07-response-evidence.md), verified Google/RFC distinctions and audit limitations (7 November 2026).
+
 ## Reference documents
 
 | Document | What it holds |
