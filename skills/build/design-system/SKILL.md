@@ -34,7 +34,10 @@ spacing, imagery, or motion, consult the **`chwezi-design-engine`** engine: reso
 on this device from your global engine-routing table (`~/.claude/CLAUDE.md`, or `AGENTS.md` for
 Codex) — never assume an absolute path — then read `doctrine/design-doctrine.md` and
 `doctrine/references/` (banned AI-slop fonts incl. Inter/Geist, type scale, colour system,
-pairing, the ai-slop taxonomy). State your typeface and colour intent with a one-line reason in
+pairing, the ai-slop taxonomy). When the site carries infographics, decks, posters or
+formal documents, also read the matching Chwezi child standard in the same engine
+(`doctrine/infographics-standard.md`, `presentation-standard.md`, `document-publishing-standard.md`;
+dashboards: `reporting-and-dashboards-standard.md`) under the parent `product-excellence-standard.md`. State your typeface and colour intent with a one-line reason in
 `docs/style-brief.md` before implementing (doctrine non-negotiable #1). Never use a banned
 AI-slop font as primary type.
 
@@ -102,6 +105,7 @@ For a multilingual professional-services site, choose a licensed serif with veri
 - [ui-composition-colour-and-icon-rules.md](references/ui-composition-colour-and-icon-rules.md) — read when deciding dominance, alignment, rhythm, colour jobs, contrast order and icon sets.
 - [grid-colour-gradient-and-surface-craft-rules.md](references/grid-colour-gradient-and-surface-craft-rules.md) — read when setting grids, gradients and surface treatments.
 - [data-tables-charts-and-svg-rules.md](references/data-tables-charts-and-svg-rules.md) — read when building data tables, charts or SVG graphics.
+- [infographics-and-explanatory-visuals-rules.md](references/infographics-and-explanatory-visuals-rules.md) — read when a page carries an infographic, process or cycle diagram, timeline, map, social card or downloadable poster, deck or report.
 - [design-system-governance-and-designops.md](references/design-system-governance-and-designops.md) — read when governing the design system and design operations.
 - [layout-primitive-selection-and-overlay-icon-patterns.md](references/layout-primitive-selection-and-overlay-icon-patterns.md) — read when choosing layout primitives and overlay or icon patterns.
 - Use `references/math-for-web-design.md` when sizing, spacing, typography, grids, media ratios, color ramps, or motion timing should be derived from proportion, `clamp()`, `calc()`, `minmax()`, aspect-ratio, or rounding logic.

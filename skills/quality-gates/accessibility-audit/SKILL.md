@@ -68,6 +68,7 @@ If rendering, a browser, a screen reader, or a device is unavailable, mark the a
 ## Quality Standards
 
 - Test representative routes and all interactive states; automated results alone cannot establish WCAG 2.2 AA conformance.
+- Complex graphics (infographics, process diagrams, maps, data-rich charts) need a short text alternative and a long text equivalent in reading order, no meaning carried by colour alone, and a screen-reader check recorded per `skills/build/design-system/references/infographics-and-explanatory-visuals-rules.md`.
 
 ## Anti-Patterns
 

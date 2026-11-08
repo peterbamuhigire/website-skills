@@ -69,6 +69,7 @@ Without rendering, browsers, fonts, devices, or baselines, return the narrowest 
 ## Quality Standards
 
 - Cover every route family, locale, agreed viewport, and meaningful state; baseline changes need a decision record rather than a blanket refresh.
+- Routes carrying infographics, diagrams, maps or social cards also get the release checklist in `skills/build/design-system/references/infographics-and-explanatory-visuals-rules.md`: live text (no generated pseudo-text), no synthetic photorealistic people, honest encodings, and a render at 320 CSS px.
 - Inspect edge spacing explicitly: fail routes where buttons, controls, text, images, logos, cards, or media touch the top, bottom, or side boundary of their section/panel/band unless a documented full-bleed media exception owns that edge. CTA/control rows need their own vertical breathing room, especially below the controls.
 
 ## Anti-Patterns

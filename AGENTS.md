@@ -164,6 +164,8 @@ Use these cross-cutting skills whenever their lens materially improves the outpu
 - `sales-copywriting`: Conversion-focused messaging.
 - `chwezi-design-engine:form-ux-design`: Any user-input flow.
 - `chwezi-design-engine:ux-psychology`: Behavioural and heuristic UX review.
+- `chwezi-design-engine:chwezi-infographics-standard`: Any infographic, process or cycle diagram, timeline, map, social card or poster on or from the site (honest encodings, checked structure, real text, no synthetic photorealism); working rules in `skills/build/design-system/references/infographics-and-explanatory-visuals-rules.md`.
+- `chwezi-design-engine:chwezi-presentation-standard`, `chwezi-design-engine:chwezi-document-publishing-standard`: Decks and formal documents offered for download from the site.
 
 Use these support skills on demand:
 
@@ -236,6 +238,7 @@ skills/content-copy/content-writing/SKILL.md    <- Copywriting standards
 chwezi-design-engine:brand-visual-identity <- External brand coherence quality gate (brand-consistency gate reference)
 skills/build/design-reference/SKILL.md   <- Reference-site analysis
 chwezi-design-engine:sector-strategies  <- External industry design and trust signals
+chwezi-design-engine:chwezi-infographics-standard <- External infographic, diagram, map and social-card quality standard (child of the Product Excellence Standard)
 skills/orchestration/website-builder/SKILL.md    <- Master orchestrator and system owner for operating references
 skills/build/design-system/SKILL.md      <- Fonts, colours, visual identity, motion
 skills/build/photo-manager/SKILL.md      <- Asset cataloguing, logo selection, image organisation
