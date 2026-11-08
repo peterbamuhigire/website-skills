@@ -73,5 +73,10 @@
       "description": "Run this engine's enforcement hooks (e.g. destructive-command gate, banned-font gate where applicable). Disable hook enforcement while keeping skills and agents available.",
       "default": true
     }
+  },
+  "description": "Design, build, and deliver websites with guidance for agency operations, content, commerce, SEO, quality, and launch.",
+  "author": {
+    "name": "Peter Bamuhigire",
+    "url": "https://github.com/peterbamuhigire"
   }
 }
